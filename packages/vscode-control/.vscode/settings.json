@@ -1,7 +1,7 @@
 {
   "editor.scrollbar.verticalScrollbarSize": 20,
   "editor.scrollbar.vertical": "visible",
-  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integratedx.defaultLocation": "editor",
   "terminal.integratedx.gpuAcceleration": "canvas",
   "workbench.editor.decorations.badges":false,
   "workbench.editor.decorations.colors": false,
@@ -24,7 +24,7 @@
   "terminal.integrated.cursorBlinking": true, 
   "editor.snippetSuggestions": "top",
   "editor.suggest.shareSuggestSelections": false,
-  "terminal.integrated.rendererType": "dom",
+  "terminal.integratedx.rendererType": "dom",
   "workbench.editor.enablePreviewFromQuickOpen":true,
   "workbench.tree.expandMode":"singleClick",
   "js/ts.implicitProjectConfig.strictNullChecks":true,
