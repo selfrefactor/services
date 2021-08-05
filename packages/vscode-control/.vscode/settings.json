@@ -119,6 +119,7 @@
     "**/.cache-loader": true,
     "**/.DS_Store": false,
     "**/.git": true,
+    "**/.idea": true,
     "**/.hg": false,
     "**/.svn": false,
     "**/coverage": true,
