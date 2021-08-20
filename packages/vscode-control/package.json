@@ -1,9 +1,5 @@
 {
 	"scripts": {
-		"bed": "ZOOM_SCALE=0.96 SCALE=0.9 node syncSettings",
-		"bedx": "BETA=ON ZOOM_SCALE=0.96 SCALE=0.9 node syncSettings",
-		"css": "ZOOM_SCALE=0.65 SCALE=1 node syncSettings",
-		"cssx": "BETA=ON ZOOM_SCALE=0.6 SCALE=1 node syncSettings",
 		"work": "yarn work:1&&yarn work:2",
 		"work:1": "ZOOM_SCALE=0.7 SCALE=1.18 node syncSettings",
 		"work:2": "BETA=ON ZOOM_SCALE=0.7 SCALE=1.18 node syncSettings",

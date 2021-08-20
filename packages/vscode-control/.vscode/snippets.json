@@ -1,4 +1,11 @@
 {
+	"Arrow function": {
+		"prefix": "arr",
+		"body": [
+			"() => {${0}}"
+		],
+		"description": "arrow function"
+	},
 	"Wallaby": {
 		"prefix": "wal",
 		"body": [
