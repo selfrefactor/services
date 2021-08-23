@@ -9,7 +9,7 @@
   "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
   "typescript.inlayHints.parameterTypes.enabled": false,
   "typescript.inlayHints.variableTypes.enabled": false,
-  "editor.scrollbar.verticalScrollbarSize": 20,
+  "editor.scrollbar.verticalScrollbarSize": 35,
   "editor.scrollbar.vertical": "visible",
   "terminal.integratedx.defaultLocation": "editor",
   "terminal.integratedx.gpuAcceleration": "canvas",
