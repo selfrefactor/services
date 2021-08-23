@@ -1,5 +1,10 @@
 [
   {
+    "key": "alt+4",
+    "command": "editor.action.insertSnippet",
+    "args": { "name": "fast_log", "snippet": "'$TM_SELECTED_TEXT'" }
+  },
+  {
     "key": "ctrl+shift+a",
     "command": "workbench.action.terminal.focusNext"
   },

@@ -1,4 +1,11 @@
 {
+	"fast_log": {
+    "prefix": "fast_log",
+    "body": [
+        "console.log($TM_SELECTED_TEXT)\n${1:}"
+    ],
+    "description": "Encloses selected text in console.log"
+	},
 	"Arrow function": {
 		"prefix": "arr",
 		"body": [
