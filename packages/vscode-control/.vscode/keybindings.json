@@ -7,7 +7,7 @@
   {
     "key": "alt+4",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "fast_logx", "snippet": "$TM_SELECTED_TEXT" }
+    "args": { "name": "fast_logx", "snippet": "'$TM_SELECTED_TEXT'" }
   },
   {
     "key": "ctrl+shift+a",
