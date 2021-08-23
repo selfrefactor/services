@@ -1,8 +1,15 @@
 {
 	"fast_log": {
-    "prefix": "fast_log",
+    "prefix": "fastlog",
     "body": [
-        "console.log($TM_SELECTED_TEXT)\n${1:}"
+      "console.log(${1:})"
+    ],
+    "description": "Encloses selected text in console.log"
+	},
+	"fast_logx": {
+    "prefix": "fastlogx",
+    "body": [
+        "console.log($TM_SELECTED_TEXT)\n$"
     ],
     "description": "Encloses selected text in console.log"
 	},
