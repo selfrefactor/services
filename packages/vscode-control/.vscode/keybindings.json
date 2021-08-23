@@ -2,12 +2,12 @@
   {
     "key": "alt+3",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "fast_log" }
+    "args": { "snippet": "console.log(${1:})" }
   },
   {
     "key": "alt+4",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "fast_logx", "snippet": "'$TM_SELECTED_TEXT'" }
+    "args": { "snippet": "console.log($TM_SELECTED_TEXT)" }
   },
   {
     "key": "ctrl+shift+a",
