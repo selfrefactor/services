@@ -7,6 +7,11 @@
   {
     "key": "alt+4",
     "command": "editor.action.insertSnippet",
+    "args": { "snippet": "console.log(`${CLIPBOARD}`, ${CLIPBOARD} $0)" }
+  },
+  {
+    "key": "ctrl+shift+4",
+    "command": "editor.action.insertSnippet",
     "args": { "snippet": "console.log($TM_SELECTED_TEXT)" }
   },
   {
