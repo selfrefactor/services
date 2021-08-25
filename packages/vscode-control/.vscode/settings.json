@@ -1,4 +1,5 @@
 {
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "omf.openFilesConfirmationLimit": 50,
   "explorer.autoReveal": true,
   "javascript.inlayHints.enumMemberValues.enabled": true,
