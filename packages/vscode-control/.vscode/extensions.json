@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "bcanzanella.openmatchingfiles",
     "CodeStream.codestream",
     "ghaschel.vscode-angular-html",
     "tamj0rd2.ts-quickfixes-extension",
