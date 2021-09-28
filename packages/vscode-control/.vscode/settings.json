@@ -1,4 +1,7 @@
 {
+  "javascript.suggestionActions.enabled": true,
+  "editor.suggest.preview": true,
+  "editor.bracketPairColorization.enabled": true,
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "omf.openFilesConfirmationLimit": 50,
   "explorer.autoReveal": true,
@@ -81,7 +84,6 @@
     "enabled": true
   },
   "update.mode": "none",
-  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "javascript.preferences.importModuleSpecifierEnding": "auto",
   "js/ts.implicitProjectConfig.checkJs": true,
   "search.useReplacePreview": false,
@@ -194,7 +196,7 @@
   "zenMode.hideStatusBar": false,
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
-  "workbench.colorTheme": "AquaTeenHungerForce",
+  "workbench.colorTheme": "AmericanDad",
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
   "editor.find.seedSearchStringFromSelection": true,

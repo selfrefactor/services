@@ -12,42 +12,16 @@ const Good3G = {
 }
 
 async function getContext(
-  browser, mobileFlag, httpAuth
+  browser, mobileFlag
 ){
-  if (!mobileFlag && !httpAuth){
+  if (!mobileFlag){
     return browser.newContext()
   }
 
-  if (!mobileFlag && httpAuth){
-    ok(httpAuth)({
-      username : String,
-      password : String,
-    })
-
-    return browser.newContext({
-      httpCredentials : {
-        username : httpAuth.username,
-        password : httpAuth.password,
-      },
-    })
-  }
   const iPhone = playwright.devices[ deviceKey ]
-
-  if (!httpAuth){
-    return browser.newContext({ ...iPhone })
-  }
-
-  ok(httpAuth)({
-    username : String,
-    password : String,
-  })
 
   return browser.newContext({
     ...iPhone,
-    httpCredentials : {
-      username : httpAuth.username,
-      password : httpAuth.password,
-    },
   })
 }
 
@@ -60,7 +34,7 @@ async function init(input, extraProps = {}){
   const settings = getSettings(input, extraProps)
   const browser = await playwright[ browserType ].launch(settings)
   const context = await getContext(
-    browser, input.mobile, input.httpAuth
+    browser, input.mobile
   )
   const page = await context.newPage()
 

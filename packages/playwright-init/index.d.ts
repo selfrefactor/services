@@ -3,11 +3,6 @@ import { Browser, Page, BrowserContext } from 'playwright'
 export type WaitConditionType = 'load' | 'domcontentloaded' | 'networkidle'
 export type SupportedBrowsers = 'chromium' | 'firefox'
 
-interface HttpAuth{
-  username: string
-  password: string
-}
-
 interface SlowNetwork{
   offline: boolean
   downloadThroughput: number  
@@ -21,7 +16,6 @@ export interface InputPlaywright{
   url?: string
   mobile?: boolean
   slowNetwork?: SlowNetwork | true
-  httpAuth?: HttpAuth
   browser?: SupportedBrowsers
   headless?: boolean
   fullScreen?: boolean
