@@ -1,4 +1,11 @@
 {
+	"Arrow function": {
+		"prefix": "arr",
+		"body": [
+			"() => {${0}}"
+		],
+		"description": "arrow function"
+	},
 	"Wallaby": {
 		"prefix": "wal",
 		"body": [
@@ -19,6 +26,44 @@
 			"const { ${1:method} } = require('./${1:method}')"
 		],
 		"description": "requireX"
+	},
+	"Test Snippet": {
+		"prefix": "test",
+		"body": [
+      "test('happy', () => {",
+      "\tconst result = $0",
+      "\tconsole.log(result)",
+			"})"
+		],
+		"description": "test"
+	},
+	"FnAsyncSnippet": {
+		"prefix": "async",
+		"body": [
+			"export async function $0(){",
+			"\t",
+			"}"
+		],
+		"description": "test async"
+	},
+	"FnSnippet": {
+		"prefix": "func",
+		"body": [
+			"export function $0(){",
+			"\t",
+			"}"
+		],
+		"description": "test async"
+	},
+	"TestAsync": {
+		"prefix": "testa",
+		"body": [
+			"test('happy', async () => {",
+			"\tconst result = await $0",
+			"\tconsole.log(result)",
+			"})"
+		],
+		"description": "test async"
 	},
 	"commentMultiline": {
 		"prefix": "com",
@@ -58,6 +103,33 @@
 		],
 		"description": "export"
 	},
+	"Expect Snippet": {
+		"prefix": "exp",
+		"body": [
+			"expect(",
+			"\t$0",
+			").toEqual($1)"
+		],
+		"description": "ext"
+	},
+	"ExpectTruthy": {
+		"prefix": "expt",
+		"body": [
+			"expect(",
+			"\t$0",
+			").toBeTruthy()"
+		],
+		"description": "ext"
+	},
+	"ExpectFalsy": {
+		"prefix": "expf",
+		"body": [
+			"expect(",
+			"\t$0",
+			").toBeFalsy()"
+		],
+		"description": "x"
+	},
 	"ExpectSnapshot": {
 		"prefix": "snap",
 		"body": [
@@ -73,6 +145,27 @@
 			"\t$0",
 			").toMatchInlineSnapshot()"
 		]
+	},
+	"Log as object": {
+		"prefix": "lgr",
+		"body": [
+			"console.log({$0})"
+		],
+		"description": "log"
+	},
+	"Log Snippet": {
+		"prefix": "lgg",
+		"body": [
+			"console.log($0)"
+		],
+		"description": "simple log"
+	},
+	"Log Clipboard": {
+		"prefix": "lgc",
+		"body": [
+			"console.log(`${CLIPBOARD}`, ${CLIPBOARD} $0)"
+		],
+		"description": "log clipboard"
 	},
 	"LogDebug": {
 		"prefix": "lgd",

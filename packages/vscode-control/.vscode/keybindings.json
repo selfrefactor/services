@@ -1,13 +1,18 @@
 [
   {
-    "key": "alt+3",
+    "key": "alt+1",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "console.log(${1:})" }
   },
   {
-    "key": "alt+4",
+    "key": "alt+2",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "console.log(`${CLIPBOARD}`, ${CLIPBOARD}$0)" }
+  },
+  {
+    "key": "alt+3",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "() => {${1:}}" }
   },
   {
     "key": "ctrl+shift+4",
@@ -158,7 +163,7 @@
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
-    "key": "alt+2",
+    "key": "ctrl+6",
     "command": "workbench.action.selectTheme"
   },
   {
@@ -319,6 +324,41 @@
     "key": "ctrl+e",
     "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
     "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "alt+1",
+    "command": "-workbench.action.openEditorAtIndex1"
+  },
+    "key": "alt+2",
+    "command": "-workbench.action.openEditorAtIndex2"
+  },
+  {
+    "key": "alt+3",
+    "command": "-workbench.action.openEditorAtIndex3"
+  },
+  {
+    "key": "alt+4",
+    "command": "-workbench.action.openEditorAtIndex4"
+  },
+  {
+    "key": "alt+5",
+    "command": "-workbench.action.openEditorAtIndex5"
+  },
+  {
+    "key": "alt+6",
+    "command": "-workbench.action.openEditorAtIndex6"
+  },
+  {
+    "key": "alt+7",
+    "command": "-workbench.action.openEditorAtIndex7"
+  },
+  {
+    "key": "alt+8",
+    "command": "-workbench.action.openEditorAtIndex8"
+  },
+  {
+    "key": "alt+9",
+    "command": "-workbench.action.openEditorAtIndex9"
   },
   {
     "key": "alt+3",
