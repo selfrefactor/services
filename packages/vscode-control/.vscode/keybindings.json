@@ -163,7 +163,7 @@
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
-    "key": "ctrl+6",
+    "key": "ctrl+8",
     "command": "workbench.action.selectTheme"
   },
   {
