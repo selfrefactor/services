@@ -1,4 +1,13 @@
 {
+	"Test Snippet": {
+		"prefix": "test",
+		"body": [
+      "test('happy', () => {",
+			"$0",
+			"})"
+		],
+		"description": "test"
+	},
 	"Wallaby": {
 		"prefix": "wal",
 		"body": [
