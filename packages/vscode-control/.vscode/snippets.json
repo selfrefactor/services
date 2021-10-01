@@ -1,4 +1,13 @@
 {
+	"FnAsyncSnippet": {
+		"prefix": "async",
+		"body": [
+			"export async function $0(){",
+			"\t",
+			"}"
+		],
+		"description": "test async"
+	},
 	"Test Snippet": {
 		"prefix": "test",
 		"body": [

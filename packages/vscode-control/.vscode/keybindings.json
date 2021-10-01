@@ -20,6 +20,16 @@
     "args": { "name": "Test Snippet" }
   },
   {
+    "key": "alt+5",
+    "command": "editor.action.insertSnippet",
+    "args": { "name": "StringTemplate" }
+  },
+  {
+    "key": "alt+0",
+    "command": "editor.action.insertSnippet",
+    "args": { "name": "FnAsyncSnippet" }
+  },
+  {
     "key": "ctrl+shift+4",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "console.log($TM_SELECTED_TEXT)" }
