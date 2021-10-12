@@ -20,6 +20,16 @@ Test Snippet
 
 StringTemplate
 
+## Ctrl+9
+
+Split current tab into two columns
+
+> useful to use two editors when reading/working with large files
+
+## Ctrl+0
+
+Revert two columns for a tab
+
 ## Niketa - start
 
 ctrl+1
