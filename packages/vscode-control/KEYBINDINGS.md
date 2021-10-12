@@ -1,125 +1,126 @@
 # VSCode
 
-## Niketa 
+## Alt+1
 
-### start
-
-"key": "ctrl+1"
-
-### Single Jest run
-
-"key": "alt+w"
-
-### Lint single file
-
-"key": "ctrl+shift+1"
-
-### Toggle force lint mode
-
-"key": "ctrl+shift+2"
-
-### Request cancelation
-
-"key": "ctrl+shift+3"
-
-## Wallaby
-
-### Start `Wallaby`
-
-Ctrl+`
-
-### Stop `Wallaby`
-
-Ctrl+Shift+4
-
-## Layout
-
-### editorLayoutTwoColumns
-
-Ctrl+Shift+5
-
-### editorLayoutSingleColumn
-
-Ctrl+Shift+6
-
----
-
-## Ctrl+`
-
-Toggle zen mode
-
-## Alt+S
-
-Open editor view
-
-## Alt+X
-
-Toggle terminal panel
-
-## Ctrl+Shft+A
-
-Open new terminal
-
-## Ctrl+Shft+Z
-
-Show `git` state
-
-## Ctrl+W
-
-Close current tab
-
-## Ctrl+Q
-
-Close other tabs
-
----
-> Ctrl/Alt section
----
+console.log(${1:})
 
 ## Alt+2
 
-Change active theme
+console.log(`${CLIPBOARD}
 
-## Ctrl+2
+## Alt+3
 
-Open folder
+() => {${1:}}
 
-## Alt+W
+## Alt+4
 
-Start Jest run with `Niketa`
+Test Snippet
 
-## Alt+Z
+## Alt+5
 
-Toggle sidebar visibility
+StringTemplate
 
-## Ctrl+6
+## Niketa - start
 
-Push pending commit
+ctrl+1
 
-## Ctrl+7
+## Niketa -single Jest run
 
-Stage all chages
+alt+w
+
+## Lint single file
+
+ctrl+1
+
+## Start `Wallaby`
+
+Ctrl+`
+
+## Toggle zen mode
+
+Alt+A
+
+## Open editor view
+
+Alt+S
+
+## Show `git` state
+
+Ctrl+Shft+Z
+
+
+## Close current tab
+
+Ctrl+W
+
+## Close other tabs
+
+Ctrl+Q
+
+## Change active theme
+
+Ctrl+8
+
+## Open folder
+
+Ctrl+2
+
+## Toggle sidebar visibility
+
+Alt+Z
+
+## Push pending commit
+
+Ctrl+6
+
+## Stage all chages
+
+Ctrl+7
+
+## View extensions
+
+Alt+Shift+M
+
+## Start debug session
+
+F5
+
+## Restart debug session
+
+Ctrl+R
+
+## Go to type definition
+
+Ctrl+D
+
+## Go to declaration
+
+Ctrl+G
+
+## Open new terminal tab
+
+Ctrl+Shift+T
+
+## Close terminal tab
+
+Ctrl+Shift+W
+
+## Switch to debug view
+
+Caps+D
+
+## Pin tab
+
+Alt+P
+
+## Unpin tab
+
+Alt+U
 
 ---
-> Others
----
 
-## Alt+Shift+M
+> Deprecated
 
-View extensions
+- editor.action.inspectTMScopes
 
-## F5
-
-Start debug session
-
-## Ctrl+R
-
-Restart debug session
-
-## Ctrl+D
-
-Go to type definition
-
-## Ctrl+G
-
-Go to declaration
+- editor.toggleFold

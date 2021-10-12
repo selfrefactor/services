@@ -2,11 +2,31 @@
 
 - Populate settings and keybingings to local VSCode instance
 
+## Intellisense
+
+TabNine proves to be best one. One example:
+
+```
+const bar = fooBarBaz(1) 
+```
+
+then `fooBarBaz` is picked up even if it is not a valid function(not declared yet). VSCode Intelisense doesn't do that.
+
+## Firefox
+
+Shift+Spacebar 	Move up the scrollbar
+
+Ctrl+L 	Move cursor to address box
+
+Ctrl+I 	Display the Page Info window about the web page currently being viewed.
+
 ## Notes
 
-  "editor.quickSuggestions": true is imporant
+"editor.quickSuggestions": true is imporant
 
 ## Latest key binding
+
+### Binding shortkeys with snippets
 
 ### Single column view - ctrl+shift+5
 
@@ -16,15 +36,15 @@
 
 ### Wallaby stop - ctrl+shift+7
 
-### copy relative path - `Shift+Caps Lock` when !editorFocus - this is available
-
 ### Pin - pin with `Alt+P`
 
-### Collapse all with `Alt+4`
+### Unpin - pin with `Alt+U`
 
 ### Find all references - Caps + F
 
-## VSCode changes
+## VSCode changes(from blog announcement)
+
+Split an editor without creating a new group
 
 Pin tabs
 You can now pin tabs either from the context menu or using the new command workbench.action.pinEditor (Ctrl+K Shift+Enter).
@@ -63,5 +83,4 @@ Configure runtime arguments
 
 ```
 "disable-hardware-acceleration": true
-
 ```

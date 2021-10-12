@@ -29,14 +29,10 @@
     "command": "editor.action.insertSnippet",
     "args": { "name": "FnAsyncSnippet" }
   },
-  {
-    "key": "ctrl+shift+4",
-    "command": "editor.action.insertSnippet",
-    "args": { "snippet": "console.log($TM_SELECTED_TEXT)" }
-  },
-  {
-    "key": "ctrl+shift+a",
-    "command": "workbench.action.terminal.focusNext"
+    {
+    "key": "ctrl+9",
+    "command": "workbench.action.splitEditorInGroup",
+    "when": "activeEditorCanSplitInGroup"
   },
   {
     "key": "ctrl+shift+w",
@@ -44,29 +40,8 @@
     "when": "terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
   },
   {
-    "key": "ctrl+shift+c",
+    "key": "ctrl+shift+w",
     "command": "workbench.action.createTerminalEditor"
-  },
-  {
-    "key": "ctrl+shift+c",
-    "command": "-workbench.action.terminal.openNativeConsole",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "ctrl+shift+4",
-    "command": "wallaby.stop"
-  },
-  {
-    "key": "ctrl+shift+r s",
-    "command": "-wallaby.stop"
-  },
-  {
-    "key": "ctrl+shift+6",
-    "command": "workbench.action.editorLayoutTwoColumns"
-  },
-  {
-    "key": "ctrl+shift+5",
-    "command": "workbench.action.editorLayoutSingle"
   },
   {
     "key": "ctrl+`",
@@ -91,16 +66,6 @@
     "key": "alt+w",
     "command": "-toggleSearchWholeWord",
     "when": "searchViewletFocus"
-  },
-  {
-    "key": "shift+capslock",
-    "command": "copyRelativeFilePath",
-    "when": "!editorFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+c",
-    "command": "-copyRelativeFilePath",
-    "when": "!editorFocus"
   },
   {
     "key": "capslock d",
@@ -154,15 +119,6 @@
     "key": "alt+f3",
     "command": "-editor.action.selectHighlights",
     "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "editor.action.inspectTMScopes"
-  },
-  {
-    "key": "ctrl+5",
-    "command": "editor.toggleFold",
-    "when": "editorTextFocus && foldingEnabled"
   },
   {
     "key": "ctrl+g",
@@ -245,10 +201,6 @@
     "when": "inDebugMode"
   },
   {
-    "key": "ctrl+f5",
-    "command": "workbench.action.debug.start"
-  },
-  {
     "key": "f5",
     "command": "workbench.action.debug.continue",
     "when": "inDebugMode"
@@ -278,11 +230,6 @@
   {
     "key": "ctrl+shift+`",
     "command": "-workbench.action.terminal.new"
-  },
-  {
-    "key": "ctrl+shift+a",
-    "command": "-editor.action.blockComment",
-    "when": "editorTextFocus && !editorReadonly"
   },
   {
     "key": "ctrl+q",
@@ -376,10 +323,6 @@
     "command": "-workbench.action.openEditorAtIndex9"
   },
   {
-    "key": "alt+3",
-    "command": "-workbench.action.openEditorAtIndex3"
-  },
-  {
     "key": "ctrl+shift+r r",
     "command": "-wallaby.start"
   },
@@ -412,10 +355,6 @@
     "key": "ctrl+1",
     "command": "-explorer.openToSide",
     "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "alt+4",
-    "command": "-workbench.action.openEditorAtIndex4"
   },
   {
     "key": "ctrl+`",
@@ -508,44 +447,9 @@
     "when": "editorTextFocus"
   },
   {
-    "mac": "a",
-    "win": "a",
-    "linux": "a",
-    "key": "a",
-    "when": "filesExplorerFocus && !inputFocus",
-    "command": "explorer.newFile"
-  },
-  {
-    "mac": "shift+a",
-    "win": "shift+a",
-    "linux": "shift+a",
-    "key": "shift+a",
-    "when": "filesExplorerFocus && !inputFocus",
-    "command": "explorer.newFolder"
-  },
-  {
-    "mac": "ctrl+cmd+down",
-    "win": "ctrl+down",
-    "linux": "ctrl+down",
-    "key": "ctrl+down",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus"
-  },
-  {
-    "mac": "ctrl+cmd+up",
-    "win": "ctrl+up",
-    "linux": "ctrl+up",
-    "key": "ctrl+up",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus"
-  },
-  {
-    "mac": "cmd+shift+d",
-    "win": "ctrl+shift+d",
-    "linux": "ctrl+shift+d",
-    "key": "ctrl+shift+d",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus"
+    "key": "ctrl+k ctrl+shift+\\",
+    "command": "-workbench.action.splitEditorInGroup",
+    "when": "activeEditorCanSplitInGroup"
   }
 ]
 
