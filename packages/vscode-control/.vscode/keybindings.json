@@ -36,7 +36,7 @@
   },
   {
     "key": "ctrl+0",
-    "command": "workbench.action.toggleSplitEditorInGroupLayout"
+    "command": "workbench.action.toggleSplitEditorInGroup"
   },
   {
     "key": "ctrl+shift+w",
