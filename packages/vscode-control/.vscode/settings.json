@@ -1,4 +1,5 @@
 {
+  "editor.guides.bracketPairs": false,
   "javascript.suggestionActions.enabled": true,
   "editor.suggest.preview": true,
   "editor.bracketPairColorization.enabled": true,
