@@ -296,6 +296,7 @@
     "key": "alt+1",
     "command": "-workbench.action.openEditorAtIndex1"
   },
+  {
     "key": "alt+2",
     "command": "-workbench.action.openEditorAtIndex2"
   },
