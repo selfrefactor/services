@@ -447,6 +447,14 @@
     "when": "editorTextFocus"
   },
   {
+    "mac": "cmd+shift+d",
+    "win": "ctrl+shift+d",
+    "linux": "ctrl+shift+d",
+    "key": "ctrl+shift+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "ctrl+k ctrl+shift+\\",
     "command": "-workbench.action.splitEditorInGroup",
     "when": "activeEditorCanSplitInGroup"
