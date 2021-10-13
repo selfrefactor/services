@@ -1,8 +1,8 @@
 {
 	"scripts": {
 		"work": "yarn work:1&&yarn work:2&&run d",
-		"work:1": "ZOOM_SCALE=0.65 SCALE=1.18 node syncSettings",
-		"work:2": "BETA=ON ZOOM_SCALE=0.65 SCALE=1.18 node syncSettings",
+		"work:1": "ZOOM_SCALE=0.6 SCALE=1.18 node syncSettings",
+		"work:2": "BETA=ON ZOOM_SCALE=0.6 SCALE=1.18 node syncSettings",
 		"tv": "yarn tv:1&&yarn tv:2",
 		"tv:1": "ZOOM_SCALE=1.27 SCALE=1.23 node syncSettings",
 		"tv:2": "BETA=ON ZOOM_SCALE=1.27 SCALE=1.23 node syncSettings",
