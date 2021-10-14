@@ -49,9 +49,11 @@
   "npm.fetchOnlinePackageInfo": false,
   "typescript.disableAutomaticTypeAcquisition": true,
   "typescript.check.npmIsInstalled": false,
-  "editor.cursorBlinking": "expand",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorBlinking.old": "expand",
   "editor.find.cursorMoveOnType": true,
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation.old": true,
+  "editor.cursorSmoothCaretAnimation": false,
   "separators.methods.borderStyle": "solid",
   "separators.constructors.borderStyle": "solid",
   "separators.enabledSymbols": [
