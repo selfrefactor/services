@@ -22,6 +22,21 @@
   {
     "key": "alt+5",
     "command": "editor.action.insertSnippet",
+    "args": { "snippet": "expect(${1:}).toEqual(${2:})" }
+  },
+  {
+    "key": "alt+6",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "expect(${1:}).toBe(${2:})" }
+  },
+  {
+    "key": "alt+7",
+    "command": "editor.action.insertSnippet",
+    "args": { "name": "ExpectInlineSnapshot" }
+  },
+  {
+    "key": "alt+8",
+    "command": "editor.action.insertSnippet",
     "args": { "name": "StringTemplate" }
   },
   {
