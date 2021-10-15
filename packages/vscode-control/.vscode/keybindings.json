@@ -39,6 +39,11 @@
     "command": "editor.action.insertSnippet",
     "args": { "name": "StringTemplate" }
   },
+    {
+    "key": "alt+9",
+    "command": "editor.action.insertSnippet",
+    "args": { "name": "commentMultiline" }
+  },
   {
     "key": "alt+0",
     "command": "editor.action.insertSnippet",

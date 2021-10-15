@@ -58,7 +58,6 @@ Alt+S
 
 Ctrl+Shft+Z
 
-
 ## Close current tab
 
 Ctrl+W
