@@ -26,6 +26,10 @@ Split current tab into two columns
 
 > useful to use two editors when reading/working with large files
 
+## Ctrl+Shift+9
+
+Add MR comment in Codestream context
+
 ## Ctrl+0
 
 Revert two columns for a tab
