@@ -55,12 +55,12 @@
     "args": { "name": "FnAsyncSnippet" }
   },
   {
-    "key": "ctrl+9",
+    "key": "ctrl+shift+9",
     "command": "workbench.action.splitEditorInGroup",
     "when": "activeEditorCanSplitInGroup"
   },
   {
-    "key": "ctrl+0",
+    "key": "ctrl+shift+0",
     "command": "workbench.action.toggleSplitEditorInGroup"
   },
   {
@@ -512,7 +512,7 @@
     "when": "editorTextFocus"
   },
     {
-    "key": "ctrl+shift+9",
+    "key": "ctrl+0",
     "command": "codestream.newComment",
     "when": "codestream:status == 'signedIn'"
   },
