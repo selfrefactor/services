@@ -15,6 +15,11 @@
     "args": { "snippet": "() => {${1:}}" }
   },
   {
+    "key": "ctrl+shift+3",
+    "command": "editor.action.insertSnippet",
+    "args": { "name": "FnSnippet" }
+  },
+  {
     "key": "alt+4",
     "command": "editor.action.insertSnippet",
     "args": { "name": "Test Snippet" }
@@ -507,7 +512,7 @@
     "when": "editorTextFocus"
   },
     {
-    "key": "ctrl+9",
+    "key": "ctrl+shift+9",
     "command": "codestream.newComment",
     "when": "codestream:status == 'signedIn'"
   },

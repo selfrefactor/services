@@ -1,4 +1,13 @@
 {
+	"FnSnippet": {
+		"prefix": "async",
+		"body": [
+			"function $0(){",
+			"\t",
+			"}"
+		],
+		"description": "fn"
+	},
 	"FnAsyncSnippet": {
 		"prefix": "async",
 		"body": [
