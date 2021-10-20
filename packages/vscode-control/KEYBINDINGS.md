@@ -24,13 +24,13 @@ StringTemplate
 
 Add MR comment in Codestream context
 
-## Ctrl+Shift+9
+## Ctrl+Shift+8
 
 Split current tab into two columns
 
 > useful to use two editors when reading/working with large files
 
-## Ctrl+Shift+0
+## Ctrl+Shift+9
 
 Revert two columns for a tab
 
