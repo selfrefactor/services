@@ -1,4 +1,5 @@
 {
+  "wallaby.runOnSaveIndicators": true,
   "editor.guides.bracketPairs": false,
   "javascript.suggestionActions.enabled": true,
   "editor.suggest.preview": true,
