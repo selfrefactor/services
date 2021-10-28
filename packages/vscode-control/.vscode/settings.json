@@ -200,7 +200,7 @@
   "zenMode.hideStatusBar": false,
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
-  "workbench.colorTheme": "AmericanDad",
+  "workbench.colorTheme": "Tokyo Night Pro",
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
   "editor.find.seedSearchStringFromSelection": true,

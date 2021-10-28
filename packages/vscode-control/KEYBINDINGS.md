@@ -74,6 +74,10 @@ Ctrl+Q
 
 Ctrl+8
 
+## Update file snapshot in Wallaby
+
+Ctrl+8
+
 ## Open folder
 
 Ctrl+2

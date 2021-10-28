@@ -11,7 +11,7 @@ async function createBenchmark(input){
     fn    : Function,
   } ], String)
 
-  const benches = tests.map(({ label, fn }) => bench.add(label, fn))
+  const benches = tests.forEach(({ label, fn }) => bench.add(label, fn))
   const folder = maybe(
     input.folder,
     input.folder,
