@@ -1,4 +1,4 @@
-const list = Array(100000000).fill('')
+const list = Array(20000000).fill('')
 
 function test(fn, label){
   console.time(label)
