@@ -1,4 +1,4 @@
-# VSCode
+# Snippets
 
 ## Alt+1
 
@@ -24,15 +24,19 @@ StringTemplate
 
 Add MR comment in Codestream context
 
-## Ctrl+Shift+8
+# Wallaby/Niketa
 
-Split current tab into two columns
+## Start `Wallaby`
 
-> useful to use two editors when reading/working with large files
+Ctrl+`
 
-## Ctrl+Shift+9
+## Stop `Wallaby`
 
-Revert two columns for a tab
+Ctrl+Shift+6
+
+## Update file snapshot in Wallaby
+
+Ctrl+8
 
 ## Niketa - start
 
@@ -46,9 +50,17 @@ alt+w
 
 ctrl+1
 
-## Start `Wallaby`
+# Editor
 
-Ctrl+`
+## Ctrl+Shift+8
+
+Split current tab into two columns
+
+> useful to use two editors when reading/working with large files
+
+## Ctrl+Shift+9
+
+Revert two columns for a tab
 
 ## Toggle zen mode
 
@@ -71,10 +83,6 @@ Ctrl+W
 Ctrl+Q
 
 ## Change active theme
-
-Ctrl+8
-
-## Update file snapshot in Wallaby
 
 Ctrl+8
 

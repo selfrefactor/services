@@ -55,6 +55,10 @@
     "args": { "name": "FnAsyncSnippet" }
   },
   {
+    "key": "ctrl+shift+6",
+    "command": "wallaby.stop"
+  },
+  {
     "key": "ctrl+shift+7",
     "command": "wallaby.updateFileSnapshots"
   },
