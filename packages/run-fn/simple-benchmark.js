@@ -1,4 +1,4 @@
-const list = Array(20000000).fill('')
+const list = Array(20000000).fill(null)
 
 function test(fn, label){
   console.time(label)
@@ -8,8 +8,8 @@ function test(fn, label){
   console.timeEnd(label)
 }
 
-const foo = x => typeof x == 'string' 
-const bar = x => typeof x === 'string' 
+const foo = x => x == undefined 
+const bar = x => x === undefined 
 
 test(foo, 'foo')
 test(bar, 'bar')
