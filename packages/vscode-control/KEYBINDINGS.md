@@ -20,7 +20,7 @@ Test Snippet
 
 StringTemplate
 
-## Ctrl+9
+## Ctrl+0
 
 Add MR comment in Codestream context
 
@@ -38,19 +38,23 @@ Ctrl+Shift+6
 
 Ctrl+8
 
-## Niketa - start
+## ctrl+1 - can be removed as `alt+w` starts it
 
-ctrl+1
+Niketa - start
 
-## Niketa -single Jest run
+## Alt+w
 
-alt+w
+Niketa - single Jest run
 
 ## Lint single file
 
 ctrl+1
 
 # Editor
+
+## Ctrl+.
+
+Line action(native)
 
 ## Ctrl+Shift+8
 

@@ -22,7 +22,7 @@
   "terminal.integratedx.gpuAcceleration": "canvas",
   "workbench.editor.decorations.badges":false,
   "workbench.editor.decorations.colors": false,
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "on",
   "search.mode": "view",
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editor.wrapTabs": true,
