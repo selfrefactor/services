@@ -1,9 +1,9 @@
 {
   "wallaby.runOnSaveIndicators": true,
-  "editor.guides.bracketPairs": false,
+  "editor.guides.bracketPairs": "active",
   "javascript.suggestionActions.enabled": true,
   "editor.suggest.preview": true,
-  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.enabled": false,
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "omf.openFilesConfirmationLimit": 50,
   "explorer.autoReveal": true,
