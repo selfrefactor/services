@@ -152,7 +152,7 @@
     "yarn.lock": true
   },
   "atomKeymap.promptV3Features": true,
-  "breadcrumbs.enabled": true,
+  "breadcrumbs.enabled": false,
   "editor.acceptSuggestionOnEnter": "smart",
   "workbench.editor.closeOnFileDelete": true,
   "editor.cursorStyle": "line",
