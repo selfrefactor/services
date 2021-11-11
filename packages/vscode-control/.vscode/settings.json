@@ -201,7 +201,7 @@
   "zenMode.hideStatusBar": false,
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
-  "workbench.colorTheme": "Tokyo Night Pro",
+  "workbench.colorTheme": "Dilbert",
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
   "editor.find.seedSearchStringFromSelection": true,

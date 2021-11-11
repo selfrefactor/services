@@ -24,23 +24,23 @@ StringTemplate
 
 Add MR comment in Codestream context
 
-# Wallaby/Niketa
+===
 
-## Start `Wallaby`
+## Ctrl+`
 
-Ctrl+`
+Start `Wallaby`
 
-## Stop `Wallaby`
+## Ctrl+Shift+7
 
-Ctrl+Shift+6
+Update file snapshot in Wallaby
 
-## Update file snapshot in Wallaby
+## Ctrl+Shift+6
 
-Ctrl+8
+Stop `Wallaby`
 
-## ctrl+1 - can be removed as `alt+w` starts it
+## Ctrl+1 
 
-Niketa - start
+Niketa - lint current file
 
 ## Alt+w
 
@@ -48,7 +48,7 @@ Niketa - single Jest run
 
 ## Lint single file
 
-ctrl+1
+Ctrl+1
 
 # Editor
 
@@ -56,15 +56,11 @@ ctrl+1
 
 Line action(native)
 
-## Ctrl+Shift+8
-
-Split current tab into two columns
-
-> useful to use two editors when reading/working with large files
-
 ## Ctrl+Shift+9
 
-Revert two columns for a tab
+Toggle current tab into one/two columns
+
+> useful to use two editors when reading/working with large files
 
 ## Toggle zen mode
 

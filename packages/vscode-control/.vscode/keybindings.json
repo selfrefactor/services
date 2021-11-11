@@ -63,11 +63,6 @@
     "command": "wallaby.updateFileSnapshots"
   },
   {
-    "key": "ctrl+shift+8",
-    "command": "workbench.action.splitEditorInGroup",
-    "when": "activeEditorCanSplitInGroup"
-  },
-  {
     "key": "ctrl+shift+9",
     "command": "workbench.action.toggleSplitEditorInGroup"
   },
