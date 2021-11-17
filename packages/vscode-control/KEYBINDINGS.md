@@ -2,6 +2,8 @@
 
 Ctrl+Shift+8
 
+## Ctrl+0
+
 # Snippets
 
 ## Alt+1
@@ -23,10 +25,6 @@ Test Snippet
 ## Alt+5
 
 StringTemplate
-
-## Ctrl+0
-
-Add MR comment in Codestream context
 
 ===
 
