@@ -1,3 +1,7 @@
+# Free bindings
+
+Ctrl+Shift+8
+
 # Snippets
 
 ## Alt+1

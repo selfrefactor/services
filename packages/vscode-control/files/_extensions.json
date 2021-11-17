@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "CodeBiscuits.html-biscuits",
+    "tamj0rd2.ts-quickfixes-extension",
     "CodeStream.codestream",
     "firefox-devtools.vscode-firefox-debug",
     "srimukh.slowbug",
