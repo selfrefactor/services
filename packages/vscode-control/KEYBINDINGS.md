@@ -2,7 +2,9 @@
 
 Ctrl+Shift+8
 
-## Ctrl+0
+Ctrl+0
+
+Alt+E
 
 # Snippets
 
@@ -83,6 +85,10 @@ Ctrl+W
 ## Close other tabs
 
 Ctrl+Q
+
+## Show active file in explorer view
+
+Ctrl+E
 
 ## Change active theme
 

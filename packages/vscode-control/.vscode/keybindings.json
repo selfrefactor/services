@@ -170,7 +170,7 @@
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "alt+e",
+    "key": "ctrl+e",
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
