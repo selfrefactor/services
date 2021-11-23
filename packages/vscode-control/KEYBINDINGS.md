@@ -6,6 +6,8 @@ Ctrl+0
 
 Alt+E
 
+Alt+Z
+
 # Snippets
 
 ## Alt+1
@@ -100,7 +102,7 @@ Ctrl+2
 
 ## Toggle sidebar visibility
 
-Alt+Z
+Ctrl+B
 
 ## Push pending commit
 

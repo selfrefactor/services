@@ -220,10 +220,6 @@
     "command": "workbench.view.explorer"
   },
   {
-    "key": "alt+z",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
     "key": "ctrl+w",
     "command": "workbench.action.closeActiveEditor"
   },
