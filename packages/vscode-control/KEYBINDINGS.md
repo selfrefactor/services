@@ -6,8 +6,6 @@ Ctrl+0
 
 Alt+E
 
-Alt+Z
-
 # Snippets
 
 ## Alt+1
@@ -108,7 +106,7 @@ Ctrl+B
 
 Ctrl+6
 
-## Stage all chages
+## Stage all changes
 
 Ctrl+7
 

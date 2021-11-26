@@ -17,6 +17,15 @@
 		],
 		"description": "test async"
 	},
+	"If Snippet": {
+		"prefix": "iff",
+		"body": [
+      "if($0) {",
+			"\t",
+			"})"
+		],
+		"description": "if"
+	},
 	"Test Snippet": {
 		"prefix": "test",
 		"body": [
