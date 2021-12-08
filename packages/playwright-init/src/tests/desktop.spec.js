@@ -1,19 +1,17 @@
 import { playwrightInit } from '../playwright-init'
 import {wrap, playwrightRun} from 'playwright-wrap'
 const GITHUB = 'https://github.com'
-const FACEBOOK = 'https://facebook.com'
 
 jest.setTimeout(60000)
-
-const RUN_CHROME_ONLY = process.env.RUN_CHROME === 'ON'
-const RUN_FIREFOX_ONLY = process.env.RUN_FIREFOX === 'ON'
 
 async function executeTest(browserMode){
   const { browser, page } = await playwrightInit({
     headless : false,
     logFlag  : false,
+    resolution: {y: 2000, x:600},
+    // resolution: {x: 2000, y:600},
     browser  : browserMode,
-    url      : FACEBOOK,
+    url      : GITHUB,
   })
 
   try {
@@ -21,6 +19,7 @@ async function executeTest(browserMode){
 
     const allClassNames = await _.getAllClassNames('div')
     expect(allClassNames.length).toBeGreaterThan(30)
+    await _.snap(browserMode, false)
     await browser.close()
   } catch (e){
     console.log(e)
@@ -30,12 +29,10 @@ async function executeTest(browserMode){
 }
 
 test('chromium', async () => {
-  if (RUN_FIREFOX_ONLY) return
   await executeTest('chromium')
 })
 
 test('firefox', async () => {
-  if (RUN_CHROME_ONLY) return
   await executeTest('firefox')
 })
 
