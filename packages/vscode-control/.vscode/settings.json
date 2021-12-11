@@ -105,6 +105,7 @@
   "task.quickOpen.detail": false,
   "problems.showCurrentInStatus": true,
   "window.zoomLevel": 1.2,
+  "zenMode.restore": false,
   "editor.fontSize": 20.16,
   "editor.lineHeight": 26,
   "editor.suggestFontSize": 22,
