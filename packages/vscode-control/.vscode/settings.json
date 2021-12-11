@@ -143,7 +143,7 @@
     "**/.hg": false,
     "**/.svn": false,
     "**/coverage": true,
-    "**/coverage-ts": true,
+    "**/coverage-ts": false,
     "**/CVS": false,
     "**/node_modules": true,
     "**/yarn-error.log": true,
