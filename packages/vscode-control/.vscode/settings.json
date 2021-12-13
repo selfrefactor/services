@@ -1,4 +1,6 @@
 {
+  "javascript.preferences.jsxAttributeCompletionStyle": "auto",
+  "typescript.preferences.jsxAttributeCompletionStyle": "auto",
   "wallaby.runOnSaveIndicators": true,
   "editor.guides.bracketPairs": "active",
   "javascript.suggestionActions.enabled": true,
