@@ -43,7 +43,7 @@
   "editor.wordBasedSuggestionsMode": "currentDocument",
   "editor.suggest.showStatusBar": true,
   "terminal.integrated.cursorBlinking": true, 
-  "editor.snippetSuggestions": "bottom",
+  "editor.snippetSuggestions": "inline",
   "editor.suggest.shareSuggestSelections": false,
   "terminal.integratedx.rendererType": "dom",
   "workbench.editor.enablePreviewFromQuickOpen":true,
