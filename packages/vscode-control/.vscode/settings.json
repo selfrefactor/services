@@ -1,4 +1,5 @@
 {
+  "workbench.iconTheme": "vsc-jetbrains-icons-enhanced",
   "javascript.suggestionActions.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "typescript.suggestionActions.enabled": false,
@@ -188,7 +189,6 @@
   "telemetry.enableTelemetry": false,
   "terminal.integrated.copyOnSelection": false,
   "workbench.startupEditor": "none",
-  "workbench.iconTheme": "eq-material-theme-icons-darker",
   "window.enableMenuBarMnemonics": false,
   "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
