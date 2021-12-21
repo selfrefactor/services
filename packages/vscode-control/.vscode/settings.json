@@ -1,4 +1,5 @@
 {
+  "editor.hover.delay": 600,
   "workbench.iconTheme": "vsc-jetbrains-icons-enhanced",
   "javascript.suggestionActions.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
