@@ -64,6 +64,10 @@ Toggle current tab into one/two columns
 
 > useful to use two editors when reading/working with large files
 
+## Show hover info
+
+Ctrl+0
+
 ## Search for symbols in current file
 
 Ctrl+Shift+O
