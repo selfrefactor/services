@@ -2,8 +2,6 @@
 
 Ctrl+Shift+8
 
-Ctrl+0
-
 Alt+E
 
 # Snippets
@@ -65,6 +63,10 @@ Line action(native)
 Toggle current tab into one/two columns
 
 > useful to use two editors when reading/working with large files
+
+## Search for symbols in current file
+
+Ctrl+Shift+O
 
 ## Toggle zen mode
 
