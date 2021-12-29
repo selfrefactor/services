@@ -167,7 +167,7 @@
   "editor.formatOnPaste": false,
   "editor.mouseWheelZoom": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.quickSuggestionsDelay": 500,
+  "editor.quickSuggestionsDelay": 200,
   "editor.renderControlCharacters": false,
   "editor.renderIndentGuides": false,
   "editor.suggestSelection": "first",
