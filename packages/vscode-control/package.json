@@ -1,6 +1,7 @@
 {
 	"scripts": {
-		"work": "yarn work:1&&yarn work:2&&run d",
+		"work": "yarn workx&&run d",
+		"workx": "yarn work:1&&yarn work:2",
 		"work:1": "ZOOM_SCALE=0.96 SCALE=1.15 node syncSettings",
 		"work:2": "BETA=ON ZOOM_SCALE=0.96 SCALE=1.15 node syncSettings",
 		"tv": "yarn tv:1&&yarn tv:2",
