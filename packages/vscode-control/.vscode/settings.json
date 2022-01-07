@@ -122,7 +122,7 @@
   "json.maxItemsComputed": 1000,
   "debug.console.wordWrap": false,
   "debug.allowBreakpointsEverywhere": false,
-  "debug.inlineValues": true,
+  "debug.inlineValues": false,
   "debug.internalConsoleOptions": "neverOpen",
   "debug.openExplorerOnEnd": true,
   "debug.showInStatusBar": "never",
