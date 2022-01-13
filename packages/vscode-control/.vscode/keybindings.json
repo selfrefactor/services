@@ -1,6 +1,6 @@
 [
   {
-    "key": "alt+z",
+    "key": "alt+i",
     "command": "editor.action.insertSnippet",
     "args": { "name": "If Snippet" }
   },
@@ -398,6 +398,14 @@
   {
     "key": "ctrl+`",
     "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "alt+z",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "ctrl+shift+o",
+    "command": "-workbench.action.gotoSymbol"
   },
   {
     "key": "ctrl+shift+r",

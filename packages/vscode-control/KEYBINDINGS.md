@@ -1,6 +1,7 @@
 # Free bindings
 
 Ctrl+Shift+8
+Ctrl+Shift+O
 
 Alt+E
 
@@ -71,6 +72,7 @@ Ctrl+0
 ## Search for symbols in current file
 
 Ctrl+Shift+O
+Alt+Z
 
 ## Toggle zen mode
 
