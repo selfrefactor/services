@@ -2,6 +2,13 @@
 
 - Populate settings and keybingings to local VSCode instance
 
+## Tips
+
+### div.foo + tab
+
+<div className="foo"></div>
+
+
 ## Intellisense
 
 TabNine proves to be best one. One example:

@@ -27,6 +27,10 @@ Test Snippet
 
 StringTemplate
 
+## Alt+I
+
+If condition
+
 ===
 
 ## Ctrl+`
