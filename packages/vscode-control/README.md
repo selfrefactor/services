@@ -8,7 +8,6 @@
 
 <div className="foo"></div>
 
-
 ## Intellisense
 
 TabNine proves to be best one. One example:

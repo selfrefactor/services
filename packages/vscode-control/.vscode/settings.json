@@ -1,4 +1,6 @@
 {
+  "workbench.editor.revealIfOpen": false,
+  "workbench.editor.enablePreview": false,
   "editor.hover.delay": 600,
   "workbench.iconTheme": "vsc-jetbrains-icons-enhanced",
   "javascript.suggestionActions.enabled": false,

@@ -1,8 +1,3 @@
-# Free bindings
-
-Ctrl+Shift+8
-Ctrl+Shift+O
-
 Alt+E
 
 # Snippets
@@ -162,6 +157,11 @@ Alt+P
 
 Alt+U
 
+---
+Free bindings
+
+Ctrl+Shift+8
+Ctrl+Shift+O
 ---
 
 > Deprecated
