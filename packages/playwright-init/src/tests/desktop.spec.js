@@ -3,6 +3,7 @@ import {wrap, playwrightRun} from 'playwright-wrap'
 const GITHUB = 'https://github.com'
 
 jest.setTimeout(60000)
+const POST_BUTTON = '//h1[contains(text(), \"the world builds\")]'
 
 async function executeTest(browserMode){
   const { browser, page } = await playwrightInit({
@@ -20,6 +21,10 @@ async function executeTest(browserMode){
     const allClassNames = await _.getAllClassNames('div')
     expect(allClassNames.length).toBeGreaterThan(30)
     await _.snap(browserMode, false)
+    const [elx] = await page.$$('text=the world builds')
+    const [el] = await page.$$(POST_BUTTON)
+    const text = await el.textContent()
+    const textx = await elx.textContent()
     await browser.close()
   } catch (e){
     console.log(e)
