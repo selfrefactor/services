@@ -4,6 +4,8 @@
 
 ## Tips
 
+### Mouse back/forward button works inside VSCode
+
 ### div.foo + tab
 
 <div className="foo"></div>
