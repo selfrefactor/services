@@ -85,7 +85,7 @@ interface ClickWith {
   nth?: number
 }
 
-interface WrapOutput {
+export interface WrapOutput {
   applyMocks: (serverMocks: Array<ServerMock>) => Promise<void>
   click: (el: string, nth: number) => Promise<void>
   forceClick: (playwrightInput: string) => Promise<void>
