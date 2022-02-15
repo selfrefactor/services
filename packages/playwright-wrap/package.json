@@ -1,6 +1,6 @@
 {
 	"name": "playwright-wrap",
-	"version": "0.11.0",
+	"version": "0.11.1",
 	"description": "Playwright wrapper",
 	"main": "src/playwright-wrap.js",
 	"typings": "index.d.ts",
