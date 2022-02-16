@@ -10,6 +10,10 @@ VSCode extension for magic-like features
 
 ## Open random file mode
 
+```
+"workbench.editor.enablePreview": true
+```
+
 It will show number of filtered files and each click on the message will open a random file.
 
 ## Format Json
