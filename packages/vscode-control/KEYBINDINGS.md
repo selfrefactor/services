@@ -73,6 +73,8 @@ Ctrl+0
 Ctrl+Shift+O
 Alt+Z
 
+# Editor related
+
 ## Toggle zen mode
 
 Alt+A
@@ -108,6 +110,8 @@ Ctrl+2
 ## Toggle sidebar visibility
 
 Ctrl+B
+
+# Unsorted
 
 ## Push pending commit
 
