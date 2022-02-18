@@ -28,6 +28,9 @@ const ZOOM = maybe(
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
+const DEFAULT_FONT = 'Ubuntu Mono'
+// const DEFAULT_FONT = 'JetBrains Mono
+
 
 function syncFiles(source, destination){
   copySync(source, destination)
@@ -42,8 +45,8 @@ const getCalculatedOptions = () => {
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR - 0.14) ))
 
   const fontSettings = {
-    'debug.console.fontFamily' : MONO? 'Operator Mono': "JetBrains Mono",
-    "editor.fontFamily": MONO? 'Operator Mono': "JetBrains Mono",
+    'debug.console.fontFamily' : MONO? 'Operator Mono': DEFAULT_FONT,
+    "editor.fontFamily": MONO? 'Operator Mono': DEFAULT_FONT,
     "editor.fontLigatures": !MONO 
   }
 
