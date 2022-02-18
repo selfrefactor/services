@@ -1,6 +1,6 @@
 # Vscode-control
 
-- Populate settings and keybingings to local VSCode instance
+- Populate settings and keybindings to local VSCode instance
 
 ## Tips
 
