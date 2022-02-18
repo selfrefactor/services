@@ -1,3 +1,9 @@
+Free keybindings
+
+alt+p
+alt+u
+===
+
 Alt+E
 
 # Snippets
