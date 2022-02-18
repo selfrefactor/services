@@ -1,5 +1,14 @@
 {
   "recommendations": [
+    "ms-python.vscode-pylance",
+    "GitHub.codespaces",
+    "ecmel.vscode-html-css",
+    "dongli.python-preview",
+    "LittleFoxTeam.vscode-python-test-adapter",
+    "ms-vscode.test-adapter-converter",
+    "hbenl.vscode-test-explorer",
+    "imPavan.theme-editor",
+    "pmneo.tsimporter",
     "vespa-dev-works.jestRunIt",
     "BrennonDenny.vsc-jetbrains-icons-enhanced",
     "Angular.ng-template",
