@@ -407,10 +407,6 @@
     "when": "inQuickOpen && inRecentFilesPicker"
   },
   {
-    "key": "ctrl+shift+r",
-    "command": "workbench.action.closeEditorsToTheRight"
-  },
-  {
     "key": "alt+c",
     "command": "-workbench.action.terminal.toggleFindCaseSensitive",
     "when": "terminalFindWidgetFocused"

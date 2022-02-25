@@ -2,6 +2,7 @@ Free keybindings
 
 alt+p
 alt+u
+ctrl+shift+r
 ===
 
 Alt+E
