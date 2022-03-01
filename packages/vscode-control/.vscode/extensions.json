@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "fabiospampinato.vscode-open-in-node-modules",
     "marnix.tokyo-night-pro",
     "ms-python.vscode-pylance",
     "GitHub.codespaces",
