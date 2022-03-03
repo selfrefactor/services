@@ -90,6 +90,7 @@ async function lintFn(
     }
 
     if (filePath.endsWith('.js')){
+      // console.log(`lintDefault.command, lintDefault.inputs`, `${ lintDefault.command } ${ lintDefault.inputs.join(' ') }`)
       return spawn(lintDefault.command, lintDefault.inputs)
     }
 
