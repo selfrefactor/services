@@ -1,4 +1,5 @@
 {
+  "javascript.validate.enable": true,
   "python.terminal.activateEnvironment": false,
   "zenMode.centerLayout": true,
   "workbench.editor.revealIfOpen": false,

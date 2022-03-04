@@ -25,7 +25,19 @@ const betweenStatements = {
   next: 'return',
 }
 
-module.exports = {
+exports.baseConfiguration = {
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false,
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      modules: true,
+    },
+  },
+}
+
+exports.baseRules = {
   'node/no-deprecated-api': 1,
   'no-unsafe-optional-chaining': 1,
   'node/callback-return': 0,
@@ -162,3 +174,16 @@ module.exports = {
   'yield-star-spacing': [1, 'before'],
   yoda: [1, 'never'],
 }
+
+exports.fileExtensionRule =
+  process.env.ENABLE_FILE_EXTENSION_RULE === 'ON'
+    ? {
+        'node/file-extension-in-import': [
+          1,
+          'always',
+          {
+            tryExtensions: ['.js'],
+          },
+        ],
+      }
+    : {'node/file-extension-in-import': [1, 'never']}

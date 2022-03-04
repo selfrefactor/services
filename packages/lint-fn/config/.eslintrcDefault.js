@@ -1,18 +1,5 @@
-const baseRules = require('./.eslintBase')
+const {baseRules, baseConfiguration, fileExtensionRule} = require('./.eslintBase')
 const {filter} = require('./filter')
-
-const fileExtensionRule =
-  process.env.ENABLE_FILE_EXTENSION_RULE === 'ON'
-    ? {
-        'node/file-extension-in-import': [
-          1,
-          'always',
-          {
-            tryExtensions: ['.js'],
-          },
-        ],
-      }
-    : {'node/file-extension-in-import': [1, 'never']}
 
 const rules = {
   ...baseRules,
@@ -24,16 +11,8 @@ const rules = {
 }
 
 module.exports = {
+  ...baseConfiguration,
   extends: 'eslint:recommended',
-  parser: '@babel/eslint-parser',
-  parserOptions: {
-    requireConfigFile: false,
-    ecmaVersion: 6,
-    sourceType: 'module',
-    ecmaFeatures: {
-      modules: true,
-    },
-  },
   env: {es6: true},
   plugins: [
     'async-await',
