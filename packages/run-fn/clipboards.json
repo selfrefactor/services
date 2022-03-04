@@ -1,5 +1,5 @@
 {
   "work":"cd $HOME/work/dms-ui && yarn dev\n",
-  "on":"cd $HOME/repos/on && yarn on\n",
-  "onl":"cd $HOME/repos/on && yarn onl\n"
+  "ond":"cd $HOME/repos/on && yarn on\n",
+  "on":"cd $HOME/repos/on && yarn onl\n"
 }

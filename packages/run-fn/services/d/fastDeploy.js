@@ -2,7 +2,7 @@ const { execCommand } = require('../../modules/execCommand')
 const { maybe, head, last } = require('rambdax')
 
 function parse(input){
-  if (input.length === 2 && !head(input)) return [ 'chore@dnd' ]
+  if (input.length === 2 && !head(input)) return [ 'chore@small' ]
 
   return maybe(
     head(input).endsWith(':') || head(input).includes('@'),
