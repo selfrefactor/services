@@ -86,6 +86,8 @@ async function lintFn(
     })
 
     if (filePath.endsWith('.spec.js')){
+      // console.log(`lintJest.command, lintJest.inputs`, `${ lintJest.command } ${ lintJest.inputs.join(' ') }`)
+
       return spawn(lintJest.command, lintJest.inputs)
     }
 
