@@ -1,6 +1,9 @@
 const { headless: headlessModule } = require('./_modules/headless')
 const { init } = require('./_modules/init')
 const { type, pass } = require('rambdax')
+const { PlaywrightBlocker } = require('@cliqz/adblocker-playwright')
+const fetch  = require('cross-fetch')
+
 const LONG_TIMEOUT = 60000
 const SUPPORTED_WAIT_CONDITIONS = [ 'load', 'domcontentloaded', 'networkidle' ]
 
@@ -16,6 +19,7 @@ const defaultResolution = {
 }
 
 const defaultInput = {
+  blockAds: true,
   headless      : true,
   logFlag       : false,
   resolution    : defaultResolution,
@@ -69,7 +73,10 @@ async function playwrightInit(inputRaw){
     ...headless,
   }
   const { browser, page, context } = await init(input, inputRaw.extraProps)
-
+  if(input.blockAds){
+    const blocker = await PlaywrightBlocker.fromPrebuiltAdsAndTracking(fetch)
+    blocker.enableBlockingInPage(page);
+  }
   const waitCondition = getWaitCondition(input.waitCondition)
   await page.goto(input.url, waitCondition)
 

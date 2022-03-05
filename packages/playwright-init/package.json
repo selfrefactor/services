@@ -2,30 +2,33 @@
 	"name": "playwright-init",
 	"scripts": {
 		"test": "yarn test:d&&yarn test:m",
-		"test:d": "jest src/tests/desktop.spec.js",
+		"test:d": "PLAYWRIGHT_DEBUG=ON jest src/tests/desktop.spec.js",
 		"test:m": "jest src/tests/mobile.spec.js"
 	},
 	"typings": "./index.d.ts",
 	"main": "./src/playwright-init.js",
 	"version": "0.5.0",
-	"dependencies": {},
+	"dependencies": {
+		"@cliqz/adblocker-playwright": "1.23.6",
+		"cross-fetch": "3.1.5"
+	},
 	"peerDependencies": {
-		"string-fn": "3.1.0",
-		"rambdax": "7.2.0",
+		"playwright": "1.6.1",
 		"playwright-wrap": "0.1.0",
-		"playwright": "1.6.1"
+		"rambdax": "7.2.0",
+		"string-fn": "3.1.0"
 	},
 	"devDependencies": {
-		"string-fn": "3.1.0",
-		"rambdax": "7.4.1",
-		"playwright": "1.17.1",
-		"playwright-wrap": "0.9.0",
-		"@types/node": "16.11.12",
-		"@types/jest": "27.0.3",
-		"jest": "27.4.3",
-		"@babel/core": "7.16.0",
-		"@babel/plugin-proposal-object-rest-spread": "7.16.0",
-		"@babel/preset-env": "7.16.4"
+		"@babel/core": "7.17.5",
+		"@babel/plugin-proposal-object-rest-spread": "7.17.3",
+		"@babel/preset-env": "7.16.11",
+		"@types/jest": "27.4.1",
+		"@types/node": "17.0.21",
+		"jest": "27.5.1",
+		"playwright": "1.19.2",
+		"playwright-wrap": "0.11.1",
+		"rambdax": "8.0.1",
+		"string-fn": "3.1.0"
 	},
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/playwright-init",
 	"license": "MIT",

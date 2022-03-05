@@ -19,6 +19,7 @@ export interface InputPlaywright{
   browser?: SupportedBrowsers
   headless?: boolean
   fullScreen?: boolean
+  blockAds?: boolean
   waitCondition?: WaitConditionType | WaitCondition 
   logFlag?: boolean
   logAllFlag?: boolean
