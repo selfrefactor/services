@@ -110,6 +110,11 @@
     "when": "searchViewletFocus"
   },
   {
+    "key": "alt+x",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
     "key": "capslock d",
     "command": "workbench.view.debug"
   },
@@ -220,7 +225,7 @@
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "alt+x",
+    "key": "alt+v",
     "command": "workbench.view.explorer"
   },
   {
