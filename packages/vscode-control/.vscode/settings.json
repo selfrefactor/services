@@ -1,4 +1,5 @@
 {
+  "editor.limit":7,
   "javascript.validate.enable": true,
   "python.terminal.activateEnvironment": false,
   "zenMode.centerLayout": true,
