@@ -28,7 +28,6 @@ void async function cron(){
   const firstBatch = getURLs(urls, '1')
   const secondBatch = getURLs(urls, '2')
   const thirdBatch = getURLs(urls, '3')
-
   if(thirdBatch.length > 0 ){
     openURLs(thirdBatch)
     while(true){

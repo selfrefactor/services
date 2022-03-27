@@ -1,4 +1,8 @@
-config.json
+Steps:
+
+1. npm install
+2. fill config.json
+3. npm start
 
 {
   "delay": "30s",
