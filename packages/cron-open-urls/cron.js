@@ -1,6 +1,6 @@
 const {readJson}  = require('fs-extra')
 const {ms}  = require('string-fn')
-const {delay, mapAsync}  = require('rambdax')
+const {delay, mapAsync, mapFastAsync}  = require('rambdax')
 const open = require('open');
 
 async function openURLs(urls, stepDelay){
@@ -21,32 +21,19 @@ function getURLs(urls, priority){
 const source = `${__dirname}/config.json`
 void async function cron(){
   const {priorities, urls, delay: stepDelay} = await readJson(source)
-  const firstDelay = ms(priorities['1'])
-  const secondDelay = ms(priorities['2'])
-  const thirdDelay = ms(priorities['3'])
-  console.log(`delays`, {firstDelay, secondDelay, thirdDelay})
+  const delays = [ms(priorities['1']), ms(priorities['2']), ms(priorities['3'])]
 
   const firstBatch = getURLs(urls, '1')
   const secondBatch = getURLs(urls, '2')
   const thirdBatch = getURLs(urls, '3')
-  console.log(`batches`, {thirdBatch, secondBatch, firstBatch})
-  if(thirdBatch.length > 0 ){
-    openURLs(thirdBatch)
-    while(true){
-      await delay(thirdDelay)
-      openURLs(thirdBatch,stepDelay)
+
+  await mapFastAsync(async (batch, i) => {
+    if(batch.length > 0 ){
+      if(i === 2) openURLs(batch)
+      while(true){
+        await delay(delays[i])
+        openURLs(thirdBatch,stepDelay)
+      }
     }
-  }
-  if(secondBatch.length > 0 ){
-    while(true){
-      await delay(secondDelay)
-      openURLs(secondBatch,stepDelay)
-    }
-  }
-  if(firstBatch.length > 0 ){
-    while(true){
-      await delay(firstDelay)
-      openURLs(firstBatch,stepDelay)
-    }
-  }
+  }, [firstBatch, secondBatch, thirdBatch])
 }()
