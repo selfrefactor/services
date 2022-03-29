@@ -32,7 +32,7 @@ void async function cron(){
       if(i === 2) openURLs(batch)
       while(true){
         await delay(delays[i])
-        openURLs(thirdBatch,stepDelay)
+        openURLs(batch,stepDelay)
       }
     }
   }, [firstBatch, secondBatch, thirdBatch])
