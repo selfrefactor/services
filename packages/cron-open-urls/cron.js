@@ -24,10 +24,12 @@ void async function cron(){
   const firstDelay = ms(priorities['1'])
   const secondDelay = ms(priorities['2'])
   const thirdDelay = ms(priorities['3'])
+  console.log(`delays`, {firstDelay, secondDelay, thirdDelay})
 
   const firstBatch = getURLs(urls, '1')
   const secondBatch = getURLs(urls, '2')
   const thirdBatch = getURLs(urls, '3')
+  console.log(`batches`, {thirdBatch, secondBatch, firstBatch})
   if(thirdBatch.length > 0 ){
     openURLs(thirdBatch)
     while(true){

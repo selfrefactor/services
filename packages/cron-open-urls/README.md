@@ -4,6 +4,7 @@ Steps:
 2. fill config.json
 3. npm start
 
+```
 {
   "delay": "30s",
   "priorities": {
@@ -21,3 +22,4 @@ Steps:
     }
   ]
 }
+```
