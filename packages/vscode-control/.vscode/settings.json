@@ -139,7 +139,7 @@
     "source.fixAll": false,
     "source.organizeImports": false
   },
-  "emmet.triggerExpansionOnTab": true,
+  "emmet.triggerExpansionOnTab": false,
   "search.collapseResults": "alwaysCollapse",
   "window.title": "${activeFolderMedium}/${activeEditorShort}",
   "zenMode.hideLineNumbers": true,
