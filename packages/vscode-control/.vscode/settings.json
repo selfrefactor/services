@@ -1,6 +1,7 @@
 {
   "editor.limit":7,
   "javascript.validate.enable": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "python.terminal.activateEnvironment": false,
   "zenMode.centerLayout": true,
   "workbench.editor.revealIfOpen": false,
@@ -175,7 +176,6 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.quickSuggestionsDelay": 500,
   "editor.renderControlCharacters": false,
-  "editor.renderIndentGuides": false,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
@@ -229,5 +229,6 @@
   "php.suggest.basic": false,
   "javascript.suggest.completeJSDocs": false,
   "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
-  "javascript.suggest.autoImports": true
+  "javascript.suggest.autoImports": true,
+  "editor.guides.indentation": false
 }
