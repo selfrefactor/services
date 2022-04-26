@@ -6,8 +6,8 @@
 		"work:2": "BETA=ON ZOOM_SCALE=0.96 SCALE=1.15 node syncSettings",
 		"tv": "yarn tvx && run d",
 		"tvx": "yarn tv:1&&yarn tv:2",
-		"tv:1": "ZOOM_SCALE=1.47 SCALE=1.23 node syncSettings",
-		"tv:2": "BETA=ON ZOOM_SCALE=1.47 SCALE=1.23 node syncSettings",
+		"tv:1": "ZOOM_SCALE=1.47 SCALE=1.53 node syncSettings",
+		"tv:2": "BETA=ON ZOOM_SCALE=1.47 SCALE=1.53 node syncSettings",
 		"big": "yarn big:1&&yarn big:2",
 		"big:1": "ZOOM_SCALE=1.6 SCALE=1.6 node syncSettings",
 		"big:2": "BETA=ON ZOOM_SCALE=1.6 SCALE=1.6 node syncSettings"
