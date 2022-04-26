@@ -1,4 +1,8 @@
 {
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "extensions.autoCheckUpdates": false,
+  "settingsSync.keybindingsPerPlatform": false,
   "editor.limit":7,
   "javascript.validate.enable": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,

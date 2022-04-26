@@ -175,7 +175,7 @@
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "ctrl+e",
+    "key": "alt+v",
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
@@ -225,7 +225,7 @@
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "alt+v",
+    "key": "ctrl+e",
     "command": "workbench.view.explorer"
   },
   {
