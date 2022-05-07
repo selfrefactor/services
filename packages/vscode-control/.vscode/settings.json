@@ -1,4 +1,5 @@
 {
+  "editor.guides.bracketPairsHorizontal": true,
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "extensions.autoCheckUpdates": false,
