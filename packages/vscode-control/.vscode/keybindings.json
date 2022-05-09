@@ -2,18 +2,31 @@
   {
     "key": "alt+i",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "If Snippet" },
-    "when": "editorLangId==python"
+    "args": { "name": "If Snippet" }
   },
   {
     "key": "alt+1",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "console.log(${1:})" }
+    "args": { "snippet": "console.log(${1:})" },
+    "when": "editorLangId!=python"
+  },
+  {
+    "key": "alt+1",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "print(${1:})" },
+    "when": "editorLangId==python"
   },
   {
     "key": "alt+2",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "console.log(`${CLIPBOARD}`, ${CLIPBOARD}$0)" }
+    "args": { "snippet": "console.log(`${CLIPBOARD}`, ${CLIPBOARD}$0)" },
+    "when": "editorLangId!=python"
+  },
+  {
+    "key": "alt+2",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "print(`${CLIPBOARD}`, ${CLIPBOARD}$0)" },
+    "when": "editorLangId==python"
   },
   {
     "key": "alt+3",
