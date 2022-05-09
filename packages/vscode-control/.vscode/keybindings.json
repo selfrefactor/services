@@ -2,7 +2,8 @@
   {
     "key": "alt+i",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "If Snippet" }
+    "args": { "name": "If Snippet" },
+    "when": "editorLangId != python"
   },
   {
     "key": "alt+1",
