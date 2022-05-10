@@ -25,7 +25,7 @@
   {
     "key": "alt+2",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "print(`${CLIPBOARD}`, ${CLIPBOARD}$0)" },
+    "args": { "snippet": "print(${CLIPBOARD}$0, \"${CLIPBOARD}\")" },
     "when": "editorLangId==python"
   },
   {
