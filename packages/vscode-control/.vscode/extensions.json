@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "mattpocock.ts-error-translator",
     "selfrefactor.niketa-theme-legacy",
     "fabiospampinato.vscode-open-in-node-modules",
     "marnix.tokyo-night-pro",
