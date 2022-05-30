@@ -1,6 +1,7 @@
 const vscode = require('vscode')
 const { copyTrimmed } = require('./copyTrimmed')
 const { createSpec } = require('./createSpec')
+const { fixCamelcaseRefactoring } = require('./fixCamelcaseRefactoring')
 const { formatJson } = require('./format-json')
 const { initBar } = require('./bar')
 const { randomFile, requestRandomFile } = require('./randomFile')
@@ -21,6 +22,8 @@ function activate(context){
     requestRandomFile)
   const sortLinesCommand = vscode.commands.registerCommand(SORT_LINES,
     sortLines)
+  const fixCamelcaseRefactoringCommand = vscode.commands.registerCommand('magicBeans.fixCamelcaseRefactoring',
+  fixCamelcaseRefactoring)
 
   context.subscriptions.push(copyTrimmedCommand)
   context.subscriptions.push(createSpecCommand)
@@ -28,6 +31,7 @@ function activate(context){
   context.subscriptions.push(requestRandomFileCommand)
   context.subscriptions.push(formatJsonCommand)
   context.subscriptions.push(sortLinesCommand)
+  context.subscriptions.push(fixCamelcaseRefactoringCommand)
 }
 
 exports.activate = activate

@@ -63,6 +63,10 @@
 				"title": "Create spec"
 			},
 			{
+				"command": "magicBeans.fixCamelcaseRefactoring",
+				"title": "Fix camelcase refactoring"
+			},
+			{
 				"command": "magicBeans.formatJson",
 				"title": "Format JSON"
 			},
@@ -87,6 +91,10 @@
 			{
 				"command": "magicBeans.createSpec",
 				"key": "ctrl+shift+0"
+			},
+			{
+				"command": "magicBeans.fixCamelcaseRefactoring",
+				"key": "ctrl+shift+]"
 			},
 			{
 				"command": "magicBeans.copyTrimmed",
