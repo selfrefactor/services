@@ -1,4 +1,8 @@
 {
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": true,
+  "files.refactoring.autoSave": true,
+  "editor.inlayHints.enabled": "on",
   "editor.guides.bracketPairsHorizontal": true,
   "editor.guides.highlightActiveIndentation": "always",
   "workbench.enableExperiments": false,
