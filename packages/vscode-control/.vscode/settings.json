@@ -71,7 +71,7 @@
   "explorer.compactFolders":false,
   "tabnine.experimentalAutoImports": true,
   "npm.fetchOnlinePackageInfo": false,
-  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.disableAutomaticTypeAcquisition": false,
   "typescript.check.npmIsInstalled": false,
   "editor.cursorBlinking": "solid",
   "editor.cursorBlinking.old": "expand",
