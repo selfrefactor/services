@@ -4,6 +4,8 @@
 
 ## Tips
 
+### ctrl+caps => mark all ocurances
+
 ### F2 rename constant when constant is selected
 
 ### Mouse back/forward button works inside VSCode
