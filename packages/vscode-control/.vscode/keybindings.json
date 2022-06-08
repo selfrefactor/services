@@ -34,7 +34,7 @@
     "args": { "snippet": "() => {${1:}}" }
   },
   {
-    "key": "alt+p",
+    "key": "alt+t",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "debugger" }
   },
