@@ -34,6 +34,11 @@
     "args": { "snippet": "() => {${1:}}" }
   },
   {
+    "key": "alt+p",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "debugger" }
+  },
+  {
     "key": "ctrl+shift+3",
     "command": "editor.action.insertSnippet",
     "args": { "name": "FnSnippet" }
