@@ -1,5 +1,6 @@
 Free keybindings
 
+alt+t
 alt+p
 alt+u
 ctrl+shift+r
