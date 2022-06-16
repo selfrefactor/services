@@ -36,7 +36,7 @@
   {
     "key": "alt+4",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "(${0:}) => {${1:}}" }
+    "args": { "snippet": "(${1:}) => {${2:}}" }
   },
   {
     "key": "alt+e",
