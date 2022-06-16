@@ -34,6 +34,11 @@
     "args": { "snippet": "() => {${1:}}" }
   },
   {
+    "key": "alt+4",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "(${0:}) => {${1:}}" }
+  },
+  {
     "key": "alt+e",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "debugger" }
@@ -44,24 +49,19 @@
     "args": { "name": "FnSnippet" }
   },
   {
-    "key": "alt+4",
+    "key": "alt+5",
     "command": "editor.action.insertSnippet",
     "args": { "name": "Test Snippet" }
   },
   {
-    "key": "alt+5",
+    "key": "alt+6",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "expect(${1:}).toEqual(${2:})" }
   },
   {
-    "key": "alt+6",
-    "command": "editor.action.insertSnippet",
-    "args": { "snippet": "expect(${1:}).toBe(${2:})" }
-  },
-  {
     "key": "alt+7",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "ExpectInlineSnapshot" }
+    "args": { "snippet": "expect(${1:}).toBe(${2:})" }
   },
   {
     "key": "alt+8",
