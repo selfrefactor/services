@@ -19,7 +19,7 @@
   {
     "key": "alt+2",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "/tconsole.log(${CLIPBOARD}, `${CLIPBOARD}`)$0" },
+    "args": { "snippet": "console.log(${CLIPBOARD}, `${CLIPBOARD}`)$0" },
     "when": "editorLangId!=python"
   },
   {
