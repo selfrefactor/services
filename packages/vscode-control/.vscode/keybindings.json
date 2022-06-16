@@ -19,13 +19,13 @@
   {
     "key": "alt+2",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "console.log(${CLIPBOARD},$0 `${CLIPBOARD}`)" },
+    "args": { "snippet": "console.log(${CLIPBOARD}, `${CLIPBOARD}`)$0" },
     "when": "editorLangId!=python"
   },
   {
     "key": "alt+2",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "print(${CLIPBOARD},$0 \"${CLIPBOARD}\")" },
+    "args": { "snippet": "print(${CLIPBOARD}, \"${CLIPBOARD}\")$0" },
     "when": "editorLangId==python"
   },
   {
