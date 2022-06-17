@@ -17,6 +17,14 @@
 		],
 		"description": "test async"
 	},
+	"Arrow Function": {
+		"prefix": "arror",
+		"body": [
+			"(${1:}) => {",
+			"\t${2:}",
+			"}"
+		]
+	},
 	"If Snippet": {
 		"prefix": "iff",
 		"body": [
