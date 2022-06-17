@@ -31,7 +31,7 @@
   {
     "key": "alt+3",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "() => {${1:}}" }
+    "args": { "name": "Arrow Function" }
   },
   {
     "key": "alt+4",
