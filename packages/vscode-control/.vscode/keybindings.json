@@ -87,6 +87,10 @@
     "command": "wallaby.updateFileSnapshots"
   },
   {
+    "key": "alt+t",
+    "command": "wallaby.addToExclusiveTestRun"
+  },
+  {
     "key": "ctrl+shift+9",
     "command": "workbench.action.toggleSplitEditorInGroup"
   },
