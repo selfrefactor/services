@@ -1,4 +1,7 @@
 {
+  "javascript.suggest.classMemberSnippets.enabled": true,
+  "typescript.suggest.classMemberSnippets.enabled": true,
+  "problems.defaultViewMode":"tree",
   "explorer.fileNesting.enabled": false,
   "explorer.fileNesting.expand": false,
   "files.refactoring.autoSave": true,
@@ -57,7 +60,11 @@
   "emmet.showAbbreviationSuggestions": false,
   "explorer.openEditors.sortOrder": "alphabetical",
   "explorer.sortOrder": "default",
-  "editor.quickSuggestions": false,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
   "editor.tabCompletion": "off",
   "editor.wordBasedSuggestionsMode": "allDocuments",
   "editor.suggest.showStatusBar": true,
