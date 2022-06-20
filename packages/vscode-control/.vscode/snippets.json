@@ -69,8 +69,6 @@
 		"body": [
 			"/**",
 			" * $0",
-			" *",
-			" * @param  {any} input",
 			" */"
 		],
 		"description": "comment multiline"
