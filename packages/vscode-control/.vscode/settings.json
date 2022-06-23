@@ -247,5 +247,16 @@
   "javascript.suggest.completeJSDocs": false,
   "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
   "javascript.suggest.autoImports": true,
-  "editor.guides.indentation": false
+  "editor.guides.indentation": false,
+  "magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS": [
+    ".html",
+    ".js",
+    ".jsx",
+    ".tsx",
+    ".css",
+    ".scss",
+    ".py",
+    ".ts",
+    ".feature"
+  ]
 }
