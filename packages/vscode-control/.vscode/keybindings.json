@@ -44,9 +44,14 @@
     "args": { "snippet": "debugger" }
   },
   {
-    "key": "ctrl+shift+3",
+    "key": "ctrl+shift+2",
     "command": "editor.action.insertSnippet",
     "args": { "name": "FnSnippet" }
+  },
+  {
+    "key": "ctrl+shift+3",
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "() => ${1:}" }
   },
   {
     "key": "alt+5",
