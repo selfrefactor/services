@@ -1,6 +1,6 @@
 {
 	"FnSnippet": {
-		"prefix": "async",
+		"prefix": "fnsnippet",
 		"body": [
 			"function $0(){",
 			"\t",
