@@ -179,7 +179,7 @@
     "**/yarn-error.log": true,
     "dev_dist": true,
     "dist": true,
-    "docs": true,
+    "docs": false,
     "yarn.lock": true
   },
   "atomKeymap.promptV3Features": true,
