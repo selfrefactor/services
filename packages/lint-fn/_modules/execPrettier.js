@@ -6,7 +6,6 @@ const { getPrettierPath } = require('./usePrettier')
 function getCommand({prettierSpecialCase, prettierPath, injectOptions, filePath}){
   if(prettierSpecialCase === 'html'){
     const htmlConfig = resolve(__dirname, '../config/.prettierrc')
-    console.log(htmlConfig, `htmlConfig`)
     return glue(`
       ${ prettierPath }
       --config
@@ -29,7 +28,7 @@ async function execPrettier({ filePath, injectOptions, prettierSpecialCase }){
   const prettierPath = getPrettierPath(cwd, defaultTo('skip', prettierSpecialCase))
   
   const command = getCommand({filePath, prettierPath,prettierSpecialCase, injectOptions})
-  console.log(command.join(` `), `command`)
+  // console.log(command.join(` `), `command`)
   await spawnCommand('node', command, cwd)
 }
 
