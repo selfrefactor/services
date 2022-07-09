@@ -1,4 +1,5 @@
 {
+  "wallaby.suppressExpirationNotifications": true,
   "javascript.suggest.classMemberSnippets.enabled": true,
   "typescript.suggest.classMemberSnippets.enabled": true,
   "problems.defaultViewMode":"tree",
