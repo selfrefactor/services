@@ -7,6 +7,7 @@ const PRETTIER_PATH_BASE = 'node_modules/prettier/bin-prettier.js'
 const DEBUG = 0
 
 const getPrettierPath = (cwd, prettierSpecialCase) => {
+  if (prettierSpecialCase === 'html') return resolve(__dirname, `../${PRETTIER_PATH_BASE}`)
   if (prettierSpecialCase === 'local') return `${ cwd }/${ PRETTIER_PATH_BASE }`
 
   const otherPossiblePath = resolve(__dirname,

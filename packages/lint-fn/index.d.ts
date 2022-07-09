@@ -1,4 +1,4 @@
-type PrettierSpecialCase = 'check' | 'local' | 'outer'
+type PrettierSpecialCase = 'check' | 'local' | 'outer' |`html`
 interface ExecPrettier {
   filePath: string
   injectOptions: string

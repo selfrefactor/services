@@ -27,6 +27,7 @@
 		"eslint-plugin-sort-requires": "2.1.0",
 		"fs-extra": "10.1.0",
 		"prettier": "2.7.1",
+		"prettier-plugin-organize-attributes": "^0.0.5",
 		"rambdax": "8.0.1"
 	},
 	"peerDependencies": {
