@@ -1,11 +1,10 @@
 process.env.LINT_FN_DEBUG = 'ON'
-process.env.SKIP_ESLINT_RULES = 'no-nested-ternary,max-len'
+// process.env.SKIP_ESLINT_RULES = 'no-nested-ternary,max-len'
 const { lintFn } = require('../lintFn')
-
-const filePath = `${ process.env.HOME }/repos/rambda/source/default.spec.js`
+const { JS } = require('./constants')
 
 void (async function prove(){
   console.time('prove')
-  await lintFn(filePath)
+  await lintFn(JS)
   console.timeEnd('prove')
 })()
