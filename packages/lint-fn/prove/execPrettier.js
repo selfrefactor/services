@@ -1,6 +1,6 @@
 process.env.NODE_ENV = 'DEBUG'
 const { execPrettier } = require('../lintFn')
-const { JS } = require('./constants')
+const { JS } = require('../constants')
 
 const injectOptions = '--print-width 34'
 
