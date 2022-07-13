@@ -23,7 +23,7 @@
   "workbench.editor.revealIfOpen": false,
   "workbench.editor.enablePreview": false,
   "editor.hover.delay": 600,
-  "workbench.iconTheme": "vsc-jetbrains-icons-enhanced",
+  "workbench.iconTheme": "emoji-icons",
   "javascript.suggestionActions.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "typescript.suggestionActions.enabled": true,

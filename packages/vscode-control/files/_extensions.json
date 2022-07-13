@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "BrennonDenny.vsc-jetbrains-icons-enhanced",
+    "Equinusocio.vsc-material-theme-icons",
     "CodeBiscuits.html-biscuits",
     "tamj0rd2.ts-quickfixes-extension",
     "CodeStream.codestream",

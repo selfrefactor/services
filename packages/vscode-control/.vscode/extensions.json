@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "mightbesimon.emoji-icons",
     "mattpocock.ts-error-translator",
     "selfrefactor.niketa-theme-legacy",
     "fabiospampinato.vscode-open-in-node-modules",
@@ -14,9 +15,7 @@
     "imPavan.theme-editor",
     "pmneo.tsimporter",
     "vespa-dev-works.jestRunIt",
-    "BrennonDenny.vsc-jetbrains-icons-enhanced",
     "Angular.ng-template",
-    "Equinusocio.vsc-material-theme-icons",
     "TabNine.tabnine-vscode",
     "bcanzanella.openmatchingfiles",
     "ghaschel.vscode-angular-html",
