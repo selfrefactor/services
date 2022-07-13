@@ -1,4 +1,6 @@
 {
+  "git.mergeEditor": true,
+  "window.commandCenter": true,
   "wallaby.suppressExpirationNotifications": true,
   "javascript.suggest.classMemberSnippets.enabled": true,
   "typescript.suggest.classMemberSnippets.enabled": true,
