@@ -43,10 +43,12 @@
 	"activationEvents": [
 		"onCommand:magicBeans.betterCut",
 		"onCommand:magicBeans.copyTrimmed",
-		"onCommand:magicBeans.formatJson",
 		"onCommand:magicBeans.createSpec",
+		"onCommand:magicBeans.formatJson",
+		"onCommand:magicBeans.randomFile",
+		"onCommand:magicBeans.requestRandomFile",
 		"onCommand:magicBeans.sortLines",
-		"onCommand:magicBeans.randomFile"
+		"onCommand:magicBeans.fixCamelcaseRefactoring"
 	],
 	"contributes": {
 		"commands": [
@@ -138,6 +140,7 @@
 						".css",
 						".scss",
 						".py",
+						".feature",
 						".ts"
 					],
 					"description": "Which file extensions are allowed in random file mode"
