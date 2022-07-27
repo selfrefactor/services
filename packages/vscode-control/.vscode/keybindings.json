@@ -84,6 +84,11 @@
     "args": { "name": "FnAsyncSnippet" }
   },
   {
+    "key": "alt+p",
+    "command": "-codestream.newComment",
+    "when": "codestream:status == 'signedIn'"
+  },
+  {
     "key": "ctrl+shift+6",
     "command": "wallaby.stop"
   },
@@ -528,6 +533,11 @@
     "key": "ctrl+k ctrl+shift+\\",
     "command": "-workbench.action.splitEditorInGroup",
     "when": "activeEditorCanSplitInGroup"
+  },
+  {
+    "key": "ctrl+shift+/ ctrl+shift+c",
+    "command": "-codestream.newComment",
+    "when": "codestream:status == 'signedIn'"
   },
    {
     "key": "ctrl+9",
