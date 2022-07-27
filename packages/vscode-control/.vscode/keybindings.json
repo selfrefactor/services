@@ -85,7 +85,7 @@
   },
   {
     "key": "alt+p",
-    "command": "-codestream.newComment",
+    "command": "codestream.newComment",
     "when": "codestream:status == 'signedIn'"
   },
   {
