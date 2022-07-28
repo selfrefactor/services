@@ -156,6 +156,14 @@
     "command": "-workbench.view.debug"
   },
   {
+    "key": "ctrl+shift+g",
+    "command": "workbench.action.editorLayoutTwoColumns"
+  },
+  {
+    "key": "shift+alt+g",
+    "command": "workbench.action.editorLayoutSingle"
+  },
+  {
     "key": "alt+4",
     "command": "list.collapseAll",
     "when": "listFocus && !inputFocus"

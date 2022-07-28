@@ -66,6 +66,10 @@ Ctrl+1
 
 Line action(native)
 
+## shift+alt+g / ctrl+alt+g
+
+toggle single/two column view
+
 ## Ctrl+Shift+9
 
 Toggle current tab into one/two columns
