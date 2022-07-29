@@ -15,7 +15,8 @@ async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOv
   node_modules/eslint/bin/eslint.js
   --fix
   ${ filePath }
-  `).split(' ')
+  `)
+  // .split(' ')
 
   if (debug){
     console.log({
