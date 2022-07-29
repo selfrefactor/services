@@ -21,8 +21,11 @@ function takeProjectDir(filePath, cwdOverride){
     if (!willReturn){
       const list = filePath.split('/')
       const maybeDir = dropLast(i, list).join('/')
-
-      if (existsSync(`${ maybeDir }/package.json`)){
+      const maybeFilePath = `${ maybeDir }/package.json`
+      // console.log({maybeFilePath, exists: existsSync(maybeFilePath)}, `maybeFilePath`)
+      if (existsSync(maybeFilePath)){
+        // const maybeConfig = `${ maybeDir }/tsconfig.json`
+        // console.log({maybeConfig, exists: existsSync(maybeConfig)}, `maybeConfig`)
         willReturn = existsSync(`${ maybeDir }/tsconfig.json`) ?
           maybeDir :
           false
