@@ -2,7 +2,7 @@ const { glue } = require('rambdax')
 const { spawnCommand } = require('./spawnCommand')
 const { usePrettier } = require('./usePrettier')
 
-async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOverride, debug }){
+async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOverride = false, debug = false }){
   await usePrettier({
     filePath,
     withTypescript : true,

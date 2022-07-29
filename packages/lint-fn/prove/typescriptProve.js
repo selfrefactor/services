@@ -4,6 +4,6 @@ const { TS_PROVE } = require('../constants')
 
 void (async function prove(){
   console.time('prove')
-  await lintFn(TS_PROVE)
+await lintFn({filePath: TS_PROVE})
   console.timeEnd('prove')
 })()
