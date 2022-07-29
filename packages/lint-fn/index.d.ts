@@ -5,13 +5,13 @@ interface ExecPrettier {
   prettierSpecialCase?:PrettierSpecialCase
 }
 
-export function lintFn(
+export function lintFn(input : {
   filePath: string, 
   prettierSpecialCase?:PrettierSpecialCase,
   cwdOverride?:string|false,
   forceTypescript?:boolean,
   debug?:boolean
-): Promise<void|false>;
+}): Promise<void|false>;
 
 export function execPrettier(
   input: ExecPrettier

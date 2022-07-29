@@ -15,6 +15,14 @@ async function lintFn({
   forceTypescript = false,
   debug = false,
 }){
+  if(debug){
+    console.log({
+      filePath,
+      prettierSpecialCase,
+      cwdOverride,
+      forceTypescript,
+    })
+  }
   try {
     if (filePath.endsWith('.ts')){
       return handleTypescript({
@@ -27,7 +35,7 @@ async function lintFn({
     }
 
     const eslintPath = getEslintPath(debugFlag)
-console.log(eslintPath, `eslintPath`)
+
     if (!eslintPath) return console.log('No ESLint path found')
 
     await usePrettier({

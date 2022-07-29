@@ -5,7 +5,12 @@ const { TS } = require('../constants')
 
 void (async function prove(){
   console.time('prove')
-  await lintFn(TS, 'local', false, true)
+  await lintFn({
+    filePath: TS,
+    prettierSpecialCase: 'local',
+    forceTypescript: true,
+    debug: true
+  })
   console.timeEnd('prove')
 })()
 

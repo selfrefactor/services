@@ -4,6 +4,6 @@ const { ANGULAR } = require('../constants')
 
 void (async function prove(){
   console.time('prove')
-  await lintFn(ANGULAR)
+  await lintFn({filePath: ANGULAR})
   console.timeEnd('prove')
 })()
