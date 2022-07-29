@@ -5,6 +5,6 @@ const { JS } = require('../constants')
 
 void (async function prove(){
   console.time('prove')
-  await lintFn(JS)
+  await lintFn({filePath: JS})
   console.timeEnd('prove')
 })()

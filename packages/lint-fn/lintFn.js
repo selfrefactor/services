@@ -1,33 +1,33 @@
 const { commandFactory } = require('./_modules/commandFactory')
-const { execPrettier } = require('./_modules/execPrettier')
-const { getEslintPath } = require('./_modules/getEslintPath')
 const { debugFlag, DIR } = require('./_modules/spawnCommand')
 const { execCommand } = require('./_modules/exec')
+const { execPrettier } = require('./_modules/execPrettier')
+const { getEslintPath } = require('./_modules/getEslintPath')
+const { handleTypescript } = require('./_modules/handleTypescript')
 const { usePrettier } = require('./_modules/usePrettier')
-const { handleTypescript } = require("./_modules/handleTypescript")
 
 const NO_AVAILABLE_LINTER = 'Filepath has no corresponding linter'
 
-async function lintFn(
+async function lintFn({
   filePath,
   prettierSpecialCase = 'local',
   cwdOverride = false,
   forceTypescript = false,
-  debug = false
-){
+  debug = false,
+}){
   try {
     if (filePath.endsWith('.ts')){
-      return handleTypescript(
+      return handleTypescript({
         filePath,
         prettierSpecialCase,
         cwdOverride,
         forceTypescript,
-        debug
-      )
+        debug,
+      })
     }
 
     const eslintPath = getEslintPath(debugFlag)
-
+console.log(eslintPath, `eslintPath`)
     if (!eslintPath) return console.log('No ESLint path found')
 
     await usePrettier({
@@ -44,10 +44,13 @@ async function lintFn(
 
     if (filePath.endsWith('.spec.js')){
       const command = `${ lintJest.command } ${ lintJest.inputs.join(' ') }`
-      if(debug){
-        console.log(`lintJest.command`, command)
+      if (debug){
+        console.log('lintJest.command', command)
       }
-      const result= await execCommand({cwd: DIR, command})
+      const result = await execCommand({
+        cwd : DIR,
+        command,
+      })
 
       return result
       // return spawn(lintJest.command, lintJest.inputs)
@@ -55,8 +58,11 @@ async function lintFn(
 
     if (filePath.endsWith('.js')){
       const command = `${ lintDefault.command } ${ lintDefault.inputs.join(' ') }`
-      if(debug)        console.log(command)
-      const result= await execCommand({cwd: DIR, command})
+      if (debug) console.log(command)
+      const result = await execCommand({
+        cwd : DIR,
+        command,
+      })
 
       return result
       // return spawn(lintDefault.command, lintDefault.inputs)

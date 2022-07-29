@@ -3,7 +3,7 @@ const { glue } = require('rambdax')
 const { usePrettier } = require('./usePrettier')
 
 async function lintTypescript(
-  filePath, projectDir, prettierSpecialCase, cwdOverride, debug
+  {filePath, projectDir, prettierSpecialCase, cwdOverride, debug}
 ){
   await usePrettier({
     filePath,

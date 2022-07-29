@@ -1,7 +1,7 @@
 const { spawn } = require('child_process')
 const { resolve } = require('path')
 const debugFlag = process.env.LINT_FN_DEBUG === 'ON'
-const DIR = debugFlag ? __dirname : resolve(__dirname, '../')
+const DIR = resolve(__dirname, '../')
 console.log(DIR, `lintFn DIR`)
 
 const PARSE_ERROR_MARKER = 'error  Parsing error:'
