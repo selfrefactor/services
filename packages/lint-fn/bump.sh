@@ -1,1 +1,1 @@
-run d chore@prepublish&&vsce publish minor&&run d chore: after publish
+run d chore@prepublish&&run bump minor&&run d chore: after publish
