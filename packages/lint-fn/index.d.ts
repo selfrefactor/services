@@ -9,7 +9,8 @@ export function lintFn(
   filePath: string, 
   prettierSpecialCase?:PrettierSpecialCase,
   cwdOverride?:string|false,
-  forceTypescript?:boolean
+  forceTypescript?:boolean,
+  debug?:boolean
 ): Promise<void|false>;
 
 export function execPrettier(
