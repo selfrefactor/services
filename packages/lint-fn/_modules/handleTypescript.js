@@ -22,7 +22,6 @@ async function handleTypescript({
         ok,
       }, '!ok && forceTypescript')
     }
-return
     return forceTypescriptFn(filePath, prettierSpecialCase)
   }
 

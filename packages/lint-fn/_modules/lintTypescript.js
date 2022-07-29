@@ -1,15 +1,13 @@
-const { spawnCommand } = require('./spawnCommand')
 const { glue } = require('rambdax')
+const { spawnCommand } = require('./spawnCommand')
 const { usePrettier } = require('./usePrettier')
 
-async function lintTypescript(
-  {filePath, projectDir, prettierSpecialCase, cwdOverride, debug}
-){
+async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOverride, debug }){
   await usePrettier({
     filePath,
     withTypescript : true,
     prettierSpecialCase,
-    cwdOverride
+    cwdOverride,
   })
 
   const eslintCommand = glue(`
@@ -17,15 +15,17 @@ async function lintTypescript(
   --fix
   ${ filePath }
   `).split(' ')
-  
-  if(debug){
+
+  if (debug){
     console.log({
-      label: 'lint typescript',
+      label : 'lint typescript',
       eslintCommand,
-      projectDir
+      projectDir,
     })
   }
-  await spawnCommand('node', eslintCommand, projectDir)
+  await spawnCommand(
+    'node', eslintCommand, projectDir
+  )
 }
 
 exports.lintTypescript = lintTypescript
