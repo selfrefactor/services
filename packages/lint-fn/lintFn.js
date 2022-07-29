@@ -1,7 +1,8 @@
 const { commandFactory } = require('./_modules/commandFactory')
 const { execPrettier } = require('./_modules/execPrettier')
 const { getEslintPath } = require('./_modules/getEslintPath')
-const { spawn, debugFlag } = require('./_modules/spawnCommand')
+const { debugFlag, DIR } = require('./_modules/spawnCommand')
+const { execCommand } = require('./_modules/exec')
 const { usePrettier } = require('./_modules/usePrettier')
 const { handleTypescript } = require("./_modules/handleTypescript")
 
@@ -42,18 +43,23 @@ async function lintFn(
     })
 
     if (filePath.endsWith('.spec.js')){
+      const command = `${ lintJest.command } ${ lintJest.inputs.join(' ') }`
       if(debug){
-        console.log(`lintJest.command, lintJest.inputs`, `${ lintJest.command } ${ lintJest.inputs.join(' ') }`)
+        console.log(`lintJest.command`, command)
       }
+      const result= await execCommand({cwd: DIR, command})
 
-      return spawn(lintJest.command, lintJest.inputs)
+      return result
+      // return spawn(lintJest.command, lintJest.inputs)
     }
 
     if (filePath.endsWith('.js')){
-      if(debug){
-        console.log(`lintDefault.command, lintDefault.inputs`, `${ lintDefault.command } ${ lintDefault.inputs.join(' ') }`)
-      }
-      return spawn(lintDefault.command, lintDefault.inputs)
+      const command = `${ lintDefault.command } ${ lintDefault.inputs.join(' ') }`
+      if(debug)        console.log(command)
+      const result= await execCommand({cwd: DIR, command})
+
+      return result
+      // return spawn(lintDefault.command, lintDefault.inputs)
     }
 
     return console.log(NO_AVAILABLE_LINTER)
