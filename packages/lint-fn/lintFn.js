@@ -3,7 +3,7 @@ const { execPrettier } = require('./_modules/execPrettier')
 const { getEslintPath } = require('./_modules/getEslintPath')
 const { spawn, debugFlag } = require('./_modules/spawnCommand')
 const { usePrettier } = require('./_modules/usePrettier')
-const { handleTypescript } = require("./handleTypescript")
+const { handleTypescript } = require("./_modules/handleTypescript")
 
 const NO_AVAILABLE_LINTER = 'Filepath has no corresponding linter'
 

@@ -1,6 +1,6 @@
 const { glue } = require('rambdax');
-const { lintTypescript } = require('./_modules/lintTypescript');
-const { takeProjectDir } = require('./_modules/takeProjectDir');
+const { lintTypescript } = require('./lintTypescript');
+const { takeProjectDir } = require('./takeProjectDir');
 const { forceTypescriptFn } = require('./forceTypescriptFn');
 
 async function handleTypescript(
@@ -33,7 +33,7 @@ async function handleTypescript(
   }
 
   return lintTypescript(
-    filePath, path, prettierSpecialCase, cwdOverride
+    filePath, path, prettierSpecialCase, cwdOverride, debug
   );
 }
 

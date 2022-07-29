@@ -3,7 +3,7 @@ const { glue } = require('rambdax')
 const { usePrettier } = require('./usePrettier')
 
 async function lintTypescript(
-  filePath, projectDir, prettierSpecialCase, cwdOverride
+  filePath, projectDir, prettierSpecialCase, cwdOverride, debug
 ){
   await usePrettier({
     filePath,
@@ -18,6 +18,13 @@ async function lintTypescript(
   ${ filePath }
   `).split(' ')
   
+  if(debug){
+    console.log({
+      label: 'lint typescript',
+      eslintCommand,
+      projectDir
+    })
+  }
   await spawnCommand('node', eslintCommand, projectDir)
 }
 

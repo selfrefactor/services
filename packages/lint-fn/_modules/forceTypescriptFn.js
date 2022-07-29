@@ -1,4 +1,4 @@
-const { lintTypescript } = require('./_modules/lintTypescript');
+const { lintTypescript } = require('./lintTypescript');
 const { writeFile, readFile } = require('fs-extra');
 
 async function forceTypescriptFn(filePath, prettierSpecialCase) {
