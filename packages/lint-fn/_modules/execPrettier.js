@@ -1,35 +1,34 @@
-const { spawnCommand } = require('./spawnCommand')
-const { glue, defaultTo } = require('rambdax')
+const { executeCommand } = require('./exec')
+const { defaultTo } = require('rambdax')
 const { resolve } = require('path')
 const { getPrettierPath } = require('./usePrettier')
 
 function getCommand({prettierSpecialCase, prettierPath, injectOptions, filePath}){
   if(prettierSpecialCase === 'html'){
     const htmlConfig = resolve(__dirname, '../config/.prettierrc')
-    return glue(`
-      ${ prettierPath }
-      --config
-      ${ htmlConfig }
-      ${ injectOptions }
-      --write
-      ${ filePath }
-    `).split(' ')
+    return [
+      prettierPath
+      `--config`,
+      htmlConfig,
+      injectOptions,
+      `--write`,
+      filePath
+    ]
   }
-  return glue(`
-  ${ prettierPath }
-  ${ injectOptions }
-  --write
-  ${ filePath }
-`).split(' ')
+  return [
+    prettierPath,
+    injectOptions,
+    `--write`,
+    filePath
+  ]
 }
 
-async function execPrettier({ filePath, injectOptions, prettierSpecialCase }){
+async function execPrettier({ filePath, injectOptions, prettierSpecialCase, debug }){
   const cwd = resolve(__dirname, '../')
   const prettierPath = getPrettierPath(cwd, defaultTo('skip', prettierSpecialCase))
   
   const command = getCommand({filePath, prettierPath,prettierSpecialCase, injectOptions})
-  // console.log(command.join(` `), `command`)
-  await spawnCommand('node', command, cwd)
+  await executeCommand({command: 'node', inputs: command, cwd, debug})
 }
 
 exports.execPrettier = execPrettier

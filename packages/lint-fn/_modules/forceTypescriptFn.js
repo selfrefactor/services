@@ -1,25 +1,28 @@
-const { lintTypescript } = require('./lintTypescript');
-const { writeFile, readFile } = require('fs-extra');
+const { writeFile, readFile } = require('fs-extra')
+const { resolve } = require('path')
+const { usePrettier } = require('./usePrettier')
 
-async function forceTypescriptFn(filePath, prettierSpecialCase) {
-  const TEMP = `${__dirname}/TEMP.ts`;
-  const content = (await readFile(filePath)).toString();
+const DIR = resolve(__dirname, '..')
 
-  await writeFile(TEMP, content);
+async function forceTypescriptFn(
+  filePath, prettierSpecialCase, debug
+){
+  const TEMP = `${ DIR }/TEMP.ts`
+  const content = (await readFile(filePath)).toString()
+  await writeFile(TEMP, content)
 
-  const lintTypescriptResult = await lintTypescript(
-    {
-      filePath: TEMP,
-      projectDir: __dirname,
-      prettierSpecialCase,
-      cwdOverride: false
-    }
-  );
+  await usePrettier({
+    filePath: TEMP,
+    withTypescript : true,
+    prettierSpecialCase,
+    cwdOverride: DIR,
+    debug,
+  })
 
-  const lintedContent = (await readFile(TEMP)).toString();
-  await writeFile(filePath, lintedContent);
+  const lintedContent = (await readFile(TEMP)).toString()
+  await writeFile(filePath, lintedContent)
 
-  return {...lintTypescriptResult, case: 'force-ts'}
+  return true
 }
 
 exports.forceTypescriptFn = forceTypescriptFn

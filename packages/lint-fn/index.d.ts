@@ -5,19 +5,13 @@ interface ExecPrettier {
   prettierSpecialCase?:PrettierSpecialCase
 }
 
-interface LintFnResult{
-  usePrettierResult: string[],
-  lintResult: string[],
-  case: 'js'|'jest'|'ts'|'force-ts'
-}
-
 export function lintFn(input : {
   filePath: string, 
   prettierSpecialCase?:PrettierSpecialCase,
   cwdOverride?:string|false,
   forceTypescript?:boolean,
   debug?:boolean
-}): Promise<LintFnResult|false>;
+}): Promise<boolean>;
 
 export function execPrettier(
   input: ExecPrettier

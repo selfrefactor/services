@@ -22,7 +22,7 @@ async function handleTypescript({
         ok,
       }, '!ok && forceTypescript')
     }
-    return forceTypescriptFn(filePath, prettierSpecialCase)
+    return forceTypescriptFn(filePath, prettierSpecialCase, debug)
   }
 
   if (!eslintFlag){

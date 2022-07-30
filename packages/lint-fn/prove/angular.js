@@ -3,7 +3,6 @@ const { lintFn } = require('../lintFn')
 const { ANGULAR } = require('../constants')
 
 void (async function prove(){
-  console.time('prove')
-  await lintFn({filePath: ANGULAR})
-  console.timeEnd('prove')
+  const result = await lintFn({filePath: ANGULAR, debug: true})
+  console.log(result, `result`)
 })()

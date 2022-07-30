@@ -1,68 +1,26 @@
-const { exec, spawn } = require('child_process')
+const { spawn } = require('child_process')
 
-const spawnCommand = ({ command, inputs, cwd, onLog }) =>
-  new Promise((resolve, reject) => {
-    const proc = spawn(
-      command, inputs, {
-        cwd,
-        shell : true,
-        env   : process.env,
-      }
-    )
-
-    proc.stdout.on('data', chunk => {
-      if (onLog){
-        onLog(chunk.toString())
-      } else {
-        console.log(chunk.toString())
-      }
-    })
-    proc.stdout.on('end', () => resolve())
-    proc.stdout.on('error', err => reject(err))
-  })
-
-const execCommandSafe = ({ command, cwd }) =>
-  new Promise((resolve, reject) => {
-    const callback = (
-      error, stdout, stderr
-    ) => {
-      if (error) return reject(error)
-      if (stderr){
-        console.warn(stderr)
-      }
-
-      resolve(stdout)
+const executeCommand = ({ command, inputs, cwd, debug = false }) => {
+  if(debug){
+    console.log(command, inputs, cwd, `command, inputs, cwd`)
+  }
+  const child = spawn(
+    command, inputs, {
+      stdio : 'inherit',
+      cwd,
     }
-    exec(
-      command,
-      {
-        cwd,
-        shell : '/bin/sh',
-        env   : process.env,
-      },
-      callback
-    )
-  })
+  )
 
-const execCommand = ({ cwd, command, onLog = undefined }) =>
-  new Promise((resolve, reject) => {
-    const logs = []
-    const proc = exec(command, { cwd })
+  return new Promise((resolve, reject) => {
+    child.on('close', code => {
+      if (code !== 0){
+        reject(new Error(`${ command } ${ inputs.join(' ') } failed with exit code ${ code }`))
 
-    proc.stdout.on('data', chunk => {
-      const sk = chunk.toString()
-      if (onLog){
-        onLog(sk)
-      } else {
-        console.log(sk)
+        return
       }
-
-      logs.push(sk)
+      resolve(true)
     })
-    proc.stdout.on('end', () => resolve(logs))
-    proc.stdout.on('error', err => reject(err))
   })
+}
 
-exports.execCommand = execCommand
-exports.execSafe = execCommandSafe
-exports.spawn = spawnCommand
+exports.executeCommand = executeCommand

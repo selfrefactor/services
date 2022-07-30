@@ -1,35 +1,35 @@
-const { glue } = require('rambdax')
-const { execCommand } = require('./exec')
+const { executeCommand } = require('./exec')
 const { usePrettier } = require('./usePrettier')
 
-async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOverride = false, debug = false}){
-  const usePrettierResult = await usePrettier({
+async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOverride = false, debug = false }){
+  await usePrettier({
     filePath,
     withTypescript : true,
     prettierSpecialCase,
     cwdOverride,
+    debug,
   })
-  const command = glue(`
-  node
-  node_modules/eslint/bin/eslint.js
-  --fix
-  ${ filePath }
-  `)
-
+  const inputs = [
+    'node_modules/eslint/bin/eslint.js',
+    `--fix`,
+    filePath,
+  ]
   if (debug){
     console.log({
-      label : 'lint typescript',
-      command,
+      label   : 'lint typescript',
+      command : inputs,
       projectDir,
+      label: 'lintTypescript'
     })
   }
-
-  const lintTypescriptResult = await execCommand({
+  await executeCommand({
     cwd     : projectDir,
-    command,
+    command : 'node',
+    inputs,
+    debug
   })
 
-  return {usePrettierResult, lintResult: lintTypescriptResult, case: 'ts'}
+  return true
 }
 
 exports.lintTypescript = lintTypescript

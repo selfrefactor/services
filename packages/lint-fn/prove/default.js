@@ -4,7 +4,6 @@ const { lintFn } = require('../lintFn')
 const { JS } = require('../constants')
 
 void (async function prove(){
-  console.time('prove')
-  await lintFn({filePath: JS})
-  console.timeEnd('prove')
+  const result = await lintFn({filePath: JS, debug: false})
+  console.log(result, `result`)
 })()
