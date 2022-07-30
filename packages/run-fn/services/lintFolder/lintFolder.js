@@ -32,7 +32,7 @@ async function lintFolder({ fastFlag }){
   }
 
   console.time('lintFolder')
-  const lint = async filePath => lintFn(filePath, 'outer')
+  const lint = async filePath => lintFn({filePath, prettierSpecialCase: 'outer'})
 
   if (fastFlag){
     await R.mapAsyncLimit(
