@@ -1,4 +1,4 @@
-const { spawnCommand } = require('./spawnCommand')
+const { execCommand } = require('./exec')
 const { glue } = require('rambdax')
 const { resolve } = require('path')
 const { existsSync } = require('fs')
@@ -39,7 +39,7 @@ async function usePrettier({ filePath, withTypescript, prettierSpecialCase, cwdO
   */
   const typescriptPart = withTypescript ? '--parser typescript': ''
 
-  const command = glue(`
+  const commandSpawn = glue(`
   ${ prettierPath }
   --no-semi
   --no-bracket-spacing
@@ -53,8 +53,9 @@ async function usePrettier({ filePath, withTypescript, prettierSpecialCase, cwdO
   ${ typescriptPart }
   ${ filePath }
 `).split(' ')
-
-  await spawnCommand("node", command, cwd)
+  
+const command = `node ${commandSpawn.join(' ')}`
+  return execCommand({cwd, command})
 }
 
 exports.usePrettier = usePrettier

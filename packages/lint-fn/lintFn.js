@@ -15,14 +15,6 @@ async function lintFn({
   forceTypescript = false,
   debug = false,
 }){
-  if(debug){
-    console.log({
-      filePath,
-      prettierSpecialCase,
-      cwdOverride,
-      forceTypescript,
-    })
-  }
   try {
     if (filePath.endsWith('.ts')){
       return handleTypescript({
@@ -38,7 +30,7 @@ async function lintFn({
 
     if (!eslintPath) return console.log('No ESLint path found')
 
-    await usePrettier({
+    const usePrettierResult = await usePrettier({
       filePath,
       cwdOverride,
       withTypescript : false,
@@ -55,25 +47,23 @@ async function lintFn({
       if (debug){
         console.log('lintJest.command', command)
       }
-      const result = await execCommand({
+      const lintJestResult = await execCommand({
         cwd : DIR,
         command,
       })
 
-      return result
-      // return spawn(lintJest.command, lintJest.inputs)
+      return {usePrettierResult, lintJestResult}
     }
 
     if (filePath.endsWith('.js')){
       const command = `${ lintDefault.command } ${ lintDefault.inputs.join(' ') }`
       if (debug) console.log(command)
-      const result = await execCommand({
+      const lintJsResult = await execCommand({
         cwd : DIR,
         command,
       })
 
-      return result
-      // return spawn(lintDefault.command, lintDefault.inputs)
+      return {usePrettierResult, lintJsResult}
     }
 
     return console.log(NO_AVAILABLE_LINTER)

@@ -7,7 +7,7 @@ async function forceTypescriptFn(filePath, prettierSpecialCase) {
 
   await writeFile(TEMP, content);
 
-  await lintTypescript(
+  const lintTypescriptResult = await lintTypescript(
     {
       filePath: TEMP,
       projectDir: __dirname,
@@ -18,6 +18,8 @@ async function forceTypescriptFn(filePath, prettierSpecialCase) {
 
   const lintedContent = (await readFile(TEMP)).toString();
   await writeFile(filePath, lintedContent);
+
+  return lintTypescriptResult
 }
 
 exports.forceTypescriptFn = forceTypescriptFn
