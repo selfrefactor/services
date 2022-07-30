@@ -42,7 +42,7 @@ async function lintFunction({
 
     if (!eslintPath) return console.log('No ESLint path found')
 
-    await usePrettier({
+    const prettierResult = await usePrettier({
       filePath,
       cwdOverride,
       withTypescript : false,
@@ -60,41 +60,42 @@ async function lintFunction({
       if (debug){
         console.log('lintJest.command', command)
       }
-      await executeCommand({
+      const lintResult = await executeCommand({
         cwd     : DIR,
         command : lintJest.command,
         inputs  : lintJest.inputs,
         debug,
       })
 
-      return true
+      return {lintResult, prettierResult}
     }
 
     if (filePath.endsWith('.jsx')){
       const command = `${ lintReact.command } ${ lintReact.inputs.join(' ') }`
       if (debug) console.log(command)
 
-      await executeCommand({
+      const lintResult = await executeCommand({
         cwd     : DIR,
         command : lintReact.command,
         inputs  : lintReact.inputs,
         debug,
       })
 
-      return true
+      return {lintResult, prettierResult}
     }
     if (filePath.endsWith('.js')){
       const command = `${ lintDefault.command } ${ lintDefault.inputs.join(' ') }`
       if (debug) console.log(command)
 
-      await executeCommand({
+      const lintResult = await executeCommand({
         cwd     : DIR,
         command : lintDefault.command,
         inputs  : lintDefault.inputs,
         debug,
       })
 
-      return true
+      return {lintResult, prettierResult}
+
     }
 
     return console.log(NO_AVAILABLE_LINTER)

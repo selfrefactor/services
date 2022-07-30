@@ -1,13 +1,12 @@
-const { glue } = require('rambdax')
 const { resolve } = require('path')
 const configFilePath = resolve(__dirname, '../config')
 
 const getInputs = (src, configPath) => {
   return [
-    src
-      `--fix`,
-      '--config',
-      `${ configFilePath }/.${configPath}.js`
+    src,
+    `--fix`,
+    '--config',
+    `${ configFilePath }/.${configPath}.js`
   ]
 }
 

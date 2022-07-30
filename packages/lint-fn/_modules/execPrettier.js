@@ -7,7 +7,7 @@ function getCommand({prettierSpecialCase, prettierPath, injectOptions, filePath}
   if(prettierSpecialCase === 'html'){
     const htmlConfig = resolve(__dirname, '../config/.prettierrc')
     return [
-      prettierPath
+      prettierPath,
       `--config`,
       htmlConfig,
       injectOptions,
@@ -28,7 +28,7 @@ async function execPrettier({ filePath, injectOptions, prettierSpecialCase, debu
   const prettierPath = getPrettierPath(cwd, defaultTo('skip', prettierSpecialCase))
   
   const command = getCommand({filePath, prettierPath,prettierSpecialCase, injectOptions})
-  await executeCommand({command: 'node', inputs: command, cwd, debug})
+  return executeCommand({command: 'node', inputs: command, cwd, debug})
 }
 
 exports.execPrettier = execPrettier

@@ -2,7 +2,7 @@ const { executeCommand } = require('./exec')
 const { usePrettier } = require('./usePrettier')
 
 async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOverride = false, debug = false }){
-  await usePrettier({
+  const prettierResult = await usePrettier({
     filePath,
     withTypescript : true,
     prettierSpecialCase,
@@ -22,14 +22,14 @@ async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOv
       label: 'lintTypescript'
     })
   }
-  await executeCommand({
+  const lintResult = await  executeCommand({
     cwd     : projectDir,
     command : 'node',
     inputs,
     debug
   })
 
-  return true
+  return {lintResult, prettierResult}
 }
 
 exports.lintTypescript = lintTypescript

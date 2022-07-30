@@ -11,7 +11,7 @@ async function forceTypescriptFn(
   const content = (await readFile(filePath)).toString()
   await writeFile(TEMP, content)
 
-  await usePrettier({
+  const prettierResult = await usePrettier({
     filePath: TEMP,
     withTypescript : true,
     prettierSpecialCase,
@@ -22,7 +22,7 @@ async function forceTypescriptFn(
   const lintedContent = (await readFile(TEMP)).toString()
   await writeFile(filePath, lintedContent)
 
-  return true
+  return {prettierResult}
 }
 
 exports.forceTypescriptFn = forceTypescriptFn
