@@ -21,7 +21,7 @@
 		"eslint": "8.20.0",
 		"eslint-plugin-async-await": "0.0.0",
 		"eslint-plugin-babel": "5.3.1",
-		"eslint-plugin-jest": "26.6.0",
+		"eslint-plugin-jest": "26.7.0",
 		"eslint-plugin-jest-formatting": "3.1.0",
 		"eslint-plugin-no-unsafe-regex": "1.0.0",
 		"eslint-plugin-node": "11.1.0",
@@ -31,7 +31,7 @@
 		"fs-extra": "10.1.0",
 		"prettier": "2.7.1",
 		"prettier-plugin-organize-attributes": "0.0.5",
-		"rambdax": "8.0.1"
+		"rambdax": "8.1.0"
 	},
 	"peerDependencies": {
 		"typescript": "4.7.4"
