@@ -16,7 +16,7 @@ async function lintFn({
   debug = false,
 }){
   try {
-    if (filePath.endsWith('.ts')){
+    if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')){
       return handleTypescript({
         filePath,
         prettierSpecialCase,
