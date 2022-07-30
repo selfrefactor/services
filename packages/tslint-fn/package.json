@@ -1,14 +1,14 @@
 {
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "4.28.2",
-		"@typescript-eslint/parser": "4.28.2",
-		"eslint": "7.30.0"
+		"@typescript-eslint/eslint-plugin": "5.31.0",
+		"@typescript-eslint/parser": "5.31.0",
+		"eslint": "8.20.0"
 	},
 	"peerDependencies": {
 		"typescript": "^3.8.3"
 	},
 	"name": "tslint-fn",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"description": "Require eslint typescript deps",
 	"main": "index.js",
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/tslint-fn",
