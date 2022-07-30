@@ -6,7 +6,8 @@ const { resolve } = require('path')
 const PRETTIER_PATH_BASE = 'node_modules/prettier/bin-prettier.js'
 
 const getPrettierPath = (cwd, prettierSpecialCase) => {
-  if (prettierSpecialCase === 'html') return resolve(__dirname, `../${ PRETTIER_PATH_BASE }`)
+  if (prettierSpecialCase === 'html')
+    return resolve(__dirname, `../${ PRETTIER_PATH_BASE }`)
   if (prettierSpecialCase === 'local') return `${ cwd }/${ PRETTIER_PATH_BASE }`
 
   const otherPossiblePath = resolve(__dirname,
@@ -28,15 +29,21 @@ const getPrettierPath = (cwd, prettierSpecialCase) => {
   throw new Error('Prettier was not found "lint.fn"')
 }
 
-async function usePrettier({ filePath, withTypescript, prettierSpecialCase, cwdOverride, debug }){
+async function usePrettier({
+  filePath,
+  withTypescript,
+  prettierSpecialCase,
+  cwdOverride,
+  debug,
+}){
   const cwdDefault = resolve(__dirname, '../')
   const cwd = cwdOverride ? cwdOverride : cwdDefault
   const prettierPath = getPrettierPath(cwdDefault, prettierSpecialCase)
-  if(debug){
+  if (debug){
     console.log({
       prettierPath,
       cwd,
-      filePath
+      filePath,
     })
   }
 

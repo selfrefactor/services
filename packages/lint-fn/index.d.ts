@@ -13,6 +13,7 @@ export interface LintFnResult{
 export function lintFn(input : {
   filePath: string, 
   prettierSpecialCase?:PrettierSpecialCase,
+  useAlternativeExecCommand?: boolean,
   cwdOverride?:string|false,
   forceTypescript?:boolean,
   debug?:boolean

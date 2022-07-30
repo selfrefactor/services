@@ -1,8 +1,10 @@
 const { spawn } = require('child_process')
 
 const executeCommandOld = ({ command, inputs, cwd, debug = false }) => {
-  if(debug){
-    console.log(command, inputs, cwd, `command, inputs, cwd`)
+  if (debug){
+    console.log(
+      command, inputs, cwd, 'command, inputs, cwd'
+    )
   }
   const child = spawn(
     command, inputs, {

@@ -1,34 +1,53 @@
-const { executeCommand } = require('./exec')
 const { defaultTo } = require('rambdax')
-const { resolve } = require('path')
+const { executeCommand } = require('./exec')
 const { getPrettierPath } = require('./usePrettier')
+const { resolve } = require('path')
 
-function getCommand({prettierSpecialCase, prettierPath, injectOptions, filePath}){
-  if(prettierSpecialCase === 'html'){
+function getCommand({
+  prettierSpecialCase,
+  prettierPath,
+  injectOptions,
+  filePath,
+}){
+  if (prettierSpecialCase === 'html'){
     const htmlConfig = resolve(__dirname, '../config/.prettierrc')
+
     return [
       prettierPath,
-      `--config`,
+      '--config',
       htmlConfig,
       injectOptions,
-      `--write`,
-      filePath
+      '--write',
+      filePath,
     ]
   }
-  return [
-    prettierPath,
-    injectOptions,
-    `--write`,
-    filePath
-  ]
+
+  return [ prettierPath, injectOptions, '--write', filePath ]
 }
 
-async function execPrettier({ filePath, injectOptions, prettierSpecialCase, debug }){
+async function execPrettier({
+  filePath,
+  injectOptions,
+  prettierSpecialCase,
+  debug,
+}){
   const cwd = resolve(__dirname, '../')
-  const prettierPath = getPrettierPath(cwd, defaultTo('skip', prettierSpecialCase))
-  
-  const command = getCommand({filePath, prettierPath,prettierSpecialCase, injectOptions})
-  return executeCommand({command: 'node', inputs: command, cwd, debug})
+  const prettierPath = getPrettierPath(cwd,
+    defaultTo('skip', prettierSpecialCase))
+
+  const command = getCommand({
+    filePath,
+    prettierPath,
+    prettierSpecialCase,
+    injectOptions,
+  })
+
+  return executeCommand({
+    command : 'node',
+    inputs  : command,
+    cwd,
+    debug,
+  })
 }
 
 exports.execPrettier = execPrettier

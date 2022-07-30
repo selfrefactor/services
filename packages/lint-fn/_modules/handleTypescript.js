@@ -20,9 +20,13 @@ async function handleTypescript({
       console.log({
         filePath,
         ok,
-      }, '!ok && forceTypescript')
+      },
+      '!ok && forceTypescript')
     }
-    return forceTypescriptFn(filePath, prettierSpecialCase, debug)
+
+    return forceTypescriptFn(
+      filePath, prettierSpecialCase, debug
+    )
   }
 
   if (!eslintFlag){

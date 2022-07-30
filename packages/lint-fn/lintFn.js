@@ -1,8 +1,8 @@
 const { commandFactory } = require('./_modules/commandFactory')
-const { debugFlag, DIR } = require('./_modules/spawnCommand')
+const { debugFlag, DIR } = require('./_modules/constants')
 const { execPrettier } = require('./_modules/execPrettier')
 const { executeCommand } = require('./_modules/exec')
-const { tryCatchAsync } = require('rambdax')
+const { tryCatchAsync, setter, getter } = require('rambdax')
 const { getEslintPath } = require('./_modules/getEslintPath')
 const { handleTypescript } = require('./_modules/handleTypescript')
 const { usePrettier } = require('./_modules/usePrettier')
@@ -111,8 +111,11 @@ async function lintFn({
   prettierSpecialCase = 'local',
   cwdOverride = false,
   forceTypescript = false,
+  useAlternativeExecCommand = false,
   debug = false,
 }){
+  setter('ALTERNATIVE_EXEC', useAlternativeExecCommand)
+  console.log(getter('ALTERNATIVE_EXEC'), `getter('ALTERNATIVE_EXEC')`)
   const result = await tryCatchAsync(async (input) => lintFunction(input), false)({
     filePath,
     prettierSpecialCase,

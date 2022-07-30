@@ -1,7 +1,13 @@
 const { executeCommand } = require('./exec')
 const { usePrettier } = require('./usePrettier')
 
-async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOverride = false, debug = false }){
+async function lintTypescript({
+  filePath,
+  projectDir,
+  prettierSpecialCase,
+  cwdOverride = false,
+  debug = false,
+}){
   const prettierResult = await usePrettier({
     filePath,
     withTypescript : true,
@@ -9,27 +15,26 @@ async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOv
     cwdOverride,
     debug,
   })
-  const inputs = [
-    'node_modules/eslint/bin/eslint.js',
-    `--fix`,
-    filePath,
-  ]
+  const inputs = [ 'node_modules/eslint/bin/eslint.js', '--fix', filePath ]
   if (debug){
     console.log({
       label   : 'lint typescript',
       command : inputs,
       projectDir,
-      label: 'lintTypescript'
+      label   : 'lintTypescript',
     })
   }
-  const lintResult = await  executeCommand({
+  const lintResult = await executeCommand({
     cwd     : projectDir,
     command : 'node',
     inputs,
-    debug
+    debug,
   })
 
-  return {lintResult, prettierResult}
+  return {
+    lintResult,
+    prettierResult,
+  }
 }
 
 exports.lintTypescript = lintTypescript

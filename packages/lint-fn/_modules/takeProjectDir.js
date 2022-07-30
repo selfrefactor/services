@@ -2,7 +2,7 @@ const { dropLast, range } = require('rambdax')
 const { existsSync } = require('fs')
 
 function takeProjectDir(filePath, cwdOverride){
-  if(cwdOverride){
+  if (cwdOverride){
     return {
       ok         : existsSync(`${ cwdOverride }/tsconfig.json`),
       eslintFlag : existsSync(`${ cwdOverride }/.eslintrc.js`),
@@ -13,8 +13,8 @@ function takeProjectDir(filePath, cwdOverride){
   const loop = range(1, 10)
 
   loop.forEach(i => {
-    // needed as even package.json is found 
-    // that could be Angular library 
+    // needed as even package.json is found
+    // that could be Angular library
     // and we need to keep waiting for
     // project root directory
     // ============================================
