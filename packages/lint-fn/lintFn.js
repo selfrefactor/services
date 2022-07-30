@@ -50,7 +50,7 @@ async function lintFunction({
       debug,
     })
 
-    const { lintDefault, lintJest } = commandFactory({
+    const { lintDefault, lintJest, lintReact } = commandFactory({
       eslintPath,
       src : filePath,
     })
@@ -70,7 +70,20 @@ async function lintFunction({
       return true
     }
 
-    if (filePath.endsWith('.js') || filePath.endsWith('.jsx')){
+    if (filePath.endsWith('.jsx')){
+      const command = `${ lintReact.command } ${ lintReact.inputs.join(' ') }`
+      if (debug) console.log(command)
+
+      await executeCommand({
+        cwd     : DIR,
+        command : lintReact.command,
+        inputs  : lintReact.inputs,
+        debug,
+      })
+
+      return true
+    }
+    if (filePath.endsWith('.js')){
       const command = `${ lintDefault.command } ${ lintDefault.inputs.join(' ') }`
       if (debug) console.log(command)
 
