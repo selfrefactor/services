@@ -12,6 +12,7 @@ async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOv
   })
 
   const eslintCommand = glue(`
+  node
   node_modules/eslint/bin/eslint.js
   --fix
   ${ filePath }
@@ -25,7 +26,7 @@ async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOv
       projectDir,
     })
   }
-  return execCommand({cwd: projectDir, command: `node ${eslintCommand}`})
+  return execCommand({cwd: projectDir, command: eslintCommand})
   // await spawnCommand(
   //   'node', eslintCommand, projectDir
   // )
