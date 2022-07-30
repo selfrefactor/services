@@ -30,7 +30,7 @@ async function lintTypescript({ filePath, projectDir, prettierSpecialCase, cwdOv
     command,
   })
 
-  return {usePrettierResult, lintTypescriptResult}
+  return {usePrettierResult, lintResult: lintTypescriptResult, case: 'ts'}
 }
 
 exports.lintTypescript = lintTypescript

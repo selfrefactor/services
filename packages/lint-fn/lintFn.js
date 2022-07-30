@@ -52,7 +52,7 @@ async function lintFn({
         command,
       })
 
-      return {usePrettierResult, lintJestResult}
+      return {usePrettierResult, lintResult: lintJestResult, case: 'jest'}
     }
 
     if (filePath.endsWith('.js')){
@@ -63,7 +63,7 @@ async function lintFn({
         command,
       })
 
-      return {usePrettierResult, lintJsResult}
+      return {usePrettierResult, lintResult: lintJsResult, case: 'js'}
     }
 
     return console.log(NO_AVAILABLE_LINTER)

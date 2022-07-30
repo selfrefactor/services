@@ -19,7 +19,7 @@ async function forceTypescriptFn(filePath, prettierSpecialCase) {
   const lintedContent = (await readFile(TEMP)).toString();
   await writeFile(filePath, lintedContent);
 
-  return lintTypescriptResult
+  return {...lintTypescriptResult, case: 'force-ts'}
 }
 
 exports.forceTypescriptFn = forceTypescriptFn
