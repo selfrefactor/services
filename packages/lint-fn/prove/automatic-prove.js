@@ -5,6 +5,8 @@ const { readFile, writeFile } = require('fs-extra')
 const { lintFn, execPrettier } = require('../lintFn')
 const { ANGULAR, TS_PROVE, JS, TS, JEST, ANGULAR_HTML, DEFAULT_JS } = require('../constants')
 
+const debug = false
+
 const commonReplacer = (fileContent, {replacer}) => {
   console.log(replacer, `replacer`)
   const havePattern = fileContent.includes(replacer.old)
@@ -13,7 +15,11 @@ const commonReplacer = (fileContent, {replacer}) => {
   return replace(replacer.old, replacer.new,fileContent)
 }
 
-async function singleProve(lintFnInput){
+async function singleProve(lintFnOptions){
+  const lintFnInput = {
+    ...lintFnOptions,
+    debug
+  }
   if(!lintFnInput.replacer){
     const lintResult = await lintFn(lintFnInput)
 
@@ -36,16 +42,23 @@ async function singleProve(lintFnInput){
   return {linted: true, mode: lintFnInput.mode, lintResult}
 }
 
+const injectOptions = '--print-width 34'
+
 const angular= {filePath: ANGULAR, mode: 'angular', replacer: {old: '@Component({', new: `   @Component({`}}
+const forceTS= {filePath: TS, prettierSpecialCase: 'local',   forceTypescript: true, mode: 'forceTS', replacer: {old: 'function reduceStopper', new: `function     reduceStopper`}}
 const errorMode= {filePath: TS_PROVE, mode: 'error', prettierSpecialCase: 'outer'}
 
 const defaultMode = {filePath: DEFAULT_JS, mode: 'default', replacer: {old: 'isFalsy(input)', new: `isFalsy(   input    )`}}
-const execPrettierMode = {filePath: DEFAULT_JS, mode: 'execPrettier', replacer: {old: 'return pipe.apply', new: `return       pipe.apply`}, execPrettierFlag: true, injectOptions: '--print-width 34'}
+const execPrettierMode = {filePath: DEFAULT_JS, mode: 'execPrettier', replacer: {old: 'return pipe.apply', new: `return       pipe.apply`}, execPrettierFlag: true, injectOptions}
+
+const htmlMode = {filePath: DEFAULT_JS, mode: 'html', replacer: {old: '<grid>', new: `       <grid>`}, execPrettierFlag: true, injectOptions}
 
 const proveList = [
   angular,
+  forceTS,
   defaultMode,
   errorMode,
+  htmlMode,
   execPrettierMode
 ]
 
