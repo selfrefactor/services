@@ -7,6 +7,7 @@ const {
   TS,
   JEST,
   ANGULAR_HTML,
+  PRETTIER_JS,
 } = require('../constants')
 const { lintFn, execPrettier } = require('../lintFn')
 const { readFile, writeFile } = require('fs-extra')
@@ -123,7 +124,7 @@ const tsProve = {
   },
 }
 const execPrettierMode = {
-  filePath : DEFAULT_JS,
+  filePath : PRETTIER_JS,
   mode     : 'execPrettier',
   replacer : {
     old : 'return pipe.apply',
