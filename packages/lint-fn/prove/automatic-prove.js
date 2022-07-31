@@ -2,8 +2,8 @@ NODE_ENV = 'DEBUG'
 process.env.LINT_FN_DEBUG = 'ON'
 const { test,replace,mapAsync, mapFastAsync } = require('rambdax')
 const { readFile, writeFile } = require('fs-extra')
-const { lintFn, execPrettier,  } = require('../lintFn')
-const { ANGULAR, TS_PROVE, JS, TS, JEST, ANGULAR_HTML } = require('../constants')
+const { lintFn, execPrettier } = require('../lintFn')
+const { ANGULAR, TS_PROVE, JS, TS, JEST, ANGULAR_HTML, DEFAULT_JS } = require('../constants')
 
 const commonReplacer = (fileContent, {replacer}) => {
   console.log(replacer, `replacer`)
@@ -14,12 +14,18 @@ const commonReplacer = (fileContent, {replacer}) => {
 }
 
 async function singleProve(lintFnInput){
+  if(!lintFnInput.replacer){
+    const lintResult = await lintFn(lintFnInput)
+
+    return {linted: 'no replacer mode', mode: lintFnInput.mode, lintResult}
+  }
+
   const initialFileContent = (await readFile(lintFnInput.filePath)).toString()
   const newContent = commonReplacer(initialFileContent, lintFnInput)
   if(!newContent) return {linted: false, mode: lintFnInput.mode, error: 'wrong replacer'}
 
   await writeFile(lintFnInput.filePath, newContent)
-  const lintResult = await lintFn(lintFnInput)
+  const lintResult = execPrettierFlag ? await execPrettier(lintFnInput) : await lintFn(lintFnInput)
 
   const lintedFileContent = (await readFile(lintFnInput.filePath)).toString()
 
@@ -30,8 +36,17 @@ async function singleProve(lintFnInput){
   return {linted: true, mode: lintFnInput.mode, lintResult}
 }
 
+const angular= {filePath: ANGULAR, mode: 'angular', replacer: {old: '@Component({', new: `   @Component({`}}
+const errorMode= {filePath: TS_PROVE, mode: 'error', prettierSpecialCase: 'outer'}
+
+const defaultMode = {filePath: DEFAULT_JS, mode: 'default', replacer: {old: 'isFalsy(input)', new: `isFalsy(   input    )`}}
+const execPrettierMode = {filePath: DEFAULT_JS, mode: 'execPrettier', replacer: {old: 'return pipe.apply', new: `return       pipe.apply`}, execPrettierFlag: true, injectOptions: '--print-width 34'}
+
 const proveList = [
-  {filePath: ANGULAR, mode: 'angular', replacer: {old: '@Component({', new: `   @Component({`}}
+  angular,
+  defaultMode,
+  errorMode,
+  execPrettierMode
 ]
 
 void async function automaticProve(){
