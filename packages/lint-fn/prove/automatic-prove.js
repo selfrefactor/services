@@ -147,13 +147,13 @@ const htmlMode = {
 
 const proveList = [
   angular,
-  defaultMode,
-  errorMode,
-  execPrettierMode,
-  forceTS,
-  htmlMode,
-  jest,
-  tsProve,
+  // defaultMode,
+  // errorMode,
+  // execPrettierMode,
+  // forceTS,
+  // htmlMode,
+  // jest,
+  // tsProve,
 ]
 
 void (async function automaticProve(){
