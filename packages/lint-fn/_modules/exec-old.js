@@ -20,7 +20,7 @@ const executeCommandOld = ({ command, inputs, cwd, debug = false }) => {
 
         return
       }
-      resolve(true)
+      resolve('true')
     })
   })
 }

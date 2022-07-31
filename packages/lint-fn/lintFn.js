@@ -115,7 +115,6 @@ async function lintFn({
   debug = false,
 }){
   setter('ALTERNATIVE_EXEC', useAlternativeExecCommand)
-  console.log(getter('ALTERNATIVE_EXEC'), `getter('ALTERNATIVE_EXEC')`)
   const result = await tryCatchAsync(async (input) => lintFunction(input), false)({
     filePath,
     prettierSpecialCase,
