@@ -145,8 +145,8 @@ const htmlMode = {
 }
 
 const proveList = [
-  angular,
-  // defaultMode,
+  // angular,
+  defaultMode,
   // errorMode,
   // execPrettierMode,
   // forceTS,
