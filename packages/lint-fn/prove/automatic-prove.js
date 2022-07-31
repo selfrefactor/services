@@ -16,7 +16,6 @@ const { replace, mapAsync, mapFastAsync } = require('rambdax')
 const debug = false
 
 const commonReplacer = (fileContent, { replacer }) => {
-  console.log(replacer, 'replacer')
   const havePattern = fileContent.includes(replacer.old)
   if (!havePattern) return false
 
