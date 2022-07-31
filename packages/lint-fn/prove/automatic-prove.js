@@ -52,7 +52,7 @@ async function singleProve(lintFnOptions){
     }
 
   await writeFile(lintFnInput.filePath, newContent)
-  const lintResult = execPrettierFlag ?
+  const lintResult = lintFnInput.execPrettierFlag ?
     await execPrettier(lintFnInput) :
     await lintFn(lintFnInput)
 
