@@ -19,20 +19,24 @@ const filterAllowed = x =>
 
 const HOW_MANY_THREADS = 10
 
-async function lintFolder({ fastFlag }){
+async function lintFolder({ fastFlag, useAlternativeExecCommand }){
   const allFiles = await scanFolder({
     folder   : CWD,
     excludeFn,
     filterFn : filterAllowed,
   })
   if (allFiles.length > MAX_LIMIT){
-    log(`Too many files '${ allFiles.length }' in '${ CWD }'`,
-      'error')
+    log(`Too many files '${ allFiles.length }' in '${ CWD }'`, 'error')
     await R.delay(5000)
   }
 
   console.time('lintFolder')
-  const lint = async filePath => lintFn({filePath, prettierSpecialCase: 'outer'})
+  const lint = async filePath =>
+    lintFn({
+      filePath,
+      prettierSpecialCase : 'outer',
+      useAlternativeExecCommand
+    })
 
   if (fastFlag){
     await R.mapAsyncLimit(

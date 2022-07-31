@@ -30,15 +30,24 @@ async function runFn(){
     return niketa()
   }
   if ([ 'lintfolder', 'lint', 'l' ].includes(firstArgument)){
-    return lintFolder({ fastFlag : false })
+    return lintFolder({ fastFlag : false, useAlternativeExecCommand: false })
+  }
+  if ([ 'lintfolderalt', 'lintalt', 'lalt' ].includes(firstArgument)){
+    return lintFolder({ fastFlag : false, useAlternativeExecCommand: true })
   }
 
   if ([ 'lintfast', 'lintx', 'lx' ].includes(firstArgument)){
-    return lintFolder({ fastFlag : true })
+    return lintFolder({ fastFlag : true, useAlternativeExecCommand: false })
+  }
+  if ([ 'lintfastalt', 'lintxalt', 'lxalt' ].includes(firstArgument)){
+    return lintFolder({ fastFlag : true, useAlternativeExecCommand: true })
   }
 
   if ([ 'lintfile', 'lf' ].includes(firstArgument)){
     return lintFile(secondArgument)
+  }
+  if ([ 'lintfilealt', 'lfalt' ].includes(firstArgument)){
+    return lintFile(secondArgument, true)
   }
 
   if (firstArgument === 'bump'){
