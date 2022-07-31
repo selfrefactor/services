@@ -1,7 +1,6 @@
 const { resolve } = require('path')
 
-exports.DEFAULT_JS = `${ process.env.HOME }/repos/rambda/source/defaultTo.js`
-exports.JS = `${ process.env.HOME }/repos/rambda/source/add.js`
+exports.JS = `${ process.env.HOME }/repos/rambda/source/defaultTo.js`
 exports.PRETTIER_JS = `${ process.env.HOME }/repos/rambda/source/compose.js`
 exports.JEST = `${ process.env.HOME }/repos/rambda/source/compose.spec.js`
 exports.TS = `${ process.env.HOME }/repos/rambda/immutable.d.ts`
