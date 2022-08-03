@@ -1,6 +1,6 @@
 {
 	"name": "run-fn",
-	"version": "3.33.9",
+	"version": "3.33.10",
 	"description": "Collections of useful CLI functions",
 	"main": "./cli.js",
 	"bin": {
@@ -20,7 +20,7 @@
 	"author": "self_refactor",
 	"license": "MIT",
 	"dependencies": {
-		"niketa": "1.10.0",
+		"niketa": "1.10.1",
 		"clipboardy": "2.3.0",
 		"commit-fn": "2.7.0",
 		"dep-fn": "2.1.2",
