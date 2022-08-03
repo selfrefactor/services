@@ -1,6 +1,6 @@
 {
 	"name": "run-fn",
-	"version": "3.33.7",
+	"version": "3.33.9",
 	"description": "Collections of useful CLI functions",
 	"main": "./cli.js",
 	"bin": {
@@ -26,7 +26,7 @@
 		"dep-fn": "2.1.2",
 		"fs-extra": "10.1.0",
 		"helpers-fn": "1.6.0",
-		"lint-fn": "2.35.0",
+		"lint-fn": "2.36.0",
 		"rambdax": "8.1.0",
 		"string-fn": "3.1.0"
 	},
