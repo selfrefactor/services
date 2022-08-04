@@ -8,16 +8,16 @@
 	"version": "2.7.0",
 	"dependencies": {
 		"helpers-fn": "1.6.0",
-		"rambdax": "8.0.1",
+		"rambdax": "8.1.0",
 		"string-fn": "3.1.0"
 	},
 	"devDependencies": {
-		"@babel/core": "7.17.8",
-		"@babel/plugin-proposal-object-rest-spread": "7.17.3",
-		"@babel/preset-env": "7.16.11",
-		"@types/jest": "27.4.1",
-		"jest": "27.5.1",
-		"typescript": "4.6.2",
+		"@babel/core": "7.18.10",
+		"@babel/plugin-proposal-object-rest-spread": "7.18.9",
+		"@babel/preset-env": "7.18.10",
+		"@types/jest": "28.1.6",
+		"jest": "28.1.3",
+		"typescript": "4.7.4",
 		"vscode": "1.1.37"
 	},
 	"jest": {
@@ -45,17 +45,12 @@
 		"onCommand:magicBeans.copyTrimmed",
 		"onCommand:magicBeans.createSpec",
 		"onCommand:magicBeans.formatJson",
-		"onCommand:magicBeans.randomFile",
 		"onCommand:magicBeans.requestRandomFile",
 		"onCommand:magicBeans.sortLines",
 		"onCommand:magicBeans.fixCamelcaseRefactoring"
 	],
 	"contributes": {
 		"commands": [
-			{
-				"command": "magicBeans.randomFile",
-				"title": "Start Magic Beans random file mode"
-			},
 			{
 				"command": "magicBeans.requestRandomFile",
 				"title": "Magic Beans request random file"
@@ -83,12 +78,8 @@
 				"key": "ctrl+shift+-"
 			},
 			{
-				"command": "magicBeans.randomFile",
-				"key": "f7"
-			},
-			{
 				"command": "magicBeans.requestRandomFile",
-				"key": "f6"
+				"key": "f7"
 			},
 			{
 				"command": "magicBeans.createSpec",

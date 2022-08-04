@@ -30,19 +30,7 @@ function changeOpenedFile(filePath, callback = () => {}) {
   })
 }
 
-function requestRandomFile() {
-  const files = getter('files')
-  if (files.length === 0) return
-  const index = random(0, files.length - 1)
-  changeOpenedFile(files[index])
-  setter('files', removeIndex(index, files))
-  logToUser(`${files.length - 1} files left`)
-}
-
 async function randomFile() {
-  if (getter(REQUEST_RANDOM_FILE)) return
-  setter(REQUEST_RANDOM_FILE, true)
-
   const projectFolder = vscode.workspace.workspaceFolders[0].uri.path
   const files = await scanFolder({
     folder: projectFolder,
@@ -71,6 +59,21 @@ async function randomFile() {
   requestRandomFile()
 }
 
-exports.randomFile = randomFile
-exports.requestRandomFile = requestRandomFile
-exports.changeOpenedFile = changeOpenedFile
+function requestRandomFile() {
+  const files = getter('files')
+  if (files.length === 0) return
+  const index = random(0, files.length - 1)
+  changeOpenedFile(files[index])
+  setter('files', removeIndex(index, files))
+  logToUser(`${files.length - 1} files left`)
+}
+
+async function requestRandomFileFn(){
+  if (!getter(REQUEST_RANDOM_FILE)){
+    await randomFile()
+    setter(REQUEST_RANDOM_FILE, true)
+  } 
+  requestRandomFile()
+}
+
+exports.requestRandomFile = requestRandomFileFn
