@@ -28,8 +28,14 @@ const ZOOM = maybe(
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
-// const DEFAULT_FONT = 'Ubuntu Mono'
-const DEFAULT_FONT = 'JetBrains Mono'
+/**
+  "editor.fontFamily4": "Oxygen Mono",
+  "editor.fontFamily1": "PT Mono",
+  "editor.fontFamily2": "Ubuntu Mono",
+  "editor.fontFamily": "Operator Mono",
+  "editor.fontFamily": "JetBrains Mono",
+ */
+const DEFAULT_FONT = 'Operator Mono'
 
 
 function syncFiles(source, destination){
