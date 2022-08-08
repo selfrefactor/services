@@ -6,6 +6,8 @@ It supports Typescript files as well.
 
 ## TODO
 
+#### cannot Lint rambda/files/index.d.ts
+
 add ESLint debug config
 
 force change before prove script then check that change is made to the file
