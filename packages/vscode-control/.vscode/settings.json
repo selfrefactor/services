@@ -81,7 +81,7 @@
   "js/ts.implicitProjectConfig.strictNullChecks":true,
   "explorer.compactFolders":false,
   "tabnine.experimentalAutoImports": true,
-  "npm.fetchOnlinePackageInfo": false,
+  "npm.fetchOnlinePackageInfo": true,
   "typescript.disableAutomaticTypeAcquisition": false,
   "typescript.check.npmIsInstalled": false,
   "editor.cursorBlinking": "solid",
