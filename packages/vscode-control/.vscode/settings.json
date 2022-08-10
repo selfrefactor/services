@@ -1,4 +1,5 @@
 {
+  "editor.experimental.stickyScroll.enabled": true,
   "editor.suggestOnTriggerCharacters": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "git.mergeEditor": true,
