@@ -4,8 +4,9 @@
 * [Playwright](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-playwright.md) - list of 73 repos
 * [Rambda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambda.md) - list of 291 repos
 * [Ramda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-ramda.md) - list of 142 repos
+* [Vitest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-vitest.md) - list of 399 repos
 * [Nest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-nest.md) - list of 94 repos
-* [Puppeteer](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-puppeteer.md) - list of 129 repos
+* [Puppeteer](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-puppeteer.md) - list of 80 repos
 * [Swc](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-swc.md) - list of 9 repos
 
 > What follows are the top 5 repos for each of the lists
@@ -68,7 +69,7 @@ A lightweight emoji picker for the modern web
 
 A Vue3.x UI components lib for TDesign.
 
-[Tencent/tdesign-vue-next](https://github.com/Tencent/tdesign-vue-next) - 🌟 693
+[Tencent/tdesign-vue-next](https://github.com/Tencent/tdesign-vue-next) - 🌟 694
 
 ### Tencent/tdesign-vue
 
@@ -146,6 +147,40 @@ Your data, your control. Fully open source, authentication and authorization. No
 
 ---
 
+## Vitest
+
+### hannoeru/vite-plugin-pages
+
+File system based route generator for ⚡️Vite
+
+[hannoeru/vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) - 🌟 960
+
+### solidjs/solid-start
+
+SolidStart, the Solid app framework
+
+[solidjs/solid-start](https://github.com/solidjs/solid-start) - 🌟 925
+
+### antfu/case-police
+
+🚨 Make the case correct, PLEASE!
+
+[antfu/case-police](https://github.com/antfu/case-police) - 🌟 897
+
+### unjs/unbuild
+
+An unified javascript build system
+
+[unjs/unbuild](https://github.com/unjs/unbuild) - 🌟 790
+
+### MatteoGabriele/vue-progressive-image
+
+Vue progressive image loading plugin
+
+[MatteoGabriele/vue-progressive-image](https://github.com/MatteoGabriele/vue-progressive-image) - 🌟 704
+
+---
+
 ## Nest
 
 ### nestjsx/nest-access-control
@@ -182,35 +217,35 @@ Render Module to add Nextjs support for Nestjs
 
 ## Puppeteer
 
-### JsDaddy/ngx-mask
-
-Angular Plugin to make masks on form fields and html elements.
-
-[JsDaddy/ngx-mask](https://github.com/JsDaddy/ngx-mask) - 🌟 944
-
-### uiv-lib/uiv
-
-Bootstrap 3 components implemented by Vue.js.
-
-[uiv-lib/uiv](https://github.com/uiv-lib/uiv) - 🌟 915
-
-### dai-shi/react-hooks-global-state
-
-Simple global state for React with Hooks API without Context API
-
-[dai-shi/react-hooks-global-state](https://github.com/dai-shi/react-hooks-global-state) - 🌟 907
-
-### nolanlawson/emoji-picker-element
-
-A lightweight emoji picker for the modern web
-
-[nolanlawson/emoji-picker-element](https://github.com/nolanlawson/emoji-picker-element) - 🌟 856
-
 ### adriancooney/puppeteer-heap-snapshot
 
 API and CLI tool to fetch and query Chome DevTools heap snapshots.
 
 [adriancooney/puppeteer-heap-snapshot](https://github.com/adriancooney/puppeteer-heap-snapshot) - 🌟 838
+
+### pmndrs/detect-gpu
+
+Classifies GPUs based on their 3D rendering benchmark score allowing the developer to provide sensible default settings for graphically intensive applications.
+
+[pmndrs/detect-gpu](https://github.com/pmndrs/detect-gpu) - 🌟 744
+
+### mauriciopoppe/function-plot
+
+A 2d function plotter powered by d3 and interval arithmetic
+
+[mauriciopoppe/function-plot](https://github.com/mauriciopoppe/function-plot) - 🌟 735
+
+### Pomax/lib-font
+
+This library adds a new Font() object to the JavaScript toolbox, similar to new Image() for images
+
+[Pomax/lib-font](https://github.com/Pomax/lib-font) - 🌟 681
+
+### gkjohnson/three-gpu-pathtracer
+
+Path tracing renderer and utilities for three.js built on top of three-mesh-bvh.
+
+[gkjohnson/three-gpu-pathtracer](https://github.com/gkjohnson/three-gpu-pathtracer) - 🌟 607
 
 ---
 
