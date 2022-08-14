@@ -13,29 +13,29 @@ const playwright = {
   daysLimit: 150,
   repo: 'microsoft/playwright',
   title : 'Stars of **Playwright**',
-  stars:2
+  stars:5
 }
 const puppeteer = {
   priority: 2,
   daysLimit: 100,
   repo: 'puppeteer/puppeteer',
   title : 'Stars of **Puppeteer**',
-  stars:15
+  stars:20
 }
 const nest = {
   priority: 2,
   daysLimit: 260,
   repo: 'nestjs/nest',
   title : 'Stars of **Nest.js**',
-  stars:4
+  stars:10
 }
 const angular = {
   priority: 0,
   daysLimit: 120,
   scrapeDeep: true,
   repo: 'angular/angular',
-  title : 'Stars of **Angular** - all-you-can-take frontend framework',
-  stars:5
+  title : 'Stars of **Angular** frontend framework',
+  stars:10
 }
 
 const rambda = {
@@ -45,6 +45,15 @@ const rambda = {
   title : 'Stars of **Rambda** list',
   stars: 2
 }
+
+const swc = {
+  priority: 2,
+  scrapeDeep: true,
+  repo: 'swc-project/swc',
+  title : 'Stars of **SWC(Rust-based platform for the Web)** list',
+  stars: 10
+}
+
 const ramda = {
   priority: 1,
   repo: 'ramda/ramda',
@@ -70,7 +79,7 @@ const iterator = (x, prop) => {
 
 const allModes = map(
   iterator,
-  {rambda, playwright, puppeteer, ramda, nest, angular}
+  {rambda, playwright, puppeteer, ramda, nest, angular, swc}
 )
 
 exports.allModes = allModes
