@@ -1,178 +1,246 @@
 # List with all **Stars of** lists
 
-* [Angular](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-angular.md) - list of 91 repos
-* [Playwright](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-playwright.md) - list of 235 repos
-* [Rambda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambda.md) - list of 79 repos
-* [Nest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-nest.md) - list of 112 repos
-* [Puppeteer](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-puppeteer.md) - list of 70 repos
+* [Angular](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-angular.md) - list of 29 repos
+* [Playwright](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-playwright.md) - list of 73 repos
+* [Rambda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambda.md) - list of 291 repos
+* [Ramda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-ramda.md) - list of 142 repos
+* [Nest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-nest.md) - list of 94 repos
+* [Puppeteer](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-puppeteer.md) - list of 129 repos
+* [Swc](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-swc.md) - list of 9 repos
 
 > What follows are the top 5 repos for each of the lists
 
 ## Angular
 
-### bleenco/ngx-uploader
+### thymikee/jest-preset-angular
 
-Angular File Uploader
+Jest configuration preset for Angular projects.
 
-[bleenco/ngx-uploader](https://github.com/bleenco/ngx-uploader) - 🌟 746
+[thymikee/jest-preset-angular](https://github.com/thymikee/jest-preset-angular) - 🌟 755
 
-### Toinane/colorpicker
+### sibiraj-s/ngx-editor
 
-A mininal but complete colorpicker desktop app
+🖋️ Rich Text Editor for angular using ProseMirror
 
-[Toinane/colorpicker](https://github.com/Toinane/colorpicker) - 🌟 699
+[sibiraj-s/ngx-editor](https://github.com/sibiraj-s/ngx-editor) - 🌟 333
 
-### NG-ZORRO/ng-zorro-antd-mobile
+### angular-university/rxjs-course
 
-A configurable Mobile UI components based on Ant Design Mobile and Angular. 🐜
+RxJs In Practice Course - https://angular-university.io/course/rxjs-course
 
-[NG-ZORRO/ng-zorro-antd-mobile](https://github.com/NG-ZORRO/ng-zorro-antd-mobile) - 🌟 695
+[angular-university/rxjs-course](https://github.com/angular-university/rxjs-course) - 🌟 303
 
-### tjoskar/ng-lazyload-image
+### salemdar/ngx-cookie
 
-🖼 A small library for lazy loading images for Angular apps with zero dependencies 
+Implementation of Angular 1.x $cookies service to Angular 2
 
-[tjoskar/ng-lazyload-image](https://github.com/tjoskar/ng-lazyload-image) - 🌟 675
+[salemdar/ngx-cookie](https://github.com/salemdar/ngx-cookie) - 🌟 299
 
-### jfcere/ngx-markdown
+### dimpu/ngx-md
 
-Angular markdown component/directive/pipe/service to parse static, dynamic or remote content to HTML with syntax highlight
+Angular(ngx) directive for parsing markdown content in your web application.
 
-[jfcere/ngx-markdown](https://github.com/jfcere/ngx-markdown) - 🌟 656
+[dimpu/ngx-md](https://github.com/dimpu/ngx-md) - 🌟 263
 
 ---
 
 ## Playwright
 
-### mbraak/jqTree
+### hannoeru/vite-plugin-pages
 
-Tree widget for jQuery
+File system based route generator for ⚡️Vite
 
-[mbraak/jqTree](https://github.com/mbraak/jqTree) - 🌟 973
+[hannoeru/vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) - 🌟 960
 
-### microsoft/playwright-cli
+### nodejs/readable-stream
 
-CLI for common Playwright actions. Record and generate Playwright code, inspect selectors and take screenshots.
+Node-core streams for userland
 
-[microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) - 🌟 965
+[nodejs/readable-stream](https://github.com/nodejs/readable-stream) - 🌟 939
 
-### hyperledger/blockchain-explorer
+### nolanlawson/emoji-picker-element
 
-null
+A lightweight emoji picker for the modern web
 
-[hyperledger/blockchain-explorer](https://github.com/hyperledger/blockchain-explorer) - 🌟 958
+[nolanlawson/emoji-picker-element](https://github.com/nolanlawson/emoji-picker-element) - 🌟 856
 
-### ing-bank/lion
+### Tencent/tdesign-vue-next
 
-Lion Web Components
+A Vue3.x UI components lib for TDesign.
 
-[ing-bank/lion](https://github.com/ing-bank/lion) - 🌟 956
+[Tencent/tdesign-vue-next](https://github.com/Tencent/tdesign-vue-next) - 🌟 693
 
-### mulesoft/api-console
+### Tencent/tdesign-vue
 
-An interactive REST console based on RAML/OAS files
+A Vue.js UI components lib for TDesign.
 
-[mulesoft/api-console](https://github.com/mulesoft/api-console) - 🌟 843
+[Tencent/tdesign-vue](https://github.com/Tencent/tdesign-vue) - 🌟 572
 
 ---
 
 ## Rambda
 
-### BeeeQueue/yuna
+### unlock-protocol/unlock
 
-ツ An anime player that integrates with AniList, Simkl, Crunchyroll, and Hidive.
+Ʉnlock is a protocol for memberships built on a blockchain.
 
-[BeeeQueue/yuna](https://github.com/BeeeQueue/yuna) - 🌟 316
+[unlock-protocol/unlock](https://github.com/unlock-protocol/unlock) - 🌟 673
+
+### char0n/ramda-adjunct
+
+Ramda Adjunct is the most popular and most comprehensive set of functional utilities for use with Ramda, providing a variety of useful, well tested functions with excellent documentation.
+
+[char0n/ramda-adjunct](https://github.com/char0n/ramda-adjunct) - 🌟 642
+
+### OpenZeppelin/openzeppelin-contracts-upgradeable
+
+Upgradeable variant of OpenZeppelin Contracts, meant for use in upgradeable contracts. 
+
+[OpenZeppelin/openzeppelin-contracts-upgradeable](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable) - 🌟 613
+
+### nymtech/nym
+
+Nym provides strong network-level privacy against sophisticated end-to-end attackers, and anonymous transactions using blinded, re-randomizable, decentralized credentials.
+
+[nymtech/nym](https://github.com/nymtech/nym) - 🌟 582
 
 ### caderek/benny
 
 A dead simple benchmarking framework for JS/TS libs
 
-[caderek/benny](https://github.com/caderek/benny) - 🌟 275
+[caderek/benny](https://github.com/caderek/benny) - 🌟 578
 
-### selfrefactor/rambdax
+---
 
-Extended version of Rambda 
+## Ramda
 
-[selfrefactor/rambdax](https://github.com/selfrefactor/rambdax) - 🌟 136
+### sid88in/serverless-appsync-plugin
 
-### selfrefactor/useful-javascript-libraries
+serverless plugin for appsync
 
-Collection of Javascript libraries
+[sid88in/serverless-appsync-plugin](https://github.com/sid88in/serverless-appsync-plugin) - 🌟 900
 
-[selfrefactor/useful-javascript-libraries](https://github.com/selfrefactor/useful-javascript-libraries) - 🌟 81
+### facultyai/dash-bootstrap-components
 
-### romgrk/todoist.nvim
+Bootstrap components for Plotly Dash
 
-A todoist extension for neovim
+[facultyai/dash-bootstrap-components](https://github.com/facultyai/dash-bootstrap-components) - 🌟 882
 
-[romgrk/todoist.nvim](https://github.com/romgrk/todoist.nvim) - 🌟 75
+### vform666/variant-form
+
+A powerful form designer for Vue.
+
+[vform666/variant-form](https://github.com/vform666/variant-form) - 🌟 670
+
+### appfeel/node-pushnotifications
+
+Push notifications for GCM, APNS, MPNS, AMZ (automatic detection from device token)
+
+[appfeel/node-pushnotifications](https://github.com/appfeel/node-pushnotifications) - 🌟 498
+
+### authorizerdev/authorizer
+
+Your data, your control. Fully open source, authentication and authorization. No lock-ins.  Deployment in Railway.app | Heroku in 120 seconds || Spin a docker image as a micro-service in your infra. Built in login page and Admin panel out of the box.
+
+[authorizerdev/authorizer](https://github.com/authorizerdev/authorizer) - 🌟 467
 
 ---
 
 ## Nest
 
-### mKeRix/room-assistant
+### nestjsx/nest-access-control
 
-Presence tracking and more for automation on the room-level
+Role and Attribute based Access Control for Nestjs 🔐
 
-[mKeRix/room-assistant](https://github.com/mKeRix/room-assistant) - 🌟 662
+[nestjsx/nest-access-control](https://github.com/nestjsx/nest-access-control) - 🌟 807
 
-### nestjsx/nestjs-config
+### iamolegga/nestjs-pino
 
-Config module for nestjs using dotenv :key:
+Platform agnostic logger for NestJS based on Pino with REQUEST CONTEXT IN EVERY LOG
 
-[nestjsx/nestjs-config](https://github.com/nestjsx/nestjs-config) - 🌟 451
+[iamolegga/nestjs-pino](https://github.com/iamolegga/nestjs-pino) - 🌟 681
 
 ### nestjsx/nestjs-typeorm-paginate
 
 :page_with_curl: Pagination response object function + types for typeorm + nestjs
 
-[nestjsx/nestjs-typeorm-paginate](https://github.com/nestjsx/nestjs-typeorm-paginate) - 🌟 343
+[nestjsx/nestjs-typeorm-paginate](https://github.com/nestjsx/nestjs-typeorm-paginate) - 🌟 656
 
-### Theodo-UK/nestjs-admin
+### axe-me/vite-plugin-node
 
-A generic administration interface for TypeORM entities 
+Vite plugin to run your node dev server with HMR!
 
-[Theodo-UK/nestjs-admin](https://github.com/Theodo-UK/nestjs-admin) - 🌟 331
+[axe-me/vite-plugin-node](https://github.com/axe-me/vite-plugin-node) - 🌟 529
 
 ### kyle-mccarthy/nest-next
 
 Render Module to add Nextjs support for Nestjs
 
-[kyle-mccarthy/nest-next](https://github.com/kyle-mccarthy/nest-next) - 🌟 310
+[kyle-mccarthy/nest-next](https://github.com/kyle-mccarthy/nest-next) - 🌟 506
 
 ---
 
 ## Puppeteer
 
-### uiv-lib/uiv
-
-Bootstrap 3 components implemented by Vue 2.
-
-[uiv-lib/uiv](https://github.com/uiv-lib/uiv) - 🌟 873
-
-### neuronetio/gantt-schedule-timeline-calendar
-
-Gantt Gantt Gantt Timeline Schedule Calendar [ javascript gantt, js gantt, projects gantt, timeline, scheduler, gantt timeline, reservation timeline, react gantt, angular gantt, vue gantt, svelte gantt, booking manager ]
-
-[neuronetio/gantt-schedule-timeline-calendar](https://github.com/neuronetio/gantt-schedule-timeline-calendar) - 🌟 832
-
-### TonyGermaneri/canvas-datagrid
-
-Canvas based data grid web component.  Capable of displaying millions of contiguous hierarchical rows and columns without paging or loading, on a single canvas element.
-
-[TonyGermaneri/canvas-datagrid](https://github.com/TonyGermaneri/canvas-datagrid) - 🌟 750
-
 ### JsDaddy/ngx-mask
 
 Angular Plugin to make masks on form fields and html elements.
 
-[JsDaddy/ngx-mask](https://github.com/JsDaddy/ngx-mask) - 🌟 736
+[JsDaddy/ngx-mask](https://github.com/JsDaddy/ngx-mask) - 🌟 944
 
-### faceyspacey/extract-css-chunks-webpack-plugin
+### uiv-lib/uiv
 
-Extract CSS from chunks into multiple stylesheets + HMR
+Bootstrap 3 components implemented by Vue.js.
 
-[faceyspacey/extract-css-chunks-webpack-plugin](https://github.com/faceyspacey/extract-css-chunks-webpack-plugin) - 🌟 674
+[uiv-lib/uiv](https://github.com/uiv-lib/uiv) - 🌟 915
+
+### dai-shi/react-hooks-global-state
+
+Simple global state for React with Hooks API without Context API
+
+[dai-shi/react-hooks-global-state](https://github.com/dai-shi/react-hooks-global-state) - 🌟 907
+
+### nolanlawson/emoji-picker-element
+
+A lightweight emoji picker for the modern web
+
+[nolanlawson/emoji-picker-element](https://github.com/nolanlawson/emoji-picker-element) - 🌟 856
+
+### adriancooney/puppeteer-heap-snapshot
+
+API and CLI tool to fetch and query Chome DevTools heap snapshots.
+
+[adriancooney/puppeteer-heap-snapshot](https://github.com/adriancooney/puppeteer-heap-snapshot) - 🌟 838
+
+---
+
+## Swc
+
+### modfy/tsgql
+
+Making Typescript + GraphQL a pleasant experience
+
+[modfy/tsgql](https://github.com/modfy/tsgql) - 🌟 48
+
+### blitz-js/next.js
+
+The official Blitz.js fork of Next.js
+
+[blitz-js/next.js](https://github.com/blitz-js/next.js) - 🌟 29
+
+### speedy-js/speedy-native
+
+[speedy-js/speedy-native](https://github.com/speedy-js/speedy-native) - 🌟 27
+
+### kwonoj/swc-coverage-instrument
+
+istanbuljs compatible SWC coverage instrumentation plugin 
+
+[kwonoj/swc-coverage-instrument](https://github.com/kwonoj/swc-coverage-instrument) - 🌟 25
+
+### ice-lab/swc
+
+ice.js and rax-app custom swc
+
+[ice-lab/swc](https://github.com/ice-lab/swc) - 🌟 21
 
