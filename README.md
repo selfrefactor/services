@@ -15,3 +15,9 @@ Eslint/Prettier helper
 ## Commit-fn
 
 Alternative to commitizen
+
+# Browser snippets
+
+```
+
+```
