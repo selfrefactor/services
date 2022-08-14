@@ -18,6 +18,8 @@ Alternative to commitizen
 
 # Build stars of 
 
+[Link](https://github.com/selfrefactor/services/tree/master/packages/all-stars-of)
+
 Config is in `packages/build-all-stars-of/src/config.js`.
 
 To update list, simply run `yarn on` inside `build-all-stars-of`.
