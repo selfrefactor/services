@@ -70,7 +70,7 @@ meiosis
 
 🖇 React library of commonly used Ethereum hooks
 
-[scaffold-eth/eth-ui](https://github.com/scaffold-eth/eth-ui) - 🌟 399
+[scaffold-eth/eth-ui](https://github.com/scaffold-eth/eth-ui) - 🌟 400
 
 ## jshemas/openGraphScraper
 
@@ -106,7 +106,7 @@ LoopBack 4 Example: Online Shopping APIs
 
 Open Collective's API. A GraphQL API powered by Sequelize and PostgreSQL.
 
-[opencollective/opencollective-api](https://github.com/opencollective/opencollective-api) - 🌟 323
+[opencollective/opencollective-api](https://github.com/opencollective/opencollective-api) - 🌟 325
 
 ## zachowj/node-red-contrib-home-assistant-websocket
 
@@ -204,17 +204,17 @@ converts gettext .mo or .po to 18next json format and vice versa
 
 [i18next/i18next-gettext-converter](https://github.com/i18next/i18next-gettext-converter) - 🌟 174
 
+## Web3Auth/Web3Auth
+
+Simple infrastructure that enables Web3 wallets and applications to provide seamless user logins for both mainstream and Web3.0 users.
+
+[Web3Auth/Web3Auth](https://github.com/Web3Auth/Web3Auth) - 🌟 171
+
 ## jhipster/generator-jhipster-ionic
 
 Ionic for JHipster ✨
 
 [jhipster/generator-jhipster-ionic](https://github.com/jhipster/generator-jhipster-ionic) - 🌟 171
-
-## Web3Auth/Web3Auth
-
-Simple infrastructure that enables Web3 wallets and applications to provide seamless user logins for both mainstream and Web3.0 users.
-
-[Web3Auth/Web3Auth](https://github.com/Web3Auth/Web3Auth) - 🌟 170
 
 ## readmeio/api
 
@@ -1064,6 +1064,10 @@ Test Framework for AWS Lambda
 
 [selfrefactor/niketa-theme](https://github.com/selfrefactor/niketa-theme) - 🌟 10
 
+## ChavaSobreyra/nuxt3-firebase-saas
+
+[ChavaSobreyra/nuxt3-firebase-saas](https://github.com/ChavaSobreyra/nuxt3-firebase-saas) - 🌟 9
+
 ## appcelerator/cli-kit
 
 Everything you need to create awesome Node.js command line interfaces
@@ -1097,10 +1101,6 @@ yeoman generator for exist app boilerplates
 A simple mock SAML 2.0 Identity Provider
 
 [boxyhq/mock-saml](https://github.com/boxyhq/mock-saml) - 🌟 9
-
-## ChavaSobreyra/nuxt3-firebase-saas
-
-[ChavaSobreyra/nuxt3-firebase-saas](https://github.com/ChavaSobreyra/nuxt3-firebase-saas) - 🌟 8
 
 ## 1024pix/pix-bot
 

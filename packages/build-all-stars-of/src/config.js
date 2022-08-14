@@ -48,7 +48,6 @@ const rambda = {
 
 const swc = {
   priority: 2,
-  scrapeDeep: true,
   repo: 'swc-project/swc',
   title : 'Stars of **SWC(Rust-based platform for the Web)** list',
   stars: 10
@@ -64,6 +63,13 @@ const vitest = {
   priority: 1,
   repo: 'vitest-dev/vitest',
   title : 'Stars of **Vitest** list',
+  stars: 2
+}
+const cucumber = {
+  priority: 1,
+  repo: 'cucumber/cucumber-js',
+  scrapeDeep: true,
+  title : 'Stars of **Cucumber.js** list',
   stars: 2
 }
 
@@ -85,7 +91,7 @@ const iterator = (x, prop) => {
 
 const allModes = map(
   iterator,
-  {rambda, playwright, puppeteer, ramda, nest, angular, swc, vitest}
+  {rambda, playwright, puppeteer, ramda, nest, angular, swc, vitest, cucumber}
 )
 
 exports.allModes = allModes

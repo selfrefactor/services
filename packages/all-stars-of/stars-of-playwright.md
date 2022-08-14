@@ -28,7 +28,7 @@ A lightweight emoji picker for the modern web
 
 A Vue3.x UI components lib for TDesign.
 
-[Tencent/tdesign-vue-next](https://github.com/Tencent/tdesign-vue-next) - 🌟 693
+[Tencent/tdesign-vue-next](https://github.com/Tencent/tdesign-vue-next) - 🌟 694
 
 ## Tencent/tdesign-vue
 
@@ -178,7 +178,7 @@ Keyboard-friendly, accessible and highly customizable multi-select component
 
 Fission's browser SDK
 
-[fission-codes/webnative](https://github.com/fission-codes/webnative) - 🌟 85
+[fission-codes/webnative](https://github.com/fission-codes/webnative) - 🌟 86
 
 ## hdorgeval/playwright-fluent
 
@@ -212,7 +212,7 @@ Web page evaluation with a focus on accessibility
 
 SVG to PNG converter JS library made with WASM + resvg (no native dependencies).
 
-[ssssota/svg2png-wasm](https://github.com/ssssota/svg2png-wasm) - 🌟 63
+[ssssota/svg2png-wasm](https://github.com/ssssota/svg2png-wasm) - 🌟 64
 
 ## christophebe/serp
 
@@ -224,7 +224,7 @@ Google Search SERP Scraper
 
 Solves the TikTok captcha interactively using playwright or puppeteer.
 
-[arc298/tiktok-captcha-solver](https://github.com/arc298/tiktok-captcha-solver) - 🌟 48
+[arc298/tiktok-captcha-solver](https://github.com/arc298/tiktok-captcha-solver) - 🌟 49
 
 ## GrabarzUndPartner/nuxt-custom-elements
 
@@ -254,7 +254,7 @@ A JavaScript library to parse ICO.
 
 Add WebAssembly ESM integration (aka. Webpack's `asyncWebAssembly`) to Vite and support `wasm-pack` generated modules.
 
-[Menci/vite-plugin-wasm](https://github.com/Menci/vite-plugin-wasm) - 🌟 31
+[Menci/vite-plugin-wasm](https://github.com/Menci/vite-plugin-wasm) - 🌟 32
 
 ## cheminfo/nmrium
 
@@ -312,7 +312,7 @@ TypeScript/JavaScript interface for interacting with Bitcoin Cash network
 
 Test utilties for Vite Application
 
-[kazupon/vite-test-utils](https://github.com/kazupon/vite-test-utils) - 🌟 16
+[kazupon/vite-test-utils](https://github.com/kazupon/vite-test-utils) - 🌟 17
 
 ## mitmplay/mitm-play
 
