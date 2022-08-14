@@ -1,1 +1,1 @@
-npm uni -g run-fn&&npm i -g run-fn
+npm uni -g run-fn && npm i -g run-fn
