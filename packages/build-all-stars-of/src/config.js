@@ -60,6 +60,12 @@ const ramda = {
   title : 'Stars of **Ramda** list',
   stars: 2
 }
+const vitest = {
+  priority: 1,
+  repo: 'vitest-dev/vitest',
+  title : 'Stars of **Vitest** list',
+  stars: 2
+}
 
 const iterator = (x, prop) => {
   return {
@@ -79,7 +85,7 @@ const iterator = (x, prop) => {
 
 const allModes = map(
   iterator,
-  {rambda, playwright, puppeteer, ramda, nest, angular, swc}
+  {rambda, playwright, puppeteer, ramda, nest, angular, swc, vitest}
 )
 
 exports.allModes = allModes

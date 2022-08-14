@@ -4,7 +4,7 @@ const {buildStarsOf} = require('build-stars-of')
 const {outputJson} = require('fs-extra')
 const {allModes} = require('./config')
 
-const currentMode = 'angular'
+const currentMode = 'vitest'
 
 void async function main(){
   const input = allModes[currentMode]
