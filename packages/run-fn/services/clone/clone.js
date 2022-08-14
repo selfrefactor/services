@@ -8,6 +8,7 @@ async function clone(repoInput) {
     `git@github.com:selfrefactor/${repoInput}.git`
   const repoName = piped(repo, split(':'), last, remove('.git'))  
 
+  console.log(`git clone ${repo}`, repoName)
   await execCommand(`git clone ${repo}`)
   const maybePackageJson = `${process.cwd()}/${repoName}/package.json`
   if (!existsSync(maybePackageJson)) {
