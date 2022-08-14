@@ -53,9 +53,7 @@ export function buildFinalOutput(input){
 {{mainContent}}
   `.trim()
   const intro = getIntro(input.title, input.repo)
-
   const mainContent = getMainContent(input.data)
-
   const markdownText = interpolate(template, {intro, mainContent})
 
   return markdownText
