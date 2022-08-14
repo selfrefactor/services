@@ -18,7 +18,9 @@ Alternative to commitizen
 
 # Build stars of 
 
-Config is in `packages/build-all-stars-of/src/config.js`
+Config is in `packages/build-all-stars-of/src/config.js`.
+
+
 
 # Browser snippets
 

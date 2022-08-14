@@ -51,14 +51,14 @@ buffer-crc32@~0.2.3:
   resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
   integrity sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI=
 
-build-stars-of@0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.9.0.tgz#de19e8f4625cc707489af026f296161c0a2f8844"
-  integrity sha512-v/8eopl8vNg/X0KtGi2ZY/DVeC2vDjoxO0cbeqeK0Bu/VbPfwzDFxX6wbgVbpbbrjJHQjD79jtUEoe2tUkgmcg==
+build-stars-of@0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.10.0.tgz#8bcc3f2936284d095e340d83c827d47b33119351"
+  integrity sha512-LwR5lKGhkZZiR9kMfnzjJ15yu0JL9+taFYLXg2QsG9pLUBP8CLGzYTJGqe6IAmLDUiOS3EDsr0AK5TF0Go9WuQ==
   dependencies:
     esm "3.2.25"
     fs-extra "9.0.1"
-    github-api-fn "0.3.0"
+    github-api-fn "0.4.0"
     rambdax "7.1.0"
     sort-used-by "0.7.0"
     string-fn "3.1.0"
@@ -86,13 +86,6 @@ end-of-stream@^1.1.0:
   integrity sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
   dependencies:
     once "^1.4.0"
-
-env-fn@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/env-fn/-/env-fn-2.2.0.tgz#30288cd0294bcc8ac76f2ec9c71ec6ddb2736c43"
-  integrity sha512-hdR0Dpguc2GTA/d1lu7nBgze6gXB/bXkmN1nW6zlaRmRsw8mK4vTNuE0o4bbR0NfXTzgI7mecdGiHsqZRAeO9w==
-  dependencies:
-    rambda "6.4.0"
 
 esm@3.2.25:
   version "3.2.25"
@@ -144,10 +137,10 @@ get-stream@^5.1.0:
   dependencies:
     pump "^3.0.0"
 
-github-api-fn@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/github-api-fn/-/github-api-fn-0.3.0.tgz#55e87cdbd14ce3a44f622e4a559921bc1c10cea1"
-  integrity sha512-tA9iMwhKRG9wN2OSfV5JyHJJW6Na5AjyGHXvedazFCzuPe4Z1dO5Lr8a5sQxsReESZqW/w4nIhJFm6Iea8WeCw==
+github-api-fn@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/github-api-fn/-/github-api-fn-0.4.0.tgz#777cf1164039053617af9f12332d3afd97291ff2"
+  integrity sha512-KHV3/8k4cBIOV8GadxIhMGHn056iQXANa/p8A1BHkzxl2oI0FjYPB4MQjtFKUYr3ccnBErfOhD+b0NTZII6e7A==
   dependencies:
     axios "0.21.1"
     dayjs "^1.9.7"
@@ -303,11 +296,6 @@ pump@^3.0.0:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
-rambda@6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-6.4.0.tgz#bf080047b03d8d2c72e3ce5c17c603517a65749a"
-  integrity sha512-aBoE7YrGQP1xnxjyg5fhupfS+FTrDVjZMtwpezl15RKLNnKLOYDfjx/0xDE+8GyWbbZfODRkAOZmnpvxrAONbQ==
-
 rambdax@7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-7.0.1.tgz#6a1b3184abcf4cf6df5dffc27fc0d71100aa21ec"
@@ -317,6 +305,11 @@ rambdax@7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-7.1.0.tgz#138bc13b3dbe445f635e1e3bd94bc6ae24827fe2"
   integrity sha512-U/fBKF2IrHTLaqCsshQ948fXNrigfU0aE4Cl18y/BqkGM4E/Yg8XYKuAzghlCVq1ybPDJdq8HbGCcnuS8c6CEg==
+
+rambdax@8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-8.1.0.tgz#1737feb9ae33d184b1db85832dd1972b819e2630"
+  integrity sha512-8TQS3jorlSSubddKTyVrsp9mevF2WMBtdEPjp9Bk8ipVijD5/9gVXGgBF4d0JzO6kzegCFYWANrbHLyKLE6YVA==
 
 retry@^0.12.0:
   version "0.12.0"
