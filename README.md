@@ -20,7 +20,7 @@ Alternative to commitizen
 
 Config is in `packages/build-all-stars-of/src/config.js`.
 
-
+To update list, simply run `yarn on` inside `build-all-stars-of`.
 
 # Browser snippets
 

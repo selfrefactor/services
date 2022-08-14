@@ -2,422 +2,766 @@
 
 This list contains Github repos depending on **puppeteer/puppeteer**. 
 
-These repos are sorted by their stars and thier `package.json` is updated in the last year.
+These repos are sorted by their stars and their `package.json` is updated in the last year.
 
 > This list is created with `build-stars-of` library.
-
-## uiv-lib/uiv
-
-Bootstrap 3 components implemented by Vue 2.
-
-[uiv-lib/uiv](https://github.com/uiv-lib/uiv) - 🌟 873
-
-## neuronetio/gantt-schedule-timeline-calendar
-
-Gantt Gantt Gantt Timeline Schedule Calendar [ javascript gantt, js gantt, projects gantt, timeline, scheduler, gantt timeline, reservation timeline, react gantt, angular gantt, vue gantt, svelte gantt, booking manager ]
-
-[neuronetio/gantt-schedule-timeline-calendar](https://github.com/neuronetio/gantt-schedule-timeline-calendar) - 🌟 832
-
-## TonyGermaneri/canvas-datagrid
-
-Canvas based data grid web component.  Capable of displaying millions of contiguous hierarchical rows and columns without paging or loading, on a single canvas element.
-
-[TonyGermaneri/canvas-datagrid](https://github.com/TonyGermaneri/canvas-datagrid) - 🌟 750
 
 ## JsDaddy/ngx-mask
 
 Angular Plugin to make masks on form fields and html elements.
 
-[JsDaddy/ngx-mask](https://github.com/JsDaddy/ngx-mask) - 🌟 736
+[JsDaddy/ngx-mask](https://github.com/JsDaddy/ngx-mask) - 🌟 944
 
-## faceyspacey/extract-css-chunks-webpack-plugin
+## uiv-lib/uiv
 
-Extract CSS from chunks into multiple stylesheets + HMR
+Bootstrap 3 components implemented by Vue.js.
 
-[faceyspacey/extract-css-chunks-webpack-plugin](https://github.com/faceyspacey/extract-css-chunks-webpack-plugin) - 🌟 674
+[uiv-lib/uiv](https://github.com/uiv-lib/uiv) - 🌟 915
 
-## Pomax/lib-font
+## dai-shi/react-hooks-global-state
 
-This library adds a new Font() object to the JavaScript toolbox, similar to new Image() for images
+Simple global state for React with Hooks API without Context API
 
-[Pomax/lib-font](https://github.com/Pomax/lib-font) - 🌟 643
-
-## ukrbublik/react-awesome-query-builder
-
-User-friendly query builder for React
-
-[ukrbublik/react-awesome-query-builder](https://github.com/ukrbublik/react-awesome-query-builder) - 🌟 625
-
-## mauriciopoppe/function-plot
-
-A 2d function plotter powered by d3 and interval arithmetic
-
-[mauriciopoppe/function-plot](https://github.com/mauriciopoppe/function-plot) - 🌟 616
+[dai-shi/react-hooks-global-state](https://github.com/dai-shi/react-hooks-global-state) - 🌟 907
 
 ## nolanlawson/emoji-picker-element
 
 A lightweight emoji picker for the modern web
 
-[nolanlawson/emoji-picker-element](https://github.com/nolanlawson/emoji-picker-element) - 🌟 481
+[nolanlawson/emoji-picker-element](https://github.com/nolanlawson/emoji-picker-element) - 🌟 856
 
-## TimvanScherpenzeel/detect-gpu
+## adriancooney/puppeteer-heap-snapshot
+
+API and CLI tool to fetch and query Chome DevTools heap snapshots.
+
+[adriancooney/puppeteer-heap-snapshot](https://github.com/adriancooney/puppeteer-heap-snapshot) - 🌟 838
+
+## zouyaoji/vue-cesium
+
+🎉 Vue 3.x components for CesiumJS.
+
+[zouyaoji/vue-cesium](https://github.com/zouyaoji/vue-cesium) - 🌟 821
+
+## pmndrs/detect-gpu
 
 Classifies GPUs based on their 3D rendering benchmark score allowing the developer to provide sensible default settings for graphically intensive applications.
 
-[TimvanScherpenzeel/detect-gpu](https://github.com/TimvanScherpenzeel/detect-gpu) - 🌟 436
+[pmndrs/detect-gpu](https://github.com/pmndrs/detect-gpu) - 🌟 744
 
-## berialjs/berial
+## mauriciopoppe/function-plot
 
-😈 Simple micro-front-end framework.
+A 2d function plotter powered by d3 and interval arithmetic
 
-[berialjs/berial](https://github.com/berialjs/berial) - 🌟 411
+[mauriciopoppe/function-plot](https://github.com/mauriciopoppe/function-plot) - 🌟 735
 
-## dominikg/svite
+## help-me-mom/ng-mocks
 
-svelte integration for vite
+Angular testing library for mocking components, directives, pipes, services and facilitating TestBed setup
 
-[dominikg/svite](https://github.com/dominikg/svite) - 🌟 333
+[help-me-mom/ng-mocks](https://github.com/help-me-mom/ng-mocks) - 🌟 715
 
-## yargs/yargs-parser
+## Pomax/lib-font
 
-:muscle: the mighty option parser used by yargs
+This library adds a new Font() object to the JavaScript toolbox, similar to new Image() for images
 
-[yargs/yargs-parser](https://github.com/yargs/yargs-parser) - 🌟 330
+[Pomax/lib-font](https://github.com/Pomax/lib-font) - 🌟 681
+
+## aholachek/bundle-wizard
+
+Magically easy insight into the JavaScript loaded by a web app
+
+[aholachek/bundle-wizard](https://github.com/aholachek/bundle-wizard) - 🌟 636
 
 ## kufu/smarthr-ui
 
 React components for creating SmartHR applications.
 
-[kufu/smarthr-ui](https://github.com/kufu/smarthr-ui) - 🌟 257
+[kufu/smarthr-ui](https://github.com/kufu/smarthr-ui) - 🌟 607
 
-## ericleong/zoomwall.js
+## gkjohnson/three-gpu-pathtracer
 
-A content-focused photo gallery using a horizontal masonry layout that scales up in lightbox mode.
+Path tracing renderer and utilities for three.js built on top of three-mesh-bvh.
 
-[ericleong/zoomwall.js](https://github.com/ericleong/zoomwall.js) - 🌟 253
+[gkjohnson/three-gpu-pathtracer](https://github.com/gkjohnson/three-gpu-pathtracer) - 🌟 606
 
-## tencentyun/cos-js-sdk-v5
+## WebReflection/uhtml
 
-腾讯云 COS JS SDK（XML API）
+A micro HTML/SVG render
 
-[tencentyun/cos-js-sdk-v5](https://github.com/tencentyun/cos-js-sdk-v5) - 🌟 193
-
-## sorrycc/esbuild-webpack-plugin
-
-Use esbuild as minifier for webpack.
-
-[sorrycc/esbuild-webpack-plugin](https://github.com/sorrycc/esbuild-webpack-plugin) - 🌟 191
-
-## t3chnoboy/thepiratebay
-
-:skull: The Pirate Bay node.js client
-
-[t3chnoboy/thepiratebay](https://github.com/t3chnoboy/thepiratebay) - 🌟 185
-
-## executablebooks/thebe
-
-ThebeLab: turning static HTML pages into live documents
-
-[executablebooks/thebe](https://github.com/executablebooks/thebe) - 🌟 181
-
-## stimulus-components/stimulus-components
-
-A modern Stimulus library delivering common JavaScript behaviors with a bunch of customizable controllers.
-
-[stimulus-components/stimulus-components](https://github.com/stimulus-components/stimulus-components) - 🌟 162
-
-## ferdikoomen/openapi-typescript-codegen
-
-NodeJS library that generates Typescript or Javascript clients based on the OpenAPI specification
-
-[ferdikoomen/openapi-typescript-codegen](https://github.com/ferdikoomen/openapi-typescript-codegen) - 🌟 157
-
-## danielgatis/puppeteer-recaptcha-solver
-
-Recaptcha solver for puppeteer
-
-[danielgatis/puppeteer-recaptcha-solver](https://github.com/danielgatis/puppeteer-recaptcha-solver) - 🌟 154
-
-## carbon-design-system/carbon-web-components
-
-Carbon Design System variant on top of Web Components
-
-[carbon-design-system/carbon-web-components](https://github.com/carbon-design-system/carbon-web-components) - 🌟 140
-
-## FormidableLabs/urql-devtools
-
-A tool for monitoring and debugging urql during development
-
-[FormidableLabs/urql-devtools](https://github.com/FormidableLabs/urql-devtools) - 🌟 123
-
-## LancerComet/vue-jsonp
-
-A tiny library for handling JSONP request.
-
-[LancerComet/vue-jsonp](https://github.com/LancerComet/vue-jsonp) - 🌟 120
-
-## ron0115/react-smooth-scroll-hook
-
-A React Hook for using smooth scroll in React Component
-
-[ron0115/react-smooth-scroll-hook](https://github.com/ron0115/react-smooth-scroll-hook) - 🌟 105
-
-## postmanlabs/postman-runtime
-
-[postmanlabs/postman-runtime](https://github.com/postmanlabs/postman-runtime) - 🌟 105
-
-## SAP/fundamental-styles
-
-Fiori 3, theme-able, accessible component library for building SAP user interfaces with any web technology.
-
-[SAP/fundamental-styles](https://github.com/SAP/fundamental-styles) - 🌟 99
-
-## auth0/express-openid-connect
-
-An Express.js middleware to protect OpenID Connect web applications.
-
-[auth0/express-openid-connect](https://github.com/auth0/express-openid-connect) - 🌟 95
-
-## NiGhTTraX/mugshot
-
-Framework independent visual testing library
-
-[NiGhTTraX/mugshot](https://github.com/NiGhTTraX/mugshot) - 🌟 94
-
-## Brandawg93/homebridge-nest-cam
-
-View your Nest cams in HomeKit using Homebridge.
-
-[Brandawg93/homebridge-nest-cam](https://github.com/Brandawg93/homebridge-nest-cam) - 🌟 88
-
-## vanhoofmaarten/nuxt-mq
-
-vue-mq module for Nuxt.js.
-
-[vanhoofmaarten/nuxt-mq](https://github.com/vanhoofmaarten/nuxt-mq) - 🌟 80
-
-## aws/amazon-chime-sdk-component-library-react
-
-Amazon Chime React Component Library with integrations with the Amazon Chime SDK.
-
-[aws/amazon-chime-sdk-component-library-react](https://github.com/aws/amazon-chime-sdk-component-library-react) - 🌟 59
-
-## obetomuniz/tatooine
-
-A pluggable, simple and powerful web scraper.
-
-[obetomuniz/tatooine](https://github.com/obetomuniz/tatooine) - 🌟 59
-
-## leafOfTree/svelte-lazy
-
-A svelte component to lazyload any content including images.
-
-[leafOfTree/svelte-lazy](https://github.com/leafOfTree/svelte-lazy) - 🌟 58
-
-## croutonn/tailwindcss-pseudo-elements
-
-TailwindCSS Plugin that adds variants of pseudo elements.
-
-[croutonn/tailwindcss-pseudo-elements](https://github.com/croutonn/tailwindcss-pseudo-elements) - 🌟 56
-
-## workeffortwaste/layout-shift-gif
-
-Visualise the Core Web Vitals metric Cumulative Layout Shift (CLS) with a simple GIF.
-
-[workeffortwaste/layout-shift-gif](https://github.com/workeffortwaste/layout-shift-gif) - 🌟 56
-
-## sarsamurmu/reboost
-
-A super fast dev server for rapid web development
-
-[sarsamurmu/reboost](https://github.com/sarsamurmu/reboost) - 🌟 55
-
-## jaydenseric/next-graphql-react
-
-A graphql-react integration for Next.js to enable server side rendered GraphQL operations.
-
-[jaydenseric/next-graphql-react](https://github.com/jaydenseric/next-graphql-react) - 🌟 55
-
-## Skayo/svelte-infinite-loading
-
-An infinite scroll component for Svelte, to help you implement an infinite scroll list more easily.
-
-[Skayo/svelte-infinite-loading](https://github.com/Skayo/svelte-infinite-loading) - 🌟 54
-
-## safebash/opencrypto
-
-OpenCrypto is a lightweight JavaScript library built on top of WebCryptography API
-
-[safebash/opencrypto](https://github.com/safebash/opencrypto) - 🌟 49
-
-## antfu/p5i
-
-p5.js, but with more friendly instance mode APIs
-
-[antfu/p5i](https://github.com/antfu/p5i) - 🌟 47
-
-## TimvanScherpenzeel/detect-features
-
-Detect and report browser and hardware features.
-
-[TimvanScherpenzeel/detect-features](https://github.com/TimvanScherpenzeel/detect-features) - 🌟 46
-
-## vision-consensus/visionweb
-
-[vision-consensus/visionweb](https://github.com/vision-consensus/visionweb) - 🌟 44
+[WebReflection/uhtml](https://github.com/WebReflection/uhtml) - 🌟 594
 
 ## underfin/vite-plugin-vue2
 
 Vue2 plugin for Vite
 
-[underfin/vite-plugin-vue2](https://github.com/underfin/vite-plugin-vue2) - 🌟 44
+[underfin/vite-plugin-vue2](https://github.com/underfin/vite-plugin-vue2) - 🌟 581
 
-## artpi/roam-research-private-api
+## apify/proxy-chain
 
-Private API (puppeteer-driven) to enable API access for Roam Research.
+Node.js implementation of a proxy server (think Squid) with support for SSL, authentication and upstream proxy chaining.
 
-[artpi/roam-research-private-api](https://github.com/artpi/roam-research-private-api) - 🌟 43
+[apify/proxy-chain](https://github.com/apify/proxy-chain) - 🌟 545
 
-## ant-design/html2sketch
+## Xetera/ghost-cursor
 
-parser HTML to Sketch JSON
+🖱️ Generate human-like mouse movements with puppeteer or on any 2D plane
 
-[ant-design/html2sketch](https://github.com/ant-design/html2sketch) - 🌟 43
+[Xetera/ghost-cursor](https://github.com/Xetera/ghost-cursor) - 🌟 531
 
-## felixfbecker/dom-to-svg
+## box/box-ui-elements
 
-Library to convert a given HTML DOM node into an accessible SVG "screenshot".
+React Components for Box's Design System and Pluggable Components
 
-[felixfbecker/dom-to-svg](https://github.com/felixfbecker/dom-to-svg) - 🌟 42
+[box/box-ui-elements](https://github.com/box/box-ui-elements) - 🌟 512
+
+## Tencent/wujie
+
+极致的微前端框架
+
+[Tencent/wujie](https://github.com/Tencent/wujie) - 🌟 500
+
+## harlan-zw/unlighthouse
+
+Unlighthouse scans your entire site using Google Lighthouse, with a modern UI, minimal config and smart sampling.
+
+[harlan-zw/unlighthouse](https://github.com/harlan-zw/unlighthouse) - 🌟 493
+
+## zenozeng/p5.js-svg
+
+SVG runtime for p5.js.
+
+[zenozeng/p5.js-svg](https://github.com/zenozeng/p5.js-svg) - 🌟 479
+
+## shader-park/shader-park-core
+
+A JavaScript library for creating real-time 2D and 3D shaders. JS -> Shader. https://shaderpark.com/  https://twitter.com/shaderpark
+
+[shader-park/shader-park-core](https://github.com/shader-park/shader-park-core) - 🌟 461
+
+## yahoo/fetchr
+
+Universal data access layer for web applications.
+
+[yahoo/fetchr](https://github.com/yahoo/fetchr) - 🌟 442
+
+## FlamingTempura/bibtex-tidy
+
+Cleaner and Formatter for BibTeX files
+
+[FlamingTempura/bibtex-tidy](https://github.com/FlamingTempura/bibtex-tidy) - 🌟 441
+
+## etro-js/etro
+
+A typescript video-editing framework for the browser and Node
+
+[etro-js/etro](https://github.com/etro-js/etro) - 🌟 420
+
+## yargs/yargs-parser
+
+:muscle: the mighty option parser used by yargs
+
+[yargs/yargs-parser](https://github.com/yargs/yargs-parser) - 🌟 416
+
+## GrabarzUndPartner/nuxt-speedkit
+
+nuxt-speedkit will help you to improve the lighthouse performance score (100/100) of your website.
+
+[GrabarzUndPartner/nuxt-speedkit](https://github.com/GrabarzUndPartner/nuxt-speedkit) - 🌟 401
+
+## ficusjs/ficusjs
+
+FicusJS is a set of lightweight functions for developing applications using web components
+
+[ficusjs/ficusjs](https://github.com/ficusjs/ficusjs) - 🌟 379
+
+## carcabot/tiktok-signature
+
+Generate tiktok signature token using node
+
+[carcabot/tiktok-signature](https://github.com/carcabot/tiktok-signature) - 🌟 367
+
+## cweijan/vscode-office
+
+让VSCode支持预览PDF,Excel等格式, 并增加markdown所见即所得编辑器
+
+[cweijan/vscode-office](https://github.com/cweijan/vscode-office) - 🌟 344
+
+## SimenB/add-asset-html-webpack-plugin
+
+Add a JavaScript or CSS asset to the HTML generated by html-webpack-plugin
+
+[SimenB/add-asset-html-webpack-plugin](https://github.com/SimenB/add-asset-html-webpack-plugin) - 🌟 331
+
+## stevenpetryk/mafs
+
+React components for interactive math
+
+[stevenpetryk/mafs](https://github.com/stevenpetryk/mafs) - 🌟 325
+
+## cloudinary/cloudinary_js
+
+Cloudinary JavaScript library
+
+[cloudinary/cloudinary_js](https://github.com/cloudinary/cloudinary_js) - 🌟 324
+
+## yhatt/jsx-slack
+
+Build JSON object for Slack Block Kit surfaces from JSX
+
+[yhatt/jsx-slack](https://github.com/yhatt/jsx-slack) - 🌟 307
+
+## auth0/express-openid-connect
+
+An Express.js middleware to protect OpenID Connect web applications.
+
+[auth0/express-openid-connect](https://github.com/auth0/express-openid-connect) - 🌟 303
+
+## ericleong/zoomwall.js
+
+A content-focused photo gallery using a horizontal masonry layout that scales up in lightbox mode.
+
+[ericleong/zoomwall.js](https://github.com/ericleong/zoomwall.js) - 🌟 279
+
+## tencentyun/cos-js-sdk-v5
+
+腾讯云 COS JS SDK（XML API）
+
+[tencentyun/cos-js-sdk-v5](https://github.com/tencentyun/cos-js-sdk-v5) - 🌟 275
+
+## nextstrain/auspice
+
+Web app for visualizing pathogen evolution
+
+[nextstrain/auspice](https://github.com/nextstrain/auspice) - 🌟 273
+
+## aws/amazon-chime-sdk-component-library-react
+
+Amazon Chime React Component Library with integrations with the Amazon Chime SDK.
+
+[aws/amazon-chime-sdk-component-library-react](https://github.com/aws/amazon-chime-sdk-component-library-react) - 🌟 217
 
 ## typesense/typesense-instantsearch-adapter
 
 A JS adapter library to build rich search interfaces with Typesense and InstantSearch.js
 
-[typesense/typesense-instantsearch-adapter](https://github.com/typesense/typesense-instantsearch-adapter) - 🌟 41
+[typesense/typesense-instantsearch-adapter](https://github.com/typesense/typesense-instantsearch-adapter) - 🌟 182
 
-## excalidraw/gatsby-embedder-excalidraw
+## ruimarinho/gsts
 
-🤴 Custom transformer to embed Excalidraw diagrams
+Obtain and store AWS STS credentials to interact with Amazon services by authenticating via G Suite SAML.
 
-[excalidraw/gatsby-embedder-excalidraw](https://github.com/excalidraw/gatsby-embedder-excalidraw) - 🌟 40
+[ruimarinho/gsts](https://github.com/ruimarinho/gsts) - 🌟 180
 
-## FranckFreiburger/vue3-sfc-loader
+## Brandawg93/homebridge-nest-cam
 
-Vue3 Single File Component loader. Load .vue files directly from your html/js. No node.js environment, no (webpack) build step.
+View your Nest cams in HomeKit using Homebridge.
 
-[FranckFreiburger/vue3-sfc-loader](https://github.com/FranckFreiburger/vue3-sfc-loader) - 🌟 33
+[Brandawg93/homebridge-nest-cam](https://github.com/Brandawg93/homebridge-nest-cam) - 🌟 179
 
-## PejmanNik/puppeteer-report
+## cloudfour/pleasantest
 
-Convert HTML to PDF by Puppeteer with support of adding a custom header, footer, and page number
+⛵ Write real-browser tests with Testing Library in Jest
 
-[PejmanNik/puppeteer-report](https://github.com/PejmanNik/puppeteer-report) - 🌟 31
+[cloudfour/pleasantest](https://github.com/cloudfour/pleasantest) - 🌟 171
 
-## lewisdonovan/google-news-scraper
+## bugra9/gdal3.js
 
-Lightweight scraper for Google News
+Convert raster and vector geospatial data to various formats and coordinate systems entirely in the browser.
 
-[lewisdonovan/google-news-scraper](https://github.com/lewisdonovan/google-news-scraper) - 🌟 28
+[bugra9/gdal3.js](https://github.com/bugra9/gdal3.js) - 🌟 166
 
-## robertsLando/node-red-contrib-whatsappbot
+## SAP/fundamental-react
 
-Whatsapp Bot  🤖  for Node-Red
+React implementation of the reusable component library designed in Fundamental Library Styles
 
-[robertsLando/node-red-contrib-whatsappbot](https://github.com/robertsLando/node-red-contrib-whatsappbot) - 🌟 27
+[SAP/fundamental-react](https://github.com/SAP/fundamental-react) - 🌟 166
 
-## johnnesky/imperative-html
+## postmanlabs/postman-runtime
 
-Write HTML in client-side JavaScript.
+[postmanlabs/postman-runtime](https://github.com/postmanlabs/postman-runtime) - 🌟 156
 
-[johnnesky/imperative-html](https://github.com/johnnesky/imperative-html) - 🌟 26
+## Flam3rboy/puppeteer-stream
+
+A Library for puppeteer to retrieve audio and/or video streams
+
+[Flam3rboy/puppeteer-stream](https://github.com/Flam3rboy/puppeteer-stream) - 🌟 155
+
+## supertokens/supertokens-auth-react
+
+ReactJS authentication module for SuperTokens
+
+[supertokens/supertokens-auth-react](https://github.com/supertokens/supertokens-auth-react) - 🌟 155
+
+## stalniy/bdd-lazy-var
+
+Provides UI for testing frameworks such as mocha, jasmine and jest which allows to define lazy variables and subjects.
+
+[stalniy/bdd-lazy-var](https://github.com/stalniy/bdd-lazy-var) - 🌟 154
+
+## dcts/opensea-scraper
+
+Scrapes nft floor prices and additional information from opensea. Used for https://nftfloorprice.info
+
+[dcts/opensea-scraper](https://github.com/dcts/opensea-scraper) - 🌟 153
+
+## neocotic/europa
+
+Library for converting HTML into valid Markdown
+
+[neocotic/europa](https://github.com/neocotic/europa) - 🌟 150
+
+## prasanaworld/puppeteer-screen-recorder
+
+[prasanaworld/puppeteer-screen-recorder](https://github.com/prasanaworld/puppeteer-screen-recorder) - 🌟 146
+
+## SAP/fundamental-styles
+
+SAP Fiori, theme-able, accessible component library for building SAP user interfaces with any web technology.
+
+[SAP/fundamental-styles](https://github.com/SAP/fundamental-styles) - 🌟 145
+
+## Kitware/itk-vtk-viewer
+
+ 2D / 3D web image, mesh, and point set viewer using itk-wasm and vtk.js
+
+[Kitware/itk-vtk-viewer](https://github.com/Kitware/itk-vtk-viewer) - 🌟 145
+
+## nytimes/aframe-loader-3dtiles-component
+
+A-Frame component using 3D-Tiles
+
+[nytimes/aframe-loader-3dtiles-component](https://github.com/nytimes/aframe-loader-3dtiles-component) - 🌟 143
+
+## Xunnamius/next-test-api-route-handler
+
+:rocket::sparkles: Confidently unit test your Next.js API routes/handlers in an isolated Next.js-like environment
+
+[Xunnamius/next-test-api-route-handler](https://github.com/Xunnamius/next-test-api-route-handler) - 🌟 134
 
 ## PrismarineJS/prismarine-viewer
 
 Web based viewer for servers and bots
 
-[PrismarineJS/prismarine-viewer](https://github.com/PrismarineJS/prismarine-viewer) - 🌟 24
+[PrismarineJS/prismarine-viewer](https://github.com/PrismarineJS/prismarine-viewer) - 🌟 134
 
-## stimulus-components/stimulus-checkbox-select-all
+## diegoazh/gmap-vue
 
-A Stimulus controller for managing checkbox lists.
+A wrapper component for consuming Google Maps API built on top of VueJs v2. Fork of the popular vue-google-maps plugin.
 
-[stimulus-components/stimulus-checkbox-select-all](https://github.com/stimulus-components/stimulus-checkbox-select-all) - 🌟 23
+[diegoazh/gmap-vue](https://github.com/diegoazh/gmap-vue) - 🌟 133
 
-## fission-suite/webnative
+## vanhoofmaarten/nuxt-mq
+
+vue-mq module for Nuxt.js.
+
+[vanhoofmaarten/nuxt-mq](https://github.com/vanhoofmaarten/nuxt-mq) - 🌟 129
+
+## InsightSoftwareConsortium/itk-wasm
+
+High performance spatial analysis in a web browser, Node.js, and across programming languages and hardware architectures 
+
+[InsightSoftwareConsortium/itk-wasm](https://github.com/InsightSoftwareConsortium/itk-wasm) - 🌟 128
+
+## repetere/jsonx
+
+JSONX - Create React Elements, JSX and HTML from JSON
+
+[repetere/jsonx](https://github.com/repetere/jsonx) - 🌟 126
+
+## NiGhTTraX/mugshot
+
+Framework independent visual testing library
+
+[NiGhTTraX/mugshot](https://github.com/NiGhTTraX/mugshot) - 🌟 125
+
+## dnajs/dna.js
+
+🧬 An uncomplicated user interface library for building data-driven semantic templates (written in TypeScript)
+
+[dnajs/dna.js](https://github.com/dnajs/dna.js) - 🌟 121
+
+## leochen-g/wechaty-web-panel
+
+Wechaty Web Panel 让你的wechaty机器人，快速接入web可视化操作面板，接入就是那么简单丝滑
+
+[leochen-g/wechaty-web-panel](https://github.com/leochen-g/wechaty-web-panel) - 🌟 112
+
+## leafOfTree/svelte-lazy
+
+A svelte component to lazyload any content including images
+
+[leafOfTree/svelte-lazy](https://github.com/leafOfTree/svelte-lazy) - 🌟 111
+
+## svitejs/svite
+
+[svitejs/svite](https://github.com/svitejs/svite) - 🌟 102
+
+## PejmanNik/puppeteer-report
+
+Convert HTML to PDF by Puppeteer with support of adding a custom header, footer, and page number
+
+[PejmanNik/puppeteer-report](https://github.com/PejmanNik/puppeteer-report) - 🌟 96
+
+## texei/texei-sfdx-plugin
+
+Texeï's plugin for sfdx
+
+[texei/texei-sfdx-plugin](https://github.com/texei/texei-sfdx-plugin) - 🌟 96
+
+## fanruan/fineui
+
+UI framework for FineBI and FineReport.
+
+[fanruan/fineui](https://github.com/fanruan/fineui) - 🌟 94
+
+## munrocket/double.js
+
+:dancing_women: Double-double arithmetic in javascript. A floating point expansion with 31 accurate decimal digits.
+
+[munrocket/double.js](https://github.com/munrocket/double.js) - 🌟 92
+
+## aw1875/puppeteer-hcaptcha
+
+A library to solve hcaptcha challenges that are automated within puppeteer. You can automatically set response values where they should be so the only thing left for you is submitting the page or you can get the response token.
+
+[aw1875/puppeteer-hcaptcha](https://github.com/aw1875/puppeteer-hcaptcha) - 🌟 91
+
+## spinlud/linkedin-jobs-scraper
+
+[spinlud/linkedin-jobs-scraper](https://github.com/spinlud/linkedin-jobs-scraper) - 🌟 86
+
+## fission-codes/webnative
 
 Fission's browser SDK
 
-[fission-suite/webnative](https://github.com/fission-suite/webnative) - 🌟 22
+[fission-codes/webnative](https://github.com/fission-codes/webnative) - 🌟 85
+
+## status-im/js-waku
+
+JavaScript implementation of Waku v2
+
+[status-im/js-waku](https://github.com/status-im/js-waku) - 🌟 84
+
+## 07akioni/vueuc
+
+Util Components for Vue
+
+[07akioni/vueuc](https://github.com/07akioni/vueuc) - 🌟 80
+
+## Luxcium/pop-n-lock-theme-vscode
+
+✨ Perfectly balanced VS Code theme with vivid colours for TypeScript and more...
+
+[Luxcium/pop-n-lock-theme-vscode](https://github.com/Luxcium/pop-n-lock-theme-vscode) - 🌟 78
+
+## yandeu/five-server
+
+⚡ Development Server with Live Reload Capability. (Maintained Fork of Live Server)
+
+[yandeu/five-server](https://github.com/yandeu/five-server) - 🌟 77
+
+## Janpot/next-rpc
+
+makes exported functions from API routes accessible in the browser. Just import your API function and call it anywhere you want.
+
+[Janpot/next-rpc](https://github.com/Janpot/next-rpc) - 🌟 76
+
+## kohheepeace/mr-pdf
+
+PDF generator of document website
+
+[kohheepeace/mr-pdf](https://github.com/kohheepeace/mr-pdf) - 🌟 74
+
+## jaydenseric/next-graphql-react
+
+A graphql-react integration for Next.js.
+
+[jaydenseric/next-graphql-react](https://github.com/jaydenseric/next-graphql-react) - 🌟 73
+
+## apify/browser-pool
+
+A Node.js library to easily manage and rotate a pool of web browsers, using any of the popular browser automation libraries like Puppeteer, Playwright, or SecretAgent.
+
+[apify/browser-pool](https://github.com/apify/browser-pool) - 🌟 71
+
+## zachleat/performance-leaderboard
+
+A plugin to run Lighthouse against a set of urls to see which site is the fastest.
+
+[zachleat/performance-leaderboard](https://github.com/zachleat/performance-leaderboard) - 🌟 69
+
+## fangzhengjin/umi-plugin-panel-tabs
+
+umi-plugin-panel-tabs
+
+[fangzhengjin/umi-plugin-panel-tabs](https://github.com/fangzhengjin/umi-plugin-panel-tabs) - 🌟 68
+
+## ToucanToco/weaverbird
+
+A visual data pipeline builder with various backends
+
+[ToucanToco/weaverbird](https://github.com/ToucanToco/weaverbird) - 🌟 65
+
+## egoist/follower-count
+
+Get follower count for Instagram, Twitter, TikTok, Youtube accounts
+
+[egoist/follower-count](https://github.com/egoist/follower-count) - 🌟 62
+
+## visjs/vis-data
+
+🗄️ Manage unstructured data using DataSet. Add, update, and remove data, and listen for changes in the data.
+
+[visjs/vis-data](https://github.com/visjs/vis-data) - 🌟 61
+
+## rvagg/polendina
+
+Non-UI browser testing for JavaScript libraries from the command-line
+
+[rvagg/polendina](https://github.com/rvagg/polendina) - 🌟 61
+
+## obetomuniz/tatooine
+
+A pluggable, simple, and powerful web scraper.
+
+[obetomuniz/tatooine](https://github.com/obetomuniz/tatooine) - 🌟 60
+
+## opentripplanner/otp-react-redux
+
+A library for writing modern OpenTripPlanner-compatible multimodal journey planning applications using React and Redux.
+
+[opentripplanner/otp-react-redux](https://github.com/opentripplanner/otp-react-redux) - 🌟 57
+
+## backspaces/agentscript
+
+An Agent Based Modeling system (ABM)
+
+[backspaces/agentscript](https://github.com/backspaces/agentscript) - 🌟 56
+
+## gatsby-inc/gatsby-interface
+
+Shared User Interface components for use with Gatsby Projects
+
+[gatsby-inc/gatsby-interface](https://github.com/gatsby-inc/gatsby-interface) - 🌟 55
+
+## Automattic/color-studio
+
+The color palette for Automattic products
+
+[Automattic/color-studio](https://github.com/Automattic/color-studio) - 🌟 53
+
+## microsoft/tabster
+
+Web Application Keyboard Navigation Tools
+
+[microsoft/tabster](https://github.com/microsoft/tabster) - 🌟 50
+
+## camunda/camunda-bpmn-moddle
+
+Camunda moddle extensions for BPMN 2.0
+
+[camunda/camunda-bpmn-moddle](https://github.com/camunda/camunda-bpmn-moddle) - 🌟 50
+
+## w3c/specberus
+
+Checker used at W3C to validate the compliance of Technical Reports with publication rules
+
+[w3c/specberus](https://github.com/w3c/specberus) - 🌟 48
+
+## GrabarzUndPartner/nuxt-custom-elements
+
+Publish your components as a custom-element standalone build.
+
+[GrabarzUndPartner/nuxt-custom-elements](https://github.com/GrabarzUndPartner/nuxt-custom-elements) - 🌟 48
 
 ## w3c/reffy
 
-Exploration of references in W3C specs
+Reffy is a Web spec crawler and analyzer tool. It is notably used to update Webref
 
-[w3c/reffy](https://github.com/w3c/reffy) - 🌟 20
+[w3c/reffy](https://github.com/w3c/reffy) - 🌟 46
 
-## tvjsx/tvjs-overlays
+## dmnsgn/async-preloader
 
-💴  Collection of overlays made by the TradingVueJs community
+Assets preloader using ES2017 async/await and fetch.
 
-[tvjsx/tvjs-overlays](https://github.com/tvjsx/tvjs-overlays) - 🌟 21
+[dmnsgn/async-preloader](https://github.com/dmnsgn/async-preloader) - 🌟 44
 
-## code-workshop-kit/code-workshop-kit
+## 3p3r/cdk-web
 
-Code workshop kit npm package
+AWS CDK compiled for web (and Node!)
 
-[code-workshop-kit/code-workshop-kit](https://github.com/code-workshop-kit/code-workshop-kit) - 🌟 20
+[3p3r/cdk-web](https://github.com/3p3r/cdk-web) - 🌟 43
+
+## buidler-hub/rayli
+
+📸 A command-line tool to generate code images of your local code right away from the terminal
+
+[buidler-hub/rayli](https://github.com/buidler-hub/rayli) - 🌟 42
+
+## alvarlagerlof/next-banner
+
+🖼️ Generate Open Graph images for Next.js on build
+
+[alvarlagerlof/next-banner](https://github.com/alvarlagerlof/next-banner) - 🌟 41
+
+## supertokens/supertokens-website
+
+Frontend SDK for SuperTokens - for session management + automatically refreshing sessions
+
+[supertokens/supertokens-website](https://github.com/supertokens/supertokens-website) - 🌟 41
+
+## simple-icons/simple-icons-font
+
+SVG icon font for popular brands
+
+[simple-icons/simple-icons-font](https://github.com/simple-icons/simple-icons-font) - 🌟 40
+
+## camunda/camunda-bpmn-js
+
+Embeddable Camunda modeling distributions based on bpmn-js
+
+[camunda/camunda-bpmn-js](https://github.com/camunda/camunda-bpmn-js) - 🌟 39
+
+## henrylle/bia
+
+[henrylle/bia](https://github.com/henrylle/bia) - 🌟 39
+
+## fast-facts/puppeteer-pro
+
+A simple puppeteer wrapper to enable useful plugins with ease
+
+[fast-facts/puppeteer-pro](https://github.com/fast-facts/puppeteer-pro) - 🌟 39
+
+## boxine/pentf
+
+Parallel end-to-end test framework
+
+[boxine/pentf](https://github.com/boxine/pentf) - 🌟 35
 
 ## Ontotext-AD/graphdb-workbench
 
 The web application for GraphDB APIs
 
-[Ontotext-AD/graphdb-workbench](https://github.com/Ontotext-AD/graphdb-workbench) - 🌟 19
+[Ontotext-AD/graphdb-workbench](https://github.com/Ontotext-AD/graphdb-workbench) - 🌟 34
 
-## stimulus-components/stimulus-rails-nested-form
+## jihchi/mermaid.ink
 
-A Stimulus controller to create new fields on the fly to populate your Rails relationship.
+Given a mermaid code (markdown-like), serve an image (png or svg) for you
 
-[stimulus-components/stimulus-rails-nested-form](https://github.com/stimulus-components/stimulus-rails-nested-form) - 🌟 19
+[jihchi/mermaid.ink](https://github.com/jihchi/mermaid.ink) - 🌟 33
 
-## sergioramos/remark-prism
+## searchhub/search-collector
 
-Syntax highlighter for markdown code blocks using Prism
+A fast and simple JavaScript library specifically targeted at collecting search and search related browser events.
 
-[sergioramos/remark-prism](https://github.com/sergioramos/remark-prism) - 🌟 19
+[searchhub/search-collector](https://github.com/searchhub/search-collector) - 🌟 32
 
-## mipatterson/typedoc-plugin-pages
+## xitu/inline-module
 
-A TypeDoc plugin that lets you integrate your own pages into the documentation output
+A simple way of loading inline es-modules on modern browser.
 
-[mipatterson/typedoc-plugin-pages](https://github.com/mipatterson/typedoc-plugin-pages) - 🌟 19
+[xitu/inline-module](https://github.com/xitu/inline-module) - 🌟 31
 
-## rjdestigter/xstate-marionettist
+## pixelastic/oroshi
 
-Model based testing with Jest, XState and Puppeteer or Playwright made easy
+x My dotfiles repo.
 
-[rjdestigter/xstate-marionettist](https://github.com/rjdestigter/xstate-marionettist) - 🌟 18
+[pixelastic/oroshi](https://github.com/pixelastic/oroshi) - 🌟 31
 
-## flekschas/piling.js
+## hardisgroupcom/sfdx-hardis
 
-A general framework and library for exploring thousands of small multiples
+Hardis-Group Toolbox for Salesforce DX
 
-[flekschas/piling.js](https://github.com/flekschas/piling.js) - 🌟 18
+[hardisgroupcom/sfdx-hardis](https://github.com/hardisgroupcom/sfdx-hardis) - 🌟 30
 
-## GrabarzUndPartner/nuxt-custom-elements
+## starsprung/amazon-ynab-sync
 
-Publish your components as a vue-custom-element standalone build.
+[starsprung/amazon-ynab-sync](https://github.com/starsprung/amazon-ynab-sync) - 🌟 30
 
-[GrabarzUndPartner/nuxt-custom-elements](https://github.com/GrabarzUndPartner/nuxt-custom-elements) - 🌟 17
+## KillerCodeMonkey/stencil-quill
 
-## zuoyanart/sparender
+Native web components for the Quill Rich Text Editor built with stencil
 
-基于puppeteer的高性能SPA SEO解决方案
+[KillerCodeMonkey/stencil-quill](https://github.com/KillerCodeMonkey/stencil-quill) - 🌟 30
 
-[zuoyanart/sparender](https://github.com/zuoyanart/sparender) - 🌟 16
+## avi12/web-ext-deploy
+
+A tool for deploying WebExtensions to multiple stores.
+
+[avi12/web-ext-deploy](https://github.com/avi12/web-ext-deploy) - 🌟 28
+
+## GovTechSG/purple-hats
+
+Automated accessibility testing tool for web applications.
+
+[GovTechSG/purple-hats](https://github.com/GovTechSG/purple-hats) - 🌟 28
+
+## hslayers/hslayers-ng
+
+User interface and map building extensions for OpenLayers6
+
+[hslayers/hslayers-ng](https://github.com/hslayers/hslayers-ng) - 🌟 28
+
+## juanelas/paillier-bigint
+
+An implementation of the Paillier cryptosystem using native JS implementation of BigInt
+
+[juanelas/paillier-bigint](https://github.com/juanelas/paillier-bigint) - 🌟 27
+
+## juanelas/bigint-crypto-utils
+
+Utils for working with cryptography using native JS implementation of BigInt. It includes arbitrary precision modular arithmetics, cryptographically secure random numbers and strong probable prime generation/testing. It works with Node.js, and native JS, including React and Angular
+
+[juanelas/bigint-crypto-utils](https://github.com/juanelas/bigint-crypto-utils) - 🌟 27
+
+## center-key/fetch-json
+
+🐶 A wrapper around Fetch just for JSON (written in TypeScript)
+
+[center-key/fetch-json](https://github.com/center-key/fetch-json) - 🌟 26
+
+## ec0lint/ec0lint
+
+Create sustainable digital environment with ec0lint
+
+[ec0lint/ec0lint](https://github.com/ec0lint/ec0lint) - 🌟 25
+
+## GoogleChromeLabs/chromium-bidi
+
+[GoogleChromeLabs/chromium-bidi](https://github.com/GoogleChromeLabs/chromium-bidi) - 🌟 24
+
+## buxlabs/boxwood
+
+Server side templating engine written in JavaScript
+
+[buxlabs/boxwood](https://github.com/buxlabs/boxwood) - 🌟 24
+
+## abhas9/vanilla-caret-js
+
+Set and get Caret position (contenteditable or TextArea) using Vanilla JavaScript
+
+[abhas9/vanilla-caret-js](https://github.com/abhas9/vanilla-caret-js) - 🌟 22
 
 ## purecloudlabs/iframe-coordinator
 
 Utilities for composing multiple web-apps into a single application interface via iframes.
 
-[purecloudlabs/iframe-coordinator](https://github.com/purecloudlabs/iframe-coordinator) - 🌟 16
+[purecloudlabs/iframe-coordinator](https://github.com/purecloudlabs/iframe-coordinator) - 🌟 22
+
+## o19s/splainer-search
+
+Angular JS Solr and Elasticsearch Diagnostic Search Services
+
+[o19s/splainer-search](https://github.com/o19s/splainer-search) - 🌟 22
+
+## fregante/content-scripts-register-polyfill
+
+WebExtensions: Polyfill for browser.contentScripts.register() for Chrome.
+
+[fregante/content-scripts-register-polyfill](https://github.com/fregante/content-scripts-register-polyfill) - 🌟 21
+
+## takenet/blip-ds
+
+Storybook
+
+[takenet/blip-ds](https://github.com/takenet/blip-ds) - 🌟 21
