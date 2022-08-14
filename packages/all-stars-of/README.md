@@ -2,6 +2,7 @@
 
 * [Angular](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-angular.md) - list of 29 repos
 * [Playwright](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-playwright.md) - list of 73 repos
+* [CucumberJs](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-cucumberjs.md) - list of 213 repos
 * [Rambda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambda.md) - list of 291 repos
 * [Ramda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-ramda.md) - list of 142 repos
 * [Vitest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-vitest.md) - list of 399 repos
@@ -76,6 +77,40 @@ A Vue3.x UI components lib for TDesign.
 A Vue.js UI components lib for TDesign.
 
 [Tencent/tdesign-vue](https://github.com/Tencent/tdesign-vue) - 🌟 572
+
+---
+
+## CucumberJs
+
+### hyperledger/fabric-sdk-node
+
+Hyperledger Fabric SDK for Node https://wiki.hyperledger.org/display/fabric
+
+[hyperledger/fabric-sdk-node](https://github.com/hyperledger/fabric-sdk-node) - 🌟 747
+
+### bugsnag/bugsnag-js
+
+Javascript error handling tool for Bugsnag. Monitor and report JavaScript bugs & errors.
+
+[bugsnag/bugsnag-js](https://github.com/bugsnag/bugsnag-js) - 🌟 731
+
+### tiddly-gittly/TidGi-Desktop
+
+TidGi is an privatcy-in-mind, automated, auto-git-backup, freely-deployed Tiddlywiki knowledge management Desktop note app, with local REST API. 「 太记 」是一个基于「 太微 TiddlyWiki 」的知识管理桌面应用，能保护隐私内容、高级自动化、自动Git云备份、部署为博客，且可通过RESTAPI与Anki等应用连接。（迭代开发中欢迎试用，开发进度见下方链接）(Under active development, see website below for details) 
+
+[tiddly-gittly/TidGi-Desktop](https://github.com/tiddly-gittly/TidGi-Desktop) - 🌟 695
+
+### pubnub/javascript
+
+PubNub JavaScript SDK docs https://www.pubnub.com/docs/sdks/javascript
+
+[pubnub/javascript](https://github.com/pubnub/javascript) - 🌟 524
+
+### webdriverio/cucumber-boilerplate
+
+Boilerplate project to run WebdriverIO tests with Cucumber
+
+[webdriverio/cucumber-boilerplate](https://github.com/webdriverio/cucumber-boilerplate) - 🌟 461
 
 ---
 
