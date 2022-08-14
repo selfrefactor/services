@@ -11,6 +11,8 @@ test('happy', async () => {
   const input = {
     repo,
     title : 'Stars of **Rambda** list',
+    // shouldRefreshScraped: true,
+    // shouldRefreshApi: true,
     shouldRefreshScraped: false,
     shouldRefreshApi: false,
     outputLocation: `${__dirname}/assets/stars-of-rambda.md`
