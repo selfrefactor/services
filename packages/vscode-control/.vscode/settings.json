@@ -1,4 +1,5 @@
 {
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "editor.experimental.stickyScroll.enabled": true,
   "editor.suggestOnTriggerCharacters": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
@@ -35,7 +36,6 @@
   "wallaby.runOnSaveIndicators": true,
   "editor.guides.bracketPairs": "active",
   "editor.bracketPairColorization.enabled": false,
-  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "omf.openFilesConfirmationLimit": 50,
   "explorer.autoReveal": true,
   "javascript.inlayHints.enumMemberValues.enabled": false,
