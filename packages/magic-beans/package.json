@@ -42,11 +42,13 @@
 	],
 	"activationEvents": [
 		"onCommand:magicBeans.betterCut",
+		"onCommand:magicBeans.betterCut",
 		"onCommand:magicBeans.copyTrimmed",
 		"onCommand:magicBeans.createSpec",
 		"onCommand:magicBeans.formatJson",
 		"onCommand:magicBeans.requestRandomFile",
 		"onCommand:magicBeans.sortLines",
+		"onCommand:magicBeans.slowScroll",
 		"onCommand:magicBeans.fixCamelcaseRefactoring"
 	],
 	"contributes": {
@@ -70,6 +72,18 @@
 			{
 				"command": "magicBeans.sortLines",
 				"title": "Sort lines"
+			},
+			{
+				"command": "magicBeans.slowScroll",
+				"title": "slowScroll"
+			},
+			{
+				"command": "magicBeans.scroll_auto_start",
+				"title": "slowScroll start"
+			},
+			{
+				"command": "magicBeans.scroll_auto_stop",
+				"title": "slowScroll stop"
 			}
 		],
 		"keybindings": [
@@ -86,6 +100,10 @@
 				"key": "ctrl+shift+0"
 			},
 			{
+				"command": "magicBeans.slowScroll",
+				"key": "ctrl+shift+8"
+			},
+			{
 				"command": "magicBeans.fixCamelcaseRefactoring",
 				"key": "ctrl+shift+]"
 			},
@@ -99,6 +117,11 @@
 			"type": "object",
 			"title": "MagicBeans",
 			"properties": {
+				"magicBeans.SLOW_SCROLL": {
+					"type": "number",
+					"default": 700,
+					"description": "slow scroll step"
+				},
 				"magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS": {
 					"type": "array",
 					"uniqueItems": true,
