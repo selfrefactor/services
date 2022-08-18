@@ -12,7 +12,6 @@
         "--no-cache",
         "src/build-stars-of.spec.js"
       ],
-      "disableOptimisticBPs": true,
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     }
