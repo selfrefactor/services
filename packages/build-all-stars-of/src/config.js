@@ -97,6 +97,13 @@ const fpts = {
   title      : 'Popular dependents of **FP TS** - library for functional programming with TS support',
   stars      : 2,
 }
+const webAudio = {
+  priority   : 2,
+  repo       : 'audiojs/web-audio-api',
+  scrapeDeep : true,
+  title      : 'Popular dependents of **Web audio API**',
+  stars      : 1,
+}
 const kefir = {
   priority   : 2,
   repo       : 'kefirjs/kefir',
