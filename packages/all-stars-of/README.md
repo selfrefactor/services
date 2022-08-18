@@ -10,6 +10,7 @@
 * [Kefir](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-kefir.md) - list of 16 repos
 * [Nest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-nest.md) - list of 94 repos
 * [Puppeteer](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-puppeteer.md) - list of 80 repos
+* [Seneca](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-seneca.md) - list of 11 repos
 * [Swc](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-swc.md) - list of 9 repos
 
 > What follows are the top 5 repos for each of the lists
@@ -351,6 +352,40 @@ This library adds a new Font() object to the JavaScript toolbox, similar to new 
 Path tracing renderer and utilities for three.js built on top of three-mesh-bvh.
 
 [gkjohnson/three-gpu-pathtracer](https://github.com/gkjohnson/three-gpu-pathtracer) - 🌟 607
+
+---
+
+## Seneca
+
+### jamro/jsbattle
+
+JavaScript Programming Game (inspired by RoboCode)
+
+[jamro/jsbattle](https://github.com/jamro/jsbattle) - 🌟 89
+
+### nextcloud/external
+
+🌐 Embed external sites in your Nextcloud
+
+[nextcloud/external](https://github.com/nextcloud/external) - 🌟 83
+
+### senecajs/seneca-transport
+
+Seneca micro-services message transport over TCP and HTTP.
+
+[senecajs/seneca-transport](https://github.com/senecajs/seneca-transport) - 🌟 64
+
+### senecajs/seneca-mongo-store
+
+Node.js Seneca data storage plugin for MongoDB
+
+[senecajs/seneca-mongo-store](https://github.com/senecajs/seneca-mongo-store) - 🌟 34
+
+### senecajs/seneca-entity
+
+Entity plugin for seneca
+
+[senecajs/seneca-entity](https://github.com/senecajs/seneca-entity) - 🌟 13
 
 ---
 
