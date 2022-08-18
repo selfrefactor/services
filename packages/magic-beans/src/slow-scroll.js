@@ -46,7 +46,7 @@ class ScrollController{
       if (!result){
         this.stopScroll()
       }
-    }, STEP ?? 300)
+    }, STEP ? Number(STEP) : 700)
   }
 
   scroll(line){
@@ -88,8 +88,12 @@ class ScrollController{
   }
 }
 
+let initFlag = false
+
 function slowScroll(context){
   return () => {
+    if(initFlag) return
+    if(!initFlag) initFlag = true
     const controller = new ScrollController()
 
     const stopHandler = vscode.commands.registerCommand('magicBeans.scroll_auto_stop',
@@ -104,7 +108,6 @@ function slowScroll(context){
     context.subscriptions.push(downHandler)
     context.subscriptions.push(stopHandler)
     context.subscriptions.push(controller)
-    controller.startScroll(1)
   }
 }
 

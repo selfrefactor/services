@@ -119,7 +119,7 @@
 			"properties": {
 				"magicBeans.SLOW_SCROLL": {
 					"type": "number",
-					"default": 700,
+					"default": 1000,
 					"description": "slow scroll step"
 				},
 				"magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS": {
