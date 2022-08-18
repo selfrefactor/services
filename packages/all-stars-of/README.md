@@ -14,6 +14,7 @@
 * [Puppeteer](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-puppeteer.md) - list of 80 repos
 * [Seneca](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-seneca.md) - list of 11 repos
 * [Swc](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-swc.md) - list of 9 repos
+* [WebAudioApi](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-webaudioapi.md) - list of 19 repos
 
 > What follows are the top 5 repos for each of the lists
 
@@ -488,4 +489,38 @@ istanbuljs compatible SWC coverage instrumentation plugin
 ice.js and rax-app custom swc
 
 [ice-lab/swc](https://github.com/ice-lab/swc) - 🌟 21
+
+---
+
+## WebAudioApi
+
+### babashka/nbb
+
+Scripting in Clojure on Node.js using SCI
+
+[babashka/nbb](https://github.com/babashka/nbb) - 🌟 599
+
+### charlieroberts/gibber.audio.lib
+
+music and audio library for Gibber
+
+[charlieroberts/gibber.audio.lib](https://github.com/charlieroberts/gibber.audio.lib) - 🌟 65
+
+### spotify/basic-pitch-ts
+
+A lightweight yet powerful audio-to-MIDI converter with pitch bend detection
+
+[spotify/basic-pitch-ts](https://github.com/spotify/basic-pitch-ts) - 🌟 44
+
+### Tenpi/Kisaragi
+
+This is a discord bot that focuses on searching for anime pictures and playing music. There are some other misc and utility commands as well.
+
+[Tenpi/Kisaragi](https://github.com/Tenpi/Kisaragi) - 🌟 15
+
+### ardean/jsGBC-core
+
+jsGBC Core Emulator
+
+[ardean/jsGBC-core](https://github.com/ardean/jsGBC-core) - 🌟 14
 
