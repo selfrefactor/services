@@ -4,6 +4,7 @@
 * [Playwright](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-playwright.md) - list of 73 repos
 * [CucumberJs](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-cucumberjs.md) - list of 213 repos
 * [Rambda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambda.md) - list of 291 repos
+* [Rambdax](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambdax.md) - list of 14 repos
 * [Ramda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-ramda.md) - list of 142 repos
 * [Vitest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-vitest.md) - list of 399 repos
 * [Kefir](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-kefir.md) - list of 16 repos
@@ -146,6 +147,40 @@ Nym provides strong network-level privacy against sophisticated end-to-end attac
 A dead simple benchmarking framework for JS/TS libs
 
 [caderek/benny](https://github.com/caderek/benny) - 🌟 578
+
+---
+
+## Rambdax
+
+### selfrefactor/rambdax
+
+Extended version of Rambda 
+
+[selfrefactor/rambdax](https://github.com/selfrefactor/rambdax) - 🌟 189
+
+### sethyuan/logseq-plugin-tocgen
+
+Generate a TOC of any page anywhere to quickly access the page's content.
+
+[sethyuan/logseq-plugin-tocgen](https://github.com/sethyuan/logseq-plugin-tocgen) - 🌟 61
+
+### sethyuan/logseq-plugin-wrap
+
+Create your own wrappings with optional key bindings for selected text, a set of useful defaults is also provided.
+
+[sethyuan/logseq-plugin-wrap](https://github.com/sethyuan/logseq-plugin-wrap) - 🌟 49
+
+### roblav96/robinhood.tools
+
+📈🤑💰 Advanced trading tools and resources for Robinhood Web.
+
+[roblav96/robinhood.tools](https://github.com/roblav96/robinhood.tools) - 🌟 28
+
+### sethyuan/logseq-plugin-batch-op
+
+Perform queries on the current graph and batch process on the results.
+
+[sethyuan/logseq-plugin-batch-op](https://github.com/sethyuan/logseq-plugin-batch-op) - 🌟 16
 
 ---
 
