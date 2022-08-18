@@ -12,21 +12,21 @@ const playwright = {
   priority: 0,
   daysLimit: 150,
   repo: 'microsoft/playwright',
-  title : 'Stars of **Playwright**',
+  title : 'Popular dependants of **Playwright**',
   stars:5
 }
 const puppeteer = {
   priority: 2,
-  daysLimit: 100,
+  daysLimit: 150,
   repo: 'puppeteer/puppeteer',
-  title : 'Stars of **Puppeteer**',
-  stars:20
+  title : 'Popular dependants of **Puppeteer**',
+  stars:10
 }
 const nest = {
   priority: 2,
-  daysLimit: 260,
+  daysLimit: 200,
   repo: 'nestjs/nest',
-  title : 'Stars of **Nest.js**',
+  title : 'Popular dependants of **Nest.js**',
   stars:10
 }
 const angular = {
@@ -34,7 +34,7 @@ const angular = {
   daysLimit: 120,
   scrapeDeep: true,
   repo: 'angular/angular',
-  title : 'Stars of **Angular** frontend framework',
+  title : 'Popular dependants of **Angular** frontend framework',
   stars:10
 }
 
@@ -42,34 +42,44 @@ const rambda = {
   priority: 1,
   scrapeDeep: true,
   repo: 'selfrefactor/rambda',
-  title : 'Stars of **Rambda** list',
+  title : 'Popular dependants of **Rambda** list',
   stars: 2
 }
 
 const swc = {
   priority: 2,
   repo: 'swc-project/swc',
-  title : 'Stars of **SWC(Rust-based platform for the Web)** list',
+  title : 'Popular dependants of **SWC(Rust-based platform for the Web)** list',
   stars: 10
 }
 
 const ramda = {
   priority: 1,
   repo: 'ramda/ramda',
-  title : 'Stars of **Ramda** list',
+  title : 'Popular dependants of **Ramda** list',
   stars: 2
 }
+
 const vitest = {
   priority: 1,
   repo: 'vitest-dev/vitest',
-  title : 'Stars of **Vitest** list',
+  title : 'Popular dependants of **Vitest** list',
   stars: 2
 }
+
 const cucumber = {
   priority: 1,
   repo: 'cucumber/cucumber-js',
   scrapeDeep: true,
-  title : 'Stars of **Cucumber.js** list',
+  title : 'Popular dependants of **Cucumber.js** list',
+  stars: 2
+}
+
+const kefir = {
+  priority: 2,
+  repo: 'kefirjs/kefir',
+  scrapeDeep: true,
+  title : 'Popular dependants of **Kefir** list',
   stars: 2
 }
 
@@ -91,7 +101,7 @@ const iterator = (x, prop) => {
 
 const allModes = map(
   iterator,
-  {rambda, playwright, puppeteer, ramda, nest, angular, swc, vitest, cucumber}
+  {rambda, playwright, puppeteer, ramda, nest, angular, swc, vitest, cucumber, kefir}
 )
 
 exports.allModes = allModes
