@@ -22,7 +22,11 @@ Alternative to commitizen
 
 Config is in `packages/build-all-stars-of/src/config.js`.
 
-To update list, simply run `yarn on` inside `build-all-stars-of`.
+To fully update list, simply run `yarn on` inside `build-all-stars-of`.
+
+To update/include single repo, then run `yarn on` inside `build-all-stars-of`.
+
+> Limit is set to 600 pages but it can be changed in packages/build-all-stars-of/src/config.js
 
 # Browser snippets
 

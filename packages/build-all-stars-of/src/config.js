@@ -6,7 +6,7 @@ const shouldRefreshScraped = true
 const shouldRefreshApi = true
 const IS_DEV = 0
 const SHOW_PROGRESS = 1
-const MAX_SCRAPE_DEPTH = 300
+const MAX_SCRAPE_DEPTH = 600
 
 const playwright = {
   priority: 0,

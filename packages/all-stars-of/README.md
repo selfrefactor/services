@@ -6,6 +6,7 @@
 * [Rambda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambda.md) - list of 291 repos
 * [Ramda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-ramda.md) - list of 142 repos
 * [Vitest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-vitest.md) - list of 399 repos
+* [Kefir](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-kefir.md) - list of 16 repos
 * [Nest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-nest.md) - list of 94 repos
 * [Puppeteer](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-puppeteer.md) - list of 80 repos
 * [Swc](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-swc.md) - list of 9 repos
@@ -213,6 +214,40 @@ An unified javascript build system
 Vue progressive image loading plugin
 
 [MatteoGabriele/vue-progressive-image](https://github.com/MatteoGabriele/vue-progressive-image) - 🌟 704
+
+---
+
+## Kefir
+
+### StreakYC/react-menu-list
+
+React dropdown menu components
+
+[StreakYC/react-menu-list](https://github.com/StreakYC/react-menu-list) - 🌟 78
+
+### StreakYC/react-float-anchor
+
+React component for positioning an element aligned to another
+
+[StreakYC/react-float-anchor](https://github.com/StreakYC/react-float-anchor) - 🌟 48
+
+### chrisguttandin/subscribable-things
+
+A collection of reactive wrappers for various browser APIs.
+
+[chrisguttandin/subscribable-things](https://github.com/chrisguttandin/subscribable-things) - 🌟 36
+
+### ElrondDevGuild/nextjs-dapp-template
+
+Open source Dapp template for the Elrond blockchain.
+
+[ElrondDevGuild/nextjs-dapp-template](https://github.com/ElrondDevGuild/nextjs-dapp-template) - 🌟 18
+
+### PeterKottas/guestbell-forms
+
+Beautiful react forms with built-in validation 
+
+[PeterKottas/guestbell-forms](https://github.com/PeterKottas/guestbell-forms) - 🌟 12
 
 ---
 
