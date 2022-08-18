@@ -116,6 +116,12 @@ const seneca = {
   title      : 'Popular dependents of **Seneca** framework',
   stars      : 2,
 }
+const rxjs = {
+  priority   : 1,
+  repo       : 'ReactiveX/rxjs',
+  title      : 'Popular dependents of **RxJS**',
+  stars      : 8,
+}
 
 const iterator = (x, prop) => ({
   ...x,
@@ -144,6 +150,7 @@ const allModes = map(iterator, {
   nest,
   angular,
   swc,
+  rxjs,
   vitest,
   cucumber,
   kefir,

@@ -4,7 +4,7 @@ const {buildStarsOf} = require('build-stars-of')
 const {outputJson} = require('fs-extra')
 const {allModes} = require('./config')
 
-const currentMode = 'webAudio'
+const currentMode = 'rxjs'
 
 void async function main(){
   const input = allModes[currentMode]
