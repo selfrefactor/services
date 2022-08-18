@@ -16,7 +16,7 @@ function activate(context){
   const copyTrimmedCommand = vscode.commands.registerCommand('magicBeans.copyTrimmed',
     copyTrimmed)
   const createSpecCommand = vscode.commands.registerCommand('magicBeans.createSpec',createSpec)
-  const slowScrollCommand = vscode.commands.registerCommand('magicBeans.slowScroll',
+  const slowScrollCommand = vscode.commands.registerCommand('magicBeans.slowScrollInit',
     slowScroll(context))
   const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE,
     requestRandomFile)

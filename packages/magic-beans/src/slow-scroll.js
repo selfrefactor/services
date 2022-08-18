@@ -96,12 +96,12 @@ function slowScroll(context){
     if(!initFlag) initFlag = true
     const controller = new ScrollController()
 
-    const stopHandler = vscode.commands.registerCommand('magicBeans.scroll_auto_stop',
+    const stopHandler = vscode.commands.registerCommand('magicBeans.slowScrollStop',
       () => {
         controller.stopScroll()
       })
 
-    const downHandler = vscode.commands.registerCommand('magicBeans.scroll_auto_start',
+    const downHandler = vscode.commands.registerCommand('magicBeans.slowScrollStart',
       () => {
         controller.startScroll(1)
       })
