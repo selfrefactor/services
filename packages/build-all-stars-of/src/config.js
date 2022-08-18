@@ -83,17 +83,22 @@ const cucumber = {
   stars      : 2,
 }
 
+const fpts = {
+  priority   : 1,
+  repo       : 'gcanti/fp-ts',
+  scrapeDeep : true,
+  title      : 'Popular dependents of **FP TS** - library for functional programming with TS support',
+  stars      : 2,
+}
 const kefir = {
   priority   : 2,
   repo       : 'kefirjs/kefir',
-  scrapeDeep : true,
   title      : 'Popular dependents of **Kefir**',
   stars      : 2,
 }
 const seneca = {
   priority   : 2,
   repo       : 'senecajs/seneca',
-  scrapeDeep : true,
   title      : 'Popular dependents of **Seneca** framework',
   stars      : 2,
 }
@@ -118,6 +123,7 @@ const allModes = map(iterator, {
   playwright,
   puppeteer,
   ramda,
+  fpts,
   seneca,
   nest,
   angular,
