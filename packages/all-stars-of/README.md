@@ -3,6 +3,7 @@
 * [Angular](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-angular.md) - list of 29 repos
 * [Playwright](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-playwright.md) - list of 73 repos
 * [CucumberJs](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-cucumberjs.md) - list of 213 repos
+* [FpTs](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-fpts.md) - list of 235 repos
 * [Rambda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambda.md) - list of 291 repos
 * [Rambdax](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambdax.md) - list of 14 repos
 * [Ramda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-ramda.md) - list of 142 repos
@@ -114,6 +115,40 @@ PubNub JavaScript SDK docs https://www.pubnub.com/docs/sdks/javascript
 Boilerplate project to run WebdriverIO tests with Cucumber
 
 [webdriverio/cucumber-boilerplate](https://github.com/webdriverio/cucumber-boilerplate) - 🌟 461
+
+---
+
+## FpTs
+
+### mobxjs/mst-gql
+
+Bindings for mobx-state-tree and GraphQL
+
+[mobxjs/mst-gql](https://github.com/mobxjs/mst-gql) - 🌟 651
+
+### svelteuidev/svelteui
+
+SvelteUI Monorepo
+
+[svelteuidev/svelteui](https://github.com/svelteuidev/svelteui) - 🌟 332
+
+### JupiterOne/starbase
+
+Graph-based security analysis for everyone
+
+[JupiterOne/starbase](https://github.com/JupiterOne/starbase) - 🌟 220
+
+### idriss-crypto/ts-library
+
+Library for integrating IDriss into your project.
+
+[idriss-crypto/ts-library](https://github.com/idriss-crypto/ts-library) - 🌟 107
+
+### compound-finance/comet
+
+An efficient money market protocol for Ethereum and compatible chains.
+
+[compound-finance/comet](https://github.com/compound-finance/comet) - 🌟 97
 
 ---
 

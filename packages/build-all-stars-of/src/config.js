@@ -83,6 +83,13 @@ const cucumber = {
   stars      : 2,
 }
 
+const rough = {
+  priority   : 1,
+  repo       : 'rough-stuff/rough',
+  scrapeDeep : true,
+  title      : 'Popular dependents of **Rough**',
+  stars      : 2,
+}
 const fpts = {
   priority   : 1,
   repo       : 'gcanti/fp-ts',
@@ -123,6 +130,8 @@ const allModes = map(iterator, {
   playwright,
   puppeteer,
   ramda,
+  rough,
+  webAudio,
   fpts,
   seneca,
   nest,
