@@ -7,6 +7,7 @@
 * [Rambda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambda.md) - list of 291 repos
 * [Rambdax](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambdax.md) - list of 14 repos
 * [Ramda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-ramda.md) - list of 142 repos
+* [Rough](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rough.md) - list of 69 repos
 * [Vitest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-vitest.md) - list of 399 repos
 * [Kefir](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-kefir.md) - list of 16 repos
 * [Nest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-nest.md) - list of 94 repos
@@ -251,6 +252,40 @@ Push notifications for GCM, APNS, MPNS, AMZ (automatic detection from device tok
 Your data, your control. Fully open source, authentication and authorization. No lock-ins.  Deployment in Railway.app | Heroku in 120 seconds || Spin a docker image as a micro-service in your infra. Built in login page and Admin panel out of the box.
 
 [authorizerdev/authorizer](https://github.com/authorizerdev/authorizer) - 🌟 467
+
+---
+
+## Rough
+
+### zsviczian/obsidian-excalidraw-plugin
+
+A plugin to edit and view Excalidraw drawings in Obsidian
+
+[zsviczian/obsidian-excalidraw-plugin](https://github.com/zsviczian/obsidian-excalidraw-plugin) - 🌟 944
+
+### miyuesc/bpmn-process-designer
+
+Base on Vue 2.x and ElementUI，基于 Bpmn.js、Vue 2.x 和 ElementUI 的流程编辑器（前端部分），支持监听器，扩展属性，表单等配置，可自由扩展
+
+[miyuesc/bpmn-process-designer](https://github.com/miyuesc/bpmn-process-designer) - 🌟 883
+
+### antvis/G
+
+💥 A flexible rendering engine for visualization.
+
+[antvis/G](https://github.com/antvis/G) - 🌟 781
+
+### martinRenou/ipycanvas
+
+Interactive Canvas in Jupyter
+
+[martinRenou/ipycanvas](https://github.com/martinRenou/ipycanvas) - 🌟 625
+
+### gramener/comicgen
+
+Create comics for your website or app
+
+[gramener/comicgen](https://github.com/gramener/comicgen) - 🌟 521
 
 ---
 
