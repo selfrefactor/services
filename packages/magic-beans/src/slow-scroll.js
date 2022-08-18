@@ -105,6 +105,7 @@ function slowScroll(context){
       () => {
         controller.startScroll(1)
       })
+  
     context.subscriptions.push(downHandler)
     context.subscriptions.push(stopHandler)
     context.subscriptions.push(controller)

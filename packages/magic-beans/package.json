@@ -48,7 +48,7 @@
 		"onCommand:magicBeans.formatJson",
 		"onCommand:magicBeans.requestRandomFile",
 		"onCommand:magicBeans.sortLines",
-		"onCommand:magicBeans.slowScroll",
+		"onCommand:magicBeans.slowScrollInit",
 		"onCommand:magicBeans.fixCamelcaseRefactoring"
 	],
 	"contributes": {
@@ -74,8 +74,8 @@
 				"title": "Sort lines"
 			},
 			{
-				"command": "magicBeans.slowScroll",
-				"title": "slowScroll"
+				"command": "magicBeans.slowScrollInit",
+				"title": "slowScroll init"
 			},
 			{
 				"command": "magicBeans.slowScrollStart",
