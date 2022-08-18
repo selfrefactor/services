@@ -7,7 +7,7 @@ const { getRepoData } = require('./get-repo-data')
 const { parseResult } = require('./parse-result')
 
 const RESULT = `${ __dirname }/result.json`
-const COOL_OFF = 1000
+const COOL_OFF = 1250
 const LINKS = '[class="Box-row d-flex flex-items-center"]'
 
 async function hasNext(_){

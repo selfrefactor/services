@@ -12,7 +12,6 @@
         "--no-cache",
         "src/sort-used-by.spec.js"
       ],
-      "disableOptimisticBPs": true,
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     }
