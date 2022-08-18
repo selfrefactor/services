@@ -90,6 +90,13 @@ const kefir = {
   title      : 'Popular dependents of **Kefir**',
   stars      : 2,
 }
+const seneca = {
+  priority   : 2,
+  repo       : 'senecajs/seneca',
+  scrapeDeep : true,
+  title      : 'Popular dependents of **Seneca** framework',
+  stars      : 2,
+}
 
 const iterator = (x, prop) => ({
   ...x,
@@ -111,6 +118,7 @@ const allModes = map(iterator, {
   playwright,
   puppeteer,
   ramda,
+  seneca,
   nest,
   angular,
   swc,
