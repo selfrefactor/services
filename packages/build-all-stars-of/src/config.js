@@ -122,6 +122,12 @@ const rxjs = {
   title      : 'Popular dependents of **RxJS**',
   stars      : 8,
 }
+const nextjs = {
+  priority   : 1,
+  repo       : 'vercel/next.js',
+  title      : 'Popular dependents of **NextJS**',
+  stars      : 12,
+}
 
 const iterator = (x, prop) => ({
   ...x,
@@ -151,6 +157,7 @@ const allModes = map(iterator, {
   angular,
   swc,
   rxjs,
+  nextjs,
   vitest,
   cucumber,
   kefir,

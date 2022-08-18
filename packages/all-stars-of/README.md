@@ -8,6 +8,7 @@
 * [Rambdax](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambdax.md) - list of 14 repos
 * [Ramda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-ramda.md) - list of 142 repos
 * [Rough](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rough.md) - list of 69 repos
+* [Rxjs](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rxjs.md) - list of 219 repos
 * [Vitest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-vitest.md) - list of 399 repos
 * [Kefir](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-kefir.md) - list of 16 repos
 * [Nest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-nest.md) - list of 94 repos
@@ -287,6 +288,40 @@ Interactive Canvas in Jupyter
 Create comics for your website or app
 
 [gramener/comicgen](https://github.com/gramener/comicgen) - 🌟 521
+
+---
+
+## Rxjs
+
+### getify/monio
+
+The most powerful IO monad implementation in JS, possibly in any language!
+
+[getify/monio](https://github.com/getify/monio) - 🌟 928
+
+### fannheyward/coc-pyright
+
+Pyright extension for coc.nvim
+
+[fannheyward/coc-pyright](https://github.com/fannheyward/coc-pyright) - 🌟 919
+
+### thymikee/jest-preset-angular
+
+Jest configuration preset for Angular projects.
+
+[thymikee/jest-preset-angular](https://github.com/thymikee/jest-preset-angular) - 🌟 757
+
+### axe-me/vite-plugin-node
+
+Vite plugin to run your node dev server with HMR!
+
+[axe-me/vite-plugin-node](https://github.com/axe-me/vite-plugin-node) - 🌟 535
+
+### neo4j/neo4j-browser
+
+Neo4j Browser is the general purpose user interface for working with Neo4j. Query, visualize, administrate and monitor the database.
+
+[neo4j/neo4j-browser](https://github.com/neo4j/neo4j-browser) - 🌟 530
 
 ---
 
