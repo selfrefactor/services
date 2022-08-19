@@ -33,6 +33,7 @@ async function getScrapedRepos({
     return data
   }
 
+  console.log('sortUsedBy starts')
   const scrapedRepos = await sortUsedBy({
     repo,
     isDev,
@@ -40,7 +41,9 @@ async function getScrapedRepos({
     showProgress,
     pageLimit : maxScrapeDepth,
   })
+  console.log('sortUsedBy is done')
   if (scrapeDeep){
+    console.log('additional sortUsedBy starts')
     const additionalScrapedRepos = await sortUsedBy({
       repo,
       showProgress,
@@ -48,6 +51,7 @@ async function getScrapedRepos({
       isHuge    : !isHuge,
       pageLimit : maxScrapeDepth,
     })
+    console.log('additional sortUsedBy is done')
     const allScrapedRepos = uniq([
       ...scrapedRepos,
       ...additionalScrapedRepos,
@@ -78,11 +82,13 @@ async function getApiData({ repos, fileName, daysLimit, shouldRefresh, showProgr
 
     return data
   }
+  console.log('getRepoData starts')
   const apiData = await getRepoData({
     showProgress,
     repos,
     daysLimit,
   })
+  console.log('getRepoData is done')
   await outputJson(
     filePath, { data : apiData }, { spaces : 2 }
   )
@@ -121,7 +127,7 @@ export async function buildStarsOf({
     scrapeDeep,
     shouldRefresh : shouldRefreshScraped,
   })
-  console.log('sort.used.by done')
+  console.log('getScrapedRepos done')
 
   const repos = piped(
     scrapedRepos,
@@ -131,7 +137,7 @@ export async function buildStarsOf({
     take(TOP_LIMIT),
     map(prop('repo'))
   )
-  console.log({ len : repos.length })
+  console.log(repos.length,'filtered repos')
   const apiData = await getApiData({
     repos,
     fileName,
