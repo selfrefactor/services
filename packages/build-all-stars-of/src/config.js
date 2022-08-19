@@ -154,15 +154,15 @@ const allModes = map(iterator, {
   rough,
   webAudio,
   fpts,
-  seneca,
+  // seneca,
   nest,
   angular,
   swc,
   rxjs,
-  nextjs,
-  vitest,
+  // nextjs,
+  // vitest,
   cucumber,
-  kefir,
+  // kefir,
 })
 
 exports.allModes = allModes
