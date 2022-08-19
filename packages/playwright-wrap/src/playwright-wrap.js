@@ -48,7 +48,6 @@ function attach(
   snapDir = `${ process.cwd() }/screenshots`
 ){
   const query = async playwrightSelector => {
-    console.log('WILL BE DEPRECATED')
     const el = await page.$(playwrightSelector)
     if (el === null){
       throw new Error(`Couldn't find any element with '${ playwrightSelector }'`)
@@ -58,7 +57,6 @@ function attach(
   }
   
   const queryAll = async playwrightSelector => {
-    console.log('WILL BE DEPRECATED')
     const els = await page.$$(playwrightSelector)
     if (els.length === 0){
       throw new Error(`Couldn't find any elements with '${ playwrightSelector }'`)
