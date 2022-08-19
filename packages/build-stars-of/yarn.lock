@@ -949,7 +949,16 @@
     "@cliqz/adblocker-content" "^1.23.6"
     tldts-experimental "^5.6.21"
 
-"@cliqz/adblocker@^1.23.6":
+"@cliqz/adblocker-playwright@1.23.8":
+  version "1.23.8"
+  resolved "https://registry.yarnpkg.com/@cliqz/adblocker-playwright/-/adblocker-playwright-1.23.8.tgz#618a951983a32d0a4472a553f3f8d8bcedb68494"
+  integrity sha512-q4kDSk7CrWxdOBZ3hX3cUnnl+ipIf3q1xjkHYnDRorl05Q5Z8kPO+D5GPsHdMnLnrr/bYqX/pmLnWMU8/1n3lg==
+  dependencies:
+    "@cliqz/adblocker" "^1.23.8"
+    "@cliqz/adblocker-content" "^1.23.8"
+    tldts-experimental "^5.6.21"
+
+"@cliqz/adblocker@^1.23.6", "@cliqz/adblocker@^1.23.8":
   version "1.23.8"
   resolved "https://registry.yarnpkg.com/@cliqz/adblocker/-/adblocker-1.23.8.tgz#5945bdb077a18864ed7a3fefdc30d8887eac615c"
   integrity sha512-xM1JYTv5dA+pPP4x4IVZdjkM9aAsakTnShFLuHLzMxMHd20eUB91NXm4kK6acw9nHwG6rCyat6+u7TvAqSmR6g==
@@ -2776,11 +2785,6 @@ playwright-core@1.25.0:
   resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.25.0.tgz#54dc867c6c2cc5e4233905e249206a02914d14f1"
   integrity sha512-kZ3Jwaf3wlu0GgU0nB8UMQ+mXFTqBIFz9h1svTlNduNKjnbPXFxw7mJanLVjqxHJRn62uBfmgBj93YHidk2N5Q==
 
-playwright-init@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/playwright-init/-/playwright-init-0.4.1.tgz#ac667b2aaa5b9b23d30025eacd7f4804fb6c655c"
-  integrity sha512-penQO/qFaQpMYu55lOmFF4vBvDMpPFJhkYSVUY0xH4EheCKa+/I3lYAcc5dHHS08VpcfU/nnvoZsC2uyyQvJDA==
-
 playwright-init@0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/playwright-init/-/playwright-init-0.6.0.tgz#52f3d15749866557a8e816774cdf4d5daeb39b23"
@@ -2789,13 +2793,21 @@ playwright-init@0.6.0:
     "@cliqz/adblocker-playwright" "1.23.6"
     cross-fetch "3.1.5"
 
-playwright-wrap@0.11.1:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/playwright-wrap/-/playwright-wrap-0.11.1.tgz#51a9ef84e8810085bac21163737fc848e3250a3f"
-  integrity sha512-x+rVgHKGoLgufYHaGM8oawJejS2s94ju2ETzClzQTQ5+9BA78Hri0p8eVtOH3uWrIE2bcSlgkmBGV3jq+yUSAQ==
+playwright-init@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/playwright-init/-/playwright-init-0.7.0.tgz#0b11e37da7227850099faf3c6d2ef140c1901b36"
+  integrity sha512-Hcx/UZ15BeVRh7jlMy+Kr5QHd8AfwfBtIuuxSE8ZwebzOQs1YN9NoQR/SYBfGMFgAn4onSRMvJ0ZvPKy/Uzexg==
   dependencies:
-    playwright-init "0.4.1"
-    rambdax "8.0.1"
+    "@cliqz/adblocker-playwright" "1.23.8"
+    cross-fetch "3.1.5"
+
+playwright-wrap@0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/playwright-wrap/-/playwright-wrap-0.13.0.tgz#b854e50add3fd0710caf689b7bdbfbf98e037a84"
+  integrity sha512-xzHCT1Ff1SEuMRxWKZQEC3JSI8vDL2LBUQo3HiOIhpPUR0rFou4fcLjRWA+7CQbHM3llHsv32Ut+l2a8OnkeZw==
+  dependencies:
+    playwright-init "0.6.0"
+    rambdax "8.1.0"
     string-fn "3.1.0"
 
 playwright@1.25.0:
@@ -2832,11 +2844,6 @@ rambdax@7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-7.0.1.tgz#6a1b3184abcf4cf6df5dffc27fc0d71100aa21ec"
   integrity sha512-Xrrp45dg1PLt40LMcjfNyVDcPBndzpR2t+AXGAcc9iqU9lD9bnk/b1B+n4W5tFXoSKDmZmgckcA8ajgVzbtxGA==
-
-rambdax@8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-8.0.1.tgz#8539d1c0cc6fb4d0d27d1994006362f3ddd0908a"
-  integrity sha512-0hZag7A4PSSOG0P4AoluStiRMLFnM/1C/D7BdCBNvrqHfmeY7QDnxvkoXmTLmb6dXbnjS2SwyrXmlWCoq35Jlw==
 
 rambdax@8.1.0:
   version "8.1.0"
@@ -2983,15 +2990,15 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-sort-used-by@0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.8.0.tgz#9687eb16b19b1d70021a657c36354a7982913c29"
-  integrity sha512-F6aqdQiMMODHWRxBI710F5nt0ZtDLfepun9rtC2bv8VOz84NY8PdhNlaBYbcH8xQ/QhngE0vabLYV+yC1u7fSA==
+sort-used-by@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.9.0.tgz#21d3ffdf22b23838fb41943dca63010f7cba646c"
+  integrity sha512-1HqCYrLiWWTKmmZRdsQHJQLiOg3SFjt0i/2MvEegYIvLSzRrWWz2zjLWNO5qrUljoxZskNNU5Vy5adhPODz3Og==
   dependencies:
     fs-extra "10.1.0"
     playwright "1.25.0"
-    playwright-init "0.6.0"
-    playwright-wrap "0.11.1"
+    playwright-init "0.7.0"
+    playwright-wrap "0.13.0"
     rambdax "8.1.0"
 
 source-map-support@0.5.13:
