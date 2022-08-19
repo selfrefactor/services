@@ -1,10 +1,12 @@
 const { existsSync } = require('fs')
-const { mapAsync, ok, pick } = require('rambdax')
+const { mapAsync, ok, pick, delay } = require('rambdax')
 const { outputJson, readJson } = require('fs-extra')
 
 const { filterRepo, dateDiff } = require('./_modules/filter-repo')
 const { getRepo } = require('./_modules/get-repo')
 const cacheLocation = `${ __dirname }/cache.json`
+
+const COOL_DOWN = 1000
 
 async function getRepoData(input){
   ok(input)({ repos : [ String ] })
@@ -19,6 +21,7 @@ async function getRepoData(input){
         console.log(counter--)
       }
       const repoDataResponse = await getRepo(repo)
+      await delay(COOL_DOWN)
       const filterData = await filterRepo(repo, input.daysLimit)
       const propsToPick = [
         'full_name',
