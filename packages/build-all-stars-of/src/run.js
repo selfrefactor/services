@@ -4,7 +4,7 @@ const {buildStarsOf} = require('build-stars-of')
 const {outputJson} = require('fs-extra')
 const {allModes} = require('./config')
 
-const currentMode = 'nextjs'
+const currentMode = 'kefir'
 
 void async function main(){
   const input = allModes[currentMode]

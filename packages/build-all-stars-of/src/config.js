@@ -1,7 +1,6 @@
 const { map } = require('rambdax')
 const { resolve } = require('path')
-// const BASE = resolve(__dirname, '../../../../popular-dependents-lists')
-const BASE = resolve(__dirname, '../../all-stars-of/')
+const BASE = resolve(__dirname, '../../../../popular-dependents-lists')
 
 const shouldRefreshScraped = true
 const shouldRefreshApi = true
@@ -101,6 +100,7 @@ const webAudio = {
 }
 const kefir = {
   priority   : 2,
+  smallScrape: true,
   repo       : 'kefirjs/kefir',
   title      : 'Popular dependents of **Kefir**',
   stars      : 2,
@@ -133,15 +133,15 @@ const bun = {
 const iterator = (x, prop) => ({
   ...x,
   daysLimit      : x.daysLimit ? x.daysLimit : 370,
-  isHuge         : true,
-  scrapeDeep     : true,
+  isHuge         : !x.smallScrape,
+  scrapeDeep     : !x.smallScrape,
   showProgress   : SHOW_PROGRESS,
   maxScrapeDepth : MAX_SCRAPE_DEPTH,
   isDev          : IS_DEV,
   starsLimit     : x.stars ? x.stars : 5,
   shouldRefreshApi,
   shouldRefreshScraped,
-  outputLocation : `${ BASE }/stars-of-${ prop }.md`,
+  outputLocation : `${ BASE }/dependents-of-${ prop }.md`,
 })
 
 const allModes = map(iterator, {
