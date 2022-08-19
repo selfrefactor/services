@@ -78,6 +78,8 @@ All these lists are build with **Playwright**. Suggestions are welcome for addin
     buildInfo,
   })
 
-  await writeFile(resolve(__dirname, '../../all-stars-of/README.md'),
-    finalContent)
+  const outputFileLocation = resolve(__dirname,
+    '../../../../popular-dependents-lists/README.md')
+  console.log(outputFileLocation, 'outputFileLocation')
+  await writeFile(outputFileLocation, finalContent)
 })()

@@ -1,7 +1,7 @@
 const { map } = require('rambdax')
 const { resolve } = require('path')
-const BASE = resolve(__dirname, '../../../../popular-dependents-lists')
-// const BASE = resolve(__dirname, '../../all-stars-of/')
+// const BASE = resolve(__dirname, '../../../../popular-dependents-lists')
+const BASE = resolve(__dirname, '../../all-stars-of/')
 
 const shouldRefreshScraped = true
 const shouldRefreshApi = true
