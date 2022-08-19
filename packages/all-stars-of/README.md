@@ -4,6 +4,7 @@
 * [Playwright](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-playwright.md) - list of 73 repos
 * [CucumberJs](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-cucumberjs.md) - list of 213 repos
 * [FpTs](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-fpts.md) - list of 235 repos
+* [NextJs](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-nextjs.md) - list of 3 repos
 * [Rambda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambda.md) - list of 291 repos
 * [Rambdax](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambdax.md) - list of 14 repos
 * [Ramda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-ramda.md) - list of 142 repos
@@ -154,6 +155,26 @@ An efficient money market protocol for Ethereum and compatible chains.
 [compound-finance/comet](https://github.com/compound-finance/comet) - 🌟 97
 
 ---
+
+## NextJs
+
+### tutorbookapp/tutorbook
+
+Web app that helps schools and nonprofits connect students with expert mentors and volunteer tutors.
+
+[tutorbookapp/tutorbook](https://github.com/tutorbookapp/tutorbook) - 🌟 49
+
+### shunkakinoki/shunkakinoki.com
+
+My Personal Website :smirk::eyes::hotsprings:
+
+[shunkakinoki/shunkakinoki.com](https://github.com/shunkakinoki/shunkakinoki.com) - 🌟 17
+
+### stackbit-themes/starter-nextjs-theme
+
+Starter Next.js theme for Stackbit V2
+
+[stackbit-themes/starter-nextjs-theme](https://github.com/stackbit-themes/starter-nextjs-theme) - 🌟 13---
 
 ## Rambda
 

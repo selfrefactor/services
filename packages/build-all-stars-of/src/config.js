@@ -4,6 +4,7 @@ const BASE = resolve(__dirname, '../../all-stars-of/')
 
 const shouldRefreshScraped = true
 const shouldRefreshApi = true
+// to see it without headless
 const IS_DEV = 0
 const SHOW_PROGRESS = 1
 const MAX_SCRAPE_DEPTH = 600
@@ -32,7 +33,6 @@ const nest = {
 const angular = {
   priority   : 0,
   daysLimit  : 120,
-  scrapeDeep : true,
   repo       : 'angular/angular',
   title      : 'Popular dependents of **Angular** frontend framework',
   stars      : 10,
@@ -40,7 +40,6 @@ const angular = {
 
 const rambda = {
   priority   : 1,
-  scrapeDeep : true,
   repo       : 'selfrefactor/rambda',
   title      : 'Popular dependents of **Rambda**',
   stars      : 2,
@@ -48,7 +47,6 @@ const rambda = {
 
 const rambdax = {
   priority   : 1,
-  scrapeDeep : true,
   repo       : 'selfrefactor/rambdax',
   title      : 'Popular dependents of **Rambdax**',
   stars      : 2,
@@ -78,7 +76,6 @@ const vitest = {
 const cucumber = {
   priority   : 1,
   repo       : 'cucumber/cucumber-js',
-  scrapeDeep : true,
   title      : 'Popular dependents of **Cucumber.js**',
   stars      : 2,
 }
@@ -86,21 +83,18 @@ const cucumber = {
 const rough = {
   priority   : 1,
   repo       : 'rough-stuff/rough',
-  scrapeDeep : true,
   title      : 'Popular dependents of **Rough**',
   stars      : 2,
 }
 const fpts = {
   priority   : 1,
   repo       : 'gcanti/fp-ts',
-  scrapeDeep : true,
   title      : 'Popular dependents of **FP TS** - library for functional programming with TS support',
   stars      : 2,
 }
 const webAudio = {
   priority   : 2,
   repo       : 'audiojs/web-audio-api',
-  scrapeDeep : true,
   title      : 'Popular dependents of **Web audio API**',
   stars      : 1,
 }
@@ -128,12 +122,18 @@ const nextjs = {
   title      : 'Popular dependents of **NextJS**',
   stars      : 12,
 }
+const bun = {
+  priority   : 1,
+  repo       : 'oven-sh/bun',
+  title      : 'Popular dependents of **Bun**',
+  stars      : 10,
+}
 
 const iterator = (x, prop) => ({
   ...x,
   daysLimit      : x.daysLimit ? x.daysLimit : 370,
-  isHuge         : x.isHuge ? x.isHuge : true,
-  scrapeDeep     : x.scrapeDeep ? x.scrapeDeep : false,
+  isHuge         : true,
+  scrapeDeep     : true,
   showProgress   : SHOW_PROGRESS,
   maxScrapeDepth : MAX_SCRAPE_DEPTH,
   isDev          : IS_DEV,
@@ -146,6 +146,7 @@ const iterator = (x, prop) => ({
 const allModes = map(iterator, {
   rambda,
   rambdax,
+  bun,
   playwright,
   puppeteer,
   ramda,
