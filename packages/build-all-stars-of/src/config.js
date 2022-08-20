@@ -145,12 +145,12 @@ const iterator = (x, prop) => ({
 })
 
 const allModes = map(iterator, {
-  rambda,
-  rambdax,
-  bun,
-  playwright,
-  puppeteer,
-  ramda,
+  // rambda,
+  // rambdax,
+  // bun,
+  // playwright,
+  // puppeteer,
+  // ramda,
   rough,
   webAudio,
   fpts,

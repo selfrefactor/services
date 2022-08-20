@@ -6,8 +6,10 @@ const {allModes} = require('./config')
 
 const currentMode = 'nextjs'
 
+const SECOND_STEP_ERROR= 0
+
 void async function main(){
-  const input = allModes[currentMode]
+  const input = {...(SECOND_STEP_ERROR ? {shouldRefreshScraped: false}: {}),...allModes[currentMode]}
   if(!input){
     throw new Error('!input')
   }
