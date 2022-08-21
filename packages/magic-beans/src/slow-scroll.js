@@ -96,7 +96,7 @@ function slowScroll(context){
     if(initFlag) return
     if(!initFlag){
       initFlag = true
-      logToUserSecondBar('Slow scroll initialized - click to start')
+      logToUserSecondBar('Click to start Slow scroll')
     } 
     const controller = new ScrollController()
 
