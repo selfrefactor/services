@@ -1,7 +1,8 @@
 // taken from https://github.com/windwp/scroll_auto
 const vscode = require('vscode')
 const { configAnt } = require('./ants/config')
-
+const { logToUserSecondBar } = require('./bar')
+const { SLOW_SCROLL_START } = require('./constants')
 const STEP = configAnt(
   'SLOW_SCROLL'
 )
@@ -93,7 +94,10 @@ let initFlag = false
 function slowScroll(context){
   return () => {
     if(initFlag) return
-    if(!initFlag) initFlag = true
+    if(!initFlag){
+      initFlag = true
+      logToUserSecondBar('Slow scroll initialized - click to start')
+    } 
     const controller = new ScrollController()
 
     const stopHandler = vscode.commands.registerCommand('magicBeans.slowScrollStop',
@@ -101,7 +105,7 @@ function slowScroll(context){
         controller.stopScroll()
       })
 
-    const downHandler = vscode.commands.registerCommand('magicBeans.slowScrollStart',
+    const downHandler = vscode.commands.registerCommand(SLOW_SCROLL_START,
       () => {
         controller.startScroll(1)
       })

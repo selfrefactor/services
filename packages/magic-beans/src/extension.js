@@ -5,7 +5,7 @@ const { fixCamelcaseRefactoring } = require('./fixCamelcaseRefactoring')
 const { formatJson } = require('./format-json')
 const { initBar } = require('./bar')
 const { requestRandomFile } = require('./randomFile')
-const { REQUEST_RANDOM_FILE, SORT_LINES } = require('./constants')
+const { REQUEST_RANDOM_FILE, SORT_LINES, SLOW_SCROLL_INIT } = require('./constants')
 const { sortLines } = require('./sort-lines')
 const { slowScroll } = require('./slow-scroll')
 
@@ -16,7 +16,7 @@ function activate(context){
   const copyTrimmedCommand = vscode.commands.registerCommand('magicBeans.copyTrimmed',
     copyTrimmed)
   const createSpecCommand = vscode.commands.registerCommand('magicBeans.createSpec',createSpec)
-  const slowScrollCommand = vscode.commands.registerCommand('magicBeans.slowScrollInit',
+  const slowScrollCommand = vscode.commands.registerCommand(SLOW_SCROLL_INIT,
     slowScroll(context))
   const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE,
     requestRandomFile)
