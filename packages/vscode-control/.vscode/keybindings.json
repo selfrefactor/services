@@ -93,7 +93,7 @@
     "command": "wallaby.stop"
   },
   {
-    "key": "ctrl+shift+7",
+    "key": "ctrl+shift+5",
     "command": "wallaby.updateFileSnapshots"
   },
   {
