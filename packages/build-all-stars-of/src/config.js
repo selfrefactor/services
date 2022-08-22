@@ -31,25 +31,25 @@ const nest = {
   stars     : 10,
 }
 const angular = {
-  priority   : 0,
-  daysLimit  : 120,
-  repo       : 'angular/angular',
-  title      : 'Popular dependents of **Angular** frontend framework',
-  stars      : 10,
+  priority  : 0,
+  daysLimit : 120,
+  repo      : 'angular/angular',
+  title     : 'Popular dependents of **Angular** frontend framework',
+  stars     : 10,
 }
 
 const rambda = {
-  priority   : 1,
-  repo       : 'selfrefactor/rambda',
-  title      : 'Popular dependents of **Rambda**',
-  stars      : 2,
+  priority : 1,
+  repo     : 'selfrefactor/rambda',
+  title    : 'Popular dependents of **Rambda**',
+  stars    : 2,
 }
 
 const rambdax = {
-  priority   : 1,
-  repo       : 'selfrefactor/rambdax',
-  title      : 'Popular dependents of **Rambdax**',
-  stars      : 2,
+  priority : 1,
+  repo     : 'selfrefactor/rambdax',
+  title    : 'Popular dependents of **Rambdax**',
+  stars    : 2,
 }
 
 const swc = {
@@ -74,60 +74,67 @@ const vitest = {
 }
 
 const cucumber = {
-  priority   : 1,
-  repo       : 'cucumber/cucumber-js',
-  title      : 'Popular dependents of **Cucumber.js**',
-  stars      : 2,
+  priority : 1,
+  repo     : 'cucumber/cucumber-js',
+  title    : 'Popular dependents of **Cucumber.js**',
+  stars    : 2,
 }
 
 const rough = {
-  priority   : 1,
-  repo       : 'rough-stuff/rough',
-  title      : 'Popular dependents of **Rough**',
-  stars      : 2,
+  priority : 1,
+  repo     : 'rough-stuff/rough',
+  title    : 'Popular dependents of **Rough**',
+  stars    : 2,
 }
 const fpts = {
-  priority   : 1,
-  repo       : 'gcanti/fp-ts',
-  title      : 'Popular dependents of **FP TS** - library for functional programming with TS support',
-  stars      : 2,
+  priority : 1,
+  repo     : 'gcanti/fp-ts',
+  title    :
+    'Popular dependents of **FP TS** - library for functional programming with TS support',
+  stars : 2,
 }
 const webAudio = {
-  priority   : 2,
-  repo       : 'audiojs/web-audio-api',
-  title      : 'Popular dependents of **Web audio API**',
-  stars      : 1,
+  priority : 2,
+  repo     : 'audiojs/web-audio-api',
+  title    : 'Popular dependents of **Web audio API**',
+  stars    : 1,
 }
 const kefir = {
-  priority   : 2,
-  smallScrape: true,
-  repo       : 'kefirjs/kefir',
-  title      : 'Popular dependents of **Kefir**',
-  stars      : 2,
+  priority    : 2,
+  smallScrape : true,
+  repo        : 'kefirjs/kefir',
+  title       : 'Popular dependents of **Kefir**',
+  stars       : 2,
 }
 const seneca = {
-  priority   : 2,
-  repo       : 'senecajs/seneca',
-  title      : 'Popular dependents of **Seneca** framework',
-  stars      : 2,
+  priority : 2,
+  repo     : 'senecajs/seneca',
+  title    : 'Popular dependents of **Seneca** framework',
+  stars    : 2,
 }
 const rxjs = {
-  priority   : 1,
-  repo       : 'ReactiveX/rxjs',
-  title      : 'Popular dependents of **RxJS**',
-  stars      : 8,
+  priority : 1,
+  repo     : 'ReactiveX/rxjs',
+  title    : 'Popular dependents of **RxJS**',
+  stars    : 8,
 }
 const nextjs = {
-  priority   : 1,
-  repo       : 'vercel/next.js',
-  title      : 'Popular dependents of **NextJS**',
-  stars      : 12,
+  priority : 1,
+  repo     : 'vercel/next.js',
+  title    : 'Popular dependents of **NextJS**',
+  stars    : 12,
 }
 const bun = {
-  priority   : 1,
-  repo       : 'oven-sh/bun',
-  title      : 'Popular dependents of **Bun**',
-  stars      : 10,
+  priority : 1,
+  repo     : 'oven-sh/bun',
+  title    : 'Popular dependents of **Bun**',
+  stars    : 10,
+}
+const magicCss = {
+  priority : 1,
+  repo     : 'miniMAC/magic',
+  title    : 'Popular dependents of **Magic CSS**',
+  stars    : 5,
 }
 
 const iterator = (x, prop) => ({
@@ -145,24 +152,25 @@ const iterator = (x, prop) => ({
 })
 
 const allModes = map(iterator, {
-  // rambda,
-  // rambdax,
-  // bun,
-  // playwright,
-  // puppeteer,
-  // ramda,
-  rough,
-  webAudio,
-  fpts,
-  // seneca,
-  nest,
   angular,
-  swc,
-  rxjs,
-  // nextjs,
-  // vitest,
+  bun,
   cucumber,
-  // kefir,
+  fpts,
+  kefir,
+  magicCss,
+  nest,
+  nextjs,
+  playwright,
+  puppeteer,
+  rambda,
+  rambdax,
+  ramda,
+  rough,
+  rxjs,
+  seneca,
+  swc,
+  vitest,
+  webAudio,
 })
 
 exports.allModes = allModes
