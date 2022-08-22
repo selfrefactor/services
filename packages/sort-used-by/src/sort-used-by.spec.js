@@ -5,7 +5,7 @@ jest.setTimeout(12 * 60 * 1000)
 test('happy', async () => {
   await sortUsedBy({
     isDev : true,
-    scrapeLibraries: true,
+    scrapeLibraries: 0,
     repo  : 'miniMAC/magic',
   })
 })

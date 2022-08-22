@@ -11,10 +11,15 @@ const COOL_OFF = 1250
 const LINKS = '[class="Box-row d-flex flex-items-center"]'
 
 async function hasNext(_){
-  const [prevButton, nextButton] = await _.page.$$('.paginate-container button')
-  // when next button is there, then button is changed to `a` element
-  return !nextButton
+  const [firstLink, secondLink] = await _.page.$$('.paginate-container a')
+  if (Boolean(secondLink)){
+    return true
+  } 
+
+  const text = await firstLink.textContent()
+  return text === 'Next'
 }
+
 
 async function getLinks(_){
   const [ , err ] = await wait(_.waitFor(LINKS))
