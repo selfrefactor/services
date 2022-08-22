@@ -2990,10 +2990,10 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-sort-used-by@0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.10.0.tgz#9014b037ccfdce5bf322c501c2f48603ca721559"
-  integrity sha512-XoAFGnA5O7/u3LxoHAEZnqcmVSAApKB1sQZtlcyVmndjiGdaZ/Z5OQTDbb/mH+dlZj4UEZRwvU0wzwn8BlTOPg==
+sort-used-by@0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.11.0.tgz#bb1bbb9a2c1a284e78cea008112d5743a95afb0e"
+  integrity sha512-TegcdoYEyN8a7kFT6xQGiAvTwarAXaP1jbHcjzX6RwbIG68h9wh6jyxtRMl1RhTw41Uks7uCvxJ0LKzjIy+j1w==
   dependencies:
     fs-extra "10.1.0"
     playwright "1.25.0"

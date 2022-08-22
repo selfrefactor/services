@@ -19,7 +19,7 @@ async function getScrapedRepos({
   scrapeDeep,
   shouldRefresh,
   isDev,
-  isHuge,
+  scrapeLibraries,
 }){
   const filePath = `${ __dirname }/assets/${ fileName }-scraped.json`
 
@@ -37,7 +37,7 @@ async function getScrapedRepos({
   const scrapedRepos = await sortUsedBy({
     repo,
     isDev,
-    isHuge,
+    scrapeLibraries,
     showProgress,
     pageLimit : maxScrapeDepth,
   })
@@ -48,7 +48,7 @@ async function getScrapedRepos({
       repo,
       showProgress,
       isDev,
-      isHuge    : !isHuge,
+      scrapeLibraries    : !scrapeLibraries,
       pageLimit : maxScrapeDepth,
     })
     console.log('additional sortUsedBy is done')
@@ -100,7 +100,7 @@ export async function buildStarsOf({
   repo,
   title,
   isDev = false,
-  isHuge = false,
+  scrapeLibraries = false,
   scrapeDeep = false,
   shouldRefreshScraped = true,
   showProgress = false,
@@ -120,7 +120,7 @@ export async function buildStarsOf({
   const scrapedRepos = await getScrapedRepos({
     showProgress,
     maxScrapeDepth,
-    isHuge,
+    scrapeLibraries,
     isDev,
     repo,
     fileName,

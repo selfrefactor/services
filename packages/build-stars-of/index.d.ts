@@ -29,7 +29,7 @@ interface Input {
   scrapeDeep?: boolean
   showProgress?: boolean
   isDev?: boolean
-  isHuge?: boolean
+  scrapeLibraries?: boolean
   blacklist?: string[]
   maxScrapeDepth?: number
   outputLocation: string

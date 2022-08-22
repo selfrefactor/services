@@ -12,7 +12,7 @@
 		"fs-extra": "10.1.0",
 		"github-api-fn": "0.5.0",
 		"rambdax": "8.1.0",
-		"sort-used-by": "0.10.0",
+		"sort-used-by": "0.11.0",
 		"string-fn": "3.1.0"
 	},
 	"devDependencies": {
