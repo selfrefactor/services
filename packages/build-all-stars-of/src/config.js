@@ -9,6 +9,8 @@ const IS_DEV = 0
 const SHOW_PROGRESS = 1
 const MAX_SCRAPE_DEPTH = 600
 
+// Bad abstraction
+// playwright after microsoft must be equal to const playwright
 const playwright = {
   priority  : 0,
   daysLimit : 150,
@@ -73,7 +75,7 @@ const vitest = {
   stars    : 2,
 }
 
-const cucumber = {
+const cucumberjs = {
   priority : 1,
   repo     : 'cucumber/cucumber-js',
   title    : 'Popular dependents of **Cucumber.js**',
@@ -130,7 +132,9 @@ const bun = {
   title    : 'Popular dependents of **Bun**',
   stars    : 10,
 }
-const magicCss = {
+// Bad abstraction
+// magicCss is not allowed but magiccss is
+const magic = {
   priority : 1,
   repo     : 'miniMAC/magic',
   title    : 'Popular dependents of **Magic CSS**',
@@ -154,10 +158,10 @@ const iterator = (x, prop) => ({
 const allModes = map(iterator, {
   angular,
   bun,
-  cucumber,
+  cucumberjs,
   fpts,
   kefir,
-  magicCss,
+  magic,
   nest,
   nextjs,
   playwright,
