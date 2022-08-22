@@ -11,11 +11,11 @@ const COOL_OFF = 1250
 const LINKS = '[class="Box-row d-flex flex-items-center"]'
 
 async function hasNext(_){
-  const el = await _.page.$('.paginate-container button')
-  if (!el) return true
-  const buttonText = await el.textContent()
+  const [prevButton, nextButton] = await _.page.$$('.paginate-container button')
+  if (!prevButton || !nextButton) return false
 
-  return buttonText !== 'Next'
+  const isDisabled = await nextButton.isDisabled()
+  return !isDisabled
 }
 
 async function getLinks(_){
@@ -58,7 +58,7 @@ async function sortUsedBy({
   isDev = false,
   showProgress = false,
   isHuge = false,
-  pageLimit = 200,
+  pageLimit = 300,
 }){
   if (!repo.includes('/')) throw new Error('!repo')
   const urlRepos = `https://github.com/${ repo }/network/dependents`
