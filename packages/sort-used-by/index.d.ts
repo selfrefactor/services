@@ -1,7 +1,7 @@
 interface Input {
   repo: string
   isDev?: boolean
-  isHuge?: boolean
+  scrapeLibraries?: boolean
   showProgress?: boolean
   pageLimit?: number
 }

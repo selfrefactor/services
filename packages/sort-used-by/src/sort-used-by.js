@@ -12,10 +12,8 @@ const LINKS = '[class="Box-row d-flex flex-items-center"]'
 
 async function hasNext(_){
   const [prevButton, nextButton] = await _.page.$$('.paginate-container button')
-  if (!prevButton || !nextButton) return false
-
-  const isDisabled = await nextButton.isDisabled()
-  return !isDisabled
+  // when next button is there, then button is changed to `a` element
+  return !nextButton
 }
 
 async function getLinks(_){
@@ -57,7 +55,7 @@ async function sortUsedBy({
   repo,
   isDev = false,
   showProgress = false,
-  isHuge = false,
+  scrapeLibraries = false,
   pageLimit = 300,
 }){
   if (!repo.includes('/')) throw new Error('!repo')
@@ -70,7 +68,7 @@ async function sortUsedBy({
     headless : !isDev,
     logFlag  : false,
     browser  : 'chromium',
-    url      : isHuge ? urlPackages : urlRepos,
+    url      : scrapeLibraries ? urlPackages : urlRepos,
   })
   const _ = wrap(page)
 
