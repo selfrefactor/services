@@ -15,6 +15,7 @@ async function hasNext(_){
   if (Boolean(secondLink)){
     return true
   } 
+  if(!firstLink) return false
 
   const text = await firstLink.textContent()
   return text === 'Next'
