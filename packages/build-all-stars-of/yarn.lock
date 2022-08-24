@@ -124,16 +124,16 @@ axios@0.27.2:
     follow-redirects "^1.14.9"
     form-data "^4.0.0"
 
-build-stars-of@0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.14.0.tgz#93b1590ed4f47a51a5bdb6a53fab88affb0250b2"
-  integrity sha512-5BLumEMtR/6MvavoLVsvbpifC5gfTOpOHfDaetd59ekEAsLGgZCG00yWrfZ4O6v31PbsyY/QB6GTY7zWv7Tw3Q==
+build-stars-of@0.15.1:
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.15.1.tgz#356661a3b66a833eeaf8553d2e1bb0afd0be4edb"
+  integrity sha512-0tCIZkgaveypRWhG/Q9LuyK/IfICyUm3N7+oxpkWmEwkI4BOxNyihdcuh1SLxDQ46WJB78wbgtOG7lpGNy+FcQ==
   dependencies:
     esm "3.2.25"
     fs-extra "10.1.0"
     github-api-fn "0.5.0"
     rambdax "8.1.0"
-    sort-used-by "0.10.0"
+    sort-used-by "0.11.1"
     string-fn "3.1.0"
 
 combined-stream@^1.0.8:
@@ -290,10 +290,10 @@ rambdax@8.1.0:
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-8.1.0.tgz#1737feb9ae33d184b1db85832dd1972b819e2630"
   integrity sha512-8TQS3jorlSSubddKTyVrsp9mevF2WMBtdEPjp9Bk8ipVijD5/9gVXGgBF4d0JzO6kzegCFYWANrbHLyKLE6YVA==
 
-sort-used-by@0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.10.0.tgz#9014b037ccfdce5bf322c501c2f48603ca721559"
-  integrity sha512-XoAFGnA5O7/u3LxoHAEZnqcmVSAApKB1sQZtlcyVmndjiGdaZ/Z5OQTDbb/mH+dlZj4UEZRwvU0wzwn8BlTOPg==
+sort-used-by@0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.11.1.tgz#d9a6e6e196c361325e6814231683547aab867136"
+  integrity sha512-3H9T8LOmDLfk88Q70Nw/yQ9W9UX7k+xYBamG16wmFm9D+UE3jG6uqoLR0bJz5/59B3EY89JOimTCxIuTK6ZYTA==
   dependencies:
     fs-extra "10.1.0"
     playwright "1.25.0"
