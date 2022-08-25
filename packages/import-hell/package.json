@@ -8,7 +8,9 @@
   "main": "index.js",
   "version": "0.1.0",
   "dependencies": {
-    "esm": "3.2.25"
+    "esm": "3.2.25",
+    "espree": "9.3.3",
+    "fs-extra":"10.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.18.10",
