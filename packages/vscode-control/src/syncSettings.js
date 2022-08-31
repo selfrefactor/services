@@ -35,7 +35,7 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
   "editor.fontFamily": "Operator Mono",
   "editor.fontFamily": "JetBrains Mono",
  */
-const DEFAULT_FONT = 'Operator Mono'
+const DEFAULT_FONT = 'Ubuntu Mono'
 
 
 function syncFiles(source, destination){
