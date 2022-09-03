@@ -2,6 +2,14 @@
 
 - Populate settings and keybindings to local VSCode instance
 
+## Runtime
+
+```
+	"disable-hardware-acceleration": false,
+"enable-crash-reporter": false,
+```
+
+
 ## Tips
 
 ### ctrl+caps => mark all ocurances
