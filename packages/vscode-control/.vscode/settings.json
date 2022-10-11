@@ -1,4 +1,5 @@
 {
+  "editor.hover.sticky": false,
   "telemetry.telemetryLevel": "off",
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "editor.experimental.stickyScroll.enabled": true,
@@ -107,7 +108,6 @@
   "editor.autoClosingQuotes": "always",
   "editor.codeLens": false,
   "editor.folding": true,
-  "editor.hover.sticky": true,
   "editor.rename.enablePreview": false,
   "editor.suggest.showColors": false,
   "editor.wordBasedSuggestions": false,
