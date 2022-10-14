@@ -175,7 +175,7 @@
     "**/.svn": false,
     "**/coverage": true,
     "**/dist": true,
-    "**/docs": true,
+    "**/docs": false,
     "**/coverage-ts": true,
     "**/CVS": false,
     "**/node_modules": true,
