@@ -25,6 +25,12 @@
 			"}"
 		]
 	},
+	"Arrow Short Function": {
+		"prefix": "arror",
+		"body": [
+			"(${1:}) => ${2:}"
+		]
+	},
 	"If Snippet": {
 		"prefix": "iff",
 		"body": [

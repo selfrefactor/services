@@ -89,7 +89,7 @@ Alt+Z
 
 ## Toggle zen mode
 
-Alt+A
+Ctrl+Shift+A
 
 ## Open editor view
 
@@ -113,11 +113,11 @@ Ctrl+E
 
 ## Change active theme
 
-Ctrl+8
+Ctrl+Shift+8
 
 ## Open folder
 
-Ctrl+2
+Ctrl+Shift+2
 
 ## Toggle sidebar visibility
 
@@ -127,11 +127,11 @@ Ctrl+B
 
 ## Push pending commit
 
-Ctrl+6
+Ctrl+Shift+6
 
 ## Stage all changes
 
-Ctrl+7
+Ctrl+Shift+7
 
 ## View extensions
 
