@@ -39,7 +39,7 @@
     "args": { "name": "Arrow Function" }
   },
   {
-    "key": "ctrl+shift+4",
+    "key": "alt+5",
     "command": "editor.action.insertSnippet",
     "args": { "name": "Arrow Short Function" }
   },
@@ -49,44 +49,34 @@
     "args": { "snippet": "debugger" }
   },
   {
-    "key": "ctrl+shift+2",
-    "command": "editor.action.insertSnippet",
-    "args": { "name": "FnSnippet" }
-  },
-  {
-    "key": "ctrl+shift+3",
+    "key": "ctrl+3",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "() => ${1:}" }
   },
   {
-    "key": "alt+5",
+    "key": "alt+6",
     "command": "editor.action.insertSnippet",
     "args": { "name": "Test Snippet" }
   },
   {
-    "key": "alt+6",
+    "key": "alt+7",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "expect(${1:}).toEqual(${2:})" }
   },
   {
-    "key": "alt+7",
+    "key": "alt+8",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "expect(${1:}).toBe(${2:})" }
   },
   {
-    "key": "alt+8",
+    "key": "alt+9",
     "command": "editor.action.insertSnippet",
     "args": { "name": "StringTemplate" }
   },
     {
-    "key": "alt+9",
-    "command": "editor.action.insertSnippet",
-    "args": { "name": "commentMultiline" }
-  },
-  {
     "key": "alt+0",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "FnAsyncSnippet" }
+    "args": { "name": "commentMultiline" }
   },
   {
     "key": "alt+p",
@@ -102,7 +92,7 @@
     "command": "wallaby.updateFileSnapshots"
   },
   {
-    "key": "alt+t",
+    "key": "ctrl+shift+7",
     "command": "wallaby.addToExclusiveTestRun"
   },
   {

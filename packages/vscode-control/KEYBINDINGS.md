@@ -22,11 +22,11 @@ console.log(`${CLIPBOARD}
 
 () => {${1:}}
 
-## Alt+4
+## Alt+5
 
 Test Snippet
 
-## Alt+5
+## Alt+9
 
 StringTemplate
 
