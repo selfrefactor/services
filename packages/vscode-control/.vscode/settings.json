@@ -53,6 +53,7 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.parameterHints.enabled": true,
   "editor.quickSuggestionsDelay": 5000,
+  "editor.quickSuggestions": {"other": false,"comments": false,"strings": false},
   "editor.rename.enablePreview": false,
   "editor.renderControlCharacters": false,
   "editor.renderWhitespace": "selection",
