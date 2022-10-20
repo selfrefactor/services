@@ -15,7 +15,7 @@
   "npm.scriptHover": false,
   "editor.inlayHints.padding": true,
   "javascript.inlayHints.enumMemberValues.enabled": true,
-  "editor.hover.enabled": true,
+  "editor.hover.enabled": false,
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.accessibilitySupport": "off",
