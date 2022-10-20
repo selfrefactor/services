@@ -178,6 +178,7 @@ Free bindings
 
 Ctrl+Shift+8
 Ctrl+Shift+O
+alt+a
 ---
 
 > Deprecated
