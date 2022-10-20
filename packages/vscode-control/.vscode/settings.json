@@ -47,7 +47,7 @@
   "editor.guides.indentation": false,
   "editor.hover.delay": 50000,
   "editor.hover.sticky": true,
-  "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.enabled": "off",
   "editor.letterSpacing": 0.3,
   "editor.limit":7,
   "editor.lineHeight": 26,
