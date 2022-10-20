@@ -233,7 +233,7 @@
     "command": "workbench.view.extensions"
   },
   {
-    "key": "ctrl+shift+2",
+    "key": "ctrl+2",
     "command": "workbench.action.openRecent"
   },
   {
