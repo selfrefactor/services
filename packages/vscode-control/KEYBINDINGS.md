@@ -78,7 +78,7 @@ Toggle current tab into one/two columns
 
 ## Show hover info
 
-Ctrl+0
+Alt+A
 
 ## Search for symbols in current file
 
@@ -178,7 +178,9 @@ Free bindings
 
 Ctrl+Shift+8
 Ctrl+Shift+O
-alt+a
+ctrl+0
+
+ctrl+o - opens file but not useful
 ---
 
 > Deprecated

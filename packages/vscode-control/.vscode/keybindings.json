@@ -113,7 +113,7 @@
     "command": "wallaby.start"
   },
   {
-    "key": "ctrl+0",
+    "key": "alt+a",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
   },
