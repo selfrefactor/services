@@ -269,6 +269,10 @@
     "command": "workbench.action.closeActiveEditor"
   },
   {
+    "key": "ctrl+0",
+    "command": "workbench.action.closeEditorsToTheRight"
+  },
+  {
     "key": "ctrl+r",
     "command": "workbench.action.debug.restart",
     "when": "inDebugMode"
