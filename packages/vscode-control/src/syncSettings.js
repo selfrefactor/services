@@ -28,15 +28,8 @@ const ZOOM = maybe(
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
-/**
-  "editor.fontFamily4": "Oxygen Mono",
-  "editor.fontFamily1": "PT Mono",
-  "editor.fontFamily2": "Ubuntu Mono",
-  "editor.fontFamily": "Operator Mono",
-  "editor.fontFamily": "JetBrains Mono",
- */
-const DEFAULT_FONT = 'Ubuntu Mono'
 
+const DEFAULT_FONT = 'Ubuntu Mono'
 
 function syncFiles(source, destination){
   copySync(source, destination)
@@ -48,7 +41,7 @@ const getCalculatedOptions = () => {
   const lineHeight = Math.round(toDecimal(LINE_HEIGHT * SCALE_FACTOR))
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR ))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR ))
-  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR - 0.14) ))
+  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR - 0.34) ))
 
   const fontSettings = {
     'debug.console.fontFamily' : MONO? 'Operator Mono': DEFAULT_FONT,
@@ -87,7 +80,7 @@ function syncSettings(){
     ...settings,
     ...getMinimapOptions(),
     ...getCalculatedOptions(),
-    "workbench.colorTheme": "Archer",
+    "workbench.colorTheme": "LedZeppelin",
   }
 
   writeJsonSync(

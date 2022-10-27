@@ -116,3 +116,11 @@ Configure runtime arguments
 		"big:1": "ZOOM_SCALE=1.6 SCALE=1.6 node syncSettings",
 		"big:2": "BETA=ON ZOOM_SCALE=1.6 SCALE=1.6 node syncSettings"
 ```
+
+/**
+  "editor.fontFamily4": "Oxygen Mono",
+  "editor.fontFamily1": "PT Mono",
+  "editor.fontFamily2": "Ubuntu Mono",
+  "editor.fontFamily": "Operator Mono",
+  "editor.fontFamily": "JetBrains Mono",
+ */

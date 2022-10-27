@@ -39,19 +39,14 @@
     "args": { "name": "Arrow Function" }
   },
   {
-    "key": "alt+5",
-    "command": "editor.action.insertSnippet",
-    "args": { "name": "Arrow Short Function" }
-  },
-  {
     "key": "alt+e",
     "command": "editor.action.insertSnippet",
     "args": { "snippet": "debugger" }
   },
   {
-    "key": "ctrl+3",
+    "key": "alt+5",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "() => ${1:}" }
+    "args": { "snippet": "(${1:}) => ${2:}" }
   },
   {
     "key": "alt+6",
@@ -269,7 +264,7 @@
     "command": "workbench.action.closeActiveEditor"
   },
   {
-    "key": "ctrl+0",
+    "key": "ctrl+3",
     "command": "workbench.action.closeEditorsToTheRight"
   },
   {
