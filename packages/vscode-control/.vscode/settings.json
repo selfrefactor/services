@@ -1,5 +1,5 @@
 {
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
   "codestream.goldenSignalsInEditor": false,
   "codestream.showAvatars": false,
   "codestream.showLineLevelBlame": false,
