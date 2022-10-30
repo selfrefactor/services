@@ -220,7 +220,7 @@
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+q",
+    "key": "ctrl+shift+q",
     "command": "workbench.action.closeOtherEditors"
   },
   {
@@ -264,7 +264,7 @@
     "command": "workbench.action.closeActiveEditor"
   },
   {
-    "key": "ctrl+3",
+    "key": "ctrl+shift+4",
     "command": "workbench.action.closeEditorsToTheRight"
   },
   {
