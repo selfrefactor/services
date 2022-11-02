@@ -79,16 +79,20 @@
     "when": "codestream:status == 'signedIn'"
   },
   {
-    "key": "ctrl+shift+6",
-    "command": "wallaby.stop"
+    "key": "ctrl+shift+4",
+    "command": "wallaby.start"
   },
   {
     "key": "ctrl+shift+5",
-    "command": "wallaby.updateFileSnapshots"
+    "command": "wallaby.stop"
+  },
+  {
+    "key": "ctrl+shift+6",
+    "command": "wallaby.addToExclusiveTestRun"
   },
   {
     "key": "ctrl+shift+7",
-    "command": "wallaby.addToExclusiveTestRun"
+    "command": "wallaby.updateFileSnapshots"
   },
   {
     "key": "ctrl+shift+9",
@@ -102,10 +106,6 @@
   {
     "key": "ctrl+shift+w",
     "command": "workbench.action.createTerminalEditor"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "wallaby.start"
   },
   {
     "key": "alt+a",
@@ -220,7 +220,7 @@
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+q",
+    "key": "ctrl+q",
     "command": "workbench.action.closeOtherEditors"
   },
   {
