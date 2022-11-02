@@ -181,8 +181,6 @@ ctrl+0
 alt+a
 Ctrl+Shift+8
 Ctrl+Shift+O
-
-ctrl+o - opens file but not useful
 ---
 
 > Deprecated

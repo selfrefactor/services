@@ -202,7 +202,7 @@
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
-    "key": "ctrl+shift+8",
+    "key": "alt+0",
     "command": "workbench.action.selectTheme"
   },
   {
@@ -264,7 +264,7 @@
     "command": "workbench.action.closeActiveEditor"
   },
   {
-    "key": "ctrl+shift+4",
+    "key": "ctrl+shift+9",
     "command": "workbench.action.closeEditorsToTheRight"
   },
   {
