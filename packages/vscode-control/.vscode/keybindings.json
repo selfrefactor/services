@@ -69,7 +69,7 @@
     "args": { "name": "StringTemplate" }
   },
     {
-    "key": "alt+0",
+    "key": "ctrl+`",
     "command": "editor.action.insertSnippet",
     "args": { "name": "commentMultiline" }
   },
@@ -84,11 +84,11 @@
   },
   {
     "key": "ctrl+shift+5",
-    "command": "wallaby.stop"
+    "command": "wallaby.addToExclusiveTestRun"
   },
   {
     "key": "ctrl+shift+6",
-    "command": "wallaby.addToExclusiveTestRun"
+    "command": "wallaby.startExclusively"
   },
   {
     "key": "ctrl+shift+7",
