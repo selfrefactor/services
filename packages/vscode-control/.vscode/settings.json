@@ -241,7 +241,7 @@
     "**/.hg": false,
     "**/.svn": false,
     "**/coverage": true,
-    "**/dist": true,
+    "**/dist": false,
     "**/docs": false,
     "**/coverage-ts": true,
     "**/CVS": false,
