@@ -34,8 +34,8 @@
 	"If Snippet": {
 		"prefix": "iff",
 		"body": [
-      "if($0) {",
-			"\t",
+      "if(${1:}) {",
+			"\t${2:}",
 			"}"
 		],
 		"description": "if"
