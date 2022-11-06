@@ -1,77 +1,111 @@
 [
   {
+    "separator": "========================SNIPPETS=============================================="
+  },
+  {
     "key": "alt+i",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "If Snippet" }
+    "args": {
+      "name": "If Snippet"
+    }
   },
   {
     "key": "alt+1",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "console.log(${1:})" },
+    "args": {
+      "snippet": "console.log(${1:})"
+    },
     "when": "editorLangId!=python"
   },
   {
     "key": "alt+1",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "print(${1:})" },
+    "args": {
+      "snippet": "print(${1:})"
+    },
     "when": "editorLangId==python"
   },
   {
     "key": "alt+2",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "console.log(${CLIPBOARD}, `${CLIPBOARD}`)$0" },
+    "args": {
+      "snippet": "console.log(${CLIPBOARD}, `${CLIPBOARD}`)$0"
+    },
     "when": "editorLangId!=python"
   },
   {
     "key": "alt+2",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "print(${CLIPBOARD}, \"${CLIPBOARD}\")$0" },
+    "args": {
+      "snippet": "print(${CLIPBOARD}, \"${CLIPBOARD}\")$0"
+    },
     "when": "editorLangId==python"
   },
   {
     "key": "alt+3",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "FnSnippet" }
+    "args": {
+      "name": "FnSnippet"
+    }
   },
   {
     "key": "alt+4",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "Arrow Function" }
+    "args": {
+      "name": "Arrow Function"
+    }
   },
   {
     "key": "alt+e",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "debugger" }
+    "args": {
+      "snippet": "debugger"
+    }
   },
   {
     "key": "alt+5",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "(${1:}) => ${2:}" }
+    "args": {
+      "snippet": "(${1:}) => ${2:}"
+    }
   },
   {
     "key": "alt+6",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "Test Snippet" }
+    "args": {
+      "name": "Test Snippet"
+    }
   },
   {
     "key": "alt+7",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "expect(${1:}).toEqual(${2:})" }
+    "args": {
+      "snippet": "expect(${1:}).toEqual(${2:})"
+    }
   },
   {
     "key": "alt+8",
     "command": "editor.action.insertSnippet",
-    "args": { "snippet": "expect(${1:}).toBe(${2:})" }
+    "args": {
+      "snippet": "expect(${1:}).toBe(${2:})"
+    }
   },
   {
     "key": "alt+9",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "StringTemplate" }
+    "args": {
+      "name": "StringTemplate"
+    }
   },
-    {
+  {
+    "separator": "==============================================================================="
+  },
+  {
     "key": "ctrl+`",
     "command": "editor.action.insertSnippet",
-    "args": { "name": "commentMultiline" }
+    "args": {
+      "name": "commentMultiline"
+    }
   },
   {
     "key": "alt+p",
@@ -79,19 +113,22 @@
     "when": "codestream:status == 'signedIn'"
   },
   {
-    "key": "ctrl+shift+4",
+    "separator": "=========================WALLABY==========================================="
+  },
+  {
+    "key": "alt+shift+4",
     "command": "wallaby.start"
   },
   {
-    "key": "ctrl+shift+5",
+    "key": "alt+shift+5",
     "command": "wallaby.addToExclusiveTestRun"
   },
   {
-    "key": "ctrl+shift+6",
+    "key": "alt+shift+6",
     "command": "wallaby.startExclusively"
   },
   {
-    "key": "ctrl+shift+7",
+    "key": "alt+shift+7",
     "command": "wallaby.updateFileSnapshots"
   },
   {
@@ -99,38 +136,9 @@
     "command": "workbench.action.toggleSplitEditorInGroup"
   },
   {
-    "key": "ctrl+shift+w",
-    "command": "workbench.action.terminal.killEditor",
-    "when": "terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
-  },
-  {
-    "key": "ctrl+shift+w",
-    "command": "workbench.action.createTerminalEditor"
-  },
-  {
     "key": "alt+a",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+w",
-    "command": "-workbench.action.terminal.toggleFindWholeWord",
-    "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+w",
-    "command": "-toggleFindWholeWord",
-    "when": "editorFocus"
-  },
-  {
-    "key": "alt+w",
-    "command": "-toggleSearchEditorWholeWord",
-    "when": "inSearchEditor && searchInputBoxFocus"
-  },
-  {
-    "key": "alt+w",
-    "command": "-toggleSearchWholeWord",
-    "when": "searchViewletFocus"
   },
   {
     "key": "alt+x",
@@ -142,21 +150,21 @@
     "command": "workbench.view.debug"
   },
   {
-    "key": "ctrl+shift+d",
-    "command": "-workbench.view.debug"
-  },
-  {
-    "key": "ctrl+shift+g",
+    "key": "ctrl+shift+l",
     "command": "workbench.action.editorLayoutTwoColumns"
   },
   {
-    "key": "shift+alt+g",
+    "key": "alt+shift+l",
     "command": "workbench.action.editorLayoutSingle"
   },
   {
     "key": "alt+4",
     "command": "list.collapseAll",
     "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+shift+",
+    "command": "-workbench.view.debug"
   },
   {
     "key": "ctrl+left",
@@ -541,15 +549,15 @@
     "command": "-codestream.newComment",
     "when": "codestream:status == 'signedIn'"
   },
-   {
+  {
     "key": "ctrl+9",
     "command": "-workbench.action.lastEditorInGroup"
   },
-   {
+  {
     "key": "ctrl+0",
     "command": "-workbench.action.focusSideBar"
   },
-   {
+  {
     "mac": "ctrl+cmd+down",
     "linux": "ctrl+down",
     "key": "ctrl+down",
@@ -567,6 +575,25 @@
     "key": "ctrl+shift+a",
     "command": "-editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+w",
+    "command": "-workbench.action.terminal.toggleFindWholeWord",
+    "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+w",
+    "command": "-toggleFindWholeWord",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+w",
+    "command": "-toggleSearchEditorWholeWord",
+    "when": "inSearchEditor && searchInputBoxFocus"
+  },
+  {
+    "key": "alt+w",
+    "command": "-toggleSearchWholeWord",
+    "when": "searchViewletFocus"
   }
 ]
-
