@@ -272,8 +272,8 @@
     "command": "workbench.action.closeActiveEditor"
   },
   {
-    "key": "ctrl+shift+9",
-    "command": "workbench.action.closeEditorsToTheRight"
+    "keyx": "ctrl+shift+9",
+    "commandx": "workbench.action.closeEditorsToTheRight"
   },
   {
     "key": "ctrl+r",

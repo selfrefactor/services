@@ -206,7 +206,7 @@
   "workbench.list.keyboardNavigation": "simple",
   "workbench.list.smoothScrolling": true,
   "workbench.settings.enableNaturalLanguageSearch": false,
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   "workbench.startupEditor": "none",
   "workbench.statusBar.feedback.visible": true,
   "workbench.tips.enabled": false,
