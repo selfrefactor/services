@@ -176,9 +176,7 @@ Alt+U
 ---
 Free bindings
 
-ctrl+`
 ctrl+0
-alt+a
 Ctrl+Shift+8
 Ctrl+Shift+O
 ---
