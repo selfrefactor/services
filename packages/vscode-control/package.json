@@ -5,6 +5,7 @@
 		"small:1": "ZOOM_SCALE=0.86 SCALE=1.15 node syncSettings",
 		"small:2": "BETA=ON ZOOM_SCALE=0.86 SCALE=1.15 node syncSettings",
 		"on": "yarn onx&&run d",
+		"ond": "THEME=AmericanDad yarn onx&&run d",
 		"onx": "yarn on:1&&yarn on:2",
 		"on:1": "ZOOM_SCALE=1.06 SCALE=1.25 node syncSettings",
 		"on:2": "BETA=ON ZOOM_SCALE=1.06 SCALE=1.25 node syncSettings",

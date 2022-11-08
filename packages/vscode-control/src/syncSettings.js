@@ -17,6 +17,7 @@ const LINE_HEIGHT = 23
 const SUGGEST_LINE_HEIGHT = 16
 const MONO = defaultTo('MONO', false, 'onoff') 
 const MINI_MAP = defaultTo('MINI_MAP', false, 'onoff') 
+const THEME = defaultTo('THEME', `LedZeppelin`, 'default') 
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
   toDecimal(Number(process.env.SCALE))
@@ -80,7 +81,7 @@ function syncSettings(){
     ...settings,
     ...getMinimapOptions(),
     ...getCalculatedOptions(),
-    "workbench.colorTheme": "LedZeppelin",
+    "workbench.colorTheme": THEME,
   }
 
   writeJsonSync(
