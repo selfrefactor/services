@@ -2,8 +2,8 @@
 	"scripts": {
 		"small": "yarn smallx&&run d",
 		"smallx": "yarn small:1&&yarn small:2",
-		"small:1": "ZOOM_SCALE=0.96 SCALE=1.15 node syncSettings",
-		"small:2": "BETA=ON ZOOM_SCALE=0.96 SCALE=1.15 node syncSettings",
+		"small:1": "ZOOM_SCALE=0.92 SCALE=1.15 node syncSettings",
+		"small:2": "BETA=ON ZOOM_SCALE=0.92 SCALE=1.15 node syncSettings",
 		"on": "yarn onx&&run d",
 		"onx": "yarn on:1&&yarn on:2",
 		"on:1": "ZOOM_SCALE=1.06 SCALE=1.25 node syncSettings",
