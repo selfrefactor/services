@@ -1,5 +1,7 @@
 # Vscode-control
 
+https://code.visualstudio.com/docs/editor/intellisense
+
 - Populate settings and keybindings to local VSCode instance
 
 ## Runtime
