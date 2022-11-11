@@ -42,7 +42,7 @@ const getCalculatedOptions = () => {
   const lineHeight = Math.round(toDecimal(LINE_HEIGHT * SCALE_FACTOR))
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR ))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR ))
-  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.6) ))
+  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.2) ))
 
   const fontSettings = {
     'debug.console.fontFamily' : MONO? 'Operator Mono': DEFAULT_FONT,
