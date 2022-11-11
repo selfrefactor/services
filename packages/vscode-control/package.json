@@ -1,16 +1,15 @@
 {
 	"scripts": {
-		"small": "yarn smallx&&run d",
-		"smallx": "yarn small:1&&yarn small:2",
+		"small": "yarn small:1&&yarn small:2&&run d",
+		"smalld": "THEME=AmericanDad yarn small",
 		"small:1": "ZOOM_SCALE=0.86 SCALE=1.15 node syncSettings",
 		"small:2": "BETA=ON ZOOM_SCALE=0.86 SCALE=1.15 node syncSettings",
-		"on": "yarn onx&&run d",
-		"ond": "THEME=AmericanDad yarn onx&&run d",
-		"onx": "yarn on:1&&yarn on:2",
+		"on": "yarn on:1&&yarn on:2&&run d",
+		"ond": "THEME=AmericanDad yarn on",
 		"on:1": "ZOOM_SCALE=1.06 SCALE=1.25 node syncSettings",
 		"on:2": "BETA=ON ZOOM_SCALE=1.06 SCALE=1.25 node syncSettings",
-		"big": "yarn bigx && run d",
-		"bigx": "yarn big:1 &&yarn big:2",
+		"big": "yarn big:1 &&yarn big:2 && run d",
+		"bigd": "THEME=AmericanDad yarn big",
 		"big:1": "ZOOM_SCALE=1.37 SCALE=1.43 node syncSettings",
 		"big:2": "BETA=ON ZOOM_SCALE=1.37 SCALE=1.43 node syncSettings"
 	},
