@@ -1,4 +1,6 @@
 {
+  "editor.cursorSurroundingLines": 15,
+  "editor.cursorSurroundingLinesStyle": "all",
   "breadcrumbs.enabled": false,
   "codestream.goldenSignalsInEditor": false,
   "codestream.showAvatars": false,
