@@ -1,7 +1,11 @@
 {
+  "editor.parameterHints.enabled.comment": "should be off as it doesnt help in react",
+  "editor.parameterHints.enabled": true,
   "editor.smoothScrolling": true,
+  "editor.detectIndentation": false,
   "editor.formatOnSave": false,
-  "search.searchOnType": false,
+  "search.searchOnType": true,
+  "search.searchOnType.comment": "potentially off to increase perf",
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
@@ -83,7 +87,6 @@
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.parameterHints.enabled": false,
   "editor.quickSuggestionsDelay": 500,
   "editor.suggest.filterGraceful": true,
   "editor.suggest.showKeywords": false,
