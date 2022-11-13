@@ -1,4 +1,7 @@
 {
+  "editor.smoothScrolling": true,
+  "editor.formatOnSave": false,
+  "search.searchOnType": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {

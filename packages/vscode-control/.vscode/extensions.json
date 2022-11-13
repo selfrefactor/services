@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "mintlify.document".
     "mhutchie.git-graph",
     "Cardinal90.multi-cursor-case-preserve",
     "rwu823.open-folder",
