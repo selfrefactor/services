@@ -9,7 +9,7 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "README.md": "CHANGELOG.md, LICENCE",
+    "README.md": "CHANGELOG.md, LICENSE",
     "*.js": "$(capture).spec.js, $(capture)-spec.ts",
     "*.ts": "$(capture).spec.ts",
     "*.tsx": "$(capture).spec.tsx",
