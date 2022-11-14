@@ -101,7 +101,7 @@
 			},
 			{
 				"command": "magicBeans.slowScrollInit",
-				"key": "ctrl+shift+7"
+				"key": "alt+shift+8"
 			},
 			{
 				"command": "magicBeans.slowScrollStart",
