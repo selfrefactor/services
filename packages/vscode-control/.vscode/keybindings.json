@@ -145,6 +145,9 @@
     "command": "wallaby.updateFileSnapshots"
   },
   {
+    "separator": "=========================EDITOR==========================================="
+  },
+  {
     "key": "ctrl+shift+9",
     "command": "workbench.action.toggleSplitEditorInGroup"
   },
@@ -273,7 +276,7 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "alt+s",
+    "key": "ctrl+alt+s",
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
