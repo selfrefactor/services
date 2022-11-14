@@ -113,6 +113,19 @@
     "when": "codestream:status == 'signedIn'"
   },
   {
+    "separator": "=========================EXTENSIONS==========================================="
+  },
+  {
+    "key": "alt+.",
+    "command": "docs.write",
+    "when": "true"
+  },
+  {
+    "key": "alt+.",
+    "command": "-docs.write",
+    "when": "false"
+  },
+  {
     "separator": "=========================WALLABY==========================================="
   },
   {
