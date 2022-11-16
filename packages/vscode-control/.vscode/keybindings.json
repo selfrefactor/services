@@ -276,8 +276,14 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "ctrl+alt+s",
-    "command": "workbench.action.terminal.toggleTerminal"
+    "key": "shift+alt+s",
+    "command": "workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+  },
+  {
+    "key": "ctrl+k ctrl+h",
+    "command": "-workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
   },
   {
     "key": "ctrl+e",
