@@ -316,6 +316,16 @@
     "command": "workbench.view.scm"
   },
   {
+    "key": "alt+s",
+    "command": "editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "shift+f12",
+    "command": "-editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
     "key": "ctrl+g",
     "command": "-workbench.action.gotoLine"
   },
