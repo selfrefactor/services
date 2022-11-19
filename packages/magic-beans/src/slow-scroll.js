@@ -6,6 +6,9 @@ const { SLOW_SCROLL_START } = require('./constants')
 const STEP = configAnt(
   'SLOW_SCROLL'
 )
+const LINES_TO_SCROLL = configAnt(
+  'LINES_TO_SCROLL'
+)
 
 class ContextKey{
   constructor(name){
@@ -107,7 +110,7 @@ function slowScroll(context){
 
     const downHandler = vscode.commands.registerCommand(SLOW_SCROLL_START,
       () => {
-        controller.startScroll(1)
+        controller.startScroll(LINES_TO_SCROLL)
       })
   
     context.subscriptions.push(downHandler)

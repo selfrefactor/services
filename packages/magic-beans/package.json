@@ -123,8 +123,13 @@
 			"properties": {
 				"magicBeans.SLOW_SCROLL": {
 					"type": "number",
-					"default": 1000,
-					"description": "slow scroll step"
+					"default": 20000,
+					"description": "slow scroll interval in ms"
+				},
+				"magicBeans.LINES_TO_SCROLL": {
+					"type": "number",
+					"default": 50,
+					"description": "slow scroll number of lines"
 				},
 				"magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS": {
 					"type": "array",
