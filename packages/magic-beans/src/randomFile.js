@@ -37,6 +37,7 @@ async function randomFile() {
     maxDepth: 20,
     excludeFn: dir => RANDOM_FILE_SKIP_PATTERNS.includes(dir),
     filterFn: filePath => {
+      if(filePath.endsWith('package.json')) return true
       const [
         passAllowedExtension,
       ] = RANDOM_FILE_ALLOWED_EXTENSIONS.filter(singleExtension =>
