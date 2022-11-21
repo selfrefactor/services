@@ -128,7 +128,7 @@
 				},
 				"magicBeans.LINES_TO_SCROLL": {
 					"type": "number",
-					"default": 50,
+					"default": 30,
 					"description": "slow scroll number of lines"
 				},
 				"magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS": {
