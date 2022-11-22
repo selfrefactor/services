@@ -11,10 +11,10 @@ import {
   TSX_SNIPPETS
 } from './constants'
 
-const FONT_SIZE = 18
+const FONT_SIZE = 17
 const SUGGEST_FONT_SIZE = 13
-const LINE_HEIGHT = 23
-const SUGGEST_LINE_HEIGHT = 16
+const LINE_HEIGHT = 22
+const SUGGEST_LINE_HEIGHT = 15
 const MONO = defaultTo('MONO', false, 'onoff') 
 const MINI_MAP = defaultTo('MINI_MAP', false, 'onoff') 
 const THEME = defaultTo('THEME', `LedZeppelin`, 'default') 
