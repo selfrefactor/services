@@ -11,9 +11,9 @@ import {
   TSX_SNIPPETS
 } from './constants'
 
-const FONT_SIZE = 17
+const FONT_SIZE = 16
 const SUGGEST_FONT_SIZE = 13
-const LINE_HEIGHT = 22
+const LINE_HEIGHT = 19
 const SUGGEST_LINE_HEIGHT = 15
 const MONO = defaultTo('MONO', false, 'onoff') 
 const MINI_MAP = defaultTo('MINI_MAP', false, 'onoff') 
