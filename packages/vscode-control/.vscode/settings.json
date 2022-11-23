@@ -293,5 +293,11 @@
     "**/node_modules": true,
     "yarn-error.log": true,
     "yarn.lock": true
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": true
   }
 }
