@@ -1,8 +1,5 @@
 [
   {
-    "separator": "========================SNIPPETS=============================================="
-  },
-  {
     "key": "alt+i",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -98,20 +95,9 @@
     }
   },
   {
-    "separator": "==========================COPILOT====================================================="
-  },
-  {
+    "comment": "==========================COPILOT=====================================================",
     "key": "ctrl+`",
-    "command": "editor.action.inlineSuggest.trigger",
-    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
-  },
-  {
-    "key": "alt+\\",
-    "command": "-editor.action.inlineSuggest.trigger",
-    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
-  },
-  {
-    "separator": "==============================================================================="
+    "command": "github.copilot.openPanelForRange"
   },
   {
     "key": "ctrl+shift+`",
@@ -126,9 +112,7 @@
     "when": "codestream:status == 'signedIn'"
   },
   {
-    "separator": "=========================EXTENSIONS==========================================="
-  },
-  {
+    "comment": "=========================EXTENSIONS===========================================",
     "key": "alt+.",
     "command": "docs.write",
     "when": "true"
