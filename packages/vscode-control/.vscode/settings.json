@@ -85,7 +85,7 @@
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.quickSuggestionsDelay": 100,
+  "editor.quickSuggestionsDelay": 2000,
   "editor.suggestx.filterGraceful": true,
   "editor.suggestx.showKeywords": false,
   "editor.suggestx.showEvents": false,
