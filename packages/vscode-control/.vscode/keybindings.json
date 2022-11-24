@@ -98,10 +98,23 @@
     }
   },
   {
-    "separator": "==============================================================================="
+    "separator": "==========================COPILOT====================================================="
   },
   {
     "key": "ctrl+`",
+    "command": "editor.action.inlineSuggest.trigger",
+    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+  },
+  {
+    "key": "alt+\\",
+    "command": "-editor.action.inlineSuggest.trigger",
+    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+  },
+  {
+    "separator": "==============================================================================="
+  },
+  {
+    "key": "ctrl+shift+`",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "commentMultiline"
