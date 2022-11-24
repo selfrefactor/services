@@ -185,6 +185,16 @@
     "when": "listFocus && !inputFocus"
   },
   {
+    "key": "alt+p",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
     "key": "capslock f",
     "command": "references-view.find",
     "when": "editorHasReferenceProvider"
