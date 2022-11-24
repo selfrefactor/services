@@ -1,4 +1,5 @@
 {
+  "editor.codeLens": true,
   "editor.parameterHints.enabled.comment": "should be off as it doesnt help in react",
   "editor.parameterHints.enabled": true,
   "editor.smoothScrolling": true,
@@ -52,7 +53,6 @@
   "editor.autoClosingQuotes": "always",
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.codeLens": false,
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": false,
   "editor.cursorStyle": "line",
