@@ -1,5 +1,7 @@
 {
   "work":"cd $HOME/work/dms-ui && yarn dev\n",
-  "on":"cd $HOME/repos/on && yarn on\n",
-  "onl":"cd $HOME/repos/on && yarn onl\n"
+  "on":"nordvpn connect Frankfurt && cd $HOME/repos/on && yarn on",
+  "onl":"nordvpn connect Frankfurt && cd $HOME/repos/on && yarn onl",
+  "onx":"nordvpn connect Frankfurt && cd $HOME/repos/on && yarn on",
+  "onlx":"nordvpn connect Frankfurt && cd $HOME/repos/on && yarn onl"
 }
