@@ -17,7 +17,7 @@
   "editor.suggestx.showUsers": false,
   "editor.suggestx.showStructs": false,
   "editor.quickSuggestionsx": {"other": true,"comments": false,"strings": false},
-  "editor.snippetSuggestions": "inline",
+  "editor.snippetSuggestionsx": "inline",
   "editor.stickyScroll.enabled": true,
   "editor.suggestx.localityBonus": true,
   "editor.suggestx.insertMode": "insert",
