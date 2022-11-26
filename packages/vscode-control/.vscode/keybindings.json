@@ -112,15 +112,19 @@
     }
   },
   {
-    "key": "alt+p",
-    "command": "codestream.newComment",
-    "when": "codestream:status == 'signedIn'"
-  },
-  {
     "comment": "=========================EXTENSIONS===========================================",
     "key": "alt+.",
     "command": "docs.write",
     "when": "true"
+  },
+  {
+    "key": "alt+p",
+    "command": "terminal.focus"
+  },
+  {
+    "keyx": "alt+p",
+    "commandx": "codestream.newComment",
+    "whenx": "codestream:status == 'signedIn'"
   },
   {
     "key": "alt+.",
