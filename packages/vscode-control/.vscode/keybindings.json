@@ -118,7 +118,7 @@
     "when": "true"
   },
   {
-    "key": "alt+p",
+    "key": "alt+u",
     "command": "terminal.focus"
   },
   {
