@@ -88,7 +88,7 @@
   "editor.find.cursorMoveOnType": true,
   "editor.find.seedSearchStringFromSelection": "always",
   "editor.folding": true,
-  "editor.fontLigatures": false,
+  "editor.fontLigatures": true,
   "editor.fontSize": 20.16,
   "editor.fontWeight": 350,
   "editor.formatOnPaste": false,
