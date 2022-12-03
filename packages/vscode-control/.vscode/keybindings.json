@@ -1,9 +1,5 @@
 [
   {
-    "key": "alt+t",
-    "command": "list.collapseAllToFocus"
-  },
-  {
     "key": "alt+i",
     "comment": "==================SNIPPETS==================",
     "command": "editor.action.insertSnippet",

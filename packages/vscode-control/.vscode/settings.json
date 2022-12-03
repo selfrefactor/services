@@ -219,7 +219,7 @@
   "window.title": "${activeFolderMedium}/${activeEditorShort}",
   "window.titleBarStyle": "custom",
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "HelloSpaceboy",
+  "workbench.colorTheme": "GlassOnion",
   "workbench.commandPalette.history": 3,
   "workbench.commandPalette.preserveInput": false,
   "workbench.editor.mouseBackForwardToNavigate": true,
