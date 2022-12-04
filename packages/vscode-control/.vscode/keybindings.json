@@ -97,8 +97,13 @@
   },
   {
     "comment": "==========================COPILOT=====================================================",
-    "key": "ctrl+`",
+    "key": "alt+[",
     "command": "github.copilot.openPanelForRange"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "editor.action.inlineSuggest.showPrevious",
+    "when": "inlineSuggestionVisible && !editorReadonly"
   },
   {
     "key": "ctrl+shift+`",
@@ -635,5 +640,10 @@
     "key": "alt+w",
     "command": "-toggleSearchWholeWord",
     "when": "searchViewletFocus"
+  },
+  {
+    "key": "alt+[",
+    "command": "-editor.action.inlineSuggest.showPrevious",
+    "when": "inlineSuggestionVisible && !editorReadonly"
   }
 ]
