@@ -30,8 +30,8 @@ const ZOOM = maybe(
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 
-const DEFAULT_FONT = 'Martian Mono'
-// const DEFAULT_FONT = 'Ubuntu Mono'
+// const DEFAULT_FONT = 'Martian Mono'
+const DEFAULT_FONT = 'Ubuntu Mono'
 
 function syncFiles(source, destination){
   copySync(source, destination)
