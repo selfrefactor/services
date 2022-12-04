@@ -27,10 +27,10 @@ async function read(repo, folder){
   if (repo === 'done') return readDone(folder)
   const folderName = getFolderName(repo, folder)
   await execCommand(`git clone --depth 1 ${ repo } ${ folder ? folder : '' }`)
-  await execCommand('rm -rf .git', `${ process.cwd() }/${ folderName }`)
-  await execCommand('rm -rf dist', `${ process.cwd() }/${ folderName }`)
-
+  
   if (process.cwd().includes('to-read')){
+    await execCommand('rm -rf dist', `${ process.cwd() }/${ folderName }`)
+    await execCommand('rm -rf .git', `${ process.cwd() }/${ folderName }`)
     await commit('feat: add new repo')
   } else {
     console.log(`process cwd ${ process.cwd() }`)
