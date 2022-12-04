@@ -136,14 +136,10 @@
   },
   {
     "key": "alt+shift+5",
-    "command": "wallaby.addToExclusiveTestRun"
+    "command": "wallaby.stop"
   },
   {
     "key": "alt+shift+6",
-    "command": "wallaby.startExclusively"
-  },
-  {
-    "key": "alt+shift+7",
     "command": "wallaby.updateFileSnapshots"
   },
   {
