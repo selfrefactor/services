@@ -96,8 +96,14 @@
     }
   },
   {
-    "comment": "==========================COPILOT=====================================================",
+    "comment": "==========================EDITOR SHORTCUTS=====================================================",
     "key": "alt+[",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "comment": "==========================COPILOT=====================================================",
+    "key": "alt+]",
     "command": "github.copilot.openPanelForRange"
   },
   {
@@ -640,6 +646,11 @@
     "key": "alt+w",
     "command": "-toggleSearchWholeWord",
     "when": "searchViewletFocus"
+  },
+  {
+    "key": "ctrl+k ctrl+0",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
   },
   {
     "key": "alt+[",

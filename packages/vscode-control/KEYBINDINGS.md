@@ -1,8 +1,8 @@
 Free keybindings
 
-alt+u
 alt+t
 ctrl+shift+r
+alt+shift+s
 ===
 alt+shift+ up/down arrow. Copy current line up or down. It's like a super-super-fast copy paste
 ===
