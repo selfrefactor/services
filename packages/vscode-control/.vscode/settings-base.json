@@ -30,6 +30,7 @@
   "zenMode.hideLineNumbers": true,
   "zenMode.hideStatusBar": false,
   "zenMode.restore": false,
+  "workbench.activityBar.visible": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
