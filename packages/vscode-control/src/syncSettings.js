@@ -33,8 +33,8 @@ const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 
 // const DEFAULT_FONT = 'Hack'
-const DEFAULT_FONT = 'Fira Mono'
-// const DEFAULT_FONT = 'JetBrains Mono'
+// const DEFAULT_FONT = 'Fira Mono'
+const DEFAULT_FONT = 'JetBrains Mono'
 // const DEFAULT_FONT = 'Ubuntu Mono'
 
 function syncFiles(source, destination){
