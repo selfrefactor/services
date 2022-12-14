@@ -83,8 +83,8 @@ function getMinimapOptions(){
 
 function syncSettings(){
   const newOptions = {
-    ...settingsBase,
-    // ...settings,
+    // ...settingsBase,
+    ...settings,
     ...getMinimapOptions(),
     ...getCalculatedOptions(),
     "workbench.colorTheme": THEME,
