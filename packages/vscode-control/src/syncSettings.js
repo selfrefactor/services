@@ -3,6 +3,8 @@ import { copySync, writeJsonSync } from 'fs-extra'
 import { toDecimal, maybe } from 'rambdax'
 import { defaultTo } from 'helpers-fn'
 import settings from '../.vscode/settings.json'
+import settingsBase from '../.vscode/settings-base.json'
+import settingsAll from '../.vscode/settings-all.json'
 import {
   KEYBINDING,
   SETTINGS,
@@ -81,7 +83,8 @@ function getMinimapOptions(){
 
 function syncSettings(){
   const newOptions = {
-    ...settings,
+    ...settingsBase,
+    // ...settings,
     ...getMinimapOptions(),
     ...getCalculatedOptions(),
     "workbench.colorTheme": THEME,
