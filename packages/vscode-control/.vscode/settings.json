@@ -1,4 +1,5 @@
 {
+  "update.mode": "none",
   "editor.inlineSuggest.enabled": true,
   "editor.cursorStyle": "line-thin",
   "editor.linkedEditing": true,
