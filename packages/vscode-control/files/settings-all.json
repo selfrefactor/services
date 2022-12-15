@@ -104,6 +104,7 @@
   "editor.guides.highlightActiveIndentation": "always",
   "editor.guides.indentation": false,
   "editor.hover.delay": 10000,
+  
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": "off",
   "editor.letterSpacing": 0.3,
@@ -170,6 +171,9 @@
   "javascript.validate.enable": true,
   "js/ts.implicitProjectConfig.checkJs": true,
   "js/ts.implicitProjectConfig.strictNullChecks":true,
+
+
+  
   "json.format.enable": false,
   "json.maxItemsComputed": 1000,
   "npm.autoDetect": "off",

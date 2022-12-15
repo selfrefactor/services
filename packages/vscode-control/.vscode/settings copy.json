@@ -97,8 +97,6 @@
     ".ts",
     ".feature"
   ],
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.multiCursorModifier.comment": "required to allow click inside terminal on filePath",
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
     "source.organizeImports": false
