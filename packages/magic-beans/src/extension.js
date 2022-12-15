@@ -1,13 +1,17 @@
 const vscode = require('vscode')
+const {
+  REQUEST_RANDOM_FILE,
+  SORT_LINES,
+  SLOW_SCROLL_INIT,
+} = require('./constants')
 const { copyTrimmed } = require('./copyTrimmed')
 const { createSpec } = require('./createSpec')
 const { fixCamelcaseRefactoring } = require('./fixCamelcaseRefactoring')
 const { formatJson } = require('./format-json')
 const { initBar } = require('./bar')
 const { requestRandomFile } = require('./randomFile')
-const { REQUEST_RANDOM_FILE, SORT_LINES, SLOW_SCROLL_INIT } = require('./constants')
-const { sortLines } = require('./sort-lines')
 const { slowScroll } = require('./slow-scroll')
+const { sortLines } = require('./sort-lines')
 
 function activate(context){
   initBar()
@@ -15,7 +19,8 @@ function activate(context){
     formatJson)
   const copyTrimmedCommand = vscode.commands.registerCommand('magicBeans.copyTrimmed',
     copyTrimmed)
-  const createSpecCommand = vscode.commands.registerCommand('magicBeans.createSpec',createSpec)
+  const createSpecCommand = vscode.commands.registerCommand('magicBeans.createSpec',
+    createSpec)
   const slowScrollCommand = vscode.commands.registerCommand(SLOW_SCROLL_INIT,
     slowScroll(context))
   const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE,
@@ -23,7 +28,7 @@ function activate(context){
   const sortLinesCommand = vscode.commands.registerCommand(SORT_LINES,
     sortLines)
   const fixCamelcaseRefactoringCommand = vscode.commands.registerCommand('magicBeans.fixCamelcaseRefactoring',
-  fixCamelcaseRefactoring)
+    fixCamelcaseRefactoring)
 
   context.subscriptions.push(copyTrimmedCommand)
   context.subscriptions.push(createSpecCommand)
@@ -32,6 +37,18 @@ function activate(context){
   context.subscriptions.push(formatJsonCommand)
   context.subscriptions.push(sortLinesCommand)
   context.subscriptions.push(fixCamelcaseRefactoringCommand)
+
+  const disposable = vscode.commands.registerCommand('open-folder-in-vscode.openFolder',
+    data => {
+      const terminal = vscode.window.createTerminal({ name : 'New vscode' })
+      terminal.hide()
+      terminal.sendText(`code '${ data.fsPath }'`)
+      setTimeout(() => {
+        terminal.dispose()
+      }, 4000)
+    })
+
+  context.subscriptions.push(disposable)
 }
 
 exports.activate = activate

@@ -52,6 +52,15 @@
 		"onCommand:magicBeans.fixCamelcaseRefactoring"
 	],
 	"contributes": {
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "open-folder-in-vscode.openFolder",
+          "group": "navigation"
+        }
+      ]
+    },
 		"commands": [
 			{
 				"command": "magicBeans.requestRandomFile",
@@ -84,6 +93,10 @@
 			{
 				"command": "magicBeans.slowScrollStop",
 				"title": "slowScroll stop"
+			},
+      {
+				"command": "open-folder-in-vscode.openFolder",
+				"title": "Open folder in new vscode"
 			}
 		],
 		"keybindings": [
