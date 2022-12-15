@@ -1,10 +1,8 @@
 {
   "recommendations": [
-    "mintlify.document".
+    "mintlify.document",
     "mhutchie.git-graph",
     "Cardinal90.multi-cursor-case-preserve",
-    "rwu823.open-folder",
-    "rajratnamaitry.open-folder-in-new-vscode",
     "mightbesimon.emoji-icons",
     "mattpocock.ts-error-translator",
     "selfrefactor.niketa-theme-legacy",

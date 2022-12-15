@@ -120,9 +120,14 @@ Configure runtime arguments
 ```
 
 /**
+
   "editor.fontFamily4": "Oxygen Mono",
   "editor.fontFamily1": "PT Mono",
   "editor.fontFamily2": "Ubuntu Mono",
   "editor.fontFamily": "Operator Mono",
   "editor.fontFamily": "JetBrains Mono",
+
+    "rwu823.open-folder",
+    "rajratnamaitry.open-folder-in-new-vscode",
+
  */
