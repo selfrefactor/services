@@ -27,7 +27,6 @@
   "editor.suggest.localityBonus": true,
   "editor.suggest.insertMode": "insert",
   "editor.suggest.showFunctions": true,
-  "editor.inlineSuggestx.enabled": true,
   "editor.suggest.preview": true,
   "editor.suggest.shareSuggestSelections": true,
   "editor.suggest.showColors": true,
@@ -113,8 +112,6 @@
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.suggestFontSize": 22,
-  "editor.suggestLineHeight": 28,
   "editor.rename.enablePreview": false,
   "editor.renderControlCharacters": false,
   "editor.scrollBeyondLastLine": false,
@@ -173,7 +170,7 @@
   "js/ts.implicitProjectConfig.strictNullChecks":true,
 
 
-  
+
   "json.format.enable": false,
   "json.maxItemsComputed": 1000,
   "npm.autoDetect": "off",
