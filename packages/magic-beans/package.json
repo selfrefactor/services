@@ -41,6 +41,7 @@
 		"Other"
 	],
 	"activationEvents": [
+    "onCommand:open-folder-in-vscode.openFolder",
 		"onCommand:magicBeans.betterCut",
 		"onCommand:magicBeans.betterCut",
 		"onCommand:magicBeans.copyTrimmed",
