@@ -5,7 +5,7 @@
 		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"main": "./src/extension",
-	"version": "2.17.0",
+	"version": "2.18.0",
 	"dependencies": {
 		"helpers-fn": "1.6.0",
 		"rambdax": "8.1.0",
@@ -52,15 +52,15 @@
 		"onCommand:magicBeans.fixCamelcaseRefactoring"
 	],
 	"contributes": {
-    "menus": {
-      "explorer/context": [
-        {
-          "when": "explorerResourceIsFolder",
-          "command": "open-folder-in-vscode.openFolder",
-          "group": "navigation"
-        }
-      ]
-    },
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "open-folder-in-vscode.openFolder",
+					"group": "navigation"
+				}
+			]
+		},
 		"commands": [
 			{
 				"command": "magicBeans.requestRandomFile",
@@ -94,7 +94,7 @@
 				"command": "magicBeans.slowScrollStop",
 				"title": "slowScroll stop"
 			},
-      {
+			{
 				"command": "open-folder-in-vscode.openFolder",
 				"title": "Open folder in new vscode"
 			}
