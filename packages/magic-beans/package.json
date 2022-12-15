@@ -5,7 +5,7 @@
 		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"main": "./src/extension",
-	"version": "2.18.0",
+	"version": "2.19.0",
 	"dependencies": {
 		"helpers-fn": "1.6.0",
 		"rambdax": "8.1.0",
@@ -41,7 +41,7 @@
 		"Other"
 	],
 	"activationEvents": [
-    "onCommand:open-folder-in-vscode.openFolder",
+		"onCommand:open-folder-in-vscode.openFolder",
 		"onCommand:magicBeans.betterCut",
 		"onCommand:magicBeans.betterCut",
 		"onCommand:magicBeans.copyTrimmed",
