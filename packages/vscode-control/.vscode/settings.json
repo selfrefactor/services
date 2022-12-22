@@ -192,7 +192,7 @@
   "wallaby.startAutomatically": false,
   "wallaby.strictSSL": false,
   "wallaby.suppressExpirationNotifications": true,
-  "window.commandCenter": false,
+  "window.commandCenter": true,
   "window.title": "${activeFolderMedium}/${activeEditorShort}",
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "GlassOnion",
