@@ -31,11 +31,17 @@ const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 
 // const DEFAULT_FONT = 'Hack'
-// const DEFAULT_FONT = 'Fira Mono'
 // const DEFAULT_FONT = 'Cascadia Mono'
-// const DEFAULT_FONT = 'JetBrains Mono'
 // const DEFAULT_FONT = 'Ubuntu Mono'
-const DEFAULT_FONT = 'Monoid'
+// no ligatures above
+
+// const DEFAULT_FONT = 'Fira Mono'
+// const DEFAULT_FONT = 'JetBrains Mono'
+
+// https://rubjo.github.io/victor-mono/
+// const DEFAULT_FONT = 'Monoid'
+
+const DEFAULT_FONT = 'Iosevka SS18'
 
 function syncFiles(source, destination){
   copySync(source, destination)
