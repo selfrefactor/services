@@ -35,7 +35,7 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 // const DEFAULT_FONT = 'Cascadia Mono'
 // const DEFAULT_FONT = 'JetBrains Mono'
 // const DEFAULT_FONT = 'Ubuntu Mono'
-const DEFAULT_FONT = 'Monoid Mono'
+const DEFAULT_FONT = 'Monoid'
 
 function syncFiles(source, destination){
   copySync(source, destination)
