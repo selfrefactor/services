@@ -57,6 +57,7 @@ const getCalculatedOptions = () => {
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.55) ))
 
   const fontSettings = {
+    "terminal.integrated.fontFamily": MONO? 'Operator Mono': DEFAULT_FONT,
     'debug.console.fontFamily' : MONO? 'Operator Mono': DEFAULT_FONT,
     "editor.fontFamily": MONO? 'Operator Mono': DEFAULT_FONT,
     "editor.fontLigatures": !MONO 
