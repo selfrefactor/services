@@ -1,5 +1,9 @@
 {
   "update.mode": "none",
+  "wallaby.codeLensFeature.debugger": false,
+  "wallaby.codeLensFeature.profiler": false,
+  "wallaby.codeLensFeature.testFilters": false,
+  "wallaby.codeLensFeature.testStory": false,
   "editor.inlineSuggest.enabled": true,
   "editor.cursorStyle": "line-thin",
   "editor.linkedEditing": true,
