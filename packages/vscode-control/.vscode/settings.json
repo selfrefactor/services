@@ -1,4 +1,8 @@
 {
+  "wallaby.codeLensFeature.debugger": false,
+  "wallaby.codeLensFeature.profiler": false,
+  "wallaby.codeLensFeature.testFilters": false,
+  "wallaby.codeLensFeature.testStory": false,
   "search.collapseResults": "alwaysCollapse",
   "search.mode": "view",
   "search.seedOnFocus": true,
@@ -152,6 +156,8 @@
     "yarn-error.log": true,
     "yarn.lock": true
   },
+  "update.mode": "none",
+
   "github.copilot.enable": {
     "*": true,
     "yaml": true,
