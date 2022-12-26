@@ -285,5 +285,6 @@
   "editor.smoothScrolling": true,
   "editor.lineNumbers": "interval",
   "editor.fontLigatures": true,
-  "update.mode": "none"
+  "update.mode": "none",
+  "explorer.incrementalNaming": "smart"
 }
