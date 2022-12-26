@@ -1,0 +1,13 @@
+{
+  "wallaby.codeLensFeature.debugger": false,
+  "wallaby.codeLensFeature.profiler": false,
+  "wallaby.codeLensFeature.testFilters": false,
+  "wallaby.codeLensFeature.testStory": false,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorStyle": "line-thin",
+  "editor.codeLens": true,
+  "editor.smoothScrolling": true,
+  "editor.lineNumbers": "interval",
+  "editor.fontLigatures": true,
+  "update.mode": "none"
+}
