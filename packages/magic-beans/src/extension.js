@@ -12,6 +12,20 @@ const { initBar } = require('./bar')
 const { requestRandomFile } = require('./randomFile')
 const { slowScroll } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
+const { configAnt } = require('./ants/config')
+
+function openInVsCode(data){
+  const IS_VSCODE_INSIDERS = configAnt(
+    'IS_VSCODE_INSIDERS'
+  )
+  const binary = IS_VSCODE_INSIDERS ? 'code-insiders' : 'code'
+  const terminal = vscode.window.createTerminal({ name : 'New vscode' })
+      terminal.hide()
+      terminal.sendText(`${binary} '${ data.fsPath }'`)
+      setTimeout(() => {
+        terminal.dispose()
+      }, 4000)
+}
 
 function activate(context){
   initBar()
@@ -40,12 +54,7 @@ function activate(context){
 
   const disposable = vscode.commands.registerCommand('open-folder-in-vscode.openFolder',
     data => {
-      const terminal = vscode.window.createTerminal({ name : 'New vscode' })
-      terminal.hide()
-      terminal.sendText(`code '${ data.fsPath }'`)
-      setTimeout(() => {
-        terminal.dispose()
-      }, 4000)
+      openInVsCode(data)
     })
 
   context.subscriptions.push(disposable)

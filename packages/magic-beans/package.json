@@ -135,6 +135,11 @@
 			"type": "object",
 			"title": "MagicBeans",
 			"properties": {
+				"magicBeans.IS_VSCODE_INSIDERS": {
+					"type": "boolean",
+					"default": false,
+					"description": "is vscode insiders"
+				},
 				"magicBeans.SLOW_SCROLL": {
 					"type": "number",
 					"default": 20000,
