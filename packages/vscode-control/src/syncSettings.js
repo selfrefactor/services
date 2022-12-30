@@ -94,6 +94,7 @@ function syncSettings(){
     ...settings,
     ...getMinimapOptions(),
     ...getCalculatedOptions(),
+    'magicBeans.IS_VSCODE_INSIDERS': process.env.BETA ==='ON',
     "workbench.colorTheme": THEME,
   }
 

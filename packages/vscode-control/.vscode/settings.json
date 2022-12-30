@@ -2,7 +2,6 @@
   
   "telemetry.telemetryLevel": "off",
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
-  "editor.experimental.stickyScroll.enabled": true,
   "editor.suggestOnTriggerCharacters": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "git.mergeEditor": true,
@@ -286,5 +285,6 @@
   "editor.lineNumbers": "interval",
   "editor.fontLigatures": true,
   "update.mode": "none",
-  "explorer.incrementalNaming": "smart"
+  "explorer.incrementalNaming": "smart",
+  "editor.stickyScroll.enabled": true
 }
