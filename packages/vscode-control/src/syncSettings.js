@@ -60,7 +60,7 @@ function syncFiles(source, destination){
 }
 
 const getCalculatedOptions = () => {
-  const SCALE_FACTOR = Math.floor(FONT_FACTOR * MODE.scale)
+  const SCALE_FACTOR = Math.round(toDecimal(FONT_FACTOR * MODE.scale))
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
   console.log(fontSize, `fontSize`)
   const zoomLevel = MODE.zoomScale
