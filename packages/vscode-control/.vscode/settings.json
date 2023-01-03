@@ -103,7 +103,7 @@
   "editor.autoClosingQuotes": "always",
   "editor.codeLens": false,
   "editor.folding": true,
-  "editor.hover.sticky": true,
+  "editor.hover.sticky": false,
   "editor.rename.enablePreview": false,
   "editor.suggest.showColors": false,
   "editor.wordBasedSuggestions": false,
