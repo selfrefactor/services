@@ -53,7 +53,7 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 
 // https://github.com/be5invis/Iosevka
 const DEFAULT_FONT = 'Iosevka SS18'
-const FONT_FACTOR = 1.2
+const FONT_FACTOR = 1.4
 
 function syncFiles(source, destination){
   copySync(source, destination)
