@@ -53,7 +53,7 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 
 // https://github.com/be5invis/Iosevka
 const DEFAULT_FONT = 'Iosevka SS18'
-const FONT_FACTOR = 1.7
+const FONT_FACTOR = 1.5
 
 function syncFiles(source, destination){
   copySync(source, destination)
@@ -64,6 +64,7 @@ const getCalculatedOptions = () => {
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
   console.log(fontSize, `fontSize`)
   console.log(MODE, `MODE`)
+  console.log(SCALE_FACTOR, `SCALE_FACTOR`)
   const zoomLevel = MODE.zoomScale
   const lineHeight = Math.round(toDecimal(LINE_HEIGHT * SCALE_FACTOR))
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR ))
