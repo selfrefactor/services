@@ -1,6 +1,5 @@
 Free keybindings
 
-alt+t
 ctrl+shift+r
 alt+shift+s
 ===
