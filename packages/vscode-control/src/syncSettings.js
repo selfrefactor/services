@@ -15,7 +15,7 @@ import {
 const FONT_SIZE = 16
 const SUGGEST_LINE_HEIGHT = 15
 const SUGGEST_FONT_SIZE = 14
-const LINE_HEIGHT = 17
+const LINE_HEIGHT = 19
 const MONO = defaultTo(
   'MONO', false, 'onoff'
 )
@@ -55,10 +55,10 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 // no ligatures above
 
 // const DEFAULT_FONT = 'Fira Mono'
-// const DEFAULT_FONT = 'JetBrains Mono'
+const DEFAULT_FONT = 'JetBrains Mono'
 
 // https://rubjo.github.io/victor-mono/
-const DEFAULT_FONT = 'Monoid'
+// const DEFAULT_FONT = 'Monoid'
 
 // https://github.com/be5invis/Iosevka
 // const DEFAULT_FONT = 'Iosevka SS18'
