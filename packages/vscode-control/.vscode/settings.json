@@ -107,7 +107,6 @@
   "editor.rename.enablePreview": false,
   "editor.suggest.showColors": false,
   "editor.wordBasedSuggestions": false,
-  "editor.parameterHints.enabled": true,
   "terminal.integrated.localEchoStyle": "dim",
   "terminal.integrated.localEchoLatencyThreshold": 0,
   "workbench.editor.pinnedTabSizing": "compact",
@@ -280,10 +279,11 @@
   "editor.lineNumbers": "interval",
   "editor.fontLigatures": true,
   "update.mode": "none",
+  "editor.parameterHints.enabled": false,
   "explorer.incrementalNaming": "smart",
   "editor.inlayHints.enabled": "off",
   "editor.stickyScroll.enabled": true,
   "editor.suggest.shareSuggestSelections": false,
-  "editor.suggestOnTriggerCharacters": false,
-  "editor.quickSuggestionsDelay": 5000
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.quickSuggestionsDelay": 500
 }
