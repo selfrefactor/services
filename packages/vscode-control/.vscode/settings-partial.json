@@ -10,5 +10,6 @@
   "editor.lineNumbers": "interval",
   "editor.fontLigatures": true,
   "update.mode": "none",
-  "explorer.incrementalNaming": "smart"
+  "explorer.incrementalNaming": "smart",
+  "editor.scrollbar.verticalScrollbarSize": 15
 }
