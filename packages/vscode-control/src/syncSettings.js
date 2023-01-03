@@ -29,8 +29,8 @@ const MODES = {
     scale: 1.35
   },
   large: {
-    zoomScale: 1.57,
-    scale: 1.73
+    zoomScale: 1.5,
+    scale: 1.8
   },
 }
 
@@ -62,9 +62,6 @@ function syncFiles(source, destination){
 const getCalculatedOptions = () => {
   const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE.scale)
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
-  console.log(fontSize, `fontSize`)
-  console.log(MODE, `MODE`)
-  console.log(SCALE_FACTOR, `SCALE_FACTOR`)
   const zoomLevel = MODE.zoomScale
   const lineHeight = Math.round(toDecimal(LINE_HEIGHT * SCALE_FACTOR))
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR ))
