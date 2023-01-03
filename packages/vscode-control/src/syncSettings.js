@@ -26,7 +26,7 @@ const MODES = {
   },
   normal: {
     zoomScale: 1.06,
-    scale: 1.45
+    scale: 1.75
   },
   large: {
     zoomScale: 1.5,
