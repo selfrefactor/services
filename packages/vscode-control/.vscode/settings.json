@@ -103,7 +103,7 @@
   "editor.autoClosingQuotes": "always",
   "editor.codeLens": false,
   "editor.folding": true,
-  "editor.hover.sticky": false,
+  "editor.hover.sticky": true,
   "editor.rename.enablePreview": false,
   "editor.suggest.showColors": false,
   "editor.wordBasedSuggestions": false,
@@ -193,7 +193,6 @@
   "editor.formatOnPaste": false,
   "editor.mouseWheelZoom": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.quickSuggestionsDelay": 500,
   "editor.renderControlCharacters": false,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
@@ -285,5 +284,6 @@
   "editor.inlayHints.enabled": "off",
   "editor.stickyScroll.enabled": true,
   "editor.suggest.shareSuggestSelections": false,
-  "editor.suggestOnTriggerCharacters": true
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.quickSuggestionsDelay": 5000
 }
