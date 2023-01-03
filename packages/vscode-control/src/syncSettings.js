@@ -63,6 +63,7 @@ const getCalculatedOptions = () => {
   const SCALE_FACTOR = Math.round(toDecimal(FONT_FACTOR * MODE.scale))
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
   console.log(fontSize, `fontSize`)
+  console.log(MODE, `MODE`)
   const zoomLevel = MODE.zoomScale
   const lineHeight = Math.round(toDecimal(LINE_HEIGHT * SCALE_FACTOR))
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR ))
