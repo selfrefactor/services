@@ -2,7 +2,6 @@
   
   "telemetry.telemetryLevel": "off",
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
-  "editor.suggestOnTriggerCharacters": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "git.mergeEditor": true,
   "window.commandCenter": true,
@@ -13,7 +12,6 @@
   "explorer.fileNesting.enabled": false,
   "explorer.fileNesting.expand": false,
   "files.refactoring.autoSave": true,
-  "editor.inlayHints.enabled": "on",
   "editor.guides.bracketPairsHorizontal": true,
   "editor.guides.highlightActiveIndentation": "always",
   "workbench.enableExperiments": false,
@@ -78,7 +76,6 @@
   "editor.suggest.showStatusBar": true,
   "terminal.integrated.cursorBlinking": true,
   "editor.snippetSuggestions": "inline",
-  "editor.suggest.shareSuggestSelections": true,
   "terminal.integratedx.rendererType": "dom",
   "workbench.editor.enablePreviewFromQuickOpen":true,
   "workbench.tree.expandMode":"singleClick",
@@ -285,5 +282,8 @@
   "editor.fontLigatures": true,
   "update.mode": "none",
   "explorer.incrementalNaming": "smart",
-  "editor.stickyScroll.enabled": true
+  "editor.inlayHints.enabled": "off",
+  "editor.stickyScroll.enabled": true,
+  "editor.suggest.shareSuggestSelections": false,
+  "editor.suggestOnTriggerCharacters": true
 }
