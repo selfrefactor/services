@@ -60,11 +60,11 @@ function syncFiles(source, destination){
 }
 
 const getCalculatedOptions = () => {
-  const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE.scale)
+  const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE.scale, 2)
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
   const zoomLevel = MODE.zoomScale
-  const lineHeight = Math.round(toDecimal(LINE_HEIGHT * SCALE_FACTOR))
-  const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR ))
+  const lineHeight = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2)
+  const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR, 2 ))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR ))
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.55) ))
 
