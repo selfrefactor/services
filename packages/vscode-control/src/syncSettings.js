@@ -46,14 +46,14 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 // no ligatures above
 
 // const DEFAULT_FONT = 'Fira Mono'
-// const DEFAULT_FONT = 'JetBrains Mono'
+const DEFAULT_FONT = 'JetBrains Mono'
 
 // https://rubjo.github.io/victor-mono/
 // const DEFAULT_FONT = 'Monoid'
 
 // https://github.com/be5invis/Iosevka
-const DEFAULT_FONT = 'Iosevka SS18'
-const FONT_FACTOR = 1.7
+// const DEFAULT_FONT = 'Iosevka SS18'
+const FONT_FACTOR = 1
 
 function syncFiles(source, destination){
   copySync(source, destination)
