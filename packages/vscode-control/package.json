@@ -2,16 +2,16 @@
 	"scripts": {
 		"small": "yarn small:1&&yarn small:2&&run d",
 		"smalld": "THEME=AmericanDad yarn small",
-		"small:1": "ZOOM_SCALE=0.86 SCALE=1.15 node syncSettings",
-		"small:2": "BETA=ON ZOOM_SCALE=0.86 SCALE=1.15 node syncSettings",
+		"small:1": "MODE=small node syncSettings",
+		"small:2": "BETA=ON MODE=small node syncSettings",
 		"on": "yarn on:1&&yarn on:2&&run d",
 		"ond": "THEME=AmericanDad yarn on",
-		"on:1": "ZOOM_SCALE=1.06 SCALE=1.35 node syncSettings",
-		"on:2": "BETA=ON ZOOM_SCALE=1.06 SCALE=1.35 node syncSettings",
+		"on:1": "MODE=normal node syncSettings",
+		"on:2": "BETA=ON MODE=normal node syncSettings",
 		"big": "yarn big:1 &&yarn big:2 && run d",
 		"bigd": "THEME=AmericanDad yarn big",
-		"big:1": "ZOOM_SCALE=1.37 SCALE=1.43 node syncSettings",
-		"big:2": "BETA=ON ZOOM_SCALE=1.37 SCALE=1.43 node syncSettings"
+		"big:1": "MODE=large node syncSettings",
+		"big:2": "BETA=ON MODE=large node syncSettings"
 	},
 	"name": "vscode-control",
 	"version": "0.1.0",

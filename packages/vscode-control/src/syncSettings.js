@@ -18,14 +18,24 @@ const LINE_HEIGHT = 16
 const MONO = defaultTo('MONO', false, 'onoff') 
 const MINI_MAP = defaultTo('MINI_MAP', false, 'onoff') 
 const THEME = defaultTo('THEME', `LedZeppelin`, 'default') 
-const SCALE_FACTOR = process.env.SCALE === undefined ?
-  1 :
-  toDecimal(Number(process.env.SCALE))
-const ZOOM = maybe(
-  process.env.ZOOM_SCALE === undefined,
-  1,
-  Number(process.env.ZOOM_SCALE)
-)
+
+const MODES = {
+  small: {
+    zoomScale: 0.86,
+    scale: 1.15
+  },
+  normal: {
+    zoomScale: 1.06,
+    scale: 1.35
+  },
+  large: {
+    zoomScale: 1.37,
+    scale: 1.43
+  },
+}
+
+const MODE_KEY = defaultTo('MODE', `normal`, 'default') 
+const MODE = MODES[MODE_KEY]
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
@@ -43,12 +53,15 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 
 // https://github.com/be5invis/Iosevka
 const DEFAULT_FONT = 'Iosevka SS18'
+const FONT_FACTOR = 1.4
 
 function syncFiles(source, destination){
   copySync(source, destination)
 }
 
 const getCalculatedOptions = () => {
+  const SCALE_FACTOR = Math.floor(FONT_FACTOR * MODE.scale)
+  const ZOOM = Math.floor(FONT_FACTOR * MODE.zoomScale)
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
   const zoomLevel = toDecimal(ZOOM * SCALE_FACTOR)
   const lineHeight = Math.round(toDecimal(LINE_HEIGHT * SCALE_FACTOR))
