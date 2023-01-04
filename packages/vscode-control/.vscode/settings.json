@@ -13,7 +13,7 @@
   "explorer.fileNesting.expand": false,
   "files.refactoring.autoSave": true,
   "editor.guides.bracketPairsHorizontal": true,
-  "editor.guides.highlightActiveIndentation": "always",
+  "editor.guides.highlightActiveIndentation": false,
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "extensions.autoCheckUpdates": false,

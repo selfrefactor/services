@@ -6,6 +6,10 @@ alt+shift+s
 alt+shift+ up/down arrow. Copy current line up or down. It's like a super-super-fast copy paste
 ===
 
+ALT+U 
+
+switch to terminal
+
 Alt+E
 
 # Snippets
