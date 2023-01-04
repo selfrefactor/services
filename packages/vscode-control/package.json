@@ -1,15 +1,15 @@
 {
 	"scripts": {
 		"small": "yarn small:1&&yarn small:2&&run d",
-		"smalld": "THEME=AmericanDad yarn small",
+		"smalld": "THEME=HomeMovies yarn small",
 		"small:1": "MODE=small node syncSettings",
 		"small:2": "BETA=ON MODE=small node syncSettings",
 		"on": "yarn on:1&&yarn on:2&&run d",
-		"ond": "THEME=AmericanDad yarn on",
+		"ond": "THEME=HomeMovies yarn on",
 		"on:1": "MODE=normal node syncSettings",
 		"on:2": "BETA=ON MODE=normal node syncSettings",
 		"big": "yarn big:1 &&yarn big:2 && run d",
-		"bigd": "THEME=AmericanDad yarn big",
+		"bigd": "THEME=HomeMovies yarn big",
 		"big:1": "MODE=large node syncSettings",
 		"big:2": "BETA=ON MODE=large node syncSettings"
 	},
