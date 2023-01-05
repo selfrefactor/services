@@ -6,6 +6,6 @@ async function cli(mode = 'updateall') {
     if (mode === 'updateall') {
         process.env.DEP_FN_UPDATE_ALL = 'true';
     }
-    await update_1.update();
+    await (0, update_1.update)();
 }
 exports.cli = cli;

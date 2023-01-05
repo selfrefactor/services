@@ -11,7 +11,6 @@ export async function update(): Promise<void> {
   } = getDependencies()
 
   const updatedDependencies = await getUpdateDependencies(dependencies)
-
   const updatedDevDependencies = await getUpdateDependencies(devDependencies)
 
   const updatedPeerDependencies = await getUpdateDependencies(peerDependencies)
