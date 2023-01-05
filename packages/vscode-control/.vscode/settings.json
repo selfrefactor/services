@@ -1,5 +1,10 @@
 {
-  
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  },
   "telemetry.telemetryLevel": "off",
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
@@ -184,8 +189,6 @@
   "breadcrumbs.enabled": false,
   "editor.acceptSuggestionOnEnter": "smart",
   "workbench.editor.closeOnFileDelete": true,
-  "editor.cursorStyle": "line",
-  "editor.fontLigatures": false,
   "editor.formatOnPaste": false,
   "editor.mouseWheelZoom": true,
   "editor.multiCursorModifier": "ctrlCmd",
@@ -206,7 +209,6 @@
   "npm.autoDetect": "off",
   "npm.packageManager": "yarn",
   "search.smartCase": true,
-  "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.copyOnSelection": false,
   "workbench.startupEditor": "none",
