@@ -15,7 +15,8 @@
 		"git"
 	],
 	"depFn": [
-		"clipboardy"
+		"clipboardy",
+		"dep-fn"
 	],
 	"author": "self_refactor",
 	"license": "MIT",
@@ -23,7 +24,7 @@
 		"niketa": "1.10.1",
 		"clipboardy": "2.3.0",
 		"commit-fn": "2.7.0",
-		"dep-fn": "2.2.0",
+		"dep-fn": "2.1.2",
 		"fs-extra": "11.1.0",
 		"helpers-fn": "1.6.0",
 		"lint-fn": "2.36.0",

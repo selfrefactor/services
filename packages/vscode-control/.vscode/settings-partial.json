@@ -11,5 +11,10 @@
   "editor.fontLigatures": true,
   "update.mode": "none",
   "explorer.incrementalNaming": "smart",
-  "editor.scrollbar.verticalScrollbarSize": 15
+  "editor.scrollbar.verticalScrollbarSize": 15,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.guides.bracketPairs":false,
+  "debug.inlineValues": "off",
+  "editor.parameterHints.enabled": false
 }
