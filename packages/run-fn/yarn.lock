@@ -1197,17 +1197,17 @@ define-property@^1.0.0:
   dependencies:
     is-descriptor "^1.0.0"
 
-dep-fn@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/dep-fn/-/dep-fn-2.1.2.tgz#e65bb8da29977a8ab6f03d07a5f5ff8495aa2ad3"
-  integrity sha512-qmy00Bj1KLBa0MnSz4Kk3nTNDk6tiEmlQ7jYKTdKhT7++ef3mgoLJxE6YO18gW6dcHOt0oq/aCTA4XQ8r7W8XQ==
+dep-fn@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/dep-fn/-/dep-fn-2.2.1.tgz#caf10ed9fb4e2bddaa87993c05c45385ece96b38"
+  integrity sha512-B+7lLAoF+eDTowhlSupgqea9Nm/ouCIPLrmR1H8lGGEaKozueFrIHs7WamV5XkhgFA+FNhLk985ZlTebhIkBLw==
   dependencies:
-    fs-extra "9.1.0"
+    fs-extra "11.1.0"
     helpers-fn "1.6.0"
     inquirer "8.0.0"
     json-format "1.0.1"
     package-storage "1.0.0"
-    rambdax "7.2.0"
+    rambdax "9.0.0"
 
 dir-glob@^3.0.1:
   version "3.0.1"
