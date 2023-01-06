@@ -39,7 +39,7 @@ async function lintFolder({ fastFlag, useAlternativeExecCommand }){
     })
 
   if (fastFlag){
-    await R.mapAsyncLimit(
+    await R.mapParallelAsyncWithLimit(
       lint, HOW_MANY_THREADS, allFiles
     )
   } else {
