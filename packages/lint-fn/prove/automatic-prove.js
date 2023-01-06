@@ -1,4 +1,4 @@
-NODE_ENV = 'DEBUG'
+process.env.NODE_ENV = 'DEBUG'
 process.env.LINT_FN_DEBUG = 'ON'
 const {
   ANGULAR,
@@ -11,7 +11,7 @@ const {
 } = require('../constants')
 const { lintFn, execPrettier } = require('../lintFn')
 const { readFile, writeFile } = require('fs-extra')
-const { replace, mapAsync, mapFastAsync } = require('rambdax')
+const { replace, mapParallelAsync } = require('rambdax')
 
 const debug = false
 
@@ -146,16 +146,16 @@ const htmlMode = {
 
 const proveList = [
   // angular,
-  defaultMode,
+  // defaultMode,
   // errorMode,
   // execPrettierMode,
   // forceTS,
   // htmlMode,
-  // jest,
+  jest,
   // tsProve,
 ]
 
 void (async function automaticProve(){
-  const result = await mapFastAsync(singleProve, proveList)
+  const result = await mapParallelAsync(singleProve, proveList)
   console.log(result, 'result')
 })()
