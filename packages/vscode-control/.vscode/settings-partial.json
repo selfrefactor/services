@@ -15,6 +15,6 @@
   "editor.guides.bracketPairsHorizontal": false,
   "editor.guides.highlightActiveIndentation": false,
   "editor.guides.bracketPairs":false,
-  "debug.inlineValues": "on",
+  "debug.inlineValues": "off",
   "editor.parameterHints.enabled": false
 }
