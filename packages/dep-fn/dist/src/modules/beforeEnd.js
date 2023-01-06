@@ -10,9 +10,11 @@ const rambdax_1 = require("rambdax");
 const beforeEnd = (input) => {
     const filePath = (0, path_1.join)(process.cwd(), 'package.json');
     const lockFilePath = (0, path_1.join)(process.cwd(), 'yarn.lock');
+    const lockFilePath2 = (0, path_1.join)(process.cwd(), 'package-lock.json');
     (0, fs_1.unlinkSync)(filePath);
     if ((0, fs_1.existsSync)(lockFilePath)) {
         (0, fs_1.unlinkSync)(lockFilePath);
+        (0, fs_1.unlinkSync)(lockFilePath2);
     }
     const newProps = {
         dependencies: input.dependencies,

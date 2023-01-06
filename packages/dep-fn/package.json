@@ -9,7 +9,7 @@
 	},
 	"main": "dist/index.js",
 	"typings": "index.d.ts",
-	"version": "2.2.1",
+	"version": "2.2.2",
 	"depFn": [
 		"inquirer"
 	],
