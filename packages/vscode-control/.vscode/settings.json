@@ -194,7 +194,7 @@
   "editor.mouseWheelZoom": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderControlCharacters": false,
-  "editor.suggestSelection": "first",
+  "editor.suggestSelection": "recentlyUsed",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
