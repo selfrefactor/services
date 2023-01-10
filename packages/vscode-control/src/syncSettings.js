@@ -15,7 +15,7 @@ import {
 const FONT_SIZE = 16
 const SUGGEST_LINE_HEIGHT = 15
 const SUGGEST_FONT_SIZE = 14
-const LINE_HEIGHT = 21
+const LINE_HEIGHT = 22
 const MONO = defaultTo(
   'MONO', false, 'onoff'
 )
