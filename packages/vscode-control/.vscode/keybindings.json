@@ -125,7 +125,7 @@
     "when": "true"
   },
   {
-    "key": "alt+u",
+    "key": "alt+v",
     "command": "terminal.focus"
   },
   {
@@ -249,11 +249,11 @@
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "alt+v",
+    "key": "alt+d",
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
-    "key": "alt+d",
+    "key": "alt+u",
     "command": "editor.action.smartSelect.expand",
     "when": "editorTextFocus"
   },
