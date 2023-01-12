@@ -1,3 +1,10 @@
+Keybindings info
+
+crtl+j - show bottom panel - might make alt+shift+s redundant
+
+
+===
+
 Free keybindings
 
 ctrl+shift+r
