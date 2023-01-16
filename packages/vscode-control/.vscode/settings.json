@@ -291,7 +291,7 @@
   "terminal.integrated.gpuAcceleration": "off",
   "editor.linkedEditing": true,
   "editor.stickyTabStops": true,
-  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.cursorWidth": 2,
   "window.experimental.windowControlsOverlay.enabled": false
 }
