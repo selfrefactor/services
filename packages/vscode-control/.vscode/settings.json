@@ -292,6 +292,7 @@
   "editor.linkedEditing": true,
   "editor.stickyTabStops": true,
   "terminal.integrated.cursorStyle": "block",
-  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.cursorWidth": 4,
+  "terminal.integrated.letterSpacing": 1,
   "window.experimental.windowControlsOverlay.enabled": false
 }
