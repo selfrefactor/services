@@ -181,7 +181,7 @@
     "**/node_modules": true,
     "**/yarn-error.log": true,
     "dev_dist": true,
-    "dist": true,
+    "dist": false,
     "docs": false,
     "yarn.lock": true
   },

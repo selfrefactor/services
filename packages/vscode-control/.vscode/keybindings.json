@@ -154,6 +154,10 @@
     "command": "wallaby.updateFileSnapshots"
   },
   {
+    "key": "shift+alt+7",
+    "command": "wallaby.addToExclusiveTestRun"
+  },
+  {
     "separator": "=========================EDITOR==========================================="
   },
   {
