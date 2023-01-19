@@ -133,8 +133,9 @@
   "editor.suggest.shareSuggestSelections": false,
   "editor.suggestOnTriggerCharacters": true,
   "editor.quickSuggestionsDelay": 500,
-  "comment.for.below": "new changes",
   "editor.cursorBlinking": "phase",
   "editor.inlayHints.padding": true,
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.visible": false,
   "terminal.integrated.gpuAcceleration": "off"
 }
