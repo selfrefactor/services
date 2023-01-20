@@ -113,6 +113,7 @@ void (function sync(){
 
 function getEditor(){
   return {
+    "editor.scrollBeyondLastLine": false,
     'editor.cursorSmoothCaretAnimation'                         : true,
     'editor.cursorStyle'                                        : 'line-thin',
     'editor.fontLigatures'                                      : true,
