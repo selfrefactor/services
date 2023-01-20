@@ -8,6 +8,7 @@
 		"on": "yarn onx&&run d",
 		"ond": "THEME=HomeMovies yarn on",
 		"ondx": "THEME=HomeMovies yarn onx",
+		"onxd": "THEME=HomeMovies yarn onx",
 		"on:1": "MODE=normal node syncSettings",
 		"on:2": "BETA=ON MODE=normal node syncSettings",
 		"big": "yarn big:1 &&yarn big:2 && run d",
