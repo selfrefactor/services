@@ -1,5 +1,10 @@
 # Vscode-control
 
+## Default settings
+
+Preferences: Open Default Settings (JSON)
+
+
 ## Font
 
 ```

@@ -113,9 +113,12 @@ void (function sync(){
 
 function getEditor(){
   return {
+    'editor.codeLens'                                           : true,
     'editor.cursorSmoothCaretAnimation'                         : true,
     'editor.cursorStyle'                                        : 'line-thin',
     'editor.fontLigatures'                                      : true,
+    'editor.formatOnPaste'                                      : false,
+    'editor.guides.bracketPairs'                                : false,
     'editor.guides.bracketPairsHorizontal'                      : false,
     'editor.guides.highlightActiveIndentation'                  : false,
     'editor.lineNumbers'                                        : 'interval',
@@ -127,11 +130,13 @@ function getEditor(){
     'editor.semanticHighlighting.enabled'                       : true,
     'editor.semanticTokenColorCustomizations'                   : { enabled : true },
     'editor.smoothScrolling'                                    : true,
+    'editor.suggest.showIcons'                                  : true,
     'editor.tabSize'                                            : 2,
     'editor.wordWrap'                                           : 'on',
   }
 }
 
+// comment color of theme is wrong
 function getPermanentSettings(){
   return {
     ...getWallaby(),
@@ -148,8 +153,10 @@ function getPermanentSettings(){
     'debug.javascript.usePreview'                               : true,
     'explorer.confirmDelete'                                    : false,
     'explorer.incrementalNaming'                                : 'smart',
+    'files.autoSave'                                            : 'off',
     'files.enableTrash'                                         : false,
     'git.autofetch'                                             : true,
+    'javascript.preferences.importModuleSpecifierEnding'        : 'auto',
     'javascript.updateImportsOnFileMove.enabled'                : 'always',
     'js/ts.implicitProjectConfig.checkJs'                       : true,
     'json.format.enable'                                        : false,
@@ -165,14 +172,19 @@ function getPermanentSettings(){
     'task.quickOpen.detail'                                     : false,
     'telemetry.enableTelemetry'                                 : false,
     'telemetry.telemetryLevel'                                  : 'off',
+    'terminal.integrated.copyOnSelection'                       : false,
     'terminal.integrated.gpuAcceleration'                       : 'off',
+    'typescript.tsserver.experimental.enableProjectDiagnostics' : false,
     'typescript.updateImportsOnFileMove.enabled'                : 'always',
     'update.mode'                                               : 'none',
     'window.title'                                              : '${activeFolderMedium}/${activeEditorShort}',
     'workbench.activityBar.visible'                             : false,
+    'workbench.editor.labelFormat'                              : 'default',
     'workbench.list.smoothScrolling'                            : true,
     'workbench.sideBar.location'                                : 'right',
     'workbench.startupEditor'                                   : 'none',
+    'zenMode.centerLayout'                                      : true,
+    'zenMode.hideLineNumbers'                                   : true,
     'zenMode.restore'                                           : false,
     'editor.codeActionsOnSave'                                  : {
       'source.fixAll'          : false,

@@ -1,13 +1,10 @@
 import { equals, filter } from 'rambdax'
 import settings from '../.vscode/settings.json'
-import settingsOld from '../.vscode/settings-old.json'
+import defaultSettings from '../.vscode/default-settings.json'
 import { writeJsonSync } from 'fs-extra'
 
-const first = filter((x, prop) => {
-  return !equals(x, settingsOld[prop])
+const compared = filter((x, prop) => {
+  return equals(x, defaultSettings[prop])
 }, settings)
-const second = filter((x, prop) => {
-  return !equals(x, settings[prop])
-}, settingsOld)
 
-writeJsonSync(`${__dirname}/compared.json`,{first,second}, {spaces:2})
+writeJsonSync(`${__dirname}/compared.json`,compared, {spaces:2})
