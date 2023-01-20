@@ -4,6 +4,6 @@ const { REACT } = require('../constants')
 
 void (async function prove(){
   
-  await lintFn({filePath: REACT, debug:true})
+  await lintFn({filePath: REACT, forceTypescript: true, debug:true})
   
 })()

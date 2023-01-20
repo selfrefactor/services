@@ -11,7 +11,7 @@ async function handleTypescript({
   debug,
 }){
   const { ok, eslintFlag, path } = takeProjectDir(filePath, cwdOverride)
-
+console.log(ok, eslintFlag, path, `ok, eslintFlag, path`)
   if (!ok && !forceTypescript){
     return console.log('This is not a Typescript project')
   }

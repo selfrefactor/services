@@ -1,5 +1,25 @@
 # Vscode-control
 
+## Font
+
+```
+// const DEFAULT_FONT = 'Hack'
+// const DEFAULT_FONT = 'Cascadia Mono'
+// const DEFAULT_FONT = 'Ubuntu Mono'
+// no ligatures above
+
+// const DEFAULT_FONT = 'Fira Mono'
+const DEFAULT_FONT = 'JetBrains Mono'
+
+// https://rubjo.github.io/victor-mono/
+// const DEFAULT_FONT = 'Monoid'
+
+// https://github.com/be5invis/Iosevka
+// const DEFAULT_FONT = 'Iosevka SS18'
+```
+
+---
+
 issue with codegpt.apiKey
 
 ## Runtime
