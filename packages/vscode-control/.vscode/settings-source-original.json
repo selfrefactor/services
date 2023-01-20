@@ -12,5 +12,10 @@
   "editor.quickSuggestionsDelay": 500,
   "editor.suggestOnTriggerCharacters": true,
   "explorer.autoReveal": true,
-  "references.preferredLocation": "view"
+  "references.preferredLocation": "view",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen":true,
+  "workbench.editor.focusRecentEditorAfterClose": false,
+  "workbench.editor.revealIfOpen": false
+
 }
