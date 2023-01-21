@@ -33,7 +33,7 @@ const MODES = {
   },
   large : {
     scale     : 1.7,
-    zoomScale : 1.5,
+    zoomScale : 1.3,
   },
 }
 
