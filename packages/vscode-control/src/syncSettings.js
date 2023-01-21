@@ -139,8 +139,7 @@ function getPermanentSettings(){
     ...getEditor(),
     // ...getAdditionalSettings(),
     'git.fetchOnPull'                                           : true,
-    // useful but removed because of
-    'editor.hover.sticky'                                       : false,
+    'editor.hover.sticky'                                       : true,
     // click to go to recent files
     'window.commandCenter'                                      : true,
     // without comments

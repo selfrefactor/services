@@ -1,3 +1,18 @@
+===
+TEST OUT
+
+  "key": "alt+[",
+  "command": "editor.foldAll",
+
+  "key": "alt+]",
+    "command": "github.copilot.openPanelForRange"
+  },
+
+  "key": "ctrl+`",
+    "command": "editor.action.inlineSuggest.showPrevious",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+===
 Keybindings info
 
 crtl+j - show bottom panel - might make alt+shift+s redundant

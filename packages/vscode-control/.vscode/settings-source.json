@@ -1,16 +1,2 @@
 {
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.acceptSuggestionOnEnter": "smart",
-  "editor.bracketPairColorization.enabled": false,
-  "editor.cursorBlinking": "phase",
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.cursorStyle": "line-thin",
-  "editor.hover.delay": 600,
-  "editor.inlayHints.enabled": "off",
-  "editor.inlayHints.padding": true,
-  "editor.parameterHints.enabled": false,
-  "editor.quickSuggestionsDelay": 500,
-  "editor.suggestOnTriggerCharacters": true,
-  "explorer.autoReveal": true,
-  "references.preferredLocation": "view"
 }
