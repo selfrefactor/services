@@ -138,9 +138,9 @@ function getEditor(){
 
 function getPermanentSettings(){
   return {
-    ...getWallaby(),
-    ...getEditor(),
-    ...getAdditionalSettings(),
+    // ...getWallaby(),
+    // ...getEditor(),
+    // ...getAdditionalSettings(),
     // click to go to recent files
     'window.commandCenter'                    : true,
     // without comments
@@ -148,6 +148,9 @@ function getPermanentSettings(){
       untitledEditors : false,
       notebookEditors : false,
     },
+	"explorer.confirmDragAndDrop": false,
+
+    'files.hotExit'                              : 'off',
     'workbench.editor.untitled.hint'             : 'hidden',
     'workbench.editor.untitled.labelFormat'      : 'name',
     'git.promptToSaveFilesBeforeCommit'          : 'never',
