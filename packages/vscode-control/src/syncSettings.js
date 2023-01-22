@@ -133,35 +133,34 @@ function getEditor(){
     'editor.smoothScrolling'                   : true,
     'editor.tabSize'                           : 2,
     'editor.wordWrap'                          : 'on',
+    'editor.codeActionsOnSave'                 : {
+      'source.fixAll'          : false,
+      'source.organizeImports' : false,
+    },
+    'editor.quickSuggestions' : {
+      comments : 'off',
+      strings  : 'off',
+      other    : 'off',
+    },
   }
 }
 
 function getPermanentSettings(){
   return {
-    // ...getWallaby(),
-    // ...getEditor(),
-    // ...getAdditionalSettings(),
+    ...getAdditionalSettings(),
+    ...getEditor(),
+    ...getExplorer(),
+    ...getGit(),
+    ...getWallaby(),
+    ...getWorkbench(),
     // click to go to recent files
-    'window.commandCenter'                    : true,
+    'window.commandCenter'                       : true,
     // without comments
-    'workbench.editor.languageDetectionHints' : {
-      untitledEditors : false,
-      notebookEditors : false,
-    },
-	"explorer.confirmDragAndDrop": false,
-
-    'files.hotExit'                              : 'off',
-    'workbench.editor.untitled.hint'             : 'hidden',
-    'workbench.editor.untitled.labelFormat'      : 'name',
-    'git.promptToSaveFilesBeforeCommit'          : 'never',
-    'git.allowNoVerifyCommit'                    : true,
-    'git.fetchOnPull'                            : true,
     'breadcrumbs.enabled'                        : false,
     'debug.inlineValues'                         : 'off',
     'debug.javascript.usePreview'                : true,
-    'explorer.confirmDelete'                     : false,
-    'explorer.incrementalNaming'                 : 'smart',
     'files.enableTrash'                          : false,
+    'files.hotExit'                              : 'off',
     'git.autofetch'                              : true,
     'javascript.updateImportsOnFileMove.enabled' : 'always',
     'js/ts.implicitProjectConfig.checkJs'        : true,
@@ -182,21 +181,8 @@ function getPermanentSettings(){
     'typescript.updateImportsOnFileMove.enabled' : 'always',
     'update.mode'                                : 'none',
     'window.title'                               : '${activeFolderMedium}/${activeEditorShort}',
-    'workbench.activityBar.visible'              : false,
-    'workbench.list.smoothScrolling'             : true,
-    'workbench.sideBar.location'                 : 'right',
-    'workbench.startupEditor'                    : 'none',
     'zenMode.restore'                            : false,
-    'editor.codeActionsOnSave'                   : {
-      'source.fixAll'          : false,
-      'source.organizeImports' : false,
-    },
-    'editor.quickSuggestions' : {
-      comments : 'off',
-      strings  : 'off',
-      other    : 'off',
-    },
-    'github.copilot.enable' : {
+    'github.copilot.enable'                      : {
       '*'         : true,
       'yaml'      : true,
       'plaintext' : true,
@@ -235,11 +221,46 @@ function getPermanentSettings(){
   }
 }
 
+function getWorkbench(){
+  return {
+    'workbench.activityBar.visible'           : false,
+    'workbench.editor.untitled.hint'          : 'hidden',
+    'workbench.editor.untitled.labelFormat'   : 'name',
+    'workbench.list.smoothScrolling'          : true,
+    'workbench.sideBar.location'              : 'right',
+    'workbench.startupEditor'                 : 'none',
+    'workbench.editor.languageDetectionHints' : {
+      untitledEditors : false,
+      notebookEditors : false,
+    },
+  }
+}
+
+function getExplorer(){
+  return {
+    'explorer.confirmDelete'         : false,
+    'explorer.confirmDragAndDrop'    : false,
+    'explorer.incrementalNaming'     : 'smart',
+    'explorer.sortOrder'             : 'default',
+    'explorer.openEditors.sortOrder' : 'alphabetical',
+  }
+}
+
+function getGit(){
+  return {
+    'git.confirmEmptyCommits'           : true,
+    'git.confirmForcePush'              : true,
+    'git.confirmNoVerifyCommit'         : true,
+    'git.confirmSync'                   : false,
+    'git.promptToSaveFilesBeforeCommit' : 'never',
+    'git.allowNoVerifyCommit'           : true,
+    'git.fetchOnPull'                   : true,
+  }
+}
+
 function getAdditionalSettings(){
   return {
-    'explorer.sortOrder'                                     : 'default',
     'editor.tabCompletion'                                   : 'off',
-    'explorer.openEditors.sortOrder'                         : 'alphabetical',
     'editor.scrollbar.vertical'                              : 'visible',
     'javascript.inlayHints.enumMemberValues.enabled'         : false,
     'javascript.inlayHints.functionLikeReturnTypes.enabled'  : false,
