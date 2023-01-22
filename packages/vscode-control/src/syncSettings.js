@@ -115,7 +115,7 @@ void (function sync(){
 
 function getEditor(){
   return {
-    'editor.hover.sticky'                        : true,
+    'editor.hover.sticky'                      : true,
     'editor.scrollBeyondLastLine'              : false,
     'editor.cursorSmoothCaretAnimation'        : true,
     'editor.cursorStyle'                       : 'line-thin',
@@ -139,11 +139,17 @@ function getEditor(){
 function getPermanentSettings(){
   return {
     ...getWallaby(),
-    // ...getEditor(),
-    // ...getAdditionalSettings(),
+    ...getEditor(),
+    ...getAdditionalSettings(),
     // click to go to recent files
-    'window.commandCenter'                       : true,
+    'window.commandCenter'                    : true,
     // without comments
+    'workbench.editor.languageDetectionHints' : {
+      untitledEditors : false,
+      notebookEditors : false,
+    },
+    'workbench.editor.untitled.hint'             : 'hidden',
+    'workbench.editor.untitled.labelFormat'      : 'name',
     'git.promptToSaveFilesBeforeCommit'          : 'never',
     'git.allowNoVerifyCommit'                    : true,
     'git.fetchOnPull'                            : true,
