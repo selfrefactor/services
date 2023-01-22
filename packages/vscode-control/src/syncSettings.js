@@ -2,7 +2,8 @@ import { copySync, writeJsonSync } from 'fs-extra'
 import { defaultTo } from 'helpers-fn'
 import { resolve } from 'path'
 import { toDecimal } from 'rambdax'
-import settings from '../.vscode/settings-source.json'
+
+import settings from '../.vscode/settings-source'
 import {
   JS_SNIPPETS,
   KEYBINDING,
@@ -44,7 +45,8 @@ const MODE = MODES[ MODE_KEY ]
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
-const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname, '../.vscode/settings.json')
+const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
+  '../.vscode/settings.json')
 
 const DEFAULT_FONT = 'JetBrains Mono'
 const FONT_FACTOR = 1
@@ -113,68 +115,70 @@ void (function sync(){
 
 function getEditor(){
   return {
-    "editor.scrollBeyondLastLine": false,
-    'editor.cursorSmoothCaretAnimation'                         : true,
-    'editor.cursorStyle'                                        : 'line-thin',
-    'editor.fontLigatures'                                      : true,
-    'editor.guides.bracketPairsHorizontal'                      : false,
-    'editor.guides.highlightActiveIndentation'                  : false,
-    'editor.lineNumbers'                                        : 'interval',
-    'editor.minimap.enabled'                                    : false,
-    'editor.mouseWheelZoom'                                     : true,
-    'editor.multiCursorModifier'                                : 'ctrlCmd',
-    'editor.parameterHints.enabled'                             : false,
-    'editor.scrollbar.verticalScrollbarSize'                    : 15,
-    'editor.semanticHighlighting.enabled'                       : true,
-    'editor.semanticTokenColorCustomizations'                   : { enabled : true },
-    'editor.smoothScrolling'                                    : true,
-    'editor.tabSize'                                            : 2,
-    'editor.wordWrap'                                           : 'on',
+    'editor.hover.sticky'                        : true,
+    'editor.scrollBeyondLastLine'              : false,
+    'editor.cursorSmoothCaretAnimation'        : true,
+    'editor.cursorStyle'                       : 'line-thin',
+    'editor.fontLigatures'                     : true,
+    'editor.guides.bracketPairsHorizontal'     : false,
+    'editor.guides.highlightActiveIndentation' : false,
+    'editor.lineNumbers'                       : 'interval',
+    'editor.minimap.enabled'                   : false,
+    'editor.mouseWheelZoom'                    : true,
+    'editor.multiCursorModifier'               : 'ctrlCmd',
+    'editor.parameterHints.enabled'            : false,
+    'editor.scrollbar.verticalScrollbarSize'   : 15,
+    'editor.semanticHighlighting.enabled'      : true,
+    'editor.semanticTokenColorCustomizations'  : { enabled : true },
+    'editor.smoothScrolling'                   : true,
+    'editor.tabSize'                           : 2,
+    'editor.wordWrap'                          : 'on',
   }
 }
 
 function getPermanentSettings(){
   return {
     ...getWallaby(),
-    ...getEditor(),
+    // ...getEditor(),
     // ...getAdditionalSettings(),
-    'git.fetchOnPull'                                           : true,
-    'editor.hover.sticky'                                       : true,
     // click to go to recent files
-    'window.commandCenter'                                      : true,
+    'window.commandCenter'                       : true,
     // without comments
-    'breadcrumbs.enabled'                                       : false,
-    'debug.inlineValues'                                        : 'off',
-    'debug.javascript.usePreview'                               : true,
-    'explorer.confirmDelete'                                    : false,
-    'explorer.incrementalNaming'                                : 'smart',
-    'files.enableTrash'                                         : false,
-    'git.autofetch'                                             : true,
-    'javascript.updateImportsOnFileMove.enabled'                : 'always',
-    'js/ts.implicitProjectConfig.checkJs'                       : true,
-    'json.format.enable'                                        : false,
-    'json.maxItemsComputed'                                     : 1000,
-    'npm.autoDetect'                                            : 'off',
-    'npm.packageManager'                                        : 'yarn',
-    'scm.defaultViewMode'                                       : 'tree',
-    'search.collapseResults'                                    : 'alwaysCollapse',
-    'search.seedOnFocus'                                        : true,
-    'search.smartCase'                                          : true,
-    'search.useReplacePreview'                                  : false,
-    'task.autoDetect'                                           : 'off',
-    'task.quickOpen.detail'                                     : false,
-    'telemetry.enableTelemetry'                                 : false,
-    'telemetry.telemetryLevel'                                  : 'off',
-    'terminal.integrated.gpuAcceleration'                       : 'off',
-    'typescript.updateImportsOnFileMove.enabled'                : 'always',
-    'update.mode'                                               : 'none',
-    'window.title'                                              : '${activeFolderMedium}/${activeEditorShort}',
-    'workbench.activityBar.visible'                             : false,
-    'workbench.list.smoothScrolling'                            : true,
-    'workbench.sideBar.location'                                : 'right',
-    'workbench.startupEditor'                                   : 'none',
-    'zenMode.restore'                                           : false,
-    'editor.codeActionsOnSave'                                  : {
+    'git.promptToSaveFilesBeforeCommit'          : 'never',
+    'git.allowNoVerifyCommit'                    : true,
+    'git.fetchOnPull'                            : true,
+    'breadcrumbs.enabled'                        : false,
+    'debug.inlineValues'                         : 'off',
+    'debug.javascript.usePreview'                : true,
+    'explorer.confirmDelete'                     : false,
+    'explorer.incrementalNaming'                 : 'smart',
+    'files.enableTrash'                          : false,
+    'git.autofetch'                              : true,
+    'javascript.updateImportsOnFileMove.enabled' : 'always',
+    'js/ts.implicitProjectConfig.checkJs'        : true,
+    'json.format.enable'                         : false,
+    'json.maxItemsComputed'                      : 1000,
+    'npm.autoDetect'                             : 'off',
+    'npm.packageManager'                         : 'yarn',
+    'scm.defaultViewMode'                        : 'tree',
+    'search.collapseResults'                     : 'alwaysCollapse',
+    'search.seedOnFocus'                         : true,
+    'search.smartCase'                           : true,
+    'search.useReplacePreview'                   : false,
+    'task.autoDetect'                            : 'off',
+    'task.quickOpen.detail'                      : false,
+    'telemetry.enableTelemetry'                  : false,
+    'telemetry.telemetryLevel'                   : 'off',
+    'terminal.integrated.gpuAcceleration'        : 'off',
+    'typescript.updateImportsOnFileMove.enabled' : 'always',
+    'update.mode'                                : 'none',
+    'window.title'                               : '${activeFolderMedium}/${activeEditorShort}',
+    'workbench.activityBar.visible'              : false,
+    'workbench.list.smoothScrolling'             : true,
+    'workbench.sideBar.location'                 : 'right',
+    'workbench.startupEditor'                    : 'none',
+    'zenMode.restore'                            : false,
+    'editor.codeActionsOnSave'                   : {
       'source.fixAll'          : false,
       'source.organizeImports' : false,
     },
@@ -224,10 +228,10 @@ function getPermanentSettings(){
 
 function getAdditionalSettings(){
   return {
-    'explorer.sortOrder'             : 'default',
-    'editor.tabCompletion'           : 'off',
-    'explorer.openEditors.sortOrder' : 'alphabetical',
-    'editor.scrollbar.vertical'      : 'visible',
+    'explorer.sortOrder'                                     : 'default',
+    'editor.tabCompletion'                                   : 'off',
+    'explorer.openEditors.sortOrder'                         : 'alphabetical',
+    'editor.scrollbar.vertical'                              : 'visible',
     'javascript.inlayHints.enumMemberValues.enabled'         : false,
     'javascript.inlayHints.functionLikeReturnTypes.enabled'  : false,
     'javascript.inlayHints.parameterTypes.enabled'           : false,
@@ -242,14 +246,14 @@ function getAdditionalSettings(){
 
 function getWallaby(){
   return {
-    'wallaby.showUpdateNotifications'                           : false,
-    'wallaby.strictSSL'                                         : false,
-    'wallaby.startAutomatically'                                : false,
+    'wallaby.showUpdateNotifications'         : false,
+    'wallaby.strictSSL'                       : false,
+    'wallaby.startAutomatically'              : false,
     'wallaby.suppressExpirationNotifications' : true,
-    'wallaby.codeLensFeature.debugger'                          : false,
-    'wallaby.codeLensFeature.profiler'                          : false,
-    'wallaby.codeLensFeature.testFilters'                       : false,
-    'wallaby.codeLensFeature.testStory'                         : false,
-    'workbench.iconTheme'                                       : 'emoji-file-icons',
+    'wallaby.codeLensFeature.debugger'        : false,
+    'wallaby.codeLensFeature.profiler'        : false,
+    'wallaby.codeLensFeature.testFilters'     : false,
+    'wallaby.codeLensFeature.testStory'       : false,
+    'workbench.iconTheme'                     : 'emoji-file-icons',
   }
 }
