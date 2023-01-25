@@ -1,1 +1,1 @@
-run d && vsce publish major && run d
+run d && vsce publish minor && run d
