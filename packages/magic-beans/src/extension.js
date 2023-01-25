@@ -37,8 +37,8 @@ function activate(context){
     createSpec)
   const slowScrollCommand = vscode.commands.registerCommand(SLOW_SCROLL_INIT,
     slowScroll(context))
-  const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE,
-    requestRandomFile)
+  // const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE,
+  //   requestRandomFile)
   const sortLinesCommand = vscode.commands.registerCommand(SORT_LINES,
     sortLines)
   const fixCamelcaseRefactoringCommand = vscode.commands.registerCommand('magicBeans.fixCamelcaseRefactoring',
@@ -47,7 +47,7 @@ function activate(context){
   context.subscriptions.push(copyTrimmedCommand)
   context.subscriptions.push(createSpecCommand)
   context.subscriptions.push(slowScrollCommand)
-  context.subscriptions.push(requestRandomFileCommand)
+  // context.subscriptions.push(requestRandomFileCommand)
   context.subscriptions.push(formatJsonCommand)
   context.subscriptions.push(sortLinesCommand)
   context.subscriptions.push(fixCamelcaseRefactoringCommand)
