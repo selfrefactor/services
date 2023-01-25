@@ -25,11 +25,11 @@ const THEME = defaultTo(
 
 const MODES = {
   small : {
-    scale     : 1.15,
+    scale     : 1.1,
     zoomScale : 0.86,
   },
   normal : {
-    scale     : 1.25,
+    scale     : 1.35,
     zoomScale : 1.06,
   },
   large : {
