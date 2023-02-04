@@ -1,4 +1,5 @@
 {
+  "editor.suggest.selectionMode": "whenTriggerCharacter",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.bracketPairColorization.enabled": false,

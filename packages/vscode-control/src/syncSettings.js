@@ -151,7 +151,6 @@ function getPermanentSettings(){
     ...getEditor(),
     ...getExplorer(),
     ...getGit(),
-    ...getWallaby(),
     ...getWorkbench(),
     // click to go to recent files
     'window.commandCenter'                       : true,
@@ -260,6 +259,7 @@ function getGit(){
 
 function getAdditionalSettings(){
   return {
+    'editor.colorDecoratorsLimit':10,
     'editor.tabCompletion'                                   : 'off',
     'editor.scrollbar.vertical'                              : 'visible',
     'javascript.inlayHints.enumMemberValues.enabled'         : false,
