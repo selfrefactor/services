@@ -1,5 +1,5 @@
 # Add new repo
 
-yarn on:single
+yarn on
 
 > edit `src/run` file

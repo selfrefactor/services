@@ -4,7 +4,7 @@ const {buildStarsOf} = require('build-stars-of')
 const {outputJson} = require('fs-extra')
 const {allModes} = require('./config')
 
-const currentMode = 'magic'
+const currentMode = 'esbuild'
 
 const SECOND_STEP_ERROR= 0
 
