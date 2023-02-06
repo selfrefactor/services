@@ -9,6 +9,21 @@ const IS_DEV = 0
 const SHOW_PROGRESS = 1
 const MAX_SCRAPE_DEPTH = 600
 
+
+const snowpack = {
+  priority  : 2,
+  daysLimit : 150,
+  repo      : 'FredKSchott/snowpack',
+  title     : 'Popular dependents of **Snowpack**',
+  stars     : 5,
+}
+const esbuild = {
+  priority  : 2,
+  daysLimit : 150,
+  repo      : 'evanw/esbuild',
+  title     : 'Popular dependents of **ESBuild**',
+  stars     : 5,
+}
 // Bad abstraction
 // playwright after microsoft must be equal to const playwright
 const playwright = {
@@ -164,6 +179,8 @@ const allModes = map(iterator, {
   magic,
   nest,
   nextjs,
+  snowpack,
+  esbuild,
   playwright,
   puppeteer,
   rambda,
