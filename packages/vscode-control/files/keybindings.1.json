@@ -1,5 +1,13 @@
 [
   {
+    "key": "alt+i",
+    "comment": "==================SNIPPETS==================",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "name": "If Snippet"
+    }
+  },
+  {
     "key": "alt+1",
     "command": "editor.action.insertSnippet",
     "args": {

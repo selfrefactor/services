@@ -259,9 +259,10 @@ function getGit(){
 
 function getAdditionalSettings(){
   return {
-    'editor.colorDecoratorsLimit':10,
+    'editor.colorDecoratorsLimit'                            : 10,
     'editor.tabCompletion'                                   : 'off',
     'editor.scrollbar.vertical'                              : 'visible',
+    'git.openRepositoryInParentFolders'                      : 'always',
     'javascript.inlayHints.enumMemberValues.enabled'         : false,
     'javascript.inlayHints.functionLikeReturnTypes.enabled'  : false,
     'javascript.inlayHints.parameterTypes.enabled'           : false,

@@ -1,4 +1,17 @@
 ===
+
+Free keybindings
+
+ctrl+r
+ctrl+i
+
+alt+shift+s
+alt+i
+alt+e
+alt+5...9
+===
+ctlr+shift+0...9
+===
 TEST OUT
 
   "key": "alt+[",
@@ -17,13 +30,6 @@ Keybindings info
 
 crtl+j - show bottom panel - might make alt+shift+s redundant
 
-
-===
-
-Free keybindings
-
-ctrl+shift+r
-alt+shift+s
 ===
 alt+shift+ up/down arrow. Copy current line up or down. It's like a super-super-fast copy paste
 ===
