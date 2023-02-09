@@ -205,7 +205,7 @@
     "command": "-workbench.action.focusSixthEditorGroup"
   },
   {
-    "key": "ctrl+shift+a",
+    "key": "ctrl+r",
     "command": "workbench.action.toggleZenMode"
   },
   {

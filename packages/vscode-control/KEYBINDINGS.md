@@ -2,12 +2,10 @@
 
 Free keybindings
 
-ctrl+r
 ctrl+i
 
 alt+shift+s
 alt+i
-alt+e
 alt+5...9
 ===
 ctlr+shift+0...9
