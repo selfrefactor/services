@@ -304,15 +304,6 @@
     "command": "-workbench.action.openEditorAtIndex9"
   },
   {
-    "key": "ctrl+shift+r r",
-    "command": "-wallaby.start"
-  },
-  {
-    "key": "ctrl+shift+r d",
-    "command": "-wallaby.showSideBySideDiff",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+shift+w",
     "command": "-workbench.action.closeWindow"
   },

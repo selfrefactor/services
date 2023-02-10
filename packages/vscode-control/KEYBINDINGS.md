@@ -65,19 +65,6 @@ StringTemplate
 If condition
 
 ===
-
-## Ctrl+`
-
-Start `Wallaby`
-
-## Ctrl+Shift+7
-
-Update file snapshot in Wallaby
-
-## Ctrl+Shift+6
-
-Stop `Wallaby`
-
 ## Ctrl+1 
 
 Niketa - lint current file

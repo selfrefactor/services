@@ -275,16 +275,16 @@ function getAdditionalSettings(){
   }
 }
 
-function getWallaby(){
-  return {
-    'wallaby.showUpdateNotifications'         : false,
-    'wallaby.strictSSL'                       : false,
-    'wallaby.startAutomatically'              : false,
-    'wallaby.suppressExpirationNotifications' : true,
-    'wallaby.codeLensFeature.debugger'        : false,
-    'wallaby.codeLensFeature.profiler'        : false,
-    'wallaby.codeLensFeature.testFilters'     : false,
-    'wallaby.codeLensFeature.testStory'       : false,
-    'workbench.iconTheme'                     : 'emoji-file-icons',
-  }
-}
+// function getWallaby(){
+//   return {
+//     'wallaby.showUpdateNotifications'         : false,
+//     'wallaby.strictSSL'                       : false,
+//     'wallaby.startAutomatically'              : false,
+//     'wallaby.suppressExpirationNotifications' : true,
+//     'wallaby.codeLensFeature.debugger'        : false,
+//     'wallaby.codeLensFeature.profiler'        : false,
+//     'wallaby.codeLensFeature.testFilters'     : false,
+//     'wallaby.codeLensFeature.testStory'       : false,
+//     'workbench.iconTheme'                     : 'emoji-file-icons',
+//   }
+// }
