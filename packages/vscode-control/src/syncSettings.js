@@ -154,6 +154,7 @@ function getPermanentSettings(){
     ...getWorkbench(),
     // click to go to recent files
     'window.commandCenter'                       : true,
+    'window.titleBarStyle'                       : 'custom',
     // without comments
     'breadcrumbs.enabled'                        : false,
     'debug.inlineValues'                         : 'off',

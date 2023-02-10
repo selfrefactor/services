@@ -80,6 +80,7 @@
     "notebookEditors": false
   },
   "window.commandCenter": true,
+  "window.titleBarStyle": "custom",
   "breadcrumbs.enabled": false,
   "debug.inlineValues": "off",
   "debug.javascript.usePreview": true,
