@@ -11,17 +11,17 @@
   "editor.inlayHints.padding": true,
   "editor.parameterHints.enabled": false,
   "editor.quickSuggestionsDelay": 500,
-  "editor.suggestOnTriggerCharacters": true,
+  "editor.suggestOnTriggerCharacters": false,
   "explorer.autoReveal": true,
   "references.preferredLocation": "view",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.focusRecentEditorAfterClose": false,
   "editor.quickSuggestions.EXPERIMENT": true,
-  "editor.quickSuggestions": {
-    "comments": "off",
-    "strings": "off",
-    "other": "off"
+  "editor.quickSuggestionsx": {
+    "other": false,
+    "comments": false,
+    "strings": false
   },
   "workbench.editor.revealIfOpen": false,
   "editor.colorDecoratorsLimit": 10,
@@ -57,6 +57,11 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
     "source.organizeImports": false
+  },
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
   },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,

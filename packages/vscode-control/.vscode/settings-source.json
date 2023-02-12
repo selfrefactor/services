@@ -11,13 +11,13 @@
   "editor.inlayHints.padding": true,
   "editor.parameterHints.enabled": false,
   "editor.quickSuggestionsDelay": 500,
-  "editor.suggestOnTriggerCharacters": true,
+  "editor.suggestOnTriggerCharacters": false,
   "explorer.autoReveal": true,
   "references.preferredLocation": "view",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen":true,
   "workbench.editor.focusRecentEditorAfterClose": false,
   "editor.quickSuggestions.EXPERIMENT": true,
-  "editor.quickSuggestions": {"other": false,"comments": false,"strings": false},
+  "editor.quickSuggestionsx": {"other": false,"comments": false,"strings": false},
   "workbench.editor.revealIfOpen": false
 }
