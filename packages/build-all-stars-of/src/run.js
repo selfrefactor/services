@@ -4,12 +4,12 @@ const {buildStarsOf} = require('build-stars-of')
 const {outputJson} = require('fs-extra')
 const {allModes} = require('./config')
 
-const currentMode = 'esbuild'
+const currentMode = 'snowpack'
 
-const SECOND_STEP_ERROR= 0
+const SECOND_STEP_ERROR= false
 
 void async function main(){
-  const input = {...(SECOND_STEP_ERROR ? {shouldRefreshScraped: false}: {}),...allModes[currentMode]}
+  const input = {...allModes[currentMode], ...(SECOND_STEP_ERROR ? {shouldRefreshScraped: false}: {}),}
   if(!input){
     throw new Error('!input')
   }

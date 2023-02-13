@@ -1,5 +1,9 @@
 # Vscode-control
 
+## Suggestions
+
+https://code.visualstudio.com/docs/editor/intellisense
+
 ## Default settings
 
 Preferences: Open Default Settings (JSON)
