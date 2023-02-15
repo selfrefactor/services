@@ -1,5 +1,7 @@
 # Vscode-control
 
+alt+5
+
 ## Suggestions
 
 https://code.visualstudio.com/docs/editor/intellisense
