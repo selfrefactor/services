@@ -223,6 +223,8 @@ function getPermanentSettings(){
 
 function getWorkbench(){
   return {
+    'workbench.editor.wrapTabs'               : true,
+    'workbench.editor.pinnedTabSizing'        : 'shrink',
     'workbench.activityBar.visible'           : false,
     'workbench.editor.untitled.hint'          : 'hidden',
     'workbench.editor.untitled.labelFormat'   : 'name',
@@ -260,8 +262,11 @@ function getGit(){
 
 function getAdditionalSettings(){
   return {
+    // TEMP - it was off before
+    'editor.tabCompletion' : 'on',
+
+    'zenMode.hideTabs'                                       : false,
     'editor.colorDecoratorsLimit'                            : 10,
-    'editor.tabCompletion'                                   : 'off',
     'editor.scrollbar.vertical'                              : 'visible',
     'git.openRepositoryInParentFolders'                      : 'always',
     'javascript.inlayHints.enumMemberValues.enabled'         : false,
