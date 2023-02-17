@@ -223,6 +223,7 @@ function getPermanentSettings(){
 
 function getWorkbench(){
   return {
+    'workbench.iconTheme'                     : 'emoji-file-icons',
     'workbench.editor.wrapTabs'               : true,
     'workbench.editor.pinnedTabSizing'        : 'shrink',
     'workbench.activityBar.visible'           : false,
@@ -264,7 +265,6 @@ function getAdditionalSettings(){
   return {
     // TEMP - it was off before
     'editor.tabCompletion' : 'on',
-
     'zenMode.hideTabs'                                       : false,
     'editor.colorDecoratorsLimit'                            : 10,
     'editor.scrollbar.vertical'                              : 'visible',
@@ -291,6 +291,5 @@ function getAdditionalSettings(){
 //     'wallaby.codeLensFeature.profiler'        : false,
 //     'wallaby.codeLensFeature.testFilters'     : false,
 //     'wallaby.codeLensFeature.testStory'       : false,
-//     'workbench.iconTheme'                     : 'emoji-file-icons',
 //   }
 // }

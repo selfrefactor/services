@@ -1,5 +1,11 @@
 {
   "recommendations": [
+    "Cardinal90.multi-cursor-case-preserve",
+    "ms-python.vscode-pylance",
+    "dongli.python-preview",
+    "LittleFoxTeam.vscode-python-test-adapter",
+    "TabNine.tabnine-vscode",
+    "marnix.tokyo-night-pro",
     "pmneo.tsimporter",
     "BrennonDenny.vsc-jetbrains-icons-enhanced",
     "Equinusocio.vsc-material-theme-icons",
