@@ -8,53 +8,11 @@
 		],
 		"description": "fn"
 	},
-	"FnAsyncSnippet": {
-		"prefix": "async",
-		"body": [
-			"export async function $0(){",
-			"\t",
-			"}"
-		],
-		"description": "test async"
-	},
-	"Arrow Function": {
-		"prefix": "arror",
-		"body": [
-			"(${1:}) => {",
-			"\t${2:}",
-			"}"
-		]
-	},
-	"Arrow Short Function": {
-		"prefix": "arror",
+	"ArrowFunction": {
+		"prefix": "arrow",
 		"body": [
 			"(${1:}) => ${2:}"
 		]
-	},
-	"If Snippet": {
-		"prefix": "iff",
-		"body": [
-      "if(${1:}) {",
-			"\t${2:}",
-			"}"
-		],
-		"description": "if"
-	},
-	"Test Snippet": {
-		"prefix": "test",
-		"body": [
-      "test('happy', () => {",
-			"$0",
-			"})"
-		],
-		"description": "test"
-	},
-	"Wallaby": {
-		"prefix": "wal",
-		"body": [
-			"/*?*/"
-		],
-		"description": "wallaby log"
 	},
 	"Require": {
 		"prefix": "req",
@@ -94,20 +52,6 @@
 		],
 		"description": "str"
 	},
-	"StringTemplatex": {
-		"prefix": "stx",
-		"body": [
-			"`${${0}}${}`"
-		],
-		"description": "stx"
-	},
-	"Export": {
-		"prefix": "exportx",
-		"body": [
-			"exports.${1:module} = ${1:module}"
-		],
-		"description": "export"
-	},
 	"ExpectSnapshot": {
 		"prefix": "snap",
 		"body": [
@@ -125,7 +69,7 @@
 		]
 	},
 	"LogDebug": {
-		"prefix": "lgd",
+		"prefix": "logg",
 		"body": [
 			"console.log({type: typeof ${1:toLog}})",
 			"console.log({array: Array.isArray(${1:toLog}) ? ${1:toLog}.length : 'not array'})",
