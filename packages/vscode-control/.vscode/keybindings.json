@@ -39,6 +39,13 @@
     }
   },
   {
+    "key": "alt+4",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": "debugger"
+    }
+  },
+  {
     "key": "alt+5",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -50,13 +57,6 @@
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "StringTemplate"
-    }
-  },
-  {
-    "key": "alt+4",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "debugger"
     }
   },
   {
@@ -173,7 +173,7 @@
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
-    "key": "alt+0",
+    "key": "capslock 0",
     "command": "workbench.action.selectTheme"
   },
   {
@@ -269,110 +269,8 @@
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "ctrl+2",
-    "command": "-workbench.action.focusSecondEditorGroup"
-  },
-  {
-    "key": "ctrl+f4",
-    "command": "-workbench.action.closeActiveEditor"
-  },
-  {
-    "key": "ctrl+1",
-    "command": "-explorer.openToSide",
-    "when": "filesExplorerFocus"
-  },
-  {
-    "key": "alt+1",
-    "command": "-workbench.action.openEditorAtIndex1"
-  },
-  {
-    "key": "alt+2",
-    "command": "-workbench.action.openEditorAtIndex2"
-  },
-  {
-    "key": "alt+3",
-    "command": "-workbench.action.openEditorAtIndex3"
-  },
-  {
-    "key": "alt+4",
-    "command": "-workbench.action.openEditorAtIndex4"
-  },
-  {
-    "key": "alt+5",
-    "command": "-workbench.action.openEditorAtIndex5"
-  },
-  {
-    "key": "alt+6",
-    "command": "-workbench.action.openEditorAtIndex6"
-  },
-  {
-    "key": "alt+7",
-    "command": "-workbench.action.openEditorAtIndex7"
-  },
-  {
-    "key": "alt+8",
-    "command": "-workbench.action.openEditorAtIndex8"
-  },
-  {
-    "key": "alt+9",
-    "command": "-workbench.action.openEditorAtIndex9"
-  },
-  {
-    "key": "ctrl+shift+w",
-    "command": "-workbench.action.closeWindow"
-  },
-  {
-    "key": "ctrl+shift+e",
-    "command": "-workbench.view.explorer"
-  },
-  {
-    "key": "ctrl+\\",
-    "command": "-workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "alt+z",
-    "command": "-editor.action.toggleWordWrap"
-  },
-  {
-    "key": "ctrl+shift+g",
-    "command": "-workbench.view.scm"
-  },
-  {
-    "key": "ctrl+1",
-    "command": "-explorer.openToSide",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "-workbench.action.terminal.toggleTerminal"
-  },
-  {
     "key": "alt+z",
     "command": "workbench.action.gotoSymbol"
-  },
-  {
-    "key": "ctrl+shift+o",
-    "command": "-workbench.action.gotoSymbol"
-  },
-  {
-    "key": "ctrl+shift+r",
-    "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
-    "when": "inQuickOpen && inRecentFilesPicker"
-  },
-  {
-    "key": "alt+c",
-    "command": "-workbench.action.terminal.toggleFindCaseSensitive",
-    "when": "terminalFindWidgetFocused"
-  },
-  {
-    "key": "alt+c",
-    "command": "-workbench.action.terminal.toggleFindCaseSensitiveTerminalFocus",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "alt+c",
-    "command": "-toggleFindCaseSensitive",
-    "when": "editorFocus"
   },
   {
     "key": "alt+c",
@@ -380,61 +278,9 @@
     "when": "searchViewletFocus && searchViewletVisible && !fileMatchOrFolderMatchFocus"
   },
   {
-    "key": "ctrl+f5",
-    "command": "-workbench.action.debug.run",
-    "when": "!inDebugMode"
-  },
-  {
-    "key": "ctrl+r",
-    "command": "-workbench.action.gotoSymbol"
-  },
-  {
-    "key": "ctrl+2",
-    "command": "-workbench.action.focusEighthEditorGroup"
-  },
-  {
-    "key": "ctrl+r",
-    "command": "-workbench.action.openRecent"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "-editor.action.formatDocument",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "-editor.action.format",
-    "when": "editorHasFormattingProvider && editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "ctrl+shift+i",
     "command": "-workbench.action.toggleDevTools",
     "when": "isDevelopment"
-  },
-  {
-    "key": "shift+alt+o",
-    "command": "-editor.action.organizeImports",
-    "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
-  },
-  {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.pinEditor",
-    "when": "config.workbench.editor.showTabs && !editorSticky"
-  },
-  {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.unpinEditor",
-    "when": "config.workbench.editor.showTabs && editorSticky"
-  },
-  {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.unpinEditor",
-    "when": "activeEditorIsPinned"
-  },
-  {
-    "key": "ctrl+shift+a",
-    "command": "-relativeImport.quickPick",
-    "when": "editorTextFocus"
   },
   {
     "mac": "cmd+shift+d",
@@ -566,6 +412,135 @@
     "key": "alt+[",
     "command": "-editor.action.inlineSuggest.showPrevious",
     "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "ctrl+f4",
+    "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "-explorer.openToSide",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "alt+1",
+    "command": "-workbench.action.openEditorAtIndex1"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "-workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "alt+2",
+    "command": "-workbench.action.openEditorAtIndex2"
+  },
+  {
+    "key": "alt+3",
+    "command": "-workbench.action.openEditorAtIndex3"
+  },
+  {
+    "key": "alt+4",
+    "command": "-workbench.action.openEditorAtIndex4"
+  },
+  {
+    "key": "alt+6",
+    "command": "-workbench.action.openEditorAtIndex6"
+  },
+  {
+    "key": "alt+7",
+    "command": "-workbench.action.openEditorAtIndex7"
+  },
+  {
+    "key": "alt+8",
+    "command": "-workbench.action.openEditorAtIndex8"
+  },
+  {
+    "key": "alt+9",
+    "command": "-workbench.action.openEditorAtIndex9"
+  },
+  {
+    "key": "alt+5",
+    "command": "-workbench.action.openEditorAtIndex5"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+\\",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "alt+z",
+    "command": "-editor.action.toggleWordWrap"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm"
+  },
+  {
+    "key": "alt+c",
+    "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+    "when": "terminalFindWidgetFocused"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "-workbench.action.focusEighthEditorGroup"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-editor.action.formatDocument",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-editor.action.format",
+    "when": "editorHasFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+f5",
+    "command": "-workbench.action.debug.run",
+    "when": "!inDebugMode"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "key": "alt+c",
+    "command": "-workbench.action.terminal.toggleFindCaseSensitiveTerminalFocus",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+c",
+    "command": "-toggleFindCaseSensitive",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+shift+o",
+    "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
+    "when": "inQuickOpen && inRecentFilesPicker"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "-explorer.openToSide",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "-workbench.view.explorer"
   },
   {
     "key": "ctrl+k ctrl+j",

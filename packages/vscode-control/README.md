@@ -1,5 +1,7 @@
 # Vscode-control
 
+## Visualize keybindings
+
 alt+5
 
 ## Suggestions
