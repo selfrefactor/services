@@ -12,6 +12,7 @@
 		"prefix": "test",
 		"body": [
       "test('$0', () => {",
+			"\t$1",
 			"})"
 		],
 		"description": "test"
