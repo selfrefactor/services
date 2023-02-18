@@ -8,6 +8,14 @@
 		],
 		"description": "fn"
 	},
+	"TestSnippet": {
+		"prefix": "test",
+		"body": [
+      "test('$0', () => {",
+			"})"
+		],
+		"description": "test"
+	},
 	"ArrowFunction": {
 		"prefix": "arrow",
 		"body": [
