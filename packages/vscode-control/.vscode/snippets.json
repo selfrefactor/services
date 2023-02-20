@@ -11,8 +11,8 @@
 	"TestSnippet": {
 		"prefix": "test",
 		"body": [
-      "test('$0', () => {",
-			"\t$1",
+      "test('$1', () => {",
+			"\t$2",
 			"})"
 		],
 		"description": "test"
