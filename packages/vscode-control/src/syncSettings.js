@@ -16,6 +16,8 @@ const FONT_SIZE = 16
 const SUGGEST_LINE_HEIGHT = 15
 const SUGGEST_FONT_SIZE = 14
 const LINE_HEIGHT = 22
+// let FILE_ICON_THEME = 'vscode-gruvbox-icon-theme'
+let FILE_ICON_THEME = 'emoji-file-icons'
 const MONO = defaultTo(
   'MONO', false, 'onoff'
 )
@@ -223,7 +225,7 @@ function getPermanentSettings(){
 
 function getWorkbench(){
   return {
-    'workbench.iconTheme'                     : 'emoji-file-icons',
+    'workbench.iconTheme'                     : FILE_ICON_THEME,
     'workbench.editor.wrapTabs'               : true,
     'workbench.editor.pinnedTabSizing'        : 'shrink',
     'workbench.activityBar.visible'           : false,

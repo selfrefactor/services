@@ -271,6 +271,35 @@
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
+    "command": "magicBeans.sortLines",
+    "key": "ctrl+shift+-"
+  },
+  {
+    "command": "magicBeans.requestRandomFile",
+    "key": "f7"
+  },
+  {
+    "command": "magicBeans.createSpec",
+    "key": "ctrl+shift+0"
+  },
+  {
+    "command": "magicBeans.slowScrollInit",
+    "key": "alt+shift+8"
+  },
+  {
+    "command": "magicBeans.slowScrollStart",
+    "key": "ctrl+shift+8"
+  },
+  {
+    "command": "magicBeans.fixCamelcaseRefactoring",
+    "key": "ctrl+shift+]"
+  },
+  {
+    "command": "magicBeans.copyTrimmed",
+    "key": "alt+c",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "shift+f12",
     "command": "-editor.action.goToReferences",
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"

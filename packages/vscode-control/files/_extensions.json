@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "Cardinal90.multi-cursor-case-preserve",
+    "selfrefactor.niketa-theme-legacy",
     "ms-python.vscode-pylance",
     "dongli.python-preview",
     "LittleFoxTeam.vscode-python-test-adapter",
