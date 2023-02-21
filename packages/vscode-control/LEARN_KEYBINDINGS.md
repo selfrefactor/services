@@ -36,7 +36,7 @@ Command: magicBeans.slowScrollStart
 
 Command: editor.action.insertSnippet
 
-> Snippet: Snippet: commentMultiline
+> Snippet: commentMultiline
 
 ## CTRL  SHIFT  6
 
@@ -166,22 +166,22 @@ Command: magicBeans.copyTrimmed
 
 Command: editor.action.insertSnippet
 
-> Snippet: Snippet: StringTemplate
+> Snippet: StringTemplate
 
 ## ALT  6
 
 Command: editor.action.insertSnippet
 
-> Snippet: Snippet: TestCase
+> Snippet: TestCase
 
 ## ALT  5
 
 Command: editor.action.insertSnippet
 
-> Snippet: Snippet: ArrowFunction
+> Snippet: ArrowFunction
 
 ## ALT  3
 
 Command: editor.action.insertSnippet
 
-> Snippet: Snippet: Function
+> Snippet: Function

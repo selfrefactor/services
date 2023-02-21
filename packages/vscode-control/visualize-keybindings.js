@@ -44,7 +44,7 @@ void (async function main(){
         return interpolate(snippetTemplate, {
           key     : key.toUpperCase(),
           command,
-          snippet : `Snippet: ${ snippetInfo }`,
+          snippet : snippetInfo,
         })
       }
       if (comment){
