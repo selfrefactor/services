@@ -46,17 +46,9 @@ Command: workbench.view.debug
 
 Command: editor.unfoldAll
 
-## CTRL+SHIFT+3
-
-Command: niketa.request.cancelation
-
 ## CTRL+SHIFT+2
 
 Command: workbench.action.editorLayoutTwoColumns
-
-## CTRL+SHIFT+1
-
-Command: niketa.lint.file.alt
 
 ## CTRL+SHIFT+1
 
@@ -121,6 +113,10 @@ Command: references-view.find
 ## CAPSLOCK 6
 
 Command: git.push
+
+## CAPSLOCK 3
+
+Command: niketa.request.cancelation
 
 ## CAPSLOCK 0
 
