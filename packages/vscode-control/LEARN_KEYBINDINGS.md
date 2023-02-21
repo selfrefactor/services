@@ -2,17 +2,9 @@
 
 Command: workbench.action.output.toggleOutput
 
-## F7
-
-Command: magicBeans.requestRandomFile
-
 ## F5
 
 Command: workbench.action.debug.continue
-
-## CTRL+W
-
-Command: workbench.action.closeActiveEditor
 
 ## CTRL+UP
 
@@ -54,10 +46,6 @@ Command: workbench.view.debug
 
 Command: editor.unfoldAll
 
-## CTRL+SHIFT+3
-
-Command: workbench.action.files.openFolder
-
 ## CTRL+SHIFT+2
 
 Command: workbench.action.editorLayoutTwoColumns
@@ -77,10 +65,6 @@ Command: magicBeans.fixCamelcaseRefactoring
 ## CTRL+SHIFT+-
 
 Command: magicBeans.sortLines
-
-## CTRL+R
-
-Command: workbench.action.toggleZenMode
 
 ## CTRL+Q
 
@@ -113,10 +97,6 @@ Command: workbench.view.extensions
 ## CTRL+9
 
 Command: python.execInTerminal
-
-## CTRL+2
-
-Command: workbench.action.openRecent
 
 ## CTLR+SHIFT+3
 

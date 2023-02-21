@@ -207,10 +207,12 @@
   },
   {
     "key": "ctrl+2",
+    "alreadyLearned": true,
     "command": "workbench.action.openRecent"
   },
   {
     "key": "ctrl+shift+3",
+    "alreadyLearned": true,
     "command": "workbench.action.files.openFolder"
   },
   {
@@ -227,6 +229,7 @@
   },
   {
     "key": "ctrl+r",
+    "alreadyLearned": true,
     "command": "workbench.action.toggleZenMode"
   },
   {
@@ -245,7 +248,8 @@
   },
   {
     "key": "ctrl+w",
-    "command": "workbench.action.closeActiveEditor"
+    "command": "workbench.action.closeActiveEditor",
+    "alreadyLearned": true
   },
   {
     "keyx": "ctrl+shift+9",
@@ -277,7 +281,8 @@
   },
   {
     "command": "magicBeans.requestRandomFile",
-    "key": "f7"
+    "key": "f7",
+    "alreadyLearned": true
   },
   {
     "command": "magicBeans.createSpec",
