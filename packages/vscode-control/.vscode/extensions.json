@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "GitLab.gitlab-workflow",
     "azat-io.vscode-gruvbox-icon-theme",
     "mintlify.document",
     "mhutchie.git-graph",
