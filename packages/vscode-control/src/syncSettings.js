@@ -17,7 +17,7 @@ const SUGGEST_LINE_HEIGHT = 15
 const SUGGEST_FONT_SIZE = 14
 const LINE_HEIGHT = 22
 // let FILE_ICON_THEME = 'vscode-gruvbox-icon-theme'
-let FILE_ICON_THEME = 'emoji-file-icons'
+const FILE_ICON_THEME = 'emoji-file-icons'
 const MONO = defaultTo(
   'MONO', false, 'onoff'
 )
@@ -266,8 +266,9 @@ function getGit(){
 function getAdditionalSettings(){
   return {
     // TEMP - it was off before
-    'editor.tabCompletion' : 'on',
+    'editor.tabCompletion'                                   : 'on',
     'zenMode.hideTabs'                                       : false,
+    'gitlab.showProjectMergeRequests'                        : false,
     'editor.colorDecoratorsLimit'                            : 10,
     'editor.scrollbar.vertical'                              : 'visible',
     'git.openRepositoryInParentFolders'                      : 'always',

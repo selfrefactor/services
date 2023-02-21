@@ -46,9 +46,17 @@ Command: workbench.view.debug
 
 Command: editor.unfoldAll
 
+## CTRL+SHIFT+3
+
+Command: niketa.request.cancelation
+
 ## CTRL+SHIFT+2
 
 Command: workbench.action.editorLayoutTwoColumns
+
+## CTRL+SHIFT+1
+
+Command: niketa.lint.file.alt
 
 ## CTRL+SHIFT+1
 
@@ -65,10 +73,6 @@ Command: magicBeans.fixCamelcaseRefactoring
 ## CTRL+SHIFT+-
 
 Command: magicBeans.sortLines
-
-## CTRL+Q
-
-Command: workbench.action.closeOtherEditors
 
 ## CTRL+G
 
@@ -90,17 +94,25 @@ Command: editor.action.goToDeclaration
 
 Command: editor.action.selectHighlights
 
-## CTRL+ALT+M
-
-Command: workbench.view.extensions
-
 ## CTRL+9
 
-Command: python.execInTerminal
+Command: PYTHON ONLY - python.execInTerminal
+
+## CTRL+1
+
+Command: niketa.lint.file
+
+## CTLR+SHIFT+9
+
+Command: github.copilot.openPanelForRange
 
 ## CTLR+SHIFT+3
 
 Command: list.collapseAll
+
+## CTLR+SHIFT+0
+
+Command: editor.foldAll
 
 ## CAPSLOCK F
 
@@ -121,6 +133,10 @@ Command: workbench.action.gotoSymbol
 ## ALT+X
 
 Command: editor.action.deleteLines
+
+## ALT+W
+
+Command: niketa.request.test.run
 
 ## ALT+U
 

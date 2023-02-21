@@ -26,15 +26,17 @@ Command: {{command}}
 void (async function main(){
   const fileContent = await readJson(`${ __dirname }/.vscode/keybindings.json`)
 
-  const filtered = fileContent.filter(({ alreadyLearned, command, comment }) =>
-    command &&
-      !command.startsWith('-') &&
-      !comment?.startsWith('===') &&
-      !alreadyLearned)
+  const filtered = fileContent.filter(({ alreadyLearned, command }) =>
+    command && !command.startsWith('-') && !alreadyLearned)
   const sorted = filtered.sort((a, b) => b.key.localeCompare(a.key))
 
   const outputContent = sorted
-    .map(({ key, command, args, comment }) => {
+    .map(({ key, command: commandInput, args, comment, when }) => {
+      const command =
+        when === 'editorLangId==python' ?
+          `PYTHON ONLY - ${ commandInput }` :
+          commandInput
+
       if (args){
         const snippetInfo = args.snippet ?? args.name
 

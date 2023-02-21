@@ -72,13 +72,11 @@
     }
   },
   {
-    "comment": "==========================EDITOR SHORTCUTS=====================================================",
     "key": "ctlr+shift+0",
     "command": "editor.foldAll",
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "comment": "==========================COPILOT=====================================================",
     "key": "ctlr+shift+9",
     "command": "github.copilot.openPanelForRange"
   },
@@ -98,8 +96,21 @@
     "key": "alt+e",
     "command": "terminal.focus"
   },
+	{
+    "command": "niketa.request.test.run",
+    "key": "alt+w"
+  },
   {
-    "separator": "=========================EDITOR==========================================="
+    "command": "niketa.lint.file",
+    "key": "ctrl+1"
+  },
+  {
+    "command": "niketa.lint.file.alt",
+    "key": "ctrl+shift+1"
+  },
+  {
+    "command": "niketa.request.cancelation",
+    "key": "ctrl+shift+3"
   },
   {
     "key": "alt+i",
@@ -204,10 +215,12 @@
   },
   {
     "key": "ctrl+q",
+    "alreadyLearned": true,
     "command": "workbench.action.closeOtherEditors"
   },
   {
     "key": "ctrl+alt+m",
+    "alreadyLearned": true,
     "command": "workbench.view.extensions"
   },
   {
@@ -226,7 +239,8 @@
   },
   {
     "key": "ctrl+9",
-    "command": "python.execInTerminal"
+    "command": "python.execInTerminal",
+    "when": "editorLangId==python"
   },
   {
     "key": "ctrl+6",
