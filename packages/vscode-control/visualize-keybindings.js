@@ -1,8 +1,28 @@
-const { readJson, outputFile } = require('fs-extra')
 const { interpolate } = require('rambdax')
+const { readJson, outputFile } = require('fs-extra')
 
-let destination = `${ __dirname }/LEARN_KEYBINDINGS.md`
+const destination = `${ __dirname }/LEARN_KEYBINDINGS.md`
+const template = `
+## {{key}}
 
+Command: {{command}}
+`.trim()
+
+const templateWithComment = `
+## {{key}}
+
+Command: {{command}}
+
+> Comment: {{comment}}
+`.trim()
+
+const snippetTemplate = `
+## {{key}}
+
+Command: {{command}}
+
+> Snippet: {{snippet}}
+`.trim()
 void (async function main(){
   const fileContent = await readJson(`${ __dirname }/.vscode/keybindings.json`)
 
@@ -11,16 +31,33 @@ void (async function main(){
       !command.startsWith('-') &&
       !comment?.startsWith('===') &&
       !alreadyLearned)
-  const sorted = filtered.sort((a, b) => a.key.localeCompare(b.key))
+  const sorted = filtered.sort((a, b) => b.key.localeCompare(a.key))
 
-  const outputContent = sorted.map(({ key, command }) => {
-    let template = `
-## {{key}}
+  const outputContent = sorted
+    .map(({ key, command, args, comment }) => {
+      if (args){
+        const snippetInfo = args.snippet ?? args.name
 
-{{command}}
-`.trim()
-    return interpolate(template, { key: key.toUpperCase(), command })
-  }).join('\n\n')
+        return interpolate(snippetTemplate, {
+          key     : key.toUpperCase(),
+          command,
+          snippet : `Snippet: ${ snippetInfo }`,
+        })
+      }
+      if (comment){
+        return interpolate(templateWithComment, {
+          key : key.toUpperCase(),
+          command,
+          comment,
+        })
+      }
+
+      return interpolate(template, {
+        key : key.toUpperCase(),
+        command,
+      })
+    })
+    .join('\n\n')
 
   await outputFile(destination, outputContent)
 })()

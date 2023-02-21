@@ -35,14 +35,14 @@
     "key": "alt+3",
     "command": "editor.action.insertSnippet",
     "args": {
-      "name": "FnSnippet"
+      "name": "Function"
     }
   },
   {
     "key": "alt+6",
     "command": "editor.action.insertSnippet",
     "args": {
-      "name": "TestSnippet"
+      "name": "TestCase"
     }
   },
   {
@@ -263,7 +263,8 @@
   },
   {
     "key": "ctrl+shift+z",
-    "command": "workbench.view.scm"
+    "command": "workbench.view.scm",
+    "comment": "View Git Panel"
   },
   {
     "key": "alt+s",

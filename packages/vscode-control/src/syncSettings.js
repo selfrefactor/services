@@ -172,7 +172,7 @@ function getPermanentSettings(){
     'npm.packageManager'                         : 'yarn',
     'scm.defaultViewMode'                        : 'tree',
     'search.collapseResults'                     : 'alwaysCollapse',
-    'search.seedOnFocus'                         : true,
+    'search.seedOnFocus'                         : false,
     'search.smartCase'                           : true,
     'search.useReplacePreview'                   : false,
     'task.autoDetect'                            : 'off',

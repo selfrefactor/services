@@ -1,211 +1,233 @@
-## ALT+1
+## SHIFT+ALT+S
 
-editor.action.insertSnippet
-
-## ALT+1
-
-editor.action.insertSnippet
-
-## ALT+2
-
-editor.action.insertSnippet
-
-## ALT+2
-
-editor.action.insertSnippet
-
-## ALT+3
-
-editor.action.insertSnippet
-
-## ALT+4
-
-editor.action.insertSnippet
-
-## ALT+5
-
-editor.action.insertSnippet
-
-## ALT+6
-
-editor.action.insertSnippet
-
-## ALT+9
-
-editor.action.insertSnippet
-
-## ALT+A
-
-editor.action.showHover
-
-## ALT+C
-
-magicBeans.copyTrimmed
-
-## ALT+D
-
-workbench.files.action.showActiveFileInExplorer
-
-## ALT+E
-
-terminal.focus
-
-## ALT+F
-
-workbench.files.action.collapseExplorerFolders
-
-## ALT+I
-
-workbench.action.toggleSplitEditorInGroup
-
-## ALT+S
-
-editor.action.goToReferences
-
-## ALT+SHIFT+8
-
-magicBeans.slowScrollInit
-
-## ALT+U
-
-editor.action.smartSelect.expand
-
-## ALT+X
-
-editor.action.deleteLines
-
-## ALT+Z
-
-workbench.action.gotoSymbol
-
-## CAPSLOCK 0
-
-workbench.action.selectTheme
-
-## CAPSLOCK 6
-
-git.push
-
-## CAPSLOCK F
-
-references-view.find
-
-## CTLR+SHIFT+3
-
-list.collapseAll
-
-## CTRL+2
-
-workbench.action.openRecent
-
-## CTRL+9
-
-python.execInTerminal
-
-## CTRL+ALT+M
-
-workbench.view.extensions
-
-## CTRL+CAPSLOCK
-
-editor.action.selectHighlights
-
-## CTRL+D
-
-editor.action.goToDeclaration
-
-## CTRL+DOWN
-
-editor.action.moveLinesDownAction
-
-## CTRL+E
-
-workbench.view.explorer
-
-## CTRL+G
-
-editor.action.goToTypeDefinition
-
-## CTRL+Q
-
-workbench.action.closeOtherEditors
-
-## CTRL+R
-
-workbench.action.toggleZenMode
-
-## CTRL+SHIFT+-
-
-magicBeans.sortLines
-
-## CTRL+SHIFT+]
-
-magicBeans.fixCamelcaseRefactoring
-
-## CTRL+SHIFT+0
-
-magicBeans.createSpec
-
-## CTRL+SHIFT+1
-
-workbench.action.editorLayoutSingle
-
-## CTRL+SHIFT+2
-
-workbench.action.editorLayoutTwoColumns
-
-## CTRL+SHIFT+3
-
-workbench.action.files.openFolder
-
-## CTRL+SHIFT+4
-
-editor.unfoldAll
-
-## CTRL+SHIFT+6
-
-workbench.view.debug
-
-## CTRL+SHIFT+7
-
-editor.action.insertSnippet
-
-## CTRL+SHIFT+8
-
-editor.action.inlineSuggest.showPrevious
-
-## CTRL+SHIFT+8
-
-magicBeans.slowScrollStart
-
-## CTRL+SHIFT+D
-
-editor.action.copyLinesDownAction
-
-## CTRL+SHIFT+R
-
-workbench.action.debug.restart
-
-## CTRL+SHIFT+Z
-
-workbench.view.scm
-
-## CTRL+UP
-
-editor.action.moveLinesUpAction
-
-## CTRL+W
-
-workbench.action.closeActiveEditor
-
-## F5
-
-workbench.action.debug.continue
+Command: workbench.action.output.toggleOutput
 
 ## F7
 
-magicBeans.requestRandomFile
+Command: magicBeans.requestRandomFile
 
-## SHIFT+ALT+S
+## F5
 
-workbench.action.output.toggleOutput
+Command: workbench.action.debug.continue
+
+## CTRL+W
+
+Command: workbench.action.closeActiveEditor
+
+## CTRL+UP
+
+Command: editor.action.moveLinesUpAction
+
+## CTRL+SHIFT+Z
+
+Command: workbench.view.scm
+
+> Comment: View Git Panel
+
+## CTRL+SHIFT+R
+
+Command: workbench.action.debug.restart
+
+## CTRL+SHIFT+D
+
+Command: editor.action.copyLinesDownAction
+
+## CTRL+SHIFT+8
+
+Command: editor.action.inlineSuggest.showPrevious
+
+## CTRL+SHIFT+8
+
+Command: magicBeans.slowScrollStart
+
+## CTRL+SHIFT+7
+
+Command: editor.action.insertSnippet
+
+> Snippet: Snippet: commentMultiline
+
+## CTRL+SHIFT+6
+
+Command: workbench.view.debug
+
+## CTRL+SHIFT+4
+
+Command: editor.unfoldAll
+
+## CTRL+SHIFT+3
+
+Command: workbench.action.files.openFolder
+
+## CTRL+SHIFT+2
+
+Command: workbench.action.editorLayoutTwoColumns
+
+## CTRL+SHIFT+1
+
+Command: workbench.action.editorLayoutSingle
+
+## CTRL+SHIFT+0
+
+Command: magicBeans.createSpec
+
+## CTRL+SHIFT+]
+
+Command: magicBeans.fixCamelcaseRefactoring
+
+## CTRL+SHIFT+-
+
+Command: magicBeans.sortLines
+
+## CTRL+R
+
+Command: workbench.action.toggleZenMode
+
+## CTRL+Q
+
+Command: workbench.action.closeOtherEditors
+
+## CTRL+G
+
+Command: editor.action.goToTypeDefinition
+
+## CTRL+E
+
+Command: workbench.view.explorer
+
+## CTRL+DOWN
+
+Command: editor.action.moveLinesDownAction
+
+## CTRL+D
+
+Command: editor.action.goToDeclaration
+
+## CTRL+CAPSLOCK
+
+Command: editor.action.selectHighlights
+
+## CTRL+ALT+M
+
+Command: workbench.view.extensions
+
+## CTRL+9
+
+Command: python.execInTerminal
+
+## CTRL+2
+
+Command: workbench.action.openRecent
+
+## CTLR+SHIFT+3
+
+Command: list.collapseAll
+
+## CAPSLOCK F
+
+Command: references-view.find
+
+## CAPSLOCK 6
+
+Command: git.push
+
+## CAPSLOCK 0
+
+Command: workbench.action.selectTheme
+
+## ALT+Z
+
+Command: workbench.action.gotoSymbol
+
+## ALT+X
+
+Command: editor.action.deleteLines
+
+## ALT+U
+
+Command: editor.action.smartSelect.expand
+
+## ALT+SHIFT+8
+
+Command: magicBeans.slowScrollInit
+
+## ALT+S
+
+Command: editor.action.goToReferences
+
+## ALT+I
+
+Command: workbench.action.toggleSplitEditorInGroup
+
+## ALT+F
+
+Command: workbench.files.action.collapseExplorerFolders
+
+## ALT+E
+
+Command: terminal.focus
+
+## ALT+D
+
+Command: workbench.files.action.showActiveFileInExplorer
+
+## ALT+C
+
+Command: magicBeans.copyTrimmed
+
+## ALT+A
+
+Command: editor.action.showHover
+
+## ALT+9
+
+Command: editor.action.insertSnippet
+
+> Snippet: Snippet: StringTemplate
+
+## ALT+6
+
+Command: editor.action.insertSnippet
+
+> Snippet: Snippet: TestCase
+
+## ALT+5
+
+Command: editor.action.insertSnippet
+
+> Snippet: Snippet: ArrowFunction
+
+## ALT+4
+
+Command: editor.action.insertSnippet
+
+> Snippet: Snippet: debugger
+
+## ALT+3
+
+Command: editor.action.insertSnippet
+
+> Snippet: Snippet: Function
+
+## ALT+2
+
+Command: editor.action.insertSnippet
+
+> Snippet: Snippet: console.log(${CLIPBOARD}, `${CLIPBOARD}`)$0
+
+## ALT+2
+
+Command: editor.action.insertSnippet
+
+> Snippet: Snippet: print(${CLIPBOARD}, "${CLIPBOARD}")$0
+
+## ALT+1
+
+Command: editor.action.insertSnippet
+
+> Snippet: Snippet: console.log(${1:})
+
+## ALT+1
+
+Command: editor.action.insertSnippet
+
+> Snippet: Snippet: print(${1:})

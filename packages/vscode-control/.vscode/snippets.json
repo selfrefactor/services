@@ -1,5 +1,5 @@
 {
-	"FnSnippet": {
+	"Function": {
 		"prefix": "fnsnippet",
 		"body": [
 			"function $0(){",
@@ -8,7 +8,7 @@
 		],
 		"description": "fn"
 	},
-	"TestSnippet": {
+	"TestCase": {
 		"prefix": "test",
 		"body": [
       "test('$1', () => {",
