@@ -176,38 +176,8 @@ Command: editor.action.insertSnippet
 
 > Snippet: Snippet: ArrowFunction
 
-## ALT+4
-
-Command: editor.action.insertSnippet
-
-> Snippet: Snippet: debugger
-
 ## ALT+3
 
 Command: editor.action.insertSnippet
 
 > Snippet: Snippet: Function
-
-## ALT+2
-
-Command: editor.action.insertSnippet
-
-> Snippet: Snippet: console.log(${CLIPBOARD}, `${CLIPBOARD}`)$0
-
-## ALT+2
-
-Command: editor.action.insertSnippet
-
-> Snippet: Snippet: print(${CLIPBOARD}, "${CLIPBOARD}")$0
-
-## ALT+1
-
-Command: editor.action.insertSnippet
-
-> Snippet: Snippet: console.log(${1:})
-
-## ALT+1
-
-Command: editor.action.insertSnippet
-
-> Snippet: Snippet: print(${1:})

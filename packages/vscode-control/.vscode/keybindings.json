@@ -5,6 +5,7 @@
     "args": {
       "snippet": "console.log(${1:})"
     },
+    "alreadyLearned": true,
     "when": "editorLangId!=python"
   },
   {
@@ -13,6 +14,7 @@
     "args": {
       "snippet": "print(${1:})"
     },
+    "alreadyLearned": true,
     "when": "editorLangId==python"
   },
   {
@@ -21,6 +23,7 @@
     "args": {
       "snippet": "console.log(${CLIPBOARD}, `${CLIPBOARD}`)$0"
     },
+    "alreadyLearned": true,
     "when": "editorLangId!=python"
   },
   {
@@ -29,6 +32,7 @@
     "args": {
       "snippet": "print(${CLIPBOARD}, \"${CLIPBOARD}\")$0"
     },
+    "alreadyLearned": true,
     "when": "editorLangId==python"
   },
   {
@@ -47,6 +51,7 @@
   },
   {
     "key": "alt+4",
+    "alreadyLearned": true,
     "command": "editor.action.insertSnippet",
     "args": {
       "snippet": "debugger"
