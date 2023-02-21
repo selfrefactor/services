@@ -1,9 +1,26 @@
-const { readJson } = require('fs-extra')
+const { readJson, outputFile } = require('fs-extra')
+const { interpolate } = require('rambdax')
 
-void async function main() {
-  const fileContent = await readJson(`${__dirname}/.vscode/keybindings.json`)
+let destination = `${ __dirname }/LEARN_KEYBINDINGS.md`
 
-  const filtered = fileContent.filter(({ command, comment }) => command && !command.startsWith('-') && (!comment || !comment.startsWith('===')))
-  let sorted = filtered.sort((a, b) => a.key.localeCompare(b.key))
-  console.log(sorted)
-}()
+void (async function main(){
+  const fileContent = await readJson(`${ __dirname }/.vscode/keybindings.json`)
+
+  const filtered = fileContent.filter(({ alreadyLearned, command, comment }) =>
+    command &&
+      !command.startsWith('-') &&
+      !comment?.startsWith('===') &&
+      !alreadyLearned)
+  const sorted = filtered.sort((a, b) => a.key.localeCompare(b.key))
+
+  const outputContent = sorted.map(({ key, command }) => {
+    let template = `
+## {{key}}
+
+{{command}}
+`.trim()
+    return interpolate(template, { key: key.toUpperCase(), command })
+  }).join('\n\n')
+
+  await outputFile(destination, outputContent)
+})()
