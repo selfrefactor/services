@@ -126,10 +126,6 @@ Command: workbench.action.selectTheme
 
 Command: workbench.action.gotoSymbol
 
-## ALT+X
-
-Command: editor.action.deleteLines
-
 ## ALT+W
 
 Command: niketa.request.test.run
@@ -165,10 +161,6 @@ Command: workbench.files.action.showActiveFileInExplorer
 ## ALT+C
 
 Command: magicBeans.copyTrimmed
-
-## ALT+A
-
-Command: editor.action.showHover
 
 ## ALT+9
 

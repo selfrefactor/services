@@ -115,10 +115,12 @@
   {
     "key": "alt+a",
     "command": "editor.action.showHover",
+    "alreadyLearned": true,
     "when": "editorTextFocus"
   },
   {
     "key": "alt+x",
+    "alreadyLearned": true,
     "command": "editor.action.deleteLines",
     "when": "textInputFocus && !editorReadonly"
   },

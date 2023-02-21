@@ -1,5 +1,5 @@
 import { copySync, writeJsonSync } from 'fs-extra'
-import { defaultTo } from 'helpers-fn'
+import { defaultTo, execSafe } from 'helpers-fn'
 import { resolve } from 'path'
 import { toDecimal } from 'rambdax'
 
@@ -107,8 +107,9 @@ function syncSnippets(){
   syncFiles(SNIPPETS_SOURCE, TSX_SNIPPETS)
 }
 
-void (function sync(){
+void (async function sync(){
   console.log('START')
+  await execSafe({cwd: resolve(__dirname, '..'), command: 'node visualize-keybindings.js'})
   syncFiles(KEYBINDING_SOURCE, KEYBINDING)
   syncSnippets()
   syncSettings()
@@ -283,16 +284,3 @@ function getAdditionalSettings(){
     'typescript.inlayHints.variableTypes.enabled'            : false,
   }
 }
-
-// function getWallaby(){
-//   return {
-//     'wallaby.showUpdateNotifications'         : false,
-//     'wallaby.strictSSL'                       : false,
-//     'wallaby.startAutomatically'              : false,
-//     'wallaby.suppressExpirationNotifications' : true,
-//     'wallaby.codeLensFeature.debugger'        : false,
-//     'wallaby.codeLensFeature.profiler'        : false,
-//     'wallaby.codeLensFeature.testFilters'     : false,
-//     'wallaby.codeLensFeature.testStory'       : false,
-//   }
-// }
