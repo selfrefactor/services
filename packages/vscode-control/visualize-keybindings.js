@@ -31,7 +31,8 @@ void (async function main(){
   const sorted = filtered.sort((a, b) => b.key.localeCompare(a.key))
 
   const outputContent = sorted
-    .map(({ key, command: commandInput, args, comment, when }) => {
+    .map(({ key: keyInput, command: commandInput, args, comment, when }) => {
+      const key = keyInput.split('+').join('  ')
       const command =
         when === 'editorLangId==python' ?
           `PYTHON ONLY - ${ commandInput }` :
