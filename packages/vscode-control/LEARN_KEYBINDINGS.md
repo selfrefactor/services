@@ -140,11 +140,11 @@ Command: magicBeans.slowScrollInit
 
 ## ALT  S
 
-Command: editor.action.goToReferences
+Command: workbench.action.toggleSplitEditorInGroup
 
 ## ALT  I
 
-Command: workbench.action.toggleSplitEditorInGroup
+Command: editor.action.goToReferences
 
 ## ALT  F
 
