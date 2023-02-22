@@ -1,3 +1,5 @@
+# Keybindings
+
 ## SHIFT  ALT  S
 
 Command: workbench.action.output.toggleOutput
@@ -185,3 +187,50 @@ Command: editor.action.insertSnippet
 Command: editor.action.insertSnippet
 
 > Snippet: Function
+
+## Convenient keys
+
+* ctrl+0
+* ctrl+2
+* ctrl+3
+* ctrl+4
+* ctrl+5
+* ctrl+6
+* ctrl+7
+* ctrl+8
+* ctrl+z
+* ctrl+x
+* ctrl+c
+* ctrl+v
+* ctrl+a
+* ctrl+s
+* ctrl+q
+* ctrl+w
+* ctrl+r
+* ctrl+-
+* ctrl+=
+* alt+0
+* alt+1
+* alt+2
+* alt+4
+* alt+7
+* alt+8
+* alt+x
+* alt+v
+* alt+a
+* alt+q
+* alt+r
+* alt+-
+* alt+=
+* ctrl+shift+3
+* ctrl+shift+5
+* ctrl+shift+9
+* ctrl+shift+x
+* ctrl+shift+c
+* ctrl+shift+v
+* ctrl+shift+a
+* ctrl+shift+s
+* ctrl+shift+q
+* ctrl+shift+w
+* ctrl+shift+e
+* ctrl+shift+=

@@ -23,6 +23,40 @@ Command: {{command}}
 
 > Snippet: {{snippet}}
 `.trim()
+
+const CONVENIENT_BUTTONS = [
+  '0',
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  'z',
+  'x',
+  'c',
+  'v',
+  'a',
+  's',
+  'd',
+  'q',
+  'w',
+  'e',
+  'r',
+  '-',
+  '=',
+]
+
+let CONVENIENT_KEYS = [ 'ctrl', 'alt', 'ctrl+shift' ].flatMap(x =>
+  CONVENIENT_BUTTONS.map(y => `${ x }+${ y }`))
+
+const removeFromConvenientKeys = key => {
+  CONVENIENT_KEYS = CONVENIENT_KEYS.filter(x => x !== key)
+}
+
 void (async function main(){
   const fileContent = await readJson(`${ __dirname }/.vscode/keybindings.json`)
 
@@ -32,6 +66,7 @@ void (async function main(){
 
   const outputContent = sorted
     .map(({ key: keyInput, command: commandInput, args, comment, when }) => {
+      removeFromConvenientKeys(keyInput)
       const key = keyInput.split('+').join('  ')
       const command =
         when === 'editorLangId==python' ?
@@ -62,5 +97,15 @@ void (async function main(){
     })
     .join('\n\n')
 
-  await outputFile(destination, outputContent)
+  const finalContent = `
+# Keybindings
+
+${ outputContent }
+
+## Convenient keys
+
+${ CONVENIENT_KEYS.map(x => `* ${ x }`).join('\n') }
+`.trim()
+
+  await outputFile(destination, finalContent)
 })()
