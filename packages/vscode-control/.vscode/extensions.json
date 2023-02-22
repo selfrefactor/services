@@ -5,26 +5,15 @@
     "mintlify.document",
     "mhutchie.git-graph",
     "mightbesimon.emoji-icons",
-    "mattpocock.ts-error-translator",
     "fabiospampinato.vscode-open-in-node-modules",
     "GitHub.codespaces",
-    "ecmel.vscode-html-css",
-    "ms-vscode.test-adapter-converter",
-    "hbenl.vscode-test-explorer",
-    "imPavan.theme-editor",
-    "vespa-dev-works.jestRunIt",
-    "Angular.ng-template",
-    "bcanzanella.openmatchingfiles",
-    "ghaschel.vscode-angular-html",
     "mrmlnc.vscode-scss",
     "ms-vscode.vscode-typescript-next",
     "naumovs.color-highlight",
-    "quilicicf.markdown-spec-formatter",
     "selfrefactor.Niketa-theme",
     "selfrefactor.magic-beans",
     "selfrefactor.niketa-dark-theme",
     "selfrefactor.niketatools",
-    "syler.sass-indented",
-    "tlent.jest-snapshot-language-support"
+    "syler.sass-indented"
   ]
 }

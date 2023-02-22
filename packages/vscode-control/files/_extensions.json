@@ -1,5 +1,16 @@
 {
   "recommendations": [
+    "quilicicf.markdown-spec-formatter",
+    "ghaschel.vscode-angular-html",
+    "vespa-dev-works.jestRunIt",
+    "Angular.ng-template",
+    "bcanzanella.openmatchingfiles",
+    "imPavan.theme-editor",
+    "hbenl.vscode-test-explorer",
+    "ms-vscode.test-adapter-converter",
+    "ecmel.vscode-html-css",
+    "mattpocock.ts-error-translator",
+    "tlent.jest-snapshot-language-support",
     "Cardinal90.multi-cursor-case-preserve",
     "selfrefactor.niketa-theme-legacy",
     "ms-python.vscode-pylance",
