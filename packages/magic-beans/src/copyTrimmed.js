@@ -22,7 +22,7 @@ function applyCopyTrimmed(
   )
   const withLast = update(
     lines.length - 1,
-    last(lines).trimRight(),
+    last(lines).trim(),
     withFirst
   )
   copy(withLast.join('\n'))
