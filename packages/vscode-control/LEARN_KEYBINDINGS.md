@@ -30,10 +30,6 @@ Command: editor.action.copyLinesDownAction
 
 Command: editor.action.inlineSuggest.showPrevious
 
-## CTRL  SHIFT  8
-
-Command: magicBeans.slowScrollStart
-
 ## CTRL  SHIFT  7
 
 Command: editor.action.insertSnippet
@@ -44,7 +40,7 @@ Command: editor.action.insertSnippet
 
 Command: workbench.view.debug
 
-## CTRL  SHIFT  4
+## CTRL  SHIFT  5
 
 Command: editor.unfoldAll
 
@@ -59,10 +55,6 @@ Command: workbench.action.editorLayoutSingle
 ## CTRL  SHIFT  0
 
 Command: magicBeans.createSpec
-
-## CTRL  SHIFT  ]
-
-Command: magicBeans.fixCamelcaseRefactoring
 
 ## CTRL  SHIFT  -
 
@@ -112,6 +104,10 @@ Command: editor.foldAll
 
 Command: references-view.find
 
+## CAPSLOCK 8
+
+Command: magicBeans.slowScrollStart
+
 ## CAPSLOCK 6
 
 Command: git.push
@@ -123,6 +119,10 @@ Command: niketa.request.cancelation
 ## CAPSLOCK 0
 
 Command: workbench.action.selectTheme
+
+## CAPSLOCK ]
+
+Command: magicBeans.fixCamelcaseRefactoring
 
 ## ALT  Z
 
@@ -213,7 +213,7 @@ Command: editor.action.insertSnippet
 * alt+r
 * alt+-
 * alt+=
-* ctrl+shift+5
+* ctrl+shift+3
 * ctrl+shift+9
 * ctrl+shift+x
 * ctrl+shift+c

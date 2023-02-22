@@ -151,7 +151,7 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+shift+4",
+    "key": "ctrl+shift+5",
     "command": "editor.unfoldAll",
     "when": "editorTextFocus && foldingEnabled"
   },
@@ -227,7 +227,7 @@
     "command": "workbench.action.openRecent"
   },
   {
-    "key": "ctrl+shift+3",
+    "key": "ctrl+shift+4",
     "alreadyLearned": true,
     "command": "workbench.action.files.openFolder"
   },
@@ -269,7 +269,7 @@
     "alreadyLearned": true
   },
   {
-    "keyx": "ctrl+shift+9",
+    "keyx": "capslock r",
     "commandx": "workbench.action.closeEditorsToTheRight"
   },
   {
@@ -311,11 +311,11 @@
   },
   {
     "command": "magicBeans.slowScrollStart",
-    "key": "ctrl+shift+8"
+    "key": "capslock 8"
   },
   {
     "command": "magicBeans.fixCamelcaseRefactoring",
-    "key": "ctrl+shift+]"
+    "key": "capslock ]"
   },
   {
     "command": "magicBeans.copyTrimmed",
