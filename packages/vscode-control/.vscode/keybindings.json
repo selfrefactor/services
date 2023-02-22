@@ -194,7 +194,7 @@
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
-    "key": "capslock 0",
+    "key": "ctrl+0",
     "command": "workbench.action.selectTheme"
   },
   {

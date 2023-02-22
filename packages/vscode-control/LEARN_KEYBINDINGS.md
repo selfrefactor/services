@@ -96,6 +96,10 @@ Command: PYTHON ONLY - python.execInTerminal
 
 Command: niketa.lint.file
 
+## CTRL  0
+
+Command: workbench.action.selectTheme
+
 ## CTLR  SHIFT  9
 
 Command: github.copilot.openPanelForRange
@@ -119,10 +123,6 @@ Command: git.push
 ## CAPSLOCK 3
 
 Command: niketa.request.cancelation
-
-## CAPSLOCK 0
-
-Command: workbench.action.selectTheme
 
 ## ALT  Z
 
@@ -190,7 +190,6 @@ Command: editor.action.insertSnippet
 
 ## Convenient keys
 
-* ctrl+0
 * ctrl+2
 * ctrl+3
 * ctrl+4

@@ -1,6 +1,7 @@
 {
 	"scripts": {
 		"x": "node visualize-keybindings && run d update keybindings",
+		"xx": "node visualize-keybindings && yarn on",
 		"small": "yarn small:1&&yarn small:2&&run d",
 		"smalld": "THEME=HomeMovies yarn small",
 		"small:1": "MODE=small node syncSettings",
