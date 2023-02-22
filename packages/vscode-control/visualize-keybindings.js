@@ -60,13 +60,15 @@ const removeFromConvenientKeys = key => {
 void (async function main(){
   const fileContent = await readJson(`${ __dirname }/.vscode/keybindings.json`)
 
-  const filtered = fileContent.filter(({ alreadyLearned, command }) =>
-    command && !command.startsWith('-') && !alreadyLearned)
+  const filtered = fileContent.filter(({ command }) =>
+    command && !command.startsWith('-')).filter(({key, alreadyLearned}) => {
+      removeFromConvenientKeys(key)
+      return !alreadyLearned
+    })
   const sorted = filtered.sort((a, b) => b.key.localeCompare(a.key))
 
   const outputContent = sorted
     .map(({ key: keyInput, command: commandInput, args, comment, when }) => {
-      removeFromConvenientKeys(keyInput)
       const key = keyInput.split('+').join('  ')
       const command =
         when === 'editorLangId==python' ?

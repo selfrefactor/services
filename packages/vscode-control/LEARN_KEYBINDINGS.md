@@ -191,7 +191,6 @@ Command: editor.action.insertSnippet
 ## Convenient keys
 
 * ctrl+0
-* ctrl+2
 * ctrl+3
 * ctrl+4
 * ctrl+5
@@ -204,25 +203,16 @@ Command: editor.action.insertSnippet
 * ctrl+v
 * ctrl+a
 * ctrl+s
-* ctrl+q
-* ctrl+w
-* ctrl+r
 * ctrl+-
 * ctrl+=
 * alt+0
-* alt+1
-* alt+2
-* alt+4
 * alt+7
 * alt+8
-* alt+x
 * alt+v
-* alt+a
 * alt+q
 * alt+r
 * alt+-
 * alt+=
-* ctrl+shift+3
 * ctrl+shift+5
 * ctrl+shift+9
 * ctrl+shift+x
