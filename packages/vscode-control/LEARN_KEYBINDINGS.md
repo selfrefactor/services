@@ -170,19 +170,19 @@ Command: editor.action.insertSnippet
 
 > Snippet: StringTemplate
 
-## ALT  6
+## ALT  7
 
 Command: editor.action.insertSnippet
 
 > Snippet: TestCase
 
-## ALT  5
+## ALT  6
 
 Command: editor.action.insertSnippet
 
 > Snippet: ArrowFunction
 
-## ALT  3
+## ALT  5
 
 Command: editor.action.insertSnippet
 
@@ -206,7 +206,7 @@ Command: editor.action.insertSnippet
 * ctrl+-
 * ctrl+=
 * alt+0
-* alt+7
+* alt+3
 * alt+8
 * alt+v
 * alt+q

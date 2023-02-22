@@ -36,14 +36,14 @@
     "when": "editorLangId==python"
   },
   {
-    "key": "alt+3",
+    "key": "alt+5",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "Function"
     }
   },
   {
-    "key": "alt+6",
+    "key": "alt+7",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "TestCase"
@@ -58,7 +58,7 @@
     }
   },
   {
-    "key": "alt+5",
+    "key": "alt+6",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "ArrowFunction"
