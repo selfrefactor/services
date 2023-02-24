@@ -1,5 +1,6 @@
 {
   "editor.suggest.selectionMode.SKIP": "whenTriggerCharacter",
+  "editor.suggest.selectionMode": "whenTriggerCharacter",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.bracketPairColorization.enabled": false,
@@ -113,6 +114,7 @@
   "json.maxItemsComputed": 1000,
   "npm.autoDetect": "off",
   "npm.packageManager": "yarn",
+  "npm.fetchOnlinePackageInfo": true,
   "scm.defaultViewMode": "tree",
   "search.collapseResults": "alwaysCollapse",
   "search.seedOnFocus": false,
