@@ -109,12 +109,27 @@ function syncSnippets(){
 
 void (async function sync(){
   console.log('START')
-  await execSafe({cwd: resolve(__dirname, '..'), command: 'node visualize-keybindings.js'})
+  await execSafe({
+    cwd     : resolve(__dirname, '..'),
+    command : 'node visualize-keybindings.js',
+  })
   syncFiles(KEYBINDING_SOURCE, KEYBINDING)
   syncSnippets()
   syncSettings()
   console.log('END')
 })()
+
+function getPermanentSettings(){
+  return {
+    ...getEditor(),
+    ...getExplorer(),
+    ...getWallaby(),
+    ...getGit(),
+    ...getWorkbench(),
+    ...getAdditionalSettings(),
+  }
+}
+
 
 function getEditor(){
   return {
@@ -144,82 +159,6 @@ function getEditor(){
       comments : 'off',
       strings  : 'off',
       other    : 'off',
-    },
-  }
-}
-
-function getPermanentSettings(){
-  return {
-    ...getAdditionalSettings(),
-    ...getEditor(),
-    ...getExplorer(),
-    ...getGit(),
-    ...getWorkbench(),
-    // click to go to recent files
-    'window.commandCenter'                       : true,
-    'window.titleBarStyle'                       : 'custom',
-    // without comments
-    'breadcrumbs.enabled'                        : false,
-    'debug.inlineValues'                         : 'off',
-    'debug.javascript.usePreview'                : true,
-    'files.enableTrash'                          : false,
-    'files.hotExit'                              : 'off',
-    'git.autofetch'                              : true,
-    'javascript.updateImportsOnFileMove.enabled' : 'always',
-    'js/ts.implicitProjectConfig.checkJs'        : true,
-    'json.format.enable'                         : false,
-    'json.maxItemsComputed'                      : 1000,
-    'npm.autoDetect'                             : 'off',
-    'npm.packageManager'                         : 'yarn',
-    'scm.defaultViewMode'                        : 'tree',
-    'search.collapseResults'                     : 'alwaysCollapse',
-    'search.seedOnFocus'                         : false,
-    'search.smartCase'                           : true,
-    'search.useReplacePreview'                   : false,
-    'task.autoDetect'                            : 'off',
-    'task.quickOpen.detail'                      : false,
-    'telemetry.enableTelemetry'                  : false,
-    'telemetry.telemetryLevel'                   : 'off',
-    'terminal.integrated.gpuAcceleration'        : 'off',
-    'typescript.updateImportsOnFileMove.enabled' : 'always',
-    'update.mode'                                : 'none',
-    'window.title'                               : '${activeFolderMedium}/${activeEditorShort}',
-    'zenMode.restore'                            : false,
-    'github.copilot.enable'                      : {
-      '*'         : true,
-      'yaml'      : true,
-      'plaintext' : true,
-      'markdown'  : true,
-    },
-    'magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS' : [
-      '.html',
-      '.js',
-      '.jsx',
-      '.tsx',
-      '.css',
-      '.scss',
-      '.py',
-      '.ts',
-      '.feature',
-    ],
-    'files.exclude' : {
-      '.cache'            : true,
-      '**/.awcache'       : true,
-      '**/.cache-loader'  : true,
-      '**/.DS_Store'      : false,
-      '**/.git'           : true,
-      '**/.idea'          : true,
-      '**/.hg'            : false,
-      '**/.svn'           : false,
-      '**/coverage'       : true,
-      '**/coverage-ts'    : true,
-      '**/CVS'            : false,
-      '**/node_modules'   : true,
-      '**/yarn-error.log' : true,
-      'dev_dist'          : true,
-      'dist'              : false,
-      'docs'              : false,
-      'yarn.lock'         : true,
     },
   }
 }
@@ -266,7 +205,6 @@ function getGit(){
 
 function getAdditionalSettings(){
   return {
-    // TEMP - it was off before
     'editor.tabCompletion'                                   : 'on',
     'zenMode.hideTabs'                                       : false,
     'gitlab.showProjectMergeRequests'                        : false,
@@ -282,5 +220,84 @@ function getAdditionalSettings(){
     'typescript.inlayHints.functionLikeReturnTypes.enabled'  : false,
     'typescript.inlayHints.parameterTypes.enabled'           : false,
     'typescript.inlayHints.variableTypes.enabled'            : false,
+    // click to go to recent files
+    'window.commandCenter'                       : true,
+    'window.titleBarStyle'                       : 'custom',
+    'window.title'                               : '${activeFolderMedium}/${activeEditorShort}',
+    // without comments
+    'breadcrumbs.enabled'                        : false,
+    'debug.inlineValues'                         : 'off',
+    'debug.javascript.usePreview'                : true,
+    'files.enableTrash'                          : false,
+    'files.hotExit'                              : 'off',
+    'git.autofetch'                              : true,
+    'javascript.updateImportsOnFileMove.enabled' : 'always',
+    'js/ts.implicitProjectConfig.checkJs'        : true,
+    'json.format.enable'                         : false,
+    'json.maxItemsComputed'                      : 1000,
+    'npm.autoDetect'                             : 'off',
+    'npm.packageManager'                         : 'yarn',
+    'scm.defaultViewMode'                        : 'tree',
+    'search.collapseResults'                     : 'alwaysCollapse',
+    'search.seedOnFocus'                         : false,
+    'search.smartCase'                           : true,
+    'search.useReplacePreview'                   : false,
+    'task.autoDetect'                            : 'off',
+    'task.quickOpen.detail'                      : false,
+    'telemetry.enableTelemetry'                  : false,
+    'telemetry.telemetryLevel'                   : 'off',
+    'terminal.integrated.gpuAcceleration'        : 'off',
+    'typescript.updateImportsOnFileMove.enabled' : 'always',
+    'update.mode'                                : 'none',
+    'zenMode.restore'                            : false,
+    'github.copilot.enable'                      : {
+      '*'         : true,
+      'yaml'      : true,
+      'plaintext' : true,
+      'markdown'  : true,
+    },
+    'magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS' : [
+      '.html',
+      '.js',
+      '.jsx',
+      '.tsx',
+      '.css',
+      '.scss',
+      '.py',
+      '.ts',
+      '.feature',
+    ],
+    'files.exclude' : {
+      '.cache'            : true,
+      '**/.awcache'       : true,
+      '**/.cache-loader'  : true,
+      '**/.DS_Store'      : false,
+      '**/.git'           : true,
+      '**/.idea'          : true,
+      '**/.hg'            : false,
+      '**/.svn'           : false,
+      '**/coverage'       : true,
+      '**/coverage-ts'    : true,
+      '**/CVS'            : false,
+      '**/node_modules'   : true,
+      '**/yarn-error.log' : true,
+      'dev_dist'          : true,
+      'dist'              : false,
+      'docs'              : false,
+      'yarn.lock'         : true,
+    },
+  }
+}
+
+function getWallaby(){
+  return {
+    'wallaby.showUpdateNotifications'         : false,
+    'wallaby.strictSSL'                       : false,
+    'wallaby.startAutomatically'              : false,
+    'wallaby.suppressExpirationNotifications' : true,
+    'wallaby.codeLensFeature.debugger'        : false,
+    'wallaby.codeLensFeature.profiler'        : false,
+    'wallaby.codeLensFeature.testFilters'     : false,
+    'wallaby.codeLensFeature.testStory'       : false,
   }
 }
