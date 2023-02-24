@@ -65,7 +65,11 @@ void (async function main(){
       removeFromConvenientKeys(key)
       return !alreadyLearned
     })
-  const sorted = filtered.sort((a, b) => b.key.localeCompare(a.key))
+  const sorted = filtered.sort((a, b) => {
+    if(a.priority) return -1
+    if(b.priority) return 1
+    return b.key.localeCompare(a.key)
+  })
 
   const outputContent = sorted
     .map(({ key: keyInput, command: commandInput, args, comment, when }) => {

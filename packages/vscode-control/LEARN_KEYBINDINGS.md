@@ -1,5 +1,9 @@
 # Keybindings
 
+## ALT  I
+
+Command: editor.action.goToReferences
+
 ## SHIFT  ALT  S
 
 Command: workbench.action.output.toggleOutput
@@ -143,10 +147,6 @@ Command: magicBeans.slowScrollInit
 ## ALT  S
 
 Command: workbench.action.toggleSplitEditorInGroup
-
-## ALT  I
-
-Command: editor.action.goToReferences
 
 ## ALT  F
 

@@ -290,6 +290,7 @@
   {
     "key": "alt+i",
     "command": "editor.action.goToReferences",
+    "priority": true,
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
