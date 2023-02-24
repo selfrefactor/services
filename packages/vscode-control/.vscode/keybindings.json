@@ -294,6 +294,22 @@
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
+    "key": "alt+shift+4",
+    "command": "wallaby.start"
+  },
+  {
+    "key": "alt+shift+5",
+    "command": "wallaby.stop"
+  },
+  {
+    "key": "alt+shift+6",
+    "command": "wallaby.updateFileSnapshots"
+  },
+  {
+    "key": "shift+alt+7",
+    "command": "wallaby.addToExclusiveTestRun"
+  },
+  {
     "command": "magicBeans.sortLines",
     "key": "ctrl+shift+-"
   },

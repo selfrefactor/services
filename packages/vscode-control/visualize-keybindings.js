@@ -50,7 +50,7 @@ const CONVENIENT_BUTTONS = [
   '=',
 ]
 
-let CONVENIENT_KEYS = [ 'ctrl', 'alt', 'ctrl+shift' ].flatMap(x =>
+let CONVENIENT_KEYS = [ 'ctrl', 'alt', 'ctrl+shift', 'alt+shift' ].flatMap(x =>
   CONVENIENT_BUTTONS.map(y => `${ x }+${ y }`))
 
 const removeFromConvenientKeys = key => {
