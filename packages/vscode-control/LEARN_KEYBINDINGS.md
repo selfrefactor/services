@@ -144,6 +144,10 @@ Command: niketa.request.test.run
 
 Command: editor.action.smartSelect.expand
 
+## ALT  T
+
+Command: terminal.focus
+
 ## ALT  SHIFT  8
 
 Command: magicBeans.slowScrollInit
@@ -167,10 +171,6 @@ Command: wallaby.start
 ## ALT  S
 
 Command: workbench.action.toggleSplitEditorInGroup
-
-## ALT  E
-
-Command: terminal.focus
 
 ## ALT  D
 
@@ -231,6 +231,7 @@ Command: editor.action.insertSnippet
 * alt+3
 * alt+v
 * alt+q
+* alt+e
 * alt+-
 * alt+=
 * ctrl+shift+3

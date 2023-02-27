@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "ReacTreeDev.reactree",
+    "CucumberOpen.cucumber-official",
     "GitLab.gitlab-workflow",
     "azat-io.vscode-gruvbox-icon-theme",
     "mintlify.document",

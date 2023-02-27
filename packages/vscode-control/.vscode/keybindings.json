@@ -100,7 +100,7 @@
     }
   },
   {
-    "key": "alt+e",
+    "key": "alt+t",
     "command": "terminal.focus"
   },
 	{
