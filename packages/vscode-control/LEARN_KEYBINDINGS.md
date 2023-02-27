@@ -186,6 +186,12 @@ Command: editor.action.insertSnippet
 
 > Snippet: StringTemplate
 
+## ALT  8
+
+Command: editor.action.insertSnippet
+
+> Snippet: Expect
+
 ## ALT  7
 
 Command: editor.action.insertSnippet
@@ -223,7 +229,6 @@ Command: editor.action.insertSnippet
 * ctrl+=
 * alt+0
 * alt+3
-* alt+8
 * alt+v
 * alt+q
 * alt+r

@@ -77,6 +77,15 @@
 			").toMatchInlineSnapshot()"
 		]
 	},
+	"Expect": {
+		"prefix": "exp",
+		"body": [
+			"expect(",
+			"\t$0",
+			").toEqual($1)"
+		],
+		"description": "ext"
+	},
 	"LogDebug": {
 		"prefix": "logg",
 		"body": [

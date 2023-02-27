@@ -50,6 +50,13 @@
     }
   },
   {
+    "key": "alt+8",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "name": "Expect"
+    }
+  },
+  {
     "key": "alt+4",
     "alreadyLearned": true,
     "command": "editor.action.insertSnippet",
