@@ -306,7 +306,7 @@
     "command": "wallaby.updateFileSnapshots"
   },
   {
-    "key": "shift+alt+7",
+    "key": "alt+shift+7",
     "command": "wallaby.addToExclusiveTestRun"
   },
   {

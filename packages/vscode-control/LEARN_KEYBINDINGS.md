@@ -8,10 +8,6 @@ Command: editor.action.goToReferences
 
 Command: workbench.action.output.toggleOutput
 
-## SHIFT  ALT  7
-
-Command: wallaby.addToExclusiveTestRun
-
 ## F5
 
 Command: workbench.action.debug.continue
@@ -148,6 +144,10 @@ Command: editor.action.smartSelect.expand
 
 Command: magicBeans.slowScrollInit
 
+## ALT  SHIFT  7
+
+Command: wallaby.addToExclusiveTestRun
+
 ## ALT  SHIFT  6
 
 Command: wallaby.updateFileSnapshots
@@ -244,7 +244,6 @@ Command: editor.action.insertSnippet
 * alt+shift+1
 * alt+shift+2
 * alt+shift+3
-* alt+shift+7
 * alt+shift+9
 * alt+shift+z
 * alt+shift+x
