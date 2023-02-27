@@ -1,6 +1,6 @@
 # Keybindings
 
-## ALT  I
+## ALT  R
 
 Command: editor.action.goToReferences
 
@@ -231,7 +231,6 @@ Command: editor.action.insertSnippet
 * alt+3
 * alt+v
 * alt+q
-* alt+r
 * alt+-
 * alt+=
 * ctrl+shift+3
