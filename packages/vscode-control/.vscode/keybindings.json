@@ -309,11 +309,11 @@
     "command": "wallaby.stop"
   },
   {
-    "key": "alt+shift+6",
+    "key": "alt+shift+7",
     "command": "wallaby.updateFileSnapshots"
   },
   {
-    "key": "alt+shift+7",
+    "key": "alt+shift+6",
     "command": "wallaby.addToExclusiveTestRun"
   },
   {

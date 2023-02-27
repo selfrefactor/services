@@ -146,11 +146,11 @@ Command: magicBeans.slowScrollInit
 
 ## ALT  SHIFT  7
 
-Command: wallaby.addToExclusiveTestRun
+Command: wallaby.updateFileSnapshots
 
 ## ALT  SHIFT  6
 
-Command: wallaby.updateFileSnapshots
+Command: wallaby.addToExclusiveTestRun
 
 ## ALT  SHIFT  5
 
