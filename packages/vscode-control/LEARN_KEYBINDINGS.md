@@ -64,6 +64,10 @@ Command: magicBeans.createSpec
 
 Command: magicBeans.sortLines
 
+## CTRL  R
+
+Command: workbench.files.action.collapseExplorerFolders
+
 ## CTRL  G
 
 Command: editor.action.goToTypeDefinition
@@ -163,10 +167,6 @@ Command: wallaby.start
 ## ALT  S
 
 Command: workbench.action.toggleSplitEditorInGroup
-
-## ALT  F
-
-Command: workbench.files.action.collapseExplorerFolders
 
 ## ALT  E
 

@@ -197,7 +197,7 @@
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "alt+f",
+    "key": "ctrl+r",
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
@@ -252,7 +252,7 @@
     "command": "-workbench.action.focusSixthEditorGroup"
   },
   {
-    "key": "ctrl+r",
+    "key": "alt+f",
     "alreadyLearned": true,
     "command": "workbench.action.toggleZenMode"
   },
