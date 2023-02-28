@@ -103,7 +103,7 @@
     "key": "alt+t",
     "command": "terminal.focus"
   },
-	{
+  {
     "command": "niketa.request.test.run",
     "key": "alt+w"
   },
@@ -183,6 +183,16 @@
     "key": "ctrl+shift+f",
     "command": "-cursorRightSelect",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "capslock =",
+    "command": "editor.action.fontZoomOut",
+    "priority": true
+  },
+  {
+    "key": "capslock -",
+    "command": "editor.action.fontZoomOut",
+    "priority": true
   },
   {
     "key": "ctrl+capslock",

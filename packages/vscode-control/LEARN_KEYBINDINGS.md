@@ -4,6 +4,14 @@
 
 Command: editor.action.goToReferences
 
+## CAPSLOCK -
+
+Command: editor.action.fontZoomOut
+
+## CAPSLOCK =
+
+Command: editor.action.fontZoomOut
+
 ## ALT  SHIFT  F
 
 Command: references-view.findReferences
@@ -298,5 +306,3 @@ Command: editor.action.insertSnippet
 * capslock w
 * capslock x
 * capslock z
-* capslock -
-* capslock =

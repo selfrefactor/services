@@ -12,10 +12,10 @@ import {
   TSX_SNIPPETS,
 } from './constants'
 
-const FONT_SIZE = 16
+const FONT_SIZE = 18
 const SUGGEST_LINE_HEIGHT = 15
 const SUGGEST_FONT_SIZE = 14
-const LINE_HEIGHT = 22
+const LINE_HEIGHT = 23
 // let FILE_ICON_THEME = 'vscode-gruvbox-icon-theme'
 const FILE_ICON_THEME = 'emoji-file-icons'
 const MONO = defaultTo(
