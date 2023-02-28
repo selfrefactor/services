@@ -224,7 +224,7 @@
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "ctrl+alt+m",
+    "key": "capslock m",
     "alreadyLearned": true,
     "command": "workbench.view.extensions"
   },

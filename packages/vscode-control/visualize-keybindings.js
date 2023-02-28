@@ -35,23 +35,25 @@ const CONVENIENT_BUTTONS = [
   '7',
   '8',
   '9',
-  'z',
-  'x',
-  'c',
-  'v',
   'a',
-  's',
+  'c',
   'd',
-  'q',
-  'w',
   'e',
+  'g',
+  'q',
   'r',
+  's',
+  't',
+  'v',
+  'w',
+  'x',
+  'z',
   '-',
   '=',
 ]
 
-let CONVENIENT_KEYS = [ 'ctrl', 'alt', 'ctrl+shift', 'alt+shift' ].flatMap(x =>
-  CONVENIENT_BUTTONS.map(y => `${ x }+${ y }`))
+let CONVENIENT_KEYS = [ 'ctrl', 'alt', 'ctrl+shift', 'alt+shift', 'capslock' ].flatMap(x =>
+  CONVENIENT_BUTTONS.map(y => x === 'capslock' ? `${x} ${y}` : `${ x }+${ y }`))
 
 const removeFromConvenientKeys = key => {
   CONVENIENT_KEYS = CONVENIENT_KEYS.filter(x => x !== key)

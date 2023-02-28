@@ -219,47 +219,74 @@ Command: editor.action.insertSnippet
 * ctrl+6
 * ctrl+7
 * ctrl+8
-* ctrl+z
-* ctrl+x
-* ctrl+c
-* ctrl+v
 * ctrl+a
+* ctrl+c
 * ctrl+s
+* ctrl+t
+* ctrl+v
+* ctrl+x
+* ctrl+z
 * ctrl+-
 * ctrl+=
 * alt+0
 * alt+3
-* alt+v
-* alt+q
 * alt+e
+* alt+g
+* alt+q
+* alt+v
 * alt+-
 * alt+=
 * ctrl+shift+3
 * ctrl+shift+9
-* ctrl+shift+x
-* ctrl+shift+c
-* ctrl+shift+v
 * ctrl+shift+a
-* ctrl+shift+s
-* ctrl+shift+q
-* ctrl+shift+w
+* ctrl+shift+c
 * ctrl+shift+e
+* ctrl+shift+g
+* ctrl+shift+q
+* ctrl+shift+s
+* ctrl+shift+t
+* ctrl+shift+v
+* ctrl+shift+w
+* ctrl+shift+x
 * ctrl+shift+=
 * alt+shift+0
 * alt+shift+1
 * alt+shift+2
 * alt+shift+3
 * alt+shift+9
-* alt+shift+z
-* alt+shift+x
-* alt+shift+c
-* alt+shift+v
 * alt+shift+a
-* alt+shift+s
+* alt+shift+c
 * alt+shift+d
-* alt+shift+q
-* alt+shift+w
 * alt+shift+e
+* alt+shift+g
+* alt+shift+q
 * alt+shift+r
+* alt+shift+s
+* alt+shift+t
+* alt+shift+v
+* alt+shift+w
+* alt+shift+x
+* alt+shift+z
 * alt+shift+-
 * alt+shift+=
+* capslock 1
+* capslock 2
+* capslock 4
+* capslock 5
+* capslock 7
+* capslock 9
+* capslock a
+* capslock c
+* capslock d
+* capslock e
+* capslock g
+* capslock q
+* capslock r
+* capslock s
+* capslock t
+* capslock v
+* capslock w
+* capslock x
+* capslock z
+* capslock -
+* capslock =
