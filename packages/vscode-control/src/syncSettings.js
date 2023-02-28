@@ -66,7 +66,7 @@ const getCalculatedOptions = () => {
   return {
     ...fontSettings,
     'editor.fontSize'              : fontSize,
-    'window.zoomLevel'             : 2,
+    'window.zoomLevel'             : 3,
     'editor.lineHeight'            : lineHeight,
     'editor.suggestFontSize'       : suggestFontSize,
     'editor.suggestLineHeight'     : suggestLineHeight,
