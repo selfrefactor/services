@@ -272,7 +272,7 @@
     "when": "workbench.panel.output.active"
   },
   {
-    "key": "ctrl+e",
+    "key": "alt+e",
     "command": "workbench.view.explorer"
   },
   {

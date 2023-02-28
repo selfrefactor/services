@@ -72,10 +72,6 @@ Command: workbench.files.action.collapseExplorerFolders
 
 Command: editor.action.goToTypeDefinition
 
-## CTRL  E
-
-Command: workbench.view.explorer
-
 ## CTRL  DOWN
 
 Command: editor.action.moveLinesDownAction
@@ -178,6 +174,10 @@ Command: wallaby.start
 
 Command: workbench.action.toggleSplitEditorInGroup
 
+## ALT  E
+
+Command: workbench.view.explorer
+
 ## ALT  D
 
 Command: workbench.files.action.showActiveFileInExplorer
@@ -227,6 +227,7 @@ Command: editor.action.insertSnippet
 * ctrl+8
 * ctrl+a
 * ctrl+c
+* ctrl+e
 * ctrl+s
 * ctrl+t
 * ctrl+v
@@ -236,7 +237,6 @@ Command: editor.action.insertSnippet
 * ctrl+=
 * alt+0
 * alt+3
-* alt+e
 * alt+g
 * alt+q
 * alt+v
