@@ -28,15 +28,15 @@ const THEME = defaultTo(
 const MODES = {
   small : {
     scale     : 1.1,
-    zoomScale : 0.86,
+    // zoomScale : 0.86,
   },
   normal : {
     scale     : 1.35,
-    zoomScale : 1.36,
+    // zoomScale : 1.06,
   },
   large : {
     scale     : 1.5,
-    zoomScale : 2.5,
+    // zoomScale : 2.5,
   },
 }
 
@@ -60,7 +60,7 @@ function syncFiles(source, destination){
 const getCalculatedOptions = () => {
   const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE.scale, 2)
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
-  const zoomLevel = toDecimal(MODE.zoomScale * FONT_FACTOR)
+  // const zoomLevel = toDecimal(MODE.zoomScale * FONT_FACTOR)
   const lineHeight = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2)
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR, 2))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR))
@@ -76,7 +76,8 @@ const getCalculatedOptions = () => {
   return {
     ...fontSettings,
     'editor.fontSize'              : fontSize,
-    'window.zoomLevel'             : zoomLevel,
+    'window.zoomLevel'             : 0,
+    // 'window.zoomLevel'             : zoomLevel,
     'editor.lineHeight'            : lineHeight,
     'editor.suggestFontSize'       : suggestFontSize,
     'editor.suggestLineHeight'     : suggestLineHeight,
