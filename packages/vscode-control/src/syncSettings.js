@@ -32,7 +32,7 @@ const MODES = {
   },
   normal : {
     scale     : 1.35,
-    zoomScale : 1.06,
+    zoomScale : 1.36,
   },
   large : {
     scale     : 1.5,
