@@ -42,7 +42,7 @@ const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
   '../.vscode/settings.json')
 
 const DEFAULT_FONT = 'JetBrains Mono'
-const FONT_FACTOR = 1
+const FONT_FACTOR = 1.2
 
 function syncFiles(source, destination){
   copySync(source, destination)
@@ -54,7 +54,7 @@ const getCalculatedOptions = () => {
   const lineHeight = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2)
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR, 2))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR))
-  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.55)))
+  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.45)))
 
   const fontSettings = {
     'terminal.integrated.fontFamily' : MONO ? 'Operator Mono' : DEFAULT_FONT,
