@@ -42,7 +42,7 @@ const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
   '../.vscode/settings.json')
 
 const DEFAULT_FONT = 'JetBrains Mono'
-const FONT_FACTOR = 1
+const FONT_FACTOR = 1.2
 
 function syncFiles(source, destination){
   copySync(source, destination)

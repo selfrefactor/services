@@ -161,12 +161,12 @@
   "terminal.integrated.fontFamily": "JetBrains Mono",
   "debug.console.fontFamily": "JetBrains Mono",
   "editor.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 24,
+  "editor.fontSize": 28.8,
   "window.zoomLevel": 0,
-  "editor.lineHeight": 28,
-  "editor.suggestFontSize": 20,
-  "editor.suggestLineHeight": 23,
-  "terminal.integrated.fontSize": 13,
+  "editor.lineHeight": 33.6,
+  "editor.suggestFontSize": 24,
+  "editor.suggestLineHeight": 28,
+  "terminal.integrated.fontSize": 16,
   "magicBeans.IS_VSCODE_INSIDERS": true,
   "workbench.colorTheme": "HomeMovies"
 }
