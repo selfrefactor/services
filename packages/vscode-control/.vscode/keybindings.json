@@ -224,9 +224,14 @@
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "capslock m",
+    "key": "alt+shift+m",
     "alreadyLearned": true,
     "command": "workbench.view.extensions"
+  },
+  {
+    "key": "capslock m",
+    "command": "issuesAndMrs.focus",
+    "comment": "Used with Gitlab extension to focus on MR view"
   },
   {
     "key": "ctrl+2",

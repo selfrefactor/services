@@ -108,6 +108,12 @@ Command: list.collapseAll
 
 Command: editor.foldAll
 
+## CAPSLOCK M
+
+Command: issuesAndMrs.focus
+
+> Comment: Used with Gitlab extension to focus on MR view
+
 ## CAPSLOCK F
 
 Command: references-view.find
