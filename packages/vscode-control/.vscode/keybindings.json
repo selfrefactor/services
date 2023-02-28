@@ -168,6 +168,11 @@
     "when": "editorHasReferenceProvider"
   },
   {
+    "key": "alt+shift+f",
+    "command": "references-view.findReferences",
+    "when": "editorHasReferenceProvider"
+  },
+  {
     "key": "shift+alt+f12",
     "command": "-references-view.find",
     "when": "editorHasReferenceProvider"
@@ -205,7 +210,7 @@
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "alt+d",
+    "key": "capslock f",
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
@@ -262,7 +267,7 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "shift+alt+s",
+    "key": "alt+shift+s",
     "command": "workbench.action.output.toggleOutput",
     "when": "workbench.panel.output.active"
   },

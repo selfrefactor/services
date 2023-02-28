@@ -4,10 +4,6 @@
 
 Command: editor.action.goToReferences
 
-## SHIFT  ALT  S
-
-Command: workbench.action.output.toggleOutput
-
 ## F5
 
 Command: workbench.action.debug.continue
@@ -114,6 +110,10 @@ Command: issuesAndMrs.focus
 
 Command: references-view.find
 
+## CAPSLOCK F
+
+Command: workbench.files.action.showActiveFileInExplorer
+
 ## CAPSLOCK 8
 
 Command: magicBeans.slowScrollStart
@@ -150,6 +150,14 @@ Command: editor.action.smartSelect.expand
 
 Command: terminal.focus
 
+## ALT  SHIFT  S
+
+Command: workbench.action.output.toggleOutput
+
+## ALT  SHIFT  F
+
+Command: references-view.findReferences
+
 ## ALT  SHIFT  8
 
 Command: magicBeans.slowScrollInit
@@ -177,10 +185,6 @@ Command: workbench.action.toggleSplitEditorInGroup
 ## ALT  E
 
 Command: workbench.view.explorer
-
-## ALT  D
-
-Command: workbench.files.action.showActiveFileInExplorer
 
 ## ALT  C
 
@@ -237,6 +241,7 @@ Command: editor.action.insertSnippet
 * ctrl+=
 * alt+0
 * alt+3
+* alt+d
 * alt+g
 * alt+q
 * alt+v
@@ -267,7 +272,6 @@ Command: editor.action.insertSnippet
 * alt+shift+g
 * alt+shift+q
 * alt+shift+r
-* alt+shift+s
 * alt+shift+t
 * alt+shift+v
 * alt+shift+w
