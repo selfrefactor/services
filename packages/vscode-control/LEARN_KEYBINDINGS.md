@@ -10,7 +10,7 @@ Command: editor.action.fontZoomOut
 
 ## CAPSLOCK =
 
-Command: editor.action.fontZoomOut
+Command: editor.action.fontZoomIn
 
 ## ALT  SHIFT  F
 

@@ -186,7 +186,7 @@
   },
   {
     "key": "capslock =",
-    "command": "editor.action.fontZoomOut",
+    "command": "editor.action.fontZoomIn",
     "priority": true
   },
   {
