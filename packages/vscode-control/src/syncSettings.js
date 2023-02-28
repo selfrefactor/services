@@ -42,7 +42,7 @@ const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
   '../.vscode/settings.json')
 
 const DEFAULT_FONT = 'JetBrains Mono'
-const FONT_FACTOR = 1.2
+const FONT_FACTOR = 1
 
 function syncFiles(source, destination){
   copySync(source, destination)
@@ -66,8 +66,7 @@ const getCalculatedOptions = () => {
   return {
     ...fontSettings,
     'editor.fontSize'              : fontSize,
-    'window.zoomLevel'             : 0,
-    // 'window.zoomLevel'             : zoomLevel,
+    'window.zoomLevel'             : 2,
     'editor.lineHeight'            : lineHeight,
     'editor.suggestFontSize'       : suggestFontSize,
     'editor.suggestLineHeight'     : suggestLineHeight,
