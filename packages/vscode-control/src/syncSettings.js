@@ -250,12 +250,12 @@ function getAdditionalSettings(){
     'typescript.updateImportsOnFileMove.enabled'             : 'always',
     'update.mode'                                            : 'none',
     'zenMode.restore'                                        : false,
-    'github.copilot.enable'                                  : {
-      '*'         : true,
-      'yaml'      : true,
-      'plaintext' : true,
-      'markdown'  : true,
-    },
+    // 'github.copilot.enable'                                  : {
+    //   '*'         : true,
+    //   'yaml'      : true,
+    //   'plaintext' : true,
+    //   'markdown'  : true,
+    // },
     'magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS' : [
       '.html',
       '.js',
