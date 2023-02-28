@@ -165,10 +165,12 @@
   {
     "key": "capslock f",
     "command": "references-view.find",
+    "priority": true,
     "when": "editorHasReferenceProvider"
   },
   {
     "key": "alt+shift+f",
+    "priority": true,
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider"
   },

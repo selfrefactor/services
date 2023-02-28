@@ -4,6 +4,14 @@
 
 Command: editor.action.goToReferences
 
+## ALT  SHIFT  F
+
+Command: references-view.findReferences
+
+## CAPSLOCK F
+
+Command: references-view.find
+
 ## F5
 
 Command: workbench.action.debug.continue
@@ -108,10 +116,6 @@ Command: issuesAndMrs.focus
 
 ## CAPSLOCK F
 
-Command: references-view.find
-
-## CAPSLOCK F
-
 Command: workbench.files.action.showActiveFileInExplorer
 
 ## CAPSLOCK 8
@@ -153,10 +157,6 @@ Command: terminal.focus
 ## ALT  SHIFT  S
 
 Command: workbench.action.output.toggleOutput
-
-## ALT  SHIFT  F
-
-Command: references-view.findReferences
 
 ## ALT  SHIFT  8
 
