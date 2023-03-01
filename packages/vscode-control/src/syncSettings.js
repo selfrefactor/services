@@ -26,9 +26,9 @@ const THEME = defaultTo(
 )
 
 const MODES = {
-  small : 0.9,
+  small : 0.8,
   normal : 1,
-  large : 1.1
+  large : 1.2
 }
 
 const MODE_KEY = defaultTo(
