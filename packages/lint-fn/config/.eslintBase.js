@@ -173,17 +173,12 @@ exports.baseRules = {
   'wrap-regex': 1,
   'yield-star-spacing': [1, 'before'],
   yoda: [1, 'never'],
+  'node/file-extension-in-import': [
+    1,
+    'always',
+    {
+      tryExtensions: ['.js'],
+      '.json': 'never',
+    },
+  ],
 }
-
-exports.fileExtensionRule =
-  process.env.ENABLE_FILE_EXTENSION_RULE === 'ON'
-    ? {
-        'node/file-extension-in-import': [
-          1,
-          'always',
-          {
-            tryExtensions: ['.js'],
-          },
-        ],
-      }
-    : {'node/file-extension-in-import': [1, 'never']}

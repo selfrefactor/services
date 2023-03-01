@@ -1,4 +1,4 @@
-const {baseRules, baseConfiguration, fileExtensionRule} = require('./.eslintBase')
+const {baseRules, baseConfiguration} = require('./.eslintBase')
 const {filter} = require('./filter')
 
 const sortProps = {
@@ -31,7 +31,6 @@ const reactRules = {
   'react/jsx-child-element-spacing': 1,
   'react/jsx-closing-bracket-location': 1,
   'react/jsx-closing-tag-location': 0,
-  'react/jsx-curly-spacing': 0,
   'react/jsx-equals-spacing': [1, 'never'],
   'react/jsx-first-prop-new-line': [1, 'multiline'],
   'react/jsx-fragments': 0,
@@ -90,10 +89,4 @@ module.exports = {
     react: true
   },
   rules: filter(rules),
-  // parserOptions: {ecmaFeatures: {jsx: true}},
-  // settings: {
-  //   react: {
-  //     version: '16.8',
-  //   },
-  // },
 }

@@ -7,7 +7,6 @@ const rules = {
   'jest-formatting/padding-around-test-blocks': 1,
   'jest/consistent-test-it': 1,
   'jest/no-alias-methods': 1,
-  'jest/no-alias-methods': 1,
   'jest/no-identical-title': 1,
   'jest/no-large-snapshots': [1, {maxSize: 400}],
   'jest/prefer-comparison-matcher': 1,
