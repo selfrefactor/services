@@ -84,6 +84,10 @@
     "untitledEditors": false,
     "notebookEditors": false
   },
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingDelete": "never",
+  "editor.autoClosingOvertype": "never",
+  "editor.autoClosingQuotes": "never",
   "editor.tabCompletion": "on",
   "zenMode.hideTabs": false,
   "gitlab.showProjectMergeRequests": false,
@@ -161,12 +165,12 @@
   "terminal.integrated.fontFamily": "JetBrains Mono",
   "debug.console.fontFamily": "JetBrains Mono",
   "editor.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 28.8,
+  "editor.fontSize": 24,
   "window.zoomLevel": 2,
-  "editor.lineHeight": 36,
-  "editor.suggestFontSize": 24,
-  "editor.suggestLineHeight": 29,
-  "terminal.integrated.fontSize": 13,
+  "editor.lineHeight": 30,
+  "editor.suggestFontSize": 20,
+  "editor.suggestLineHeight": 24,
+  "terminal.integrated.fontSize": 11,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin"
+  "workbench.colorTheme": "HomeMovies"
 }

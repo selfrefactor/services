@@ -10,7 +10,7 @@ import {
   SETTINGS,
   TS_SNIPPETS,
   TSX_SNIPPETS,
-} from './constants'
+} from './constants.js'
 
 const FONT_SIZE = 24
 const SUGGEST_LINE_HEIGHT = 24
@@ -26,9 +26,9 @@ const THEME = defaultTo(
 )
 
 const MODES = {
-  small : 0.8,
+  small  : 0.8,
   normal : 1,
-  large : 1.2
+  large  : 1.2,
 }
 
 const MODE_KEY = defaultTo(
@@ -194,6 +194,10 @@ function getGit(){
 
 function getAdditionalSettings(){
   return {
+    'editor.autoClosingBrackets'                             : 'never',
+    'editor.autoClosingDelete'                               : 'never',
+    'editor.autoClosingOvertype'                             : 'never',
+    'editor.autoClosingQuotes'                               : 'never',
     'editor.tabCompletion'                                   : 'on',
     'zenMode.hideTabs'                                       : false,
     'gitlab.showProjectMergeRequests'                        : false,
@@ -246,7 +250,7 @@ function getAdditionalSettings(){
     //   'plaintext' : true,
     //   'markdown'  : true,
     // },
-    'magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS' : [
+    'magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS'              : [
       '.html',
       '.js',
       '.jsx',
