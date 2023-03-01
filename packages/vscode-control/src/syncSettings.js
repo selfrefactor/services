@@ -15,7 +15,7 @@ import {
 const FONT_SIZE = 24
 const SUGGEST_LINE_HEIGHT = 24
 const SUGGEST_FONT_SIZE = 20
-const LINE_HEIGHT = 27
+const LINE_HEIGHT = 29
 // let FILE_ICON_THEME = 'vscode-gruvbox-icon-theme'
 const FILE_ICON_THEME = 'emoji-file-icons'
 const MONO = defaultTo(
@@ -66,7 +66,7 @@ const getCalculatedOptions = () => {
   return {
     ...fontSettings,
     'editor.fontSize'              : fontSize,
-    'window.zoomLevel'             : 3,
+    'window.zoomLevel'             : 2.5,
     'editor.lineHeight'            : lineHeight,
     'editor.suggestFontSize'       : suggestFontSize,
     'editor.suggestLineHeight'     : suggestLineHeight,
