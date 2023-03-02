@@ -142,29 +142,29 @@ Command: magicBeans.slowScrollStart
 
 Command: magicBeans.slowScrollInit
 
-## CAPSLOCK 7
-
-Command: wallaby.updateFileSnapshots
-
 ## CAPSLOCK 6
 
 Command: git.push
 
-## CAPSLOCK 6
-
-Command: wallaby.addToExclusiveTestRun
-
 ## CAPSLOCK 5
 
-Command: wallaby.stop
+Command: wallaby.updateFileSnapshots
 
 ## CAPSLOCK 4
 
-Command: wallaby.start
+Command: wallaby.addToExclusiveTestRun
 
 ## CAPSLOCK 3
 
 Command: niketa.request.cancelation
+
+## CAPSLOCK 3
+
+Command: wallaby.stop
+
+## CAPSLOCK 2
+
+Command: wallaby.start
 
 ## CAPSLOCK 0
 
@@ -298,7 +298,7 @@ Command: editor.action.insertSnippet
 * alt+shift+-
 * alt+shift+=
 * capslock 1
-* capslock 2
+* capslock 7
 * capslock a
 * capslock c
 * capslock d

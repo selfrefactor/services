@@ -322,20 +322,20 @@
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "capslock 4",
+    "key": "capslock 2",
     "command": "wallaby.start"
   },
   {
-    "key": "capslock 5",
+    "key": "capslock 3",
     "command": "wallaby.stop"
   },
   {
-    "key": "capslock 7",
-    "command": "wallaby.updateFileSnapshots"
+    "key": "capslock 4",
+    "command": "wallaby.addToExclusiveTestRun"
   },
   {
-    "key": "capslock 6",
-    "command": "wallaby.addToExclusiveTestRun"
+    "key": "capslock 5",
+    "command": "wallaby.updateFileSnapshots"
   },
   {
     "command": "magicBeans.sortLines",
