@@ -76,13 +76,13 @@ Command: magicBeans.createSpec
 
 Command: magicBeans.sortLines
 
-## CTRL  R
-
-Command: workbench.files.action.collapseExplorerFolders
-
 ## CTRL  G
 
 Command: editor.action.goToTypeDefinition
+
+## CTRL  E
+
+Command: workbench.files.action.collapseExplorerFolders
 
 ## CTRL  DOWN
 
@@ -243,7 +243,7 @@ Command: editor.action.insertSnippet
 * ctrl+8
 * ctrl+a
 * ctrl+c
-* ctrl+e
+* ctrl+r
 * ctrl+s
 * ctrl+t
 * ctrl+v
