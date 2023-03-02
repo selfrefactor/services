@@ -194,10 +194,10 @@ function getGit(){
 
 function getAdditionalSettings(){
   return {
-    'editor.autoClosingBrackets'                             : 'never',
-    'editor.autoClosingDelete'                               : 'never',
-    'editor.autoClosingOvertype'                             : 'never',
-    'editor.autoClosingQuotes'                               : 'never',
+    // 'editor.autoClosingBrackets'                             : 'never',
+    // 'editor.autoClosingDelete'                               : 'never',
+    // 'editor.autoClosingOvertype'                             : 'never',
+    // 'editor.autoClosingQuotes'                               : 'never',
     'editor.tabCompletion'                                   : 'on',
     'zenMode.hideTabs'                                       : false,
     'gitlab.showProjectMergeRequests'                        : false,

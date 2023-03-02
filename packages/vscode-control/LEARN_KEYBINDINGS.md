@@ -116,6 +116,14 @@ Command: list.collapseAll
 
 Command: editor.foldAll
 
+## CAPSLOCK S
+
+Command: workbench.action.output.toggleOutput
+
+## CAPSLOCK N
+
+Command: workbench.view.extensions
+
 ## CAPSLOCK M
 
 Command: issuesAndMrs.focus
@@ -126,13 +134,33 @@ Command: issuesAndMrs.focus
 
 Command: workbench.files.action.showActiveFileInExplorer
 
-## CAPSLOCK 8
+## CAPSLOCK 9
 
 Command: magicBeans.slowScrollStart
+
+## CAPSLOCK 8
+
+Command: magicBeans.slowScrollInit
+
+## CAPSLOCK 7
+
+Command: wallaby.updateFileSnapshots
 
 ## CAPSLOCK 6
 
 Command: git.push
+
+## CAPSLOCK 6
+
+Command: wallaby.addToExclusiveTestRun
+
+## CAPSLOCK 5
+
+Command: wallaby.stop
+
+## CAPSLOCK 4
+
+Command: wallaby.start
 
 ## CAPSLOCK 3
 
@@ -161,30 +189,6 @@ Command: editor.action.smartSelect.expand
 ## ALT  T
 
 Command: terminal.focus
-
-## ALT  SHIFT  S
-
-Command: workbench.action.output.toggleOutput
-
-## ALT  SHIFT  8
-
-Command: magicBeans.slowScrollInit
-
-## ALT  SHIFT  7
-
-Command: wallaby.updateFileSnapshots
-
-## ALT  SHIFT  6
-
-Command: wallaby.addToExclusiveTestRun
-
-## ALT  SHIFT  5
-
-Command: wallaby.stop
-
-## ALT  SHIFT  4
-
-Command: wallaby.start
 
 ## ALT  S
 
@@ -272,6 +276,11 @@ Command: editor.action.insertSnippet
 * alt+shift+1
 * alt+shift+2
 * alt+shift+3
+* alt+shift+4
+* alt+shift+5
+* alt+shift+6
+* alt+shift+7
+* alt+shift+8
 * alt+shift+9
 * alt+shift+a
 * alt+shift+c
@@ -280,6 +289,7 @@ Command: editor.action.insertSnippet
 * alt+shift+g
 * alt+shift+q
 * alt+shift+r
+* alt+shift+s
 * alt+shift+t
 * alt+shift+v
 * alt+shift+w
@@ -289,10 +299,6 @@ Command: editor.action.insertSnippet
 * alt+shift+=
 * capslock 1
 * capslock 2
-* capslock 4
-* capslock 5
-* capslock 7
-* capslock 9
 * capslock a
 * capslock c
 * capslock d
@@ -300,7 +306,6 @@ Command: editor.action.insertSnippet
 * capslock g
 * capslock q
 * capslock r
-* capslock s
 * capslock t
 * capslock v
 * capslock w

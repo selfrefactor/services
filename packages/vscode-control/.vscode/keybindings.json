@@ -241,8 +241,7 @@
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "alt+shift+m",
-    "alreadyLearned": true,
+    "key": "capslock n",
     "command": "workbench.view.extensions"
   },
   {
@@ -279,7 +278,7 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "alt+shift+s",
+    "key": "capslock s",
     "command": "workbench.action.output.toggleOutput",
     "when": "workbench.panel.output.active"
   },
@@ -323,19 +322,19 @@
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "alt+shift+4",
+    "key": "capslock 4",
     "command": "wallaby.start"
   },
   {
-    "key": "alt+shift+5",
+    "key": "capslock 5",
     "command": "wallaby.stop"
   },
   {
-    "key": "alt+shift+7",
+    "key": "capslock 7",
     "command": "wallaby.updateFileSnapshots"
   },
   {
-    "key": "alt+shift+6",
+    "key": "capslock 6",
     "command": "wallaby.addToExclusiveTestRun"
   },
   {
@@ -353,11 +352,11 @@
   },
   {
     "command": "magicBeans.slowScrollInit",
-    "key": "alt+shift+8"
+    "key": "capslock 8"
   },
   {
     "command": "magicBeans.slowScrollStart",
-    "key": "capslock 8"
+    "key": "capslock 9"
   },
   {
     "command": "magicBeans.fixCamelcaseRefactoring",
