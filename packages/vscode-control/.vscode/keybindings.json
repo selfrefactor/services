@@ -169,7 +169,7 @@
     "when": "editorHasReferenceProvider"
   },
   {
-    "key": "alt+shift+f",
+    "key": "capslock g",
     "priority": true,
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider"

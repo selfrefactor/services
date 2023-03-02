@@ -12,7 +12,7 @@ Command: editor.action.fontZoomOut
 
 Command: editor.action.fontZoomIn
 
-## ALT  SHIFT  F
+## CAPSLOCK G
 
 Command: references-view.findReferences
 
@@ -272,38 +272,12 @@ Command: editor.action.insertSnippet
 * ctrl+shift+w
 * ctrl+shift+x
 * ctrl+shift+=
-* alt+shift+0
-* alt+shift+1
-* alt+shift+2
-* alt+shift+3
-* alt+shift+4
-* alt+shift+5
-* alt+shift+6
-* alt+shift+7
-* alt+shift+8
-* alt+shift+9
-* alt+shift+a
-* alt+shift+c
-* alt+shift+d
-* alt+shift+e
-* alt+shift+g
-* alt+shift+q
-* alt+shift+r
-* alt+shift+s
-* alt+shift+t
-* alt+shift+v
-* alt+shift+w
-* alt+shift+x
-* alt+shift+z
-* alt+shift+-
-* alt+shift+=
 * capslock 1
 * capslock 7
 * capslock a
 * capslock c
 * capslock d
 * capslock e
-* capslock g
 * capslock q
 * capslock r
 * capslock t
