@@ -1,5 +1,17 @@
 # Keybindings
 
+## CAPSLOCK ]
+
+Command: references-view.findImplementations
+
+## CAPSLOCK [
+
+Command: editor.action.peekImplementation
+
+## CAPSLOCK P
+
+Command: editor.action.goToImplementation
+
 ## ALT  R
 
 Command: editor.action.goToReferences
