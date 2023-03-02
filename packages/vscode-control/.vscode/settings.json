@@ -164,6 +164,15 @@
     "docs": false,
     "yarn.lock": true
   },
+  "gitlab.customQueries": [
+    {
+      "name": "All project merge requests",
+      "type": "merge_requests",
+      "scope": "all",
+      "state": "opened",
+      "noItemText": "The project has no merge requests"
+    }
+  ],
   "terminal.integrated.fontFamily": "JetBrains Mono",
   "debug.console.fontFamily": "JetBrains Mono",
   "editor.fontFamily": "JetBrains Mono",

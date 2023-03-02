@@ -117,6 +117,7 @@ function getPermanentSettings(){
     ...getGit(),
     ...getWorkbench(),
     ...getAdditionalSettings(),
+    ...getImportantSettings(),
   }
 }
 
@@ -189,6 +190,20 @@ function getGit(){
     'git.promptToSaveFilesBeforeCommit' : 'never',
     'git.allowNoVerifyCommit'           : true,
     'git.fetchOnPull'                   : true,
+  }
+}
+
+function getImportantSettings(){
+  return {
+    "gitlab.customQueries": [
+      {
+        "name": "All project merge requests",
+        "type": "merge_requests",
+        "scope": "all",
+        "state": "opened",
+        "noItemText": "The project has no merge requests"
+      }
+    ]
   }
 }
 
