@@ -214,7 +214,8 @@
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "ctrl+e",
+    "key": "capslock c",
+    "priority": true,
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {

@@ -16,6 +16,10 @@ Command: editor.action.goToImplementation
 
 Command: editor.action.goToReferences
 
+## CAPSLOCK C
+
+Command: workbench.files.action.collapseExplorerFolders
+
 ## CAPSLOCK -
 
 Command: editor.action.fontZoomOut
@@ -91,10 +95,6 @@ Command: magicBeans.sortLines
 ## CTRL  G
 
 Command: editor.action.goToTypeDefinition
-
-## CTRL  E
-
-Command: workbench.files.action.collapseExplorerFolders
 
 ## CTRL  DOWN
 
@@ -255,6 +255,7 @@ Command: editor.action.insertSnippet
 * ctrl+8
 * ctrl+a
 * ctrl+c
+* ctrl+e
 * ctrl+r
 * ctrl+s
 * ctrl+t
@@ -287,7 +288,6 @@ Command: editor.action.insertSnippet
 * capslock 1
 * capslock 7
 * capslock a
-* capslock c
 * capslock d
 * capslock e
 * capslock q
