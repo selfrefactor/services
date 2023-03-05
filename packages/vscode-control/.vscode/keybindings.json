@@ -274,8 +274,7 @@
     "command": "-workbench.action.focusSixthEditorGroup"
   },
   {
-    "key": "alt+f",
-    "alreadyLearned": true,
+    "key": "capslock z",
     "command": "workbench.action.toggleZenMode"
   },
   {

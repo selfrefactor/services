@@ -128,6 +128,10 @@ Command: list.collapseAll
 
 Command: editor.foldAll
 
+## CAPSLOCK Z
+
+Command: workbench.action.toggleZenMode
+
 ## CAPSLOCK S
 
 Command: workbench.action.output.toggleOutput
@@ -296,4 +300,3 @@ Command: editor.action.insertSnippet
 * capslock v
 * capslock w
 * capslock x
-* capslock z
