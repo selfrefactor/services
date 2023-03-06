@@ -165,13 +165,13 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "capslock f",
+    "key": "capslock 4",
     "command": "references-view.find",
     "priority": true,
     "when": "editorHasReferenceProvider"
   },
   {
-    "key": "capslock g",
+    "key": "capslock 5",
     "priority": true,
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider"
@@ -318,7 +318,7 @@
     "comment": "View Git Panel"
   },
   {
-    "key": "capslock r",
+    "key": "capslock d",
     "command": "editor.action.goToReferences",
     "priority": true,
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
@@ -660,7 +660,7 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "capslock p",
+    "key": "capslock d",
     "command": "editor.action.goToImplementation",
     "priority": true,
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"

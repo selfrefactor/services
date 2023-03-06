@@ -28,25 +28,25 @@ Command: editor.foldAll
 
 Command: editor.unfoldAll
 
+## CAPSLOCK 4
+
+Command: references-view.find
+
+## CAPSLOCK 5
+
+Command: references-view.findReferences
+
 ## CAPSLOCK C
 
 Command: workbench.files.action.collapseExplorerFolders
 
-## CAPSLOCK F
-
-Command: references-view.find
-
-## CAPSLOCK G
-
-Command: references-view.findReferences
-
-## CAPSLOCK P
-
-Command: editor.action.goToImplementation
-
-## CAPSLOCK R
+## CAPSLOCK D
 
 Command: editor.action.goToReferences
+
+## CAPSLOCK D
+
+Command: editor.action.goToImplementation
 
 ## ALT  5
 
@@ -297,9 +297,10 @@ Command: workbench.action.debug.continue
 * ctrl+shift+=
 * capslock 7
 * capslock a
-* capslock d
 * capslock e
+* capslock g
 * capslock q
+* capslock r
 * capslock t
 * capslock v
 * capslock w
