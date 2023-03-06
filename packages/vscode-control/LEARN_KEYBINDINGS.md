@@ -8,6 +8,10 @@ Command: editor.action.fontZoomOut
 
 Command: magicBeans.slowScrollInit
 
+## CAPSLOCK .
+
+Command: editor.action.inlineSuggest.trigger
+
 ## CAPSLOCK '
 
 Command: magicBeans.slowScrollStart
@@ -93,6 +97,10 @@ Command: workbench.action.output.toggleOutput
 ## CAPSLOCK P
 
 Command: git.push
+
+## CAPSLOCK SPACE
+
+Command: editor.action.triggerParameterHints
 
 ## CAPSLOCK T
 
