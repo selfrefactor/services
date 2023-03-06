@@ -70,7 +70,7 @@ void (async function main(){
   const sorted = filtered.sort((a, b) => {
     if(a.priority && !b.priority) return -1
     if(b.priority && !a.priority) return 1
-    return b.key.localeCompare(a.key)
+    return a.key.localeCompare(b.key)
   })
 
   const outputContent = sorted

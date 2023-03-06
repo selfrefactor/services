@@ -1,178 +1,122 @@
 # Keybindings
 
-## CAPSLOCK R
+## CAPSLOCK -
 
-Command: editor.action.goToReferences
-
-## CAPSLOCK P
-
-Command: editor.action.goToImplementation
-
-## CAPSLOCK G
-
-Command: references-view.findReferences
-
-## CAPSLOCK F
-
-Command: references-view.find
-
-## CAPSLOCK C
-
-Command: workbench.files.action.collapseExplorerFolders
-
-## CAPSLOCK 3
-
-Command: editor.unfoldAll
-
-## CAPSLOCK 2
-
-Command: editor.foldAll
-
-## CAPSLOCK 1
-
-Command: editor.action.addSelectionToNextFindMatch
-
-## CAPSLOCK =
-
-Command: editor.action.fontZoomIn
-
-## CAPSLOCK ]
-
-Command: references-view.findImplementations
+Command: editor.action.fontZoomOut
 
 ## CAPSLOCK [
 
 Command: editor.action.peekImplementation
 
-## CAPSLOCK -
+## CAPSLOCK ]
 
-Command: editor.action.fontZoomOut
+Command: references-view.findImplementations
 
-## F5
+## CAPSLOCK =
 
-Command: workbench.action.debug.continue
+Command: editor.action.fontZoomIn
 
-## CTRL  UP
+## CAPSLOCK 1
 
-Command: editor.action.moveLinesUpAction
+Command: editor.action.addSelectionToNextFindMatch
 
-## CTRL  SHIFT  Z
+## CAPSLOCK 2
 
-Command: workbench.view.scm
+Command: editor.foldAll
 
-> Comment: View Git Panel
+## CAPSLOCK 3
 
-## CTRL  SHIFT  R
+Command: editor.unfoldAll
 
-Command: workbench.action.debug.restart
+## CAPSLOCK C
 
-## CTRL  SHIFT  D
-
-Command: editor.action.copyLinesDownAction
-
-## CTRL  SHIFT  8
-
-Command: editor.action.inlineSuggest.showPrevious
-
-## CTRL  SHIFT  7
-
-Command: editor.action.insertSnippet
-
-> Snippet: commentMultiline
-
-## CTRL  SHIFT  6
-
-Command: workbench.view.debug
-
-## CTRL  SHIFT  2
-
-Command: workbench.action.editorLayoutTwoColumns
-
-## CTRL  SHIFT  1
-
-Command: workbench.action.editorLayoutSingle
-
-## CTRL  SHIFT  0
-
-Command: magicBeans.createSpec
-
-## CTRL  SHIFT  -
-
-Command: magicBeans.sortLines
-
-## CTRL  G
-
-Command: editor.action.goToTypeDefinition
-
-## CTRL  DOWN
-
-Command: editor.action.moveLinesDownAction
-
-## CTRL  D
-
-Command: editor.action.goToDeclaration
-
-## CTRL  CAPSLOCK
-
-Command: editor.action.selectHighlights
-
-## CTRL  9
-
-Command: PYTHON ONLY - python.execInTerminal
-
-## CTRL  1
-
-Command: niketa.lint.file
-
-## CTLR  SHIFT  9
-
-Command: github.copilot.openPanelForRange
-
-## CTLR  SHIFT  3
-
-Command: list.collapseAll
-
-## CAPSLOCK Z
-
-Command: workbench.action.toggleZenMode
-
-## CAPSLOCK S
-
-Command: workbench.action.output.toggleOutput
-
-## CAPSLOCK N
-
-Command: workbench.view.extensions
-
-## CAPSLOCK M
-
-Command: issuesAndMrs.focus
-
-> Comment: Used with Gitlab extension to focus on MR view
+Command: workbench.files.action.collapseExplorerFolders
 
 ## CAPSLOCK F
 
-Command: workbench.files.action.showActiveFileInExplorer
+Command: references-view.find
 
-## CAPSLOCK 9
+## CAPSLOCK G
 
-Command: magicBeans.slowScrollStart
+Command: references-view.findReferences
 
-## CAPSLOCK 8
+## CAPSLOCK P
 
-Command: magicBeans.slowScrollInit
+Command: editor.action.goToImplementation
 
-## CAPSLOCK 6
+## CAPSLOCK R
 
-Command: git.push
+Command: editor.action.goToReferences
 
-## CAPSLOCK 5
+## ALT  5
 
-Command: wallaby.updateFileSnapshots
+Command: editor.action.insertSnippet
 
-## CAPSLOCK 4
+> Snippet: Function
 
-Command: wallaby.addToExclusiveTestRun
+## ALT  6
+
+Command: editor.action.insertSnippet
+
+> Snippet: ArrowFunction
+
+## ALT  7
+
+Command: editor.action.insertSnippet
+
+> Snippet: TestCase
+
+## ALT  8
+
+Command: editor.action.insertSnippet
+
+> Snippet: Expect
+
+## ALT  9
+
+Command: editor.action.insertSnippet
+
+> Snippet: StringTemplate
+
+## ALT  C
+
+Command: magicBeans.copyTrimmed
+
+## ALT  E
+
+Command: workbench.view.explorer
+
+## ALT  S
+
+Command: workbench.action.toggleSplitEditorInGroup
+
+## ALT  T
+
+Command: terminal.focus
+
+## ALT  U
+
+Command: editor.action.smartSelect.expand
+
+## ALT  W
+
+Command: niketa.request.test.run
+
+## ALT  Z
+
+Command: workbench.action.gotoSymbol
+
+## CAPSLOCK ]
+
+Command: magicBeans.fixCamelcaseRefactoring
+
+## CAPSLOCK 0
+
+Command: workbench.action.selectTheme
+
+## CAPSLOCK 2
+
+Command: wallaby.start
 
 ## CAPSLOCK 3
 
@@ -182,75 +126,131 @@ Command: niketa.request.cancelation
 
 Command: wallaby.stop
 
-## CAPSLOCK 2
+## CAPSLOCK 4
 
-Command: wallaby.start
+Command: wallaby.addToExclusiveTestRun
 
-## CAPSLOCK 0
+## CAPSLOCK 5
 
-Command: workbench.action.selectTheme
+Command: wallaby.updateFileSnapshots
 
-## CAPSLOCK ]
+## CAPSLOCK 6
 
-Command: magicBeans.fixCamelcaseRefactoring
+Command: git.push
 
-## ALT  Z
+## CAPSLOCK 8
 
-Command: workbench.action.gotoSymbol
+Command: magicBeans.slowScrollInit
 
-## ALT  W
+## CAPSLOCK 9
 
-Command: niketa.request.test.run
+Command: magicBeans.slowScrollStart
 
-## ALT  U
+## CAPSLOCK F
 
-Command: editor.action.smartSelect.expand
+Command: workbench.files.action.showActiveFileInExplorer
 
-## ALT  T
+## CAPSLOCK M
 
-Command: terminal.focus
+Command: issuesAndMrs.focus
 
-## ALT  S
+> Comment: Used with Gitlab extension to focus on MR view
 
-Command: workbench.action.toggleSplitEditorInGroup
+## CAPSLOCK N
 
-## ALT  E
+Command: workbench.view.extensions
 
-Command: workbench.view.explorer
+## CAPSLOCK S
 
-## ALT  C
+Command: workbench.action.output.toggleOutput
 
-Command: magicBeans.copyTrimmed
+## CAPSLOCK Z
 
-## ALT  9
+Command: workbench.action.toggleZenMode
+
+## CTLR  SHIFT  3
+
+Command: list.collapseAll
+
+## CTLR  SHIFT  9
+
+Command: github.copilot.openPanelForRange
+
+## CTRL  1
+
+Command: niketa.lint.file
+
+## CTRL  9
+
+Command: PYTHON ONLY - python.execInTerminal
+
+## CTRL  CAPSLOCK
+
+Command: editor.action.selectHighlights
+
+## CTRL  D
+
+Command: editor.action.goToDeclaration
+
+## CTRL  DOWN
+
+Command: editor.action.moveLinesDownAction
+
+## CTRL  G
+
+Command: editor.action.goToTypeDefinition
+
+## CTRL  SHIFT  -
+
+Command: magicBeans.sortLines
+
+## CTRL  SHIFT  0
+
+Command: magicBeans.createSpec
+
+## CTRL  SHIFT  1
+
+Command: workbench.action.editorLayoutSingle
+
+## CTRL  SHIFT  2
+
+Command: workbench.action.editorLayoutTwoColumns
+
+## CTRL  SHIFT  6
+
+Command: workbench.view.debug
+
+## CTRL  SHIFT  7
 
 Command: editor.action.insertSnippet
 
-> Snippet: StringTemplate
+> Snippet: commentMultiline
 
-## ALT  8
+## CTRL  SHIFT  8
 
-Command: editor.action.insertSnippet
+Command: editor.action.inlineSuggest.showPrevious
 
-> Snippet: Expect
+## CTRL  SHIFT  D
 
-## ALT  7
+Command: editor.action.copyLinesDownAction
 
-Command: editor.action.insertSnippet
+## CTRL  SHIFT  R
 
-> Snippet: TestCase
+Command: workbench.action.debug.restart
 
-## ALT  6
+## CTRL  SHIFT  Z
 
-Command: editor.action.insertSnippet
+Command: workbench.view.scm
 
-> Snippet: ArrowFunction
+> Comment: View Git Panel
 
-## ALT  5
+## CTRL  UP
 
-Command: editor.action.insertSnippet
+Command: editor.action.moveLinesUpAction
 
-> Snippet: Function
+## F5
+
+Command: workbench.action.debug.continue
 
 ## Convenient keys
 
