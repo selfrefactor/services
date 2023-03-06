@@ -12,7 +12,7 @@ Command: editor.action.peekImplementation
 
 Command: editor.action.goToImplementation
 
-## ALT  R
+## CAPSLOCK R
 
 Command: editor.action.goToReferences
 
@@ -273,6 +273,7 @@ Command: editor.action.insertSnippet
 * alt+d
 * alt+g
 * alt+q
+* alt+r
 * alt+v
 * alt+-
 * alt+=
@@ -295,7 +296,6 @@ Command: editor.action.insertSnippet
 * capslock d
 * capslock e
 * capslock q
-* capslock r
 * capslock t
 * capslock v
 * capslock w

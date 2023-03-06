@@ -316,7 +316,7 @@
     "comment": "View Git Panel"
   },
   {
-    "key": "alt+r",
+    "key": "capslock r",
     "command": "editor.action.goToReferences",
     "priority": true,
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
