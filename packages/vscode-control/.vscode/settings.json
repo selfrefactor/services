@@ -84,6 +84,7 @@
     "untitledEditors": false,
     "notebookEditors": false
   },
+  "window.menuBarVisibility": "toggle",
   "editor.tabCompletion": "on",
   "zenMode.hideTabs": false,
   "gitlab.showProjectMergeRequests": false,

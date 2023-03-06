@@ -213,6 +213,7 @@ function getAdditionalSettings(){
     // 'editor.autoClosingDelete'                               : 'never',
     // 'editor.autoClosingOvertype'                             : 'never',
     // 'editor.autoClosingQuotes'                               : 'never',
+    "window.menuBarVisibility": "toggle",
     'editor.tabCompletion'                                   : 'on',
     'zenMode.hideTabs'                                       : false,
     'gitlab.showProjectMergeRequests'                        : false,
