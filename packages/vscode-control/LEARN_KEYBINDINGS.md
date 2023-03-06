@@ -4,6 +4,14 @@
 
 Command: editor.action.fontZoomOut
 
+## CAPSLOCK ;
+
+Command: magicBeans.slowScrollInit
+
+## CAPSLOCK '
+
+Command: magicBeans.slowScrollStart
+
 ## CAPSLOCK [
 
 Command: editor.action.peekImplementation
@@ -15,6 +23,14 @@ Command: references-view.findImplementations
 ## CAPSLOCK =
 
 Command: editor.action.fontZoomIn
+
+## CAPSLOCK =
+
+Command: magicBeans.fixCamelcaseRefactoring
+
+## CAPSLOCK 0
+
+Command: wallaby.updateFileSnapshots
 
 ## CAPSLOCK 1
 
@@ -36,6 +52,18 @@ Command: references-view.find
 
 Command: references-view.findReferences
 
+## CAPSLOCK 7
+
+Command: wallaby.start
+
+## CAPSLOCK 8
+
+Command: wallaby.stop
+
+## CAPSLOCK 9
+
+Command: wallaby.addToExclusiveTestRun
+
 ## CAPSLOCK C
 
 Command: workbench.files.action.collapseExplorerFolders
@@ -47,6 +75,32 @@ Command: editor.action.goToReferences
 ## CAPSLOCK D
 
 Command: editor.action.goToImplementation
+
+## CAPSLOCK M
+
+Command: issuesAndMrs.focus
+
+> Comment: Used with Gitlab extension to focus on MR view
+
+## CAPSLOCK N
+
+Command: workbench.view.extensions
+
+## CAPSLOCK O
+
+Command: workbench.action.output.toggleOutput
+
+## CAPSLOCK P
+
+Command: git.push
+
+## CAPSLOCK T
+
+Command: workbench.action.selectTheme
+
+## CAPSLOCK Z
+
+Command: workbench.action.toggleZenMode
 
 ## ALT  5
 
@@ -106,67 +160,13 @@ Command: niketa.request.test.run
 
 Command: workbench.action.gotoSymbol
 
-## CAPSLOCK ]
-
-Command: magicBeans.fixCamelcaseRefactoring
-
-## CAPSLOCK 0
-
-Command: workbench.action.selectTheme
-
-## CAPSLOCK 2
-
-Command: wallaby.start
-
-## CAPSLOCK 3
-
-Command: niketa.request.cancelation
-
-## CAPSLOCK 3
-
-Command: wallaby.stop
-
-## CAPSLOCK 4
-
-Command: wallaby.addToExclusiveTestRun
-
-## CAPSLOCK 5
-
-Command: wallaby.updateFileSnapshots
-
-## CAPSLOCK 6
-
-Command: git.push
-
-## CAPSLOCK 8
-
-Command: magicBeans.slowScrollInit
-
-## CAPSLOCK 9
-
-Command: magicBeans.slowScrollStart
-
 ## CAPSLOCK F
 
 Command: workbench.files.action.showActiveFileInExplorer
 
-## CAPSLOCK M
+## CAPSLOCK L
 
-Command: issuesAndMrs.focus
-
-> Comment: Used with Gitlab extension to focus on MR view
-
-## CAPSLOCK N
-
-Command: workbench.view.extensions
-
-## CAPSLOCK S
-
-Command: workbench.action.output.toggleOutput
-
-## CAPSLOCK Z
-
-Command: workbench.action.toggleZenMode
+Command: niketa.request.cancelation
 
 ## CTLR  SHIFT  3
 
@@ -295,13 +295,13 @@ Command: workbench.action.debug.continue
 * ctrl+shift+w
 * ctrl+shift+x
 * ctrl+shift+=
-* capslock 7
+* capslock 6
 * capslock a
 * capslock e
 * capslock g
 * capslock q
 * capslock r
-* capslock t
+* capslock s
 * capslock v
 * capslock w
 * capslock x

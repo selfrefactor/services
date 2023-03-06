@@ -114,7 +114,7 @@
   },
   {
     "command": "niketa.request.cancelation",
-    "key": "capslock 3"
+    "key": "capslock l"
   },
   {
     "key": "alt+s",
@@ -221,7 +221,8 @@
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
-    "key": "capslock 0",
+    "key": "capslock t",
+    "priority": true,
     "command": "workbench.action.selectTheme"
   },
   {
@@ -245,11 +246,15 @@
   },
   {
     "key": "capslock n",
+    "priority": true,
+
     "command": "workbench.view.extensions"
   },
   {
     "key": "capslock m",
     "command": "issuesAndMrs.focus",
+    "priority": true,
+
     "comment": "Used with Gitlab extension to focus on MR view"
   },
   {
@@ -263,7 +268,8 @@
     "command": "workbench.action.files.openFolder"
   },
   {
-    "key": "capslock 6",
+    "key": "capslock p",
+    "priority": true,
     "command": "git.push"
   },
   {
@@ -277,10 +283,12 @@
   },
   {
     "key": "capslock z",
+    "priority": true,
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "capslock s",
+    "key": "capslock o",
+    "priority": true,
     "command": "workbench.action.output.toggleOutput",
     "when": "workbench.panel.output.active"
   },
@@ -297,10 +305,6 @@
     "key": "ctrl+w",
     "command": "workbench.action.closeActiveEditor",
     "alreadyLearned": true
-  },
-  {
-    "keyx": "capslock r",
-    "commandx": "workbench.action.closeEditorsToTheRight"
   },
   {
     "key": "ctrl+shift+r",
@@ -324,19 +328,23 @@
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "capslock 2",
+    "key": "capslock 7",
+    "priority": true,
     "command": "wallaby.start"
   },
   {
-    "key": "capslock 3",
+    "key": "capslock 8",
+    "priority": true,
     "command": "wallaby.stop"
   },
   {
-    "key": "capslock 4",
+    "key": "capslock 9",
+    "priority": true,
     "command": "wallaby.addToExclusiveTestRun"
   },
   {
-    "key": "capslock 5",
+    "key": "capslock 0",
+    "priority": true,
     "command": "wallaby.updateFileSnapshots"
   },
   {
@@ -354,15 +362,18 @@
   },
   {
     "command": "magicBeans.slowScrollInit",
-    "key": "capslock 8"
+    "priority": true,
+    "key": "capslock ;"
   },
   {
     "command": "magicBeans.slowScrollStart",
-    "key": "capslock 9"
+    "priority": true,
+    "key": "capslock '"
   },
   {
     "command": "magicBeans.fixCamelcaseRefactoring",
-    "key": "capslock ]"
+    "priority": true,
+    "key": "capslock ="
   },
   {
     "command": "magicBeans.copyTrimmed",
