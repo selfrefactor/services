@@ -91,8 +91,6 @@ void (async function main(){
         })
       }
       if (comment || hint){
-        console.log('comment', comment)
-        console.log('hint', hint)
         let commentInput = maybe(
           hint,
            () =>comment ? `> ${ comment }\n\n HINT: ${ hint.toUpperCase() }` : `> HINT: ${ hint.toUpperCase() }`,

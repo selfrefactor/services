@@ -40,7 +40,7 @@
 
 ## CAPSLOCK 1
 
-`editor.action.addSelectionToNextFindMatch`
+`niketa.lint.file`
 
 ## CAPSLOCK 2
 
@@ -111,6 +111,10 @@
 ## CAPSLOCK Z
 
 `workbench.action.toggleZenMode`
+
+## CTRL  1
+
+`editor.action.addSelectionToNextFindMatch`
 
 ## ALT  5
 
@@ -187,10 +191,6 @@
 ## CTLR  SHIFT  9
 
 `github.copilot.openPanelForRange`
-
-## CTRL  1
-
-`niketa.lint.file`
 
 ## CTRL  9
 
