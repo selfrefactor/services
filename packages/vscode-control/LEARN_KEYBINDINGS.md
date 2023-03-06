@@ -154,6 +154,8 @@
 
 `workbench.action.toggleSplitEditorInGroup`
 
+> S for SPLIT
+
 ## ALT  T
 
 `terminal.focus`
