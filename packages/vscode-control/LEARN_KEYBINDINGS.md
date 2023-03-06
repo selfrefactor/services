@@ -1,36 +1,12 @@
 # Keybindings
 
-## CAPSLOCK ]
-
-Command: references-view.findImplementations
-
-## CAPSLOCK [
-
-Command: editor.action.peekImplementation
-
-## CAPSLOCK P
-
-Command: editor.action.goToImplementation
-
-## CAPSLOCK 1
-
-Command: editor.action.addSelectionToNextFindMatch
-
 ## CAPSLOCK R
 
 Command: editor.action.goToReferences
 
-## CAPSLOCK C
+## CAPSLOCK P
 
-Command: workbench.files.action.collapseExplorerFolders
-
-## CAPSLOCK -
-
-Command: editor.action.fontZoomOut
-
-## CAPSLOCK =
-
-Command: editor.action.fontZoomIn
+Command: editor.action.goToImplementation
 
 ## CAPSLOCK G
 
@@ -40,6 +16,10 @@ Command: references-view.findReferences
 
 Command: references-view.find
 
+## CAPSLOCK C
+
+Command: workbench.files.action.collapseExplorerFolders
+
 ## CAPSLOCK 3
 
 Command: editor.unfoldAll
@@ -47,6 +27,26 @@ Command: editor.unfoldAll
 ## CAPSLOCK 2
 
 Command: editor.foldAll
+
+## CAPSLOCK 1
+
+Command: editor.action.addSelectionToNextFindMatch
+
+## CAPSLOCK =
+
+Command: editor.action.fontZoomIn
+
+## CAPSLOCK ]
+
+Command: references-view.findImplementations
+
+## CAPSLOCK [
+
+Command: editor.action.peekImplementation
+
+## CAPSLOCK -
+
+Command: editor.action.fontZoomOut
 
 ## F5
 

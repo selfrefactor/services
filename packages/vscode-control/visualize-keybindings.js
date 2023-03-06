@@ -68,8 +68,8 @@ void (async function main(){
       return !alreadyLearned
     })
   const sorted = filtered.sort((a, b) => {
-    if(a.priority) return -1
-    if(b.priority) return 1
+    if(a.priority && !b.priority) return -1
+    if(b.priority && !a.priority) return 1
     return b.key.localeCompare(a.key)
   })
 
