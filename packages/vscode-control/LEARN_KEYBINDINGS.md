@@ -154,7 +154,7 @@
 
 `workbench.action.toggleSplitEditorInGroup`
 
-> S for SPLIT
+> HINT: SPLIT
 
 ## ALT  T
 

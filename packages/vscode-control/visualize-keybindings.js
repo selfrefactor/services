@@ -1,4 +1,4 @@
-const { interpolate } = require('rambdax')
+const { interpolate, maybe } = require('rambdax')
 const { readJson, outputFile } = require('fs-extra')
 
 const destination = `${ __dirname }/LEARN_KEYBINDINGS.md`
@@ -13,7 +13,7 @@ const templateWithComment = `
 
 \`{{command}}\`
 
-> {{comment}}
+{{comment}}
 `.trim()
 
 const snippetTemplate = `
@@ -74,7 +74,7 @@ void (async function main(){
   })
 
   const outputContent = sorted
-    .map(({ key: keyInput, command: commandInput, args, comment, when }) => {
+    .map(({ key: keyInput, command: commandInput, hint, args, comment, when }) => {
       const key = keyInput.split('+').join('  ')
       const command =
         when === 'editorLangId==python' ?
@@ -90,11 +90,18 @@ void (async function main(){
           snippet : snippetInfo,
         })
       }
-      if (comment){
+      if (comment || hint){
+        console.log('comment', comment)
+        console.log('hint', hint)
+        let commentInput = maybe(
+          hint,
+           () =>comment ? `> ${ comment }\n\n HINT: ${ hint.toUpperCase() }` : `> HINT: ${ hint.toUpperCase() }`,
+          `> ${ comment }`
+        )
         return interpolate(templateWithComment, {
           key : key.toUpperCase(),
           command,
-          comment,
+          comment: commentInput,
         })
       }
 

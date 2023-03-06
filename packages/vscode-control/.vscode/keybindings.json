@@ -141,7 +141,7 @@
   },
   {
     "key": "alt+s",
-    "comment": "S for SPLIT",
+    "hint": "SPLIT",
     "command": "workbench.action.toggleSplitEditorInGroup"
   },
   {
