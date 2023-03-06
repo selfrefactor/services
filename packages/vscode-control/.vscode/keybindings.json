@@ -79,7 +79,8 @@
     }
   },
   {
-    "key": "ctlr+shift+0",
+    "key": "capslock 2",
+    "priority": true,
     "command": "editor.foldAll",
     "when": "editorTextFocus && foldingEnabled"
   },
@@ -158,7 +159,8 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+shift+5",
+    "key": "capslock 3",
+    "priority": true,
     "command": "editor.unfoldAll",
     "when": "editorTextFocus && foldingEnabled"
   },
@@ -437,6 +439,12 @@
     "key": "f12",
     "command": "-editor.action.goToDeclaration",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "capslock 1",
+    "priority": true,
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+d",

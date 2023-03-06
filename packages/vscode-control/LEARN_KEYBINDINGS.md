@@ -12,6 +12,10 @@ Command: editor.action.peekImplementation
 
 Command: editor.action.goToImplementation
 
+## CAPSLOCK 1
+
+Command: editor.action.addSelectionToNextFindMatch
+
 ## CAPSLOCK R
 
 Command: editor.action.goToReferences
@@ -35,6 +39,14 @@ Command: references-view.findReferences
 ## CAPSLOCK F
 
 Command: references-view.find
+
+## CAPSLOCK 3
+
+Command: editor.unfoldAll
+
+## CAPSLOCK 2
+
+Command: editor.foldAll
 
 ## F5
 
@@ -71,10 +83,6 @@ Command: editor.action.insertSnippet
 ## CTRL  SHIFT  6
 
 Command: workbench.view.debug
-
-## CTRL  SHIFT  5
-
-Command: editor.unfoldAll
 
 ## CTRL  SHIFT  2
 
@@ -123,10 +131,6 @@ Command: github.copilot.openPanelForRange
 ## CTLR  SHIFT  3
 
 Command: list.collapseAll
-
-## CTLR  SHIFT  0
-
-Command: editor.foldAll
 
 ## CAPSLOCK Z
 
@@ -278,6 +282,7 @@ Command: editor.action.insertSnippet
 * alt+-
 * alt+=
 * ctrl+shift+3
+* ctrl+shift+5
 * ctrl+shift+9
 * ctrl+shift+a
 * ctrl+shift+c
@@ -290,7 +295,6 @@ Command: editor.action.insertSnippet
 * ctrl+shift+w
 * ctrl+shift+x
 * ctrl+shift+=
-* capslock 1
 * capslock 7
 * capslock a
 * capslock d
