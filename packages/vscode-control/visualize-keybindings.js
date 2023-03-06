@@ -5,21 +5,21 @@ const destination = `${ __dirname }/LEARN_KEYBINDINGS.md`
 const template = `
 ## {{key}}
 
-Command: {{command}}
+\`{{command}}\`
 `.trim()
 
 const templateWithComment = `
 ## {{key}}
 
-Command: {{command}}
+\`{{command}}\`
 
-> Comment: {{comment}}
+> {{comment}}
 `.trim()
 
 const snippetTemplate = `
 ## {{key}}
 
-Command: {{command}}
+\`{{command}}\`
 
 > Snippet: {{snippet}}
 `.trim()
