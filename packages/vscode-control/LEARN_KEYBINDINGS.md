@@ -12,6 +12,8 @@ Command: magicBeans.slowScrollInit
 
 Command: editor.action.inlineSuggest.trigger
 
+> Comment: because ctrl + space is the other suggestion keybinding
+
 ## CAPSLOCK '
 
 Command: magicBeans.slowScrollStart

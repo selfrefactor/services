@@ -2,6 +2,7 @@
   {
     "key": "capslock .",
     "priority": true,
+    "comment": "because ctrl + space is the other suggestion keybinding",
     "command": "editor.action.inlineSuggest.trigger",
     "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
   },
