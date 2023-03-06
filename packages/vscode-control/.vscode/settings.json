@@ -85,6 +85,7 @@
     "notebookEditors": false
   },
   "editor.tabCompletion": "on",
+  "zenMode.hideTabs": false,
   "gitlab.showProjectMergeRequests": false,
   "editor.colorDecoratorsLimit": 10,
   "editor.scrollbar.vertical": "visible",
@@ -182,5 +183,5 @@
   "editor.suggestLineHeight": 24,
   "terminal.integrated.fontSize": 11,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin"
+  "workbench.colorTheme": "HomeMovies"
 }

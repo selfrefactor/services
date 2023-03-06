@@ -214,6 +214,7 @@ function getAdditionalSettings(){
     // 'editor.autoClosingOvertype'                             : 'never',
     // 'editor.autoClosingQuotes'                               : 'never',
     'editor.tabCompletion'                                   : 'on',
+    'zenMode.hideTabs'                                       : false,
     'gitlab.showProjectMergeRequests'                        : false,
     'editor.colorDecoratorsLimit'                            : 10,
     'editor.scrollbar.vertical'                              : 'visible',
