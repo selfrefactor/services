@@ -295,7 +295,8 @@
   {
     "key": "capslock p",
     "priority": true,
-    "command": "git.push"
+    "command": "git.push",
+    "hint": "PUSH"
   },
   {
     "key": "ctrl+9",

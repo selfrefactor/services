@@ -12,6 +12,7 @@ import {
   TSX_SNIPPETS,
 } from './constants.js'
 
+let VSCODE_INSIDERS = process.env.BETA === 'ON'
 const FONT_SIZE = 24
 const SUGGEST_LINE_HEIGHT = 24
 const SUGGEST_FONT_SIZE = 20
@@ -79,7 +80,8 @@ function syncSettings(){
     ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
-    'magicBeans.IS_VSCODE_INSIDERS' : process.env.BETA === 'ON',
+    'magicBeans.IS_VSCODE_INSIDERS' : VSCODE_INSIDERS,
+    "workbench.editor.enablePreview": VSCODE_INSIDERS,
     'workbench.colorTheme'          : THEME,
   }
 

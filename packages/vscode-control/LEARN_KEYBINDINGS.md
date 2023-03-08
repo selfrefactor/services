@@ -100,6 +100,8 @@
 
 `git.push`
 
+> HINT: PUSH
+
 ## CAPSLOCK SPACE
 
 `editor.action.triggerParameterHints`
