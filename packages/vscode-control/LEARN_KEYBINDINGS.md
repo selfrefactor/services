@@ -1,12 +1,12 @@
 # Keybindings
 
-## ALT  /
-
-`editor.action.inlineSuggest.trigger`
-
 ## ALT  F
 
 `workbench.files.action.showActiveFileInExplorer`
+
+## APSLOCK /
+
+`editor.action.triggerParameterHints`
 
 ## CAPSLOCK -
 
@@ -30,7 +30,7 @@
 
 ## CAPSLOCK /
 
-`editor.action.triggerParameterHints`
+`editor.action.inlineSuggest.trigger`
 
 ## CAPSLOCK =
 
