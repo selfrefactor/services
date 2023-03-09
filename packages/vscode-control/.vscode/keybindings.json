@@ -1,6 +1,6 @@
 [
   {
-    "key": "alt+space",
+    "key": "shift+space",
     "priority": true,
     "command": "editor.action.inlineSuggest.trigger",
     "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"

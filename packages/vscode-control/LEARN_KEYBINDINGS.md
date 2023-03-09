@@ -4,10 +4,6 @@
 
 `workbench.files.action.showActiveFileInExplorer`
 
-## ALT  SPACE
-
-`editor.action.inlineSuggest.trigger`
-
 ## CAPSLOCK -
 
 `editor.action.fontZoomOut`
@@ -121,6 +117,10 @@
 `git.push`
 
 > HINT: PUSH
+
+## SHIFT  SPACE
+
+`editor.action.inlineSuggest.trigger`
 
 ## ALT  5
 
