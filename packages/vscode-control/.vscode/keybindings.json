@@ -1,13 +1,12 @@
 [
   {
-    "keyx": "alt+/",
-    "key": "capslock /",
+    "key": "alt+.",
     "priority": true,
     "command": "editor.action.inlineSuggest.trigger",
     "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
   },
   {
-    "key": "apslock /",
+    "key": "capslock /",
     "priority": true,
     "command": "editor.action.triggerParameterHints",
     "when": "editorHasSignatureHelpProvider && editorTextFocus"
