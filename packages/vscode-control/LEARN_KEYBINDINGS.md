@@ -1,5 +1,9 @@
 # Keybindings
 
+## ALT  F
+
+`workbench.files.action.showActiveFileInExplorer`
+
 ## CAPSLOCK -
 
 `editor.action.fontZoomOut`
@@ -54,10 +58,6 @@
 
 `references-view.find`
 
-## CAPSLOCK 5
-
-`references-view.findReferences`
-
 ## CAPSLOCK 7
 
 `wallaby.start`
@@ -81,6 +81,10 @@
 ## CAPSLOCK D
 
 `editor.action.goToImplementation`
+
+## CAPSLOCK F
+
+`references-view.findReferences`
 
 ## CAPSLOCK M
 
@@ -177,10 +181,6 @@
 ## ALT  Z
 
 `workbench.action.gotoSymbol`
-
-## CAPSLOCK F
-
-`workbench.files.action.showActiveFileInExplorer`
 
 ## CAPSLOCK L
 
@@ -309,6 +309,7 @@
 * ctrl+shift+w
 * ctrl+shift+x
 * ctrl+shift+=
+* capslock 5
 * capslock 6
 * capslock a
 * capslock e

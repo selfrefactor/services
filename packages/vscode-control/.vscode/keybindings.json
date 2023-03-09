@@ -196,7 +196,7 @@
     "when": "editorHasReferenceProvider"
   },
   {
-    "key": "capslock 5",
+    "key": "capslock f",
     "priority": true,
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider"
@@ -251,7 +251,8 @@
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "capslock f",
+    "key": "alt+f",
+    "priority": true,
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
