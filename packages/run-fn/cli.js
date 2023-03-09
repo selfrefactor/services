@@ -16,6 +16,7 @@ const { lintFile } = require('./services/lintFile/lintFile')
 const { lintFolder } = require('./services/lintFolder/lintFolder')
 const { log } = require('helpers-fn')
 const { read } = require('./services/read/read')
+const { pullAll } = require('./services/pull-all/pull-all')
 
 async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
@@ -25,6 +26,9 @@ async function runFn(){
   }
   if ([ 'angular', 'ng' ].includes(firstArgument)){
     return angular()
+  }
+  if ([ 'pull', 'pull-all' ].includes(firstArgument)){
+    return pullAll()
   }
   if (firstArgument === 'niketa'){
     return niketa()
