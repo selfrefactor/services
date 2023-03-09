@@ -1,14 +1,13 @@
 [
   {
-    "key": "shift+space",
+    "key": "alt+/",
     "priority": true,
     "command": "editor.action.inlineSuggest.trigger",
     "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
   },
   {
-    "key": "capslock space",
+    "key": "capslock /",
     "priority": true,
-    "comment": "because ctrl + space is the other suggestion keybinding",
     "command": "editor.action.triggerParameterHints",
     "when": "editorHasSignatureHelpProvider && editorTextFocus"
   },

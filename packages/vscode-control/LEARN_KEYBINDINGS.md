@@ -1,5 +1,9 @@
 # Keybindings
 
+## ALT  /
+
+`editor.action.inlineSuggest.trigger`
+
 ## ALT  F
 
 `workbench.files.action.showActiveFileInExplorer`
@@ -23,6 +27,10 @@
 ## CAPSLOCK ]
 
 `references-view.findImplementations`
+
+## CAPSLOCK /
+
+`editor.action.triggerParameterHints`
 
 ## CAPSLOCK =
 
@@ -94,12 +102,6 @@
 
 `workbench.action.output.toggleOutput`
 
-## CAPSLOCK SPACE
-
-`editor.action.triggerParameterHints`
-
-> because ctrl + space is the other suggestion keybinding
-
 ## CAPSLOCK T
 
 `workbench.action.selectTheme`
@@ -117,10 +119,6 @@
 `git.push`
 
 > HINT: PUSH
-
-## SHIFT  SPACE
-
-`editor.action.inlineSuggest.trigger`
 
 ## ALT  5
 
