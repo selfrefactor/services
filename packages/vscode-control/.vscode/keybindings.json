@@ -293,7 +293,7 @@
     "command": "workbench.action.files.openFolder"
   },
   {
-    "key": "ctrl+p",
+    "key": "capslock p",
     "priority": true,
     "command": "git.push",
     "hint": "PUSH"

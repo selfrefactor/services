@@ -102,6 +102,12 @@
 
 `workbench.action.output.toggleOutput`
 
+## CAPSLOCK P
+
+`git.push`
+
+> HINT: PUSH
+
 ## CAPSLOCK T
 
 `workbench.action.selectTheme`
@@ -113,12 +119,6 @@
 ## CTRL  1
 
 `editor.action.addSelectionToNextFindMatch`
-
-## CTRL  P
-
-`git.push`
-
-> HINT: PUSH
 
 ## ALT  5
 
