@@ -4,6 +4,10 @@
 
 `workbench.files.action.showActiveFileInExplorer`
 
+## ALT  SPACE
+
+`editor.action.inlineSuggest.trigger`
+
 ## CAPSLOCK -
 
 `editor.action.fontZoomOut`
@@ -11,12 +15,6 @@
 ## CAPSLOCK ;
 
 `magicBeans.slowScrollInit`
-
-## CAPSLOCK .
-
-`editor.action.inlineSuggest.trigger`
-
-> because ctrl + space is the other suggestion keybinding
 
 ## CAPSLOCK '
 
@@ -100,15 +98,11 @@
 
 `workbench.action.output.toggleOutput`
 
-## CAPSLOCK P
-
-`git.push`
-
-> HINT: PUSH
-
 ## CAPSLOCK SPACE
 
 `editor.action.triggerParameterHints`
+
+> because ctrl + space is the other suggestion keybinding
 
 ## CAPSLOCK T
 
@@ -121,6 +115,12 @@
 ## CTRL  1
 
 `editor.action.addSelectionToNextFindMatch`
+
+## CTRL  P
+
+`git.push`
+
+> HINT: PUSH
 
 ## ALT  5
 

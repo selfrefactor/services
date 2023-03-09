@@ -1,14 +1,14 @@
 [
   {
-    "key": "capslock .",
+    "key": "alt+space",
     "priority": true,
-    "comment": "because ctrl + space is the other suggestion keybinding",
     "command": "editor.action.inlineSuggest.trigger",
     "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
   },
   {
     "key": "capslock space",
     "priority": true,
+    "comment": "because ctrl + space is the other suggestion keybinding",
     "command": "editor.action.triggerParameterHints",
     "when": "editorHasSignatureHelpProvider && editorTextFocus"
   },
@@ -294,7 +294,7 @@
     "command": "workbench.action.files.openFolder"
   },
   {
-    "key": "capslock p",
+    "key": "ctrl+p",
     "priority": true,
     "command": "git.push",
     "hint": "PUSH"
