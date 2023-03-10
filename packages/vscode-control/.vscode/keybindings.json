@@ -240,8 +240,9 @@
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "capslock c",
+    "key": "capslock r",
     "priority": true,
+    "hint": "RENAME",
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {

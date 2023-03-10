@@ -72,10 +72,6 @@
 
 `wallaby.addToExclusiveTestRun`
 
-## CAPSLOCK C
-
-`workbench.files.action.collapseExplorerFolders`
-
 ## CAPSLOCK D
 
 `editor.action.goToReferences`
@@ -107,6 +103,12 @@
 `git.push`
 
 > HINT: PUSH
+
+## CAPSLOCK R
+
+`workbench.files.action.collapseExplorerFolders`
+
+> HINT: RENAME
 
 ## CAPSLOCK T
 
@@ -313,9 +315,9 @@
 * capslock 5
 * capslock 6
 * capslock a
+* capslock c
 * capslock e
 * capslock q
-* capslock r
 * capslock s
 * capslock v
 * capslock w
