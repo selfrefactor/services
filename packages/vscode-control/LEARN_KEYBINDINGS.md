@@ -180,6 +180,14 @@
 
 `workbench.action.gotoSymbol`
 
+## CAPSLOCK G
+
+`workbench.view.scm`
+
+> View Git Panel
+
+ HINT: GIT
+
 ## CAPSLOCK L
 
 `niketa.request.cancelation`
@@ -250,12 +258,6 @@
 
 `workbench.action.debug.restart`
 
-## CTRL  SHIFT  Z
-
-`workbench.view.scm`
-
-> View Git Panel
-
 ## CTRL  UP
 
 `editor.action.moveLinesUpAction`
@@ -306,12 +308,12 @@
 * ctrl+shift+v
 * ctrl+shift+w
 * ctrl+shift+x
+* ctrl+shift+z
 * ctrl+shift+=
 * capslock 5
 * capslock 6
 * capslock a
 * capslock e
-* capslock g
 * capslock q
 * capslock r
 * capslock s

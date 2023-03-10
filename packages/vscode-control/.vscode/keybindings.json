@@ -343,9 +343,10 @@
     "when": "inDebugMode"
   },
   {
-    "key": "ctrl+shift+z",
+    "key": "capslock g",
     "command": "workbench.view.scm",
-    "comment": "View Git Panel"
+    "comment": "View Git Panel",
+    "hint": "GIT"
   },
   {
     "key": "capslock d",

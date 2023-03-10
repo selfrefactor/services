@@ -4,7 +4,7 @@
 		"small": "yarn small:1&&yarn small:2&&run d",
 		"small:1": "MODE=small node syncSettings",
 		"small:2": "BETA=ON MODE=small node syncSettings",
-		"on": "yarn onx&&run d",
+		"on": "yarn on:1 && yarn on:2 && run d",
 		"on:1": "MODE=normal node syncSettings",
 		"on:2": "BETA=ON MODE=normal node syncSettings",
 		"big": "yarn big:1 &&yarn big:2 && run d",
