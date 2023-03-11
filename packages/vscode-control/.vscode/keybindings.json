@@ -128,16 +128,27 @@
   },
   {
     "command": "niketa.request.test.run",
-    "key": "alt+w"
+    "key": "capslock t",
+    "priority": true,
+    "hint": "TEST"
+  },
+  {
+    "command": "niketa.request.test.run",
+    "key": "alt t",
+    "priority": true,
+    "hint": "TEST"
   },
   {
     "command": "niketa.lint.file",
-    "key": "capslock 1",
-    "priority": true
+    "key": "capslock l",
+    "priority": true,
+    "hint": "LINT"
   },
   {
-    "command": "niketa.request.cancelation",
-    "key": "capslock l"
+    "command": "niketa.lint.file",
+    "key": "alt l",
+    "priority": true,
+    "hint": "LINT"
   },
   {
     "key": "alt+s",

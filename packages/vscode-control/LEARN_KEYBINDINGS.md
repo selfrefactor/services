@@ -1,5 +1,17 @@
 # Keybindings
 
+## ALT L
+
+`niketa.lint.file`
+
+> HINT: LINT
+
+## ALT T
+
+`niketa.request.test.run`
+
+> HINT: TEST
+
 ## ALT  .
 
 `editor.action.inlineSuggest.trigger`
@@ -44,10 +56,6 @@
 
 `wallaby.updateFileSnapshots`
 
-## CAPSLOCK 1
-
-`niketa.lint.file`
-
 ## CAPSLOCK 2
 
 `editor.foldAll`
@@ -84,6 +92,12 @@
 
 `references-view.findReferences`
 
+## CAPSLOCK L
+
+`niketa.lint.file`
+
+> HINT: LINT
+
 ## CAPSLOCK M
 
 `issuesAndMrs.focus`
@@ -109,6 +123,12 @@
 `workbench.files.action.collapseExplorerFolders`
 
 > HINT: RENAME
+
+## CAPSLOCK T
+
+`niketa.request.test.run`
+
+> HINT: TEST
 
 ## CAPSLOCK T
 
@@ -174,10 +194,6 @@
 
 `editor.action.smartSelect.expand`
 
-## ALT  W
-
-`niketa.request.test.run`
-
 ## ALT  Z
 
 `workbench.action.gotoSymbol`
@@ -189,10 +205,6 @@
 > View Git Panel
 
  HINT: GIT
-
-## CAPSLOCK L
-
-`niketa.request.cancelation`
 
 ## CTLR  SHIFT  3
 
@@ -295,6 +307,7 @@
 * alt+q
 * alt+r
 * alt+v
+* alt+w
 * alt+-
 * alt+=
 * ctrl+shift+3
@@ -312,6 +325,7 @@
 * ctrl+shift+x
 * ctrl+shift+z
 * ctrl+shift+=
+* capslock 1
 * capslock 5
 * capslock 6
 * capslock a
