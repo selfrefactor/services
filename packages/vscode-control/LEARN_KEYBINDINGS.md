@@ -24,6 +24,10 @@
 
 `editor.action.fontZoomOut`
 
+## CAPSLOCK ,
+
+`magicBeans.fixCamelcaseRefactoring`
+
 ## CAPSLOCK ;
 
 `magicBeans.slowScrollInit`
@@ -47,10 +51,6 @@
 ## CAPSLOCK =
 
 `editor.action.fontZoomIn`
-
-## CAPSLOCK =
-
-`magicBeans.fixCamelcaseRefactoring`
 
 ## CAPSLOCK 0
 
