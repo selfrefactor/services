@@ -102,7 +102,7 @@
   "typescript.inlayHints.variableTypes.enabled": false,
   "window.commandCenter": false,
   "window.titleBarStyle": "custom",
-  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+  "window.title": "${dirty}${activeEditorShort}$",
   "breadcrumbs.enabled": false,
   "debug.inlineValues": "off",
   "debug.javascript.usePreview": true,
