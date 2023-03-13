@@ -234,7 +234,7 @@ function getAdditionalSettings(){
     // click to go to recent files
     'window.commandCenter'                                   : false,
     'window.titleBarStyle'                                   : 'custom',
-    'window.title'                                           : "${workspaceFolder}/app.js",
+    'window.title'                                           : "${relativeFile}",
     // without comments
     'breadcrumbs.enabled'                                    : false,
     'debug.inlineValues'                                     : 'off',
