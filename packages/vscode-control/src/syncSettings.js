@@ -234,7 +234,7 @@ function getAdditionalSettings(){
     // click to go to recent files
     'window.commandCenter'                                   : true,
     'window.titleBarStyle'                                   : 'custom',
-    'window.title'                                           : '${activeFolderMedium}/${activeEditorShort}',
+    'window.title'                                           : '${relativeFile}',
     // without comments
     'breadcrumbs.enabled'                                    : false,
     'debug.inlineValues'                                     : 'off',
