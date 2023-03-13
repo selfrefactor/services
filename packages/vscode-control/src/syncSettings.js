@@ -234,7 +234,7 @@ function getAdditionalSettings(){
     // click to go to recent files
     'window.commandCenter'                                   : false,
     'window.titleBarStyle'                                   : 'custom',
-    'window.title'                                           : "${file}/aas",
+    'window.title'                                           : "${fileDirname}/aas",
     // without comments
     'breadcrumbs.enabled'                                    : false,
     'debug.inlineValues'                                     : 'off',
