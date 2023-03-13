@@ -100,7 +100,7 @@
   "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
   "typescript.inlayHints.parameterTypes.enabled": false,
   "typescript.inlayHints.variableTypes.enabled": false,
-  "window.commandCenter": true,
+  "window.commandCenter": false,
   "window.titleBarStyle": "custom",
   "window.title": "${relativeFile}",
   "breadcrumbs.enabled": false,

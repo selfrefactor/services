@@ -232,7 +232,7 @@ function getAdditionalSettings(){
     'typescript.inlayHints.parameterTypes.enabled'           : false,
     'typescript.inlayHints.variableTypes.enabled'            : false,
     // click to go to recent files
-    'window.commandCenter'                                   : true,
+    'window.commandCenter'                                   : false,
     'window.titleBarStyle'                                   : 'custom',
     'window.title'                                           : '${relativeFile}',
     // without comments
