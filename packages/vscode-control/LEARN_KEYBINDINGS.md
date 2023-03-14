@@ -54,7 +54,9 @@
 
 ## CAPSLOCK 0
 
-`wallaby.updateFileSnapshots`
+`workbench.action.selectTheme`
+
+> HINT: BEFORE IT WAS ALSO RELATED TO 0
 
 ## CAPSLOCK 2
 
@@ -68,17 +70,21 @@
 
 `references-view.find`
 
-## CAPSLOCK 7
+## CAPSLOCK 5
 
 `wallaby.start`
 
-## CAPSLOCK 8
+## CAPSLOCK 6
 
 `wallaby.stop`
 
-## CAPSLOCK 9
+## CAPSLOCK 7
 
 `wallaby.addToExclusiveTestRun`
+
+## CAPSLOCK 8
+
+`wallaby.updateFileSnapshots`
 
 ## CAPSLOCK D
 
@@ -129,10 +135,6 @@
 `niketa.request.test.run`
 
 > HINT: TEST
-
-## CAPSLOCK T
-
-`workbench.action.selectTheme`
 
 ## CAPSLOCK Z
 
@@ -326,8 +328,7 @@
 * ctrl+shift+z
 * ctrl+shift+=
 * capslock 1
-* capslock 5
-* capslock 6
+* capslock 9
 * capslock a
 * capslock c
 * capslock e

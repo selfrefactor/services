@@ -257,8 +257,9 @@
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
-    "key": "capslock t",
+    "key": "capslock 0",
     "priority": true,
+    "hint":"before it was also related to 0",
     "command": "workbench.action.selectTheme"
   },
   {
@@ -367,22 +368,22 @@
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "capslock 7",
+    "key": "capslock 5",
     "priority": true,
     "command": "wallaby.start"
   },
   {
-    "key": "capslock 8",
+    "key": "capslock 6",
     "priority": true,
     "command": "wallaby.stop"
   },
   {
-    "key": "capslock 9",
+    "key": "capslock 7",
     "priority": true,
     "command": "wallaby.addToExclusiveTestRun"
   },
   {
-    "key": "capslock 0",
+    "key": "capslock 8",
     "priority": true,
     "command": "wallaby.updateFileSnapshots"
   },
