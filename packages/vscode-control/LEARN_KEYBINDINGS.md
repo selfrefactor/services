@@ -144,6 +144,12 @@
 
 `editor.action.addSelectionToNextFindMatch`
 
+## CTRL  SHIFT  R
+
+`workbench.action.debug.restart`
+
+> HINT: RESTART
+
 ## ALT  5
 
 `editor.action.insertSnippet`
@@ -269,10 +275,6 @@
 ## CTRL  SHIFT  D
 
 `editor.action.copyLinesDownAction`
-
-## CTRL  SHIFT  R
-
-`workbench.action.debug.restart`
 
 ## CTRL  UP
 
