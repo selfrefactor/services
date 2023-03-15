@@ -6,11 +6,11 @@
 
 > HINT: LINT
 
-## ALT T
+## ALT W
 
 `niketa.request.test.run`
 
-> HINT: TEST
+> HINT: LEGACY AS BEFORE IT WAS THE SAME
 
 ## ALT  .
 
