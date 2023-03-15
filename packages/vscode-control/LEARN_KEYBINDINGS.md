@@ -16,6 +16,8 @@
 
 `editor.action.inlineSuggest.trigger`
 
+> HINT: EASY TO ACCESS
+
 ## ALT  I
 
 `editor.action.goToImplementation`
@@ -41,10 +43,6 @@
 ## CAPSLOCK [
 
 `editor.action.peekImplementation`
-
-## CAPSLOCK /
-
-`editor.action.triggerParameterHints`
 
 ## CAPSLOCK =
 
@@ -90,6 +88,12 @@
 
 > HINT: ACTIVE FILE
 
+## CAPSLOCK C
+
+`workbench.files.action.collapseExplorerFolders`
+
+> HINT: COLLAPSE
+
 ## CAPSLOCK F
 
 `references-view.findReferences`
@@ -114,6 +118,8 @@
 
 > Used with Gitlab extension to focus on MR view
 
+ HINT: MR
+
 ## CAPSLOCK N
 
 `workbench.view.extensions`
@@ -122,17 +128,19 @@
 
 `workbench.action.output.toggleOutput`
 
+> HINT: OUTPUT
+
+## CAPSLOCK P
+
+`editor.action.triggerParameterHints`
+
+> HINT: PARAMETER
+
 ## CAPSLOCK P
 
 `git.push`
 
 > HINT: PUSH
-
-## CAPSLOCK R
-
-`workbench.files.action.collapseExplorerFolders`
-
-> HINT: RENAME
 
 ## CAPSLOCK R
 
@@ -153,6 +161,12 @@
 ## CTRL  1
 
 `editor.action.addSelectionToNextFindMatch`
+
+## CTRL  SHIFT  2
+
+`workbench.action.editorLayoutTwoColumns`
+
+> HINT: 2 COLUMNS
 
 ## CTRL  SHIFT  R
 
@@ -270,10 +284,6 @@
 
 `workbench.action.editorLayoutSingle`
 
-## CTRL  SHIFT  2
-
-`workbench.action.editorLayoutTwoColumns`
-
 ## CTRL  SHIFT  6
 
 `workbench.view.debug`
@@ -348,7 +358,6 @@
 * ctrl+shift+=
 * capslock 4
 * capslock 9
-* capslock c
 * capslock d
 * capslock e
 * capslock q
