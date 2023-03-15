@@ -16,10 +16,6 @@
 
 `editor.action.inlineSuggest.trigger`
 
-## ALT  F
-
-`workbench.files.action.showActiveFileInExplorer`
-
 ## ALT  I
 
 `editor.action.goToImplementation`
@@ -87,6 +83,12 @@
 ## CAPSLOCK 8
 
 `wallaby.updateFileSnapshots`
+
+## CAPSLOCK A
+
+`workbench.files.action.showActiveFileInExplorer`
+
+> HINT: ACTIVE FILE
 
 ## CAPSLOCK F
 
@@ -195,6 +197,12 @@
 ## ALT  E
 
 `workbench.view.explorer`
+
+## ALT  H
+
+`editor.action.showHover`
+
+> HINT: HOVER  
 
 ## ALT  S
 
@@ -314,6 +322,7 @@
 * ctrl+=
 * alt+0
 * alt+3
+* alt+a
 * alt+d
 * alt+g
 * alt+q
@@ -339,7 +348,6 @@
 * ctrl+shift+=
 * capslock 1
 * capslock 9
-* capslock a
 * capslock c
 * capslock d
 * capslock e

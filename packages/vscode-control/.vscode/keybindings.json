@@ -156,9 +156,9 @@
     "command": "workbench.action.toggleSplitEditorInGroup"
   },
   {
-    "key": "alt+a",
+    "key": "alt+h",
+    "hint": "Hover  ",  
     "command": "editor.action.showHover",
-    "alreadyLearned": true,
     "when": "editorTextFocus"
   },
   {
@@ -264,7 +264,8 @@
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "alt+f",
+    "key": "capslock a",
+    "hint": "Active file",
     "priority": true,
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
