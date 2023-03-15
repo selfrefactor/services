@@ -1,28 +1,34 @@
 # Keybindings
 
-## ALT L
-
-`niketa.lint.file`
-
-> HINT: LINT
-
-## ALT W
-
-`niketa.request.test.run`
-
-> HINT: LEGACY AS BEFORE IT WAS THE SAME
-
 ## ALT  .
 
 `editor.action.inlineSuggest.trigger`
 
 > HINT: EASY TO ACCESS
 
+## ALT  2
+
+`workbench.action.editorLayoutTwoColumns`
+
+> HINT: 2 COLUMNS
+
 ## ALT  I
 
 `editor.action.goToImplementation`
 
 > HINT: IMPLEMENTATION
+
+## ALT  P
+
+`editor.action.triggerParameterHints`
+
+> HINT: PARAMETER
+
+## ALT  W
+
+`niketa.request.test.run`
+
+> HINT: LEGACY AS BEFORE IT WAS THE SAME
 
 ## CAPSLOCK -
 
@@ -60,10 +66,6 @@
 
 ## CAPSLOCK 2
 
-`editor.foldAll`
-
-## CAPSLOCK 2
-
 `workbench.action.editorLayoutTwoColumns`
 
 > HINT: 2 COLUMNS
@@ -87,6 +89,12 @@
 ## CAPSLOCK 8
 
 `wallaby.updateFileSnapshots`
+
+## CAPSLOCK A
+
+`editor.foldAll`
+
+> HINT: ALL - FOLD ALL
 
 ## CAPSLOCK A
 
@@ -138,12 +146,6 @@
 
 ## CAPSLOCK P
 
-`editor.action.triggerParameterHints`
-
-> HINT: PARAMETER
-
-## CAPSLOCK P
-
 `git.push`
 
 > HINT: PUSH
@@ -161,12 +163,6 @@
 ## CTRL  1
 
 `editor.action.addSelectionToNextFindMatch`
-
-## CTRL  SHIFT  2
-
-`workbench.action.editorLayoutTwoColumns`
-
-> HINT: 2 COLUMNS
 
 ## CTRL  SHIFT  R
 
@@ -204,6 +200,12 @@
 
 > Snippet: StringTemplate
 
+## ALT  A
+
+`editor.action.showHover`
+
+> this needs to be convenient
+
 ## ALT  C
 
 `magicBeans.copyTrimmed`
@@ -211,12 +213,6 @@
 ## ALT  E
 
 `workbench.view.explorer`
-
-## ALT  H
-
-`editor.action.showHover`
-
-> HINT: HOVER  
 
 ## ALT  S
 
@@ -236,6 +232,26 @@
 
 `workbench.action.gotoSymbol`
 
+## CAPSLOCK ;
+
+`github.copilot.openPanelForRange`
+
+## CAPSLOCK <
+
+`editor.action.inlineSuggest.showPrevious`
+
+## CAPSLOCK 7
+
+`editor.action.insertSnippet`
+
+> Snippet: commentMultiline
+
+## CAPSLOCK D
+
+`workbench.view.debug`
+
+> HINT: DEBUG
+
 ## CAPSLOCK G
 
 `workbench.view.scm`
@@ -247,10 +263,6 @@
 ## CTLR  SHIFT  3
 
 `list.collapseAll`
-
-## CTLR  SHIFT  9
-
-`github.copilot.openPanelForRange`
 
 ## CTRL  9
 
@@ -283,20 +295,6 @@
 ## CTRL  SHIFT  1
 
 `workbench.action.editorLayoutSingle`
-
-## CTRL  SHIFT  6
-
-`workbench.view.debug`
-
-## CTRL  SHIFT  7
-
-`editor.action.insertSnippet`
-
-> Snippet: commentMultiline
-
-## CTRL  SHIFT  8
-
-`editor.action.inlineSuggest.showPrevious`
 
 ## CTRL  SHIFT  D
 
@@ -332,17 +330,19 @@
 * ctrl+=
 * alt+0
 * alt+3
-* alt+a
 * alt+d
 * alt+g
 * alt+q
 * alt+r
 * alt+v
-* alt+w
 * alt+-
 * alt+=
+* ctrl+shift+2
 * ctrl+shift+3
 * ctrl+shift+5
+* ctrl+shift+6
+* ctrl+shift+7
+* ctrl+shift+8
 * ctrl+shift+9
 * ctrl+shift+a
 * ctrl+shift+c
@@ -358,7 +358,6 @@
 * ctrl+shift+=
 * capslock 4
 * capslock 9
-* capslock d
 * capslock e
 * capslock q
 * capslock s

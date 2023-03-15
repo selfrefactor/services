@@ -7,7 +7,7 @@
     "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
   },
   {
-    "key": "capslock p",
+    "key": "alt+p",
     "priority": true,
     "hint": "parameter",
     "command": "editor.action.triggerParameterHints",
@@ -93,13 +93,14 @@
     }
   },
   {
-    "key": "capslock 2",
+    "key": "capslock a",
     "priority": true,
+    "hint": "All - fold all",
     "command": "editor.foldAll",
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "ctlr+shift+9",
+    "key": "capslock ;",
     "command": "github.copilot.openPanelForRange"
   },
   {
@@ -109,12 +110,12 @@
     "command": "references-view.findImplementations"
   },
   {
-    "key": "ctrl+shift+8",
+    "key": "capslock <",
     "command": "editor.action.inlineSuggest.showPrevious",
     "when": "inlineSuggestionVisible && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+7",
+    "key": "capslock 7",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "commentMultiline"
@@ -126,7 +127,7 @@
   },
   {
     "command": "niketa.request.test.run",
-    "key": "alt w",
+    "key": "alt+w",
     "priority": true,
     "hint": "legacy as before it was the same"
   },
@@ -137,19 +138,13 @@
     "hint": "LINT"
   },
   {
-    "command": "niketa.lint.file",
-    "key": "alt l",
-    "priority": true,
-    "hint": "LINT"
-  },
-  {
     "key": "alt+s",
     "hint": "SPLIT",
     "command": "workbench.action.toggleSplitEditorInGroup"
   },
   {
-    "key": "alt+h",
-    "hint": "Hover  ",
+    "key": "alt+a",
+    "comment": "this needs to be convenient",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
   },
@@ -160,17 +155,18 @@
     "when": "textInputFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+6",
+    "key": "capslock d",
+    "hint": "debug",
     "command": "workbench.view.debug"
   },
   {
-    "key": "ctrl+shift+2",
+    "key": "capslock 2",
     "command": "workbench.action.editorLayoutTwoColumns",
     "hint": "2 Columns",
     "priority": true
   },
   {
-    "key": "capslock 2",
+    "key": "alt+2",
     "command": "workbench.action.editorLayoutTwoColumns",
     "hint": "2 Columns",
     "priority": true
