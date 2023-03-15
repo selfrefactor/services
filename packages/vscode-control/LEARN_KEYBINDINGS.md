@@ -154,12 +154,6 @@
 
 > HINT: REFERENCES
 
-## CAPSLOCK T
-
-`niketa.request.test.run`
-
-> HINT: TEST
-
 ## CAPSLOCK Z
 
 `workbench.action.toggleZenMode`
@@ -368,6 +362,7 @@
 * capslock e
 * capslock q
 * capslock s
+* capslock t
 * capslock v
 * capslock w
 * capslock x

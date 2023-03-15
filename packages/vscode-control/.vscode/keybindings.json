@@ -126,12 +126,6 @@
   },
   {
     "command": "niketa.request.test.run",
-    "key": "capslock t",
-    "priority": true,
-    "hint": "TEST"
-  },
-  {
-    "command": "niketa.request.test.run",
     "key": "alt w",
     "priority": true,
     "hint": "legacy as before it was the same"
