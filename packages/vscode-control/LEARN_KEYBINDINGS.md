@@ -62,6 +62,12 @@
 
 `editor.foldAll`
 
+## CAPSLOCK 2
+
+`workbench.action.editorLayoutTwoColumns`
+
+> HINT: 2 COLUMNS
+
 ## CAPSLOCK 3
 
 `editor.unfoldAll`
