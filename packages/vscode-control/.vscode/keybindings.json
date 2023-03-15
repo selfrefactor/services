@@ -208,6 +208,7 @@
   {
     "key": "capslock f",
     "priority": true,
+    "hint": "FIND",
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider"
   },
@@ -364,9 +365,10 @@
     "hint": "GIT"
   },
   {
-    "key": "capslock d",
+    "key": "capslock r",
     "command": "editor.action.goToReferences",
     "priority": true,
+    "hint": "REFERENCES",
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
@@ -713,9 +715,10 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "capslock d",
+    "key": "alt+i",
     "command": "editor.action.goToImplementation",
     "priority": true,
+    "hint": "Implementation",
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
@@ -735,8 +738,9 @@
     "when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "capslock ]",
+    "key": "capslock i",
     "priority": true,
+    "hint": "Implementation",
     "command": "references-view.findImplementations"
   }
 ]

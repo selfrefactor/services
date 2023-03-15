@@ -20,6 +20,12 @@
 
 `workbench.files.action.showActiveFileInExplorer`
 
+## ALT  I
+
+`editor.action.goToImplementation`
+
+> HINT: IMPLEMENTATION
+
 ## CAPSLOCK -
 
 `editor.action.fontZoomOut`
@@ -39,10 +45,6 @@
 ## CAPSLOCK [
 
 `editor.action.peekImplementation`
-
-## CAPSLOCK ]
-
-`references-view.findImplementations`
 
 ## CAPSLOCK /
 
@@ -86,17 +88,17 @@
 
 `wallaby.updateFileSnapshots`
 
-## CAPSLOCK D
-
-`editor.action.goToReferences`
-
-## CAPSLOCK D
-
-`editor.action.goToImplementation`
-
 ## CAPSLOCK F
 
 `references-view.findReferences`
+
+> HINT: FIND
+
+## CAPSLOCK I
+
+`references-view.findImplementations`
+
+> HINT: IMPLEMENTATION
 
 ## CAPSLOCK L
 
@@ -129,6 +131,12 @@
 `workbench.files.action.collapseExplorerFolders`
 
 > HINT: RENAME
+
+## CAPSLOCK R
+
+`editor.action.goToReferences`
+
+> HINT: REFERENCES
 
 ## CAPSLOCK T
 
@@ -333,6 +341,7 @@
 * capslock 9
 * capslock a
 * capslock c
+* capslock d
 * capslock e
 * capslock q
 * capslock s
