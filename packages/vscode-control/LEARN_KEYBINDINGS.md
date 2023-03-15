@@ -56,6 +56,10 @@
 
 > HINT: BEFORE IT WAS ALSO RELATED TO 0
 
+## CAPSLOCK 1
+
+`references-view.find`
+
 ## CAPSLOCK 2
 
 `editor.foldAll`
@@ -63,10 +67,6 @@
 ## CAPSLOCK 3
 
 `editor.unfoldAll`
-
-## CAPSLOCK 4
-
-`references-view.find`
 
 ## CAPSLOCK 5
 
@@ -346,7 +346,7 @@
 * ctrl+shift+x
 * ctrl+shift+z
 * ctrl+shift+=
-* capslock 1
+* capslock 4
 * capslock 9
 * capslock c
 * capslock d
