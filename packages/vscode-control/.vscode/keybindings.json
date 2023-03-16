@@ -301,7 +301,7 @@
     "alreadyLearned": true
   },
   {
-    "key": "capslock r",
+    "key": "alt+r",
     "command": "workbench.action.debug.restart",
     "priority": true,
     "hint": "RESTART",

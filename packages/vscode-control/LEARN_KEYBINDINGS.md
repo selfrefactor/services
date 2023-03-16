@@ -24,6 +24,12 @@
 
 > HINT: PARAMETER
 
+## ALT  R
+
+`workbench.action.debug.restart`
+
+> HINT: RESTART
+
 ## ALT  W
 
 `niketa.request.test.run`
@@ -141,12 +147,6 @@
 `git.push`
 
 > HINT: PUSH
-
-## CAPSLOCK R
-
-`workbench.action.debug.restart`
-
-> HINT: RESTART
 
 ## CAPSLOCK R
 
@@ -327,7 +327,6 @@
 * alt+d
 * alt+g
 * alt+q
-* alt+r
 * alt+v
 * alt+-
 * alt+=
