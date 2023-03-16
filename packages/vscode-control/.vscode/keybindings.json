@@ -115,7 +115,7 @@
     "when": "inlineSuggestionVisible && !editorReadonly"
   },
   {
-    "key": "capslock 7",
+    "key": "capslock 3",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "commentMultiline"

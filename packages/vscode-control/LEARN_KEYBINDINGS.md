@@ -238,7 +238,7 @@
 
 > HINT: 1 COLUMN
 
-## CAPSLOCK 7
+## CAPSLOCK 3
 
 `editor.action.insertSnippet`
 
@@ -355,7 +355,6 @@
 * ctrl+shift+-
 * ctrl+shift+=
 * capslock 0
-* capslock 3
 * capslock 4
 * capslock 9
 * capslock e
