@@ -285,7 +285,7 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "capslock o",
+    "key": "alt+o",
     "priority": true,
     "command": "workbench.action.output.toggleOutput",
     "hint": "OUTPUT",

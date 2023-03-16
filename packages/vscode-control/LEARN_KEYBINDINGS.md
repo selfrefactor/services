@@ -12,6 +12,12 @@
 
 > HINT: IMPLEMENTATION
 
+## ALT  O
+
+`workbench.action.output.toggleOutput`
+
+> HINT: OUTPUT
+
 ## ALT  P
 
 `editor.action.triggerParameterHints`
@@ -135,12 +141,6 @@
 ## CAPSLOCK N
 
 `workbench.view.extensions`
-
-## CAPSLOCK O
-
-`workbench.action.output.toggleOutput`
-
-> HINT: OUTPUT
 
 ## CAPSLOCK P
 
@@ -330,30 +330,6 @@
 * alt+v
 * alt+-
 * alt+=
-* ctrl+shift+0
-* ctrl+shift+1
-* ctrl+shift+2
-* ctrl+shift+3
-* ctrl+shift+4
-* ctrl+shift+5
-* ctrl+shift+6
-* ctrl+shift+7
-* ctrl+shift+8
-* ctrl+shift+9
-* ctrl+shift+a
-* ctrl+shift+c
-* ctrl+shift+e
-* ctrl+shift+g
-* ctrl+shift+q
-* ctrl+shift+r
-* ctrl+shift+s
-* ctrl+shift+t
-* ctrl+shift+v
-* ctrl+shift+w
-* ctrl+shift+x
-* ctrl+shift+z
-* ctrl+shift+-
-* ctrl+shift+=
 * capslock 0
 * capslock 4
 * capslock 9
