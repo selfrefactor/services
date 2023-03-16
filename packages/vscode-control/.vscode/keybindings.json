@@ -263,7 +263,7 @@
     "command": "workbench.action.openRecent"
   },
   {
-    "key": "alt+o",
+    "key": "ctrl+o",
     "hint": "OPEN",
     "command": "workbench.action.files.openFolder"
   },
@@ -732,6 +732,11 @@
     "key": "alt+f3",
     "command": "-editor.action.selectHighlights",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFile",
+    "when": "true"
   },
   {
     "key": "ctrl+shift+f",

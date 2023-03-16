@@ -206,12 +206,6 @@
 
 `workbench.view.explorer`
 
-## ALT  O
-
-`workbench.action.files.openFolder`
-
-> HINT: OPEN
-
 ## ALT  S
 
 `workbench.action.toggleSplitEditorInGroup`
@@ -295,6 +289,12 @@
 ## CTRL  G
 
 `editor.action.goToTypeDefinition`
+
+## CTRL  O
+
+`workbench.action.files.openFolder`
+
+> HINT: OPEN
 
 ## CTRL  SHIFT  D
 
