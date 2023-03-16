@@ -7,7 +7,7 @@
 	},
 	"typings": "typings.d.ts",
 	"main": "src/index.js",
-	"version": "1.7.0",
+	"version": "1.8.0",
 	"dependencies": {
 		"benny": "3.7.1",
 		"boxen": "7.0.2",
