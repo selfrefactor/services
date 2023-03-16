@@ -1,3 +1,5 @@
+export function copy(text: string): Promise<void>
+
 export function getStagedFiles(cwd: string): Promise<string[]>
 
 // READ FOLDER
