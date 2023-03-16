@@ -263,8 +263,7 @@
     "command": "workbench.action.openRecent"
   },
   {
-    "key": "capslock o",
-    "alreadyLearned": true,
+    "key": "alt+o",
     "hint": "OPEN",
     "command": "workbench.action.files.openFolder"
   },
@@ -285,7 +284,7 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "alt+o",
+    "key": "capslock o",
     "priority": true,
     "command": "workbench.action.output.toggleOutput",
     "hint": "OUTPUT",

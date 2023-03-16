@@ -12,12 +12,6 @@
 
 > HINT: IMPLEMENTATION
 
-## ALT  O
-
-`workbench.action.output.toggleOutput`
-
-> HINT: OUTPUT
-
 ## ALT  P
 
 `editor.action.triggerParameterHints`
@@ -142,6 +136,12 @@
 
 `workbench.view.extensions`
 
+## CAPSLOCK O
+
+`workbench.action.output.toggleOutput`
+
+> HINT: OUTPUT
+
 ## CAPSLOCK P
 
 `git.push`
@@ -205,6 +205,12 @@
 ## ALT  E
 
 `workbench.view.explorer`
+
+## ALT  O
+
+`workbench.action.files.openFolder`
+
+> HINT: OPEN
 
 ## ALT  S
 
