@@ -150,6 +150,12 @@
 
 ## CAPSLOCK R
 
+`workbench.action.debug.restart`
+
+> HINT: RESTART
+
+## CAPSLOCK R
+
 `editor.action.goToReferences`
 
 > HINT: REFERENCES
@@ -161,12 +167,6 @@
 ## CTRL  1
 
 `editor.action.addSelectionToNextFindMatch`
-
-## CTRL  SHIFT  R
-
-`workbench.action.debug.restart`
-
-> HINT: RESTART
 
 ## ALT  5
 
@@ -264,6 +264,14 @@
 
  HINT: GIT
 
+## CAPSLOCK H
+
+`magicBeans.createSpec`
+
+## CAPSLOCK J
+
+`magicBeans.sortLines`
+
 ## CAPSLOCK Y
 
 `list.collapseAll`
@@ -287,14 +295,6 @@
 ## CTRL  G
 
 `editor.action.goToTypeDefinition`
-
-## CTRL  SHIFT  -
-
-`magicBeans.sortLines`
-
-## CTRL  SHIFT  0
-
-`magicBeans.createSpec`
 
 ## CTRL  SHIFT  D
 
@@ -337,6 +337,7 @@
 * alt+v
 * alt+-
 * alt+=
+* ctrl+shift+0
 * ctrl+shift+1
 * ctrl+shift+2
 * ctrl+shift+3
@@ -351,12 +352,14 @@
 * ctrl+shift+e
 * ctrl+shift+g
 * ctrl+shift+q
+* ctrl+shift+r
 * ctrl+shift+s
 * ctrl+shift+t
 * ctrl+shift+v
 * ctrl+shift+w
 * ctrl+shift+x
 * ctrl+shift+z
+* ctrl+shift+-
 * ctrl+shift+=
 * capslock 0
 * capslock 3

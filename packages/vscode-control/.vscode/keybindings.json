@@ -307,7 +307,7 @@
     "alreadyLearned": true
   },
   {
-    "key": "ctrl+shift+r",
+    "key": "capslock r",
     "command": "workbench.action.debug.restart",
     "priority": true,
     "hint": "RESTART",
@@ -353,7 +353,7 @@
   },
   {
     "command": "magicBeans.sortLines",
-    "key": "ctrl+shift+-"
+    "key": "capslock j"
   },
   {
     "command": "magicBeans.requestRandomFile",
@@ -362,7 +362,7 @@
   },
   {
     "command": "magicBeans.createSpec",
-    "key": "ctrl+shift+0"
+    "key": "capslock h"
   },
   {
     "command": "magicBeans.slowScrollInit",
