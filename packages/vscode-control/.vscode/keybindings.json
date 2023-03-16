@@ -172,22 +172,23 @@
     "priority": true
   },
   {
-    "key": "ctrl+shift+1",
-    "command": "workbench.action.editorLayoutSingle"
+    "key": "capslock 1",
+    "command": "workbench.action.editorLayoutSingle",
+    "hint": "1 Column"
   },
   {
-    "key": "ctlr+shift+3",
+    "key": "capslock y",
     "command": "list.collapseAll",
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "capslock 3",
+    "key": "capslock h",
     "priority": true,
     "command": "editor.unfoldAll",
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "capslock 1",
+    "key": "capslock b",
     "command": "references-view.find",
     "priority": true,
     "when": "editorHasReferenceProvider"
@@ -230,9 +231,8 @@
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
-    "key": "capslock 0",
+    "key": "capslock k",
     "priority": true,
-    "hint": "before it was also related to 0",
     "command": "workbench.action.selectTheme"
   },
   {
@@ -269,8 +269,9 @@
     "command": "workbench.action.openRecent"
   },
   {
-    "key": "ctrl+shift+4",
+    "key": "capslock o",
     "alreadyLearned": true,
+    "hint": "OPEN",
     "command": "workbench.action.files.openFolder"
   },
   {

@@ -54,25 +54,11 @@
 
 `editor.action.fontZoomIn`
 
-## CAPSLOCK 0
-
-`workbench.action.selectTheme`
-
-> HINT: BEFORE IT WAS ALSO RELATED TO 0
-
-## CAPSLOCK 1
-
-`references-view.find`
-
 ## CAPSLOCK 2
 
 `workbench.action.editorLayoutTwoColumns`
 
 > HINT: 2 COLUMNS
-
-## CAPSLOCK 3
-
-`editor.unfoldAll`
 
 ## CAPSLOCK 5
 
@@ -102,6 +88,10 @@
 
 > HINT: ACTIVE FILE
 
+## CAPSLOCK B
+
+`references-view.find`
+
 ## CAPSLOCK C
 
 `workbench.files.action.collapseExplorerFolders`
@@ -114,11 +104,19 @@
 
 > HINT: FIND
 
+## CAPSLOCK H
+
+`editor.unfoldAll`
+
 ## CAPSLOCK I
 
 `references-view.findImplementations`
 
 > HINT: IMPLEMENTATION
+
+## CAPSLOCK K
+
+`workbench.action.selectTheme`
 
 ## CAPSLOCK L
 
@@ -240,6 +238,12 @@
 
 `editor.action.inlineSuggest.showPrevious`
 
+## CAPSLOCK 1
+
+`workbench.action.editorLayoutSingle`
+
+> HINT: 1 COLUMN
+
 ## CAPSLOCK 7
 
 `editor.action.insertSnippet`
@@ -260,7 +264,7 @@
 
  HINT: GIT
 
-## CTLR  SHIFT  3
+## CAPSLOCK Y
 
 `list.collapseAll`
 
@@ -291,10 +295,6 @@
 ## CTRL  SHIFT  0
 
 `magicBeans.createSpec`
-
-## CTRL  SHIFT  1
-
-`workbench.action.editorLayoutSingle`
 
 ## CTRL  SHIFT  D
 
@@ -337,8 +337,10 @@
 * alt+v
 * alt+-
 * alt+=
+* ctrl+shift+1
 * ctrl+shift+2
 * ctrl+shift+3
+* ctrl+shift+4
 * ctrl+shift+5
 * ctrl+shift+6
 * ctrl+shift+7
@@ -356,6 +358,8 @@
 * ctrl+shift+x
 * ctrl+shift+z
 * ctrl+shift+=
+* capslock 0
+* capslock 3
 * capslock 4
 * capslock 9
 * capslock e
