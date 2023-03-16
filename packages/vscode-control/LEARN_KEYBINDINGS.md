@@ -6,12 +6,6 @@
 
 > HINT: EASY TO ACCESS
 
-## ALT  2
-
-`workbench.action.editorLayoutTwoColumns`
-
-> HINT: 2 COLUMNS
-
 ## ALT  I
 
 `editor.action.goToImplementation`
@@ -59,6 +53,12 @@
 ## CAPSLOCK =
 
 `editor.action.fontZoomIn`
+
+## CAPSLOCK 2
+
+`workbench.action.editorLayoutTwoColumns`
+
+> HINT: 2 COLUMNS
 
 ## CAPSLOCK 5
 
@@ -162,12 +162,6 @@
 
 `editor.action.addSelectionToNextFindMatch`
 
-## ALT  1
-
-`workbench.action.editorLayoutSingle`
-
-> HINT: 1 COLUMN
-
 ## ALT  5
 
 `editor.action.insertSnippet`
@@ -237,6 +231,12 @@
 ## CAPSLOCK <
 
 `editor.action.inlineSuggest.showPrevious`
+
+## CAPSLOCK 1
+
+`workbench.action.editorLayoutSingle`
+
+> HINT: 1 COLUMN
 
 ## CAPSLOCK 7
 
@@ -355,8 +355,6 @@
 * ctrl+shift+-
 * ctrl+shift+=
 * capslock 0
-* capslock 1
-* capslock 2
 * capslock 3
 * capslock 4
 * capslock 9

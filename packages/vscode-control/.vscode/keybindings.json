@@ -160,13 +160,13 @@
     "command": "workbench.view.debug"
   },
   {
-    "key": "alt+2",
+    "key": "capslock 2",
     "command": "workbench.action.editorLayoutTwoColumns",
     "hint": "2 Columns",
     "priority": true
   },
   {
-    "key": "alt+1",
+    "key": "capslock 1",
     "command": "workbench.action.editorLayoutSingle",
     "hint": "1 Column"
   },
