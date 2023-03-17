@@ -1,5 +1,4 @@
 {
-  "editor.suggest.selectionMode.SKIP": "whenTriggerCharacter",
   "editor.suggest.selectionMode": "whenTriggerCharacter",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "smart",
