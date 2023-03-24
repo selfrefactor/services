@@ -382,6 +382,10 @@
     "command": "workbench.action.gotoSymbol"
   },
   {
+    "key": "ctrl+0",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
     "mac": "cmd+shift+d",
     "win": "ctrl+shift+d",
     "linux": "ctrl+shift+d",
