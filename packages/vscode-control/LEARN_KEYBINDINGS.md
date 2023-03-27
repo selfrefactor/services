@@ -270,6 +270,10 @@
 
 `list.collapseAll`
 
+## CTRL  0
+
+`workbench.action.toggleActivityBarVisibility`
+
 ## CTRL  9
 
 `PYTHON ONLY - python.execInTerminal`
@@ -310,7 +314,6 @@
 
 ## Convenient keys
 
-* ctrl+0
 * ctrl+3
 * ctrl+4
 * ctrl+5
