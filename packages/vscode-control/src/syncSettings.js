@@ -13,10 +13,10 @@ import {
 } from './constants.js'
 
 let VSCODE_INSIDERS = process.env.BETA === 'ON'
-const FONT_SIZE = 24
-const SUGGEST_LINE_HEIGHT = 24
-const SUGGEST_FONT_SIZE = 20
-const LINE_HEIGHT = 30
+const FONT_SIZE = 20
+const SUGGEST_LINE_HEIGHT = 18
+const SUGGEST_FONT_SIZE = 17
+const LINE_HEIGHT = 24
 // let FILE_ICON_THEME = 'vscode-gruvbox-icon-theme'
 const FILE_ICON_THEME = 'emoji-file-icons'
 const MONO = defaultTo(
@@ -29,7 +29,7 @@ const THEME = defaultTo(
 const MODES = {
   small  : 0.7,
   normal : 1,
-  large  : 1.2,
+  large  : 1.4,
 }
 
 const MODE_KEY = defaultTo(
