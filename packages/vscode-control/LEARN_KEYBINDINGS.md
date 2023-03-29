@@ -244,6 +244,10 @@
 
 > Snippet: commentMultiline
 
+## CAPSLOCK 9
+
+`magicBeans.createSpec`
+
 ## CAPSLOCK D
 
 `workbench.view.debug`
@@ -257,10 +261,6 @@
 > View Git Panel
 
  HINT: GIT
-
-## CAPSLOCK H
-
-`magicBeans.createSpec`
 
 ## CAPSLOCK J
 
@@ -341,7 +341,6 @@
 * alt+=
 * capslock 0
 * capslock 3
-* capslock 9
 * capslock e
 * capslock q
 * capslock s

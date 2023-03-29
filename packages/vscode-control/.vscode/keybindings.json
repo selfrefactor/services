@@ -355,7 +355,7 @@
   },
   {
     "command": "magicBeans.createSpec",
-    "key": "capslock h"
+    "key": "capslock 9"
   },
   {
     "command": "magicBeans.slowScrollInit",
