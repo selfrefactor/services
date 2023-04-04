@@ -294,6 +294,10 @@
 
 `editor.action.goToTypeDefinition`
 
+## CTRL  H
+
+`editor.action.revealDefinition`
+
 ## CTRL  O
 
 `workbench.action.files.openFolder`

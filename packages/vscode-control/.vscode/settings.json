@@ -16,6 +16,8 @@
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.revealIfOpen": false,
+  "editor.stickyScroll.defaultModel": "indentationModel",
+  "editor.stickyScroll.enabled": true,
   "editor.hover.sticky": true,
   "editor.scrollBeyondLastLine": false,
   "editor.fontLigatures": true,
@@ -175,5 +177,5 @@
   "editor.suggestLineHeight": 18,
   "terminal.integrated.fontSize": 13,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin"
+  "workbench.colorTheme": "AmericanDad"
 }

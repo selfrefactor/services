@@ -14,6 +14,11 @@
     "when": "editorHasSignatureHelpProvider && editorTextFocus"
   },
   {
+    "key": "ctrl+h",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
     "key": "alt+1",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -741,6 +746,16 @@
     "key": "ctrl+o",
     "command": "-workbench.action.files.openFile",
     "when": "true"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "-editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
     "key": "ctrl+shift+f",

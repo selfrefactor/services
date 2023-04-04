@@ -125,6 +125,8 @@ function getPermanentSettings(){
 
 function getEditor(){
   return {
+    "editor.stickyScroll.defaultModel": "indentationModel",
+    "editor.stickyScroll.enabled": true,
     'editor.hover.sticky'                      : true,
     'editor.scrollBeyondLastLine'              : false,
     'editor.cursorSmoothCaretAnimation'        : true,

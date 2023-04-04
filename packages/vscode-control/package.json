@@ -4,9 +4,12 @@
 		"small": "yarn small:1&&yarn small:2&&run d",
 		"small:1": "MODE=small node syncSettings",
 		"small:2": "BETA=ON MODE=small node syncSettings",
+		"ond": "yarn x && yarn ond:1 && yarn ond:2 && run d",
 		"on": "yarn x && yarn on:1 && yarn on:2 && run d",
 		"on:1": "MODE=normal node syncSettings",
+		"ond:1": "THEME=AmericanDad MODE=normal node syncSettings",
 		"on:2": "BETA=ON MODE=normal node syncSettings",
+		"ond:2": "THEME=AmericanDad BETA=ON MODE=normal node syncSettings",
 		"big": "yarn big:1 &&yarn big:2 && run d",
 		"big:1": "MODE=large node syncSettings",
 		"big:2": "BETA=ON MODE=large node syncSettings"
