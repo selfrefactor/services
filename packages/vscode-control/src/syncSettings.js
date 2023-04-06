@@ -17,8 +17,8 @@ const FONT_SIZE = 20
 const SUGGEST_LINE_HEIGHT = 18
 const SUGGEST_FONT_SIZE = 17
 const LINE_HEIGHT = 24
-let FILE_ICON_THEME = 'vscode-gruvbox-icon-theme'
-// const FILE_ICON_THEME = 'emoji-file-icons'
+// let FILE_ICON_THEME = 'vscode-gruvbox-icon-theme'
+const FILE_ICON_THEME = 'emoji-file-icons'
 const MONO = defaultTo(
   'MONO', false, 'onoff'
 )
