@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "azat-io.vscode-gruvbox-icon-theme",
+    "mightbesimon.emoji-icons",
     "quilicicf.markdown-spec-formatter",
     "ghaschel.vscode-angular-html",
     "vespa-dev-works.jestRunIt",

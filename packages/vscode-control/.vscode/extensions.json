@@ -1,12 +1,11 @@
 {
   "recommendations": [
+    "Catppuccin.catppuccin-vsc-icons",
     "ReacTreeDev.reactree",
     "CucumberOpen.cucumber-official",
     "GitLab.gitlab-workflow",
-    "azat-io.vscode-gruvbox-icon-theme",
     "mintlify.document",
     "mhutchie.git-graph",
-    "mightbesimon.emoji-icons",
     "fabiospampinato.vscode-open-in-node-modules",
     "GitHub.codespaces",
     "mrmlnc.vscode-scss",
