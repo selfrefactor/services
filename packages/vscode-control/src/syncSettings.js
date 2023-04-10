@@ -18,13 +18,16 @@ const SUGGEST_LINE_HEIGHT = 18
 const SUGGEST_FONT_SIZE = 17
 const LINE_HEIGHT = 24
 // let FILE_ICON_THEME = 'vscode-gruvbox-icon-theme'
-const FILE_ICON_THEME = 'catppuccin-latte'
+// const FILE_ICON_THEME = 'catppuccin-mocha'
 // const FILE_ICON_THEME = 'emoji-file-icons'
 const MONO = defaultTo(
   'MONO', false, 'onoff'
 )
 const THEME = defaultTo(
   'THEME', 'LedZeppelin', 'default'
+)
+const FILE_ICON_THEME = defaultTo(
+  'FILE_ICON_THEME', 'catppuccin-latte', 'default'
 )
 
 const MODES = {
