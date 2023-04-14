@@ -6,6 +6,10 @@
 
 > HINT: EASY TO ACCESS
 
+## ALT  F
+
+`references-view.find`
+
 ## ALT  I
 
 `editor.action.goToImplementation`
@@ -87,10 +91,6 @@
 `workbench.files.action.showActiveFileInExplorer`
 
 > HINT: ACTIVE FILE
-
-## CAPSLOCK B
-
-`references-view.find`
 
 ## CAPSLOCK C
 

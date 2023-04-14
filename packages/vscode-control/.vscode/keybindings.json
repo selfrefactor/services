@@ -187,7 +187,7 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "capslock b",
+    "key": "alt+f",
     "command": "references-view.find",
     "priority": true,
     "when": "editorHasReferenceProvider"
