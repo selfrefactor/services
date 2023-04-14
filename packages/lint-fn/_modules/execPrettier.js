@@ -9,7 +9,7 @@ function getCommand({
   injectOptions,
   filePath,
 }){
-  if (prettierSpecialCase === 'html'){
+  if (prettierSpecialCase.includes('html')){
     const htmlConfig = resolve(__dirname, '../config/.prettierrc')
 
     return [

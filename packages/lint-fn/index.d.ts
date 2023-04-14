@@ -1,24 +1,28 @@
-type PrettierSpecialCase = 'check' | 'local' | 'outer' |`html`
+type PrettierSpecialCase =
+  | 'check'
+  | 'local'
+  | 'outer'
+  | `html-local`
+  | `html-outer`
+
 interface ExecPrettier {
   filePath: string
   injectOptions: string
-  prettierSpecialCase?:PrettierSpecialCase
+  prettierSpecialCase?: PrettierSpecialCase
 }
 
-export interface LintFnResult{
+export interface LintFnResult {
   lintResult?: string
   prettierResult: string
 }
 
-export function lintFn(input : {
-  filePath: string, 
-  prettierSpecialCase?:PrettierSpecialCase,
-  useAlternativeExecCommand?: boolean,
-  cwdOverride?:string|false,
-  forceTypescript?:boolean,
-  debug?:boolean
-}): Promise<false | LintFnResult>;
+export function lintFn(input: {
+  filePath: string
+  prettierSpecialCase?: PrettierSpecialCase
+  useAlternativeExecCommand?: boolean
+  cwdOverride?: string | false
+  forceTypescript?: boolean
+  debug?: boolean
+}): Promise<false | LintFnResult>
 
-export function execPrettier(
-  input: ExecPrettier
-): Promise<string>
+export function execPrettier(input: ExecPrettier): Promise<string>

@@ -6,13 +6,11 @@ const { resolve } = require('path')
 const PRETTIER_PATH_BASE = 'node_modules/prettier/bin-prettier.js'
 
 const getPrettierPath = (cwd, prettierSpecialCase) => {
-  if (prettierSpecialCase === 'html')
-    return resolve(__dirname, `../${ PRETTIER_PATH_BASE }`)
-  if (prettierSpecialCase === 'local') return `${ cwd }/${ PRETTIER_PATH_BASE }`
+  if (prettierSpecialCase.includes('local')) return `${ cwd }/${ PRETTIER_PATH_BASE }`
 
   const otherPossiblePath = resolve(__dirname,
     `../../../${ PRETTIER_PATH_BASE }`)
-  if (prettierSpecialCase === 'outer') return otherPossiblePath
+  if (prettierSpecialCase.includes('outer')) return otherPossiblePath
 
   if (existsSync(`${ cwd }/${ PRETTIER_PATH_BASE }`)){
     console.log('You should use \'prettierSpecialCase = local\'')
