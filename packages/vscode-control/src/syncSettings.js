@@ -130,7 +130,7 @@ function getEditor(){
     "editor.stickyScroll.enabled": true,
     'editor.hover.sticky'                      : true,
     'editor.scrollBeyondLastLine'              : false,
-    'editor.cursorSmoothCaretAnimation'        : true,
+    'editor.cursorSmoothCaretAnimation'        : "on",
     'editor.cursorStyle'                       : 'line-thin',
     'editor.fontLigatures'                     : true,
     'editor.guides.bracketPairsHorizontal'     : false,
