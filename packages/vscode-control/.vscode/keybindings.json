@@ -22,7 +22,7 @@
     "key": "alt+1",
     "command": "editor.action.insertSnippet",
     "args": {
-      "snippet": "console.log(${1:})"
+      "snippet": "console.log()"
     },
     "alreadyLearned": true,
     "when": "editorLangId!=python"
