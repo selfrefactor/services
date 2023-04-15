@@ -31,7 +31,7 @@
     "key": "alt+1",
     "command": "editor.action.insertSnippet",
     "args": {
-      "snippet": "print(${1:})"
+      "snippet": "print( ${0:} )"
     },
     "alreadyLearned": true,
     "when": "editorLangId==python"
@@ -40,7 +40,7 @@
     "key": "alt+2",
     "command": "editor.action.insertSnippet",
     "args": {
-      "snippet": "console.log(${CLIPBOARD}, `${CLIPBOARD}`)$0"
+      "snippet": "console.log(${CLIPBOARD}, `${CLIPBOARD}`)\n$0  "
     },
     "alreadyLearned": true,
     "when": "editorLangId!=python"

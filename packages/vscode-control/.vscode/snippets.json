@@ -2,7 +2,7 @@
 	"Function": {
 		"prefix": "fnsnippet",
 		"body": [
-			"function $0(){",
+			"function $0  (){",
 			"\t",
 			"}"
 		],
@@ -20,7 +20,7 @@
 	"ArrowFunction": {
 		"prefix": "arrow",
 		"body": [
-			"(${1:}) => ${2:}"
+			"(  ${1:}   ) => ${2:}   "
 		]
 	},
 	"Require": {
@@ -57,7 +57,7 @@
 	"StringTemplate": {
 		"prefix": "str",
 		"body": [
-			"`${${0}}`"
+			"`${  ${0}  }`"
 		],
 		"description": "str"
 	},
@@ -73,7 +73,7 @@
 		"prefix": "inline",
 		"body": [
 			"expect(",
-			"\t$0",
+			"\t  $0  ",
 			").toMatchInlineSnapshot()"
 		]
 	},
@@ -81,7 +81,7 @@
 		"prefix": "exp",
 		"body": [
 			"expect(",
-			"\t$0",
+			"\t  $0  ",
 			").toEqual($1)"
 		],
 		"description": "ext"
