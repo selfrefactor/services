@@ -64,22 +64,6 @@
 
 > HINT: 2 COLUMNS
 
-## CAPSLOCK 5
-
-`wallaby.start`
-
-## CAPSLOCK 6
-
-`wallaby.stop`
-
-## CAPSLOCK 7
-
-`wallaby.addToExclusiveTestRun`
-
-## CAPSLOCK 8
-
-`wallaby.updateFileSnapshots`
-
 ## CAPSLOCK A
 
 `editor.foldAll`
@@ -161,6 +145,22 @@
 ## CTRL  1
 
 `editor.action.addSelectionToNextFindMatch`
+
+## CTRL  SHIFT  5
+
+`wallaby.start`
+
+## CTRL  SHIFT  6
+
+`wallaby.stop`
+
+## CTRL  SHIFT  7
+
+`wallaby.addToExclusiveTestRun`
+
+## CTRL  SHIFT  8
+
+`wallaby.updateFileSnapshots`
 
 ## ALT  5
 
@@ -345,6 +345,10 @@
 * alt+=
 * capslock 0
 * capslock 3
+* capslock 5
+* capslock 6
+* capslock 7
+* capslock 8
 * capslock e
 * capslock q
 * capslock s

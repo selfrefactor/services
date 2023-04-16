@@ -330,22 +330,22 @@
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "capslock 5",
+    "key": "ctrl+shift+5",
     "priority": true,
     "command": "wallaby.start"
   },
   {
-    "key": "capslock 6",
+    "key": "ctrl+shift+6",
     "priority": true,
     "command": "wallaby.stop"
   },
   {
-    "key": "capslock 7",
+    "key": "ctrl+shift+7",
     "priority": true,
     "command": "wallaby.addToExclusiveTestRun"
   },
   {
-    "key": "capslock 8",
+    "key": "ctrl+shift+8",
     "priority": true,
     "command": "wallaby.updateFileSnapshots"
   },

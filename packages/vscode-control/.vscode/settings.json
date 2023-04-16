@@ -64,7 +64,7 @@
   "git.promptToSaveFilesBeforeCommit": "never",
   "git.allowNoVerifyCommit": true,
   "git.fetchOnPull": true,
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "workbench.editor.wrapTabs": true,
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.activityBar.visible": false,
@@ -177,5 +177,5 @@
   "editor.suggestLineHeight": 18,
   "terminal.integrated.fontSize": 13,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin"
+  "workbench.colorTheme": "AmericanDad"
 }
