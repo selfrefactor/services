@@ -64,7 +64,7 @@
   "git.promptToSaveFilesBeforeCommit": "never",
   "git.allowNoVerifyCommit": true,
   "git.fetchOnPull": true,
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-latte",
   "workbench.editor.wrapTabs": true,
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.activityBar.visible": false,
@@ -130,6 +130,7 @@
   },
   "magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS": [
     ".html",
+    ".yml",
     ".js",
     ".jsx",
     ".tsx",
@@ -177,5 +178,5 @@
   "editor.suggestLineHeight": 18,
   "terminal.integrated.fontSize": 13,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "AmericanDad"
+  "workbench.colorTheme": "LedZeppelin"
 }

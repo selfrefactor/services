@@ -273,6 +273,7 @@ function getAdditionalSettings(){
     },
     'magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS'              : [
       '.html',
+      '.yml',
       '.js',
       '.jsx',
       '.tsx',
