@@ -251,7 +251,8 @@ function getAdditionalSettings(){
     'json.maxItemsComputed'                                  : 1000,
     'npm.autoDetect'                                         : 'off',
     'npm.packageManager'                                     : 'yarn',
-    'npm.fetchOnlinePackageInfo'                             : true,
+    // as it doesn't work; maybe due to Copilot interfering
+    'npm.fetchOnlinePackageInfo'                             : false,
     'scm.defaultViewMode'                                    : 'tree',
     'search.collapseResults'                                 : 'alwaysCollapse',
     'search.seedOnFocus'                                     : false,
