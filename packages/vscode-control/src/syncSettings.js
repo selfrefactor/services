@@ -160,6 +160,7 @@ function getEditor(){
 
 function getWorkbench(){
   return {
+    'editor.suggest.showStatusBar': true, // to test
     'workbench.iconTheme'                     : FILE_ICON_THEME,
     'workbench.editor.wrapTabs'               : true,
     'workbench.editor.pinnedTabSizing'        : 'shrink',
