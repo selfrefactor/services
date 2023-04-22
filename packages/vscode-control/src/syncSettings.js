@@ -160,6 +160,7 @@ function getEditor(){
 
 function getWorkbench(){
   return {
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true, // to test
     'editor.suggest.showStatusBar': true, // to test
     'workbench.iconTheme'                     : FILE_ICON_THEME,
     'workbench.editor.wrapTabs'               : true,

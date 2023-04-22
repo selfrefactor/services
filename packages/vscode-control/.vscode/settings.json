@@ -64,6 +64,7 @@
   "git.promptToSaveFilesBeforeCommit": "never",
   "git.allowNoVerifyCommit": true,
   "git.fetchOnPull": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "editor.suggest.showStatusBar": true,
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.editor.wrapTabs": true,
