@@ -284,6 +284,7 @@ function getAdditionalSettings(){
       '.scss',
       '.py',
       '.ts',
+      '.rs',
       '.feature',
     ],
     'files.exclude' : {
