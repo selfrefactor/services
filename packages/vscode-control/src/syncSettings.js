@@ -16,7 +16,7 @@ let VSCODE_INSIDERS = process.env.BETA === 'ON'
 const FONT_SIZE = 20
 const SUGGEST_LINE_HEIGHT = 18
 const SUGGEST_FONT_SIZE = 17
-const LINE_HEIGHT = 28
+const LINE_HEIGHT = 27
 const MONO = defaultTo(
   'MONO', false, 'onoff'
 )
