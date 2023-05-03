@@ -142,7 +142,7 @@ exports.baseRules = {
   'object-curly-newline': [1, {multiline: true}],
   'object-curly-spacing': [1, 'always', curlySpacing],
   'object-property-newline': 1,
-  'object-shorthand': 0,
+  'object-shorthand': 1,
   'operator-assignment': 1,
   'operator-linebreak': [1, 'after'],
   'padded-blocks': 0,

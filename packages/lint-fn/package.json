@@ -14,11 +14,11 @@
 		"node": ">15"
 	},
 	"dependencies": {
-		"@babel/core": "7.21.4",
-		"@babel/eslint-parser": "7.21.3",
-		"@typescript-eslint/eslint-plugin": "5.58.0",
-		"@typescript-eslint/parser": "5.58.0",
-		"eslint": "8.38.0",
+		"@babel/core": "7.21.8",
+		"@babel/eslint-parser": "7.21.8",
+		"@typescript-eslint/eslint-plugin": "5.59.2",
+		"@typescript-eslint/parser": "5.59.2",
+		"eslint": "8.39.0",
 		"eslint-plugin-react-hooks": "4.6.0",
 		"eslint-plugin-react": "7.32.2",
 		"eslint-plugin-async-await": "0.0.0",
@@ -31,9 +31,9 @@
 		"eslint-plugin-sort-class-members": "1.17.1",
 		"eslint-plugin-sort-requires": "2.1.0",
 		"fs-extra": "11.1.1",
-		"prettier": "2.8.7",
+		"prettier": "2.8.8",
 		"prettier-plugin-organize-attributes": "0.0.5",
-		"rambdax": "9.1.0"
+		"rambdax": "9.1.1"
 	},
 	"peerDependencies": {
 		"typescript": "4.7.4"
