@@ -29,8 +29,8 @@ const FILE_ICON_THEME = defaultTo(
 
 const MODES = {
   small  : 0.7,
-  normal : 1,
-  large  : 1.4,
+  normal : 0.8,
+  large  : 1.2,
 }
 
 const MODE_KEY = defaultTo(
