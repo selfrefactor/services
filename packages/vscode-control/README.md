@@ -1,5 +1,9 @@
 # Vscode-control
 
+## Copilot
+
+https://code.visualstudio.com/updates/v1_78#_chat-editors
+
 ## Visualize keybindings
 
 alt+5

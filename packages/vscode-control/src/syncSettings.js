@@ -268,6 +268,7 @@ function getAdditionalSettings(){
     'typescript.updateImportsOnFileMove.enabled'             : 'always',
     'update.mode'                                            : 'none',
     'zenMode.restore'                                        : false,
+    'diffEditor.diffAlgorithm': 'advanced',
     'github.copilot.enable'                                  : {
       '*'         : true,
       'yaml'      : true,

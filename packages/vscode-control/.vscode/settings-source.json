@@ -15,5 +15,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen":true,
   "workbench.editor.focusRecentEditorAfterClose": false,
-  "workbench.editor.revealIfOpen": false
+  "workbench.editor.revealIfOpen": false,
+  "ts.implicitProjectConfig.strictNullChecks": true,
+  "js.implicitProjectConfig.strictNullChecks": true
 }
