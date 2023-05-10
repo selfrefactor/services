@@ -1,0 +1,6 @@
+test('happy', () => {
+})
+
+function getInput(){
+
+}
