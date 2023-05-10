@@ -8,7 +8,6 @@ const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
 const { niketa } = require('./services/niketa/niketa')
 const { copyToClipboard } = require('./services/c/copyToClipboard')
-const { angular } = require('./services/angular/angular')
 const { deploy } = require('./services/de/deploy')
 const { commit } = require('./services/commit/commit')
 const { fastDeploy } = require('./services/d/fastDeploy')
@@ -23,9 +22,6 @@ async function runFn(){
   const firstArgument = firstArgumentRaw.toLowerCase()
   if (firstArgument === 'commit'){
     return commit(secondArgument, thirdArgument, ...rest)
-  }
-  if ([ 'angular', 'ng' ].includes(firstArgument)){
-    return angular()
   }
   if ([ 'pull', 'pull-all' ].includes(firstArgument)){
     return pullAll()
