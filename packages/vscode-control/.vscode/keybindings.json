@@ -241,11 +241,6 @@
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
-    "key": "alt+u",
-    "command": "editor.action.smartSelect.expand",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+q",
     "alreadyLearned": true,
     "command": "workbench.action.closeOtherEditors"
@@ -331,27 +326,24 @@
   },
   {
     "key": "ctrl+shift+5",
-    "priority": true,
     "command": "wallaby.start"
   },
   {
     "key": "ctrl+shift+6",
-    "priority": true,
     "command": "wallaby.stop"
   },
   {
     "key": "ctrl+shift+7",
-    "priority": true,
     "command": "wallaby.addToExclusiveTestRun"
   },
   {
     "key": "ctrl+shift+8",
-    "priority": true,
     "command": "wallaby.updateFileSnapshots"
   },
   {
     "command": "magicBeans.sortLines",
-    "key": "capslock j"
+    "comment": "lines",
+    "key": "capslock l"
   },
   {
     "command": "magicBeans.requestRandomFile",
@@ -387,7 +379,8 @@
     "command": "workbench.action.gotoSymbol"
   },
   {
-    "key": "ctrl+0",
+    "key": "capslock o",
+    "comment": "open side panel",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
   {
@@ -426,8 +419,9 @@
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "capslock [",
+    "key": "alt+p",
     "priority": true,
+    "comment": "Peek Implementation",
     "command": "editor.action.peekImplementation",
     "when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },

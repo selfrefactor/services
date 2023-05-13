@@ -22,6 +22,12 @@
 
 > HINT: PARAMETER
 
+## ALT  P
+
+`editor.action.peekImplementation`
+
+> Peek Implementation
+
 ## ALT  R
 
 `workbench.action.debug.restart`
@@ -49,10 +55,6 @@
 ## CAPSLOCK '
 
 `magicBeans.slowScrollStart`
-
-## CAPSLOCK [
-
-`editor.action.peekImplementation`
 
 ## CAPSLOCK =
 
@@ -146,22 +148,6 @@
 
 `editor.action.addSelectionToNextFindMatch`
 
-## CTRL  SHIFT  5
-
-`wallaby.start`
-
-## CTRL  SHIFT  6
-
-`wallaby.stop`
-
-## CTRL  SHIFT  7
-
-`wallaby.addToExclusiveTestRun`
-
-## CTRL  SHIFT  8
-
-`wallaby.updateFileSnapshots`
-
 ## ALT  5
 
 `editor.action.insertSnippet`
@@ -216,10 +202,6 @@
 
 `terminal.focus`
 
-## ALT  U
-
-`editor.action.smartSelect.expand`
-
 ## ALT  Z
 
 `workbench.action.gotoSymbol`
@@ -262,17 +244,21 @@
 
  HINT: GIT
 
-## CAPSLOCK J
+## CAPSLOCK L
 
 `magicBeans.sortLines`
+
+> lines
+
+## CAPSLOCK O
+
+`workbench.action.toggleActivityBarVisibility`
+
+> open side panel
 
 ## CAPSLOCK Y
 
 `list.collapseAll`
-
-## CTRL  0
-
-`workbench.action.toggleActivityBarVisibility`
 
 ## CTRL  9
 
@@ -304,6 +290,22 @@
 
 > HINT: OPEN
 
+## CTRL  SHIFT  5
+
+`wallaby.start`
+
+## CTRL  SHIFT  6
+
+`wallaby.stop`
+
+## CTRL  SHIFT  7
+
+`wallaby.addToExclusiveTestRun`
+
+## CTRL  SHIFT  8
+
+`wallaby.updateFileSnapshots`
+
 ## CTRL  SHIFT  D
 
 `editor.action.copyLinesDownAction`
@@ -318,6 +320,7 @@
 
 ## Convenient keys
 
+* ctrl+0
 * ctrl+3
 * ctrl+4
 * ctrl+5
