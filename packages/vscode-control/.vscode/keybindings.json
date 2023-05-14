@@ -127,6 +127,11 @@
     }
   },
   {
+    "key": "ctrl+k ctrl+h",
+    "command": "workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+  },
+  {
     "key": "alt+t",
     "command": "terminal.focus"
   },
@@ -379,7 +384,7 @@
     "command": "workbench.action.gotoSymbol"
   },
   {
-    "key": "capslock o",
+    "key": "alt+o",
     "comment": "open side panel",
     "command": "workbench.action.toggleActivityBarVisibility"
   },

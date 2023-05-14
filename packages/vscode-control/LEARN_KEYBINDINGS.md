@@ -194,6 +194,12 @@
 
 `workbench.view.explorer`
 
+## ALT  O
+
+`workbench.action.toggleActivityBarVisibility`
+
+> open side panel
+
 ## ALT  S
 
 `workbench.action.toggleSplitEditorInGroup`
@@ -252,12 +258,6 @@
 
 > lines
 
-## CAPSLOCK O
-
-`workbench.action.toggleActivityBarVisibility`
-
-> open side panel
-
 ## CAPSLOCK Y
 
 `list.collapseAll`
@@ -285,6 +285,10 @@
 ## CTRL  H
 
 `editor.action.revealDefinition`
+
+## CTRL  K CTRL  H
+
+`workbench.action.output.toggleOutput`
 
 ## CTRL  O
 
