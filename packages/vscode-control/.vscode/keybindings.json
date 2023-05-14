@@ -138,7 +138,7 @@
   },
   {
     "command": "niketa.lint.file",
-    "key": "capslock l",
+    "key": "ctrl+1",
     "priority": true,
     "hint": "LINT"
   },
@@ -392,8 +392,9 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+1",
+    "key": "ctrl+m",
     "priority": true,
+    "comment": "match",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
   },

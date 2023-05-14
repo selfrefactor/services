@@ -104,12 +104,6 @@
 
 `workbench.action.selectTheme`
 
-## CAPSLOCK L
-
-`niketa.lint.file`
-
-> HINT: LINT
-
 ## CAPSLOCK M
 
 `issuesAndMrs.focus`
@@ -146,7 +140,15 @@
 
 ## CTRL  1
 
+`niketa.lint.file`
+
+> HINT: LINT
+
+## CTRL  M
+
 `editor.action.addSelectionToNextFindMatch`
+
+> match
 
 ## ALT  5
 
