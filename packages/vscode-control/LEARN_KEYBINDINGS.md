@@ -40,6 +40,10 @@
 
 > HINT: LEGACY AS BEFORE IT WAS THE SAME
 
+## ALT  Z
+
+`workbench.action.toggleZenMode`
+
 ## CAPSLOCK -
 
 `editor.action.fontZoomOut`
@@ -134,10 +138,6 @@
 
 > HINT: REFERENCES
 
-## CAPSLOCK Z
-
-`workbench.action.toggleZenMode`
-
 ## CTRL  1
 
 `niketa.lint.file`
@@ -210,10 +210,6 @@
 
 `terminal.focus`
 
-## ALT  Z
-
-`workbench.action.gotoSymbol`
-
 ## CAPSLOCK ;
 
 `github.copilot.openPanelForRange`
@@ -261,6 +257,10 @@
 ## CAPSLOCK Y
 
 `list.collapseAll`
+
+## CAPSLOCK Z
+
+`workbench.action.gotoSymbol`
 
 ## CTRL  9
 

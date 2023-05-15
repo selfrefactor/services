@@ -284,7 +284,7 @@
     "when": "editorLangId==python"
   },
   {
-    "key": "capslock z",
+    "key": "alt+z",
     "priority": true,
     "command": "workbench.action.toggleZenMode"
   },
@@ -380,7 +380,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+z",
+    "key": "capslock z",
     "command": "workbench.action.gotoSymbol"
   },
   {
