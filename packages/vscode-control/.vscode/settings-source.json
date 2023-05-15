@@ -17,5 +17,6 @@
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.revealIfOpen": false,
   "ts.implicitProjectConfig.strictNullChecks": true,
+  "cSpell.maxNumberOfProblems": 1,
   "js.implicitProjectConfig.strictNullChecks": true
 }
