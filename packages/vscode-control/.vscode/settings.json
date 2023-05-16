@@ -17,7 +17,12 @@
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.revealIfOpen": false,
   "ts.implicitProjectConfig.strictNullChecks": true,
-  "cSpell.maxNumberOfProblems": 1,
+  "cSpell.maxNumberOfProblems": 10,
+  "cSpell.allowCompoundWords": false,
+  "cSpell.showStatus": false,
+  "cSpell.minWordLength": 6,
+  "cSpell.numSuggestions": 3,
+  "cSpell.spellCheckDelayMs": 200,
   "js.implicitProjectConfig.strictNullChecks": true,
   "editor.stickyScroll.defaultModel": "indentationModel",
   "editor.stickyScroll.enabled": true,
@@ -69,7 +74,7 @@
   "git.fetchOnPull": true,
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "editor.suggest.showStatusBar": true,
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-latte",
   "workbench.editor.wrapTabs": true,
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.activityBar.visible": false,
@@ -185,5 +190,5 @@
   "editor.suggestLineHeight": 14,
   "terminal.integrated.fontSize": 10,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "AmericanDad"
+  "workbench.colorTheme": "LedZeppelin"
 }
