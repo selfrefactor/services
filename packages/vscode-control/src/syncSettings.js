@@ -117,6 +117,7 @@ void (async function sync(){
 function getPermanentSettings(){
   return {
     ...getEditor(),
+    ...getSpellingSettings(),
     ...getExplorer(),
     ...getWallaby(),
     ...getGit(),
@@ -324,5 +325,16 @@ function getWallaby(){
     'wallaby.codeLensFeature.profiler'        : false,
     'wallaby.codeLensFeature.testFilters'     : false,
     'wallaby.codeLensFeature.testStory'       : false,
+  }
+}
+
+function getSpellingSettings(){
+  return {
+    "cSpell.maxNumberOfProblems": 10,
+    "cSpell.allowCompoundWords": false,
+    // "cSpell.showStatus": false,
+    "cSpell.minWordLength": 4,
+    // "cSpell.numSuggestions": 3,
+    // "cSpell.spellCheckDelayMs": 200,
   }
 }
