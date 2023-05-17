@@ -132,7 +132,7 @@ function getEditor(){
     'editor.stickyScroll.enabled'              : true,
     'editor.hover.sticky'                      : true,
     'editor.hover.enabled'                     : true,
-    'editor.hover.delay'                       : 1000,
+    'editor.hover.delay'                       : 400,
     'editor.scrollBeyondLastLine'              : false,
     'editor.cursorSmoothCaretAnimation'        : 'on',
     'editor.cursorStyle'                       : 'line-thin',
