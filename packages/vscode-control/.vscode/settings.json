@@ -49,7 +49,7 @@
     "other": "off"
   },
   "cSpell.allowCompoundWords": false,
-  "cSpell.maxNumberOfProblems": 10,
+  "cSpell.maxNumberOfProblems": 3,
   "cSpell.minWordLength": 4,
   "cSpell.numSuggestions": 3,
   "cSpell.showStatus": false,
@@ -57,7 +57,9 @@
   "cSpell.ignorePaths": [
     "node_modules",
     ".git",
-    "countries.json"
+    "countries.json",
+    "languages.json",
+    "introspections.json"
   ],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,

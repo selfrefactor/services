@@ -331,7 +331,7 @@ function getWallaby(){
 function getSpellingSettings(){
   return {
     'cSpell.allowCompoundWords'  : false,
-    'cSpell.maxNumberOfProblems' : 10,
+    'cSpell.maxNumberOfProblems' : 3,
     'cSpell.minWordLength'       : 4,
     'cSpell.numSuggestions'      : 3,
     'cSpell.showStatus'          : false,
@@ -340,6 +340,8 @@ function getSpellingSettings(){
       'node_modules', // this will ignore anything the node_modules directory
       '.git', // Ignore the .git directory
       'countries.json',
+      'languages.json',
+      'introspections.json',
     ],
   }
 }
