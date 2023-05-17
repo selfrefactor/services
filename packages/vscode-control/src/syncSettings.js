@@ -117,7 +117,7 @@ void (async function sync(){
 function getPermanentSettings(){
   return {
     ...getEditor(),
-    ...getSpellingSettings(),
+    // ...getSpellingSettings(),
     ...getExplorer(),
     ...getWallaby(),
     ...getGit(),

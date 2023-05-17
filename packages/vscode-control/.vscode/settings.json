@@ -48,9 +48,6 @@
     "strings": "off",
     "other": "off"
   },
-  "cSpell.maxNumberOfProblems": 10,
-  "cSpell.allowCompoundWords": false,
-  "cSpell.minWordLength": 4,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.incrementalNaming": "smart",
