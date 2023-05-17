@@ -117,7 +117,7 @@ void (async function sync(){
 function getPermanentSettings(){
   return {
     ...getEditor(),
-    // ...getSpellingSettings(),
+    ...getSpellingSettings(),
     ...getExplorer(),
     ...getWallaby(),
     ...getGit(),
@@ -332,9 +332,9 @@ function getSpellingSettings(){
   return {
     "cSpell.maxNumberOfProblems": 10,
     "cSpell.allowCompoundWords": false,
-    // "cSpell.showStatus": false,
+    "cSpell.showStatus": false,
     "cSpell.minWordLength": 4,
-    // "cSpell.numSuggestions": 3,
-    // "cSpell.spellCheckDelayMs": 200,
+    "cSpell.numSuggestions": 3,
+    "cSpell.spellCheckDelayMs": 200,
   }
 }
