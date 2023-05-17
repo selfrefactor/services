@@ -130,8 +130,9 @@ function getEditor(){
   return {
     'editor.stickyScroll.defaultModel'         : 'indentationModel',
     'editor.stickyScroll.enabled'              : true,
-    'editor.hover.sticky'                      : false,
-    'editor.hover.enabled'                     : false,
+    'editor.hover.sticky'                      : true,
+    'editor.hover.enabled'                     : true,
+    'editor.hover.delay'                       : 1000,
     'editor.scrollBeyondLastLine'              : false,
     'editor.cursorSmoothCaretAnimation'        : 'on',
     'editor.cursorStyle'                       : 'line-thin',
