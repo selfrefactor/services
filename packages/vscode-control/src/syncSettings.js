@@ -12,7 +12,7 @@ import {
   TSX_SNIPPETS,
 } from './constants.js'
 
-let VSCODE_INSIDERS = process.env.BETA === 'ON'
+const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const FONT_SIZE = 20
 const SUGGEST_LINE_HEIGHT = 18
 const SUGGEST_FONT_SIZE = 17
@@ -24,7 +24,9 @@ const THEME = defaultTo(
   'THEME', 'LedZeppelin', 'default'
 )
 const FILE_ICON_THEME = defaultTo(
-  'FILE_ICON_THEME', 'catppuccin-latte', 'default'
+  'FILE_ICON_THEME',
+  'catppuccin-latte',
+  'default'
 )
 
 const MODES = {
@@ -81,9 +83,9 @@ function syncSettings(){
     ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
-    'magicBeans.IS_VSCODE_INSIDERS' : VSCODE_INSIDERS,
-    "workbench.editor.enablePreview": !VSCODE_INSIDERS,
-    'workbench.colorTheme'          : THEME,
+    'magicBeans.IS_VSCODE_INSIDERS'  : VSCODE_INSIDERS,
+    'workbench.editor.enablePreview' : !VSCODE_INSIDERS,
+    'workbench.colorTheme'           : THEME,
   }
 
   writeJsonSync(
@@ -126,12 +128,12 @@ function getPermanentSettings(){
 
 function getEditor(){
   return {
-    "editor.stickyScroll.defaultModel": "indentationModel",
-    "editor.stickyScroll.enabled": true,
-    'editor.hover.sticky'                      : true,
-   "editor.hover.enabled": false,
+    'editor.stickyScroll.defaultModel'         : 'indentationModel',
+    'editor.stickyScroll.enabled'              : true,
+    'editor.hover.sticky'                      : false,
+    'editor.hover.enabled'                     : false,
     'editor.scrollBeyondLastLine'              : false,
-    'editor.cursorSmoothCaretAnimation'        : "on",
+    'editor.cursorSmoothCaretAnimation'        : 'on',
     'editor.cursorStyle'                       : 'line-thin',
     'editor.fontLigatures'                     : true,
     'editor.guides.bracketPairsHorizontal'     : false,
@@ -161,18 +163,18 @@ function getEditor(){
 
 function getWorkbench(){
   return {
-    "typescript.tsserver.experimental.enableProjectDiagnostics": true, // to test
-    'editor.suggest.showStatusBar': true, // to test
-    'workbench.iconTheme'                     : FILE_ICON_THEME,
-    'workbench.editor.wrapTabs'               : true,
-    'workbench.editor.pinnedTabSizing'        : 'shrink',
-    'workbench.activityBar.visible'           : false,
-    'workbench.editor.untitled.hint'          : 'hidden',
-    'workbench.editor.untitled.labelFormat'   : 'name',
-    'workbench.list.smoothScrolling'          : true,
-    'workbench.sideBar.location'              : 'right',
-    'workbench.startupEditor'                 : 'none',
-    'workbench.editor.languageDetectionHints' : {
+    'typescript.tsserver.experimental.enableProjectDiagnostics' : true, // to test
+    'editor.suggest.showStatusBar'                              : true, // to test
+    'workbench.iconTheme'                                       : FILE_ICON_THEME,
+    'workbench.editor.wrapTabs'                                 : true,
+    'workbench.editor.pinnedTabSizing'                          : 'shrink',
+    'workbench.activityBar.visible'                             : false,
+    'workbench.editor.untitled.hint'                            : 'hidden',
+    'workbench.editor.untitled.labelFormat'                     : 'name',
+    'workbench.list.smoothScrolling'                            : true,
+    'workbench.sideBar.location'                                : 'right',
+    'workbench.startupEditor'                                   : 'none',
+    'workbench.editor.languageDetectionHints'                   : {
       untitledEditors : false,
       notebookEditors : false,
     },
@@ -203,15 +205,15 @@ function getGit(){
 
 function getImportantSettings(){
   return {
-    "gitlab.customQueries": [
+    'gitlab.customQueries' : [
       {
-        "name": "All project merge requests",
-        "type": "merge_requests",
-        "scope": "all",
-        "state": "opened",
-        "noItemText": "The project has no merge requests"
-      }
-    ]
+        name       : 'All project merge requests',
+        type       : 'merge_requests',
+        scope      : 'all',
+        state      : 'opened',
+        noItemText : 'The project has no merge requests',
+      },
+    ],
   }
 }
 
@@ -221,7 +223,7 @@ function getAdditionalSettings(){
     // 'editor.autoClosingDelete'                               : 'never',
     // 'editor.autoClosingOvertype'                             : 'never',
     // 'editor.autoClosingQuotes'                               : 'never',
-    "window.menuBarVisibility": "toggle",
+    'window.menuBarVisibility'                               : 'toggle',
     'editor.tabCompletion'                                   : 'on',
     'zenMode.hideTabs'                                       : false,
     'gitlab.showProjectMergeRequests'                        : false,
@@ -240,7 +242,7 @@ function getAdditionalSettings(){
     // click to go to recent files
     'window.commandCenter'                                   : false,
     'window.titleBarStyle'                                   : 'custom',
-    'window.title'                                           : "${dirty}${activeEditorMedium}",
+    'window.title'                                           : '${dirty}${activeEditorMedium}',
     // without comments
     'breadcrumbs.enabled'                                    : false,
     'debug.inlineValues'                                     : 'off',
@@ -269,14 +271,14 @@ function getAdditionalSettings(){
     'typescript.updateImportsOnFileMove.enabled'             : 'always',
     'update.mode'                                            : 'none',
     'zenMode.restore'                                        : false,
-    'diffEditor.diffAlgorithm': 'advanced',
+    'diffEditor.diffAlgorithm'                               : 'advanced',
     'github.copilot.enable'                                  : {
       '*'         : true,
       'yaml'      : true,
       'plaintext' : true,
       'markdown'  : true,
     },
-    'magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS'              : [
+    'magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS' : [
       '.html',
       '.yml',
       '.js',
