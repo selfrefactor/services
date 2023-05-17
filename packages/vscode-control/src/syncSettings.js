@@ -330,11 +330,16 @@ function getWallaby(){
 
 function getSpellingSettings(){
   return {
-    "cSpell.maxNumberOfProblems": 10,
-    "cSpell.allowCompoundWords": false,
-    "cSpell.showStatus": false,
-    "cSpell.minWordLength": 4,
-    "cSpell.numSuggestions": 3,
-    "cSpell.spellCheckDelayMs": 200,
+    'cSpell.allowCompoundWords'  : false,
+    'cSpell.maxNumberOfProblems' : 10,
+    'cSpell.minWordLength'       : 4,
+    'cSpell.numSuggestions'      : 3,
+    'cSpell.showStatus'          : false,
+    'cSpell.spellCheckDelayMs'   : 200,
+    'cSpell.ignorePaths'         : [
+      'node_modules', // this will ignore anything the node_modules directory
+      '.git', // Ignore the .git directory
+      'src/_modules/countries.json',
+    ],
   }
 }

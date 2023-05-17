@@ -48,12 +48,17 @@
     "strings": "off",
     "other": "off"
   },
-  "cSpell.maxNumberOfProblems": 10,
   "cSpell.allowCompoundWords": false,
-  "cSpell.showStatus": false,
+  "cSpell.maxNumberOfProblems": 10,
   "cSpell.minWordLength": 4,
   "cSpell.numSuggestions": 3,
+  "cSpell.showStatus": false,
   "cSpell.spellCheckDelayMs": 200,
+  "cSpell.ignorePaths": [
+    "node_modules",
+    ".git",
+    "src/_modules/countries.json"
+  ],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.incrementalNaming": "smart",
