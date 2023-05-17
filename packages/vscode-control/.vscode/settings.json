@@ -57,7 +57,7 @@
   "cSpell.ignorePaths": [
     "node_modules",
     ".git",
-    "src/_modules/countries.json"
+    "countries.json"
   ],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,

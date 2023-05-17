@@ -339,7 +339,7 @@ function getSpellingSettings(){
     'cSpell.ignorePaths'         : [
       'node_modules', // this will ignore anything the node_modules directory
       '.git', // Ignore the .git directory
-      'src/_modules/countries.json',
+      'countries.json',
     ],
   }
 }
