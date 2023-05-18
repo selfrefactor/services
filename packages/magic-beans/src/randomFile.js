@@ -56,6 +56,12 @@ async function randomFile() {
   })
 
   if (files.length === 0) return
+  const randomized = shuffle(files)
+  randomized.sort((a, b) => {
+    if(a.includes('package.json')) return -1
+    if(b.includes('package.json')) return 1
+    return 0
+  })
   setter('files', shuffle(files))
   requestRandomFile()
 }
@@ -63,7 +69,8 @@ async function randomFile() {
 function requestRandomFile() {
   const files = getter('files')
   if (files.length === 0) return
-  const index = random(0, files.length - 1)
+  const index = 0
+  // const index = random(0, files.length - 1)
   changeOpenedFile(files[index])
   setter('files', removeIndex(index, files))
   logToUser(`${files.length - 1} files left`)
