@@ -62,7 +62,7 @@ async function randomFile() {
     if(b.includes('package.json')) return 1
     return 0
   })
-  setter('files', shuffle(randomized))
+  setter('files', randomized)
   requestRandomFile()
 }
 
