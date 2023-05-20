@@ -17,9 +17,6 @@ const FONT_SIZE = 20
 const SUGGEST_LINE_HEIGHT = 18
 const SUGGEST_FONT_SIZE = 17
 const LINE_HEIGHT = 27
-const MONO = defaultTo(
-  'MONO', false, 'onoff'
-)
 const THEME = defaultTo(
   'THEME', 'LedZeppelin', 'default'
 )
@@ -45,7 +42,8 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
   '../.vscode/settings.json')
 
-const DEFAULT_FONT = 'JetBrains Mono'
+const DEFAULT_FONT = 'IntelOne Mono'
+// const DEFAULT_FONT = 'JetBrains Mono'
 const FONT_FACTOR = 1
 
 function syncFiles(source, destination){
@@ -61,10 +59,10 @@ const getCalculatedOptions = () => {
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.65)))
 
   const fontSettings = {
-    'terminal.integrated.fontFamily' : MONO ? 'Operator Mono' : DEFAULT_FONT,
-    'debug.console.fontFamily'       : MONO ? 'Operator Mono' : DEFAULT_FONT,
-    'editor.fontFamily'              : MONO ? 'Operator Mono' : DEFAULT_FONT,
-    'editor.fontLigatures'           : !MONO,
+    'terminal.integrated.fontFamily' : DEFAULT_FONT,
+    'debug.console.fontFamily'       : DEFAULT_FONT,
+    'editor.fontFamily'              : DEFAULT_FONT,
+    'editor.fontLigatures'           : true,
   }
 
   return {
