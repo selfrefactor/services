@@ -189,9 +189,9 @@
       "noItemText": "The project has no merge requests"
     }
   ],
-  "terminal.integrated.fontFamily": "IntelOne Mono",
-  "debug.console.fontFamily": "IntelOne Mono",
-  "editor.fontFamily": "IntelOne Mono",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "debug.console.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 14,
   "window.zoomLevel": 2,
   "editor.lineHeight": 18.9,
