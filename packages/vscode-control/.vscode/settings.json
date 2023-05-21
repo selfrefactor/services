@@ -189,6 +189,11 @@
       "noItemText": "The project has no merge requests"
     }
   ],
+  "editor.gotoLocation.multipleDeclarations": "peek",
+  "editor.gotoLocation.multipleDefinitions": "peek",
+  "editor.gotoLocation.multipleImplementations": "peek",
+  "editor.gotoLocation.multipleReferences": "peek",
+  "editor.gotoLocation.multipleTypeDefinitions": "peek",
   "terminal.integrated.fontFamily": "JetBrains Mono",
   "debug.console.fontFamily": "JetBrains Mono",
   "editor.fontFamily": "JetBrains Mono",

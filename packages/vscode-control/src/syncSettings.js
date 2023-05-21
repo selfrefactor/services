@@ -121,6 +121,7 @@ function getPermanentSettings(){
     ...getWorkbench(),
     ...getAdditionalSettings(),
     ...getImportantSettings(),
+    ...testNewSettings(),
   }
 }
 
@@ -340,5 +341,15 @@ function getSpellingSettings(){
       'languages.json',
       'introspections.json',
     ],
+  }
+}
+
+function testNewSettings(){
+  return {
+    "editor.gotoLocation.multipleDeclarations": "peek",
+    "editor.gotoLocation.multipleDefinitions": "peek",
+    "editor.gotoLocation.multipleImplementations": "peek",
+    "editor.gotoLocation.multipleReferences": "peek",
+    "editor.gotoLocation.multipleTypeDefinitions": "peek",
   }
 }
