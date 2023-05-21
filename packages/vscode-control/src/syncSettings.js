@@ -346,10 +346,11 @@ function getSpellingSettings(){
 
 function testNewSettings(){
   return {
-    "editor.gotoLocation.multipleDeclarations": "peek",
-    "editor.gotoLocation.multipleDefinitions": "peek",
-    "editor.gotoLocation.multipleImplementations": "peek",
-    "editor.gotoLocation.multipleReferences": "peek",
-    "editor.gotoLocation.multipleTypeDefinitions": "peek",
+    // by default all were `peek`
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
   }
 }
