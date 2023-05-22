@@ -360,16 +360,6 @@
     "key": "capslock 9"
   },
   {
-    "command": "magicBeans.slowScrollInit",
-    "priority": true,
-    "key": "capslock ;"
-  },
-  {
-    "command": "magicBeans.slowScrollStart",
-    "priority": true,
-    "key": "capslock '"
-  },
-  {
     "command": "magicBeans.fixCamelcaseRefactoring",
     "priority": true,
     "key": "capslock ,"
