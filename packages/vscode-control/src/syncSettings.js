@@ -153,6 +153,7 @@ function getEditor(){
       'source.fixAll'          : false,
       'source.organizeImports' : false,
     },
+    "editor.suggest.showWords": false,
     'editor.quickSuggestions' : {
       comments : 'off',
       strings  : 'off',
