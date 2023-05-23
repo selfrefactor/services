@@ -44,6 +44,7 @@
     "source.organizeImports": false
   },
   "editor.suggest.showWords": false,
+  "editor.suggest.localityBonus": true,
   "editor.quickSuggestions": {
     "comments": "off",
     "strings": "off",

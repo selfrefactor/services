@@ -153,8 +153,9 @@ function getEditor(){
       'source.fixAll'          : false,
       'source.organizeImports' : false,
     },
-    "editor.suggest.showWords": false,
-    'editor.quickSuggestions' : {
+    'editor.suggest.showWords'     : false,
+    'editor.suggest.localityBonus' : true,
+    'editor.quickSuggestions'      : {
       comments : 'off',
       strings  : 'off',
       other    : 'off',
@@ -348,10 +349,10 @@ function getSpellingSettings(){
 function testNewSettings(){
   return {
     // by default all were `peek`
-    "editor.gotoLocation.multipleDeclarations": "goto",
-    "editor.gotoLocation.multipleDefinitions": "goto",
-    "editor.gotoLocation.multipleImplementations": "goto",
-    "editor.gotoLocation.multipleReferences": "goto",
-    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    'editor.gotoLocation.multipleDeclarations'    : 'goto',
+    'editor.gotoLocation.multipleDefinitions'     : 'goto',
+    'editor.gotoLocation.multipleImplementations' : 'goto',
+    'editor.gotoLocation.multipleReferences'      : 'goto',
+    'editor.gotoLocation.multipleTypeDefinitions' : 'goto',
   }
 }
