@@ -357,7 +357,8 @@
   },
   {
     "command": "magicBeans.createSpec",
-    "key": "capslock 9"
+    "key": "capslock t",
+    "comment": "test"
   },
   {
     "command": "magicBeans.fixCamelcaseRefactoring",

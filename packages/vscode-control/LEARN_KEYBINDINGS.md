@@ -222,10 +222,6 @@
 
 > Snippet: commentMultiline
 
-## CAPSLOCK 9
-
-`magicBeans.createSpec`
-
 ## CAPSLOCK D
 
 `workbench.view.debug`
@@ -245,6 +241,12 @@
 `magicBeans.sortLines`
 
 > lines
+
+## CAPSLOCK T
+
+`magicBeans.createSpec`
+
+> test
 
 ## CAPSLOCK Y
 
@@ -350,10 +352,10 @@
 * capslock 6
 * capslock 7
 * capslock 8
+* capslock 9
 * capslock e
 * capslock q
 * capslock s
-* capslock t
 * capslock v
 * capslock w
 * capslock x
