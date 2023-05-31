@@ -256,6 +256,10 @@
 
 `workbench.action.gotoSymbol`
 
+## CTRL  3
+
+`workbench.action.interactiveSession.clear`
+
 ## CTRL  9
 
 `PYTHON ONLY - python.execInTerminal`
@@ -321,7 +325,6 @@
 ## Convenient keys
 
 * ctrl+0
-* ctrl+3
 * ctrl+4
 * ctrl+5
 * ctrl+6

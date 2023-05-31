@@ -551,6 +551,10 @@
     "when": "terminalFocus"
   },
   {
+  "key": "ctrl+3",
+  "command": "workbench.action.interactiveSession.clear"
+  },
+  {
     "key": "ctrl+r",
     "command": "-workbench.action.openRecent"
   },
