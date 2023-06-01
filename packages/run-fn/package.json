@@ -1,6 +1,6 @@
 {
 	"name": "run-fn",
-	"version": "3.33.22",
+	"version": "3.33.23",
 	"description": "Collections of useful CLI functions",
 	"main": "./cli.js",
 	"bin": {
@@ -14,14 +14,10 @@
 		"lint",
 		"git"
 	],
-	"depFn": [
-		"clipboardy"
-	],
 	"author": "self_refactor",
 	"license": "MIT",
 	"dependencies": {
 		"niketa": "1.10.3",
-		"clipboardy": "2.3.0",
 		"commit-fn": "2.7.0",
 		"dep-fn": "2.2.2",
 		"fs-extra": "11.1.1",
@@ -31,6 +27,6 @@
 		"string-fn": "3.1.0"
 	},
 	"devDependencies": {
-		"typescript": "5.0.4"
+		"typescript": "5.1.3"
 	}
 }

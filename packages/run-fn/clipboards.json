@@ -1,5 +1,0 @@
-{
-  "work":"cd $HOME/work/dms-ui && yarn dev\n",
-  "on":"cd $HOME/repos/on && yarn on",
-  "onx":"cd $HOME/repos/on && yarn onx"
-}
