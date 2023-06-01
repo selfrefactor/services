@@ -7,7 +7,6 @@ const { drop } = require('rambdax')
 const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
 const { niketa } = require('./services/niketa/niketa')
-const { copyToClipboard } = require('./services/c/copyToClipboard')
 const { deploy } = require('./services/de/deploy')
 const { commit } = require('./services/commit/commit')
 const { fastDeploy } = require('./services/d/fastDeploy')
@@ -63,10 +62,6 @@ async function runFn(){
 
   if (firstArgument === 'de'){
     return deploy()
-  }
-
-  if (firstArgument === 'c'){
-    return copyToClipboard(secondArgument)
   }
 
   if (firstArgument === 'clone'){
