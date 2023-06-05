@@ -6,6 +6,7 @@ const { drop } = require('rambdax')
 
 const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
+const { dvd } = require('./services/dvd/dvd.js')
 const { niketa } = require('./services/niketa/niketa')
 const { deploy } = require('./services/de/deploy')
 const { commit } = require('./services/commit/commit')
@@ -55,6 +56,9 @@ async function runFn(){
 
   if (firstArgument === 'dep'){
     return depFn.cli()
+  }
+  if (firstArgument === 'dvd'){
+    return dvd()
   }
   if (firstArgument === 'depx'){
     return depFn.cli('update')
