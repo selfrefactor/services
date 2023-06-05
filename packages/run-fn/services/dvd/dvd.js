@@ -1,5 +1,5 @@
 const {execCommand} = require('../../modules/execCommand')
-const {existsSync} = require('fs')
+const {existsSync, unlinkSync} = require('fs')
 const {log, scanFolder} = require('helpers-fn')
 const { piped, split, last, mapAsync, tryCatchAsync, remove } = require('rambdax')
 const { CWD } = require('../../constants')
@@ -24,6 +24,7 @@ async function dvd(label) {
     await execCommand(
       decreaseQuality
     )
+    await unlinkSync(output)
   }
   let iterable = async function(file, i){
     await tryCatchAsync((x) => fn(x, i), (err) => console.log(err))(file)
