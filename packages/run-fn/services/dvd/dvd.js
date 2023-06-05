@@ -1,11 +1,25 @@
 const {execCommand} = require('../../modules/execCommand')
 const {existsSync} = require('fs')
-const {log} = require('helpers-fn')
-const { piped, split, last } = require('rambdax')
+const {log, scanFolder} = require('helpers-fn')
+const { piped, split, last, mapAsync, tryCatchAsync, remove } = require('rambdax')
 const { CWD } = require('../../constants')
 
-async function dvd(repoInput) {
+async function dvd(label) {
   console.log(CWD)
+  const files = await scanFolder({
+    folder: CWD,
+    filterFn: x => x.toLowerCase().endsWith('.vob'),
+  })
+  const fn = async function(file, i){
+    let fileName = remove(`${ CWD }/`, file)
+    let command = `ffmpeg -i ${ fileName } -c:v libx264 -preset slow -crf 22 -c:a aac -b:a 128k ${label}-${i}.mp4`
+    console.log( command )
+    console.log(fileName, `fifileNamele`)
+  }
+  let iterable = async function(file, i){
+    await tryCatchAsync((x) => fn(x, i), (err) => console.log(err))(file)
+  }
+  await mapAsync(iterable, files)
   // const flag = repoInput.startsWith('https://github.com/')
   // const repoID = flag ? piped(repoInput, split('https://github.com/'), last) : `selfrefactor/${repoInput}`
   // const [,repoName] = repoID.split(`/`)
