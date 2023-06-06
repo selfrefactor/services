@@ -142,6 +142,12 @@
 
 > match
 
+## CTRL  R
+
+`editor.action.referenceSearch.trigger`
+
+> Peek References
+
 ## ALT  5
 
 `editor.action.insertSnippet`
@@ -333,7 +339,6 @@
 * ctrl+a
 * ctrl+c
 * ctrl+e
-* ctrl+r
 * ctrl+s
 * ctrl+t
 * ctrl+v
