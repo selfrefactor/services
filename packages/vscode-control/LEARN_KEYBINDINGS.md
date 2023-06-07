@@ -130,6 +130,12 @@
 
 > HINT: REFERENCES
 
+## CAPSLOCK X
+
+`github.copilot.interactiveEditor.explain`
+
+> Xplain - Used with Github Copilot extension to explain the code
+
 ## CTRL  1
 
 `niketa.lint.file`
@@ -366,4 +372,3 @@
 * capslock s
 * capslock v
 * capslock w
-* capslock x

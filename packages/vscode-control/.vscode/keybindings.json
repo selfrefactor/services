@@ -273,6 +273,12 @@
     "command": "workbench.action.files.openFolder"
   },
   {
+    "key": "capslock x",
+    "command": "github.copilot.interactiveEditor.explain",
+    "priority": true,
+    "comment": "Xplain - Used with Github Copilot extension to explain the code"
+  },
+  {
     "key": "capslock p",
     "priority": true,
     "command": "git.push",
