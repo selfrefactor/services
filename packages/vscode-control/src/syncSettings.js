@@ -289,6 +289,7 @@ function getAdditionalSettings(){
       '.css',
       '.scss',
       '.py',
+      '.go',
       '.ts',
       '.rs',
       '.feature',
