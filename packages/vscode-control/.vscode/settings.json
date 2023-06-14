@@ -19,7 +19,7 @@
   "ts.implicitProjectConfig.strictNullChecks": true,
   "js.implicitProjectConfig.strictNullChecks": true,
   "workbench.editor.tabSizing": "fixed",
-  "workbench.editor.tabSizingFixedMaxWidth": 300,
+  "workbench.editor.tabSizingFixedMaxWidth": 30,
   "editor.stickyScroll.defaultModel": "indentationModel",
   "editor.stickyScroll.enabled": true,
   "editor.hover.sticky": true,
@@ -88,7 +88,6 @@
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "editor.suggest.showStatusBar": true,
   "workbench.iconTheme": "catppuccin-latte",
-  "workbench.editor.wrapTabs": true,
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.activityBar.visible": false,
   "workbench.editor.untitled.hint": "hidden",
@@ -198,6 +197,7 @@
       "noItemText": "The project has no merge requests"
     }
   ],
+  "workbench.editor.wrapTabs": false,
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",

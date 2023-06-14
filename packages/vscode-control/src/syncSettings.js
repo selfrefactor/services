@@ -128,8 +128,8 @@ function getPermanentSettings(){
 
 function getNewSettings(){
   return {
-    "workbench.editor.tabSizing" : "fixed",
-    "workbench.editor.tabSizingFixedMaxWidth": 300,
+    'workbench.editor.tabSizing'              : 'fixed',
+    'workbench.editor.tabSizingFixedMaxWidth' : 30,
   }
 }
 
@@ -176,7 +176,6 @@ function getWorkbench(){
     'typescript.tsserver.experimental.enableProjectDiagnostics' : true, // to test
     'editor.suggest.showStatusBar'                              : true, // to test
     'workbench.iconTheme'                                       : FILE_ICON_THEME,
-    'workbench.editor.wrapTabs'                                 : true,
     'workbench.editor.pinnedTabSizing'                          : 'shrink',
     'workbench.activityBar.visible'                             : false,
     'workbench.editor.untitled.hint'                            : 'hidden',
@@ -302,11 +301,9 @@ function getAdditionalSettings(){
       '.rs',
       '.feature',
     ],
-    "go.gopath": "/Users/user/.local/share/rtx/installs/golang/1.20/go/bin",
-  "go.alternateTools": {
-    "go": "/Users/user/.local/share/rtx/installs/golang/1.20/go/bin"
-  },
-    'files.exclude' : {
+    'go.gopath'         : '/Users/user/.local/share/rtx/installs/golang/1.20/go/bin',
+    'go.alternateTools' : { go : '/Users/user/.local/share/rtx/installs/golang/1.20/go/bin' },
+    'files.exclude'     : {
       '.cache'            : true,
       '**/.awcache'       : true,
       '**/.cache-loader'  : true,
@@ -361,6 +358,8 @@ function getSpellingSettings(){
 
 function testNewSettings(){
   return {
+    // in order to test the new settings
+    'workbench.editor.wrapTabs'                   : false,
     // by default all were `peek`
     'editor.gotoLocation.multipleDeclarations'    : 'goto',
     'editor.gotoLocation.multipleDefinitions'     : 'goto',
