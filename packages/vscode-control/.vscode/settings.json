@@ -18,6 +18,8 @@
   "workbench.editor.revealIfOpen": false,
   "ts.implicitProjectConfig.strictNullChecks": true,
   "js.implicitProjectConfig.strictNullChecks": true,
+  "workbench.editor.tabSizing": "fixed",
+  "workbench.editor.tabSizingFixedMaxWidth": 300,
   "editor.stickyScroll.defaultModel": "indentationModel",
   "editor.stickyScroll.enabled": true,
   "editor.hover.sticky": true,
@@ -164,6 +166,10 @@
     ".rs",
     ".feature"
   ],
+  "go.gopath": "/Users/user/.local/share/rtx/installs/golang/1.20/go/bin",
+  "go.alternateTools": {
+    "go": "/Users/user/.local/share/rtx/installs/golang/1.20/go/bin"
+  },
   "files.exclude": {
     ".cache": true,
     "**/.awcache": true,

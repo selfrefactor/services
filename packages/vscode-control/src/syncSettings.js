@@ -113,6 +113,7 @@ void (async function sync(){
 
 function getPermanentSettings(){
   return {
+    ...getNewSettings(),
     ...getEditor(),
     ...getSpellingSettings(),
     ...getExplorer(),
@@ -122,6 +123,13 @@ function getPermanentSettings(){
     ...getAdditionalSettings(),
     ...getImportantSettings(),
     ...testNewSettings(),
+  }
+}
+
+function getNewSettings(){
+  return {
+    "workbench.editor.tabSizing" : "fixed",
+    "workbench.editor.tabSizingFixedMaxWidth": 300,
   }
 }
 
@@ -294,6 +302,10 @@ function getAdditionalSettings(){
       '.rs',
       '.feature',
     ],
+    "go.gopath": "/Users/user/.local/share/rtx/installs/golang/1.20/go/bin",
+  "go.alternateTools": {
+    "go": "/Users/user/.local/share/rtx/installs/golang/1.20/go/bin"
+  },
     'files.exclude' : {
       '.cache'            : true,
       '**/.awcache'       : true,
