@@ -130,6 +130,23 @@ function getNewSettings(){
   return {
     'workbench.editor.tabSizing'              : 'fixed',
     'workbench.editor.tabSizingFixedMaxWidth' : 30,
+    'editor.suggest.snippetsPreventQuickSuggestions' : false,
+    "editor.pasteAs.showPasteSelector": "never",
+    "editor.linkedEditing": true,
+    "chat.experimental.quickQuestion.enable": true
+  }
+}
+
+function testNewSettings(){
+  return {
+    // in order to test the new settings
+    'workbench.editor.wrapTabs'                   : true,
+    // by default all were `peek`
+    'editor.gotoLocation.multipleDeclarations'    : 'goto',
+    'editor.gotoLocation.multipleDefinitions'     : 'goto',
+    'editor.gotoLocation.multipleImplementations' : 'goto',
+    'editor.gotoLocation.multipleReferences'      : 'goto',
+    'editor.gotoLocation.multipleTypeDefinitions' : 'goto',
   }
 }
 
@@ -356,15 +373,4 @@ function getSpellingSettings(){
   }
 }
 
-function testNewSettings(){
-  return {
-    // in order to test the new settings
-    'workbench.editor.wrapTabs'                   : false,
-    // by default all were `peek`
-    'editor.gotoLocation.multipleDeclarations'    : 'goto',
-    'editor.gotoLocation.multipleDefinitions'     : 'goto',
-    'editor.gotoLocation.multipleImplementations' : 'goto',
-    'editor.gotoLocation.multipleReferences'      : 'goto',
-    'editor.gotoLocation.multipleTypeDefinitions' : 'goto',
-  }
-}
+

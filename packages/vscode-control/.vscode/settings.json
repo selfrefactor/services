@@ -20,6 +20,10 @@
   "js.implicitProjectConfig.strictNullChecks": true,
   "workbench.editor.tabSizing": "fixed",
   "workbench.editor.tabSizingFixedMaxWidth": 30,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.pasteAs.showPasteSelector": "never",
+  "editor.linkedEditing": true,
+  "chat.experimental.quickQuestion.enable": true,
   "editor.stickyScroll.defaultModel": "indentationModel",
   "editor.stickyScroll.enabled": true,
   "editor.hover.sticky": true,
@@ -197,7 +201,7 @@
       "noItemText": "The project has no merge requests"
     }
   ],
-  "workbench.editor.wrapTabs": false,
+  "workbench.editor.wrapTabs": true,
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
