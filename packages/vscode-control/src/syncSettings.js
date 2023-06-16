@@ -42,8 +42,8 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
   '../.vscode/settings.json')
 
-const DEFAULT_FONT = 'Comic Mono'
-// const DEFAULT_FONT = 'JetBrains Mono'
+  // https://dtinth.github.io/comic-mono-font
+const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Comic Mono'
 const FONT_FACTOR = 1
 
 function syncFiles(source, destination){
@@ -59,9 +59,9 @@ const getCalculatedOptions = () => {
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.65)))
 
   const fontSettings = {
-    'terminal.integrated.fontFamily' : DEFAULT_FONT,
-    'debug.console.fontFamily'       : DEFAULT_FONT,
-    'editor.fontFamily'              : DEFAULT_FONT,
+    'terminal.integrated.fontFamily' : FONT,
+    'debug.console.fontFamily'       : FONT,
+    'editor.fontFamily'              : FONT,
     'editor.fontLigatures'           : true,
   }
 
