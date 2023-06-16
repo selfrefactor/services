@@ -42,8 +42,7 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
   '../.vscode/settings.json')
 
-  // https://dtinth.github.io/comic-mono-font
-const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Comic Mono'
+const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Operator Mono'
 const FONT_FACTOR = 1
 
 function syncFiles(source, destination){
