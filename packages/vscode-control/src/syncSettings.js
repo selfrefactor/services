@@ -45,60 +45,6 @@ const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
 const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Operator Mono'
 const FONT_FACTOR = 1
 
-function syncFiles(source, destination){
-  copySync(source, destination)
-}
-
-const getCalculatedOptions = () => {
-  const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE, 2)
-  const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
-  const lineHeight = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2)
-  const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR, 2))
-  const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR))
-  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.65)))
-
-  const fontSettings = {
-    'terminal.integrated.fontFamily' : FONT,
-    'debug.console.fontFamily'       : FONT,
-    'editor.fontFamily'              : FONT,
-    'editor.fontLigatures'           : true,
-  }
-
-  return {
-    ...fontSettings,
-    'editor.fontSize'              : fontSize,
-    'window.zoomLevel'             : 2,
-    'editor.lineHeight'            : lineHeight,
-    'editor.suggestFontSize'       : suggestFontSize,
-    'editor.suggestLineHeight'     : suggestLineHeight,
-    'terminal.integrated.fontSize' : terminalFontSize,
-  }
-}
-
-function syncSettings(){
-  const newOptions = {
-    ...settings,
-    ...getPermanentSettings(),
-    ...getCalculatedOptions(),
-    'magicBeans.IS_VSCODE_INSIDERS'  : VSCODE_INSIDERS,
-    'workbench.editor.enablePreview' : !VSCODE_INSIDERS,
-    'workbench.colorTheme'           : THEME,
-  }
-
-  writeJsonSync(
-    SETTINGS, newOptions, { spaces : 2 }
-  )
-  writeJsonSync(
-    SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces : 2 }
-  )
-}
-
-function syncSnippets(){
-  syncFiles(SNIPPETS_SOURCE, JS_SNIPPETS)
-  syncFiles(SNIPPETS_SOURCE, TS_SNIPPETS)
-  syncFiles(SNIPPETS_SOURCE, TSX_SNIPPETS)
-}
-
 void (async function sync(){
   console.log('START')
   await execSafe({
@@ -129,7 +75,7 @@ function getPermanentSettings(){
 function getNewSettings(){
   return {
     'workbench.editor.tabSizing'              : 'fixed',
-    'workbench.editor.tabSizingFixedMaxWidth' : 30,
+    'workbench.editor.tabSizingFixedMaxWidth' :100,
     'editor.suggest.snippetsPreventQuickSuggestions' : false,
     "editor.pasteAs.showPasteSelector": "never",
     "editor.linkedEditing": true,
@@ -373,4 +319,57 @@ function getSpellingSettings(){
   }
 }
 
+function syncFiles(source, destination){
+  copySync(source, destination)
+}
+
+function getCalculatedOptions() {
+  const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE, 2)
+  const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
+  const lineHeight = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2)
+  const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR, 2))
+  const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR))
+  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.65)))
+
+  const fontSettings = {
+    'terminal.integrated.fontFamily': FONT,
+    'debug.console.fontFamily': FONT,
+    'editor.fontFamily': FONT,
+    'editor.fontLigatures': true,
+  }
+
+  return {
+    ...fontSettings,
+    'editor.fontSize': fontSize,
+    'window.zoomLevel': 2,
+    'editor.lineHeight': lineHeight,
+    'editor.suggestFontSize': suggestFontSize,
+    'editor.suggestLineHeight': suggestLineHeight,
+    'terminal.integrated.fontSize': terminalFontSize,
+  }
+}
+
+function syncSettings(){
+  const newOptions = {
+    ...settings,
+    ...getPermanentSettings(),
+    ...getCalculatedOptions(),
+    'magicBeans.IS_VSCODE_INSIDERS'  : VSCODE_INSIDERS,
+    'workbench.editor.enablePreview' : !VSCODE_INSIDERS,
+    'workbench.colorTheme'           : THEME,
+  }
+
+  writeJsonSync(
+    SETTINGS, newOptions, { spaces : 2 }
+  )
+  writeJsonSync(
+    SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces : 2 }
+  )
+}
+
+function syncSnippets(){
+  syncFiles(SNIPPETS_SOURCE, JS_SNIPPETS)
+  syncFiles(SNIPPETS_SOURCE, TS_SNIPPETS)
+  syncFiles(SNIPPETS_SOURCE, TSX_SNIPPETS)
+}
 

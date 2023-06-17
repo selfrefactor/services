@@ -19,7 +19,7 @@
   "ts.implicitProjectConfig.strictNullChecks": true,
   "js.implicitProjectConfig.strictNullChecks": true,
   "workbench.editor.tabSizing": "fixed",
-  "workbench.editor.tabSizingFixedMaxWidth": 30,
+  "workbench.editor.tabSizingFixedMaxWidth": 100,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.pasteAs.showPasteSelector": "never",
   "editor.linkedEditing": true,
