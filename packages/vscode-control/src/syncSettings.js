@@ -75,7 +75,7 @@ function getPermanentSettings(){
 function getNewSettings(){
   return {
     'workbench.editor.tabSizing'              : 'fixed',
-    'workbench.editor.tabSizingFixedMaxWidth' :100,
+    'workbench.editor.tabSizingFixedMaxWidth' :30,
     'editor.suggest.snippetsPreventQuickSuggestions' : false,
     "editor.pasteAs.showPasteSelector": "never",
     "editor.linkedEditing": true,
