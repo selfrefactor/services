@@ -73,8 +73,8 @@ function getPermanentSettings(){
 
 function getNewSettings(){
   return {
-    // 'workbench.editor.tabSizing'                     : 'fixed',
-    // 'workbench.editor.tabSizingFixedMaxWidth'        : 150,
+    'workbench.editor.tabSizing'                     : 'fixed',
+    'workbench.editor.tabSizingFixedMaxWidth'        : 150,
     'editor.suggest.snippetsPreventQuickSuggestions' : false,
     'editor.pasteAs.showPasteSelector'               : 'never',
     'editor.linkedEditing'                           : true,
@@ -84,8 +84,12 @@ function getNewSettings(){
 
 function testNewSettings(){
   return {
+    // to fix not working word wrap
+    'chat.editor.wordWrap'                                        : 'on',
+    'editor.wordWrapColumn'                                       : 70,
+    'editor.wrappingStrategy'                                     : 'advanced',
     // in order to test the new settings
-    // 'workbench.editor.wrapTabs'                                   : true,
+    'workbench.editor.wrapTabs'                                   : true,
     // by default all were `peek`
     'editor.gotoLocation.multipleDeclarations'                    : 'goto',
     'editor.gotoLocation.multipleDefinitions'                     : 'goto',

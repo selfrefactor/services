@@ -18,6 +18,8 @@
   "workbench.editor.revealIfOpen": false,
   "ts.implicitProjectConfig.strictNullChecks": true,
   "js.implicitProjectConfig.strictNullChecks": true,
+  "workbench.editor.tabSizing": "fixed",
+  "workbench.editor.tabSizingFixedMaxWidth": 150,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.pasteAs.showPasteSelector": "never",
   "editor.linkedEditing": true,
@@ -191,6 +193,10 @@
       "noItemText": "The project has no merge requests"
     }
   ],
+  "chat.editor.wordWrap": "on",
+  "editor.wordWrapColumn": 70,
+  "editor.wrappingStrategy": "advanced",
+  "workbench.editor.wrapTabs": true,
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
