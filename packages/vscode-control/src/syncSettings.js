@@ -92,6 +92,14 @@ function testNewSettings(){
     'editor.gotoLocation.multipleImplementations' : 'goto',
     'editor.gotoLocation.multipleReferences'      : 'goto',
     'editor.gotoLocation.multipleTypeDefinitions' : 'goto',
+    // to test prefered local imports
+      "javascript.suggest.includeAutomaticOptionalChainCompletions": false,
+      "javascript.suggest.autoImports": false,
+      "javascript.preferences.importModuleSpecifier": "relative",
+      "typescript.suggest.autoImports": false,
+      "typescript.suggest.includeAutomaticOptionalChainCompletions": false,
+      "typescript.preferences.importModuleSpecifier": "relative",
+
   }
 }
 
