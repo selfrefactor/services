@@ -73,33 +73,32 @@ function getPermanentSettings(){
 
 function getNewSettings(){
   return {
-    'workbench.editor.tabSizing'              : 'fixed',
-    'workbench.editor.tabSizingFixedMaxWidth' :150,
+    'workbench.editor.tabSizing'                     : 'fixed',
+    'workbench.editor.tabSizingFixedMaxWidth'        : 150,
     'editor.suggest.snippetsPreventQuickSuggestions' : false,
-    "editor.pasteAs.showPasteSelector": "never",
-    "editor.linkedEditing": true,
-    "chat.experimental.quickQuestion.enable": true
+    'editor.pasteAs.showPasteSelector'               : 'never',
+    'editor.linkedEditing'                           : true,
+    'chat.experimental.quickQuestion.enable'         : true,
   }
 }
 
 function testNewSettings(){
   return {
     // in order to test the new settings
-    'workbench.editor.wrapTabs'                   : true,
+    'workbench.editor.wrapTabs'                                   : true,
     // by default all were `peek`
-    'editor.gotoLocation.multipleDeclarations'    : 'goto',
-    'editor.gotoLocation.multipleDefinitions'     : 'goto',
-    'editor.gotoLocation.multipleImplementations' : 'goto',
-    'editor.gotoLocation.multipleReferences'      : 'goto',
-    'editor.gotoLocation.multipleTypeDefinitions' : 'goto',
+    'editor.gotoLocation.multipleDeclarations'                    : 'goto',
+    'editor.gotoLocation.multipleDefinitions'                     : 'goto',
+    'editor.gotoLocation.multipleImplementations'                 : 'goto',
+    'editor.gotoLocation.multipleReferences'                      : 'goto',
+    'editor.gotoLocation.multipleTypeDefinitions'                 : 'goto',
     // to test prefered local imports
-      "javascript.suggest.includeAutomaticOptionalChainCompletions": false,
-      "javascript.suggest.autoImports": false,
-      "javascript.preferences.importModuleSpecifier": "relative",
-      "typescript.suggest.autoImports": false,
-      "typescript.suggest.includeAutomaticOptionalChainCompletions": false,
-      "typescript.preferences.importModuleSpecifier": "relative",
-
+    'javascript.suggest.includeAutomaticOptionalChainCompletions' : false,
+    'javascript.suggest.autoImports'                              : false,
+    'javascript.preferences.importModuleSpecifier'                : 'relative',
+    'typescript.suggest.autoImports'                              : false,
+    'typescript.suggest.includeAutomaticOptionalChainCompletions' : false,
+    'typescript.preferences.importModuleSpecifier'                : 'relative',
   }
 }
 
@@ -317,7 +316,7 @@ function syncFiles(source, destination){
   copySync(source, destination)
 }
 
-function getCalculatedOptions() {
+function getCalculatedOptions(){
   const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE, 2)
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
   const lineHeight = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2)
@@ -326,20 +325,20 @@ function getCalculatedOptions() {
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.65)))
 
   const fontSettings = {
-    'terminal.integrated.fontFamily': FONT,
-    'debug.console.fontFamily': FONT,
-    'editor.fontFamily': FONT,
-    'editor.fontLigatures': true,
+    'terminal.integrated.fontFamily' : FONT,
+    'debug.console.fontFamily'       : FONT,
+    'editor.fontFamily'              : FONT,
+    'editor.fontLigatures'           : true,
   }
 
   return {
     ...fontSettings,
-    'editor.fontSize': fontSize,
-    'window.zoomLevel': 2,
-    'editor.lineHeight': lineHeight,
-    'editor.suggestFontSize': suggestFontSize,
-    'editor.suggestLineHeight': suggestLineHeight,
-    'terminal.integrated.fontSize': terminalFontSize,
+    'editor.fontSize'              : fontSize,
+    'window.zoomLevel'             : 2,
+    'editor.lineHeight'            : lineHeight,
+    'editor.suggestFontSize'       : suggestFontSize,
+    'editor.suggestLineHeight'     : suggestLineHeight,
+    'terminal.integrated.fontSize' : terminalFontSize,
   }
 }
 
@@ -366,4 +365,3 @@ function syncSnippets(){
   syncFiles(SNIPPETS_SOURCE, TS_SNIPPETS)
   syncFiles(SNIPPETS_SOURCE, TSX_SNIPPETS)
 }
-
