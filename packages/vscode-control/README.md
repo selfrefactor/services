@@ -89,10 +89,6 @@ Ctrl+I 	Display the Page Info window about the web page currently being viewed.
 
 ### Two column view - ctrl+shift+6
 
-### Wallaby start - alt+w
-
-### Wallaby stop - ctrl+shift+7
-
 ### Pin - pin with `Alt+P`
 
 ### Unpin - pin with `Alt+U`

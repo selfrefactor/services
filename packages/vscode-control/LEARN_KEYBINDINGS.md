@@ -306,22 +306,6 @@
 
 > HINT: OPEN
 
-## CTRL  SHIFT  5
-
-`wallaby.start`
-
-## CTRL  SHIFT  6
-
-`wallaby.stop`
-
-## CTRL  SHIFT  7
-
-`wallaby.addToExclusiveTestRun`
-
-## CTRL  SHIFT  8
-
-`wallaby.updateFileSnapshots`
-
 ## CTRL  SHIFT  D
 
 `editor.action.copyLinesDownAction`

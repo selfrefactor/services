@@ -336,22 +336,6 @@
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "ctrl+shift+5",
-    "command": "wallaby.start"
-  },
-  {
-    "key": "ctrl+shift+6",
-    "command": "wallaby.stop"
-  },
-  {
-    "key": "ctrl+shift+7",
-    "command": "wallaby.addToExclusiveTestRun"
-  },
-  {
-    "key": "ctrl+shift+8",
-    "command": "wallaby.updateFileSnapshots"
-  },
-  {
     "command": "magicBeans.sortLines",
     "comment": "lines",
     "key": "capslock l"

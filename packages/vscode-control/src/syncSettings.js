@@ -63,7 +63,6 @@ function getPermanentSettings(){
     ...getEditor(),
     ...getSpellingSettings(),
     ...getExplorer(),
-    ...getWallaby(),
     ...getGit(),
     ...getWorkbench(),
     ...getAdditionalSettings(),
@@ -285,19 +284,6 @@ function getAdditionalSettings(){
       'docs'              : false,
       'yarn.lock'         : true,
     },
-  }
-}
-
-function getWallaby(){
-  return {
-    'wallaby.showUpdateNotifications'         : false,
-    'wallaby.strictSSL'                       : false,
-    'wallaby.startAutomatically'              : false,
-    'wallaby.suppressExpirationNotifications' : true,
-    'wallaby.codeLensFeature.debugger'        : false,
-    'wallaby.codeLensFeature.profiler'        : false,
-    'wallaby.codeLensFeature.testFilters'     : false,
-    'wallaby.codeLensFeature.testStory'       : false,
   }
 }
 
