@@ -97,11 +97,11 @@ function testNewSettings(){
     'editor.gotoLocation.multipleReferences'                      : 'goto',
     'editor.gotoLocation.multipleTypeDefinitions'                 : 'goto',
     // to test prefered local imports
-    'javascript.suggest.includeAutomaticOptionalChainCompletions' : false,
-    'javascript.suggest.autoImports'                              : false,
+    'javascript.suggest.includeAutomaticOptionalChainCompletions' : true,
+    'javascript.suggest.autoImports'                              : true,
     'javascript.preferences.importModuleSpecifier'                : 'relative',
-    'typescript.suggest.autoImports'                              : false,
-    'typescript.suggest.includeAutomaticOptionalChainCompletions' : false,
+    'typescript.suggest.autoImports'                              : true,
+    'typescript.suggest.includeAutomaticOptionalChainCompletions' : true,
     'typescript.preferences.importModuleSpecifier'                : 'relative',
   }
 }
