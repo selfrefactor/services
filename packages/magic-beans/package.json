@@ -110,6 +110,10 @@
 				"key": "f7"
 			},
 			{
+				"command": "magicBeans.requestRandomFileAutomated",
+				"key": "f8"
+			},
+			{
 				"command": "magicBeans.createSpec",
 				"key": "ctrl+shift+0"
 			},

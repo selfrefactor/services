@@ -3,12 +3,8 @@ const vscode = require('vscode')
 const { configAnt } = require('./ants/config')
 const { logToUserSecondBar } = require('./bar')
 const { SLOW_SCROLL_START } = require('./constants')
-const STEP = configAnt(
-  'SLOW_SCROLL'
-)
-const LINES_TO_SCROLL = configAnt(
-  'LINES_TO_SCROLL'
-)
+const STEP = configAnt('SLOW_SCROLL')
+const LINES_TO_SCROLL = configAnt('LINES_TO_SCROLL')
 
 class ContextKey{
   constructor(name){
@@ -50,7 +46,8 @@ class ScrollController{
       if (!result){
         this.stopScroll()
       }
-    }, STEP ? Number(STEP) : 700)
+    },
+    STEP ? Number(STEP) : 700)
   }
 
   scroll(line){
@@ -96,11 +93,11 @@ let initFlag = false
 
 function slowScroll(context){
   return () => {
-    if(initFlag) return
-    if(!initFlag){
+    if (initFlag) return
+    if (!initFlag){
       initFlag = true
       logToUserSecondBar('Click to start Slow scroll')
-    } 
+    }
     const controller = new ScrollController()
 
     const stopHandler = vscode.commands.registerCommand('magicBeans.slowScrollStop',
@@ -112,7 +109,7 @@ function slowScroll(context){
       () => {
         controller.startScroll(LINES_TO_SCROLL)
       })
-  
+
     context.subscriptions.push(downHandler)
     context.subscriptions.push(stopHandler)
     context.subscriptions.push(controller)

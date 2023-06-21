@@ -9,7 +9,7 @@ holder.bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left,
   PRIORITY)
 holder.bar.command = REQUEST_RANDOM_FILE
 holder.secondBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left,
-  PRIORITY+1)
+  PRIORITY + 1)
 holder.secondBar.command = SLOW_SCROLL_START
 
 const logToUser = text => {

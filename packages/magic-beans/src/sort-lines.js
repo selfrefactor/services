@@ -14,7 +14,10 @@ function sortLines(
 
   return textEditor.edit(editBuilder => {
     const range = new vscode.Range(
-      startLine, 0, endLine, textEditor.document.lineAt(endLine).text.length
+      startLine,
+      0,
+      endLine,
+      textEditor.document.lineAt(endLine).text.length
     )
     editBuilder.replace(range, sorted.join('\n'))
   })

@@ -3,28 +3,30 @@ const {
   REQUEST_RANDOM_FILE,
   SORT_LINES,
   SLOW_SCROLL_INIT,
+  REQUEST_RANDOM_FILE_AUTOMATED,
 } = require('./constants')
+const {
+  requestRandomFile,
+  requestRandomFileAutomated,
+} = require('./randomFile')
+const { configAnt } = require('./ants/config')
 const { copyTrimmed } = require('./copyTrimmed')
 const { createSpec } = require('./createSpec')
 const { fixCamelcaseRefactoring } = require('./fixCamelcaseRefactoring')
 const { formatJson } = require('./format-json')
 const { initBar } = require('./bar')
-const { requestRandomFile } = require('./randomFile')
 const { slowScroll } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
-const { configAnt } = require('./ants/config')
 
 function openInVsCode(data){
-  const IS_VSCODE_INSIDERS = configAnt(
-    'IS_VSCODE_INSIDERS'
-  )
+  const IS_VSCODE_INSIDERS = configAnt('IS_VSCODE_INSIDERS')
   const binary = IS_VSCODE_INSIDERS ? 'code-insiders' : 'code'
   const terminal = vscode.window.createTerminal({ name : 'New vscode' })
-      terminal.hide()
-      terminal.sendText(`${binary} '${ data.fsPath }'`)
-      setTimeout(() => {
-        terminal.dispose()
-      }, 4000)
+  terminal.hide()
+  terminal.sendText(`${ binary } '${ data.fsPath }'`)
+  setTimeout(() => {
+    terminal.dispose()
+  }, 4000)
 }
 
 function activate(context){
@@ -39,6 +41,8 @@ function activate(context){
     slowScroll(context))
   const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE,
     requestRandomFile)
+  const requestRandomFileAutomatedCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE_AUTOMATED,
+    requestRandomFile)
   const sortLinesCommand = vscode.commands.registerCommand(SORT_LINES,
     sortLines)
   const fixCamelcaseRefactoringCommand = vscode.commands.registerCommand('magicBeans.fixCamelcaseRefactoring',
@@ -48,6 +52,7 @@ function activate(context){
   context.subscriptions.push(createSpecCommand)
   context.subscriptions.push(slowScrollCommand)
   context.subscriptions.push(requestRandomFileCommand)
+  context.subscriptions.push(requestRandomFileAutomatedCommand)
   context.subscriptions.push(formatJsonCommand)
   context.subscriptions.push(sortLinesCommand)
   context.subscriptions.push(fixCamelcaseRefactoringCommand)

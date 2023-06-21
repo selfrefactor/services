@@ -16,10 +16,11 @@ function applyCopyTrimmed(
   }
 
   if (lines.length === 0) return logToUser('empty selection!!')
-  if(lines.length === 1){
+  if (lines.length === 1){
     copy(lines[ 0 ].trim())
+
     return
-  } 
+  }
   const withFirst = update(
     0, lines[ 0 ].trimLeft(), lines
   )
@@ -36,7 +37,9 @@ function copyTrimmedFn(){
   const { selection } = textEditor
 
   return applyCopyTrimmed(
-    textEditor, selection.start.line, selection.end.line
+    textEditor,
+    selection.start.line,
+    selection.end.line
   )
 }
 

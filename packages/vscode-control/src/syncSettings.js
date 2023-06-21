@@ -84,8 +84,6 @@ function getNewSettings(){
 
 function testNewSettings(){
   return {
-    // to reduce width of action panel
-    "workbench.activityBar.width": 100,
     // to fix not working word wrap
     'chat.editor.wordWrap'                                        : 'on',
     'editor.wordWrapColumn'                                       : 70,

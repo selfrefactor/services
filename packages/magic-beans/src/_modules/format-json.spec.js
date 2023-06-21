@@ -1,4 +1,4 @@
-import { formatJson } from './format-json'
+import { formatJson } from './format-json.js'
 const packageJson = `
 {
 	"jest": {
