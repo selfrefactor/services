@@ -48,6 +48,7 @@
 		"onCommand:magicBeans.createSpec",
 		"onCommand:magicBeans.formatJson",
 		"onCommand:magicBeans.requestRandomFile",
+		"onCommand:magicBeans.requestRandomFileAutomated",
 		"onCommand:magicBeans.sortLines",
 		"onCommand:magicBeans.slowScrollInit",
 		"onCommand:magicBeans.fixCamelcaseRefactoring"
@@ -66,6 +67,10 @@
 			{
 				"command": "magicBeans.requestRandomFile",
 				"title": "Magic Beans request random file"
+			},
+			{
+				"command": "magicBeans.requestRandomFileAutomated",
+				"title": "Magic Beans request random file - automated"
 			},
 			{
 				"command": "magicBeans.createSpec",
