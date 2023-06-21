@@ -193,7 +193,7 @@
       "noItemText": "The project has no merge requests"
     }
   ],
-  "workbench.activityBar.width": 50,
+  "workbench.activityBar.width": 30,
   "chat.editor.wordWrap": "on",
   "editor.wordWrapColumn": 70,
   "editor.wrappingStrategy": "advanced",
