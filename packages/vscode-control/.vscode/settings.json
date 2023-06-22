@@ -81,11 +81,9 @@
   "git.promptToSaveFilesBeforeCommit": "never",
   "git.allowNoVerifyCommit": true,
   "git.fetchOnPull": true,
-  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
-  "editor.suggest.showStatusBar": true,
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.editor.pinnedTabSizing": "shrink",
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.list.smoothScrolling": true,
@@ -193,7 +191,8 @@
       "noItemText": "The project has no merge requests"
     }
   ],
-  "workbench.activityBar.width": 100,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "editor.suggest.showStatusBar": false,
   "chat.editor.wordWrap": "on",
   "editor.wordWrapColumn": 70,
   "editor.wrappingStrategy": "advanced",

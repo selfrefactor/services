@@ -82,8 +82,13 @@ function getNewSettings(){
   }
 }
 
+/**
+ * Keep latest changes with comments of change
+ */
 function testNewSettings(){
   return {
+    'typescript.tsserver.experimental.enableProjectDiagnostics' : false, // to test
+    'editor.suggest.showStatusBar'                              : false, // to test
     // to fix not working word wrap
     'chat.editor.wordWrap'                                        : 'on',
     'editor.wordWrapColumn'                                       : 70,
@@ -146,11 +151,9 @@ function getEditor(){
 
 function getWorkbench(){
   return {
-    'typescript.tsserver.experimental.enableProjectDiagnostics' : true, // to test
-    'editor.suggest.showStatusBar'                              : true, // to test
     'workbench.iconTheme'                                       : FILE_ICON_THEME,
     'workbench.editor.pinnedTabSizing'                          : 'shrink',
-    'workbench.activityBar.visible'                             : false,
+    'workbench.activityBar.visible'                             : VSCODE_INSIDERS,
     'workbench.editor.untitled.hint'                            : 'hidden',
     'workbench.editor.untitled.labelFormat'                     : 'name',
     'workbench.list.smoothScrolling'                            : true,
@@ -201,10 +204,6 @@ function getImportantSettings(){
 
 function getAdditionalSettings(){
   return {
-    // 'editor.autoClosingBrackets'                             : 'never',
-    // 'editor.autoClosingDelete'                               : 'never',
-    // 'editor.autoClosingOvertype'                             : 'never',
-    // 'editor.autoClosingQuotes'                               : 'never',
     'window.menuBarVisibility'                               : 'toggle',
     'editor.tabCompletion'                                   : 'on',
     'zenMode.hideTabs'                                       : false,
