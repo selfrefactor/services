@@ -8,6 +8,7 @@ const { setter, getter, delay, shuffle, removeIndex } = require('rambdax')
 const RANDOM_FILE_SKIP_PATTERNS = configAnt('RANDOM_FILE_SKIP_PATTERNS')
 const RANDOM_FILE_ALLOWED_EXTENSIONS = configAnt('RANDOM_FILE_ALLOWED_EXTENSIONS')
 const RANDOM_FILE_FORBIDDEN_EXTENSIONS = configAnt('RANDOM_FILE_FORBIDDEN_EXTENSIONS')
+const RANDOM_FILE_PERIOD = configAnt('RANDOM_FILE_PERIOD')
 
 function changeOpenedFile(filePath, callback = () => {}){
   // editor should have
@@ -19,7 +20,7 @@ function changeOpenedFile(filePath, callback = () => {}){
   })
 }
 
-async function randomFile(){
+async function randomFileInitialize(){
   const projectFolder = vscode.workspace.workspaceFolders[ 0 ].uri.path
   const files = await scanFolder({
     folder    : projectFolder,
@@ -47,7 +48,6 @@ async function randomFile(){
     return 0
   })
   setter('files', randomized)
-  requestRandomFile()
 }
 
 function requestRandomFile(){
@@ -63,29 +63,25 @@ function requestRandomFile(){
 
 async function requestRandomFileFn(){
   if (!getter(REQUEST_RANDOM_FILE)){
-    await randomFile()
+    await randomFileInitialize()
     setter(REQUEST_RANDOM_FILE, true)
   }
   requestRandomFile()
 }
 
-const interval = 60 * 1000
-
 async function startAutomatedMode(){
-  let done = false
-  while (!done){
-    await delay(interval)
+  while (true){
+    await delay(RANDOM_FILE_PERIOD)
     const success = requestRandomFile()
     if (!success){
-      done = true
-      continue
+      await randomFileInitialize()
     }
   }
 }
 
 async function requestRandomFileAutomatedFn(){
   if (!getter(REQUEST_RANDOM_FILE)){
-    await randomFile()
+    await randomFileInitialize()
     setter(REQUEST_RANDOM_FILE, true)
     startAutomatedMode()
   }

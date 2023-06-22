@@ -151,6 +151,11 @@
 					"default": 30,
 					"description": "slow scroll number of lines"
 				},
+				"magicBeans.RANDOM_FILE_PERIOD": {
+					"type": "number",
+					"default": 60000,
+					"description": "ms for random file to be requested automatically"
+				},
 				"magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS": {
 					"type": "array",
 					"uniqueItems": true,

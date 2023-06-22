@@ -42,7 +42,7 @@ function activate(context){
   const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE,
     requestRandomFile)
   const requestRandomFileAutomatedCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE_AUTOMATED,
-    requestRandomFile)
+    requestRandomFileAutomated)
   const sortLinesCommand = vscode.commands.registerCommand(SORT_LINES,
     sortLines)
   const fixCamelcaseRefactoringCommand = vscode.commands.registerCommand('magicBeans.fixCamelcaseRefactoring',
