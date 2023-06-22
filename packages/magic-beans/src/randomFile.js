@@ -10,6 +10,28 @@ const RANDOM_FILE_ALLOWED_EXTENSIONS = configAnt('RANDOM_FILE_ALLOWED_EXTENSIONS
 const RANDOM_FILE_FORBIDDEN_EXTENSIONS = configAnt('RANDOM_FILE_FORBIDDEN_EXTENSIONS')
 const RANDOM_FILE_PERIOD = configAnt('RANDOM_FILE_PERIOD')
 
+const PREFER_FILES_FLAG = false
+
+class Delay{
+  constructor(){
+    this.timeout = null
+  }
+      delay(ms){
+        return new Promise(resolve => {
+          this.timeout = setTimeout(() => {
+            resolve()
+          }, ms)
+        })
+      }
+      clear(){
+        if (this.timeout){
+          clearTimeout(this.timeout)
+        }
+      }
+}
+
+let delayInstance = new Delay()
+
 function changeOpenedFile(filePath, callback = () => {}){
   // editor should have
   // "workbench.editor.enablePreview": true,
@@ -41,12 +63,14 @@ async function randomFileInitialize(){
 
   if (files.length === 0) return
   const randomized = shuffle(files)
-  randomized.sort((a, b) => {
-    if (a.includes('package.json')) return -1
-    if (b.includes('package.json')) return 1
+  if (PREFER_FILES_FLAG){
+    randomized.sort((a, b) => {
+      if (a.includes('package.json')) return -1
+      if (b.includes('package.json')) return 1
 
-    return 0
-  })
+      return 0
+    })
+  }
   setter('files', randomized)
 }
 
