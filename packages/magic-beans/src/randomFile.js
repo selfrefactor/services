@@ -49,7 +49,6 @@ async function randomFileInitialize(){
     maxDepth  : 20,
     excludeFn : dir => RANDOM_FILE_SKIP_PATTERNS.includes(dir),
     filterFn  : filePath => {
-      if (filePath.endsWith('package.json')) return true
       const [ passAllowedExtension ] = RANDOM_FILE_ALLOWED_EXTENSIONS.filter(singleExtension => filePath.endsWith(singleExtension))
       if (!passAllowedExtension) return false
 
@@ -95,7 +94,8 @@ async function requestRandomFileFn(){
 
 async function startAutomatedMode(){
   while (true){
-    await delay(RANDOM_FILE_PERIOD)
+    // wait either for user to request a file or for the period to pass
+    await Promise.race([delay(RANDOM_FILE_PERIOD), delayInstance.delay(RANDOM_FILE_PERIOD)])
     const success = requestRandomFile()
     if (!success){
       await randomFileInitialize()
