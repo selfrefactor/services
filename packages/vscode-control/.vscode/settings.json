@@ -146,27 +146,37 @@
     "markdown": true
   },
   "magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS": [
+    ".css",
+    ".feature",
+    ".go",
     ".js",
     ".jsx",
-    ".tsx",
-    ".css",
-    ".scss",
     ".py",
-    ".go",
-    ".ts",
     ".rs",
-    ".feature"
+    ".scss",
+    ".ts",
+    ".tsx"
   ],
   "magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS": [
-    ".test.ts",
-    ".test.tsx",
+    ".gitconfig",
+    ".gitignore",
+    ".pylintrc",
+    ".spec.js",
+    ".spec.jsx",
     ".spec.ts",
     ".spec.tsx",
-    "__init__.py",
     ".test.js",
     ".test.jsx",
-    ".spec.js",
-    ".spec.jsx"
+    ".test.ts",
+    ".test.tsx",
+    "Makefile",
+    "Pipfile",
+    "Pipfile.lock",
+    "__init__.py",
+    "coverage.py",
+    "package-lock.json",
+    "pre-commit",
+    "setup.py"
   ],
   "go.gopath": "/Users/user/.local/share/rtx/installs/golang/1.20/go/bin",
   "go.alternateTools": {
