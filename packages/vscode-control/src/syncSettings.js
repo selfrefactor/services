@@ -87,8 +87,8 @@ function getNewSettings(){
  */
 function testNewSettings(){
   return {
-    'typescript.tsserver.experimental.enableProjectDiagnostics' : false, // to test
-    'editor.suggest.showStatusBar'                              : false, // to test
+    'typescript.tsserver.experimental.enableProjectDiagnostics'   : false, // to test
+    'editor.suggest.showStatusBar'                                : false, // to test
     // to fix not working word wrap
     'chat.editor.wordWrap'                                        : 'on',
     'editor.wordWrapColumn'                                       : 70,
@@ -151,15 +151,15 @@ function getEditor(){
 
 function getWorkbench(){
   return {
-    'workbench.iconTheme'                                       : FILE_ICON_THEME,
-    'workbench.editor.pinnedTabSizing'                          : 'shrink',
-    'workbench.activityBar.visible'                             : VSCODE_INSIDERS,
-    'workbench.editor.untitled.hint'                            : 'hidden',
-    'workbench.editor.untitled.labelFormat'                     : 'name',
-    'workbench.list.smoothScrolling'                            : true,
-    'workbench.sideBar.location'                                : 'right',
-    'workbench.startupEditor'                                   : 'none',
-    'workbench.editor.languageDetectionHints'                   : {
+    'workbench.iconTheme'                     : FILE_ICON_THEME,
+    'workbench.editor.pinnedTabSizing'        : 'shrink',
+    'workbench.activityBar.visible'           : VSCODE_INSIDERS,
+    'workbench.editor.untitled.hint'          : 'hidden',
+    'workbench.editor.untitled.labelFormat'   : 'name',
+    'workbench.list.smoothScrolling'          : true,
+    'workbench.sideBar.location'              : 'right',
+    'workbench.startupEditor'                 : 'none',
+    'workbench.editor.languageDetectionHints' : {
       untitledEditors : false,
       notebookEditors : false,
     },
@@ -260,8 +260,6 @@ function getAdditionalSettings(){
       'markdown'  : true,
     },
     'magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS' : [
-      '.html',
-      '.yml',
       '.js',
       '.jsx',
       '.tsx',
@@ -272,6 +270,17 @@ function getAdditionalSettings(){
       '.ts',
       '.rs',
       '.feature',
+    ],
+    'magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS' : [
+      '.test.ts',
+      '.test.tsx',
+      '.spec.ts',
+      '.spec.tsx',
+      '__init__.py',
+      '.test.js',
+      '.test.jsx',
+      '.spec.js',
+      '.spec.jsx',
     ],
     'go.gopath'         : '/Users/user/.local/share/rtx/installs/golang/1.20/go/bin',
     'go.alternateTools' : { go : '/Users/user/.local/share/rtx/installs/golang/1.20/go/bin' },

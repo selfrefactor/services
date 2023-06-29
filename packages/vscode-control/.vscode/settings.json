@@ -146,8 +146,6 @@
     "markdown": true
   },
   "magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS": [
-    ".html",
-    ".yml",
     ".js",
     ".jsx",
     ".tsx",
@@ -158,6 +156,17 @@
     ".ts",
     ".rs",
     ".feature"
+  ],
+  "magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS": [
+    ".test.ts",
+    ".test.tsx",
+    ".spec.ts",
+    ".spec.tsx",
+    "__init__.py",
+    ".test.js",
+    ".test.jsx",
+    ".spec.js",
+    ".spec.jsx"
   ],
   "go.gopath": "/Users/user/.local/share/rtx/installs/golang/1.20/go/bin",
   "go.alternateTools": {
