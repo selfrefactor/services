@@ -60,7 +60,11 @@ async function randomFileInitialize(){
     },
   })
 
-  if (files.length === 0) return
+  if (files.length === 0){
+    logToUser(`no files left`)
+
+    return
+  } 
   const randomized = shuffle(files)
   if (PREFER_FILES_FLAG){
     randomized.sort((a, b) => {
@@ -75,6 +79,10 @@ async function randomFileInitialize(){
 
 function requestRandomFile(){
   const files = getter('files')
+  if(!files){
+    logToUser('no files')
+    return false
+  }
   if (files.length === 0) return false
   const index = 0
   changeOpenedFile(files[ index ])

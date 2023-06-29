@@ -170,6 +170,7 @@
 						".test.js",
 						".test.jsx",
 						".spec.js",
+						"__init__.py",
 						".spec.jsx"
 					],
 					"description": "Which file extensions are forbidden in random file mode"
