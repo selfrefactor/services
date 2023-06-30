@@ -91,10 +91,6 @@ function testNewSettings(){
     'editor.suggest.showStatusBar'                                : false, // to test
     // to fix not working word wrap
     'chat.editor.wordWrap'                                        : 'on',
-    'editor.wordWrapColumn'                                       : 70,
-    'editor.wrappingStrategy'                                     : 'advanced',
-    // in order to test the new settings
-    'workbench.editor.wrapTabs'                                   : true,
     // by default all were `peek`
     'editor.gotoLocation.multipleDeclarations'                    : 'goto',
     'editor.gotoLocation.multipleDefinitions'                     : 'goto',

@@ -1,5 +1,12 @@
 # Vscode-control
 
+## Tab wrap
+
+    // 'editor.wordWrapColumn'                                       : 70,
+    // 'editor.wrappingStrategy'                                     : 'advanced',
+    // in order to test the new settings
+    // 'workbench.editor.wrapTabs'                                   : true,
+
 ## Copilot
 
 https://code.visualstudio.com/updates/v1_78#_chat-editors
