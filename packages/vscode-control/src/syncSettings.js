@@ -87,6 +87,7 @@ function getNewSettings(){
  */
 function testNewSettings(){
   return {
+    'editor.wordWrapColumn'                                       : 50,
     'typescript.tsserver.experimental.enableProjectDiagnostics'   : false, // to test
     'editor.suggest.showStatusBar'                                : false, // to test
     // to fix not working word wrap

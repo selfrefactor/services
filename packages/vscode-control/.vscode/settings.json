@@ -210,6 +210,7 @@
       "noItemText": "The project has no merge requests"
     }
   ],
+  "editor.wordWrapColumn": 50,
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "editor.suggest.showStatusBar": false,
   "chat.editor.wordWrap": "on",

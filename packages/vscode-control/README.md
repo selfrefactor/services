@@ -2,7 +2,6 @@
 
 ## Tab wrap
 
-    // 'editor.wordWrapColumn'                                       : 70,
     // 'editor.wrappingStrategy'                                     : 'advanced',
     // in order to test the new settings
     // 'workbench.editor.wrapTabs'                                   : true,
