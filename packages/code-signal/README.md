@@ -1,5 +1,11 @@
 # Code signal app
 
+## Run challange
+
+```
+on https://app.codesignal.com/challenge/pRuhLib5DdetsY4E7
+```
+
 ## Requirement
 
 .env
