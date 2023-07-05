@@ -1,9 +1,9 @@
-import { copySync, writeJsonSync } from 'fs-extra'
+import { copySync, readJsonSync, writeJsonSync } from 'fs-extra'
 import { defaultTo, execSafe } from 'helpers-fn'
 import { resolve } from 'path'
 import { toDecimal } from 'rambdax'
 
-import settings from '../.vscode/settings-source'
+import settings from '../.vscode/settings-source.json'
 import {
   JS_SNIPPETS,
   KEYBINDING,
@@ -41,11 +41,14 @@ const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
   '../.vscode/settings.json')
-
-const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Operator Mono'
+// operator mono on bulgarian makes issues with word wrap
+const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'PT Mono'
 const FONT_FACTOR = 1
 
 void (async function sync(){
+  if(process.env.X === 'ON'){
+    return syncSettingsx()
+  }
   console.log('START')
   await execSafe({
     cwd     : resolve(__dirname, '..'),
@@ -87,7 +90,7 @@ function getNewSettings(){
  */
 function testNewSettings(){
   return {
-    'editor.wordWrapColumn'                                       : 30,
+    // 'editor.wordWrapColumn'                                       : 30,
     'typescript.tsserver.experimental.enableProjectDiagnostics'   : false, // to test
     'editor.suggest.showStatusBar'                                : false, // to test
     // to fix not working word wrap
@@ -376,6 +379,14 @@ function syncSettings(){
   )
   writeJsonSync(
     SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces : 2 }
+  )
+}
+
+function syncSettingsx(){
+  const settings = readJsonSync(SETTINGS_REFERENCE_OUTPUT)
+    
+  writeJsonSync(
+    SETTINGS, settings, { spaces : 2 }
   )
 }
 
