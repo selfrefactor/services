@@ -229,6 +229,10 @@
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
+    "key": "ctrl+d",
+    "command": "typescript.goToSourceDefinition"
+  },
+  {
     "key": "capslock c",
     "priority": true,
     "hint": "Collapse",

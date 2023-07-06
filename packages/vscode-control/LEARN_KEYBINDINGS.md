@@ -284,6 +284,10 @@
 
 `editor.action.goToDeclaration`
 
+## CTRL  D
+
+`typescript.goToSourceDefinition`
+
 ## CTRL  DOWN
 
 `editor.action.moveLinesDownAction`
