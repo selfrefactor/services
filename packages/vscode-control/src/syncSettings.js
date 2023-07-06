@@ -13,10 +13,10 @@ import {
 } from './constants.js'
 
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
-const FONT_SIZE = 20
-const SUGGEST_LINE_HEIGHT = 18
-const SUGGEST_FONT_SIZE = 17
-const LINE_HEIGHT = 27
+const FONT_SIZE = 18
+const SUGGEST_LINE_HEIGHT = 16
+const SUGGEST_FONT_SIZE = 15
+const LINE_HEIGHT = 24
 const THEME = defaultTo(
   'THEME', 'LedZeppelin', 'default'
 )
@@ -28,8 +28,8 @@ const FILE_ICON_THEME = defaultTo(
 
 const MODES = {
   small  : 0.7,
-  normal : 0.8,
-  large  : 1.2,
+  normal : 0.9,
+  large  : 1.1,
 }
 
 const MODE_KEY = defaultTo(
