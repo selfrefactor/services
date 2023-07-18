@@ -40,7 +40,7 @@
     "key": "alt+2",
     "command": "editor.action.insertSnippet",
     "args": {
-      "snippet": "console.log("
+      "snippet": "console.log(${CLIPBOARD})"
     },
     "alreadyLearned": true,
     "when": "editorLangId!=python"
