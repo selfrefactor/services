@@ -76,6 +76,7 @@ function getPermanentSettings(){
 
 function getNewSettings(){
   return {
+    "editor.hover.height": 600,
     'workbench.editor.tabSizing'                     : 'fixed',
     'workbench.editor.tabSizingFixedMaxWidth'        : 150,
     'editor.suggest.snippetsPreventQuickSuggestions' : false,
