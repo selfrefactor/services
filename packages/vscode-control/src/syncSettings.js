@@ -27,8 +27,8 @@ const FILE_ICON_THEME = defaultTo(
 )
 
 const MODES = {
-  small  : 0.6,
-  normal : 0.75,
+  small  : 0.65,
+  normal : 0.77,
   large  : 1,
 }
 
