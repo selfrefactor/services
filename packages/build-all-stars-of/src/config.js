@@ -9,14 +9,6 @@ const IS_DEV = 0
 const SHOW_PROGRESS = 1
 const MAX_SCRAPE_DEPTH = 600
 
-
-const snowpack = {
-  priority  : 2,
-  daysLimit : 150,
-  repo      : 'FredKSchott/snowpack',
-  title     : 'Popular dependents of **Snowpack**',
-  stars     : 5,
-}
 const esbuild = {
   priority  : 2,
   daysLimit : 150,
@@ -101,6 +93,12 @@ const qwik = {
   title    : 'Popular dependents of **NextJS**',
   stars    : 5,
 }
+const solid = {
+  priority : 1,
+  repo     : 'solidjs/solid',
+  title    : 'Popular dependents of **NextJS**',
+  stars    : 5,
+}
 
 
 const iterator = (x, prop) => ({
@@ -122,7 +120,6 @@ const allModes = map(iterator, {
   fpts,
   nest,
   nextjs,
-  snowpack,
   esbuild,
   playwright,
   puppeteer,
@@ -130,6 +127,7 @@ const allModes = map(iterator, {
   rambdax,
   ramda,
   rough,
+  solid,
   qwik
 })
 
