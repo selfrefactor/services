@@ -95,6 +95,12 @@ const nextjs = {
   title    : 'Popular dependents of **NextJS**',
   stars    : 12,
 }
+const qwik = {
+  priority : 1,
+  repo     : 'BuilderIO/qwik',
+  title    : 'Popular dependents of **NextJS**',
+  stars    : 5,
+}
 
 
 const iterator = (x, prop) => ({
@@ -112,12 +118,8 @@ const iterator = (x, prop) => ({
 })
 
 const allModes = map(iterator, {
-  angular,
-  bun,
   cucumberjs,
   fpts,
-  kefir,
-  magic,
   nest,
   nextjs,
   snowpack,
@@ -128,11 +130,7 @@ const allModes = map(iterator, {
   rambdax,
   ramda,
   rough,
-  rxjs,
-  seneca,
-  swc,
-  vitest,
-  webAudio,
+  qwik
 })
 
 exports.allModes = allModes
