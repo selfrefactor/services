@@ -145,7 +145,7 @@ export async function buildStarsOf({
     shouldRefresh : shouldRefreshApi,
     daysLimit,
   })
-  const filteredApiData = apiData.filter(({ filterData }) => filterData.pass !== false)
+  const filteredApiData = apiData.filter(({ filterData }) => filterData && filterData.pass !== false)
 
   const finalOutput = buildFinalOutput({
     data : filteredApiData,
