@@ -268,6 +268,7 @@ function getAdditionalSettings(){
       '.jsx',
       '.py',
       '.rs',
+      '.vtl',
       '.scss',
       '.ts',
       '.tsx',
