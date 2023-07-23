@@ -17,34 +17,41 @@ async function getRepoData(input){
   if (refreshCache){
     let counter = repos.length
     const reposData = await mapAsync(async repo => {
-      if(input.showProgress){
-        console.log(counter--)
-      }
-      const repoDataResponse = await getRepo(repo)
-      await delay(COOL_DOWN)
-      const filterData = await filterRepo(repo, input.daysLimit)
-      const propsToPick = [
-        'full_name',
-        'description',
-        'stargazers_count',
-        'forks_count',
-        'open_issues_count',
-        'pushed_at',
-        'updated_at',
-        'subscribers_count',
-      ]
-      const repoData = pick(propsToPick, repoDataResponse)
-
-      return {
-        repoData,
-        repoUrl : repo,
-        filterData,
-        pushedDiff: dateDiff(repoData.pushed_at),
-        updatedDiff: dateDiff(repoData.updated_at),
+      try {
+        if(input.showProgress){
+          console.log(counter--)
+        }
+        const repoDataResponse = await getRepo(repo)
+        await delay(COOL_DOWN)
+        const filterData = await filterRepo(repo, input.daysLimit)
+        const propsToPick = [
+          'full_name',
+          'description',
+          'stargazers_count',
+          'forks_count',
+          'open_issues_count',
+          'pushed_at',
+          'updated_at',
+          'subscribers_count',
+        ]
+        const repoData = pick(propsToPick, repoDataResponse)
+  
+        return {
+          repoData,
+          repoUrl : repo,
+          filterData,
+          pushedDiff: dateDiff(repoData.pushed_at),
+          updatedDiff: dateDiff(repoData.updated_at),
+        }
+      }catch (e){
+        console.log(e)
+        return false
       }
     }, repos)
+
+    let filteredData = reposData.filter(Boolean)
     await outputJson(
-      cacheLocation, { data : reposData }, { spaces : 2 }
+      cacheLocation, { data : filteredData }, { spaces : 2 }
     )
 
     return reposData
