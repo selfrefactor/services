@@ -6,11 +6,11 @@
 	},
 	"typings": "index.d.ts",
 	"main": "index.js",
-	"version": "0.15.1",
+	"version": "0.15.2",
 	"dependencies": {
 		"esm": "3.2.25",
 		"fs-extra": "10.1.0",
-		"github-api-fn": "0.5.0",
+		"github-api-fn": "0.5.1",
 		"rambdax": "8.1.0",
 		"sort-used-by": "0.11.1",
 		"string-fn": "3.1.0"
