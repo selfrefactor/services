@@ -124,14 +124,14 @@ axios@0.27.2:
     follow-redirects "^1.14.9"
     form-data "^4.0.0"
 
-build-stars-of@0.15.1:
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.15.1.tgz#356661a3b66a833eeaf8553d2e1bb0afd0be4edb"
-  integrity sha512-0tCIZkgaveypRWhG/Q9LuyK/IfICyUm3N7+oxpkWmEwkI4BOxNyihdcuh1SLxDQ46WJB78wbgtOG7lpGNy+FcQ==
+build-stars-of@0.15.2:
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.15.2.tgz#9f8fe0d4ce8511a23bb3a50ff27c0fecbd9b9288"
+  integrity sha512-2xsCAdhQX0+7wP/3tURwMJx3Z/PiRO7B6KRYcbcmJJwUK2kQWhDfI31w15rXSfP+nXMA78nHPEGhsVH9ZPndaw==
   dependencies:
     esm "3.2.25"
     fs-extra "10.1.0"
-    github-api-fn "0.5.0"
+    github-api-fn "0.5.1"
     rambdax "8.1.0"
     sort-used-by "0.11.1"
     string-fn "3.1.0"
@@ -195,10 +195,10 @@ fs-extra@10.1.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
-github-api-fn@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/github-api-fn/-/github-api-fn-0.5.0.tgz#ebeb172570e31c775797ec8d0e30e3f71fc9d160"
-  integrity sha512-jfwRiX22/qf0Y+JA3tw1wYx4ymR2jxN0LfQeNuP7W16hrlZ+qkHfq0dIfhYjf1p3Bla5h4HSQL/DmLvzMvDxXg==
+github-api-fn@0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/github-api-fn/-/github-api-fn-0.5.1.tgz#78eccdaaa4507ebbf33dc51896e7635d4ffb9dd1"
+  integrity sha512-BA/tkcJE8/pO5M3OsBTpytDEvCzDlKsXiTXVcHwtkhr7kTkv66zGQa/MVTIm2D25JLm/oFbRdljdv+wGITBliA==
   dependencies:
     axios "0.27.2"
     dayjs "1.11.5"
