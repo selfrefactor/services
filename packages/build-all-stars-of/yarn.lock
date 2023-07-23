@@ -124,10 +124,10 @@ axios@0.27.2:
     follow-redirects "^1.14.9"
     form-data "^4.0.0"
 
-build-stars-of@0.15.2:
-  version "0.15.2"
-  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.15.2.tgz#9f8fe0d4ce8511a23bb3a50ff27c0fecbd9b9288"
-  integrity sha512-2xsCAdhQX0+7wP/3tURwMJx3Z/PiRO7B6KRYcbcmJJwUK2kQWhDfI31w15rXSfP+nXMA78nHPEGhsVH9ZPndaw==
+build-stars-of@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.15.3.tgz#895a408677fca37fab03086b158fe7515817fc9c"
+  integrity sha512-l/EY0zIhCaUYmc0nITXB93MqeaJXEVSpuBjort/CV1eAxbC8XayQ29TDWClSKMQPQA9EYWdehYaLI0nderDkTw==
   dependencies:
     esm "3.2.25"
     fs-extra "10.1.0"
