@@ -1,5 +1,12 @@
 [
   {
+    "key": "capslock a",
+    "priority": true,
+    "hint": "All - fold all",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
     "key": "alt+.",
     "priority": true,
     "hint": "easy to access",
@@ -96,13 +103,6 @@
     "args": {
       "name": "StringTemplate"
     }
-  },
-  {
-    "key": "capslock a",
-    "priority": true,
-    "hint": "All - fold all",
-    "command": "editor.foldAll",
-    "when": "editorTextFocus && foldingEnabled"
   },
   {
     "key": "capslock ;",
