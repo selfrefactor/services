@@ -38,6 +38,13 @@ exports.baseConfiguration = {
 }
 
 exports.baseRules = {
+  "perfectionist/sort-objects": [
+    1,
+    {
+      "type": "natural",
+      "order": "asc"
+    }
+  ],
   'node/no-deprecated-api': 1,
   'no-unsafe-optional-chaining': 1,
   'node/callback-return': 0,

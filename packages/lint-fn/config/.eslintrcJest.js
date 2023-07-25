@@ -23,7 +23,7 @@ const rules = {
 
 module.exports = {
   ...baseConfiguration,
-  plugins: ['async-await', 'jest-formatting', 'simple-import-sort', 'node', 'jest'],
+  plugins: ['async-await', 'jest-formatting', 'simple-import-sort', 'node', 'jest', "perfectionist"],
   env: {
     es6: true,
     jasmine: true,

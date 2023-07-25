@@ -20,6 +20,7 @@ module.exports = {
     'simple-import-sort',
     'node',
     'sort-requires',
+    "perfectionist"
   ],
   rules: filter(rules),
 }
