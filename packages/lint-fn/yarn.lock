@@ -895,10 +895,10 @@ eslint-plugin-node@11.1.0:
     resolve "^1.10.1"
     semver "^6.1.0"
 
-eslint-plugin-perfectionist@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-perfectionist/-/eslint-plugin-perfectionist-1.5.0.tgz#a1b699d224817e83af322ffedb0c8909b1d7eb52"
-  integrity sha512-khVm+M55D95YhoNEjinLdhC5pSse5/EXn7HuI1Y2R+WU1Hb5wWehPlRqAWzWS4VFJKRPWt78OmnzsmnDq1T5IA==
+eslint-plugin-perfectionist@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-perfectionist/-/eslint-plugin-perfectionist-1.5.1.tgz#9fa6bcb3b8634d583f5204f10ea7f0d9ae3fce3e"
+  integrity sha512-PiUrAfGDc/l6MKKUP8qt5RXueC7FZC6F/0j8ijXYU8o3x8o2qUi6zEEYBkId/IiKloIXM5KTD4jrH9833kDNzA==
   dependencies:
     "@typescript-eslint/types" "^5.62.0"
     "@typescript-eslint/utils" "^5.62.0"

@@ -1,9 +1,8 @@
-const {baseRules, baseConfiguration, fileExtensionRule} = require('./.eslintBase')
+const {baseRules, baseConfiguration} = require('./.eslintBase')
 const {filter} = require('./filter')
 
 const rules = {
   ...baseRules,
-  ...fileExtensionRule,
   'no-unsafe-regex/no-unsafe-regex': 2,
   'sort-requires/sort-requires': 1,
   'async-await/space-after-async': 1,
@@ -12,7 +11,12 @@ const rules = {
 
 module.exports = {
   ...baseConfiguration,
-  extends: 'eslint:recommended',
+  extends: [
+    'eslint:recommended',
+    'plugin:perfectionist/recommended-alphabetical',
+    'plugin:perfectionist/recommended-natural',
+    'plugin:perfectionist/recommended-line-length',
+  ],
   env: {es6: true},
   plugins: [
     'async-await',
