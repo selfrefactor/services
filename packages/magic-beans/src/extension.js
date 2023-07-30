@@ -12,6 +12,7 @@ const {
 const { configAnt } = require('./ants/config')
 const { copyTrimmed } = require('./copyTrimmed')
 const { createSpec } = require('./createSpec')
+const { symbolsList } = require('./symbols-list')
 const { fixCamelcaseRefactoring } = require('./fixCamelcaseRefactoring')
 const { formatJson } = require('./format-json')
 const { initBar } = require('./bar')
@@ -31,6 +32,9 @@ function openInVsCode(data){
 
 function activate(context){
   initBar()
+  const symbolsListCommand = vscode.commands.registerCommand('magicBeans.symbolsList',
+    symbolsList  
+  )
   const formatJsonCommand = vscode.commands.registerCommand('magicBeans.formatJson',
     formatJson)
   const copyTrimmedCommand = vscode.commands.registerCommand('magicBeans.copyTrimmed',
@@ -48,6 +52,7 @@ function activate(context){
   const fixCamelcaseRefactoringCommand = vscode.commands.registerCommand('magicBeans.fixCamelcaseRefactoring',
     fixCamelcaseRefactoring)
 
+  context.subscriptions.push(symbolsListCommand)
   context.subscriptions.push(copyTrimmedCommand)
   context.subscriptions.push(createSpecCommand)
   context.subscriptions.push(slowScrollCommand)

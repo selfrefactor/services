@@ -41,17 +41,17 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:open-folder-in-vscode.openFolder",
-		"onCommand:magicBeans.betterCut",
 		"onCommand:magicBeans.betterCut",
 		"onCommand:magicBeans.copyTrimmed",
 		"onCommand:magicBeans.createSpec",
+		"onCommand:magicBeans.fixCamelcaseRefactoring",
 		"onCommand:magicBeans.formatJson",
 		"onCommand:magicBeans.requestRandomFile",
 		"onCommand:magicBeans.requestRandomFileAutomated",
-		"onCommand:magicBeans.sortLines",
 		"onCommand:magicBeans.slowScrollInit",
-		"onCommand:magicBeans.fixCamelcaseRefactoring"
+		"onCommand:magicBeans.sortLines",
+		"onCommand:magicBeans.symbolsList",
+		"onCommand:open-folder-in-vscode.openFolder"
 	],
 	"contributes": {
 		"menus": {
@@ -65,12 +65,16 @@
 		},
 		"commands": [
 			{
+				"command": "magicBeans.symbolsList",
+				"title": "Magic Beans - Request all symbols within current project"
+			},
+			{
 				"command": "magicBeans.requestRandomFile",
-				"title": "Magic Beans request random file"
+				"title": "Magic Beans - request random file"
 			},
 			{
 				"command": "magicBeans.requestRandomFileAutomated",
-				"title": "Magic Beans request random file - automated"
+				"title": "Magic Beans - request random file - automated"
 			},
 			{
 				"command": "magicBeans.createSpec",
@@ -119,6 +123,10 @@
 				"key": "f8"
 			},
 			{
+				"command": "magicBeans.symbolsList",
+				"key": "f9"
+			},
+			{
 				"command": "magicBeans.createSpec",
 				"key": "ctrl+shift+0"
 			},
@@ -140,6 +148,28 @@
 					"type": "boolean",
 					"default": false,
 					"description": "is vscode insiders"
+				},
+				"magicBeans.SYMBOLS_LIST_REPORT_LOCATION": {
+					"type": "string",
+					"default": "",
+					"description": "Where to save symbols list report"
+				},
+				"magicBeans.SYMBOLS_LIST_ALLOWED_EXTENSIONS": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						".js",
+						".jsx",
+						".tsx",
+						".py",
+						".go",
+						".rs",
+						".ts"
+					],
+					"description": "Which file extensions are allowed in symbols list mode"
 				},
 				"magicBeans.SLOW_SCROLL": {
 					"type": "number",
