@@ -229,12 +229,12 @@
   "terminal.integrated.fontFamily": "JetBrains Mono",
   "debug.console.fontFamily": "JetBrains Mono",
   "editor.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 18,
+  "editor.fontSize": 13.86,
   "window.zoomLevel": 2,
-  "editor.lineHeight": 24,
-  "editor.suggestFontSize": 15,
-  "editor.suggestLineHeight": 16,
-  "terminal.integrated.fontSize": 12,
+  "editor.lineHeight": 18.48,
+  "editor.suggestFontSize": 12,
+  "editor.suggestLineHeight": 12,
+  "terminal.integrated.fontSize": 9,
   "magicBeans.IS_VSCODE_INSIDERS": true,
   "workbench.colorTheme": "LedZeppelin"
 }
