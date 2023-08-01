@@ -39,6 +39,8 @@ async function generateReport(files){
   const result = await mapAsync(async file => {
     const symbols = await vscode.commands.executeCommand('vscode.executeDocumentSymbolProvider',
       file)
+    if(!symbols) return false
+
     const details = symbols
       .map(({ kind, name }) => ({
         kind,
@@ -54,7 +56,7 @@ async function generateReport(files){
     }
   }, files)
 
-  return result
+  return result.filter(Boolean)
 }
 
 async function showReport(reportRawData){
@@ -80,9 +82,13 @@ async function showReport(reportRawData){
 }
 
 async function symbolsList(){
-  const reportableFiles = await getReportableFiles()
-  const report = await generateReport(reportableFiles)
-  await showReport(report)
+  try {
+    const reportableFiles = await getReportableFiles()
+    const report = await generateReport(reportableFiles)
+    await showReport(report)
+  }catch (e){
+    console.log(e)
+  }
 }
 
 exports.symbolsList = symbolsList
