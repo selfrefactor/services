@@ -3,7 +3,7 @@ const { existsSync } = require('fs')
 const { glue } = require('rambdax')
 const { resolve } = require('path')
 
-const PRETTIER_PATH_BASE = 'node_modules/prettier/bin-prettier.js'
+const PRETTIER_PATH_BASE = 'node_modules/prettier/bin/prettier.cjs';
 
 const getPrettierPath = (cwd, prettierSpecialCase) => {
   if (prettierSpecialCase.includes('local')) return `${ cwd }/${ PRETTIER_PATH_BASE }`

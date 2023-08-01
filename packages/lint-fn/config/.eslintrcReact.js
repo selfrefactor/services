@@ -80,11 +80,7 @@ module.exports = {
     'simple-import-sort',
     'node', 
     'jest',
-  ],
-  extends: [
-    'plugin:perfectionist/recommended-alphabetical',
-    'plugin:perfectionist/recommended-natural',
-    'plugin:perfectionist/recommended-line-length',
+    'perfectionist',
   ],
   env: {
     es6: true,

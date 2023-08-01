@@ -13,9 +13,6 @@ module.exports = {
   ...baseConfiguration,
   extends: [
     'eslint:recommended',
-    'plugin:perfectionist/recommended-alphabetical',
-    'plugin:perfectionist/recommended-natural',
-    'plugin:perfectionist/recommended-line-length',
   ],
   env: {es6: true},
   plugins: [
@@ -24,7 +21,7 @@ module.exports = {
     'simple-import-sort',
     'node',
     'sort-requires',
-    "perfectionist"
+    'perfectionist'
   ],
   rules: filter(rules),
 }
