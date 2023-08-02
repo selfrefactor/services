@@ -198,6 +198,14 @@
 
 `workbench.view.explorer`
 
+## ALT  G
+
+`workbench.view.scm`
+
+> View Git Panel
+
+ HINT: GIT
+
 ## ALT  O
 
 `workbench.action.toggleActivityBarVisibility`
@@ -239,14 +247,6 @@
 `workbench.view.debug`
 
 > HINT: DEBUG
-
-## CAPSLOCK G
-
-`workbench.view.scm`
-
-> View Git Panel
-
- HINT: GIT
 
 ## CAPSLOCK L
 
@@ -343,7 +343,6 @@
 * alt+0
 * alt+3
 * alt+d
-* alt+g
 * alt+q
 * alt+v
 * alt+-
@@ -356,6 +355,7 @@
 * capslock 8
 * capslock 9
 * capslock e
+* capslock g
 * capslock q
 * capslock s
 * capslock v

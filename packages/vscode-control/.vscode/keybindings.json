@@ -327,7 +327,7 @@
     "when": "inDebugMode"
   },
   {
-    "key": "capslock g",
+    "key": "alt+g",
     "command": "workbench.view.scm",
     "comment": "View Git Panel",
     "hint": "GIT"
