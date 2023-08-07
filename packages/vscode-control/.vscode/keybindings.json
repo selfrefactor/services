@@ -83,8 +83,7 @@
     }
   },
   {
-    "key": "alt+4",
-    "alreadyLearned": true,
+    "key": "alt+d",
     "command": "editor.action.insertSnippet",
     "args": {
       "snippet": "debugger"

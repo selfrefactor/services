@@ -194,6 +194,12 @@
 
 `magicBeans.copyTrimmed`
 
+## ALT  D
+
+`editor.action.insertSnippet`
+
+> Snippet: debugger
+
 ## ALT  E
 
 `workbench.view.explorer`
@@ -342,7 +348,7 @@
 * ctrl+=
 * alt+0
 * alt+3
-* alt+d
+* alt+4
 * alt+q
 * alt+v
 * alt+-
