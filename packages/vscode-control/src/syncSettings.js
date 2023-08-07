@@ -163,7 +163,7 @@ function getWorkbench(){
     'workbench.editor.untitled.labelFormat' : 'name',
     'workbench.iconTheme'                   : FILE_ICON_THEME,
     'workbench.list.smoothScrolling'        : true,
-    'workbench.sideBar.location'            : 'right',
+    'workbench.sideBar.location'            : 'hidden',
     'workbench.startupEditor'               : 'none',
   }
 }
