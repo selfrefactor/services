@@ -92,7 +92,7 @@
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.list.smoothScrolling": true,
-  "workbench.sideBar.location": "hidden",
+  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "breadcrumbs.enabled": false,
   "debug.inlineValues": "off",
