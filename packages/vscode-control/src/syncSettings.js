@@ -42,7 +42,7 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
   '../.vscode/settings.json')
 // operator mono on bulgarian makes issues with word wrap
-const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Space Mono'
+const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Oxygen Mono'
 const FONT_FACTOR = 1
 
 void (async function sync(){
