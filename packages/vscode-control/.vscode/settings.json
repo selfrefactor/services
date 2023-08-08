@@ -82,7 +82,7 @@
   "git.confirmSync": false,
   "git.fetchOnPull": true,
   "git.promptToSaveFilesBeforeCommit": "never",
-  "workbench.activityBar.visible": true,
+  "workbench.activityBar.visible": false,
   "workbench.editor.languageDetectionHints": {
     "notebookEditors": false,
     "untitledEditors": false

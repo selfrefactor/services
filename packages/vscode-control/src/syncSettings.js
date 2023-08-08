@@ -153,7 +153,7 @@ function getEditor(){
 
 function getWorkbench(){
   return {
-    'workbench.activityBar.visible'           : VSCODE_INSIDERS,
+    'workbench.activityBar.visible'           : !VSCODE_INSIDERS,
     'workbench.editor.languageDetectionHints' : {
       notebookEditors : false,
       untitledEditors : false,
