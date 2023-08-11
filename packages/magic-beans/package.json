@@ -235,7 +235,14 @@
 						"coverage",
 						"vendor",
 						"bin",
-						".git"
+						"dist",
+						"build",
+						"lib",
+						"__pycache__",
+						".vscode",
+						".idea",
+						".git",
+						".cache"
 					],
 					"description": "Which directories are excluded in random file mode"
 				}
