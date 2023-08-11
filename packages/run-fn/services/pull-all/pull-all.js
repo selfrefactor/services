@@ -14,6 +14,8 @@ async function pullAll(){
   await mapParallelAsyncWithLimit(async folder => {
     const currentFolder = `${ CWD }/${ folder }`
     console.log(currentFolder, 'currentFolder')
+    await execCommand('git checkout main', currentFolder)
+    await execCommand('git checkout master', currentFolder)
     await execCommand('git pull', currentFolder)
   }, 5, folders)
 }
