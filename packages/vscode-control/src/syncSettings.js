@@ -46,8 +46,7 @@ const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Oxygen Mono'
 const FONT_FACTOR = 1
 
 void (async function sync(){
-  if (process.env.X === 'ON')
-    return syncSettingsx()
+  if (process.env.X === 'ON') return syncSettingsx()
 
   console.log('START')
   await execSafe({
@@ -244,8 +243,7 @@ function getAdditionalSettings(){
       'yaml'      : true,
     },
     'gitlab.showProjectMergeRequests'                        : false,
-    'go.alternateTools'                                      : { go : '/Users/user/.local/share/rtx/installs/golang/1.20/go/bin' },
-    'go.gopath'                                              : '/Users/user/.local/share/rtx/installs/golang/1.20/go/bin',
+    'gopls'                                                  : { 'ui.semanticTokens' : true },
     'javascript.inlayHints.enumMemberValues.enabled'         : false,
     'javascript.inlayHints.functionLikeReturnTypes.enabled'  : false,
     'javascript.inlayHints.parameterTypes.enabled'           : false,

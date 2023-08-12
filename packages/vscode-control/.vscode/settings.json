@@ -131,10 +131,9 @@
     "yaml": true
   },
   "gitlab.showProjectMergeRequests": false,
-  "go.alternateTools": {
-    "go": "/Users/user/.local/share/rtx/installs/golang/1.20/go/bin"
+  "gopls": {
+    "ui.semanticTokens": true
   },
-  "go.gopath": "/Users/user/.local/share/rtx/installs/golang/1.20/go/bin",
   "javascript.inlayHints.enumMemberValues.enabled": false,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
   "javascript.inlayHints.parameterTypes.enabled": false,
@@ -219,9 +218,6 @@
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.suggest.showStatusBar": false,
-  "gopls": {
-    "ui.semanticTokens": true
-  },
   "javascript.preferences.importModuleSpecifier": "relative",
   "javascript.suggest.autoImports": true,
   "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
@@ -232,11 +228,11 @@
   "debug.console.fontFamily": "JetBrains Mono",
   "editor.fontFamily": "JetBrains Mono",
   "terminal.integrated.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 13.86,
-  "editor.lineHeight": 18.48,
-  "editor.suggestFontSize": 12,
-  "editor.suggestLineHeight": 12,
-  "terminal.integrated.fontSize": 9,
+  "editor.fontSize": 18,
+  "editor.lineHeight": 24,
+  "editor.suggestFontSize": 15,
+  "editor.suggestLineHeight": 16,
+  "terminal.integrated.fontSize": 12,
   "window.zoomLevel": 2,
   "magicBeans.IS_VSCODE_INSIDERS": true,
   "workbench.colorTheme": "LedZeppelin"
