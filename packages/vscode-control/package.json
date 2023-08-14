@@ -1,6 +1,5 @@
 {
 	"scripts": {
-		"x": "X=ON MODE=normal node syncSettings && X=ON BETA=ON MODE=normal node syncSettings",
 		"small": "yarn small:1&&yarn small:2&&run d",
 		"small:1": "MODE=small node syncSettings",
 		"small:2": "BETA=ON MODE=small node syncSettings",
@@ -12,8 +11,8 @@
 		"on:2": "BETA=ON MODE=normal node syncSettings",
 		"ond:2": "THEME=AmericanDad  FILE_ICON_THEME=catppuccin-mocha BETA=ON MODE=normal node syncSettings",
 		"big": "yarn big:1 &&yarn big:2 && run d",
-		"big:1": "MODE=large node syncSettings",
-		"big:2": "BETA=ON MODE=large node syncSettings"
+		"big:1": "MODE=big node syncSettings",
+		"big:2": "BETA=ON MODE=big node syncSettings"
 	},
 	"name": "vscode-control",
 	"version": "0.1.0",
