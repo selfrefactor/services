@@ -22,7 +22,9 @@ const THEME = defaultTo(
 )
 const FILE_ICON_THEME = defaultTo(
   'FILE_ICON_THEME',
-  'catppuccin-latte',
+  // https://marketplace.visualstudio.com/items?itemName=NoHaxito.nohaxito-icons
+  'symbols',
+  // 'catppuccin-latte',
   'default'
 )
 
@@ -44,6 +46,7 @@ const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
   '../.vscode/settings.json')
 // operator mono on bulgarian makes issues with word wrap
 const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Fira Code'
+// https://github.com/tonsky/FiraCode/releases/tag/6.2
 const FONT_FACTOR = 1
 
 void (async function sync(){
