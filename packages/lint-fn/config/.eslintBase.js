@@ -60,6 +60,7 @@ exports.baseConfiguration = {
 
 exports.baseRules = {
   ...perfectionistRules,
+  'prefer-template': 1,
   'node/no-deprecated-api': 1,
   'no-unsafe-optional-chaining': 1,
   'node/callback-return': 0,
