@@ -29,7 +29,7 @@ const FILE_ICON_THEME = defaultTo(
 )
 
 const MODES = {
-  big  : 0.94,
+  big    : 0.94,
   normal : 0.77,
   small  : 0.65,
 }
@@ -38,7 +38,7 @@ const MODE_KEY = defaultTo(
   'MODE', 'normal', 'default'
 )
 const MODE = MODES[ MODE_KEY ]
-let IS_BIG_MODE = MODE_KEY === 'big'
+const IS_BIG_MODE = MODE_KEY === 'big'
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
@@ -78,6 +78,7 @@ function getPermanentSettings(){
 function getNewSettings(){
   return {
     'chat.experimental.quickQuestion.enable'         : true,
+    'editor.foldingImportsByDefault'                 : true,
     'editor.hover.height'                            : 1200,
     'editor.linkedEditing'                           : true,
     'editor.pasteAs.showPasteSelector'               : 'never',
@@ -345,7 +346,7 @@ function getCalculatedOptions(){
   const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE, 2)
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
   const lineHeightInitial = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2)
-  let lineHeight = IS_BIG_MODE ? lineHeightInitial * 1.2 : lineHeightInitial
+  const lineHeight = IS_BIG_MODE ? lineHeightInitial * 1.2 : lineHeightInitial
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR, 2))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR))
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.65)))

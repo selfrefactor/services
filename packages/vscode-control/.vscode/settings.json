@@ -25,6 +25,7 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "workbench.editor.tabSizing": "fixed",
   "workbench.editor.tabSizingFixedMaxWidth": 150,
+  "editor.foldingImportsByDefault": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
     "source.organizeImports": false
@@ -90,7 +91,7 @@
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.iconTheme": "symbols",
+  "workbench.iconTheme": "catppuccin-mocha",
   "workbench.list.smoothScrolling": true,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
@@ -235,5 +236,5 @@
   "terminal.integrated.fontSize": 9,
   "window.zoomLevel": 2,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin"
+  "workbench.colorTheme": "AmericanDad"
 }
