@@ -1,6 +1,5 @@
 const { execCommand } = require('../../modules/execCommand')
 const { last, remove } = require('rambdax')
-const { moveSync } = require('fs-extra')
 
 function getFolderName(repo, folder){
   if (folder) return folder
@@ -14,17 +13,7 @@ async function commit(message){
   await execCommand('git push')
 }
 
-async function readDone(source){
-  if (!source) return
-
-  moveSync(`${ process.cwd() }/${ source }`, `${ process.cwd() }/_DONE/${ source }`)
-
-  const commitMessage = `chore: move ${ source }`
-  await commit(commitMessage)
-}
-
 async function read(repo, folder){
-  if (repo === 'done') return readDone(folder)
   const folderName = getFolderName(repo, folder)
   await execCommand(`git clone --depth 1 ${ repo } ${ folder ? folder : '' }`)
   

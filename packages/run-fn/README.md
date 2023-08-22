@@ -10,18 +10,6 @@ After installation, a binary `run` becomes available for CLI use.
 
 ## Commands
 
-### angular
-
-Expected structure: 
-
-`/repos/ng-foo`
-
-`/repos/foo` - process.cwd
-
-It takes Angular dependencies from the `ng-foo` folder in relation to `process.cwd`. Then it updates dependencies versions in `${process.cwd}/package.json`.
-
-This way, if `ng-foo` contains `ng new ng-foo` with updated `@angular/cli`, then the new dependencies can be merged to other Angular apps.
-
 ### bump
 
 > `run bump minor` would trigger `npm publish minor&&npm publish&&git push`
@@ -46,14 +34,6 @@ It runs git clone command and remove `.git` folder
 If `foo` is passed the repo will be placed in `foo` folder.
 
 Also if file path contains `to-read` then it will make a commit afterwards.
-
-### read done
-
-> run read done foo
-
-It will move `foo` folder to `_DONE` folder
-
-It clones `selfrefactor` foo repo and removes `.git` folder afterwards.
 
 ### Lint file
 
