@@ -74,12 +74,6 @@
 
 > HINT: ACTIVE FILE
 
-## CAPSLOCK C
-
-`workbench.files.action.collapseExplorerFolders`
-
-> HINT: COLLAPSE
-
 ## CAPSLOCK F
 
 `references-view.findReferences`
@@ -360,6 +354,7 @@
 * capslock 7
 * capslock 8
 * capslock 9
+* capslock c
 * capslock e
 * capslock g
 * capslock q

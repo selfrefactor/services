@@ -232,12 +232,6 @@
     "command": "typescript.goToSourceDefinition"
   },
   {
-    "key": "capslock c",
-    "priority": true,
-    "hint": "Collapse",
-    "command": "workbench.files.action.collapseExplorerFolders"
-  },
-  {
     "key": "capslock k",
     "priority": true,
     "command": "workbench.action.selectTheme"
