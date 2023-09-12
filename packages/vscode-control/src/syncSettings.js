@@ -24,7 +24,9 @@ const FILE_ICON_THEME = defaultTo(
   'FILE_ICON_THEME',
   // https://marketplace.visualstudio.com/items?itemName=NoHaxito.nohaxito-icons
   // 'symbols',
-  'catppuccin-latte',
+  // 'catppuccin-latte',
+  // Catppuccin Perfect IconsCatppuccin Perfect Icons
+  'catppuccin-perfect-latte',
   'default'
 )
 
