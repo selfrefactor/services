@@ -1,4 +1,4 @@
-import { copySync, readJsonSync, writeJsonSync } from 'fs-extra'
+import { copySync, writeJsonSync } from 'fs-extra'
 import { defaultTo, execSafe } from 'helpers-fn'
 import { resolve } from 'path'
 import { toDecimal } from 'rambdax'
@@ -25,7 +25,7 @@ const FILE_ICON_THEME = defaultTo(
   // https://marketplace.visualstudio.com/items?itemName=NoHaxito.nohaxito-icons
   // 'symbols',
   // 'catppuccin-latte',
-  // Catppuccin Perfect IconsCatppuccin Perfect Icons
+  // Catppuccin Perfect Icons
   'catppuccin-perfect-latte',
   'default'
 )
