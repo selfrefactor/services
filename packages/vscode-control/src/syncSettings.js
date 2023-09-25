@@ -210,6 +210,7 @@ function getImportantSettings(){
         scope      : 'all',
         state      : 'merged',
         type       : 'merge_requests',
+        maxResults: 600
       },
     ],
   }

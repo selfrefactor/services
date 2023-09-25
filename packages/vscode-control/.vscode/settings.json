@@ -217,7 +217,8 @@
       "noItemText": "The project has no merge requests",
       "scope": "all",
       "state": "merged",
-      "type": "merge_requests"
+      "type": "merge_requests",
+      "maxResults": 600
     }
   ],
   "chat.editor.wordWrap": "on",
