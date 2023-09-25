@@ -198,10 +198,17 @@ function getImportantSettings(){
   return {
     'gitlab.customQueries' : [
       {
-        name       : 'All project merge requests',
+        name       : 'Open MRs',
         noItemText : 'The project has no merge requests',
         scope      : 'all',
         state      : 'opened',
+        type       : 'merge_requests',
+      },
+      {
+        name       : 'Closed MRs',
+        noItemText : 'The project has no merge requests',
+        scope      : 'all',
+        state      : 'merged',
         type       : 'merge_requests',
       },
     ],
@@ -379,6 +386,8 @@ function syncSettings(){
     'magicBeans.IS_VSCODE_INSIDERS'  : VSCODE_INSIDERS,
     'workbench.colorTheme'           : THEME,
     'workbench.editor.enablePreview' : !VSCODE_INSIDERS,
+    'debug.terminal.clearBeforeReusing': true,
+    'editor.wordBasedSuggestions': false
   }
 
   writeJsonSync(

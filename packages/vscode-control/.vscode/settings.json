@@ -206,10 +206,17 @@
   "zenMode.restore": false,
   "gitlab.customQueries": [
     {
-      "name": "All project merge requests",
+      "name": "Open MRs",
       "noItemText": "The project has no merge requests",
       "scope": "all",
       "state": "opened",
+      "type": "merge_requests"
+    },
+    {
+      "name": "Closed MRs",
+      "noItemText": "The project has no merge requests",
+      "scope": "all",
+      "state": "merged",
       "type": "merge_requests"
     }
   ],
@@ -237,5 +244,7 @@
   "terminal.integrated.fontSize": 9,
   "window.zoomLevel": 2,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin"
+  "workbench.colorTheme": "LedZeppelin",
+  "debug.terminal.clearBeforeReusing": true,
+  "editor.wordBasedSuggestions": false
 }
