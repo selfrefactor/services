@@ -1,11 +1,7 @@
 {
   "recommendations": [
-    "Catppuccin.catppuccin-vsc-icons",
-    "ReacTreeDev.reactree",
+    "miguelsolorio.symbols",
     "GitLab.gitlab-workflow",
-    "mintlify.document",
-    "mhutchie.git-graph",
-    "fabiospampinato.vscode-open-in-node-modules",
     "GitHub.codespaces",
     "mrmlnc.vscode-scss",
     "ms-vscode.vscode-typescript-next",

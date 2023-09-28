@@ -92,7 +92,7 @@
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.iconTheme": "catppuccin-perfect-latte",
+  "workbench.iconTheme": null,
   "workbench.list.smoothScrolling": true,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
@@ -211,14 +211,6 @@
       "scope": "all",
       "state": "opened",
       "type": "merge_requests"
-    },
-    {
-      "name": "Closed MRs",
-      "noItemText": "The project has no merge requests",
-      "scope": "all",
-      "state": "merged",
-      "type": "merge_requests",
-      "maxResults": 60
     }
   ],
   "chat.editor.wordWrap": "on",
@@ -245,7 +237,7 @@
   "terminal.integrated.fontSize": 9,
   "window.zoomLevel": 2,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin",
+  "workbench.colorTheme": "AmericanDad",
   "debug.terminal.clearBeforeReusing": true,
   "editor.wordBasedSuggestions": false
 }
