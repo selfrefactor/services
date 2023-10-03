@@ -310,6 +310,10 @@
 
 > HINT: OPEN
 
+## CTRL  SHIFT  B
+
+`workbench.action.tasks.runTask`
+
 ## CTRL  SHIFT  D
 
 `editor.action.copyLinesDownAction`

@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "esbenp.prettier-vscode",
     "miguelsolorio.symbols",
     "GitLab.gitlab-workflow",
     "GitHub.codespaces",

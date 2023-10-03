@@ -28,8 +28,7 @@
   "workbench.editor.tabSizing": "fixed",
   "workbench.editor.tabSizingFixedMaxWidth": 150,
   "editor.codeActionsOnSave": {
-    "source.fixAll": false,
-    "source.organizeImports": false
+    "source.fixAll": true
   },
   "editor.fontLigatures": true,
   "editor.guides.bracketPairsHorizontal": false,
@@ -92,7 +91,7 @@
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.iconTheme": null,
+  "workbench.iconTheme": "symbols",
   "workbench.list.smoothScrolling": true,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
@@ -213,6 +212,8 @@
       "type": "merge_requests"
     }
   ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "chat.editor.wordWrap": "on",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
@@ -237,7 +238,7 @@
   "terminal.integrated.fontSize": 9,
   "window.zoomLevel": 2,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "AmericanDad",
+  "workbench.colorTheme": "LedZeppelin",
   "debug.terminal.clearBeforeReusing": true,
   "editor.wordBasedSuggestions": false
 }

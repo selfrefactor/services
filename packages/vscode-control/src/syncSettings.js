@@ -91,6 +91,11 @@ function getNewSettings(){
  */
 function testNewSettings(){
   return {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
     // to fix not working word wrap
     'chat.editor.wordWrap'                                        : 'on',
     // by default all were `peek`
