@@ -28,7 +28,7 @@
   "prettier.bracketSameLine": false,
   "prettier.jsxSingleQuote": true,
   "prettier.printWidth": 69,
-  "prettier.proseWrap": "preserve",
+  "prettier.proseWrap": "never",
   "prettier.quoteProps": "as-needed",
   "prettier.requirePragma": false,
   "prettier.semi": false,
