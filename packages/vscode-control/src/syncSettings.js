@@ -79,6 +79,13 @@ function getPermanentSettings() {
 
 function getNewSettings() {
   return {
+    'editor.formatOnSave': false,
+    '[javascript]': {
+      'editor.formatOnSave': true,
+    },
+    '[typescript]': {
+      'editor.formatOnSave': true,
+    },
     'chat.experimental.quickQuestion.enable': true,
     'editor.foldingImportsByDefault': true,
     'editor.hover.height': 1200,
@@ -96,7 +103,6 @@ function getNewSettings() {
 function testNewSettings() {
   return {
     'editor.defaultFormatter': 'esbenp.prettier-vscode',
-    'editor.formatOnSave': true,
     'editor.codeActionsOnSave': {
       'source.fixAll': true,
     },

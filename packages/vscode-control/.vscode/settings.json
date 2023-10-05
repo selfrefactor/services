@@ -37,6 +37,13 @@
   "prettier.trailingComma": "all",
   "prettier.useTabs": false,
   "prettier.embeddedLanguageFormatting": "auto",
+  "editor.formatOnSave": false,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
   "chat.experimental.quickQuestion.enable": true,
   "editor.foldingImportsByDefault": true,
   "editor.hover.height": 1200,
@@ -231,7 +238,6 @@
     }
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
   "chat.editor.wordWrap": "on",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
