@@ -102,6 +102,9 @@ function getNewSettings() {
  */
 function testNewSettings() {
   return {
+    'task.problemMatchers.neverPrompt': {
+      shell: true,
+    },
     'editor.defaultFormatter': 'esbenp.prettier-vscode',
     'editor.codeActionsOnSave': {
       'source.fixAll': true,

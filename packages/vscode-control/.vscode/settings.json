@@ -237,6 +237,9 @@
       "type": "merge_requests"
     }
   ],
+  "task.problemMatchers.neverPrompt": {
+    "shell": true
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "chat.editor.wordWrap": "on",
   "editor.gotoLocation.multipleDeclarations": "goto",
