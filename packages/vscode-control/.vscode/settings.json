@@ -51,6 +51,7 @@
   "editor.linkedEditing": true,
   "editor.pasteAs.showPasteSelector": "never",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "workbench.editor.tabSizing": "fit",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
