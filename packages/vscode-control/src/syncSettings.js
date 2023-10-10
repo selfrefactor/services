@@ -79,6 +79,7 @@ function getPermanentSettings() {
 
 function getNewSettings() {
   return {
+    'workbench.editor.wrapTabs': true,
     'window.density.editorTabHeight': 'compact',
     'editor.formatOnSave': false,
     '[javascript]': {
