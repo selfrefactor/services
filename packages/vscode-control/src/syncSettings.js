@@ -79,6 +79,7 @@ function getPermanentSettings() {
 
 function getNewSettings() {
   return {
+    'window.density.editorTabHeight': 'compact',
     'editor.formatOnSave': false,
     '[javascript]': {
       'editor.formatOnSave': true,
