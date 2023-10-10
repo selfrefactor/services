@@ -93,8 +93,8 @@ function getNewSettings() {
     'editor.linkedEditing': true,
     'editor.pasteAs.showPasteSelector': 'never',
     'editor.suggest.snippetsPreventQuickSuggestions': false,
-    'workbench.editor.tabSizing': 'fixed',
-    'workbench.editor.tabSizingFixedMaxWidth': 150,
+    // 'workbench.editor.tabSizing': 'fixed',
+    // 'workbench.editor.tabSizingFixedMaxWidth': 150,
   }
 }
 
@@ -243,7 +243,7 @@ function getAdditionalSettings() {
     'diffEditor.diffAlgorithm': 'advanced',
     'editor.colorDecoratorsLimit': 10,
     'editor.scrollbar.vertical': 'visible',
-    'editor.tabCompletion': 'on',
+    // 'editor.tabCompletion': 'on',
     'files.enableTrash': false,
     'files.exclude': {
       '.cache': true,
