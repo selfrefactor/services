@@ -95,8 +95,6 @@ function getNewSettings() {
     'editor.pasteAs.showPasteSelector': 'never',
     'editor.suggest.snippetsPreventQuickSuggestions': false,
     'workbench.editor.tabSizing': 'fit',
-    // 'workbench.editor.tabSizing': 'fixed',
-    // 'workbench.editor.tabSizingFixedMaxWidth': 150,
   }
 }
 
