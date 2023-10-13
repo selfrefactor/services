@@ -211,17 +211,6 @@ function getGit() {
 
 function getImportantSettings() {
   return {
-    /**
-      {
-      "name"       : "Closed MRs",
-      "noItemText" : "The project has no merge requests",
-      "scope"      : "all",
-      "state"      : "merged",
-      "type"       : "merge_requests",
-      "createdBefore": "2022-01-01",
-      "maxResults": 60
-      },
-     */
     'gitlab.customQueries': [
       {
         name: 'Open MRs',
@@ -229,6 +218,15 @@ function getImportantSettings() {
         scope: 'all',
         state: 'opened',
         type: 'merge_requests',
+      },
+      {
+        name: 'Closed MRs',
+        noItemText: 'The project has no merge requests',
+        scope: 'all',
+        state: 'merged',
+        type: 'merge_requests',
+        createdBefore: '2022-01-01',
+        maxResults: 60,
       },
     ],
   }
