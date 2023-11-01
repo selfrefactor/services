@@ -117,7 +117,7 @@
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.iconTheme": "symbols",
+  "workbench.iconTheme": "catppuccin-perfect-mocha",
   "workbench.list.smoothScrolling": true,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
@@ -137,7 +137,6 @@
     "**/.hg": false,
     "**/.idea": true,
     "**/.svn": false,
-    "**/coverage": true,
     "**/coverage-ts": true,
     "**/CVS": false,
     "**/node_modules": true,
@@ -274,7 +273,8 @@
   "terminal.integrated.fontSize": 9,
   "window.zoomLevel": 2,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin",
+  "workbench.colorTheme": "AmericanDad",
   "debug.terminal.clearBeforeReusing": true,
-  "editor.wordBasedSuggestions": false
+  "editor.wordBasedSuggestions": false,
+  "workbench.editor.empty.hint": "hidden"
 }
