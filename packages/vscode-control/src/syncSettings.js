@@ -13,6 +13,7 @@ import {
 } from './constants.js'
 
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
+const READ_MODE = process.env.READ === 'ON'
 const FONT_SIZE = 18
 const SUGGEST_LINE_HEIGHT = 16
 const SUGGEST_FONT_SIZE = 15
@@ -410,8 +411,7 @@ function syncSettings() {
     ...getCalculatedOptions(),
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
     'workbench.colorTheme': THEME,
-    'workbench.editor.enablePreview': false,
-    // 'workbench.editor.enablePreview' : !VSCODE_INSIDERS,
+    'workbench.editor.enablePreview': READ_MODE,
     'debug.terminal.clearBeforeReusing': true,
     'editor.wordBasedSuggestions': false,
   }

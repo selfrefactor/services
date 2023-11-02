@@ -2,11 +2,12 @@
 	"scripts": {
 		"small": "yarn small:1&&yarn small:2&&run d",
 		"small:1": "MODE=small node syncSettings",
+		"read:1": "MODE=small READ=ON node syncSettings",
 		"small:2": "BETA=ON MODE=small node syncSettings",
 		"dev": "yarn ond:1 && yarn ond:2",
 		"ond": "yarn ond:1 && yarn ond:2",
 		"on": "node visualize-keybindings && yarn on:1 && yarn on:2 && run d",
-		"on:small": "yarn small:1 && yarn on:2",
+		"read": "yarn read:1 && yarn on:2",
 		"on:1": "MODE=normal node syncSettings",
 		"ond:1": "THEME=AmericanDad FILE_ICON_THEME=catppuccin-perfect-mocha MODE=normal node syncSettings",
 		"on:2": "BETA=ON MODE=normal node syncSettings",
