@@ -274,31 +274,31 @@
   "window.zoomLevel": 2,
   "workbench.colorCustomizations": {
     "[CommunicationBreakdown]": {
-      "editor.background": "#eee"
+      "editor.background": "#f1f1f1"
     },
     "[FunkyDrummer]": {
-      "editor.background": "#eee"
+      "editor.background": "#f1f1f1"
     },
     "[KozmicBlues]": {
-      "editor.background": "#eee"
+      "editor.background": "#f1f1f1"
     },
     "[GlassOnion]": {
-      "editor.background": "#eee"
+      "editor.background": "#f1f1f1"
     },
     "[HelloSpaceboy]": {
-      "editor.background": "#eee"
+      "editor.background": "#f1f1f1"
     },
     "[StrangeBrew]": {
-      "editor.background": "#eee"
+      "editor.background": "#f1f1f1"
     },
     "[SweatLeaf]": {
-      "editor.background": "#eee"
+      "editor.background": "#f1f1f1"
     },
     "[LedZeppelin]": {
-      "editor.background": "#eee"
+      "editor.background": "#f1f1f1"
     },
     "[DancingDays]": {
-      "editor.background": "#eee"
+      "editor.background": "#f1f1f1"
     },
     "[AmericanDad]": {
       "editor.background": "#333"

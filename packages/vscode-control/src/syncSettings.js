@@ -55,7 +55,7 @@ let DARK_THEMES = ["AmericanDad",
 "UglyAmericans"]
 
 let ALTERNATIVE_DARK_BACKGROUND = '#333'
-let ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
+let ALTERNATIVE_LIGHT_BACKGROUND = '#f1f1f1'
 
 
 function getAlternativeBackground (){
