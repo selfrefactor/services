@@ -12,6 +12,7 @@ import {
   TSX_SNIPPETS,
 } from './constants.js'
 
+const ALTERNATIVE_BACKGROUND = process.env.x !== undefined
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const READ_MODE = process.env.READ === 'ON'
 const FONT_SIZE = 18
@@ -32,6 +33,52 @@ const MODES = {
 }
 
 const MODE_KEY = defaultTo('MODE', 'normal', 'default')
+
+const LIGHT_THEMES = ["CommunicationBreakdown",
+"FunkyDrummer",
+"KozmicBlues",
+"GlassOnion",
+"HelloSpaceboy",
+"StrangeBrew",
+"SweatLeaf",
+"LedZeppelin",
+"DancingDays"]
+
+let DARK_THEMES = ["AmericanDad",
+"AquaTeenHungerForce",
+"Archer",
+"ClevelandShow",
+"Dilbert",
+"HomeMovies",
+"SouthPark",
+"TripTank",
+"UglyAmericans"]
+
+let ALTERNATIVE_DARK_BACKGROUND = '#444'
+let ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
+
+
+function getAlternativeBackground (){
+  if(!ALTERNATIVE_BACKGROUND){
+    return {}
+  }
+  const helper = (themes, background) => {
+    return themes.reduce((acc, theme) => {
+      acc[`[${theme}]`] = {
+        'editor.background': background,
+      }
+      return acc
+    }, {})
+  }
+
+  return {
+    "workbench.colorCustomizations": {
+      ...helper(LIGHT_THEMES, ALTERNATIVE_LIGHT_BACKGROUND),
+      ...helper(DARK_THEMES, ALTERNATIVE_DARK_BACKGROUND),
+    }
+  }
+}
+
 const MODE = MODES[MODE_KEY]
 const IS_BIG_MODE = MODE_KEY === 'big'
 
@@ -409,11 +456,13 @@ function syncSettings() {
     ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
+    ...getAlternativeBackground(),
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
     'workbench.colorTheme': THEME,
     'workbench.editor.enablePreview': READ_MODE,
     'debug.terminal.clearBeforeReusing': true,
     'editor.wordBasedSuggestions': false,
+    'editor.multiDocumentOccurrencesHighlight': true 
   }
 
   writeJsonSync(SETTINGS, newOptions, { spaces: 2 })

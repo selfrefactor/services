@@ -1,5 +1,9 @@
 # Vscode-control
 
+## Alternative backgrounds
+
+`x=anything yarn ond`
+
 ## Tab wrap
 
     // 'editor.wrappingStrategy'                                     : 'advanced',
