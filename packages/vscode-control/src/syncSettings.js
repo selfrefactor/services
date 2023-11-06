@@ -54,7 +54,7 @@ let DARK_THEMES = ["AmericanDad",
 "TripTank",
 "UglyAmericans"]
 
-let ALTERNATIVE_DARK_BACKGROUND = '#444'
+let ALTERNATIVE_DARK_BACKGROUND = '#333'
 let ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
 
 
