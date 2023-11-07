@@ -37,9 +37,6 @@
   "prettier.trailingComma": "all",
   "prettier.useTabs": false,
   "prettier.embeddedLanguageFormatting": "auto",
-  "workbench.editor.wrapTabs": true,
-  "window.density.editorTabHeight": "compact",
-  "editor.formatOnSave": false,
   "[javascript]": {
     "editor.formatOnSave": true
   },
@@ -48,11 +45,14 @@
   },
   "chat.experimental.quickQuestion.enable": true,
   "editor.foldingImportsByDefault": true,
+  "editor.formatOnSave": false,
   "editor.hover.height": 1200,
   "editor.linkedEditing": true,
   "editor.pasteAs.showPasteSelector": "never",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "window.density.editorTabHeight": "compact",
   "workbench.editor.tabSizing": "fit",
+  "workbench.editor.wrapTabs": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
@@ -236,20 +236,17 @@
       "type": "merge_requests"
     },
     {
+      "createdBefore": "2022-01-01",
+      "maxResults": 60,
       "name": "Closed MRs",
       "noItemText": "The project has no merge requests",
       "scope": "all",
       "state": "merged",
-      "type": "merge_requests",
-      "createdBefore": "2022-01-01",
-      "maxResults": 60
+      "type": "merge_requests"
     }
   ],
-  "task.problemMatchers.neverPrompt": {
-    "shell": true
-  },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "chat.editor.wordWrap": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
@@ -259,6 +256,9 @@
   "javascript.preferences.importModuleSpecifier": "relative",
   "javascript.suggest.autoImports": true,
   "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "task.problemMatchers.neverPrompt": {
+    "shell": true
+  },
   "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.suggest.autoImports": true,
   "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
@@ -328,9 +328,9 @@
       "editor.background": "#333"
     }
   },
-  "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin",
   "debug.terminal.clearBeforeReusing": true,
+  "editor.multiDocumentOccurrencesHighlight": true,
   "editor.wordBasedSuggestions": false,
-  "editor.multiDocumentOccurrencesHighlight": true
+  "magicBeans.IS_VSCODE_INSIDERS": true,
+  "workbench.colorTheme": "LedZeppelin"
 }

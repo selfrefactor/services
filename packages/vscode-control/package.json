@@ -9,6 +9,7 @@
 		"x": "x=1 yarn ond",
 		"on": "node visualize-keybindings && yarn on:1 && yarn on:2 && run d",
 		"read": "yarn read:1 && yarn on:2",
+		"readx": "x=1 yarn read",
 		"on:1": "MODE=normal node syncSettings",
 		"ond:1": "THEME=AmericanDad FILE_ICON_THEME=catppuccin-perfect-mocha MODE=normal node syncSettings",
 		"on:2": "BETA=ON MODE=normal node syncSettings",
