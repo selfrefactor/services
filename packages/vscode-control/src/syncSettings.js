@@ -23,7 +23,8 @@ const THEME = defaultTo(
   'THEME', 'LedZeppelin', 'default'
 )
 const FILE_ICON_THEME = defaultTo(
-  'FILE_ICON_THEME', 'symbols', 'default'
+  'FILE_ICON_THEME', 'emoji-file-icons', 'default'
+  // 'FILE_ICON_THEME', 'symbols', 'default'
 )
 
 const MODES = {
@@ -60,8 +61,9 @@ const DARK_THEMES = [
   'UglyAmericans',
 ]
 
-const ALTERNATIVE_DARK_BACKGROUND = '#333'
-const ALTERNATIVE_LIGHT_BACKGROUND = '#f1f1f1'
+const ALTERNATIVE_DARK_BACKGROUND = '#292929'
+// const ALTERNATIVE_LIGHT_BACKGROUND = '#f1f1f1'
+const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
 
 function getAlternativeBackground(){
   if (!ALTERNATIVE_BACKGROUND)
