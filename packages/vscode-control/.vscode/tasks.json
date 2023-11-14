@@ -9,6 +9,15 @@
         "kind": "none",
         "isDefault": false
       }
+    },
+    {
+      "type": "shell",
+      "label": "read with alternative backgrounds",
+      "command": "yarn readx",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
     }
   ]
 }
