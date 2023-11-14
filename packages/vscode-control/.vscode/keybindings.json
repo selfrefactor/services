@@ -277,9 +277,10 @@
   },
   {
     "key": "capslock p",
+    "when": "!activeEditorIsPinned",
     "priority": true,
-    "command": "git.push",
-    "hint": "PUSH"
+    "command": "workbench.action.pinEditor",
+    "hint": "PIN"
   },
   {
     "key": "ctrl+9",
