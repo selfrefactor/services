@@ -12,6 +12,24 @@
     },
     {
       "type": "shell",
+      "label": "light with alternative backgrounds",
+      "command": "x=1 yarn on",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "shell",
+      "label": "dark with alternative backgrounds",
+      "command": "x=1 yarn ond",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "shell",
       "label": "read with alternative backgrounds",
       "command": "yarn readx",
       "group": {

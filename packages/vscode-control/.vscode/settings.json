@@ -109,13 +109,15 @@
   "git.confirmSync": false,
   "git.fetchOnPull": true,
   "git.promptToSaveFilesBeforeCommit": "never",
+  "workbench.activityBar.visible": false,
   "workbench.editor.languageDetectionHints": {
     "notebookEditors": false,
     "untitledEditors": false
   },
   "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.untitled.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.iconTheme": "emoji-file-icons",
+  "workbench.iconTheme": "catppuccin-perfect-mocha",
   "workbench.list.smoothScrolling": true,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
@@ -223,6 +225,7 @@
   "window.menuBarVisibility": "toggle",
   "window.title": "${dirty}${activeEditorMedium}",
   "window.titleBarStyle": "custom",
+  "zenMode.hideTabs": false,
   "zenMode.restore": false,
   "gitlab.customQueries": [
     {
@@ -298,38 +301,36 @@
       "editor.background": "#f1f1f1"
     },
     "[AmericanDad]": {
-      "editor.background": "#292929"
+      "editor.background": "#212e38"
     },
     "[AquaTeenHungerForce]": {
-      "editor.background": "#292929"
+      "editor.background": "#212e38"
     },
     "[Archer]": {
-      "editor.background": "#292929"
+      "editor.background": "#212e38"
     },
     "[ClevelandShow]": {
-      "editor.background": "#292929"
+      "editor.background": "#212e38"
     },
     "[Dilbert]": {
-      "editor.background": "#292929"
+      "editor.background": "#212e38"
     },
     "[HomeMovies]": {
-      "editor.background": "#292929"
+      "editor.background": "#212e38"
     },
     "[SouthPark]": {
-      "editor.background": "#292929"
+      "editor.background": "#212e38"
     },
     "[TripTank]": {
-      "editor.background": "#292929"
+      "editor.background": "#212e38"
     },
     "[UglyAmericans]": {
-      "editor.background": "#292929"
+      "editor.background": "#212e38"
     }
   },
   "debug.terminal.clearBeforeReusing": true,
   "editor.multiDocumentOccurrencesHighlight": true,
   "editor.wordBasedSuggestions": false,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin",
-  "workbench.activityBar.location": "hidden",
-  "workbench.editor.empty.hint": "hidden"
+  "workbench.colorTheme": "AmericanDad"
 }

@@ -6,7 +6,6 @@
 		"small:2": "BETA=ON MODE=small node syncSettings",
 		"dev": "yarn ond:1 && yarn ond:2",
 		"ond": "yarn ond:1 && yarn ond:2",
-		"x": "x=1 yarn ond",
 		"on": "node visualize-keybindings && yarn on:1 && yarn on:2 && run d",
 		"read": "yarn read:1 && yarn on:2",
 		"readx": "x=1 yarn read",
