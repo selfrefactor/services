@@ -283,6 +283,22 @@
     "hint": "PIN"
   },
   {
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
+  },
+  {
+    "key": "capslock p",
+    "command": "workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned",
+    "hint": "PIN"
+  },
+  {
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned"
+  },
+  {
     "key": "ctrl+9",
     "command": "python.execInTerminal",
     "when": "editorLangId==python"

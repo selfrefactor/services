@@ -114,9 +114,9 @@
 
 ## CAPSLOCK P
 
-`git.push`
+`workbench.action.pinEditor`
 
-> HINT: PUSH
+> HINT: PIN
 
 ## CAPSLOCK R
 
@@ -253,6 +253,12 @@
 `magicBeans.sortLines`
 
 > lines
+
+## CAPSLOCK P
+
+`workbench.action.unpinEditor`
+
+> HINT: PIN
 
 ## CAPSLOCK T
 
