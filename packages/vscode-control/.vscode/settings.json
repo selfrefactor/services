@@ -13,7 +13,7 @@
   "editor.suggestOnTriggerCharacters": false,
   "explorer.autoReveal": true,
   "references.preferredLocation": "view",
-  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreview": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.revealIfOpen": false,
@@ -109,7 +109,7 @@
   "git.confirmSync": false,
   "git.fetchOnPull": true,
   "git.promptToSaveFilesBeforeCommit": "never",
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "workbench.editor.languageDetectionHints": {
     "notebookEditors": false,
     "untitledEditors": false
@@ -117,7 +117,7 @@
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "name",
-  "workbench.iconTheme": "catppuccin-perfect-mocha",
+  "workbench.iconTheme": "emoji-file-icons",
   "workbench.list.smoothScrolling": true,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
@@ -263,74 +263,18 @@
   "typescript.suggest.autoImports": true,
   "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
-  "debug.console.fontFamily": "JetBrains Mono",
-  "editor.fontFamily": "JetBrains Mono",
-  "terminal.integrated.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 13.86,
-  "editor.lineHeight": 18.48,
-  "editor.suggestFontSize": 12,
-  "editor.suggestLineHeight": 12,
-  "terminal.integrated.fontSize": 9,
+  "debug.console.fontFamily": "Fira Code",
+  "editor.fontFamily": "Fira Code",
+  "terminal.integrated.fontFamily": "Fira Code",
+  "editor.fontSize": 16.92,
+  "editor.lineHeight": 27.072,
+  "editor.suggestFontSize": 14,
+  "editor.suggestLineHeight": 15,
+  "terminal.integrated.fontSize": 11,
   "window.zoomLevel": 2,
-  "workbench.colorCustomizations": {
-    "[CommunicationBreakdown]": {
-      "editor.background": "#f1f1f1"
-    },
-    "[FunkyDrummer]": {
-      "editor.background": "#f1f1f1"
-    },
-    "[KozmicBlues]": {
-      "editor.background": "#f1f1f1"
-    },
-    "[GlassOnion]": {
-      "editor.background": "#f1f1f1"
-    },
-    "[HelloSpaceboy]": {
-      "editor.background": "#f1f1f1"
-    },
-    "[StrangeBrew]": {
-      "editor.background": "#f1f1f1"
-    },
-    "[SweatLeaf]": {
-      "editor.background": "#f1f1f1"
-    },
-    "[LedZeppelin]": {
-      "editor.background": "#f1f1f1"
-    },
-    "[DancingDays]": {
-      "editor.background": "#f1f1f1"
-    },
-    "[AmericanDad]": {
-      "editor.background": "#212e38"
-    },
-    "[AquaTeenHungerForce]": {
-      "editor.background": "#212e38"
-    },
-    "[Archer]": {
-      "editor.background": "#212e38"
-    },
-    "[ClevelandShow]": {
-      "editor.background": "#212e38"
-    },
-    "[Dilbert]": {
-      "editor.background": "#212e38"
-    },
-    "[HomeMovies]": {
-      "editor.background": "#212e38"
-    },
-    "[SouthPark]": {
-      "editor.background": "#212e38"
-    },
-    "[TripTank]": {
-      "editor.background": "#212e38"
-    },
-    "[UglyAmericans]": {
-      "editor.background": "#212e38"
-    }
-  },
   "debug.terminal.clearBeforeReusing": true,
   "editor.multiDocumentOccurrencesHighlight": true,
   "editor.wordBasedSuggestions": false,
-  "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "AmericanDad"
+  "magicBeans.IS_VSCODE_INSIDERS": false,
+  "workbench.colorTheme": "LedZeppelin"
 }

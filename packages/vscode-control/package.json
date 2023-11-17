@@ -3,6 +3,7 @@
 		"small": "yarn small:1&&yarn small:2&&run d",
 		"small:1": "MODE=small node syncSettings",
 		"read:1": "MODE=small READ=ON node syncSettings",
+		"read:big:1": "MODE=big READ=ON node syncSettings",
 		"small:2": "BETA=ON MODE=small node syncSettings",
 		"dev": "yarn ond:1 && yarn ond:2",
 		"ond": "yarn ond:1 && yarn ond:2",
@@ -13,7 +14,7 @@
 		"ond:1": "THEME=AmericanDad FILE_ICON_THEME=catppuccin-perfect-mocha MODE=normal node syncSettings",
 		"on:2": "BETA=ON MODE=normal node syncSettings",
 		"ond:2": "THEME=AmericanDad  FILE_ICON_THEME=catppuccin-perfect-mocha BETA=ON MODE=normal node syncSettings",
-		"big": "yarn big:1 &&yarn big:2 && run d",
+		"big": "yarn big:1 &&yarn big:2",
 		"big:1": "MODE=big node syncSettings",
 		"big:2": "BETA=ON MODE=big node syncSettings"
 	},

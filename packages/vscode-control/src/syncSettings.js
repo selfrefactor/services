@@ -24,7 +24,6 @@ const THEME = defaultTo(
 )
 const FILE_ICON_THEME = defaultTo(
   'FILE_ICON_THEME', 'emoji-file-icons', 'default'
-  // 'FILE_ICON_THEME', 'symbols', 'default'
 )
 
 const MODES = {
@@ -61,10 +60,8 @@ const DARK_THEMES = [
   'UglyAmericans',
 ]
 
-// const ALTERNATIVE_DARK_BACKGROUND = '#292929'
 const ALTERNATIVE_DARK_BACKGROUND = '#212e38'
 const ALTERNATIVE_LIGHT_BACKGROUND = '#f1f1f1'
-// const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
 
 function getAlternativeBackground(){
   if (!ALTERNATIVE_BACKGROUND)
@@ -91,9 +88,7 @@ const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname,
   '../.vscode/settings.json')
-// operator mono on bulgarian makes issues with word wrap
 const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Fira Code'
-// https://github.com/tonsky/FiraCode/releases/tag/6.2
 const FONT_FACTOR = 1
 
 void (async function sync(){
@@ -271,14 +266,12 @@ function getImportantSettings(){
 
 function getAdditionalSettings(){
   return {
-    // without comments
     'breadcrumbs.enabled'         : false,
     'debug.inlineValues'          : 'off',
     'debug.javascript.usePreview' : true,
     'diffEditor.diffAlgorithm'    : 'advanced',
     'editor.colorDecoratorsLimit' : 10,
     'editor.scrollbar.vertical'   : 'visible',
-    // 'editor.tabCompletion': 'on',
     'files.enableTrash'           : false,
     'files.exclude'               : {
       '.cache'            : true,
@@ -289,7 +282,6 @@ function getAdditionalSettings(){
       '**/.hg'            : false,
       '**/.idea'          : true,
       '**/.svn'           : false,
-      // '**/coverage': true,
       '**/coverage-ts'    : true,
       '**/CVS'            : false,
       '**/node_modules'   : true,
@@ -326,6 +318,9 @@ function getAdditionalSettings(){
       '.js',
       '.jsx',
       '.py',
+      '.md',
+      '.yml',
+      '.json',
       '.rs',
       '.vtl',
       '.scss',
@@ -354,7 +349,6 @@ function getAdditionalSettings(){
       'setup.py',
     ],
     'npm.autoDetect'                                        : 'off',
-    // as it doesn't work; maybe due to Copilot interfering
     'npm.fetchOnlinePackageInfo'                            : false,
     'npm.packageManager'                                    : 'yarn',
     'scm.defaultViewMode'                                   : 'tree',
@@ -387,8 +381,8 @@ function getSpellingSettings(){
   return {
     'cSpell.allowCompoundWords' : false,
     'cSpell.ignorePaths'        : [
-      'node_modules', // this will ignore anything the node_modules directory
-      '.git', // Ignore the .git directory
+      'node_modules', 
+      '.git', 
       'countries.json',
       'languages.json',
       'introspections.json',
