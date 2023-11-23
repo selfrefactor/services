@@ -21,8 +21,8 @@
     },
     {
       "type": "shell",
-      "label": "big read",
-      "command": "yarn read:big:1 && yarn big:2",
+      "label": "big read + normal",
+      "command": "yarn read:big:1 && yarn on",
       "group": {
         "kind": "none",
         "isDefault": false

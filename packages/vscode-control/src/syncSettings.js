@@ -61,7 +61,8 @@ const DARK_THEMES = [
 ]
 
 const ALTERNATIVE_DARK_BACKGROUND = '#212e38'
-const ALTERNATIVE_LIGHT_BACKGROUND = '#f1f1f1'
+// const ALTERNATIVE_LIGHT_BACKGROUND = '#f1f1f1'
+const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
 
 function getAlternativeBackground(){
   if (!ALTERNATIVE_BACKGROUND)
