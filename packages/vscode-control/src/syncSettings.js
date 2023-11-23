@@ -83,7 +83,6 @@ function getAlternativeBackground(){
 }
 
 const MODE = MODES[ MODE_KEY ]
-const IS_BIG_MODE = MODE_KEY === 'big'
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
@@ -403,10 +402,10 @@ function syncFiles(source, destination){
 function getCalculatedOptions(){
   const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE, 2)
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
-  const lineHeightInitial = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2)
-  const lineHeight = IS_BIG_MODE ?
-    lineHeightInitial * 1.2 :
-    lineHeightInitial
+  const lineHeight = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2)
+  // const lineHeight = IS_BIG_MODE ?
+  //   lineHeightInitial * 1.2 :
+  //   lineHeightInitial
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR, 2))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR))
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.65)))

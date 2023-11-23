@@ -22,7 +22,7 @@
     {
       "type": "shell",
       "label": "big read + normal",
-      "command": "yarn read:big:1 && yarn on",
+      "command": "yarn read:big:1 && yarn on:2",
       "group": {
         "kind": "none",
         "isDefault": false
