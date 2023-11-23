@@ -327,7 +327,8 @@ function getAdditionalSettings(){
       '.ts',
       '.tsx',
     ],
-    'magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS' : [
+    'magicBeans.RANDOM_FILE_FORBIDDEN_PARTIALS' : [
+      '__tests__',
       '.gitconfig',
       '.gitignore',
       '.pylintrc',
