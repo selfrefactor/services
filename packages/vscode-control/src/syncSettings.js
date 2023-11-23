@@ -23,7 +23,9 @@ const THEME = defaultTo(
   'THEME', 'LedZeppelin', 'default'
 )
 const FILE_ICON_THEME = defaultTo(
-  'FILE_ICON_THEME', 'emoji-file-icons', 'default'
+  'FILE_ICON_THEME',
+  'emoji-file-icons',
+  'default'
 )
 
 const MODES = {
@@ -65,14 +67,14 @@ const ALTERNATIVE_DARK_BACKGROUND = '#212e38'
 const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
 
 function getAlternativeBackground(){
-  if (!ALTERNATIVE_BACKGROUND)
-    return {}
+  if (!ALTERNATIVE_BACKGROUND) return {}
 
-  const helper = (themes, background) => themes.reduce((acc, theme) => {
-    acc[ `[${ theme }]` ] = { 'editor.background' : background }
+  const helper = (themes, background) =>
+    themes.reduce((acc, theme) => {
+      acc[ `[${ theme }]` ] = { 'editor.background' : background }
 
-    return acc
-  }, {})
+      return acc
+    }, {})
 
   return {
     'workbench.colorCustomizations' : {
@@ -327,7 +329,7 @@ function getAdditionalSettings(){
       '.ts',
       '.tsx',
     ],
-    'magicBeans.RANDOM_FILE_FORBIDDEN_PARTIALS' : [
+    'magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS' : [
       '__tests__',
       '.gitconfig',
       '.gitignore',
@@ -348,6 +350,21 @@ function getAdditionalSettings(){
       'package-lock.json',
       'pre-commit',
       'setup.py',
+    ],
+    'magicBeans.RANDOM_FILE_SKIP_PATTERNS' : [
+      '__tests__',
+      'node_modules',
+      'coverage',
+      'vendor',
+      'bin',
+      'dist',
+      'build',
+      'lib',
+      '__pycache__',
+      '.vscode',
+      '.idea',
+      '.git',
+      '.cache',
     ],
     'npm.autoDetect'                                        : 'off',
     'npm.fetchOnlinePackageInfo'                            : false,
@@ -382,8 +399,8 @@ function getSpellingSettings(){
   return {
     'cSpell.allowCompoundWords' : false,
     'cSpell.ignorePaths'        : [
-      'node_modules', 
-      '.git', 
+      'node_modules',
+      '.git',
       'countries.json',
       'languages.json',
       'introspections.json',
