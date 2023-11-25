@@ -30,8 +30,8 @@
     },
     {
       "type": "shell",
-      "label": "light with alternative backgrounds",
-      "command": "x=1 yarn on",
+      "label": "big read + read",
+      "command": "yarn read:big:1 && yarn read:2",
       "group": {
         "kind": "none",
         "isDefault": false
@@ -39,8 +39,8 @@
     },
     {
       "type": "shell",
-      "label": "dark with alternative backgrounds",
-      "command": "x=1 yarn ond",
+      "label": "set alternative backgrounds",
+      "command": "x=1 yarn on",
       "group": {
         "kind": "none",
         "isDefault": false
