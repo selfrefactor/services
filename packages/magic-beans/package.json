@@ -182,7 +182,7 @@
 					"default": 60000,
 					"description": "ms for random file to be requested automatically"
 				},
-				"magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS": {
+				"magicBeans.RANDOM_FILE_FORBIDDEN": {
 					"type": "array",
 					"uniqueItems": true,
 					"items": {
@@ -218,9 +218,9 @@
 						".feature",
 						".ts"
 					],
-					"description": "Which file extensions are allowed in random file mode"
+					"description": "Which file partials are allowed in random file mode"
 				},
-				"magicBeans.RANDOM_FILE_SKIP_PATTERNS": {
+				"magicBeans.RANDOM_FILE_SKIP_DIRECTORIES": {
 					"type": "array",
 					"items": {
 						"type": "string"
