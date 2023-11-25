@@ -4,10 +4,15 @@ const { any, last, mapAsync, remove } = require('rambdax')
 const { configAnt } = require('./ants/config')
 
 const FORBIDDEN_PATTERN = [ '.spec.', '.test.' ]
-
+const DEBUG_MODE = true
+const DEBUG_PATTERN =
+  'src/handlers/aggregation/processors/parent-processor.ts'
 const SYMBOLS_LIST_ALLOWED_EXTENSIONS = configAnt('SYMBOLS_LIST_ALLOWED_EXTENSIONS')
 
 const fileIsReportable = file => {
+  if (DEBUG_MODE)
+    return file.path.includes(DEBUG_PATTERN)
+
   const isForbidden = any(pattern => file.path.includes(pattern),
     FORBIDDEN_PATTERN)
 
@@ -39,7 +44,7 @@ async function generateReport(files){
   const result = await mapAsync(async file => {
     const symbols = await vscode.commands.executeCommand('vscode.executeDocumentSymbolProvider',
       file)
-    if(!symbols) return false
+    if (!symbols) return false
 
     const details = symbols
       .map(({ kind, name }) => ({
@@ -47,6 +52,12 @@ async function generateReport(files){
         name,
       }))
       .filter(({ kind }) => kind !== 13)
+    const detailsx = symbols
+      .map(({ kind, name }) => ({
+        kind,
+        name,
+      }))
+      .filter(({ kind }) => kind === 13)
 
     const filePath = remove(dir, file.path)
 
@@ -70,8 +81,7 @@ async function showReport(reportRawData){
   const projectName = last(vscode.workspace.workspaceFolders[ 0 ].uri.path.split('/'))
   const outputLocation = `${ __dirname }/symbols-list-${ projectName }.txt`
   const output = lines.join('\n')
-  if (fs.existsSync(outputLocation))
-    fs.unlinkSync(outputLocation)
+  if (fs.existsSync(outputLocation)) fs.unlinkSync(outputLocation)
 
   fs.writeFileSync(outputLocation, Buffer.from(output, 'utf8'))
 
@@ -86,7 +96,7 @@ async function symbolsList(){
     const reportableFiles = await getReportableFiles()
     const report = await generateReport(reportableFiles)
     await showReport(report)
-  }catch (e){
+  } catch (e){
     console.log(e)
   }
 }
