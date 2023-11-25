@@ -2,6 +2,12 @@
 	"scripts": {
 		"ALTERNATIVE_BACKGROUNDS": "ALTERNATIVE_BACKGROUNDS=ON node syncSettings",
 		"keys": "node visualize-keybindings",
+		"dark:1": "THEME=Archer node syncSettings",
+		"dark:2": "BETA=ON THEME=ClevelandShow node syncSettings",
+		"dark": "yarn dark:1 && yarn dark:2",
+		"light:1": "THEME=HelloSpaceboy node syncSettings",
+		"light:2": "BETA=ON THEME=StrangeBrew node syncSettings",
+		"light": "yarn dark:1 && yarn dark:2",
 		"small:1": "MODE=small node syncSettings",
 		"read:small:1": "MODE=small READ=ON node syncSettings",
 		"read:1": "READ=ON node syncSettings",
