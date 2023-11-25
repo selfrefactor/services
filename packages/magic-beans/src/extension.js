@@ -1,23 +1,19 @@
 const vscode = require('vscode')
 const {
   REQUEST_RANDOM_FILE,
-  SORT_LINES,
   SLOW_SCROLL_INIT,
-  REQUEST_RANDOM_FILE_AUTOMATED,
+  SORT_LINES,
 } = require('./constants')
-const {
-  requestRandomFile,
-  requestRandomFileAutomated,
-} = require('./randomFile')
 const { configAnt } = require('./ants/config')
 const { copyTrimmed } = require('./copyTrimmed')
 const { createSpec } = require('./createSpec')
-const { symbolsList } = require('./symbols-list')
 const { fixCamelcaseRefactoring } = require('./fixCamelcaseRefactoring')
 const { formatJson } = require('./format-json')
 const { initBar } = require('./bar')
+const { requestRandomFile } = require('./randomFile')
 const { slowScroll } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
+const { symbolsList } = require('./symbols-list')
 
 function openInVsCode(data){
   const IS_VSCODE_INSIDERS = configAnt('IS_VSCODE_INSIDERS')
@@ -33,8 +29,7 @@ function openInVsCode(data){
 function activate(context){
   initBar()
   const symbolsListCommand = vscode.commands.registerCommand('magicBeans.symbolsList',
-    symbolsList  
-  )
+    symbolsList)
   const formatJsonCommand = vscode.commands.registerCommand('magicBeans.formatJson',
     formatJson)
   const copyTrimmedCommand = vscode.commands.registerCommand('magicBeans.copyTrimmed',
@@ -45,8 +40,6 @@ function activate(context){
     slowScroll(context))
   const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE,
     requestRandomFile)
-  const requestRandomFileAutomatedCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE_AUTOMATED,
-    requestRandomFileAutomated)
   const sortLinesCommand = vscode.commands.registerCommand(SORT_LINES,
     sortLines)
   const fixCamelcaseRefactoringCommand = vscode.commands.registerCommand('magicBeans.fixCamelcaseRefactoring',

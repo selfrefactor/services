@@ -2,6 +2,7 @@ const fs = require('fs')
 const vscode = require('vscode')
 const { any, last, mapAsync, remove } = require('rambdax')
 const { configAnt } = require('./ants/config')
+const { requestRandomFile } = require('./randomFile')
 
 const FORBIDDEN_PATTERN = [ '.spec.', '.test.' ]
 const DEBUG_MODE = true
@@ -91,11 +92,18 @@ async function showReport(reportRawData){
   })
 }
 
+let isShown = false
+
 async function symbolsList(){
+  if(isShown){
+    requestRandomFile()
+    return
+  }
   try {
     const reportableFiles = await getReportableFiles()
     const report = await generateReport(reportableFiles)
     await showReport(report)
+    isShown = true
   } catch (e){
     console.log(e)
   }
