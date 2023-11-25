@@ -12,7 +12,7 @@ import {
   TSX_SNIPPETS,
 } from './constants.js'
 
-const ALTERNATIVE_BACKGROUND = process.env.x !== undefined
+const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS !== 'ON'
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const READ_MODE = process.env.READ === 'ON'
 const FONT_SIZE = 18
@@ -20,7 +20,7 @@ const SUGGEST_LINE_HEIGHT = 16
 const SUGGEST_FONT_SIZE = 15
 const LINE_HEIGHT = 24
 const THEME = defaultTo(
-  'THEME', 'LedZeppelin', 'default'
+  'THEME', '', 'default'
 )
 const FILE_ICON_THEME = defaultTo(
   'FILE_ICON_THEME',
@@ -29,6 +29,7 @@ const FILE_ICON_THEME = defaultTo(
 )
 
 const MODES = {
+  bigger    : 1.1,
   big    : 0.94,
   normal : 0.77,
   small  : 0.65,
@@ -67,7 +68,7 @@ const ALTERNATIVE_DARK_BACKGROUND = '#212e38'
 const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
 
 function getAlternativeBackground(){
-  if (!ALTERNATIVE_BACKGROUND) return {}
+  if (!ALTERNATIVE_BACKGROUNDS) return false
 
   const helper = (themes, background) =>
     themes.reduce((acc, theme) => {
@@ -94,7 +95,6 @@ const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Fira Code'
 const FONT_FACTOR = 1
 
 void (async function sync(){
-  console.log('START')
   await execSafe({
     command : 'node visualize-keybindings.js',
     cwd     : resolve(__dirname, '..'),
@@ -102,7 +102,6 @@ void (async function sync(){
   syncFiles(KEYBINDING_SOURCE, KEYBINDING)
   syncSnippets()
   syncSettings()
-  console.log('END')
 })()
 
 function getPermanentSettings(){
@@ -143,7 +142,6 @@ function testNewSettings(){
   return {
     // to fix not working word wrap
     'chat.editor.wordWrap'                                        : 'on',
-    // 'editor.codeActionsOnSave'                                    : { 'source.fixAll' : true },
     'editor.defaultFormatter'                                     : 'esbenp.prettier-vscode',
     // by default all were `peek`
     'editor.gotoLocation.multipleDeclarations'                    : 'goto',
@@ -420,9 +418,6 @@ function getCalculatedOptions(){
   const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE, 2)
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
   const lineHeight = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2)
-  // const lineHeight = IS_BIG_MODE ?
-  //   lineHeightInitial * 1.2 :
-  //   lineHeightInitial
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR, 2))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR))
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.65)))
@@ -445,12 +440,27 @@ function getCalculatedOptions(){
   }
 }
 
+function syncFn (newOptions){
+  writeJsonSync(
+    SETTINGS, newOptions, { spaces : 2 }
+  )
+  writeJsonSync(
+    SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces : 2 }
+  )
+}
+
 function syncSettings(){
+  const themeSettings = THEME ? { 'workbench.colorTheme' : THEME } : {}
+  let alternativeBackgrounds = getAlternativeBackground()
+  if(alternativeBackgrounds){
+    return syncFn({...alternativeBackgrounds, ...themeSettings})
+  }
+
   const newOptions = {
+    ...themeSettings,
     ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
-    ...getAlternativeBackground(),
     'debug.terminal.clearBeforeReusing'        : true,
     'editor.multiDocumentOccurrencesHighlight' : true,
     'editor.wordBasedSuggestions'              : false,
@@ -458,13 +468,7 @@ function syncSettings(){
     'workbench.colorTheme'                     : THEME,
     'workbench.editor.enablePreview'           : READ_MODE,
   }
-
-  writeJsonSync(
-    SETTINGS, newOptions, { spaces : 2 }
-  )
-  writeJsonSync(
-    SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces : 2 }
-  )
+  syncFn(newOptions)
 }
 
 function syncSnippets(){

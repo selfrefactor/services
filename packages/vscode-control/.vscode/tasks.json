@@ -3,8 +3,8 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "read",
-      "command": "yarn read",
+      "label": "big all",
+      "command": "yarn big",
       "group": {
         "kind": "none",
         "isDefault": false
@@ -12,8 +12,17 @@
     },
     {
       "type": "shell",
-      "label": "big",
-      "command": "yarn big",
+      "label": "bigger all",
+      "command": "yarn bigger",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "shell",
+      "label": "read bigger + big",
+      "command": "yarn read:bigger:1 && yarn big:2",
       "group": {
         "kind": "none",
         "isDefault": false
@@ -23,15 +32,6 @@
       "type": "shell",
       "label": "big read + normal",
       "command": "yarn read:big:1 && yarn on:2",
-      "group": {
-        "kind": "none",
-        "isDefault": false
-      }
-    },
-    {
-      "type": "shell",
-      "label": "big read + read",
-      "command": "yarn read:big:1 && yarn read:2",
       "group": {
         "kind": "none",
         "isDefault": false

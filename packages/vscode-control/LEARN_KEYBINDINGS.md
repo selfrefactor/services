@@ -242,6 +242,12 @@
 
 > Snippet: commentMultiline
 
+## CAPSLOCK 5
+
+`editor.action.insertSnippet`
+
+> Snippet: commentAimedForTitle
+
 ## CAPSLOCK D
 
 `workbench.view.debug`
@@ -359,7 +365,6 @@
 * alt+=
 * capslock 0
 * capslock 3
-* capslock 5
 * capslock 6
 * capslock 7
 * capslock 8

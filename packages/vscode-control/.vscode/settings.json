@@ -163,22 +163,17 @@
   "js/ts.implicitProjectConfig.checkJs": true,
   "json.format.enable": false,
   "json.maxItemsComputed": 1000,
-  "magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS": [
-    ".css",
+  "magicBeans.RANDOM_FILE_ALLOWED": [
     ".feature",
-    ".go",
     ".js",
-    ".py",
     "README.md",
-    ".yml",
     "package.json",
     ".rs",
     ".vtl",
-    ".scss",
     ".ts",
     ".tsx"
   ],
-  "magicBeans.RANDOM_FILE_FORBIDDEN_EXTENSIONS": [
+  "magicBeans.RANDOM_FILE_FORBIDDEN": [
     "__tests__",
     ".gitconfig",
     ".gitignore",
@@ -188,6 +183,8 @@
     "index.tsx",
     "index.ts",
     "index.js",
+    "config.js",
+    "config.ts",
     ".spec.tsx",
     ".test.js",
     ".test.ts",
@@ -198,7 +195,7 @@
     "package-lock.json",
     "pre-commit"
   ],
-  "magicBeans.RANDOM_FILE_SKIP_PATTERNS": [
+  "magicBeans.RANDOM_FILE_SKIP_DIRECTORIES": [
     "__tests__",
     "test",
     "tests",
@@ -287,9 +284,12 @@
   "window.zoomLevel": 2,
   "debug.terminal.clearBeforeReusing": true,
   "editor.multiDocumentOccurrencesHighlight": true,
-  "editor.wordBasedSuggestions": false,
+  "editor.wordBasedSuggestions": "off",
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "Archer",
-  "workbench.activityBar.location": "hidden",
-  "workbench.editor.empty.hint": "hidden"
+  "workbench.colorTheme": "LedZeppelin",
+  "workbench.editor.empty.hint": "hidden",
+  "[python]": {
+    "editor.wordBasedSuggestions": "off"
+  },
+  "workbench.activityBar.location": "hidden"
 }
