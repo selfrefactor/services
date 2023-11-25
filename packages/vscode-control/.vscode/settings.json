@@ -106,11 +106,13 @@
   "git.confirmSync": false,
   "git.fetchOnPull": true,
   "git.promptToSaveFilesBeforeCommit": "never",
+  "workbench.activityBar.visible": false,
   "workbench.editor.languageDetectionHints": {
     "notebookEditors": false,
     "untitledEditors": false
   },
   "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.untitled.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.iconTheme": "emoji-file-icons",
   "workbench.list.smoothScrolling": true,
@@ -236,6 +238,7 @@
   "window.menuBarVisibility": "toggle",
   "window.title": "${dirty}${activeEditorMedium}",
   "window.titleBarStyle": "custom",
+  "zenMode.hideTabs": false,
   "zenMode.restore": false,
   "gitlab.customQueries": [
     {
@@ -284,12 +287,7 @@
   "window.zoomLevel": 2,
   "debug.terminal.clearBeforeReusing": true,
   "editor.multiDocumentOccurrencesHighlight": true,
-  "editor.wordBasedSuggestions": "off",
+  "editor.wordBasedSuggestions": false,
   "magicBeans.IS_VSCODE_INSIDERS": true,
-  "workbench.colorTheme": "LedZeppelin",
-  "workbench.editor.empty.hint": "hidden",
-  "[python]": {
-    "editor.wordBasedSuggestions": "off"
-  },
-  "workbench.activityBar.location": "hidden"
+  "workbench.colorTheme": ""
 }

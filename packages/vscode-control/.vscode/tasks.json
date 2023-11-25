@@ -13,7 +13,7 @@
     {
       "type": "shell",
       "label": "bigger all",
-      "command": "yarn bigger",
+      "command": "yarn bigger:1 && yarn bigger:2",
       "group": {
         "kind": "none",
         "isDefault": false

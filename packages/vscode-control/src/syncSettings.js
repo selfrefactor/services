@@ -12,7 +12,7 @@ import {
   TSX_SNIPPETS,
 } from './constants.js'
 
-const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS !== 'ON'
+const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS === 'ON'
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const READ_MODE = process.env.READ === 'ON'
 const FONT_SIZE = 18

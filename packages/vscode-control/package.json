@@ -14,7 +14,7 @@
 		"read:big:1": "MODE=big READ=ON node syncSettings",
 		"on:1": "MODE=normal node syncSettings",
 		"on:2": "BETA=ON MODE=normal node syncSettings",
-		"on": "yarn on:1 && yarn on:2 && run d",
+		"on": "yarn on:1 && yarn on:2",
 		"big:1": "MODE=big node syncSettings",
 		"big:2": "BETA=ON MODE=big node syncSettings",
 		"big": "yarn big:1 &&yarn big:2",
