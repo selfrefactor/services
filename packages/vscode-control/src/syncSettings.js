@@ -440,13 +440,24 @@ function getCalculatedOptions(){
   }
 }
 
+
 function syncFn (newOptions){
+  checkSettings(newOptions)
   writeJsonSync(
     SETTINGS, newOptions, { spaces : 2 }
   )
   writeJsonSync(
     SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces : 2 }
   )
+}
+
+function checkSettings(newOptions){
+  if(
+    newOptions[ 'workbench.colorTheme' ] === undefined
+  ) {
+    console.log('workbench.colorTheme is not defined')
+    process.exit(1)
+  }
 }
 
 async function syncSettings(){
