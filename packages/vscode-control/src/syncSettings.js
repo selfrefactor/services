@@ -461,21 +461,20 @@ function checkSettings(newOptions){
 }
 
 async function syncSettings(){
+  const currentSettings = await readJson(SETTINGS)
   let alternativeBackgrounds = getAlternativeBackground()
   if(alternativeBackgrounds){
-    const currentSettings = await readJson(SETTINGS)
     return syncFn({
       ...currentSettings,
       ...alternativeBackgrounds,
     })
   }
-  const themeSettings = THEME ? { 'workbench.colorTheme' : THEME } : {}
-
+  
   const newOptions = {
-    ...themeSettings,
     ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
+    'workbench.colorTheme' : THEME ? THEME : currentSettings[ 'workbench.colorTheme' ],
     'debug.terminal.clearBeforeReusing'        : true,
     'editor.multiDocumentOccurrencesHighlight' : true,
     'editor.wordBasedSuggestions'              : false,
