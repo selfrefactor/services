@@ -465,7 +465,6 @@ function syncSettings(){
     'editor.multiDocumentOccurrencesHighlight' : true,
     'editor.wordBasedSuggestions'              : false,
     'magicBeans.IS_VSCODE_INSIDERS'            : VSCODE_INSIDERS,
-    'workbench.colorTheme'                     : THEME,
     'workbench.editor.enablePreview'           : READ_MODE,
   }
   syncFn(newOptions)
