@@ -288,5 +288,61 @@
   "debug.terminal.clearBeforeReusing": true,
   "editor.multiDocumentOccurrencesHighlight": true,
   "editor.wordBasedSuggestions": false,
-  "magicBeans.IS_VSCODE_INSIDERS": true
+  "magicBeans.IS_VSCODE_INSIDERS": true,
+  "workbench.colorCustomizations": {
+    "[CommunicationBreakdown]": {
+      "editor.background": "#fff"
+    },
+    "[FunkyDrummer]": {
+      "editor.background": "#fff"
+    },
+    "[KozmicBlues]": {
+      "editor.background": "#fff"
+    },
+    "[GlassOnion]": {
+      "editor.background": "#fff"
+    },
+    "[HelloSpaceboy]": {
+      "editor.background": "#fff"
+    },
+    "[StrangeBrew]": {
+      "editor.background": "#fff"
+    },
+    "[SweatLeaf]": {
+      "editor.background": "#fff"
+    },
+    "[LedZeppelin]": {
+      "editor.background": "#fff"
+    },
+    "[DancingDays]": {
+      "editor.background": "#fff"
+    },
+    "[AmericanDad]": {
+      "editor.background": "#212e38"
+    },
+    "[AquaTeenHungerForce]": {
+      "editor.background": "#212e38"
+    },
+    "[Archer]": {
+      "editor.background": "#212e38"
+    },
+    "[ClevelandShow]": {
+      "editor.background": "#212e38"
+    },
+    "[Dilbert]": {
+      "editor.background": "#212e38"
+    },
+    "[HomeMovies]": {
+      "editor.background": "#212e38"
+    },
+    "[SouthPark]": {
+      "editor.background": "#212e38"
+    },
+    "[TripTank]": {
+      "editor.background": "#212e38"
+    },
+    "[UglyAmericans]": {
+      "editor.background": "#212e38"
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { copySync, writeJsonSync } from 'fs-extra'
+import { copySync, readJson, writeJsonSync } from 'fs-extra'
 import { defaultTo, execSafe } from 'helpers-fn'
 import { resolve } from 'path'
 import { toDecimal } from 'rambdax'
@@ -101,7 +101,7 @@ void (async function sync(){
   })
   syncFiles(KEYBINDING_SOURCE, KEYBINDING)
   syncSnippets()
-  syncSettings()
+  await syncSettings()
 })()
 
 function getPermanentSettings(){
@@ -449,12 +449,16 @@ function syncFn (newOptions){
   )
 }
 
-function syncSettings(){
-  const themeSettings = THEME ? { 'workbench.colorTheme' : THEME } : {}
+async function syncSettings(){
   let alternativeBackgrounds = getAlternativeBackground()
   if(alternativeBackgrounds){
-    return syncFn({...alternativeBackgrounds, ...themeSettings})
+    const currentSettings = await readJson(SETTINGS)
+    return syncFn({
+      ...currentSettings,
+      ...alternativeBackgrounds,
+    })
   }
+  const themeSettings = THEME ? { 'workbench.colorTheme' : THEME } : {}
 
   const newOptions = {
     ...themeSettings,
