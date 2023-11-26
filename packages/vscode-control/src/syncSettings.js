@@ -12,6 +12,10 @@ import {
   TSX_SNIPPETS,
 } from './constants.js'
 
+const ALTERNATIVE_DARK_BACKGROUND = '#212e38'
+// const ALTERNATIVE_LIGHT_BACKGROUND = '#f1f1f1'
+const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
+
 const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS === 'ON'
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const READ_MODE = process.env.READ === 'ON'
@@ -63,13 +67,9 @@ const DARK_THEMES = [
   'UglyAmericans',
 ]
 
-const ALTERNATIVE_DARK_BACKGROUND = '#212e38'
-// const ALTERNATIVE_LIGHT_BACKGROUND = '#f1f1f1'
-const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
-
 function getAlternativeBackground(){
   if (!ALTERNATIVE_BACKGROUNDS) return false
-
+  console.log('ALTERNATIVE_BACKGROUNDS')
   const helper = (themes, background) =>
     themes.reduce((acc, theme) => {
       acc[ `[${ theme }]` ] = { 'editor.background' : background }

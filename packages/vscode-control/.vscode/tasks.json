@@ -40,7 +40,7 @@
     {
       "type": "shell",
       "label": "set dark backgrounds",
-      "command": "x=1 yarn ALTERNATIVE_BACKGROUNDS",
+      "command": "yarn dark",
       "group": {
         "kind": "none",
         "isDefault": false
@@ -58,7 +58,7 @@
     {
       "type": "shell",
       "label": "set alternative backgrounds",
-      "command": "x=1 yarn on",
+      "command": "yarn ALTERNATIVE_BACKGROUNDS",
       "group": {
         "kind": "none",
         "isDefault": false
