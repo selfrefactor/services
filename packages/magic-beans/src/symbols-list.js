@@ -7,7 +7,7 @@ const { requestRandomFile } = require('./randomFile')
 const FORBIDDEN_PATTERN = [ '.spec.', '.test.' ]
 const DEBUG_MODE = true
 const DEBUG_PATTERN =
-  'src/handlers/aggregation/processors/parent-processor.ts'
+  'src/components/list/list.tsx'
 const SYMBOLS_LIST_ALLOWED_EXTENSIONS = configAnt('SYMBOLS_LIST_ALLOWED_EXTENSIONS')
 
 const fileIsReportable = file => {
