@@ -50,7 +50,6 @@ function activate(context){
   context.subscriptions.push(createSpecCommand)
   context.subscriptions.push(slowScrollCommand)
   context.subscriptions.push(requestRandomFileCommand)
-  context.subscriptions.push(requestRandomFileAutomatedCommand)
   context.subscriptions.push(formatJsonCommand)
   context.subscriptions.push(sortLinesCommand)
   context.subscriptions.push(fixCamelcaseRefactoringCommand)
