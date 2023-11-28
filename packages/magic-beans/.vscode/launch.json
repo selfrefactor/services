@@ -9,6 +9,21 @@
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ]
-        }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Current Test File",
+            "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+            "args": [
+              "--verbose", 
+              "-i", 
+              "-u",
+              "--no-cache",
+              "${fileBasenameNoExtension}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+          }
     ]
 }

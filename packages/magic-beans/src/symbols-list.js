@@ -1,18 +1,25 @@
 const fs = require('fs')
 const vscode = require('vscode')
-const { any, last, mapAsync, remove } = require('rambdax')
+const {
+  any,
+  last,
+  mapAsync,
+  piped,
+  range,
+  remove,
+  take,
+  uniq,
+} = require('rambdax')
 const { configAnt } = require('./ants/config')
 const { requestRandomFile } = require('./randomFile')
 
 const FORBIDDEN_PATTERN = [ '.spec.', '.test.' ]
-const DEBUG_MODE = true
-const DEBUG_PATTERN =
-  'src/components/list/list.tsx'
+const DEBUG_MODE = false
+const DEBUG_PATTERN = 'list.tsx'
 const SYMBOLS_LIST_ALLOWED_EXTENSIONS = configAnt('SYMBOLS_LIST_ALLOWED_EXTENSIONS')
 
 const fileIsReportable = file => {
-  if (DEBUG_MODE)
-    return file.path.includes(DEBUG_PATTERN)
+  if (DEBUG_MODE) return file.path.includes(DEBUG_PATTERN)
 
   const isForbidden = any(pattern => file.path.includes(pattern),
     FORBIDDEN_PATTERN)
@@ -25,9 +32,11 @@ const fileIsReportable = file => {
 }
 
 const HARD_LIMIT_OF_FILES_TO_PROCESS = 500
+const MAX_LEVEL = 6
+const MAX_SYMBOLS_PER_LEVEL = 400
 
 async function getReportableFiles(){
-  const dir = vscode.workspace.workspaceFolders[ 0 ].uri.path
+  const dir = vscode.workspace.workspaceFolders[ 0 ].uri.path + '/src'
   const pattern = new vscode.RelativePattern(dir, '**/*')
   const files = await vscode.workspace.findFiles(
     pattern,
@@ -39,49 +48,79 @@ async function getReportableFiles(){
   return filtered
 }
 
-async function generateReport(files){
-  const dir = vscode.workspace.workspaceFolders[ 0 ].uri.path
+const skippedKinds = [ 1, 11, 13 ]
 
-  const result = await mapAsync(async file => {
+const skippedByKind = []
+
+function getFileReport(
+  symbols, prev = {}, level = 0
+){
+  if (!symbols.length === 0) return prev
+  symbols.forEach(symbol => {
+    const { children, kind, name } = symbol
+    if (skippedKinds.includes(kind)){
+      skippedByKind.push({
+        kind,
+        name,
+      })
+
+      return
+    }
+    if (prev[ level ] === undefined) prev[ level ] = []
+
+    // if(name.includes('mapAsync')){
+    //   console.log({name,level})
+    // }
+    prev[ level ].push(name)
+    if (children.length === 0 || level + 1 === MAX_LEVEL) return
+    const prevResult = getFileReport(
+      children, prev, level + 1
+    )
+    prev = prevResult
+  })
+
+  return prev
+}
+
+async function generateReportObject(files){
+  let reportObject = {}
+  await mapAsync(async file => {
     const symbols = await vscode.commands.executeCommand('vscode.executeDocumentSymbolProvider',
       file)
     if (!symbols) return false
-
-    const details = symbols
-      .map(({ kind, name }) => ({
-        kind,
-        name,
-      }))
-      .filter(({ kind }) => kind !== 13)
-    const detailsx = symbols
-      .map(({ kind, name }) => ({
-        kind,
-        name,
-      }))
-      .filter(({ kind }) => kind === 13)
-
-    const filePath = remove(dir, file.path)
-
-    return {
-      details,
-      filePath,
-    }
+    reportObject = getFileReport(symbols, reportObject)
   }, files)
 
-  return result.filter(Boolean)
+  return reportObject
 }
 
-async function showReport(reportRawData){
-  const lines = []
-  reportRawData.forEach(singleFileReport => {
-    singleFileReport.details.forEach(({ kind, name }) => {
-      lines.push(`${ name } - ${ singleFileReport.filePath } - ${ kind }`)
-    })
+async function generateAndShowReport(reportObject){
+  let output = ''
+  let lines = []
+  let prevLevel = -1
+  range(0, MAX_LEVEL).forEach(level => {
+    if (prevLevel !== level){
+      output += `\n\nLEVEL ${ level } \n\n`
+      prevLevel = level
+
+      if (lines.length > 0){
+        output += lines.join('\n')
+        lines = []
+      }
+    }
+    if (reportObject[ level ] === undefined) return
+    const namesList = piped(
+      reportObject[ level ],
+      uniq,
+      take(MAX_SYMBOLS_PER_LEVEL)
+    )
+    namesList.sort()
+
+    lines = namesList
   })
-  lines.sort()
+  let a = skippedByKind
   const projectName = last(vscode.workspace.workspaceFolders[ 0 ].uri.path.split('/'))
   const outputLocation = `${ __dirname }/symbols-list-${ projectName }.txt`
-  const output = lines.join('\n')
   if (fs.existsSync(outputLocation)) fs.unlinkSync(outputLocation)
 
   fs.writeFileSync(outputLocation, Buffer.from(output, 'utf8'))
@@ -95,14 +134,15 @@ async function showReport(reportRawData){
 let isShown = false
 
 async function symbolsList(){
-  if(isShown){
+  if (isShown){
     requestRandomFile()
+
     return
   }
   try {
     const reportableFiles = await getReportableFiles()
-    const report = await generateReport(reportableFiles)
-    await showReport(report)
+    const reportObject = await generateReportObject(reportableFiles)
+    await generateAndShowReport(reportObject)
     isShown = true
   } catch (e){
     console.log(e)

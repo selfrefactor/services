@@ -160,9 +160,6 @@
 						".js",
 						".jsx",
 						".tsx",
-						".py",
-						".go",
-						".rs",
 						".ts"
 					],
 					"description": "Which file extensions are allowed in symbols list mode"
