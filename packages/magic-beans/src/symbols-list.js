@@ -6,7 +6,6 @@ const {
   mapAsync,
   piped,
   range,
-  remove,
   take,
   uniq,
 } = require('rambdax')
@@ -48,9 +47,8 @@ async function getReportableFiles(){
   return filtered
 }
 
-const skippedKinds = [ 1, 11, 13 ]
-
-const skippedByKind = []
+const skippedKinds = [ 1, 13 ]
+const skippedByRegex = []
 
 function getFileReport(
   symbols, prev = {}, level = 0
@@ -59,18 +57,18 @@ function getFileReport(
   symbols.forEach(symbol => {
     const { children, kind, name } = symbol
     if (skippedKinds.includes(kind)){
-      skippedByKind.push({
+      return
+    }
+    if (prev[ level ] === undefined) prev[ level ] = []
+    const passRegex = new RegExp('^[a-zA-Z0-9_]+$')
+    if (!passRegex.test(name)){
+      skippedByRegex.push({
         kind,
         name,
       })
 
       return
     }
-    if (prev[ level ] === undefined) prev[ level ] = []
-
-    // if(name.includes('mapAsync')){
-    //   console.log({name,level})
-    // }
     prev[ level ].push(name)
     if (children.length === 0 || level + 1 === MAX_LEVEL) return
     const prevResult = getFileReport(
@@ -118,7 +116,6 @@ async function generateAndShowReport(reportObject){
 
     lines = namesList
   })
-  let a = skippedByKind
   const projectName = last(vscode.workspace.workspaceFolders[ 0 ].uri.path.split('/'))
   const outputLocation = `${ __dirname }/symbols-list-${ projectName }.txt`
   if (fs.existsSync(outputLocation)) fs.unlinkSync(outputLocation)
