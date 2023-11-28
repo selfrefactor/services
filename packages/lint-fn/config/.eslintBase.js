@@ -1,24 +1,3 @@
-const {
-  configs: {
-    'recommended-alphabetical': { rules: perfectionistRulesImport },
-  },
-} = require('eslint-plugin-perfectionist');
-
-/**
- * This function is used to get the rules from perfectionist plugin
- * and change their level from error to warning as this cause
- * lint process to stop, which is not intended.
- */
-function getPerfectionistRules() {
-  const rules = {};
-  Object.keys(perfectionistRulesImport).forEach((key) => {
-    rules[key] = [1, ...perfectionistRulesImport[key].slice(1)];
-  });
-  return rules;
-}
-
-const perfectionistRules = getPerfectionistRules();
-
 const beforeAfterTrue = {
   before: true,
   after: true,
@@ -59,8 +38,6 @@ exports.baseConfiguration = {
 }
 
 exports.baseRules = {
-  ...perfectionistRules,
-  'prefer-template': 1,
   'node/no-deprecated-api': 1,
   'no-unsafe-optional-chaining': 1,
   'node/callback-return': 0,

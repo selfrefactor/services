@@ -79,8 +79,7 @@ module.exports = {
     'react-hooks',
     'simple-import-sort',
     'node', 
-    'jest',
-    'perfectionist',
+    'jest'
   ],
   env: {
     es6: true,

@@ -1,8 +1,9 @@
-const {baseRules, baseConfiguration} = require('./.eslintBase')
+const {baseRules, baseConfiguration, fileExtensionRule} = require('./.eslintBase')
 const {filter} = require('./filter')
 
 const rules = {
   ...baseRules,
+  ...fileExtensionRule,
   'jest-formatting/padding-around-test-blocks': 1,
   'jest/consistent-test-it': 1,
   'jest/no-alias-methods': 1,
@@ -22,14 +23,7 @@ const rules = {
 
 module.exports = {
   ...baseConfiguration,
-  plugins: [
-    'async-await',
-    'jest-formatting',
-    'simple-import-sort',
-    'node',
-    'jest',
-    'perfectionist'
-  ],
+  plugins: ['async-await', 'jest-formatting', 'simple-import-sort', 'node', 'jest'],
   env: {
     es6: true,
     jasmine: true,
