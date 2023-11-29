@@ -1,14 +1,6 @@
 const fs = require('fs')
 const vscode = require('vscode')
-const {
-  any,
-  last,
-  mapAsync,
-  piped,
-  range,
-  take,
-  uniq,
-} = require('rambdax')
+const { any, last, mapAsync, piped, range, take, uniq } = require('rambdax')
 const { configAnt } = require('./ants/config')
 const { requestRandomFile } = require('./randomFile')
 
@@ -31,7 +23,7 @@ const fileIsReportable = file => {
 }
 
 const HARD_LIMIT_OF_FILES_TO_PROCESS = 500
-const MAX_LEVEL = 6
+const MAX_LEVEL = 9
 const MAX_SYMBOLS_PER_LEVEL = 400
 
 async function getReportableFiles(){
@@ -56,9 +48,9 @@ function getFileReport(
   if (!symbols.length === 0) return prev
   symbols.forEach(symbol => {
     const { children, kind, name } = symbol
-    if (skippedKinds.includes(kind)){
+    if (skippedKinds.includes(kind))
       return
-    }
+
     if (prev[ level ] === undefined) prev[ level ] = []
     const passRegex = new RegExp('^[a-zA-Z0-9_]+$')
     if (!passRegex.test(name)){
@@ -94,18 +86,7 @@ async function generateReportObject(files){
 
 async function generateAndShowReport(reportObject){
   let output = ''
-  let lines = []
-  let prevLevel = -1
   range(0, MAX_LEVEL).forEach(level => {
-    if (prevLevel !== level){
-      output += `\n\nLEVEL ${ level } \n\n`
-      prevLevel = level
-
-      if (lines.length > 0){
-        output += lines.join('\n')
-        lines = []
-      }
-    }
     if (reportObject[ level ] === undefined) return
     const namesList = piped(
       reportObject[ level ],
@@ -114,7 +95,10 @@ async function generateAndShowReport(reportObject){
     )
     namesList.sort()
 
-    lines = namesList
+    if (lines.length > 0){
+      output += `\n\nLEVEL ${ level } \n\n`
+      output += namesList.join('\n')
+    }
   })
   const projectName = last(vscode.workspace.workspaceFolders[ 0 ].uri.path.split('/'))
   const outputLocation = `${ __dirname }/symbols-list-${ projectName }.txt`
