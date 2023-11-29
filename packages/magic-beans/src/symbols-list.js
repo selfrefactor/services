@@ -22,9 +22,9 @@ const fileIsReportable = file => {
   )
 }
 
-const HARD_LIMIT_OF_FILES_TO_PROCESS = 500
+const HARD_LIMIT_OF_FILES_TO_PROCESS = 700
 const MAX_LEVEL = 9
-const MAX_SYMBOLS_PER_LEVEL = 400
+const MAX_SYMBOLS_PER_LEVEL = 600
 
 async function getReportableFiles(){
   const dir = vscode.workspace.workspaceFolders[ 0 ].uri.path + '/src'
@@ -95,7 +95,7 @@ async function generateAndShowReport(reportObject){
     )
     namesList.sort()
 
-    if (lines.length > 0){
+    if (namesList.length > 0){
       output += `\n\nLEVEL ${ level } \n\n`
       output += namesList.join('\n')
     }
