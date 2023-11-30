@@ -212,6 +212,10 @@
 
 > open side panel
 
+## ALT  P
+
+`git.push`
+
 ## ALT  S
 
 `workbench.action.toggleSplitEditorInGroup`
@@ -329,10 +333,6 @@
 ## CTRL  SHIFT  D
 
 `editor.action.copyLinesDownAction`
-
-## CTRL  SHIFT  P
-
-`git.push`
 
 ## CTRL  UP
 

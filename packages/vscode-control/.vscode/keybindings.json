@@ -4,7 +4,7 @@
     "command": "workbench.action.tasks.runTask"
   },
   {
-    "key": "ctrl+shift+p",
+    "key": "alt+p",
     "command": "git.push"
   },
   {
@@ -791,15 +791,6 @@
     "key": "ctrl+r",
     "command": "-workbench.action.terminal.runRecentCommand",
     "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+shift+p",
-    "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
-    "when": "inFilesPicker && inQuickOpen"
-  },
-  {
-    "key": "ctrl+shift+p",
-    "command": "-workbench.action.showCommands"
   },
   {
     "key": "ctrl+shift+b",
