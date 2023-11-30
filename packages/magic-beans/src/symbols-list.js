@@ -26,8 +26,8 @@ const HARD_LIMIT_OF_FILES_TO_PROCESS = 700
 const MAX_LEVEL = 9
 const MAX_SYMBOLS_PER_LEVEL = 600
 
-async function getReportableFiles(){
-  const dir = vscode.workspace.workspaceFolders[ 0 ].uri.path + '/src'
+async function getReportableFiles(folder= 'src'){
+  const dir = vscode.workspace.workspaceFolders[ 0 ].uri.path + '/' + folder
   const pattern = new vscode.RelativePattern(dir, '**/*')
   const files = await vscode.workspace.findFiles(
     pattern,
@@ -121,8 +121,12 @@ async function symbolsList(){
     return
   }
   try {
-    const reportableFiles = await getReportableFiles()
-    const reportObject = await generateReportObject(reportableFiles)
+    const reportableFiles1 = await getReportableFiles('src')
+    const reportableFiles2 = await getReportableFiles('packages')
+    const reportObject = await generateReportObject([
+      ...reportableFiles1,
+      ...reportableFiles2,
+    ])
     await generateAndShowReport(reportObject)
     isShown = true
   } catch (e){
