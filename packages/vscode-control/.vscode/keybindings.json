@@ -4,7 +4,7 @@
     "command": "workbench.action.tasks.runTask"
   },
   {
-    "key": "alt+p",
+    "key": "capslock =",
     "command": "git.push"
   },
   {
@@ -217,16 +217,6 @@
     "hint": "FIND",
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider"
-  },
-  {
-    "key": "capslock =",
-    "command": "editor.action.fontZoomIn",
-    "priority": true
-  },
-  {
-    "key": "capslock -",
-    "command": "editor.action.fontZoomOut",
-    "priority": true
   },
   {
     "key": "ctrl+capslock",
