@@ -330,6 +330,10 @@
 
 `editor.action.copyLinesDownAction`
 
+## CTRL  SHIFT  P
+
+`git.push`
+
 ## CTRL  UP
 
 `editor.action.moveLinesUpAction`

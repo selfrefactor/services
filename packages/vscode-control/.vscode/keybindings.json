@@ -1,5 +1,13 @@
 [
   {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "git.push"
+  },
+  {
     "key": "capslock a",
     "priority": true,
     "hint": "All - fold all",
@@ -785,8 +793,13 @@
     "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "ctrl+shift+b",
-    "command": "workbench.action.tasks.runTask"
+    "key": "ctrl+shift+p",
+    "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "-workbench.action.showCommands"
   },
   {
     "key": "ctrl+shift+b",
