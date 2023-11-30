@@ -1,6 +1,15 @@
 const fs = require('fs')
 const vscode = require('vscode')
-const { any, last, mapAsync, piped, range, take, uniq } = require('rambdax')
+const {
+  any,
+  last,
+  mapAsync,
+  mapParallelAsync,
+  piped,
+  range,
+  take,
+  uniq,
+} = require('rambdax')
 const { configAnt } = require('./ants/config')
 const { requestRandomFile } = require('./randomFile')
 
@@ -26,7 +35,7 @@ const HARD_LIMIT_OF_FILES_TO_PROCESS = 700
 const MAX_LEVEL = 9
 const MAX_SYMBOLS_PER_LEVEL = 600
 
-async function getReportableFiles(folder= 'src'){
+async function getReportableFiles(folder = 'src'){
   const dir = vscode.workspace.workspaceFolders[ 0 ].uri.path + '/' + folder
   const pattern = new vscode.RelativePattern(dir, '**/*')
   const files = await vscode.workspace.findFiles(
@@ -48,8 +57,7 @@ function getFileReport(
   if (!symbols.length === 0) return prev
   symbols.forEach(symbol => {
     const { children, kind, name } = symbol
-    if (skippedKinds.includes(kind))
-      return
+    if (skippedKinds.includes(kind)) return
 
     if (prev[ level ] === undefined) prev[ level ] = []
     const passRegex = new RegExp('^[a-zA-Z0-9_]+$')
@@ -114,6 +122,13 @@ async function generateAndShowReport(reportObject){
 
 let isShown = false
 
+const getReportableFilesFn = async folders => {
+  const files = await mapParallelAsync(async folder => getReportableFiles(folder),
+    folders)
+
+  return flatten(files)
+}
+
 async function symbolsList(){
   if (isShown){
     requestRandomFile()
@@ -121,12 +136,12 @@ async function symbolsList(){
     return
   }
   try {
-    const reportableFiles1 = await getReportableFiles('src')
-    const reportableFiles2 = await getReportableFiles('packages')
-    const reportObject = await generateReportObject([
-      ...reportableFiles1,
-      ...reportableFiles2,
+    const reportableFiles = await getReportableFilesFn([
+      'src',
+      'packages',
+      'source',
     ])
+    const reportObject = await generateReportObject(reportableFiles)
     await generateAndShowReport(reportObject)
     isShown = true
   } catch (e){
