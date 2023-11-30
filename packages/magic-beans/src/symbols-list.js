@@ -9,6 +9,7 @@ const {
   range,
   take,
   uniq,
+  flatten,
 } = require('rambdax')
 const { configAnt } = require('./ants/config')
 const { requestRandomFile } = require('./randomFile')
