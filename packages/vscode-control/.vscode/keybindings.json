@@ -8,6 +8,10 @@
     "command": "git.push"
   },
   {
+    "key": "capslock -",
+    "command": "git.push"
+  },
+  {
     "key": "capslock a",
     "priority": true,
     "hint": "All - fold all",

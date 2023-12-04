@@ -44,17 +44,9 @@
 
 `workbench.action.toggleZenMode`
 
-## CAPSLOCK -
-
-`editor.action.fontZoomOut`
-
 ## CAPSLOCK ,
 
 `magicBeans.fixCamelcaseRefactoring`
-
-## CAPSLOCK =
-
-`editor.action.fontZoomIn`
 
 ## CAPSLOCK 2
 
@@ -212,10 +204,6 @@
 
 > open side panel
 
-## ALT  P
-
-`git.push`
-
 ## ALT  S
 
 `workbench.action.toggleSplitEditorInGroup`
@@ -233,6 +221,10 @@
 ## CAPSLOCK <
 
 `editor.action.inlineSuggest.showPrevious`
+
+## CAPSLOCK =
+
+`git.push`
 
 ## CAPSLOCK 1
 
@@ -380,3 +372,4 @@
 * capslock s
 * capslock v
 * capslock w
+* capslock -

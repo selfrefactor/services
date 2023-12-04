@@ -13,7 +13,6 @@ import {
 } from './constants.js'
 
 const ALTERNATIVE_DARK_BACKGROUND = '#212e38'
-// const ALTERNATIVE_LIGHT_BACKGROUND = '#f1f1f1'
 const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
 
 const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS === 'ON'
