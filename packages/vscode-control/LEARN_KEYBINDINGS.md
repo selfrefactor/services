@@ -214,6 +214,10 @@
 
 `terminal.focus`
 
+## CAPSLOCK -
+
+`git.push`
+
 ## CAPSLOCK ;
 
 `github.copilot.openPanelForRange`
@@ -372,4 +376,3 @@
 * capslock s
 * capslock v
 * capslock w
-* capslock -
