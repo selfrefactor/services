@@ -12,9 +12,9 @@ import {
   TSX_SNIPPETS,
 } from './constants.js'
 
-// const ALTERNATIVE_DARK_BACKGROUND = 
+// const ALTERNATIVE_DARK_BACKGROUND =
 /**
- #242E33 	
+ #242E33
  '#212e38'
  */
 const ALTERNATIVE_DARK_BACKGROUND = '#011627'
@@ -37,8 +37,8 @@ const FILE_ICON_THEME = defaultTo(
 )
 
 const MODES = {
-  bigger    : 1.1,
   big    : 0.94,
+  bigger : 1.1,
   normal : 0.77,
   small  : 0.65,
 }
@@ -124,11 +124,11 @@ function getPermanentSettings(){
 
 function getNewSettings(){
   return {
-    '[javascript]'                                   : { 'editor.formatOnSave' : true },
-    '[typescript]'                                   : { 'editor.formatOnSave' : true },
+    // '[javascript]'                                   : { 'editor.formatOnSave' : true },
+    // '[typescript]'                                   : { 'editor.formatOnSave' : true },
     'chat.experimental.quickQuestion.enable'         : true,
     'editor.foldingImportsByDefault'                 : true,
-    'editor.formatOnSave'                            : false,
+    // 'editor.formatOnSave'                            : false,
     'editor.hover.height'                            : 1200,
     'editor.linkedEditing'                           : true,
     'editor.pasteAs.showPasteSelector'               : 'never',
@@ -138,6 +138,8 @@ function getNewSettings(){
     'workbench.editor.wrapTabs'                      : true,
   }
 }
+// goto
+const GOTO_LOCATION = 'peek'
 
 /**
  * Keep latest changes with comments of change
@@ -148,13 +150,12 @@ function testNewSettings(){
     'chat.editor.wordWrap'                                        : 'on',
     'editor.defaultFormatter'                                     : 'esbenp.prettier-vscode',
     // by default all were `peek`
-    'editor.gotoLocation.multipleDeclarations'                    : 'goto',
-    'editor.gotoLocation.multipleDefinitions'                     : 'goto',
-    'editor.gotoLocation.multipleImplementations'                 : 'goto',
-    'editor.gotoLocation.multipleReferences'                      : 'goto',
-    'editor.gotoLocation.multipleTypeDefinitions'                 : 'goto',
-    'editor.suggest.showStatusBar'                                : false, // to test
-    'gopls'                                                       : { 'ui.semanticTokens' : true },
+    'editor.gotoLocation.multipleDeclarations'                    : GOTO_LOCATION,
+    'editor.gotoLocation.multipleDefinitions'                     : GOTO_LOCATION,
+    'editor.gotoLocation.multipleImplementations'                 : GOTO_LOCATION,
+    'editor.gotoLocation.multipleReferences'                      : GOTO_LOCATION,
+    'editor.gotoLocation.multipleTypeDefinitions'                 : GOTO_LOCATION,
+    'editor.suggest.showStatusBar'                                : false,
     'javascript.preferences.importModuleSpecifier'                : 'relative',
     'javascript.suggest.autoImports'                              : true,
     // to test prefered local imports
@@ -164,7 +165,7 @@ function testNewSettings(){
     'typescript.suggest.autoImports'                              : true,
     'typescript.suggest.includeAutomaticOptionalChainCompletions' : true,
     // 'editor.wordWrapColumn'                                       : 30,
-    'typescript.tsserver.experimental.enableProjectDiagnostics'   : false, // to test
+    'typescript.tsserver.experimental.enableProjectDiagnostics'   : true, // to test
   }
 }
 
@@ -315,7 +316,7 @@ function getAdditionalSettings(){
     'js/ts.implicitProjectConfig.checkJs'                    : true,
     'json.format.enable'                                     : false,
     'json.maxItemsComputed'                                  : 1000,
-    'magicBeans.RANDOM_FILE_ALLOWED'              : [
+    'magicBeans.RANDOM_FILE_ALLOWED'                         : [
       // '.css',
       // '.scss',
       '.feature',
@@ -444,8 +445,7 @@ function getCalculatedOptions(){
   }
 }
 
-
-function syncFn (newOptions){
+function syncFn(newOptions){
   checkSettings(newOptions)
   writeJsonSync(
     SETTINGS, newOptions, { spaces : 2 }
@@ -456,9 +456,7 @@ function syncFn (newOptions){
 }
 
 function checkSettings(newOptions){
-  if(
-    newOptions[ 'workbench.colorTheme' ] === undefined
-  ) {
+  if (newOptions[ 'workbench.colorTheme' ] === undefined){
     console.log('workbench.colorTheme is not defined')
     process.exit(1)
   }
@@ -466,24 +464,25 @@ function checkSettings(newOptions){
 
 async function syncSettings(){
   const currentSettings = await readJson(SETTINGS)
-  let alternativeBackgrounds = getAlternativeBackground()
-  if(alternativeBackgrounds){
+  const alternativeBackgrounds = getAlternativeBackground()
+  if (alternativeBackgrounds)
     return syncFn({
       ...currentSettings,
       ...alternativeBackgrounds,
     })
-  }
-  
+
   const newOptions = {
     ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
-    'workbench.colorTheme' : THEME ? THEME : currentSettings[ 'workbench.colorTheme' ],
     'debug.terminal.clearBeforeReusing'        : true,
     'editor.multiDocumentOccurrencesHighlight' : true,
     'editor.wordBasedSuggestions'              : false,
     'magicBeans.IS_VSCODE_INSIDERS'            : VSCODE_INSIDERS,
-    'workbench.editor.enablePreview'           : READ_MODE,
+    'workbench.colorTheme'                     : THEME ?
+      THEME :
+      currentSettings[ 'workbench.colorTheme' ],
+    'workbench.editor.enablePreview' : READ_MODE,
   }
   syncFn(newOptions)
 }
