@@ -40,5 +40,9 @@
   "codemetrics.basics.ComplexityLevelExtremeDescription": "",
   "codemetrics.basics.ComplexityLevelHighDescription": "",
   "codemetrics.basics.ComplexityLevelLowDescription": "",
-  "codemetrics.basics.ComplexityLevelNormalDescription": ""
+  "codemetrics.basics.ComplexityLevelNormalDescription": "",
+  "codemetrics.basics.ComplexityColorExtreme":"#d439",
+  "codemetrics.basics.ComplexityColorHigh": "#8437",
+  "codemetrics.basics.ComplexityColorLow": "#4b47",
+  "codemetrics.basics.ComplexityColorNormal": "#fc07"
 }

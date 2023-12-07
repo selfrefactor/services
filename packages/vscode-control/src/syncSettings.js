@@ -138,8 +138,8 @@ function getNewSettings(){
     'workbench.editor.wrapTabs'                      : true,
   }
 }
-// goto
-const GOTO_LOCATION = 'peek'
+// goto | peek
+const GOTO_LOCATION = 'goto'
 
 /**
  * Keep latest changes with comments of change
@@ -164,17 +164,13 @@ function testNewSettings(){
     'typescript.preferences.importModuleSpecifier'                : 'relative',
     'typescript.suggest.autoImports'                              : true,
     'typescript.suggest.includeAutomaticOptionalChainCompletions' : true,
-    // 'editor.wordWrapColumn'                                       : 30,
     'typescript.tsserver.experimental.enableProjectDiagnostics'   : true, // to test
   }
 }
 
 function getEditor(){
   return {
-    // 'editor.codeActionsOnSave' : {
-    //   'source.fixAll'          : false,
-    //   'source.organizeImports' : false,
-    // },
+
     'editor.cursorSmoothCaretAnimation'        : 'on',
     'editor.cursorStyle'                       : 'line-thin',
     'editor.fontLigatures'                     : true,
@@ -317,11 +313,9 @@ function getAdditionalSettings(){
     'json.format.enable'                                     : false,
     'json.maxItemsComputed'                                  : 1000,
     'magicBeans.RANDOM_FILE_ALLOWED'                         : [
-      // '.css',
-      // '.scss',
       '.feature',
       '.js',
-      'README.md',
+      '.md',
       'package.json',
       '.rs',
       '.vtl',
@@ -376,9 +370,9 @@ function getAdditionalSettings(){
     'search.seedOnFocus'                                    : false,
     'search.smartCase'                                      : true,
     'search.useReplacePreview'                              : false,
+    // test tasks
     'task.autoDetect'                                       : 'off',
-    'task.quickOpen.detail'                                 : false,
-    'telemetry.enableTelemetry'                             : false,
+    'task.quickOpen.detail'                                 : true,
     'telemetry.telemetryLevel'                              : 'off',
     'terminal.integrated.gpuAcceleration'                   : 'off',
     'typescript.inlayHints.enumMemberValues.enabled'        : false,

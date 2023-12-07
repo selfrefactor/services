@@ -1,5 +1,18 @@
 # Vscode-control
 
+## Knowledge
+
+no longer is possible to copy deleted lines in git diff. you have to use right click and explicitly select copy deleted lines.
+
+## Deleted
+
+    // 'editor.codeActionsOnSave' : {
+    //   'source.fixAll'          : false,
+    //   'source.organizeImports' : false,
+    // },
+    // 'editor.wordWrapColumn'                                       : 30,
+
+
 ## Alternative backgrounds
 
 `x=anything yarn ond`
