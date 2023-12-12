@@ -11,7 +11,9 @@ no longer is possible to copy deleted lines in git diff. you have to use right c
     //   'source.organizeImports' : false,
     // },
     // 'editor.wordWrapColumn'                                       : 30,
-
+    // '[javascript]'                                   : { 'editor.formatOnSave' : true },
+    // '[typescript]'                                   : { 'editor.formatOnSave' : true },
+    // 'editor.formatOnSave'                            : false,
 
 ## Alternative backgrounds
 
