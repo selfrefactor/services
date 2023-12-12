@@ -94,5 +94,6 @@
     ".idea",
     ".git",
     ".cache"
-  ]
+  ],
+  "workbench.editor.dragToOpenWindow": false
 }
