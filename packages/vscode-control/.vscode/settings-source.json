@@ -95,5 +95,7 @@
     ".git",
     ".cache"
   ],
-  "workbench.editor.dragToOpenWindow": false
+  "workbench.editor.dragToOpenWindow": false,
+  "codemetrics.basics.CodeLensEnabled": false,
+  "codemetrics.basics.ComplexityTemplate": "{0} ({1})"
 }
