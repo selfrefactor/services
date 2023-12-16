@@ -1,16 +1,16 @@
-import { copySync, readJson, writeJsonSync } from 'fs-extra'
-import { defaultTo, execSafe } from 'helpers-fn'
-import { resolve } from 'path'
-import { toDecimal } from 'rambdax'
+const { copySync, readJson, writeJsonSync } = require('fs-extra')
+const { defaultTo, execSafe } = require('helpers-fn')
+const { resolve } = require('path')
+const { toDecimal } = require('rambdax')
 
-import settings from '../.vscode/settings-source'
-import {
+const settings = require('../.vscode/settings-source')
+const {
   JS_SNIPPETS,
   KEYBINDING,
   SETTINGS,
   TS_SNIPPETS,
   TSX_SNIPPETS,
-} from './constants.js'
+} = require('./constants.js')
 
 // const ALTERNATIVE_DARK_BACKGROUND =
 /**
@@ -167,7 +167,6 @@ function testNewSettings(){
 
 function getEditor(){
   return {
-
     'editor.cursorSmoothCaretAnimation'        : 'on',
     'editor.cursorStyle'                       : 'line-thin',
     'editor.fontLigatures'                     : true,
@@ -309,32 +308,32 @@ function getAdditionalSettings(){
     'js/ts.implicitProjectConfig.checkJs'                    : true,
     'json.format.enable'                                     : false,
     'json.maxItemsComputed'                                  : 1000,
-    'npm.autoDetect'                                        : 'off',
-    'npm.fetchOnlinePackageInfo'                            : false,
-    'npm.packageManager'                                    : 'yarn',
-    'scm.defaultViewMode'                                   : 'tree',
-    'search.collapseResults'                                : 'alwaysCollapse',
-    'search.seedOnFocus'                                    : false,
-    'search.smartCase'                                      : true,
-    'search.useReplacePreview'                              : false,
+    'npm.autoDetect'                                         : 'off',
+    'npm.fetchOnlinePackageInfo'                             : false,
+    'npm.packageManager'                                     : 'yarn',
+    'scm.defaultViewMode'                                    : 'tree',
+    'search.collapseResults'                                 : 'alwaysCollapse',
+    'search.seedOnFocus'                                     : false,
+    'search.smartCase'                                       : true,
+    'search.useReplacePreview'                               : false,
     // test tasks
-    'task.autoDetect'                                       : 'off',
-    'task.quickOpen.detail'                                 : true,
-    'telemetry.telemetryLevel'                              : 'off',
-    'terminal.integrated.gpuAcceleration'                   : 'off',
-    'typescript.inlayHints.enumMemberValues.enabled'        : false,
-    'typescript.inlayHints.functionLikeReturnTypes.enabled' : false,
-    'typescript.inlayHints.parameterTypes.enabled'          : false,
-    'typescript.inlayHints.variableTypes.enabled'           : false,
-    'typescript.updateImportsOnFileMove.enabled'            : 'always',
-    'update.mode'                                           : 'none',
+    'task.autoDetect'                                        : 'off',
+    'task.quickOpen.detail'                                  : true,
+    'telemetry.telemetryLevel'                               : 'off',
+    'terminal.integrated.gpuAcceleration'                    : 'off',
+    'typescript.inlayHints.enumMemberValues.enabled'         : false,
+    'typescript.inlayHints.functionLikeReturnTypes.enabled'  : false,
+    'typescript.inlayHints.parameterTypes.enabled'           : false,
+    'typescript.inlayHints.variableTypes.enabled'            : false,
+    'typescript.updateImportsOnFileMove.enabled'             : 'always',
+    'update.mode'                                            : 'none',
     // click to go to recent files
-    'window.commandCenter'                                  : false,
-    'window.menuBarVisibility'                              : 'toggle',
-    'window.title'                                          : '${dirty}${activeEditorMedium}',
-    'window.titleBarStyle'                                  : 'custom',
-    'zenMode.hideTabs'                                      : false,
-    'zenMode.restore'                                       : false,
+    'window.commandCenter'                                   : false,
+    'window.menuBarVisibility'                               : 'toggle',
+    'window.title'                                           : '${dirty}${activeEditorMedium}',
+    'window.titleBarStyle'                                   : 'custom',
+    'zenMode.hideTabs'                                       : false,
+    'zenMode.restore'                                        : false,
   }
 }
 
