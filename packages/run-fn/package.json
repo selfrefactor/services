@@ -1,6 +1,6 @@
 {
 	"name": "run-fn",
-	"version": "3.34.1",
+	"version": "3.34.2",
 	"description": "Collections of useful CLI functions",
 	"main": "./cli.js",
 	"bin": {
@@ -27,6 +27,6 @@
 		"string-fn": "3.1.0"
 	},
 	"devDependencies": {
-		"typescript": "5.3.2"
+		"typescript": "5.3.3"
 	}
 }
