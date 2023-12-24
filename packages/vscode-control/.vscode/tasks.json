@@ -12,8 +12,17 @@
     },
     {
       "type": "shell",
-      "label": "bigger all",
+      "label": "bigger both",
       "command": "yarn bigger:1 && yarn bigger:2",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "shell",
+      "label": "normal both",
+      "command": "yarn on:1 && yarn on:2",
       "group": {
         "kind": "none",
         "isDefault": false

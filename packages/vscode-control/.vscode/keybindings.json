@@ -26,7 +26,7 @@
     "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
   },
   {
-    "key": "alt+p",
+    "key": "capslock p",
     "priority": true,
     "hint": "parameter",
     "command": "editor.action.triggerParameterHints",
@@ -285,7 +285,7 @@
     "comment": "Xplain - Used with Github Copilot extension to explain the code"
   },
   {
-    "key": "capslock p",
+    "key": "alt+p",
     "when": "!activeEditorIsPinned",
     "priority": true,
     "command": "workbench.action.pinEditor",
@@ -297,7 +297,7 @@
     "when": "!activeEditorIsPinned"
   },
   {
-    "key": "capslock p",
+    "key": "alt+p",
     "command": "workbench.action.unpinEditor",
     "when": "activeEditorIsPinned",
     "hint": "PIN"
@@ -429,7 +429,7 @@
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "alt+p",
+    "key": "capslock p",
     "priority": true,
     "comment": "Peek Implementation",
     "command": "editor.action.peekImplementation",

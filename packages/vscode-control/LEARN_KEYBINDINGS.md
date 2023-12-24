@@ -18,15 +18,9 @@
 
 ## ALT  P
 
-`editor.action.triggerParameterHints`
+`workbench.action.pinEditor`
 
-> HINT: PARAMETER
-
-## ALT  P
-
-`editor.action.peekImplementation`
-
-> Peek Implementation
+> HINT: PIN
 
 ## ALT  R
 
@@ -106,9 +100,15 @@
 
 ## CAPSLOCK P
 
-`workbench.action.pinEditor`
+`editor.action.triggerParameterHints`
 
-> HINT: PIN
+> HINT: PARAMETER
+
+## CAPSLOCK P
+
+`editor.action.peekImplementation`
+
+> Peek Implementation
 
 ## CAPSLOCK R
 
@@ -204,6 +204,12 @@
 
 > open side panel
 
+## ALT  P
+
+`workbench.action.unpinEditor`
+
+> HINT: PIN
+
 ## ALT  S
 
 `workbench.action.toggleSplitEditorInGroup`
@@ -259,12 +265,6 @@
 `magicBeans.sortLines`
 
 > lines
-
-## CAPSLOCK P
-
-`workbench.action.unpinEditor`
-
-> HINT: PIN
 
 ## CAPSLOCK T
 

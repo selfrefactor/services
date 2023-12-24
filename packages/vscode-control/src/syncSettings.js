@@ -279,6 +279,7 @@ function getAdditionalSettings(){
       '**/.hg'            : false,
       '**/.idea'          : true,
       '**/.svn'           : false,
+      '**/coverage'    : true,
       '**/coverage-ts'    : true,
       '**/CVS'            : false,
       '**/node_modules'   : true,

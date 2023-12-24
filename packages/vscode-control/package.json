@@ -11,6 +11,9 @@
 		"light:2": "BETA=ON THEME=StrangeBrew node ./src/syncSettings",
 		"light": "yarn light:1 && yarn light:2",
 		"small:1": "MODE=small node ./src/syncSettings",
+
+
+		
 		"read:small:1": "MODE=small READ=ON node ./src/syncSettings",
 		"read:1": "READ=ON node ./src/syncSettings",
 		"read:big:1": "MODE=big READ=ON node ./src/syncSettings",
