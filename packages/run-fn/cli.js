@@ -10,8 +10,6 @@ const { dvd } = require('./services/dvd/dvd.js')
 const { deploy } = require('./services/de/deploy')
 const { commit } = require('./services/commit/commit')
 const { fastDeploy } = require('./services/d/fastDeploy')
-const { lintFile } = require('./services/lintFile/lintFile')
-const { lintFolder } = require('./services/lintFolder/lintFolder')
 const { log } = require('helpers-fn')
 const { read } = require('./services/read/read')
 const { pullAll } = require('./services/pull-all/pull-all')
@@ -24,26 +22,6 @@ async function runFn(){
   }
   if ([ 'pull', 'pull-all' ].includes(firstArgument)){
     return pullAll()
-  }
-  if ([ 'lintfolder', 'lint', 'l' ].includes(firstArgument)){
-    return lintFolder({ fastFlag : false, useAlternativeExecCommand: false })
-  }
-  if ([ 'lintfolderalt', 'lintalt', 'lalt' ].includes(firstArgument)){
-    return lintFolder({ fastFlag : false, useAlternativeExecCommand: true })
-  }
-
-  if ([ 'lintfast', 'lintx', 'lx' ].includes(firstArgument)){
-    return lintFolder({ fastFlag : true, useAlternativeExecCommand: false })
-  }
-  if ([ 'lintfastalt', 'lintxalt', 'lxalt' ].includes(firstArgument)){
-    return lintFolder({ fastFlag : true, useAlternativeExecCommand: true })
-  }
-
-  if ([ 'lintfile', 'lf' ].includes(firstArgument)){
-    return lintFile(secondArgument)
-  }
-  if ([ 'lintfilealt', 'lfalt' ].includes(firstArgument)){
-    return lintFile(secondArgument, true)
   }
 
   if (firstArgument === 'bump'){
