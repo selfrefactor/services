@@ -28,12 +28,6 @@
 
 > HINT: RESTART
 
-## ALT  W
-
-`niketa.request.test.run`
-
-> HINT: LEGACY AS BEFORE IT WAS THE SAME
-
 ## ALT  Z
 
 `workbench.action.toggleZenMode`
@@ -121,12 +115,6 @@
 `github.copilot.interactiveEditor.explain`
 
 > Xplain - Used with Github Copilot extension to explain the code
-
-## CTRL  1
-
-`niketa.lint.file`
-
-> HINT: LINT
 
 ## CTRL  M
 
@@ -220,6 +208,10 @@
 
 `terminal.focus`
 
+## ALT  W
+
+`niketa.request.test.run.second`
+
 ## CAPSLOCK -
 
 `git.push`
@@ -279,6 +271,10 @@
 ## CAPSLOCK Z
 
 `workbench.action.gotoSymbol`
+
+## CTRL  1
+
+`niketa.request.test.run.first`
 
 ## CTRL  3
 
