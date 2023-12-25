@@ -1,1 +1,0 @@
-run dep&&yarn&&cd demo&&run dep&&yarn&&cd ../demo_with_prettier&&run dep&&yarn

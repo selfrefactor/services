@@ -7,7 +7,6 @@ const { drop } = require('rambdax')
 const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
 const { dvd } = require('./services/dvd/dvd.js')
-const { niketa } = require('./services/niketa/niketa')
 const { deploy } = require('./services/de/deploy')
 const { commit } = require('./services/commit/commit')
 const { fastDeploy } = require('./services/d/fastDeploy')
@@ -25,9 +24,6 @@ async function runFn(){
   }
   if ([ 'pull', 'pull-all' ].includes(firstArgument)){
     return pullAll()
-  }
-  if (firstArgument === 'niketa'){
-    return niketa()
   }
   if ([ 'lintfolder', 'lint', 'l' ].includes(firstArgument)){
     return lintFolder({ fastFlag : false, useAlternativeExecCommand: false })

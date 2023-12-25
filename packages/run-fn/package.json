@@ -17,7 +17,6 @@
 	"author": "self_refactor",
 	"license": "MIT",
 	"dependencies": {
-		"niketa": "1.10.4",
 		"commit-fn": "2.7.0",
 		"dep-fn": "2.2.2",
 		"fs-extra": "11.2.0",
