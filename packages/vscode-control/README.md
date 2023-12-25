@@ -15,6 +15,11 @@ no longer is possible to copy deleted lines in git diff. you have to use right c
     // '[typescript]'                                   : { 'editor.formatOnSave' : true },
     // 'editor.formatOnSave'                            : false,
 
+    "miguelsolorio.symbols",
+    "team-sapling.sapling",
+    "GitLab.gitlab-workflow",
+    "nexmoe.monitor-pro",
+
 ## Alternative backgrounds
 
 `x=anything yarn ond`
