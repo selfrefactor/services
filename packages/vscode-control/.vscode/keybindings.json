@@ -154,16 +154,12 @@
     "command": "terminal.focus"
   },
   {
-    "command": "niketa.request.test.run",
-    "key": "alt+w",
-    "priority": true,
-    "hint": "legacy as before it was the same"
+    "command": "niketa.request.test.run.second",
+    "key": "alt+w"
   },
   {
-    "command": "niketa.lint.file",
-    "key": "ctrl+1",
-    "priority": true,
-    "hint": "LINT"
+    "command": "niketa.request.test.run.first",
+    "key": "ctrl+1"
   },
   {
     "key": "alt+s",
