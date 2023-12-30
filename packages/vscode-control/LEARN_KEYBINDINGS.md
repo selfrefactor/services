@@ -210,7 +210,7 @@
 
 ## ALT  W
 
-`niketa.request.test.run.second`
+`niketa.request.run.second`
 
 ## CAPSLOCK -
 
@@ -274,7 +274,7 @@
 
 ## CTRL  1
 
-`niketa.request.test.run.first`
+`niketa.request.run.first`
 
 ## CTRL  3
 

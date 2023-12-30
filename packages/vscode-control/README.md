@@ -6,6 +6,9 @@ no longer is possible to copy deleted lines in git diff. you have to use right c
 
 ## Deleted
 
+unpin/pin doesn't work correctly
+===
+
     // 'editor.codeActionsOnSave' : {
     //   'source.fixAll'          : false,
     //   'source.organizeImports' : false,
@@ -14,6 +17,7 @@ no longer is possible to copy deleted lines in git diff. you have to use right c
     // '[javascript]'                                   : { 'editor.formatOnSave' : true },
     // '[typescript]'                                   : { 'editor.formatOnSave' : true },
     // 'editor.formatOnSave'                            : false,
+===
 
     "miguelsolorio.symbols",
     "team-sapling.sapling",
