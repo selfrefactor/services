@@ -109,6 +109,7 @@ async function generateAndShowReport(reportObject){
       output += namesList.join('\n')
     }
   })
+  if(!output) return
   const projectName = last(vscode.workspace.workspaceFolders[ 0 ].uri.path.split('/'))
   const outputLocation = `${ __dirname }/symbols-list-${ projectName }.txt`
   if (fs.existsSync(outputLocation)) fs.unlinkSync(outputLocation)
