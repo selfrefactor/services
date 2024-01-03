@@ -168,7 +168,7 @@ function testNewSettings(){
 function getEditor(){
   return {
     'editor.cursorSmoothCaretAnimation'        : 'on',
-    'editor.cursorStyle'                       : 'line-thin',
+    'editor.cursorStyle'                       : 'line', // line-thin | line | block | underline | underline-thin
     'editor.fontLigatures'                     : true,
     'editor.guides.bracketPairsHorizontal'     : false,
     'editor.guides.highlightActiveIndentation' : false,

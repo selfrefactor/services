@@ -16,12 +16,6 @@
 
 > HINT: IMPLEMENTATION
 
-## ALT  P
-
-`workbench.action.pinEditor`
-
-> HINT: PIN
-
 ## ALT  R
 
 `workbench.action.debug.restart`
@@ -191,12 +185,6 @@
 `workbench.action.toggleActivityBarVisibility`
 
 > open side panel
-
-## ALT  P
-
-`workbench.action.unpinEditor`
-
-> HINT: PIN
 
 ## ALT  S
 
