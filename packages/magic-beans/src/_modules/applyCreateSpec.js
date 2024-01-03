@@ -2,29 +2,43 @@ const { readFileSync } = require('fs')
 const { remove, match } = require('rambdax')
 const { specTemplate } = require('./specTemplate')
 
+function getFirstExportedFunction(fileContent){
+  const [matchedTypescript] = match(/export\s+(?:async\s+)?function\s+(\w+)/g, fileContent)
+  const [matchedJavascript] = match(/exports\.(\w+)\s*=/g, fileContent)
+
+  if(!matchedTypescript && !matchedJavascript) return {success: false}
+
+  if(
+    matchedJavascript
+  ){
+    return {
+      success: true,
+      firstExportedFunction: remove(['exports.', '='], matchedJavascript).trim(),
+      isJavascript: true,
+    }
+  }
+
+  const isAsync = matchedTypescript.includes('async')
+
+  return {
+    success: true,
+    firstExportedFunction: remove(['export', 'function', 'async'], matchedTypescript).trim(),
+    isAsync,
+    isJavascript: false,
+  }
+}
+
 function applyCreateSpec(filePath, fileName){
   const content = readFileSync(filePath).toString()
-  const lines = content.split('\n')
+  let {success, firstExportedFunction, isJavascript, isAsync} = getFirstExportedFunction(content)
+  if(!success) return
 
-  let toReturn
-  lines.forEach(line => {
-    const [ matched ] = match(/export\s(async\s)?function\s[a-zA-Z]+/, line)
-    if (matched){
-      found = true
-      const [ startExportStatement ] = match(/export\s(async\s)?function/,
-        matched)
-      if (!startExportStatement) return
-
-      const methodName = remove(startExportStatement, matched)
-      toReturn = specTemplate({
-        asyncFlag  : startExportStatement.includes('async'),
-        methodName : methodName.trim(),
-        fileName,
-      })
-    }
+  return specTemplate({
+    isAsync,
+    isJavascript,
+    methodName : firstExportedFunction,
+    fileName,
   })
-
-  return toReturn
 }
 
 exports.applyCreateSpec = applyCreateSpec
