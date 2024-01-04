@@ -1,41 +1,48 @@
-const vscode = require('vscode')
-const { update, last } = require('rambdax')
+const { remove } = require('rambdax')
+const {splitPerLine, indent} = require('string-fn')
 
+function convertComment (text, charsPerLine, leftIndent = 3){
+  let lines = splitPerLine({
+    text: remove('//', text).trim() ,
+    perLine: charsPerLine,
+  })
 
-function applyfixComment(
-  textEditor, startLine
-){
-  const line = textEditor.document.lineAt(startLine).text
-  1
-  // const lines = []
-  // for (let i = startLine; i <= endLine; i++){
-  //   lines.push(line)
-  // }
-
-  // if (lines.length === 0) return 
-  // if (lines.length === 1){
-  //   copy(lines[ 0 ].trim())
-
-  //   return
-  // }
-  // const withFirst = update(
-  //   0, lines[ 0 ].trimLeft(), lines
-  // )
-  // const withLast = update(
-  //   lines.length - 1,
-  //   last(lines).trimRight(),
-  //   withFirst
-  // )
+  return lines.map(line => indent(`// ${ line }`, leftIndent))
 }
 
-function fixCommentFn(){
+function getIndent(line){
+  return line.split('//')[0].length
+}
+
+async function applyFixComment(
+  vscode, textEditor, startLine
+){
+  const lineRaw = textEditor.document.lineAt(startLine).text
+  let leftIndent = getIndent(lineRaw)
+  let line = lineRaw.trim()
+  if(!line.startsWith('//')) return
+  let newLines = convertComment(line, 50, leftIndent)
+  const startPosition = new vscode.Position(startLine, 0);
+  const endPosition = new vscode.Position(startLine+1, 0);
+  const activeEditor = vscode.window.activeTextEditor;
+  if (!activeEditor) {
+    return;
+  }
+  activeEditor.edit(editBuilder => {
+    editBuilder.replace(new vscode.Range(startPosition, endPosition), newLines.join('\n')  + '\n');
+  });
+}
+
+async function fixCommentFn(vscode){
   const textEditor = vscode.window.activeTextEditor
   const { selection } = textEditor
 
-  return applyfixComment(
+ applyFixComment(
+    vscode,
     textEditor,
     selection.start.line,
   )
 }
 
-exports.fixComment = () => fixCommentFn()
+exports.convertComment = convertComment
+exports.fixComment = (vscode) => () => fixCommentFn(vscode)

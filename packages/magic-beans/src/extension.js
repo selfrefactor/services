@@ -36,7 +36,7 @@ function activate(context){
   const copyTrimmedCommand = vscode.commands.registerCommand('magicBeans.copyTrimmed',
     copyTrimmed)
   const fixCommentCommand = vscode.commands.registerCommand('magicBeans.fixComment',
-  fixComment)
+  fixComment(vscode))
   const createSpecCommand = vscode.commands.registerCommand('magicBeans.createSpec',
     createSpec)
   const slowScrollCommand = vscode.commands.registerCommand(SLOW_SCROLL_INIT,

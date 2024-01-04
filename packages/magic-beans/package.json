@@ -1,6 +1,7 @@
 {
 	"name": "magic-beans",
 	"scripts": {
+		"dev": "jest -u src/fixComment.spec.js",
 		"test": "jest src/_modules",
 		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
