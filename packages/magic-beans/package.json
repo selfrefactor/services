@@ -10,7 +10,7 @@
 	"dependencies": {
 		"helpers-fn": "1.8.1",
 		"rambdax": "10.1.0",
-		"string-fn": "3.2.2"
+		"string-fn": "3.3.1"
 	},
 	"devDependencies": {
 		"@babel/core": "7.23.7",
@@ -36,7 +36,7 @@
 	"description": "Magic-like helpers",
 	"publisher": "selfrefactor",
 	"engines": {
-		"vscode": "^1.74.0"
+		"vscode": "^1.34.0"
 	},
 	"categories": [
 		"Other"
