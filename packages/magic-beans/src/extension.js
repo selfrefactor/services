@@ -6,6 +6,7 @@ const {
 } = require('./constants')
 const { configAnt } = require('./ants/config')
 const { copyTrimmed } = require('./copyTrimmed')
+const { fixComment } = require('./fixComment')
 const { createSpec } = require('./createSpec')
 const { fixCamelcaseRefactoring } = require('./fixCamelcaseRefactoring')
 const { formatJson } = require('./format-json')
@@ -34,6 +35,8 @@ function activate(context){
     formatJson)
   const copyTrimmedCommand = vscode.commands.registerCommand('magicBeans.copyTrimmed',
     copyTrimmed)
+  const fixCommentCommand = vscode.commands.registerCommand('magicBeans.fixComment',
+  fixComment)
   const createSpecCommand = vscode.commands.registerCommand('magicBeans.createSpec',
     createSpec)
   const slowScrollCommand = vscode.commands.registerCommand(SLOW_SCROLL_INIT,
@@ -47,6 +50,7 @@ function activate(context){
 
   context.subscriptions.push(symbolsListCommand)
   context.subscriptions.push(copyTrimmedCommand)
+  context.subscriptions.push(fixCommentCommand)
   context.subscriptions.push(createSpecCommand)
   context.subscriptions.push(slowScrollCommand)
   context.subscriptions.push(requestRandomFileCommand)

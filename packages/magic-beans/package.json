@@ -43,6 +43,7 @@
 	"activationEvents": [
 		"onCommand:magicBeans.betterCut",
 		"onCommand:magicBeans.copyTrimmed",
+		"onCommand:magicBeans.fixComment",
 		"onCommand:magicBeans.createSpec",
 		"onCommand:magicBeans.fixCamelcaseRefactoring",
 		"onCommand:magicBeans.formatJson",
@@ -133,6 +134,11 @@
 			{
 				"command": "magicBeans.copyTrimmed",
 				"key": "alt+c",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "magicBeans.fixComment",
+				"key": "capslock c",
 				"when": "editorTextFocus"
 			}
 		],
