@@ -1,5 +1,5 @@
 const { remove } = require('rambdax')
-const {splitPerLine, indent} = require('string-fn')
+const {splitPerLine, indent, getIndent} = require('string-fn')
 
 function convertComment (text, charsPerLine, leftIndent = 3){
   let lines = splitPerLine({
@@ -8,10 +8,6 @@ function convertComment (text, charsPerLine, leftIndent = 3){
   })
 
   return lines.map(line => indent(`// ${ line }`, leftIndent))
-}
-
-function getIndent(line){
-  return line.split('//')[0].length
 }
 
 async function applyFixComment(
