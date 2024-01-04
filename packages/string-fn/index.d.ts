@@ -1,32 +1,38 @@
-export function between(str: string, left: string, right?: string): string
-export function camelCase(str: string, extraLatin?: boolean): string
-export function constantCase(str: string, extraLatin?: boolean): string
-export function count(str: string, substr: string): number
+export function between(text: string, left: string, right?: string): string
+export function camelCase(text: string, extraLatin?: boolean): string
+export function constantCase(text: string, extraLatin?: boolean): string
+export function count(text: string, subtext: string): number
 export function distance(x: string, y: string): number
 export function distanceGerman(x: string, y: string): number
-export function dotCase(str: string, extraLatin?: boolean): string
-export function glob(str: string, globRule: string): boolean
-export function indent(str: string, indentCount: number): string
-export function toFixedLineLength(str: string, lineLength: number): string
-export function getIndent(str: string): number
+export function dotCase(text: string, extraLatin?: boolean): string
+export function glob(text: string, globRule: string): boolean
+export function indent(text: string, indentCount: number): string
+export function isTitleCase(text: string): boolean
+export function isKebabCase(text: string): boolean
+export function isCamelCase(text: string): boolean
+export function isConstantCase(text: string): boolean
+export function isDotCase(text: string): boolean
+export function isSnakeCase(text: string): boolean
+export function toFixedLineLength(text: string, lineLength: number): string
+export function getIndent(text: string): number
 export function isLetter(char: string): boolean
 export function isPunctuation(char: string): boolean
-export function kebabCase(str: string, extraLatin?: boolean): string
+export function kebabCase(text: string, extraLatin?: boolean): string
 export function ms(input: string): number
 export function msToText(ms: number): string
-export function pascalCase(str: string, extraLatin?: boolean): string
-export function removeIndent(str: string): string
-export function reverse(str: string): string
-export function seoTitle(str: string, limit?: number): string
-export function shuffle(str: string): string
-export function snakeCase(str: string, extraLatin?: boolean): string
+export function pascalCase(text: string, extraLatin?: boolean): string
+export function removeIndent(text: string): string
+export function reverse(text: string): string
+export function seoTitle(text: string, limit?: number): string
+export function shuffle(text: string): string
+export function snakeCase(text: string, extraLatin?: boolean): string
 export function splitSentence(sentence: string): string[]
-export function stripPunctuation(str: string): string
-export function stripTags(str: string): string
-export function titleCase(str: string, extraLatin?: boolean): string
-export function trim(str: string): string
-export function words(str: string): string[]
-export function wordsX(str: string): string[]
+export function stripPunctuation(text: string): string
+export function stripTags(text: string): string
+export function titleCase(text: string, extraLatin?: boolean): string
+export function trim(text: string): string
+export function words(text: string): string[]
+export function wordsX(text: string): string[]
 export function randomString(
   length?: number,
   alphabetOnlyFlag?: boolean
