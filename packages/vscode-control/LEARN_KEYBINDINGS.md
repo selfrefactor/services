@@ -196,10 +196,6 @@
 
 `terminal.focus`
 
-## ALT  W
-
-`niketa.request.run.second`
-
 ## CAPSLOCK -
 
 `git.push`
@@ -259,10 +255,6 @@
 ## CAPSLOCK Z
 
 `workbench.action.gotoSymbol`
-
-## CTRL  1
-
-`niketa.request.run.first`
 
 ## CTRL  3
 
@@ -325,6 +317,7 @@
 ## Convenient keys
 
 * ctrl+0
+* ctrl+1
 * ctrl+4
 * ctrl+5
 * ctrl+6
@@ -345,6 +338,7 @@
 * alt+4
 * alt+q
 * alt+v
+* alt+w
 * alt+-
 * alt+=
 * capslock 0

@@ -154,14 +154,6 @@
     "command": "terminal.focus"
   },
   {
-    "command": "niketa.request.run.second",
-    "key": "alt+w"
-  },
-  {
-    "command": "niketa.request.run.first",
-    "key": "ctrl+1"
-  },
-  {
     "key": "alt+s",
     "hint": "SPLIT",
     "command": "workbench.action.toggleSplitEditorInGroup"
