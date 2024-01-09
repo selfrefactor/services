@@ -1,0 +1,10 @@
+{
+  "name": "price-of-fp-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "fp-ts": "^2.16.2",
+    "rambda": "^8.6.0"
+  }
+}

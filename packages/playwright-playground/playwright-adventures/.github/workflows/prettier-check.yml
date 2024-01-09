@@ -1,0 +1,64 @@
+name: Prettier check
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0' # Once a week: "At 00:00 on Sunday."
+
+defaults:
+  run:
+    shell: pwsh
+
+jobs:
+  main:
+    name: Prettier check
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dump github context for debug purposes
+      env:
+        GITHUB_CONTEXT: ${{ toJSON(github) }}
+      run: $env:GITHUB_CONTEXT
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Run prettier
+      id: prettier
+      run: |
+        $demos = @(
+          'accessibility-axe',`
+          'accessibility-lighthouse',`
+          'code-coverage-with-istanbul-via-webpack-babel-plugin',`
+          'code-coverage-with-monocart-reporter',`
+          'docker',`
+          'fixtures',`
+          'monocart-reporter-advanced-config',`
+          'stale-screenshots-cleanup')
+
+        $violationsFound = $false
+        foreach ($demo in $demos)
+        {
+          echo "::group::$demo"
+          cd "${{ github.workspace }}/demos/$demo"
+          npm ci
+          npm run prettier:check
+          if($LASTEXITCODE -ne 0)
+          {
+            $violationsFound = $true
+            Write-Output "::error::Prettier found violations with the code formatting for the $demo demo."
+          }
+
+          echo "::endgroup::"
+        }
+
+        if($violationsFound)
+        {
+          EXIT 1
+        }
+
+        Write-Output "::notice::No violations were found with the code formatting."
+        EXIT 0
