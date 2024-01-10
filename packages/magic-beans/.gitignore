@@ -1,3 +1,6 @@
+scripts/tasks/outputs/eslint-output-file.txt
+scripts/tasks/outputs/jest-output-file.txt
+scripts/tasks/outputs/eslint-all-output-file.txt
 **/symbols-list*
 # Logs
 logs
