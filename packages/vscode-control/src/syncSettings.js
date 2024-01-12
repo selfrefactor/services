@@ -411,6 +411,12 @@ async function syncSettings(){
       ...currentSettings,
       ...alternativeBackgrounds,
     })
+  if(READ_MODE){
+    return {
+      ...currentSettings,
+    'workbench.editor.enablePreview' : true,
+    }
+  }
 
   const newOptions = {
     ...settings,
@@ -423,7 +429,7 @@ async function syncSettings(){
     'workbench.colorTheme'                     : THEME ?
       THEME :
       currentSettings[ 'workbench.colorTheme' ],
-    'workbench.editor.enablePreview' : READ_MODE,
+    'workbench.editor.enablePreview' : false,
   }
   syncFn(newOptions)
 }
