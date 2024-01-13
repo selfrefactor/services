@@ -1,5 +1,5 @@
 const { copySync, readJson, writeJsonSync } = require('fs-extra')
-const { defaultTo, execSafe } = require('helpers-fn')
+const { defaultTo, execSafe, log } = require('helpers-fn')
 const { resolve } = require('path')
 const { toDecimal } = require('rambdax')
 
@@ -412,10 +412,11 @@ async function syncSettings(){
       ...alternativeBackgrounds,
     })
   if(READ_MODE){
-    return {
+    log('READ','info')
+    return syncFn({
       ...currentSettings,
     'workbench.editor.enablePreview' : true,
-    }
+    })
   }
 
   const newOptions = {
