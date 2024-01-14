@@ -29,7 +29,10 @@ async function runFn(){
     return bump(secondArgument)
   }
   if (firstArgument === 'lint:file'){
-    return lintFile(secondArgument)
+    return lintFile(secondArgument, false)
+  }
+  if (firstArgument === 'lint:file:unsafe'){
+    return lintFile(secondArgument, true)
   }
 
   if (firstArgument === 'dep'){

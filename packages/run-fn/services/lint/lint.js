@@ -25,19 +25,20 @@ async function lintFileWithPrettier(filePath) {
   await exec(command)
 }
 
-async function biome(filePath) {
+async function biome(filePath, applyUnsafe) {
   const label = `${filePath} - biome`
   console.time(label)
-  const command = `node_modules/@biomejs/biome/bin/biome check --apply-unsafe ${filePath}`
+  const command = `node_modules/@biomejs/biome/bin/biome check ${
+    applyUnsafe ? '--apply-unsafe' : ''
+  } ${filePath}`
   const { errorMessage } = await exec(command)
   console.timeEnd(label)
   return errorMessage ?? false
 }
 
-async function lintFn(filePath) {
-  console.log(filePath)
+async function lintFn(filePath, applyUnsafe) {
   await lintFileWithPrettier(filePath)
-  const biomeOutput = await biome(filePath)
+  const biomeOutput = await biome(filePath, applyUnsafe)
   if (biomeOutput) console.log( '\n', biomeOutput, '\n')
 }
 
