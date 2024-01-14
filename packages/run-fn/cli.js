@@ -13,6 +13,7 @@ const { fastDeploy } = require('./services/d/fastDeploy')
 const { log } = require('helpers-fn')
 const { read } = require('./services/read/read')
 const { pullAll } = require('./services/pull-all/pull-all')
+const { lintFile } = require('./services/lint/lint')
 
 async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
@@ -26,6 +27,9 @@ async function runFn(){
 
   if (firstArgument === 'bump'){
     return bump(secondArgument)
+  }
+  if (firstArgument === 'lint:file'){
+    return lintFile(secondArgument)
   }
 
   if (firstArgument === 'dep'){
