@@ -1,4 +1,4 @@
-import { playwrightInit } from '../playwright-init'
+import { playwrightInit } from '../playwright-fn'
 import {wrap} from 'playwright-wrap'
 const REDDIT = 'https://reddit.com'
 const GITHUB = 'https://github.com'

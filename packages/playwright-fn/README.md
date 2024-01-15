@@ -1,10 +1,10 @@
-# Playwright-init
+# playwright-fn
 
 Package to easier initialization of `Playwright`.
 
 ## Install
 
-`yarn add playwright-init`
+`yarn add playwright-fn`
 
 ## Issues
 

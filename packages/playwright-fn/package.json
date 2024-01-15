@@ -1,12 +1,12 @@
 {
-	"name": "playwright-init",
+	"name": "playwright-fn",
 	"scripts": {
 		"test": "yarn test:d&&yarn test:m",
 		"test:d": "PLAYWRIGHT_DEBUG=ON jest src/tests/desktop.spec.js",
 		"test:m": "jest src/tests/mobile.spec.js"
 	},
 	"typings": "./index.d.ts",
-	"main": "./src/playwright-init.js",
+	"main": "./src/playwright-fn.js",
 	"version": "0.7.0",
 	"dependencies": {
 		"@cliqz/adblocker-playwright": "1.23.8",
@@ -14,7 +14,6 @@
 	},
 	"peerDependencies": {
 		"playwright": "1.6.1",
-		"playwright-wrap": "0.1.0",
 		"rambdax": "7.2.0",
 		"string-fn": "3.1.0"
 	},
@@ -30,7 +29,7 @@
 		"rambdax": "8.1.0",
 		"string-fn": "3.1.0"
 	},
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/playwright-init",
+	"repository": "https://github.com/selfrefactor/services/tree/master/packages/playwright-fn",
 	"license": "MIT",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"private": false,

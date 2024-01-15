@@ -1,4 +1,4 @@
-import { playwrightInit } from '../playwright-init'
+import { playwrightInit } from '../playwright-fn'
 import {wrap, playwrightRun} from 'playwright-wrap'
 import {delay} from 'rambdax'
 const GITHUB = 'https://github.com'

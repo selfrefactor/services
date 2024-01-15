@@ -1,4 +1,4 @@
-import { playwrightInit } from '../src/playwright-init'
+import { playwrightInit } from '../src/playwright-fn'
 
 const GITHUB = 'https://github.com'
 
