@@ -1,17 +1,13 @@
-import { playwrightInit } from '../playwright-fn'
-import {wrap, playwrightRun} from 'playwright-wrap'
-import {delay} from 'rambdax'
+const { delay } = require('rambdax');
+const { playwrightInit, wrap, playwrightRun } = require('../src/playwright-fn');
 const GITHUB = 'https://github.com'
-const CHORDU = 'https://chordu.com/chords-tabs-warsaw-or-the-first-breath-you-take-after-you-give-up-id_Ppfmj8ZAvuE'
 
 jest.setTimeout(60000)
-const POST_BUTTON = '//h1[contains(text(), \"the world builds\")]'
 
 async function executeTest(browserMode){
   const { browser, page } = await playwrightInit({
     headless : false,
     logFlag  : false,
-    // resolution: {y: 2000, x:600},
     resolution: {x: 1400, y:800},
     browser  : browserMode,
     url      : GITHUB,
@@ -24,10 +20,8 @@ async function executeTest(browserMode){
     const allClassNames = await _.getAllClassNames('div')
     expect(allClassNames.length).toBeGreaterThan(30)
     await _.snap(browserMode, false)
-    // await delay(10000)
-    const [elx] = await page.$$('text=the world builds')
-    const [el] = await page.$$(POST_BUTTON)
-    const text = await el.textContent()
+    await delay(3000)
+    const [elx] = await page.$$(`text=Let’s build from here`)
     const textx = await elx.textContent()
     await browser.close()
   } catch (e){
@@ -45,7 +39,7 @@ test('firefox', async () => {
   await executeTest('firefox')
 })
 
-test('wrap playwright', async () => {
+test.only('wrap playwright', async () => {
   const fn = async _ => {
     return await _.count('div')
   }

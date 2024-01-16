@@ -1,6 +1,5 @@
 const playwright = require('playwright')
 const { getSettings } = require('./getSettings')
-const { ok } = require('rambdax')
 
 const SUPPORTED_BROWSERS = [ 'chromium', 'firefox' ]
 const deviceKey = 'iPhone 11'
