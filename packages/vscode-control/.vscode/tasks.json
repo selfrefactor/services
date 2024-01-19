@@ -57,6 +57,15 @@
     },
     {
       "type": "shell",
+      "label": "read1",
+      "command": "yarn read:1",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "shell",
       "label": "set dark backgrounds",
       "command": "yarn dark",
       "group": {
