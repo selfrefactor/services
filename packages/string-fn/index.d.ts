@@ -9,6 +9,7 @@ export function glob(text: string, globRule: string): boolean
 export function indent(text: string, indentCount: number): string
 export function isTitleCase(text: string): boolean
 export function isKebabCase(text: string): boolean
+export function isPascalCase(text: string): boolean
 export function isCamelCase(text: string): boolean
 export function isConstantCase(text: string): boolean
 export function isDotCase(text: string): boolean
