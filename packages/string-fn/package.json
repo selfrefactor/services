@@ -8,7 +8,7 @@
   },
   "typings": "./index.d.ts",
   "main": "./dist/string-fn",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "dependencies": {
     "rambdax": "7.0.1"
   },
