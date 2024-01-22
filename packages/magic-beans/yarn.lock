@@ -3311,10 +3311,10 @@ string-fn@3.1.0:
   dependencies:
     rambdax "7.0.1"
 
-string-fn@3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/string-fn/-/string-fn-3.3.1.tgz#685a8667143732dded40b03c1ffd2ebe662274a1"
-  integrity sha512-MWal1nIAzDFdn8bVfWxlMtBaHTlUTgwWEhQvnrcc6xYYQ2Fm0zcnhYjOEFEhOSghyxWfiNNcVuLCmB5+ifuZsQ==
+string-fn@3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/string-fn/-/string-fn-3.3.2.tgz#9a25c320bdfc470a73cbb3df0f01f4f5e59828ae"
+  integrity sha512-gttgF9WBDgd7+fjzjNiIaQjne4KwcU2F+h7OscDdfB3IB8ag70eJbcf8Bc2kmGISjEMwlcV6uHlZHSIYcBwDGw==
   dependencies:
     rambdax "7.0.1"
 

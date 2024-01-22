@@ -13,6 +13,11 @@ const {
 } = require('rambdax')
 const { configAnt } = require('./ants/config')
 const { requestRandomFile } = require('./randomFile')
+const {  isKebabCase, 
+  isDotCase, isSnakeCase, isConstantCase,
+  isPascalCase,
+  isCamelCase
+} = require('string-fn')
 
 const FORBIDDEN_PATTERN = [ '.spec.', '.test.' ]
 const DEBUG_MODE = false
@@ -93,6 +98,24 @@ async function generateReportObject(files){
   return reportObject
 }
 
+function getNamePattern(text){
+  if(isConstantCase(text)) return 6
+  if(isPascalCase(text)) return 5
+  if(isCamelCase(text)) return 4
+  if(isSnakeCase(text)) return 3
+  if(isDotCase(text)) return 2
+  if(isKebabCase(text)) return 1
+  return 0
+}
+
+function sortNamesList(a, b){
+  const aPattern = getNamePattern(a)
+  const bPattern = getNamePattern(b)
+  if(aPattern > bPattern) return -1
+  if(aPattern < bPattern) return 1
+  return a > b ? 1 : -1
+}
+
 async function generateAndShowReport(reportObject){
   let output = ''
   range(0, MAX_LEVEL).forEach(level => {
@@ -102,7 +125,7 @@ async function generateAndShowReport(reportObject){
       uniq,
       take(MAX_SYMBOLS_PER_LEVEL)
     )
-    namesList.sort()
+    namesList.sort(sortNamesList)
 
     if (namesList.length > 0){
       output += `\n\nLEVEL ${ level } \n\n`
