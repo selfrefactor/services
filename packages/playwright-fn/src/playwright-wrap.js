@@ -542,8 +542,9 @@ async function playwrightRun({
   fallback,
   input = undefined,
   handleError = () => {},
+  options = {}
 }){
-  const options = {
+  const defaultOptions = {
     headless      : process.env.HEADLESS !== 'OFF',
     logFlag       : false,
     url,
@@ -553,7 +554,10 @@ async function playwrightRun({
       timeout   : 600000,
     },
   }
-  const { browser, page } = await playwrightInit(options)
+  const { browser, page } = await playwrightInit({
+    ...defaultOptions,
+    ...options,
+  })
   const _ = attach(page)
 
   try {

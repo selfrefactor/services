@@ -142,16 +142,20 @@ export interface WrapOutput {
 }
 
 export function wrap(page: Page, screenDir?: string): WrapOutput
+
 export function playwrightInit(
   input: InputPlaywright
 ): Promise<OutputPlaywright>
+
 export function playwrightRun<T>(input: {
   fn: (_: WrapOutput, input?: any) => Promise<T>
   fallback: T
   url: string
   handleError?: (e: Error) => void
+  options?: InputPlaywright
   input?: any
 }): Promise<T>
+
 
 export function getText(el: any): Promise<string>
 export function getClassName(el: any): Promise<string>
