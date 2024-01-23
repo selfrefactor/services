@@ -5,6 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "fp-ts": "^2.16.2",
-    "rambda": "^8.6.0"
+    "helpers-fn": "^1.8.1",
+    "pratica": "^2.2.0",
+    "rambda": "^9.0.1",
+    "vitest": "^1.2.1"
   }
 }
