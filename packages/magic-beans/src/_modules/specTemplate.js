@@ -4,7 +4,8 @@ const specTemplate = glue(`
   import { {{methodName}} } from './{{fileName}}'
   _NEW_LINE_
   test('happy', () => {
-  ___{{methodName}}()
+  ___const result = {{methodName}}()
+  ___console.log(result)
   })
 `,
 '\n')
@@ -13,7 +14,8 @@ const specTemplateJs = glue(`
   const { {{methodName}} } = require('./{{fileName}}')
   _NEW_LINE_
   test('happy', () => {
-  ___{{methodName}}()
+  ___const result = {{methodName}}()
+  ___console.log(result)
   })
 `,
 '\n')
@@ -22,7 +24,8 @@ const specTemplateAsync = glue(`
   import { {{methodName}} } from './{{fileName}}'
   _NEW_LINE_
   test('happy', async () => {
-  ___await {{methodName}}()
+  ___const result = await {{methodName}}()
+  ___console.log(result)
   })
 `,
 '\n')
