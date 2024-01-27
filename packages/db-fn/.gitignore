@@ -1,6 +1,0 @@
-dist
-.cache
-node_modules
-coverage
-yarn-debug.log*
-yarn-error.log*
