@@ -21,6 +21,7 @@ const ALTERNATIVE_DARK_BACKGROUND = '#011627'
 const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
 
 const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS === 'ON'
+const FOLDING_IMPORTS = process.env.FOLDING_IMPORTS !== 'OFF'
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const READ_MODE = process.env.READ === 'ON'
 const FONT_SIZE = 18
@@ -125,7 +126,7 @@ function getPermanentSettings(){
 function getNewSettings(){
   return {
     'chat.experimental.quickQuestion.enable'         : true,
-    'editor.foldingImportsByDefault'                 : true,
+    'editor.foldingImportsByDefault'                 : FOLDING_IMPORTS,
     'editor.hover.height'                            : 1200,
     'editor.linkedEditing'                           : true,
     'editor.pasteAs.showPasteSelector'               : 'never',

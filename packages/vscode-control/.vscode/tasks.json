@@ -12,6 +12,15 @@
     },
     {
       "type": "shell",
+      "label": "No folding imports(STABLE)",
+      "command": "yarn no.folding.imports",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "shell",
       "label": "bigger both",
       "command": "yarn bigger:1 && yarn bigger:2",
       "group": {

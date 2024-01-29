@@ -8,12 +8,10 @@
 		"dark:2": "BETA=ON THEME=ClevelandShow node ./src/syncSettings",
 		"dark": "yarn dark:1 && yarn dark:2",
 		"light:1": "THEME=HelloSpaceboy node ./src/syncSettings",
+		"no.folding.imports": "FOLDING_IMPORTS=OFF node ./src/syncSettings",
 		"light:2": "BETA=ON THEME=StrangeBrew node ./src/syncSettings",
 		"light": "yarn light:1 && yarn light:2",
 		"small:1": "MODE=small node ./src/syncSettings",
-
-
-		
 		"read:small:1": "MODE=small READ=ON node ./src/syncSettings",
 		"read:1": "READ=ON node ./src/syncSettings",
 		"read:big:1": "MODE=big READ=ON node ./src/syncSettings",
