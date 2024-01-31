@@ -9,7 +9,7 @@
 		"jest:file": "node scripts/tasks/run/jest.js"
 	},
 	"main": "./src/extension",
-	"version": "3.33.0",
+	"version": "3.34.0",
 	"dependencies": {
 		"helpers-fn": "1.8.1",
 		"rambdax": "10.1.0",
