@@ -11,7 +11,6 @@
 	"main": "./src/code-signal.js",
 	"version": "0.1.0",
 	"dependencies": {
-		"env-fn": "2.2.0",
 		"fs-extra": "11.2.0",
 		"playwright": "1.41.1",
 		"playwright-fn": "0.2.1",
@@ -21,7 +20,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
 		"@stylistic/eslint-plugin": "1.5.4",
-		"@types/node": "20.11.7",
+		"@types/node": "20.11.13",
 		"eslint": "8.56.0",
 		"eslint-plugin-jest": "27.6.3",
 		"eslint-plugin-node": "11.1.0",

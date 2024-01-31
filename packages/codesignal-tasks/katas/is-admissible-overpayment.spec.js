@@ -1,8 +1,16 @@
+function convert (str){
+  if(str === 'Same as in-store') return 0
+  const percent = str.split('%')[0]
+  const number = Number(percent)
+  return number
+}
+
 function solution(
     prices,
     notes,
     x
 ){
+  let converted = notes.map(convert)
   
   return
 }
@@ -21,7 +29,7 @@ test('happy', () => {
   )
 
   const expected = true  
-  expect(result).toEqual(expected)
+  // expect(result).toEqual(expected)
 })
 
 

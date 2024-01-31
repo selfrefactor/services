@@ -6,11 +6,6 @@
 on https://app.codesignal.com/challenge/pRuhLib5DdetsY4E7
 ```
 
-## Requirement
+## TODO
 
-.env
-
-```
-CODE_SIGNAL_USER=
-CODE_SIGNAL_PASSWORD=
-```
+include id inside spec file

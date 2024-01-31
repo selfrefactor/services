@@ -4,25 +4,6 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Run challange",
-      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
-      "args": [
-        "--verbose",
-        "-i",
-        "-u",
-        "--no-cache",
-        "src/run-challenge.spec.js",
-        "h9TndHHMewEvesw3o"
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "env": {
-        "HEADLESS": "OFF"
-      }
-    },
-    {
-      "type": "node",
-      "request": "launch",
       "name": "Test File",
       "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
       "args": [
@@ -46,20 +27,21 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Scrape tournament",
+      "name": "Run challange",
       "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
       "args": [
         "--verbose",
         "-i",
+        "-u",
         "--no-cache",
-        "src/run-tournament.spec.js",
-        "u4QBs9Wpye9FjYHsN"
+        "src/run-challenge.spec.js",
+        "h9TndHHMewEvesw3o"
       ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
       "env": {
         "HEADLESS": "OFF"
-      },
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
+      }
     },
     {
       "type": "node",
@@ -79,56 +61,5 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Scrape Dilbert archive",
-      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
-      "args": [
-        "--verbose",
-        "-i",
-        "--no-cache",
-        "src/scrape-dilbert.spec.js"
-      ],
-      "env": {
-        "HEADLESS": "OFF"
-      },
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Create kata",
-      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
-      "args": [
-        "--verbose",
-        "-i",
-        "--no-cache",
-        "src/_modules/create-kata.spec.js"
-      ],
-      "env": {
-        "HEADLESS": "OFF"
-      },
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Parse challange data",
-      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
-      "args": [
-        "--verbose",
-        "-i",
-        "--no-cache",
-        "src/_modules/parse-challenge-data.spec.js"
-      ],
-      "env": {
-        "HEADLESS": "OFF"
-      },
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    }
   ]
 }
