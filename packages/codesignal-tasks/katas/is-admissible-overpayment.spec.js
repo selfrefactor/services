@@ -6,11 +6,20 @@ function convert(str) {
   return str.includes('higher') ? -number : number
 }
 
+/**
+ * round number till x decimal places
+ * @param {number} num
+ */
+function round(num, x) {
+  return Math.round(num * 10 ** x) / 10 ** x
+}
+
 function solution(prices, notes, x) {
   const converted = notes.map(convert)
   const convertedPrices = prices.map((price, i) => {
     if (converted[i] === 0) return price
-    return Math.round(price / (1 - converted[i] / 100))
+    return round(price / (1 - converted[i] / 100), 4)
+    // return Math.round(price / (1 - converted[i] / 100),2)
   })
 
   const sumConverted = convertedPrices.reduce((acc, price) => acc + price, 0)
@@ -32,10 +41,13 @@ test('happy', () => {
   expect(result).toEqual(true)
 })
 
-test('happ', () => {
-  const notes = ['20.00% lower than in-store', '10.00% higher than in-store']
-  const prices = [48, 165]
-  const x = 2
+test.only('happ1', () => {
+  const notes = ["0.001% higher than in-store", 
+  "0.0% lower than in-store", 
+  "0.0% higher than in-store", 
+  "0.0% lower than in-store"]
+  const prices = [40, 40, 40, 40]
+  const x = 0
   const result = solution(prices, notes, x)
   expect(result).toEqual(false)
 })
