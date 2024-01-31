@@ -256,6 +256,11 @@
 						".cache"
 					],
 					"description": "Which directories are excluded in random file mode"
+				},
+				"magicBeans.RANDOM_FILE_ALLOWED_DIRECTORY": {
+					"type": "string",
+					"default": "",
+					"description": "Which directory pattern is allowed in random file mode"
 				}
 			}
 		}

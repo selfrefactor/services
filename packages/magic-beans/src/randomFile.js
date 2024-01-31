@@ -13,7 +13,7 @@ const { scanFolder } = require('helpers-fn')
 const RANDOM_FILE_SKIP_DIRECTORIES = configAnt('RANDOM_FILE_SKIP_DIRECTORIES')
 const RANDOM_FILE_ALLOWED = configAnt('RANDOM_FILE_ALLOWED')
 const RANDOM_FILE_FORBIDDEN = configAnt('RANDOM_FILE_FORBIDDEN')
-
+const RANDOM_FILE_ALLOWED_DIRECTORY = configAnt('RANDOM_FILE_ALLOWED_DIRECTORY')
 
 function changeOpenedFile(filePath){
   const openPath = vscode.Uri.file(filePath)
@@ -33,8 +33,9 @@ async function randomFileInitialize(){
       const [ failForbidden ] =
         RANDOM_FILE_FORBIDDEN.filter(singleExtension =>
           filePath.includes(singleExtension))
-
-      return !failForbidden
+      if( !failForbidden ) return true
+      if( !RANDOM_FILE_ALLOWED_DIRECTORY ) return false
+      return filePath.includes(RANDOM_FILE_ALLOWED_DIRECTORY)
     },
     folder   : projectFolder,
     maxDepth : 20,
