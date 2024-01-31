@@ -260,7 +260,7 @@
 				"magicBeans.RANDOM_FILE_ALLOWED_DIRECTORY": {
 					"type": "string",
 					"default": "",
-					"description": "Which directory pattern is allowed in random file mode"
+					"description": "Which directory is allowed in random file mode"
 				}
 			}
 		}
