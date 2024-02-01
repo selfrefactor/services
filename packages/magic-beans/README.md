@@ -16,6 +16,14 @@ VSCode extension for magic-like features
 
 It will show number of filtered files and each click on the message will open a random file.
 
+## Usage with tests
+{
+  "magicBeans.RANDOM_FILE_ALLOWED_DIRECTORY": "__tests__",
+  "magicBeans.RANDOM_FILE_ALLOWED": ["test.js"],
+  "magicBeans.RANDOM_FILE_FORBIDDEN": [],
+  "magicBeans.RANDOM_FILE_SKIP_DIRECTORIES": [],
+}
+
 ## Format Json
 
 Open command search bar and search for `Format JSON`
