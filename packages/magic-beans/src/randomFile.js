@@ -20,39 +20,41 @@ function changeOpenedFile(filePath) {
 }
 
 async function randomFileInitialize() {
-  const projectFolder = vscode.workspace.workspaceFolders[0].uri.path
-  const list = []
-  const files = await scanFolder({
-    excludeFn: dir => RANDOM_FILE_SKIP_DIRECTORIES.includes(dir),
-    filterFn: (filePath) => {
-      const [passAllowed] = RANDOM_FILE_ALLOWED.filter(singleExtension =>
-        filePath.endsWith(singleExtension),
-      )
-      if (!passAllowed) return false
-      const allowedDirectory = RANDOM_FILE_ALLOWED_DIRECTORY
-        ? filePath.includes(RANDOM_FILE_ALLOWED_DIRECTORY)
-        : undefined
-
-      const [failForbidden] = RANDOM_FILE_FORBIDDEN.filter(singleExtension =>
-        filePath.endsWiths(singleExtension),
-      )
-      if (!failForbidden) {
-        list.push(filePath)
-      }
-
-      return allowedDirectory && !failForbidden
-    },
-    folder: projectFolder,
-    maxDepth: 20,
-  })
-
-  if (files.length === 0) {
-    logToUser('no files left')
-
-    return
+  try {
+    const projectFolder = vscode.workspace.workspaceFolders[0].uri.path
+    const files = await scanFolder({
+      excludeFn: dir => RANDOM_FILE_SKIP_DIRECTORIES.includes(dir),
+      filterFn: (filePath) => {
+        const [passAllowed] = RANDOM_FILE_ALLOWED.filter(singleExtension =>
+          filePath.endsWith(singleExtension),
+        )
+        if (!passAllowed) return false
+        const allowedDirectory = RANDOM_FILE_ALLOWED_DIRECTORY
+          ? filePath.includes(RANDOM_FILE_ALLOWED_DIRECTORY)
+          : undefined
+  
+        const [failForbidden] = RANDOM_FILE_FORBIDDEN.filter(singleExtension =>
+          filePath.endsWith(singleExtension),
+        )
+        if(allowedDirectory === undefined) return !failForbidden
+  
+        return allowedDirectory && !failForbidden
+      },
+      folder: projectFolder,
+      maxDepth: 20,
+    })
+  
+    if (files.length === 0) {
+      logToUser('no files left')
+  
+      return
+    }
+    const randomized = shuffle(files)
+    setter('files', randomized)
+  }catch(err){
+    console.log(err)
+    logToUser('error')
   }
-  const randomized = shuffle(files)
-  setter('files', randomized)
 }
 
 function requestRandomFile() {
