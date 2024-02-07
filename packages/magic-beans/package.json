@@ -60,7 +60,7 @@
 		"onCommand:magicBeans.fixCamelcaseRefactoring",
 		"onCommand:magicBeans.formatJson",
 		"onCommand:magicBeans.requestRandomFile",
-		"onCommand:magicBeans.requestRandomFileAutomated",
+		"onCommand:magicBeans.requestRandomFileWithSubfolder",
 		"onCommand:magicBeans.slowScrollInit",
 		"onCommand:magicBeans.sortLines",
 		"onCommand:magicBeans.symbolsList",
@@ -84,6 +84,10 @@
 			{
 				"command": "magicBeans.requestRandomFile",
 				"title": "Magic Beans - request random file"
+			},
+			{
+				"command": "magicBeans.requestRandomFileWithSubfolder",
+				"title": "Magic Beans - request random file within subfolder"
 			},
 			{
 				"command": "magicBeans.createSpec",
@@ -128,7 +132,7 @@
 				"key": "f7"
 			},
 			{
-				"command": "magicBeans.requestRandomFile",
+				"command": "magicBeans.requestRandomFileWithSubfolder",
 				"key": "f8"
 			},
 			{

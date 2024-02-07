@@ -3,6 +3,7 @@ const {
   REQUEST_RANDOM_FILE,
   SLOW_SCROLL_INIT,
   SORT_LINES,
+  REQUEST_RANDOM_FILE_WITH_SUBFOLDER,
 } = require('./constants')
 const { configAnt } = require('./ants/config')
 const { copyTrimmed } = require('./copyTrimmed')
@@ -11,7 +12,7 @@ const { createSpec } = require('./createSpec')
 const { fixCamelcaseRefactoring } = require('./fixCamelcaseRefactoring')
 const { formatJson } = require('./format-json')
 const { initBar } = require('./bar')
-const { requestRandomFile } = require('./randomFile')
+const { requestRandomFile, requestRandomFileWithSubfolder } = require('./randomFile')
 const { slowScroll } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
 const { symbolsList } = require('./symbols-list')
@@ -43,6 +44,8 @@ function activate(context){
     slowScroll(context))
   const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE,
     requestRandomFile)
+  const requestRandomFileWithSubfolderCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE_WITH_SUBFOLDER,
+    requestRandomFileWithSubfolder)
   const sortLinesCommand = vscode.commands.registerCommand(SORT_LINES,
     sortLines)
   const fixCamelcaseRefactoringCommand = vscode.commands.registerCommand('magicBeans.fixCamelcaseRefactoring',
@@ -54,6 +57,7 @@ function activate(context){
   context.subscriptions.push(createSpecCommand)
   context.subscriptions.push(slowScrollCommand)
   context.subscriptions.push(requestRandomFileCommand)
+  context.subscriptions.push(requestRandomFileWithSubfolderCommand)
   context.subscriptions.push(formatJsonCommand)
   context.subscriptions.push(sortLinesCommand)
   context.subscriptions.push(fixCamelcaseRefactoringCommand)

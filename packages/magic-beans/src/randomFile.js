@@ -4,6 +4,7 @@ const { configAnt } = require('./ants/config')
 const { logToUser } = require('./bar')
 const { REQUEST_RANDOM_FILE } = require('./constants')
 const { scanFolder } = require('helpers-fn')
+const { dirname } = require('path')
 
 const RANDOM_FILE_SKIP_DIRECTORIES = configAnt('RANDOM_FILE_SKIP_DIRECTORIES')
 const RANDOM_FILE_ALLOWED = configAnt('RANDOM_FILE_ALLOWED')
@@ -12,6 +13,8 @@ const RANDOM_FILE_ALLOWED_DIRECTORY = configAnt(
   'RANDOM_FILE_ALLOWED_DIRECTORY',
 )
 
+const CURRENT_SUBFOLDER = 'CURRENT_SUBFOLDER'
+
 function changeOpenedFile(filePath) {
   const openPath = vscode.Uri.file(filePath)
   vscode.workspace.openTextDocument(openPath).then((doc) => {
@@ -19,11 +22,10 @@ function changeOpenedFile(filePath) {
   })
 }
 
-async function randomFileInitialize() {
+async function randomFileInitialize(projectFolder, skipDirectories = RANDOM_FILE_SKIP_DIRECTORIES) {
   try {
-    const projectFolder = vscode.workspace.workspaceFolders[0].uri.path
     const files = await scanFolder({
-      excludeFn: dir => RANDOM_FILE_SKIP_DIRECTORIES.includes(dir),
+      excludeFn: dir => skipDirectories.includes(dir),
       filterFn: (filePath) => {
         const [passAllowed] = RANDOM_FILE_ALLOWED.filter(singleExtension =>
           filePath.endsWith(singleExtension),
@@ -75,10 +77,47 @@ function requestRandomFile() {
 
 async function requestRandomFileFn() {
   if (!getter(REQUEST_RANDOM_FILE)) {
-    await randomFileInitialize()
+    const projectFolder = vscode.workspace.workspaceFolders[0].uri.path
+
+    await randomFileInitialize(
+      projectFolder,
+    )
+    setter(REQUEST_RANDOM_FILE, true)
+  }
+  requestRandomFile()
+}
+
+function getCurrentDirectory (){
+  if(!vscode.window.activeTextEditor){
+    return {
+      directory: vscode.workspace.workspaceFolders[0].uri.path,
+      skipDirectories: RANDOM_FILE_SKIP_DIRECTORIES,
+    }
+  }
+  const previousDirectory = getter(CURRENT_SUBFOLDER)
+  const filePath = vscode.window.activeTextEditor.document.fileName
+  // get directory of `filePath` using node.js path module
+  const directory = dirname(filePath)
+  
+  if(previousDirectory !== directory){
+    setter(CURRENT_SUBFOLDER, directory)
+    setter(REQUEST_RANDOM_FILE, false)
+  }
+
+  return {directory, skipDirectories: []}
+}
+
+async function requestRandomFileWithSubfolder() {
+  const {directory, skipDirectories} = getCurrentDirectory()
+  if (!getter(REQUEST_RANDOM_FILE)) {
+    await randomFileInitialize(
+      directory,
+      skipDirectories
+    )
     setter(REQUEST_RANDOM_FILE, true)
   }
   requestRandomFile()
 }
 
 exports.requestRandomFile = requestRandomFileFn
+exports.requestRandomFileWithSubfolder = requestRandomFileWithSubfolder
