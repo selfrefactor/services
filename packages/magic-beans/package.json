@@ -64,14 +64,20 @@
 		"onCommand:magicBeans.slowScrollInit",
 		"onCommand:magicBeans.sortLines",
 		"onCommand:magicBeans.symbolsList",
-		"onCommand:open-folder-in-vscode.openFolder"
+		"onCommand:magicBeans.openFolder",
+		"onCommand:magicBeans.requestRandomFileWithSubfolderRightClick"
 	],
 	"contributes": {
 		"menus": {
 			"explorer/context": [
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "open-folder-in-vscode.openFolder",
+					"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
+					"group": "navigation"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "magicBeans.openFolder",
 					"group": "navigation"
 				}
 			]
@@ -118,8 +124,12 @@
 				"title": "slowScroll stop"
 			},
 			{
-				"command": "open-folder-in-vscode.openFolder",
+				"command": "magicBeans.openFolder",
 				"title": "Open folder in new vscode"
+			},
+			{
+				"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
+				"title": "Random Files Mode"
 			}
 		],
 		"keybindings": [

@@ -107,6 +107,9 @@ function getCurrentDirectory (){
   return {directory, skipDirectories: []}
 }
 
+/**
+ * Not used
+ */
 async function requestRandomFileWithSubfolder() {
   const {directory, skipDirectories} = getCurrentDirectory()
   if (!getter(REQUEST_RANDOM_FILE)) {
@@ -119,5 +122,17 @@ async function requestRandomFileWithSubfolder() {
   requestRandomFile()
 }
 
+async function requestRandomFileWithSubfolderRightClick(data) {
+  const directory = data.fsPath
+  await randomFileInitialize(
+    directory,
+    []
+  )
+  setter(REQUEST_RANDOM_FILE, true)
+  requestRandomFile()
+}
+
+
 exports.requestRandomFile = requestRandomFileFn
 exports.requestRandomFileWithSubfolder = requestRandomFileWithSubfolder
+exports.requestRandomFileWithSubfolderRightClick = requestRandomFileWithSubfolderRightClick
