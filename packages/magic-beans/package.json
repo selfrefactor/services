@@ -129,7 +129,7 @@
 			},
 			{
 				"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
-				"title": "Random Files Mode"
+				"title": "Open a folder in Random Files Mode"
 			}
 		],
 		"keybindings": [
