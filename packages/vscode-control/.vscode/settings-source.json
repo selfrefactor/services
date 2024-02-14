@@ -1,4 +1,9 @@
 {
+  "workbench.tree.enableStickyScroll": true,
+  "workbench.tree.stickyScrollMaxItemCount": 5,
+  "window.zoomPerWindow": true,
+  "window.customTitleBarVisibility": "windowed",
+  "terminal.integrated.mouseWheelZoom": true,
   "editor.suggest.selectionMode": "whenTriggerCharacter",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "smart",

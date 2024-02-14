@@ -1,7 +1,12 @@
 # Vscode-control
 
 ## Knowledge
+===
+Holding Alt while clicking on a test decoration, now runs that test in debug mode, when available.
 
+There are now context menu actions in the Explorer view, which can be used to run all tests declared in a file or folder.
+===
+===
 no longer is possible to copy deleted lines in git diff. you have to use right click and explicitly select copy deleted lines.
 
 ## Deleted
