@@ -122,6 +122,10 @@
 
 > Peek References
 
+## F4
+
+`workbench.panel.chat.view.copilot.focus`
+
 ## ALT  5
 
 `editor.action.insertSnippet`
@@ -174,11 +178,11 @@
 
 ## ALT  G
 
-`workbench.view.scm`
+`workbench.action.pinEditor`
 
-> View Git Panel
+## ALT  G
 
- HINT: GIT
+`workbench.action.unpinEditor`
 
 ## ALT  O
 

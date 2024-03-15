@@ -2,6 +2,7 @@
 
 ## Knowledge
 ===
+===
 Holding Alt while clicking on a test decoration, now runs that test in debug mode, when available.
 
 There are now context menu actions in the Explorer view, which can be used to run all tests declared in a file or folder.
@@ -19,9 +20,6 @@ unpin/pin doesn't work correctly
     //   'source.organizeImports' : false,
     // },
     // 'editor.wordWrapColumn'                                       : 30,
-    // '[javascript]'                                   : { 'editor.formatOnSave' : true },
-    // '[typescript]'                                   : { 'editor.formatOnSave' : true },
-    // 'editor.formatOnSave'                            : false,
 ===
 
     "miguelsolorio.symbols",
