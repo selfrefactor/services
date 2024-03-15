@@ -1,39 +1,5 @@
 [
   {
-    "key": "alt+g",
-    "command": "workbench.action.pinEditor"
-  },
-  {
-    "key": "alt+g",
-    "command": "workbench.action.unpinEditor",
-    "when": "activeEditorIsPinned"
-  },
-  {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.unpinEditor",
-    "when": "activeEditorIsPinned"
-  },
-  {
-    "key": "f4",
-    "priority": true,
-    "command": "workbench.panel.chat.view.copilot.focus"
-  },
-  {
-    "key": "f4",
-    "command": "-references-view.next",
-    "when": "reference-list.hasResult && references-view.canNavigate"
-  },
-  {
-    "key": "f4",
-    "command": "-search.action.focusNextSearchResult",
-    "when": "hasSearchResult || inSearchEditor"
-  },
-  {
-    "key": "f4",
-    "command": "-goToNextReference",
-    "when": "inReferenceSearchEditor || referenceSearchVisible"
-  },
-  {
     "key": "ctrl+shift+b",
     "command": "workbench.action.tasks.runTask"
   },
@@ -348,6 +314,12 @@
     "key": "f5",
     "command": "workbench.action.debug.continue",
     "when": "inDebugMode"
+  },
+  {
+    "key": "alt+g",
+    "command": "workbench.view.scm",
+    "comment": "View Git Panel",
+    "hint": "GIT"
   },
   {
     "key": "capslock r",

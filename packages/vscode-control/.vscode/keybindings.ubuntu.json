@@ -1,52 +1,26 @@
 [
   {
-    "key": "alt+g",
-    "command": "workbench.action.pinEditor"
-  },
-  {
-    "key": "alt+g",
-    "command": "workbench.action.unpinEditor",
-    "when": "activeEditorIsPinned"
-  },
-  {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.unpinEditor",
-    "when": "activeEditorIsPinned"
-  },
-  {
     "key": "f4",
     "priority": true,
     "command": "workbench.panel.chat.view.copilot.focus"
   },
   {
-    "key": "f4",
-    "command": "-references-view.next",
-    "when": "reference-list.hasResult && references-view.canNavigate"
-  },
-  {
-    "key": "f4",
-    "command": "-search.action.focusNextSearchResult",
-    "when": "hasSearchResult || inSearchEditor"
-  },
-  {
-    "key": "f4",
-    "command": "-goToNextReference",
-    "when": "inReferenceSearchEditor || referenceSearchVisible"
-  },
-  {
-    "key": "ctrl+shift+b",
+    "key": "alt+shift+t",
     "command": "workbench.action.tasks.runTask"
   },
   {
     "key": "capslock =",
+    "priority": true,
+
     "command": "git.push"
   },
   {
-    "key": "capslock -",
+    "key": "ctrl+shift+-",
+    "priority": true,
     "command": "git.push"
   },
   {
-    "key": "capslock a",
+    "key": "alt+shift+a",
     "priority": true,
     "hint": "All - fold all",
     "command": "editor.foldAll",
@@ -60,7 +34,7 @@
     "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
   },
   {
-    "key": "capslock p",
+    "key": "alt+shift+p",
     "priority": true,
     "hint": "parameter",
     "command": "editor.action.triggerParameterHints",
@@ -111,7 +85,7 @@
     "key": "alt+5",
     "command": "editor.action.insertSnippet",
     "args": {
-      "name": "Function"
+      "snippet": "Function"
     }
   },
   {
@@ -150,29 +124,25 @@
     }
   },
   {
-    "key": "capslock ;",
-    "command": "github.copilot.openPanelForRange"
-  },
-  {
-    "key": "capslock i",
+    "key": "ctrl+shift+i",
     "priority": true,
     "hint": "Implementation",
     "command": "references-view.findImplementations"
   },
   {
-    "key": "capslock <",
+    "key": "ctrl+shift+<",
     "command": "editor.action.inlineSuggest.showPrevious",
     "when": "inlineSuggestionVisible && !editorReadonly"
   },
   {
-    "key": "capslock 4",
+    "key": "ctrl+shift+4",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "commentMultiline"
     }
   },
   {
-    "key": "capslock 5",
+    "key": "ctrl+shift+5",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "commentAimedForTitle"
@@ -205,28 +175,25 @@
     "when": "textInputFocus && !editorReadonly"
   },
   {
-    "key": "capslock d",
-    "hint": "debug",
-    "command": "workbench.view.debug"
-  },
-  {
-    "key": "capslock 2",
+    "key": "ctrl+shift+2",
     "command": "workbench.action.editorLayoutTwoColumns",
     "hint": "2 Columns",
     "priority": true
   },
   {
-    "key": "capslock 1",
+    "key": "ctrl+shift+1",
     "command": "workbench.action.editorLayoutSingle",
     "hint": "1 Column"
   },
   {
-    "key": "capslock y",
+    "key": "ctrl+shift+y",
     "command": "list.collapseAll",
+    "priority": true,
+
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "capslock h",
+    "key": "ctrl+shift+h",
     "priority": true,
     "command": "editor.unfoldAll",
     "when": "editorTextFocus && foldingEnabled"
@@ -238,16 +205,11 @@
     "when": "editorHasReferenceProvider"
   },
   {
-    "key": "capslock f",
+    "key": "alt+shift+f",
     "priority": true,
     "hint": "FIND",
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider"
-  },
-  {
-    "key": "ctrl+capslock",
-    "command": "editor.action.selectHighlights",
-    "when": "editorFocus"
   },
   {
     "key": "ctrl+g",
@@ -263,12 +225,12 @@
     "command": "typescript.goToSourceDefinition"
   },
   {
-    "key": "capslock k",
+    "key": "ctrl+shift+k",
     "priority": true,
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "capslock a",
+    "key": "ctrl+shift+a",
     "hint": "Active file",
     "priority": true,
     "command": "workbench.files.action.showActiveFileInExplorer"
@@ -279,12 +241,7 @@
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "capslock n",
-    "priority": true,
-    "command": "workbench.view.extensions"
-  },
-  {
-    "key": "capslock m",
+    "key": "ctrl+shift+m",
     "command": "issuesAndMrs.focus",
     "hint": "MR",
     "priority": true,
@@ -301,7 +258,7 @@
     "command": "workbench.action.files.openFolder"
   },
   {
-    "key": "capslock x",
+    "key": "ctrl+shift+x",
     "command": "github.copilot.interactiveEditor.explain",
     "priority": true,
     "comment": "Xplain - Used with Github Copilot extension to explain the code"
@@ -322,7 +279,7 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "capslock o",
+    "key": "ctrl+shift+o",
     "priority": true,
     "command": "workbench.action.output.toggleOutput",
     "hint": "OUTPUT",
@@ -350,7 +307,7 @@
     "when": "inDebugMode"
   },
   {
-    "key": "capslock r",
+    "key": "ctrl+shift+r",
     "command": "editor.action.goToReferences",
     "priority": true,
     "hint": "REFERENCES",
@@ -359,7 +316,7 @@
   {
     "command": "magicBeans.sortLines",
     "comment": "lines",
-    "key": "capslock l"
+    "key": "ctrl+shift+l"
   },
   {
     "command": "magicBeans.requestRandomFile",
@@ -368,13 +325,13 @@
   },
   {
     "command": "magicBeans.createSpec",
-    "key": "capslock t",
+    "key": "ctrl+shift+t",
     "comment": "test"
   },
   {
     "command": "magicBeans.fixCamelcaseRefactoring",
     "priority": true,
-    "key": "capslock ,"
+    "key": "ctrl+shift+,"
   },
   {
     "command": "magicBeans.copyTrimmed",
@@ -382,7 +339,8 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "capslock z",
+    "key": "ctrl+shift+z",
+    "priority": true,
     "command": "workbench.action.gotoSymbol"
   },
   {
@@ -427,7 +385,7 @@
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "capslock p",
+    "key": "alt+shift+p",
     "priority": true,
     "comment": "Peek Implementation",
     "command": "editor.action.peekImplementation",
@@ -562,8 +520,8 @@
     "when": "terminalFocus"
   },
   {
-  "key": "ctrl+3",
-  "command": "workbench.action.interactiveSession.clear"
+    "key": "ctrl+3",
+    "command": "workbench.action.interactiveSession.clear"
   },
   {
     "key": "ctrl+r",
@@ -722,10 +680,6 @@
     "when": "isDevelopment"
   },
   {
-    "key": "ctrl+shift+",
-    "command": "-workbench.view.debug"
-  },
-  {
     "key": "ctrl+left",
     "command": "-list.collapseAll",
     "when": "listFocus && !inputFocus"
@@ -748,6 +702,11 @@
     "key": "ctrl+shift+r",
     "command": "-editor.action.refactor",
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+capslock",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus"
   },
   {
     "key": "alt+f3",
@@ -788,5 +747,20 @@
     "key": "ctrl+shift+b",
     "command": "-workbench.action.tasks.build",
     "when": "taskCommandsRegistered"
+  },
+  {
+    "key": "f4",
+    "command": "-references-view.next",
+    "when": "reference-list.hasResult && references-view.canNavigate"
+  },
+  {
+    "key": "f4",
+    "command": "-search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "f4",
+    "command": "-goToNextReference",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
   }
 ]
