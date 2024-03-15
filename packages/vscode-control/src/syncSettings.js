@@ -422,7 +422,7 @@ async function syncSettings() {
   }
 
   const newOptions = {
-    ...settings,
+    ...currentSettings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
     'workbench.tree.renderIndentGuides': 'none',

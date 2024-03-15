@@ -1,5 +1,9 @@
 [
   {
+    "key": "ctrl+shift+9",
+    "command": "git-config-user-profiles.pickUserProfile"
+  },
+  {
     "key": "alt+g",
     "command": "workbench.action.pinEditor"
   },

@@ -302,6 +302,10 @@
 
 > HINT: OPEN
 
+## CTRL  SHIFT  9
+
+`git-config-user-profiles.pickUserProfile`
+
 ## CTRL  SHIFT  B
 
 `workbench.action.tasks.runTask`
