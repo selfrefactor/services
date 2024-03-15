@@ -406,6 +406,7 @@ function checkSettings(newOptions) {
 
 async function syncSettings() {
   const currentSettings = await readJson(SETTINGS)
+  console.log('currentSettings.gitConfigUser.profiles', currentSettings['gitConfigUser.profiles'])
   const alternativeBackgrounds = getAlternativeBackground()
   if (alternativeBackgrounds)
     return syncFn({
