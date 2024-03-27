@@ -20,9 +20,8 @@ const { slowScroll } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
 const { symbolsList } = require('./symbols-list')
 
-function openInVsCode(data) {
-  const IS_VSCODE_INSIDERS = configAnt('IS_VSCODE_INSIDERS')
-  const binary = IS_VSCODE_INSIDERS ? 'code-insiders' : 'code'
+function openInVsCode(data, {isInsiders}) {
+  const binary = isInsiders ? 'code-insiders' : 'code'
   const terminal = vscode.window.createTerminal({ name: 'New vscode' })
   terminal.hide()
   terminal.sendText(`${binary} '${data.fsPath}'`)
@@ -88,7 +87,13 @@ function activate(context) {
   const openFolder = vscode.commands.registerCommand(
     'magicBeans.openFolder',
     (data) => {
-      openInVsCode(data)
+      openInVsCode(data, {isInsiders: false})
+    },
+  )
+  const openFolder = vscode.commands.registerCommand(
+    'magicBeans.openFolderInVSCodeBeta',
+    (data) => {
+      openInVsCode(data, {isInsiders: true})
     },
   )
 

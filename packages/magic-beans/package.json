@@ -65,6 +65,7 @@
 		"onCommand:magicBeans.sortLines",
 		"onCommand:magicBeans.symbolsList",
 		"onCommand:magicBeans.openFolder",
+		"onCommand:magicBeans.openFolderInVSCodeBeta",
 		"onCommand:magicBeans.requestRandomFileWithSubfolderRightClick"
 	],
 	"contributes": {
@@ -72,12 +73,17 @@
 			"explorer/context": [
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
+					"command": "magicBeans.openFolder",
 					"group": "navigation"
 				},
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "magicBeans.openFolder",
+					"command": "magicBeans.openFolderInVSCodeBeta",
+					"group": "navigation"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
 					"group": "navigation"
 				}
 			]
@@ -125,7 +131,11 @@
 			},
 			{
 				"command": "magicBeans.openFolder",
-				"title": "Open folder in new vscode"
+				"title": "Open folder in new VS Code"
+			},
+			{
+				"command": "magicBeans.openFolderInVSCodeBeta",
+				"title": "Open folder in new VS Code(beta)"
 			},
 			{
 				"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
