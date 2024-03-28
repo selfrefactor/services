@@ -406,23 +406,24 @@ function checkSettings(newOptions) {
 
 async function syncSettings() {
   const currentSettings = await readJson(SETTINGS)
-  console.log('currentSettings.gitConfigUser.profiles', currentSettings['gitConfigUser.profiles'])
   const alternativeBackgrounds = getAlternativeBackground()
   if (alternativeBackgrounds)
     return syncFn({
+      ...settings,
       ...currentSettings,
       ...alternativeBackgrounds,
     })
-  if (READ_MODE) {
-    log('READ', 'info')
-    return syncFn({
-      ...currentSettings,
-      'workbench.editor.enablePreview': true,
-    })
-  }
+  // if (READ_MODE) {
+  //   log('READ', 'info')
+  //   return syncFn({
+  //     ...currentSettings,
+  //     'workbench.editor.enablePreview': true,
+  //   })
+  // }
 
   const newOptions = {
     ...currentSettings,
+    ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
     'workbench.tree.renderIndentGuides': 'none',
@@ -441,7 +442,8 @@ async function syncSettings() {
     'workbench.colorTheme': THEME
       ? THEME
       : currentSettings['workbench.colorTheme'],
-    'workbench.editor.enablePreview': false,
+    'workbench.editor.enablePreview': !VSCODE_INSIDERS,
+    // 'workbench.editor.enablePreview': false,
   }
   syncFn(newOptions)
 }
