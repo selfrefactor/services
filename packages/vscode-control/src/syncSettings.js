@@ -1,5 +1,5 @@
 const { copySync, readJson, writeJsonSync } = require('fs-extra')
-const { defaultTo, execSafe, log } = require('helpers-fn')
+const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('path')
 const { toDecimal } = require('rambdax')
 
@@ -24,8 +24,7 @@ const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
 const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS === 'ON'
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const FOLDING_IMPORTS = !VSCODE_INSIDERS
-// const FOLDING_IMPORTS = process.env.FOLDING_IMPORTS !== 'OFF'
-const READ_MODE = process.env.READ === 'ON'
+// const READ_MODE = process.env.READ === 'ON'
 const FONT_SIZE = 18
 const SUGGEST_LINE_HEIGHT = 16
 const SUGGEST_FONT_SIZE = 15
@@ -434,8 +433,8 @@ async function syncSettings() {
     'window.zoomPerWindow': true,
     'window.customTitleBarVisibility': 'windowed',
     'terminal.integrated.mouseWheelZoom': true,
-    // 'debug.terminal.clearBeforeReusing'        : true, // to test because of ubuntu issue
-    'debug.terminal.clearBeforeReusing': false,
+    'debug.terminal.clearBeforeReusing'        : true, // to test because of ubuntu issue
+    // 'debug.terminal.clearBeforeReusing': false,
     'editor.multiDocumentOccurrencesHighlight': true,
     'editor.wordBasedSuggestions': false,
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,

@@ -30,6 +30,42 @@
     },
     {
       "type": "shell",
+      "label": "read bigger + big",
+      "command": "yarn read:bigger:1 && yarn big:2",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "shell",
+      "label": "big read + normal",
+      "command": "yarn read:big:1 && yarn on:2",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "shell",
+      "label": "read + normal",
+      "command": "yarn read:1 && yarn on:2",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "shell",
+      "label": "read",
+      "command": "yarn read:1",
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "shell",
       "label": "set dark backgrounds",
       "command": "yarn dark",
       "group": {
