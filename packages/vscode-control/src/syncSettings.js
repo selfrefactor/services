@@ -19,7 +19,7 @@ const {
  '#212e38'
  */
 const ALTERNATIVE_DARK_BACKGROUND = '#011627'
-const ALTERNATIVE_LIGHT_BACKGROUND = '#fff'
+const ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
 
 const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS === 'ON'
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
@@ -121,6 +121,47 @@ function getPermanentSettings() {
 
 function getNewSettings() {
   return {
+    // EXPERIMENTAL
+    'debug.javascript.codelens.npmScripts': 'never',
+    'editor.colorDecoratorsActivatedOn': 'click',
+    'editor.copyWithSyntaxHighlighting': false,
+    'editor.detectIndentation': false,
+    'editor.emptySelectionClipboard': false,
+    'editor.find.autoFindInSelection': 'multiline',
+    'editor.foldingHighlight': false,
+    'editor.guides.bracketPairs': 'active',
+    'editor.guides.bracketPairsHorizontal': false,
+    'editor.guides.highlightActiveBracketPair': true,
+    'editor.guides.indentation': false,
+    'editor.insertSpaces': false,
+    'editor.lightbulb.enabled': 'off',
+    'editor.linkedEditing': true,
+    'editor.links': false,
+    'editor.matchBrackets': 'always',
+    'editor.occurrencesHighlight': 'off',
+    'editor.renderLineHighlight': 'gutter',
+    'editor.renderWhitespace': 'none',
+    'editor.roundedSelection': false,
+    'editor.selectionHighlight': false,
+    'editor.suggest.localityBonus': true,
+    'explorer.compactFolders': false,
+    'explorer.sortOrder': 'type',
+    'npm.scriptHover': false,
+    'outline.collapseItems': 'alwaysCollapse',
+    'search.collapseResults': 'alwaysCollapse',
+    'search.seedOnFocus': true,
+    'search.seedWithNearestWord': true,
+    'search.showLineNumbers': true,
+    'search.useGlobalIgnoreFiles': true,
+    'search.useParentIgnoreFiles': true,
+    'security.workspace.trust.enabled': false,
+    'workbench.editor.empty.hint': 'hidden',
+    'workbench.layoutControl.type': 'menu',
+    'workbench.panel.opensMaximized': 'never',
+    'workbench.tips.enabled': false,
+    'workbench.tree.indent': 16,
+    'workbench.tree.renderIndentGuides': 'none',
+    // STABLE
     'chat.experimental.quickQuestion.enable': true,
     'editor.foldingImportsByDefault': FOLDING_IMPORTS,
     'editor.hover.height': 1200,
@@ -433,7 +474,7 @@ async function syncSettings() {
     'window.zoomPerWindow': true,
     'window.customTitleBarVisibility': 'windowed',
     'terminal.integrated.mouseWheelZoom': true,
-    'debug.terminal.clearBeforeReusing'        : true, // to test because of ubuntu issue
+    'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
     // 'debug.terminal.clearBeforeReusing': false,
     'editor.multiDocumentOccurrencesHighlight': true,
     'editor.wordBasedSuggestions': false,
