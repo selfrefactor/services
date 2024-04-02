@@ -484,6 +484,7 @@ async function syncSettings() {
       : currentSettings['workbench.colorTheme'],
     'workbench.editor.enablePreview': !VSCODE_INSIDERS,
     // 'workbench.editor.enablePreview': false,
+		'workbench.colorCustomizations':{}
   }
   syncFn(newOptions)
 }
