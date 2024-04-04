@@ -1,4 +1,4 @@
-const { copySync, readJson, writeJsonSync } = require('fs-extra')
+const { copySync, writeJsonSync } = require('fs-extra')
 const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('path')
 const { toDecimal } = require('rambdax')
@@ -24,7 +24,6 @@ const ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
 const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS === 'ON'
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const FOLDING_IMPORTS = !VSCODE_INSIDERS
-// const READ_MODE = process.env.READ === 'ON'
 const FONT_SIZE = 18
 const SUGGEST_LINE_HEIGHT = 16
 const SUGGEST_FONT_SIZE = 15
@@ -126,7 +125,7 @@ function getNewSettings() {
     'editor.colorDecoratorsActivatedOn': 'click',
     'editor.copyWithSyntaxHighlighting': false,
     'editor.detectIndentation': false,
-    'editor.emptySelectionClipboard': false,
+    // 'editor.emptySelectionClipboard': false,
     'editor.find.autoFindInSelection': 'multiline',
     'editor.foldingHighlight': false,
     'editor.guides.bracketPairs': 'active',
@@ -277,29 +276,6 @@ function getGit() {
   }
 }
 
-function getImportantSettings() {
-  return {
-    'gitlab.customQueries': [
-      {
-        name: 'Open MRs',
-        noItemText: 'The project has no merge requests',
-        scope: 'all',
-        state: 'opened',
-        type: 'merge_requests',
-      },
-      {
-        createdBefore: '2022-01-01',
-        maxResults: 60,
-        name: 'Closed MRs',
-        noItemText: 'The project has no merge requests',
-        scope: 'all',
-        state: 'merged',
-        type: 'merge_requests',
-      },
-    ],
-  }
-}
-
 function getAdditionalSettings() {
   return {
     'breadcrumbs.enabled': false,
@@ -445,7 +421,7 @@ function checkSettings(newOptions) {
 }
 
 async function syncSettings() {
-  const currentSettings = await readJson(SETTINGS)
+  // const currentSettings = await readJson(SETTINGS)
   const alternativeBackgrounds = getAlternativeBackground()
   if (alternativeBackgrounds)
     return syncFn({
@@ -453,16 +429,8 @@ async function syncSettings() {
       ...currentSettings,
       ...alternativeBackgrounds,
     })
-  // if (READ_MODE) {
-  //   log('READ', 'info')
-  //   return syncFn({
-  //     ...currentSettings,
-  //     'workbench.editor.enablePreview': true,
-  //   })
-  // }
 
   const newOptions = {
-    ...currentSettings,
     ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
@@ -475,7 +443,6 @@ async function syncSettings() {
     'window.customTitleBarVisibility': 'windowed',
     'terminal.integrated.mouseWheelZoom': true,
     'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
-    // 'debug.terminal.clearBeforeReusing': false,
     'editor.multiDocumentOccurrencesHighlight': true,
     'editor.wordBasedSuggestions': false,
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
