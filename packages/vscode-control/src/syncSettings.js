@@ -1,7 +1,7 @@
 const { copySync, readJson, writeJsonSync } = require('fs-extra')
 const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('path')
-const { toDecimal, pick } = require('rambdax')
+const { toDecimal, pick, omit } = require('rambdax')
 
 const settings = require('../.vscode/settings-source')
 const {
@@ -12,6 +12,9 @@ const {
   TS_SNIPPETS,
   TSX_SNIPPETS,
 } = require('./constants.js')
+
+// due to github profiles extension
+const WRITE_TO_OUTPUT = false
 
 const ALTERNATIVE_DARK_BACKGROUND = '#011627'
 const ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
@@ -107,7 +110,6 @@ function getPermanentSettings() {
     ...getGit(),
     ...getWorkbench(),
     ...getAdditionalSettings(),
-    ...getImportantSettings(),
     ...testNewSettings(),
   }
 }
@@ -399,8 +401,16 @@ function getCalculatedOptions() {
 
 function syncFn(newOptions) {
   checkSettings(newOptions)
-  writeJsonSync(SETTINGS, newOptions, { spaces: 2 })
-  writeJsonSync(SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces: 2 })
+	
+	if(WRITE_TO_OUTPUT){
+		writeJsonSync(SETTINGS, newOptions, { spaces: 2 })
+	}else {
+		const settingsLocation = VSCODE_INSIDERS ? 'insiders' : 'stable'
+		let output = resolve(__dirname, `../settings-${settingsLocation}.json`)
+		console.log('output', output, SETTINGS)
+		writeJsonSync(output, newOptions, { spaces: 2 })
+	}
+  // writeJsonSync(SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces: 2 })
 }
 
 function checkSettings(newOptions) {
@@ -411,26 +421,24 @@ function checkSettings(newOptions) {
   }
 }
 
-let SETTINGS_TO_KEEP = ['gitConfigUser.profiles']
+let SETTINGS_TO_OMIT = ['gitConfigUser.profiles']
 
-async function getCurrentSettings() {
+async function getColorTheme() {
   const currentSettings = await readJson(SETTINGS)
-
-  return pick(SETTINGS_TO_KEEP, currentSettings)
+	return currentSettings['workbench.colorTheme'] ?? 'LedZeppelin'
+  return omit(SETTINGS_TO_OMIT, currentSettings)
 }
 
 async function syncSettings() {
-  const currentSettings = await getCurrentSettings()
-  const alternativeBackgrounds = getAlternativeBackground()
+	const alternativeBackgrounds = getAlternativeBackground()
   if (alternativeBackgrounds)
-    return syncFn({
-      ...settings,
-      ...currentSettings,
-      ...alternativeBackgrounds,
-    })
+	return syncFn({
+...settings,
+...alternativeBackgrounds,
+})
+const colorTheme = await getColorTheme()
 
   const newOptions = {
-    ...currentSettings,
     ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
@@ -448,9 +456,8 @@ async function syncSettings() {
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
     'workbench.colorTheme': THEME
       ? THEME
-      : currentSettings['workbench.colorTheme'],
+      : colorTheme,
     'workbench.editor.enablePreview': !VSCODE_INSIDERS,
-    // 'workbench.editor.enablePreview': false,
     'workbench.colorCustomizations': {},
   }
   syncFn(newOptions)
