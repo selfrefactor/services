@@ -5,3 +5,4 @@ coverage
 packages/build-all-stars-of/screenshots/error.sort.used.by.png
 packages/magic-beans/src/symbols-utils/foo.spec.js
 packages/vscode-control/.vscode/settings.json
+packages/vscode-control/settings-stable.json

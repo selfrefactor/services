@@ -90,7 +90,7 @@ function activate(context) {
       openInVsCode(data, {isInsiders: false})
     },
   )
-  const openFolder = vscode.commands.registerCommand(
+  const openFolderInVSCodeBeta = vscode.commands.registerCommand(
     'magicBeans.openFolderInVSCodeBeta',
     (data) => {
       openInVsCode(data, {isInsiders: true})
@@ -105,6 +105,7 @@ function activate(context) {
   )
 
   context.subscriptions.push(openFolder)
+  context.subscriptions.push(openFolderInVSCodeBeta)
   context.subscriptions.push(randomFilesWithinFolder)
 }
 
