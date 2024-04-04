@@ -13,11 +13,6 @@ const {
   TSX_SNIPPETS,
 } = require('./constants.js')
 
-// const ALTERNATIVE_DARK_BACKGROUND =
-/**
- #242E33
- '#212e38'
- */
 const ALTERNATIVE_DARK_BACKGROUND = '#011627'
 const ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
 
