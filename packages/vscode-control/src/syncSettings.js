@@ -1,7 +1,7 @@
 const { copySync, readJson, writeJsonSync } = require('fs-extra')
 const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('path')
-const { toDecimal, pick, omit } = require('rambdax')
+const { toDecimal, omit } = require('rambdax')
 
 const settings = require('../.vscode/settings-source')
 const {
@@ -13,8 +13,7 @@ const {
   TSX_SNIPPETS,
 } = require('./constants.js')
 
-// due to github profiles extension
-const WRITE_TO_OUTPUT = false
+
 
 const ALTERNATIVE_DARK_BACKGROUND = '#011627'
 const ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
@@ -22,6 +21,10 @@ const ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
 const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS === 'ON'
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const FOLDING_IMPORTS = !VSCODE_INSIDERS
+
+// due to github profiles extension
+const WRITE_TO_OUTPUT = VSCODE_INSIDERS
+
 const FONT_SIZE = 18
 const SUGGEST_LINE_HEIGHT = 16
 const SUGGEST_FONT_SIZE = 15
@@ -407,7 +410,6 @@ function syncFn(newOptions) {
 	}else {
 		const settingsLocation = VSCODE_INSIDERS ? 'insiders' : 'stable'
 		let output = resolve(__dirname, `../settings-${settingsLocation}.json`)
-		console.log('output', output, SETTINGS)
 		writeJsonSync(output, newOptions, { spaces: 2 })
 	}
   // writeJsonSync(SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces: 2 })
