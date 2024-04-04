@@ -1,7 +1,7 @@
 const { copySync, readJson, writeJsonSync } = require('fs-extra')
 const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('path')
-const { toDecimal } = require('rambdax')
+const { toDecimal, pick } = require('rambdax')
 
 const settings = require('../.vscode/settings-source')
 const {
@@ -101,7 +101,6 @@ void (async function sync() {
 
 function getPermanentSettings() {
   return {
-    ...getNewSettings(),
     ...getEditor(),
     ...getSpellingSettings(),
     ...getExplorer(),
@@ -113,7 +112,13 @@ function getPermanentSettings() {
   }
 }
 
-function getNewSettings() {
+// goto | peek
+const GOTO_LOCATION = 'goto'
+
+/**
+ * Keep latest changes with comments of change
+ */
+function testNewSettings() {
   return {
     // EXPERIMENTAL
     'debug.javascript.codelens.npmScripts': 'never',
@@ -165,26 +170,9 @@ function getNewSettings() {
     'window.density.editorTabHeight': 'compact',
     'workbench.editor.tabSizing': 'fit',
     'workbench.editor.wrapTabs': true,
-  }
-}
-// goto | peek
-const GOTO_LOCATION = 'goto'
-
-/**
- * Keep latest changes with comments of change
- */
-function testNewSettings() {
-  return {
     // to fix not working word wrap
     'chat.editor.wordWrap': 'on',
     'editor.defaultFormatter': 'esbenp.prettier-vscode',
-    // by default all were `peek`
-    'editor.gotoLocation.multipleDeclarations': GOTO_LOCATION,
-    'editor.gotoLocation.multipleDefinitions': GOTO_LOCATION,
-    'editor.gotoLocation.multipleImplementations': GOTO_LOCATION,
-    'editor.gotoLocation.multipleReferences': GOTO_LOCATION,
-    'editor.gotoLocation.multipleTypeDefinitions': GOTO_LOCATION,
-    'editor.suggest.showStatusBar': false,
     'javascript.preferences.importModuleSpecifier': 'relative',
     'javascript.suggest.autoImports': true,
     // to test prefered local imports
@@ -199,6 +187,14 @@ function testNewSettings() {
 
 function getEditor() {
   return {
+    // by default all were `peek`
+    'editor.gotoLocation.multipleDeclarations': GOTO_LOCATION,
+    'editor.gotoLocation.multipleDefinitions': GOTO_LOCATION,
+    'editor.gotoLocation.multipleImplementations': GOTO_LOCATION,
+    'editor.gotoLocation.multipleReferences': GOTO_LOCATION,
+    'editor.gotoLocation.multipleTypeDefinitions': GOTO_LOCATION,
+    'editor.suggest.showStatusBar': false,
+    // MARKER
     'editor.cursorSmoothCaretAnimation': 'on',
     'editor.cursorStyle': 'line', // line-thin | line | block | underline | underline-thin
     'editor.fontLigatures': true,
@@ -415,8 +411,16 @@ function checkSettings(newOptions) {
   }
 }
 
-async function syncSettings() {
+let SETTINGS_TO_KEEP = ['gitConfigUser.profiles']
+
+async function getCurrentSettings() {
   const currentSettings = await readJson(SETTINGS)
+
+  return pick(SETTINGS_TO_KEEP, currentSettings)
+}
+
+async function syncSettings() {
+  const currentSettings = await getCurrentSettings()
   const alternativeBackgrounds = getAlternativeBackground()
   if (alternativeBackgrounds)
     return syncFn({
@@ -426,7 +430,7 @@ async function syncSettings() {
     })
 
   const newOptions = {
-		...currentSettings,
+    ...currentSettings,
     ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
@@ -447,7 +451,7 @@ async function syncSettings() {
       : currentSettings['workbench.colorTheme'],
     'workbench.editor.enablePreview': !VSCODE_INSIDERS,
     // 'workbench.editor.enablePreview': false,
-		'workbench.colorCustomizations':{}
+    'workbench.colorCustomizations': {},
   }
   syncFn(newOptions)
 }
