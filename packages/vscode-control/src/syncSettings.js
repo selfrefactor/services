@@ -233,7 +233,6 @@ function getEditor() {
 
 function getWorkbench() {
   return {
-    // 'workbench.activityBar.visible'           : !VSCODE_INSIDERS,
     'workbench.activityBar.visible': true,
     'workbench.editor.languageDetectionHints': {
       notebookEditors: false,
@@ -411,6 +410,7 @@ function syncFn(newOptions) {
 function checkSettings(newOptions) {
   if (newOptions['workbench.colorTheme'] === undefined) {
     console.log('workbench.colorTheme is not defined')
+
     process.exit(1)
   }
 }
