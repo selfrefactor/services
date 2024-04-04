@@ -1,4 +1,4 @@
-const { copySync, writeJsonSync } = require('fs-extra')
+const { copySync, readJson, writeJsonSync } = require('fs-extra')
 const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('path')
 const { toDecimal } = require('rambdax')
@@ -416,7 +416,7 @@ function checkSettings(newOptions) {
 }
 
 async function syncSettings() {
-  // const currentSettings = await readJson(SETTINGS)
+  const currentSettings = await readJson(SETTINGS)
   const alternativeBackgrounds = getAlternativeBackground()
   if (alternativeBackgrounds)
     return syncFn({
@@ -426,6 +426,7 @@ async function syncSettings() {
     })
 
   const newOptions = {
+		...currentSettings,
     ...settings,
     ...getPermanentSettings(),
     ...getCalculatedOptions(),
