@@ -2,6 +2,11 @@
 
 ## Knowledge
 ===
+There are similarly new keybindings for running with coverage, such as Ctrl+; Ctrl+Shift+A to run all tests with coverage, and Ctrl+; Ctrl+Shift+L to run your last set of tests with coverage.
+
+Coverage information is shown as an overlay on line numbers by default, but you can Toggle Inline Coverage to see complete detailed information for your source files:
+===
+ctrl+j - toggle activity
 ===
 Holding Alt while clicking on a test decoration, now runs that test in debug mode, when available.
 

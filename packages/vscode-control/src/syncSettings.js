@@ -91,7 +91,7 @@ const MODE = MODES[MODE_KEY]
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
-const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname, '../.vscode/settings.json')
+// const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname, '../.vscode/settings.json')
 const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Fira Code'
 const FONT_FACTOR = 1
 
@@ -125,18 +125,30 @@ const GOTO_LOCATION = 'goto'
  */
 function testNewSettings() {
   return {
+		"editor.codeLens": true,
+		"editor.codeLensFontSize": 0,
+		"editor.autoClosingDelete": "always",
+		"workbench.activityBar.location": "bottom",
+		"workbench.layoutControl.enabled": false,
+    "workbench.layoutControl.type": "menu",
+    "window.doubleClickIconToClose": true,
+    "window.commandCenter": false,
+    "workbench.editor.showTabs": false,
+		"workbench.editor.decorations.colors": false,
+    'editor.colorDecoratorsLimit': 10,
+		"editor.colorDecorators": true,
+		// "editor.colorDecorators": false,
+    "editor.colorDecoratorsActivatedOn": "hover",
+    // 'editor.colorDecoratorsActivatedOn': 'click',
+    "editor.folding": false,
+    'editor.foldingHighlight': false,
+		"window.menuBarVisibility": "compact",
     // EXPERIMENTAL
     'debug.javascript.codelens.npmScripts': 'never',
-    'editor.colorDecoratorsActivatedOn': 'click',
     'editor.copyWithSyntaxHighlighting': false,
     'editor.detectIndentation': false,
     // 'editor.emptySelectionClipboard': false,
     'editor.find.autoFindInSelection': 'multiline',
-    'editor.foldingHighlight': false,
-    'editor.guides.bracketPairs': 'active',
-    'editor.guides.bracketPairsHorizontal': false,
-    'editor.guides.highlightActiveBracketPair': true,
-    'editor.guides.indentation': false,
     'editor.insertSpaces': false,
     'editor.lightbulb.enabled': 'off',
     'editor.linkedEditing': true,
@@ -164,7 +176,6 @@ function testNewSettings() {
     'workbench.panel.opensMaximized': 'never',
     'workbench.tips.enabled': false,
     'workbench.tree.indent': 16,
-    'workbench.tree.renderIndentGuides': 'none',
     // STABLE
     'chat.experimental.quickQuestion.enable': true,
     'editor.foldingImportsByDefault': FOLDING_IMPORTS,
@@ -203,8 +214,12 @@ function getEditor() {
     'editor.cursorSmoothCaretAnimation': 'on',
     'editor.cursorStyle': 'line', // line-thin | line | block | underline | underline-thin
     'editor.fontLigatures': true,
+		'editor.guides.bracketPairs': 'active',
     'editor.guides.bracketPairsHorizontal': false,
+    'editor.guides.highlightActiveBracketPair': false,
+    // 'editor.guides.highlightActiveBracketPair': true,
     'editor.guides.highlightActiveIndentation': false,
+    'editor.guides.indentation': false,
     'editor.hover.delay': 400,
     'editor.hover.enabled': true,
     'editor.hover.sticky': true,
@@ -277,7 +292,6 @@ function getAdditionalSettings() {
     'debug.inlineValues': 'off',
     'debug.javascript.usePreview': true,
     'diffEditor.diffAlgorithm': 'advanced',
-    'editor.colorDecoratorsLimit': 10,
     'editor.scrollbar.vertical': 'visible',
     'files.enableTrash': false,
     'files.exclude': {
@@ -340,7 +354,7 @@ function getAdditionalSettings() {
     'update.mode': 'none',
     // click to go to recent files
     'window.commandCenter': false,
-    'window.menuBarVisibility': 'toggle',
+    // 'window.menuBarVisibility': 'toggle',
     'window.title': '${dirty}${activeEditorMedium}',
     'window.titleBarStyle': 'custom',
     'zenMode.hideTabs': false,
@@ -423,12 +437,15 @@ function checkSettings(newOptions) {
   }
 }
 
-let SETTINGS_TO_OMIT = ['gitConfigUser.profiles']
+// let SETTINGS_TO_OMIT = ['gitConfigUser.profiles']
 
 async function getColorTheme() {
   const currentSettings = await readJson(SETTINGS)
 	return currentSettings['workbench.colorTheme'] ?? 'LedZeppelin'
-  return omit(SETTINGS_TO_OMIT, currentSettings)
+}
+
+function mergeWithReport(inputs) {
+	const logs = []
 }
 
 async function syncSettings() {
@@ -440,28 +457,31 @@ async function syncSettings() {
 })
 const colorTheme = await getColorTheme()
 
-  const newOptions = {
-    ...settings,
-    ...getPermanentSettings(),
-    ...getCalculatedOptions(),
-    'workbench.tree.renderIndentGuides': 'none',
-    'terminal.integrated.copyOnSelection': true,
-    'workbench.activityBar.location': 'top',
-    'workbench.tree.enableStickyScroll': true,
-    'workbench.tree.stickyScrollMaxItemCount': 8,
-    'window.zoomPerWindow': true,
-    'window.customTitleBarVisibility': 'windowed',
-    'terminal.integrated.mouseWheelZoom': true,
-    'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
-    'editor.multiDocumentOccurrencesHighlight': true,
-    'editor.wordBasedSuggestions': false,
-    'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
-    'workbench.colorTheme': THEME
-      ? THEME
-      : colorTheme,
-    'workbench.editor.enablePreview': !VSCODE_INSIDERS,
-    'workbench.colorCustomizations': {},
-  }
+  const newOptions = mergeWithReport([
+		settings,
+    getPermanentSettings(),
+    getCalculatedOptions(),
+		{
+			'workbench.tree.renderIndentGuides': 'none',
+			'terminal.integrated.copyOnSelection': true,
+			'workbench.activityBar.location': 'bottom',
+			// 'workbench.activityBar.location': 'top',
+			'workbench.tree.enableStickyScroll': true,
+			'workbench.tree.stickyScrollMaxItemCount': 8,
+			'window.zoomPerWindow': true,
+			'window.customTitleBarVisibility': 'windowed',
+			'terminal.integrated.mouseWheelZoom': true,
+			'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
+			'editor.multiDocumentOccurrencesHighlight': true,
+			'editor.wordBasedSuggestions': false,
+			'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
+			'workbench.colorTheme': THEME
+			? THEME
+			: colorTheme,
+			'workbench.editor.enablePreview': !VSCODE_INSIDERS,
+			'workbench.colorCustomizations': {},
+		}
+	])
   syncFn(newOptions)
 }
 
