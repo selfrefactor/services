@@ -108,7 +108,6 @@ void (async function sync() {
 function getPermanentSettings() {
   return {
     ...getEditor(),
-    ...getSpellingSettings(),
     ...getExplorer(),
     ...getGit(),
     ...getWorkbench(),
@@ -177,9 +176,9 @@ function testNewSettings() {
     'workbench.tips.enabled': false,
     'workbench.tree.indent': 16,
     // STABLE
-    'chat.experimental.quickQuestion.enable': true,
+    // 'chat.experimental.quickQuestion.enable': true,
     'editor.foldingImportsByDefault': FOLDING_IMPORTS,
-    'editor.hover.height': 1200,
+    // 'editor.hover.height': 1200, // disabled
     'editor.linkedEditing': true,
     'editor.pasteAs.showPasteSelector': 'never',
     'editor.suggest.snippetsPreventQuickSuggestions': false,
@@ -290,7 +289,7 @@ function getAdditionalSettings() {
   return {
     'breadcrumbs.enabled': false,
     'debug.inlineValues': 'off',
-    'debug.javascript.usePreview': true,
+    // 'debug.javascript.usePreview': true,
     'diffEditor.diffAlgorithm': 'advanced',
     'editor.scrollbar.vertical': 'visible',
     'files.enableTrash': false,
@@ -322,8 +321,8 @@ function getAdditionalSettings() {
       plaintext: true,
       yaml: true,
     },
-    'gitlab.showProjectMergeRequests': false,
-    gopls: { 'ui.semanticTokens': true },
+    // 'gitlab.showProjectMergeRequests': false,
+    // gopls: { 'ui.semanticTokens': true },
     'javascript.inlayHints.enumMemberValues.enabled': false,
     'javascript.inlayHints.functionLikeReturnTypes.enabled': false,
     'javascript.inlayHints.parameterTypes.enabled': false,
@@ -359,24 +358,6 @@ function getAdditionalSettings() {
     'window.titleBarStyle': 'custom',
     'zenMode.hideTabs': false,
     'zenMode.restore': false,
-  }
-}
-
-function getSpellingSettings() {
-  return {
-    'cSpell.allowCompoundWords': false,
-    'cSpell.ignorePaths': [
-      'node_modules',
-      '.git',
-      'countries.json',
-      'languages.json',
-      'introspections.json',
-    ],
-    'cSpell.maxNumberOfProblems': 3,
-    'cSpell.minWordLength': 4,
-    'cSpell.numSuggestions': 3,
-    'cSpell.showStatus': false,
-    'cSpell.spellCheckDelayMs': 200,
   }
 }
 
