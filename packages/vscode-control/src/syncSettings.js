@@ -153,11 +153,11 @@ function testNewSettings() {
     'editor.linkedEditing': true,
     'editor.links': false,
     'editor.matchBrackets': 'always',
-    'editor.occurrencesHighlight': 'off',
+    // 'editor.occurrencesHighlight': 'off',
     'editor.renderLineHighlight': 'gutter',
     'editor.renderWhitespace': 'none',
     'editor.roundedSelection': false,
-    'editor.selectionHighlight': false,
+    // 'editor.selectionHighlight': false,
     'editor.suggest.localityBonus': true,
     'explorer.compactFolders': false,
     'explorer.sortOrder': 'type',
@@ -426,7 +426,19 @@ async function getColorTheme() {
 }
 
 function mergeWithReport(inputs) {
-	const logs = []
+	const report = []
+	let result = {}
+	inputs.forEach(input => {
+		Object.keys(input).forEach(key => {
+			if (result[key] !== undefined) {
+				report.push({key, value: input[key]})
+			} 
+			result[key] = input[key]
+		})
+
+	})
+
+	return { result, report }
 }
 
 async function syncSettings() {
@@ -438,7 +450,7 @@ async function syncSettings() {
 })
 const colorTheme = await getColorTheme()
 
-  const newOptions = mergeWithReport([
+  const {result: newOptions, report} = mergeWithReport([
 		settings,
     getPermanentSettings(),
     getCalculatedOptions(),
@@ -463,6 +475,7 @@ const colorTheme = await getColorTheme()
 			'workbench.colorCustomizations': {},
 		}
 	])
+	console.log(report, 'merge report')
   syncFn(newOptions)
 }
 
