@@ -13,8 +13,6 @@ const {
   TSX_SNIPPETS,
 } = require('./constants.js')
 
-
-
 const ALTERNATIVE_DARK_BACKGROUND = '#011627'
 const ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
 
@@ -124,24 +122,24 @@ const GOTO_LOCATION = 'goto'
  */
 function testNewSettings() {
   return {
-		"editor.codeLens": true,
-		"editor.codeLensFontSize": 0,
-		"editor.autoClosingDelete": "always",
-		"workbench.activityBar.location": "bottom",
-		"workbench.layoutControl.enabled": false,
-    "workbench.layoutControl.type": "menu",
-    "window.doubleClickIconToClose": true,
-    "window.commandCenter": false,
-    "workbench.editor.showTabs": false,
-		"workbench.editor.decorations.colors": false,
+    'editor.codeLens': true,
+    'editor.codeLensFontSize': 0,
+    'editor.autoClosingDelete': 'always',
+    'workbench.activityBar.location': 'bottom',
+    'workbench.layoutControl.enabled': false,
+    'workbench.layoutControl.type': 'menu',
+    'window.doubleClickIconToClose': true,
+    'window.commandCenter': false,
+    'workbench.editor.showTabs': false,
+    'workbench.editor.decorations.colors': false,
     'editor.colorDecoratorsLimit': 10,
-		"editor.colorDecorators": true,
-		// "editor.colorDecorators": false,
-    "editor.colorDecoratorsActivatedOn": "hover",
+    'editor.colorDecorators': true,
+    // "editor.colorDecorators": false,
+    'editor.colorDecoratorsActivatedOn': 'hover',
     // 'editor.colorDecoratorsActivatedOn': 'click',
-    "editor.folding": false,
+    'editor.folding': false,
     'editor.foldingHighlight': false,
-		"window.menuBarVisibility": "compact",
+    'window.menuBarVisibility': 'compact',
     // EXPERIMENTAL
     'debug.javascript.codelens.npmScripts': 'never',
     'editor.copyWithSyntaxHighlighting': false,
@@ -211,9 +209,8 @@ function getEditor() {
     'editor.suggest.showStatusBar': false,
     // MARKER
     'editor.cursorSmoothCaretAnimation': 'on',
-    'editor.cursorStyle': 'line', // line-thin | line | block | underline | underline-thin
-    'editor.fontLigatures': true,
-		'editor.guides.bracketPairs': 'active',
+    'editor.cursorStyle': 'line-thin', // line-thin | line | block | underline | underline-thin
+    'editor.guides.bracketPairs': 'active',
     'editor.guides.bracketPairsHorizontal': false,
     'editor.guides.highlightActiveBracketPair': false,
     // 'editor.guides.highlightActiveBracketPair': true,
@@ -226,7 +223,6 @@ function getEditor() {
     'editor.minimap.enabled': false,
     'editor.mouseWheelZoom': true,
     'editor.multiCursorModifier': 'ctrlCmd',
-    'editor.parameterHints.enabled': false,
     'editor.quickSuggestions': {
       comments: 'off',
       other: 'off',
@@ -399,14 +395,14 @@ function getCalculatedOptions() {
 
 function syncFn(newOptions) {
   checkSettings(newOptions)
-	
-	if(WRITE_TO_OUTPUT){
-		writeJsonSync(SETTINGS, newOptions, { spaces: 2 })
-	}else {
-		const settingsLocation = VSCODE_INSIDERS ? 'insiders' : 'stable'
-		let output = resolve(__dirname, `../settings-${settingsLocation}.json`)
-		writeJsonSync(output, newOptions, { spaces: 2 })
-	}
+
+  if (WRITE_TO_OUTPUT) {
+    writeJsonSync(SETTINGS, newOptions, { spaces: 2 })
+  } else {
+    const settingsLocation = VSCODE_INSIDERS ? 'insiders' : 'stable'
+    let output = resolve(__dirname, `../settings-${settingsLocation}.json`)
+    writeJsonSync(output, newOptions, { spaces: 2 })
+  }
   // writeJsonSync(SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces: 2 })
 }
 
@@ -422,64 +418,61 @@ function checkSettings(newOptions) {
 
 async function getColorTheme() {
   const currentSettings = await readJson(SETTINGS)
-	return currentSettings['workbench.colorTheme'] ?? 'LedZeppelin'
+  return currentSettings['workbench.colorTheme'] ?? 'LedZeppelin'
 }
 
 function mergeWithReport(inputs) {
-	const report = []
-	let result = {}
-	inputs.forEach(input => {
-		Object.keys(input).forEach(key => {
-			if (result[key] !== undefined) {
-				report.push({key, value: input[key]})
-			} 
-			result[key] = input[key]
-		})
+  const report = []
+  let result = {}
+  inputs.forEach((input) => {
+    Object.keys(input).forEach((key) => {
+      if (result[key] !== undefined) {
+        report.push({ key, value: input[key] })
+      }
+      result[key] = input[key]
+    })
+  })
 
-	})
-
-	return { result, report }
+  return { result, report }
 }
 
-function  sortFn(aKey, bKey){
-	return aKey.localeCompare(bKey)
+function sortFn(aKey, bKey) {
+  return aKey.localeCompare(bKey)
 }
 
 async function syncSettings() {
-	const alternativeBackgrounds = getAlternativeBackground()
+  const alternativeBackgrounds = getAlternativeBackground()
   if (alternativeBackgrounds)
-	return syncFn({
-...settings,
-...alternativeBackgrounds,
-})
-const colorTheme = await getColorTheme()
+    return syncFn({
+      ...settings,
+      ...alternativeBackgrounds,
+    })
+  const colorTheme = await getColorTheme()
 
-  const {result: newOptions, report} = mergeWithReport([
-		settings,
+  const { result: newOptions, report } = mergeWithReport([
+    settings,
     getPermanentSettings(),
     getCalculatedOptions(),
-		{
-			'workbench.tree.renderIndentGuides': 'none',
-			'terminal.integrated.copyOnSelection': true,
-			'workbench.activityBar.location': 'top',
-			'workbench.tree.enableStickyScroll': true,
-			'workbench.tree.stickyScrollMaxItemCount': 8,
-			'window.zoomPerWindow': true,
-			'window.customTitleBarVisibility': 'windowed',
-			'terminal.integrated.mouseWheelZoom': true,
-			'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
-			'editor.multiDocumentOccurrencesHighlight': true,
-			'editor.wordBasedSuggestions': false,
-			'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
-			'workbench.colorTheme': THEME
-			? THEME
-			: colorTheme,
-			'workbench.editor.enablePreview': !VSCODE_INSIDERS,
-			'workbench.colorCustomizations': {},
-		}
-	])
-	const sorted = sortObject(sortFn,newOptions)
-	console.log(report, 'merge report')
+    {
+      'workbench.tree.renderIndentGuides': 'none',
+      'terminal.integrated.copyOnSelection': true,
+      'workbench.activityBar.location': 'top',
+      'workbench.tree.enableStickyScroll': true,
+      'workbench.tree.stickyScrollMaxItemCount': 8,
+      'window.zoomPerWindow': true,
+      'window.customTitleBarVisibility': 'windowed',
+      'terminal.integrated.mouseWheelZoom': true,
+      'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
+      // 'editor.multiDocumentOccurrencesHighlight': true,
+      'editor.wordBasedSuggestions': false,
+      'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
+      'workbench.colorTheme': THEME ? THEME : colorTheme,
+      'workbench.editor.enablePreview': !VSCODE_INSIDERS,
+      'workbench.colorCustomizations': {},
+    },
+  ])
+  const sorted = sortObject(sortFn, newOptions)
+  console.log(report, 'merge report')
   syncFn(sorted)
 }
 

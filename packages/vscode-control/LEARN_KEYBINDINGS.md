@@ -302,6 +302,10 @@
 
 > HINT: OPEN
 
+## CTRL  SHIFT  6
+
+`workbench.action.customizeLayout`
+
 ## CTRL  SHIFT  9
 
 `git-config-user-profiles.pickUserProfile`

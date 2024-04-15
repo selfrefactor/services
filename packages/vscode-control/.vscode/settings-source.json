@@ -4,8 +4,6 @@
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.bracketPairColorization.enabled": false,
   "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.cursorStyle": "line-thin",
   "editor.inlayHints.enabled": "off",
   "editor.inlayHints.padding": true,
   "editor.parameterHints.enabled": false,
