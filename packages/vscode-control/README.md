@@ -7,6 +7,7 @@ There are similarly new keybindings for running with coverage, such as Ctrl+; Ct
 Coverage information is shown as an overlay on line numbers by default, but you can Toggle Inline Coverage to see complete detailed information for your source files:
 ===
 ctrl+j - toggle activity
+ctrl alt b - show secondary activity
 ===
 Holding Alt while clicking on a test decoration, now runs that test in debug mode, when available.
 

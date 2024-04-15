@@ -1,7 +1,7 @@
 const { copySync, readJson, writeJsonSync } = require('fs-extra')
 const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('path')
-const { toDecimal, omit } = require('rambdax')
+const { toDecimal, omit, sortObject } = require('rambdax')
 
 const settings = require('../.vscode/settings-source')
 const {
@@ -112,7 +112,7 @@ function getPermanentSettings() {
     ...getGit(),
     ...getWorkbench(),
     ...getAdditionalSettings(),
-    ...testNewSettings(),
+    // ...testNewSettings(),
   }
 }
 
@@ -441,6 +441,10 @@ function mergeWithReport(inputs) {
 	return { result, report }
 }
 
+function  sortFn(aKey, bKey){
+	return aKey.localeCompare(bKey)
+}
+
 async function syncSettings() {
 	const alternativeBackgrounds = getAlternativeBackground()
   if (alternativeBackgrounds)
@@ -457,8 +461,7 @@ const colorTheme = await getColorTheme()
 		{
 			'workbench.tree.renderIndentGuides': 'none',
 			'terminal.integrated.copyOnSelection': true,
-			'workbench.activityBar.location': 'bottom',
-			// 'workbench.activityBar.location': 'top',
+			'workbench.activityBar.location': 'top',
 			'workbench.tree.enableStickyScroll': true,
 			'workbench.tree.stickyScrollMaxItemCount': 8,
 			'window.zoomPerWindow': true,
@@ -475,8 +478,9 @@ const colorTheme = await getColorTheme()
 			'workbench.colorCustomizations': {},
 		}
 	])
+	const sorted = sortObject(sortFn,newOptions)
 	console.log(report, 'merge report')
-  syncFn(newOptions)
+  syncFn(sorted)
 }
 
 function syncSnippets() {
