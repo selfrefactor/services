@@ -5,7 +5,6 @@ const {
   SLOW_SCROLL_INIT,
   SORT_LINES,
 } = require('./constants')
-const { configAnt } = require('./ants/config')
 const { copyTrimmed } = require('./copyTrimmed')
 const { fixComment } = require('./fixComment')
 const { createSpec } = require('./createSpec')

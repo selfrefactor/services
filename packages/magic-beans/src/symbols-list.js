@@ -19,6 +19,9 @@ const {  isKebabCase,
   isCamelCase
 } = require('string-fn')
 
+
+const DEBUG_FILE = false
+// const DEBUG_FILE = 'src/foo.ts'
 const FORBIDDEN_PATTERN = [ '.spec.', '.test.' ]
 const DEBUG_MODE = false
 const DEBUG_PATTERN = 'list.tsx'
@@ -37,7 +40,8 @@ const fileIsReportable = file => {
   )
 }
 
-const HARD_LIMIT_OF_FILES_TO_PROCESS = 700
+const HARD_LIMIT_OF_FILES_TO_PROCESS_INITIALLY = 3000
+const HARD_LIMIT_OF_FILES_TO_PROCESS = 800
 const MAX_LEVEL = 9
 const MAX_SYMBOLS_PER_LEVEL = 600
 
@@ -47,7 +51,7 @@ async function getReportableFiles(folder = 'src'){
   const files = await vscode.workspace.findFiles(
     pattern,
     '**/node_modules/**',
-    HARD_LIMIT_OF_FILES_TO_PROCESS
+    HARD_LIMIT_OF_FILES_TO_PROCESS_INITIALLY
   )
   const filtered = files.filter(fileIsReportable)
 
@@ -56,6 +60,7 @@ async function getReportableFiles(folder = 'src'){
 
 const skippedKinds = [ 1, 13 ]
 const skippedByRegex = []
+const skippedByKind = []
 
 function getFileReport(
   symbols, prev = {}, level = 0
@@ -63,11 +68,20 @@ function getFileReport(
   if (!symbols.length === 0) return prev
   symbols.forEach(symbol => {
     const { children, kind, name } = symbol
-    if (skippedKinds.includes(kind)) return
+    if (skippedKinds.includes(kind)){
+      if(!DEBUG_MODE) return
+
+      skippedByKind.push({
+        kind,
+        name,
+      })
+      return
+    } 
 
     if (prev[ level ] === undefined) prev[ level ] = []
     const passRegex = new RegExp('^[a-zA-Z0-9_]+$')
     if (!passRegex.test(name)){
+      if(!DEBUG_MODE) return
       skippedByRegex.push({
         kind,
         name,
@@ -151,7 +165,12 @@ const getReportableFilesFn = async folders => {
   const files = await mapParallelAsync(async folder => getReportableFiles(folder),
     folders)
 
-  return flatten(files)
+  let result = take(HARD_LIMIT_OF_FILES_TO_PROCESS, flatten(files))
+  if(!DEBUG_FILE) return result
+
+  result = result.filter(file => file.path.includes(DEBUG_FILE))
+
+  return result
 }
 
 async function symbolsList(){
