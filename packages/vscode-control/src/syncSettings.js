@@ -160,8 +160,8 @@ function testNewSettings() {
     'explorer.compactFolders': false,
     'explorer.sortOrder': 'type',
     'npm.scriptHover': false,
-    'outline.collapseItems': 'alwaysCollapse',
-    'search.collapseResults': 'alwaysCollapse',
+    'outline.collapseItems': 'alwaysExpand', // alwaysCollapse | alwaysExpand | siblings | none
+    'search.collapseResults': 'alwaysExpand', // alwaysExpand | alwaysCollapse
     'search.seedOnFocus': true,
     'search.seedWithNearestWord': true,
     'search.showLineNumbers': true,
@@ -472,7 +472,11 @@ async function syncSettings() {
     },
   ])
   const sorted = sortObject(sortFn, newOptions)
-  console.log(report, 'merge report')
+	
+	if(
+		report.length > 0
+	) console.log(report, 'merge report')
+
   syncFn(sorted)
 }
 
