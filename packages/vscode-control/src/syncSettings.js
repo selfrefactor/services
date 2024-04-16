@@ -1,7 +1,7 @@
 const { copySync, readJson, writeJsonSync } = require('fs-extra')
 const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('path')
-const { toDecimal, omit, sortObject } = require('rambdax')
+const { toDecimal, sortObject } = require('rambdax')
 
 const settings = require('../.vscode/settings-source')
 const {
@@ -127,8 +127,8 @@ function testNewSettings() {
     // "editor.colorDecorators": false,
     'editor.colorDecoratorsActivatedOn': 'hover',
     // 'editor.colorDecoratorsActivatedOn': 'click',
-    'editor.folding': false,
-    'editor.foldingHighlight': false,
+    'editor.folding': true,
+    'editor.foldingHighlight': true,
     'window.menuBarVisibility': 'compact',
     // EXPERIMENTAL
     'debug.javascript.codelens.npmScripts': 'never',
@@ -141,7 +141,7 @@ function testNewSettings() {
     'editor.linkedEditing': true,
     'editor.links': false,
     'editor.matchBrackets': 'always',
-    // 'editor.occurrencesHighlight': 'off',
+    'editor.occurrencesHighlight': 'on',
     'editor.renderLineHighlight': 'gutter',
     'editor.renderWhitespace': 'none',
     'editor.roundedSelection': false,
