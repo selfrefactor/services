@@ -103,17 +103,6 @@ void (async function sync() {
   await syncSettings()
 })()
 
-function getPermanentSettings() {
-  return {
-    ...getEditor(),
-    ...getExplorer(),
-    ...getGit(),
-    ...getWorkbench(),
-    ...getAdditionalSettings(),
-    ...testNewSettings(),
-  }
-}
-
 // goto | peek
 const GOTO_LOCATION = 'goto'
 
@@ -122,6 +111,9 @@ const GOTO_LOCATION = 'goto'
  */
 function testNewSettings() {
   return {
+    'workbench.editor.showTabs': 'multiple',
+		"workbench.editor.tabActionCloseVisibility": false,
+    'editor.tabFocusMode': true,
     'editor.codeLens': true,
     'editor.codeLensFontSize': 0,
     'editor.autoClosingDelete': 'always',
@@ -129,8 +121,6 @@ function testNewSettings() {
     'workbench.layoutControl.enabled': false,
     'workbench.layoutControl.type': 'menu',
     'window.doubleClickIconToClose': true,
-    'window.commandCenter': false,
-    'workbench.editor.showTabs': false,
     'workbench.editor.decorations.colors': false,
     'editor.colorDecoratorsLimit': 10,
     'editor.colorDecorators': true,
@@ -235,7 +225,6 @@ function getEditor() {
     'editor.smoothScrolling': true,
     'editor.stickyScroll.defaultModel': 'indentationModel',
     'editor.stickyScroll.enabled': true,
-    'editor.suggest.localityBonus': true,
     'editor.suggest.showWords': false,
     'editor.tabSize': 2,
     'editor.wordWrap': 'on',
@@ -265,7 +254,6 @@ function getExplorer() {
     'explorer.confirmDragAndDrop': false,
     'explorer.incrementalNaming': 'smart',
     'explorer.openEditors.sortOrder': 'alphabetical',
-    'explorer.sortOrder': 'default',
   }
 }
 
@@ -332,7 +320,6 @@ function getAdditionalSettings() {
     'npm.fetchOnlinePackageInfo': false,
     'npm.packageManager': 'yarn',
     'scm.defaultViewMode': 'tree',
-    'search.seedOnFocus': false,
     'search.smartCase': true,
     'search.useReplacePreview': false,
     // test tasks
@@ -450,7 +437,12 @@ async function syncSettings() {
 
   const { result: newOptions, report } = mergeWithReport([
     settings,
-    getPermanentSettings(),
+		getEditor(),
+    getExplorer(),
+    getGit(),
+    getWorkbench(),
+    getAdditionalSettings(),
+    testNewSettings(),
     getCalculatedOptions(),
     {
       'workbench.tree.renderIndentGuides': 'none',
@@ -470,10 +462,8 @@ async function syncSettings() {
     },
   ])
   const sorted = sortObject(sortFn, newOptions)
-	
-	if(
-		report.length > 0
-	) console.log(report, 'merge report')
+
+  if (report.length > 0) console.log(report, 'merge report')
 
   syncFn(sorted)
 }
