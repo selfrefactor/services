@@ -28,19 +28,26 @@ async function lintFileWithEslint(filePath) {
 }
 
 async function biome(filePath) {
-  const label = `${filePath} - biome`
-  console.time(label)
-  const command = `node_modules/@biomejs/biome/bin/biome check --apply-unsafe ${filePath}`
-  const { errorMessage, success } = await exec(command)
-  console.timeEnd(label)
-  return errorMessage ?? false
+  try{
+    const label = `${filePath} - biome`
+    console.time(label)
+    const command = `node_modules/@biomejs/biome/bin/biome check --apply-unsafe ${filePath}`
+    const formatCommand = `node_modules/@biomejs/biome/bin/biome format --write --indent-style=space --indent-width=2 ${filePath}`
+    await exec(formatCommand)
+    const { errorMessage } = await exec(command)
+    console.timeEnd(label)
+    return errorMessage ?? false
+  }catch(e){
+    console.log(e)
+    return false
+  }
 }
 
 async function lintFn(filePath) {
   if (!(await check())) process.exit(1)
 
-  await lintFileWithPrettier(filePath)
   const biomeOutput = await biome(filePath)
+  await lintFileWithPrettier(filePath)
   const lintOutput = await lintFileWithEslint(filePath)
 
   return [biomeOutput, lintOutput]

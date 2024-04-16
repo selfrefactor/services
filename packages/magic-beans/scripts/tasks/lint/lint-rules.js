@@ -13,14 +13,13 @@ function getPerfectionistRules() {
 
 const perfectionistRules = getPerfectionistRules()
 
-// https://eslint.style/rules/js
 const stylisticRules = {
   '@stylistic/arrow-spacing': [1, { after: true, before: false }],
 }
 
 const rules = {
   ...perfectionistRules,
-  // ...stylisticRules,
+  ...stylisticRules,
   'consistent-type-assertions': 0,
   'explicit-module-boundary-types': 0,
   'no-array-constructor': 1,
