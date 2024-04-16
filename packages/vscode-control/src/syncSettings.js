@@ -110,7 +110,7 @@ function getPermanentSettings() {
     ...getGit(),
     ...getWorkbench(),
     ...getAdditionalSettings(),
-    // ...testNewSettings(),
+    ...testNewSettings(),
   }
 }
 
@@ -125,7 +125,7 @@ function testNewSettings() {
     'editor.codeLens': true,
     'editor.codeLensFontSize': 0,
     'editor.autoClosingDelete': 'always',
-    'workbench.activityBar.location': 'bottom',
+    'workbench.activityBar.location': 'top',
     'workbench.layoutControl.enabled': false,
     'workbench.layoutControl.type': 'menu',
     'window.doubleClickIconToClose': true,
@@ -332,7 +332,6 @@ function getAdditionalSettings() {
     'npm.fetchOnlinePackageInfo': false,
     'npm.packageManager': 'yarn',
     'scm.defaultViewMode': 'tree',
-    'search.collapseResults': 'alwaysCollapse',
     'search.seedOnFocus': false,
     'search.smartCase': true,
     'search.useReplacePreview': false,
@@ -456,7 +455,6 @@ async function syncSettings() {
     {
       'workbench.tree.renderIndentGuides': 'none',
       'terminal.integrated.copyOnSelection': true,
-      'workbench.activityBar.location': 'top',
       'workbench.tree.enableStickyScroll': true,
       'workbench.tree.stickyScrollMaxItemCount': 8,
       'window.zoomPerWindow': true,
