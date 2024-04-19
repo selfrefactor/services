@@ -15,7 +15,7 @@ async function prepare(_){
 }
 
 async function getRawData(_){
-  await _.waitFor(replSelector)
+  await _.waitFor(replSelector, 1, 12000)
   const replContentEl = await _.page.$(replSelector)
   const replContent  = await replContentEl.textContent()
   const kataTitleEl = await _.page.$(`.task-title--header`)
