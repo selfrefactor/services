@@ -53,8 +53,12 @@
     "key": "capslock -",
     "command": "git.push"
   },
+	{
+		"key": "capslock g",
+		"command": "workbench.view.scm"
+	},
   {
-    "key": "capslock g",
+    "key": "capslock h",
     "priority": true,
     "hint": "All - fold all",
     "command": "editor.foldAll",
@@ -234,7 +238,7 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "capslock h",
+    "key": "capslock j",
     "priority": true,
     "command": "editor.unfoldAll",
     "when": "editorTextFocus && foldingEnabled"

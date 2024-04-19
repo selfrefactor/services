@@ -48,21 +48,21 @@
 
 > HINT: FIND
 
-## CAPSLOCK G
+## CAPSLOCK H
 
 `editor.foldAll`
 
 > HINT: ALL - FOLD ALL
-
-## CAPSLOCK H
-
-`editor.unfoldAll`
 
 ## CAPSLOCK I
 
 `references-view.findImplementations`
 
 > HINT: IMPLEMENTATION
+
+## CAPSLOCK J
+
+`editor.unfoldAll`
 
 ## CAPSLOCK K
 
@@ -239,6 +239,10 @@
 `workbench.view.debug`
 
 > HINT: DEBUG
+
+## CAPSLOCK G
+
+`workbench.view.scm`
 
 ## CAPSLOCK L
 
