@@ -44,15 +44,15 @@
 
 ## CAPSLOCK F
 
-`editor.foldAll`
-
-> HINT: ALL - FOLD ALL
-
-## CAPSLOCK G
-
 `references-view.findReferences`
 
 > HINT: FIND
+
+## CAPSLOCK G
+
+`editor.foldAll`
+
+> HINT: ALL - FOLD ALL
 
 ## CAPSLOCK H
 
