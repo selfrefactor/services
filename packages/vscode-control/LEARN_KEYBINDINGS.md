@@ -38,17 +38,17 @@
 
 ## CAPSLOCK A
 
-`editor.foldAll`
-
-> HINT: ALL - FOLD ALL
-
-## CAPSLOCK A
-
 `workbench.files.action.showActiveFileInExplorer`
 
 > HINT: ACTIVE FILE
 
 ## CAPSLOCK F
+
+`editor.foldAll`
+
+> HINT: ALL - FOLD ALL
+
+## CAPSLOCK G
 
 `references-view.findReferences`
 
@@ -361,7 +361,6 @@
 * capslock 9
 * capslock c
 * capslock e
-* capslock g
 * capslock q
 * capslock s
 * capslock v

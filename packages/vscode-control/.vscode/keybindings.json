@@ -54,7 +54,7 @@
     "command": "git.push"
   },
   {
-    "key": "capslock a",
+    "key": "capslock f",
     "priority": true,
     "hint": "All - fold all",
     "command": "editor.foldAll",
@@ -246,7 +246,7 @@
     "when": "editorHasReferenceProvider"
   },
   {
-    "key": "capslock f",
+    "key": "capslock g",
     "priority": true,
     "hint": "FIND",
     "command": "references-view.findReferences",
