@@ -238,7 +238,8 @@ function getWorkbench() {
       notebookEditors: false,
       untitledEditors: false,
     },
-    'workbench.editor.pinnedTabSizing': 'shrink',
+    'workbench.editor.pinnedTabSizing': 'normal', // shrink | normal
+		"workbench.editor.pinnedTabsOnSeparateRow": true,
     'workbench.editor.untitled.hint': 'hidden',
     'workbench.editor.untitled.labelFormat': 'name',
     'workbench.iconTheme': FILE_ICON_THEME,
