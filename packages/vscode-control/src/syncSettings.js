@@ -113,7 +113,7 @@ function testNewSettings() {
   return {
     'workbench.editor.showTabs': 'multiple',
 		"workbench.editor.tabActionCloseVisibility": false,
-    'editor.tabFocusMode': true,
+    // 'editor.tabFocusMode': true, // this is not needed as it is accessability feature
     'editor.codeLens': true,
     'editor.codeLensFontSize': 0,
     'editor.autoClosingDelete': 'always',
@@ -125,7 +125,7 @@ function testNewSettings() {
     'editor.colorDecoratorsLimit': 10,
     'editor.colorDecorators': true,
     // "editor.colorDecorators": false,
-    'editor.colorDecoratorsActivatedOn': 'hover',
+    // 'editor.colorDecoratorsActivatedOn': 'hover',
     // 'editor.colorDecoratorsActivatedOn': 'click',
     'editor.folding': true,
     'editor.foldingHighlight': true,
