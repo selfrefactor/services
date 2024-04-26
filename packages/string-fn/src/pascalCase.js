@@ -8,18 +8,9 @@ import {
 } from 'rambdax'
 import { words } from './words'
 import { wordsX } from './wordsX'
+import { createMethodWithAdditionalSupport } from './utils'
 
-// what if one/two chars
-export function pascalCase(str, extraLatin = false){
-  const method = extraLatin ?
-    wordsX :
-    words
-
-  return join(
-    '',
-    map(
-      val => `${ toUpper(head(val)) }${ toLower(tail(val)) }`,
-      method(str)
-    )
-  )
-}
+export const pascalCase = createMethodWithAdditionalSupport(
+  x => tranform
+  ''
+)
