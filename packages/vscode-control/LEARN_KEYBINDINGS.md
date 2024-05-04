@@ -196,6 +196,10 @@
 
 > HINT: SPLIT
 
+## ALT  SHIFT  9
+
+`git-config-user-profiles.pickUserProfile`
+
 ## ALT  T
 
 `terminal.focus`
@@ -312,7 +316,7 @@
 
 ## CTRL  SHIFT  9
 
-`git-config-user-profiles.pickUserProfile`
+`workbench.action.toggleMaximizedPanel`
 
 ## CTRL  SHIFT  B
 

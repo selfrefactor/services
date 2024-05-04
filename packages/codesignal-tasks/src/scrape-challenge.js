@@ -21,25 +21,12 @@ function markTime(){
   return () => toDecimal((Number(new Date() )- now)/1000)
 }
 
+
 async function getRawData(_){
-  let markInitTime = markTime()
-  // let waitPredicate = async() => {
-  //   let el = await _.page.$('.monaco-mouse-cursor-text')
-  //   if(!el) return false
-
-  //   let textContent = await el.textContent()
-  //   // get visibility of element
-  //   let isVisibleHandle = await el.evaluateHandle((e) => {
-  //     const style = window.getComputedStyle(e)
-  //     return style && style.visibility === 'visible'
-  //   })
-
-  //   return textContent.includes('function')
-  // }
-  // await _.waitForPredicate(waitPredicate, 12000)
+  // let markInitTime = markTime()
 
   await delay(7000)
-  let timeToInit = markInitTime()
+  // let timeToInit = markInitTime()
   const replContentEl = await _.page.$(replSelector)
   const replContent  = await replContentEl.textContent()
   const kataTitleEl = await _.page.$(`.task-title--header`)
@@ -54,9 +41,6 @@ async function getRawData(_){
     if(shouldStop) return {}
     await x.click({force:true})
     await delay(100)  
-    const testCasesEls = await _.page.$$(
-      '.test-case'
-    )
     let getTestInput = async () => {
       const testCasesElsAlt = await _.page.$$(
         '[data-testid="solution-language"]'
@@ -64,26 +48,25 @@ async function getRawData(_){
       return testCasesElsAlt[3].textContent()
     }
     const testCaseTitle = await x.textContent()
-    const testCaseText = await testCasesEls[i].textContent()
     const testInput = await getTestInput()
     await delay(100)
     let tabsTitle = await _.page.$$('.tabs--title')
+    if(tabsTitle.length<5){
+      shouldStop = true  
+      return {}
+    } 
     await tabsTitle[4].click({force:true})
     await _.clickWithText('Return Value')
     await delay(100)
     const expectedOutput = await _.getText(`.-answer`)
 
     await delay(100)
-    if(testCaseText.endsWith('Hidden')) {
-      shouldStop = true
-      return {}
-    }  
 
     return {expectedOutput, testInput, title: testCaseTitle}
   }
 
   const testCases = await mapAsync(iterator, testCasesTitlesEls)
-  const filteredTestCases = testCases.filter(x => x.testCaseTitle)
+  const filteredTestCases = testCases.filter(x => x.title)
 
   return {replContent, kataTitle, testCases: filteredTestCases}
 }
@@ -96,7 +79,6 @@ async function scrapeChallenge(challengeID){
   const url  = `https://app.codesignal.com/challenge/${challengeID}`
   const rawData = await playwrightRun({fn: getRawData, fallback: null, url, handleError})
 
-  await writeFile('rawData.json', JSON.stringify(rawData, null, 2))
   if(
     process.env.DEBUG === 'ON' 
   ){
@@ -110,3 +92,18 @@ async function scrapeChallenge(challengeID){
 
 exports.scrapeChallenge = scrapeChallenge
 exports.replSelector = replSelector
+
+// let waitPredicate = async() => {
+//   let el = await _.page.$('.monaco-mouse-cursor-text')
+//   if(!el) return false
+
+//   let textContent = await el.textContent()
+//   // get visibility of element
+//   let isVisibleHandle = await el.evaluateHandle((e) => {
+//     const style = window.getComputedStyle(e)
+//     return style && style.visibility === 'visible'
+//   })
+
+//   return textContent.includes('function')
+// }
+// await _.waitForPredicate(waitPredicate, 12000)
