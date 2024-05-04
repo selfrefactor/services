@@ -25,7 +25,8 @@ function markTime(){
 async function getRawData(_){
   // let markInitTime = markTime()
 
-  await delay(7000)
+  await delay(10000)
+  // await _.waitFor(replSelector, 12000)
   // let timeToInit = markInitTime()
   const replContentEl = await _.page.$(replSelector)
   const replContent  = await replContentEl.textContent()
@@ -87,7 +88,7 @@ async function scrapeChallenge(challengeID){
 
   if(!rawData) throw new Error('!rawData')
   
-  return rawData
+  return [rawData, url]
 }
 
 exports.scrapeChallenge = scrapeChallenge

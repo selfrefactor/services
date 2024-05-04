@@ -56,7 +56,7 @@
         "Fruu3pERDNJWzJXGm"
       ],
       "env": {
-        "HEADLESS": "OFF",
+        "HEADLESS": "ON",
         "DEBUG": "ON"
       },
       "console": "integratedTerminal",

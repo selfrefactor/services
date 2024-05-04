@@ -3,13 +3,14 @@ const { parseChallengeData } = require('./_modules/parse-challenge-data')
 const { KATA_DIR } = require('./constants')
 const { scrapeChallenge } = require('./scrape-challenge')
 
-async function runChallenge(challengeID ){
+async function runChallenge(challengeID) {
   try {
-    const scrapeData = await scrapeChallenge(challengeID)
+    const [scrapeData, url] = await scrapeChallenge(challengeID)
     const parsedData = parseChallengeData(scrapeData)
-    await createKata(KATA_DIR, parsedData)
+    await createKata(KATA_DIR, parsedData, url)
     console.log('DONE')
-  }catch (err){
+  }
+  catch (err) {
     console.log(err)
   }
 }

@@ -1,8 +1,8 @@
-function solution(
-n, m
-){
+// https://app.codesignal.com/challenge/Fruu3pERDNJWzJXGm
+
+function solution(n, m){
   
-  return
+  return 1
 }
 
 test('happy', () => {
@@ -10,8 +10,8 @@ test('happy', () => {
    * n: 3m: 3
    */
 
-  const n = 
-  const m = 
+  const n = 3
+  const m = 3
 
   const result = solution(n, m)
   const expected = 3
