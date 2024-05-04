@@ -1,6 +1,6 @@
 const { writeFile } = require('fs/promises')
 const { playwrightRun } = require('playwright-fn')
-const { delay, mapAsync, tail, toDecimal } = require('rambdax')
+const { delay, mapAsync, tail, take, toDecimal } = require('rambdax')
 
 function markTime() {
   const now = Number(new Date())
@@ -16,34 +16,84 @@ function waitCondition(_) {
     return els.length === 15
   }
 }
+
+function cyrillicToLatin(text) {
+  const cyrillic
+		= 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯабвгдежзийклмнопрстуфхцчшщъьюя'
+  const latin
+		= 'ABVGDEJZIJKLMNOPRSTUFHCČŠŠŬĬÛÂabvgdejzijklmnoprstufh1234567890'
+  let result = ''
+
+  for (let i = 0; i < text.length; i++) {
+    const cyrillicIndex = cyrillic.indexOf(text[i])
+    if (cyrillicIndex > -1) {
+      const replacer = latin[cyrillicIndex] ?? ''
+      result += replacer
+    }
+    else {
+      result += text[i]
+    }
+  }
+
+  return result
+}
+
+function getId(category, title, text) {
+  const cyrilicId = `${category}${take(10, title)}${take(10, text)}`
+
+  // turn cyrilic letters to latin
+  return cyrillicToLatin(cyrilicId)
+}
+
+function getText(result) {
+  const failedConditionWithText = result
+    .filter(x => !x.okCondition && x.text)
+    .map(x => x.text)
+    .sort((a, b) => a.length - b.length)
+
+  const passed = result
+    .filter(x => x.okCondition && x.text)
+    .map(x => x.text)
+
+  if (passed.length > 0) {
+    return passed.join('\n')
+  }
+  if (failedConditionWithText.length > 0) {
+    return failedConditionWithText[0]
+  }
+  return ''
+}
+
 async function getRawData(_) {
   const markInitTime = markTime()
   await _.waitForPredicate(waitCondition(_), 12000)
 
   const timeToInit = markInitTime()
   const postEntries = await _.page.$$(postEntry)
-  let allPostHeaders = await _.page.$$('.post-header')
+  const allPostHeaders = await _.page.$$('.post-header')
 
   const data = await mapAsync(async (x, index) => {
     const children = await x.$$(':scope > *')
-    let postHeaders = await allPostHeaders[index]
-    let titleEl = await postHeaders.$('.cat')
-    let title = await titleEl.textContent() ?? 'INVALID TITLE'
+    const postHeaders = await allPostHeaders[index]
+    const titleEl = await postHeaders.$('.cat')
+    const title = (await titleEl.textContent()) ?? ''
 
-    let categoryEl = await postHeaders.$('h2')
-    let category = await categoryEl.textContent() ?? 'INVALID CATEGORY'
+    const categoryEl = await postHeaders.$('h2')
+    const category = (await categoryEl.textContent()) ?? ''
 
     const result = await mapAsync(async (x) => {
       const textContent = await x.textContent()
       const innerHTML = await x.innerHTML()
-      if (!innerHTML.startsWith('<p>') || !innerHTML.includes('<strong>'))
-        return ''
-      return textContent
+      return {
+        okCondition: innerHTML.startsWith('<strong>'),
+        textContent: textContent.trim(),
+      }
     }, tail(children))
+
+    const text = getText(result)
     return {
-      text: result.filter(Boolean).join('\n'),
-      title,
-      category,
+      id: getId(category, title, text),
+      text,
     }
   }, postEntries)
 
