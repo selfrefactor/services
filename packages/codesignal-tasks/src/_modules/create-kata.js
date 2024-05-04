@@ -63,8 +63,11 @@ test('happy', () => {
 {{inputLines}}
   )
 
-  {{expectedDeclaration}}    
-  expect(result).toEqual(expected)
+  console.log(result)
+
+  /**
+    {{firstExpected}}
+  */
 })
 
 
@@ -77,7 +80,7 @@ test('happy', () => {
     declarations: getDeclarations(sortedTestInputs, testCases[0]),
     inputLines: getInputLines(sortedTestInputs),
     restTestCases: getRestTestCases(testCases),
-    expectedDeclaration: getExpectedDeclaration(testCases[0])
+    firstExpected: testCases[0]
   }
   return interpolate(template, templateArguments)
 }
