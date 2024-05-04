@@ -1,36 +1,31 @@
 {
-  "replContent": "function solution(n, m) {}",
-  "kataTitle": "horsebot",
+  "replContent": "function solution(requests) {}",
+  "kataTitle": "shoppingCart",
   "testCases": [
     {
-      "expectedOutput": "3",
-      "testInput": "n: 3m: 3",
+      "expectedOutput": "[\"pickles : 5\", \n \"milk : 1\"]",
+      "testInput": "requests:\n[\"add : milk\", \n \"add : pickles\", \n \"remove : milk\", \n \"add : milk\", \n \"quantity_upd : pickles : +4\"]",
       "title": "Test 1"
     },
     {
-      "expectedOutput": "2",
-      "testInput": "n: 7m: 2",
+      "expectedOutput": "[\"golden medal : 1\"]",
+      "testInput": "requests:\n[\"add : rock\", \n \"add : paper\", \n \"add : scissors\", \n \"checkout\", \n \"add : golden medal\"]",
       "title": "Test 2"
     },
     {
-      "expectedOutput": "8",
-      "testInput": "n: 8m: 7",
+      "expectedOutput": "[\"milk : 2\"]",
+      "testInput": "requests:\n[\"add : milk\", \n \"add : pickles\", \n \"remove : milk\", \n \"checkout\", \n \"add : milk\", \n \"quantity_upd : milk : +3\", \n \"quantity_upd : milk : -2\"]",
       "title": "Test 3"
     },
     {
-      "expectedOutput": "4",
-      "testInput": "n: 4m: 4",
+      "expectedOutput": "[\"pickles : 1\", \n \"fruitz : 51\", \n \"vegetables : 1\", \n \"whattheawesomeshopisit : 1\", \n \"computer : 4\", \n \"computer mouse : 9\", \n \"computer monitor : 1\", \n \"fruitz seed : 1\"]",
+      "testInput": "requests:\n[\"add : milk\", \n \"add : pickles\", \n \"add : fruitz\", \n \"add : vegetables\", \n \"add : computer\", \n \"add : whattheawesomeshopisit\", \n \"quantity_upd : computer : +2\", \n \"remove : computer\", \n \"remove : milk\", \n \"add : computer\", \n \"quantity_upd : fruitz : +100\", \n \"add : computer mouse\", \n \"add : computer monitor\", \n \"quantity_upd : computer mouse : +3\", \n \"quantity_upd : computer mouse : +5\", \n \"quantity_upd : computer : +3\", \n \"quantity_upd : fruitz : -50\", \n \"add : fruitz seed\"]",
       "title": "Test 4"
     },
     {
-      "expectedOutput": "2",
-      "testInput": "n: 4m: 3",
+      "expectedOutput": "[]",
+      "testInput": "requests:\n[\"add : milk\", \n \"add : pickles\", \n \"add : fruits\", \n \"checkout\", \n \"checkout\", \n \"checkout\", \n \"checkout\"]",
       "title": "Test 5"
-    },
-    {
-      "expectedOutput": "4",
-      "testInput": "n: 7m: 4",
-      "title": "Test 6"
     }
   ]
 }
