@@ -1,11 +1,10 @@
 const { parseChallengeData } = require('./parse-challenge-data');
-const { data } = require('../challange-test-data.json');
-const { writeJson } = require('fs-extra');
+const data = require('../../rawData.json');
+const { writeFile } = require('fs-extra');
 
 test('happy', async () => {
   const result = parseChallengeData(data)
-  await writeJson(`${__dirname}/parsed-test-data.json`, {data:result})
-
+  await writeFile('parsedData.json', JSON.stringify(result, null, 2))
   expect(
     result
   ).toMatchSnapshot()

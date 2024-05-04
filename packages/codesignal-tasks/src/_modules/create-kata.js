@@ -1,53 +1,33 @@
-const { writeFile } = require("fs-extra");
-const { interpolate, join, piped, tail, map } = require("rambdax");
-const { kebabCase } = require("string-fn");
+const { writeFile } = require('fs-extra')
+const { interpolate, join, map, piped, tail } = require('rambdax')
+const { kebabCase } = require('string-fn')
 
-function getExpectedDeclaration({expected}){
-  return `const expected = ${expected}`
-}
-
-function getDeclarations(sortedTestInputs, testCase){
+function getDeclarations(testInputs) {
   return piped(
-    sortedTestInputs,
-    map(x => `    const ${x} = ${testCase.testInputs[x]}`),
-    join('\n')    
+    testInputs,
+    map(x => `  const ${x} = `),
+    join('\n'),
   )
 }
 
 const restCasesTemplate = `
   Inputs/Expected:
 
-{{inputs}}
+{{testInput}}
 
-{{expected}}
+{{expectedOutput}}
 `
 
-function getRestTestCases(testCases){
+function getRestTestCases(testCases) {
   return piped(
     testCases,
     tail,
-    map(
-      testCase =>{
-        let inputs = ''
-        map((x, prop)=>{
-          inputs += `const ${prop} = ${x}\n`
-        }, testCase.testInputs)
-        return interpolate(restCasesTemplate, {inputs, expected: `const expected = ${testCase.expected}`})
-      }
-    ),
-    join('\n===\n')
+    map((testCase) =>  interpolate(restCasesTemplate, testCase)),
+    join('\n===\n'),
   )
 }
 
-function getInputLines(sortedTestInputs){
-  return piped(
-    sortedTestInputs,
-    map(x => `    ${x}`),
-    join(',\n'),
-  )
-}
-
-function getFileContent({sortedTestInputs,functionName, testCases}){
+function getFileContent({ testCases, testInputs }) {
   const template = `
 function solution(
 {{inputLines}}
@@ -57,15 +37,19 @@ function solution(
 }
 
 test('happy', () => {
+  /**
+   * {{firstTestInput}}
+   */
+
 {{declarations}}
 
-  const result = solution(
-{{inputLines}}
-  )
-
+  const result = solution({{inputs}})
+  const expected = {{firstExpected}}
   console.log(result)
 
   /**
+   expected
+
     {{firstExpected}}
   */
 })
@@ -77,15 +61,16 @@ test('happy', () => {
 `.trim()
 
   const templateArguments = {
-    declarations: getDeclarations(sortedTestInputs, testCases[0]),
-    inputLines: getInputLines(sortedTestInputs),
+    declarations: getDeclarations(testInputs),
+    firstExpected: testCases[0].expectedOutput,
+    firstTestInput: testCases[0].testInput,
+    inputs: testInputs.join(', '),
     restTestCases: getRestTestCases(testCases),
-    firstExpected: testCases[0]
   }
   return interpolate(template, templateArguments)
 }
 
-async function createKata(dir, parsedData){
+async function createKata(dir, parsedData) {
   const fileContent = getFileContent(parsedData)
   const filePath = `${dir}/${kebabCase(parsedData.functionName)}.spec.js`
 
