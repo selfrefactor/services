@@ -29,9 +29,7 @@ function getRestTestCases(testCases) {
 
 function getFileContent({ testCases, testInputs }) {
   const template = `
-function solution(
-{{inputLines}}
-){
+function solution({{inputs}}){
   
   return
 }
