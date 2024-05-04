@@ -81,12 +81,27 @@ async function getRawData(_) {
     const categoryEl = await postHeaders.$('h2')
     const category = (await categoryEl.textContent()) ?? ''
 
-    const result = await mapAsync(async (x) => {
-      const textContent = await x.textContent()
-      const innerHTML = await x.innerHTML()
+    const result = await mapAsync(async (section) => {
+      const textContent = await section.textContent()
+      const innerHtml = await section.innerHTML()
+      const okCondition = innerHtml.startsWith('<strong>')
+      if (!okCondition) {
+        return {
+          okCondition: false,
+          text: textContent.trim(),
+        }
+      }
+      const linesElements = await section.$$(':scope > *')
+
+      const lines = await mapAsync(async (line) => {
+        const lineText = await line.textContent()
+        const lineInnerHtml = await line.textContent()
+        return lineText.trim()
+      }, linesElements)
+      const text = lines.filter(Boolean).join('\n')
       return {
-        okCondition: innerHTML.startsWith('<strong>'),
-        textContent: textContent.trim(),
+        okCondition: true,
+        text,
       }
     }, tail(children))
 
@@ -121,7 +136,7 @@ async function scrape(url) {
 
   if (!rawData) throw new Error('!rawData')
 
-  return [false, rawData]
+  return rawData
 }
 
 exports.scrape = scrape

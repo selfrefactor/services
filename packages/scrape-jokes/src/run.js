@@ -4,6 +4,7 @@ const { scrape } = require('./scrape')
 const { kebabCase } = require('string-fn')
 const { existsSync } = require('fs')
 const { writeJson, readJson, ensureDir } = require('fs-extra')
+const { log } = require('helpers-fn')
 
 let getFileLocation = label => `${OUTPUT_DIR}/${kebabCase(label)}.json`
 
@@ -41,12 +42,23 @@ async function saveData({data, label, checkForUnique}) {
 async function run(initialUrl, label, checkForUnique) {
   await init(label)
   try {
-    const [done, data, timeToInit] = await scrape(initialUrl)
-    if(done) return
-    let {stopCondition} = await saveData({data, label, checkForUnique})
-    if(stopCondition) return
-    await delay(1000)
-    console.log('DONE')
+    let scrapeIsDone = false
+    let counter = 0
+    while(!false){
+      log(counter++, 'big')
+      const [done, data, timeToInit] = await scrape(initialUrl)
+      if(done){
+        scrapeIsDone = true
+        continue
+      }
+      let {stopCondition} = await saveData({data, label, checkForUnique})
+      if(stopCondition){
+        scrapeIsDone = true
+        continue
+      } 
+      await delay(1000)
+      console.log('DONE')
+    }
   }
   catch (err) {
     console.log(err)
