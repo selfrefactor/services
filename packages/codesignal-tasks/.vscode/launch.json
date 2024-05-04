@@ -56,7 +56,8 @@
         "Fruu3pERDNJWzJXGm"
       ],
       "env": {
-        "HEADLESS": "OFF"
+        "HEADLESS": "OFF",
+        "DEBUG": "ON"
       },
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
