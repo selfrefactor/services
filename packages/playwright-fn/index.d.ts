@@ -83,6 +83,11 @@ interface ClickWith {
   nth?: number
 }
 
+interface WaitForNavigation {
+  timeout?: number
+  waitUntil?: 'load' | 'domcontentloaded' | 'networkidle'
+}
+
 export interface WrapOutput {
   applyMocks: (serverMocks: Array<ServerMock>) => Promise<void>
   click: (el: string, nth: number) => Promise<void>
@@ -90,7 +95,7 @@ export interface WrapOutput {
   clickAndWaitForNavigation: (
     playwrightInput: string,
     navigateEndsWith: string,
-    ms?: number
+    options?:  WaitForNavigation
   ) => Promise<void>
   findWithTextNth: (input: FindWithTextNth) => Promise<HTMLElement>
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>

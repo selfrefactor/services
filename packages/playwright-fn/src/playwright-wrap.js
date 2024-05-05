@@ -160,10 +160,10 @@ function attach(
   const clickAndWaitForNavigation = async (
     playwrightInput,
     navigateEndsWith,
-    ms = 30000,
+    options = {}
   ) => {
     await Promise.all([
-      page.waitForNavigation({ url: `**/${navigateEndsWith}`, timeout: ms }),
+      page.waitForNavigation({ ...options, url: `**/${navigateEndsWith}` }),
       page.click(playwrightInput, { force: true }),
     ])
     await delay(TICK)
