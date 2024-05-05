@@ -59,14 +59,15 @@ async function run({initialUrl, label, checkForUnique, initialCounter, forceCont
     const content = await readJson(getFileLocation(label))
     await createMarkdown(content, label)
   }
-
+  var browserInstance
   await init(label)
-  const { browser, page } = await playwrightInit({
-    ...defaultInput,
-    url: initialUrl,
-  })
-  const _ = wrap(page, SCREENS_DIR)
   try {
+    const { browser, page } = await playwrightInit({
+      ...defaultInput,
+      url: initialUrl,
+    })
+    browserInstance = browser
+    var _ = wrap(page, SCREENS_DIR)
     let scrapeIsDone = false
     while (!scrapeIsDone) {
       log(String(counter), 'info')
@@ -83,9 +84,8 @@ async function run({initialUrl, label, checkForUnique, initialCounter, forceCont
   }
   catch (err) {
     console.log(err)
-  }
-  finally {
-    await browser.close()
+  }finally {
+    await browserInstance.close()
     await onEnd()
   }
 
