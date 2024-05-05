@@ -49,7 +49,9 @@ async function saveData({ checkForUnique, data, label }) {
 const defaultInput = {
   headless: process.env.HEADLESS !== 'OFF',
 }
-
+let INITIAL_COUNTER = process.env.PAGE ? Number(
+  process.env.PAGE
+) : 1
 async function run(initialUrl, label, checkForUnique) {
   log({ checkForUnique, initialUrl, label }, 'obj')
   await init(label)
@@ -60,9 +62,8 @@ async function run(initialUrl, label, checkForUnique) {
   const _ = wrap(page, SCREENS_DIR)
   try {
     let scrapeIsDone = false
-    let counter = 0
+    let counter = INITIAL_COUNTER
     while (!scrapeIsDone) {
-      counter++
       log(String(counter), 'info')
       const [done, data] = await scrape(_, counter)
 
@@ -71,6 +72,7 @@ async function run(initialUrl, label, checkForUnique) {
         scrapeIsDone = true
         continue
       }
+      counter++
       await delay(1000)
     }
     const content = await readJson(getFileLocation(label))

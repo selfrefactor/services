@@ -1,4 +1,4 @@
-const { mapAsync, tail, take, toDecimal, waitFor } = require('rambdax')
+const { mapAsync, tail, take, toDecimal } = require('rambdax')
 const { camelCase } = require('string-fn')
 
 function markTime() {
@@ -9,12 +9,6 @@ function markTime() {
 
 const postEntry = '.post-entry'
 
-function waitCondition(_) {
-  return async () => {
-    const els = await _.page.$$(postEntry)
-    return els.length === 15
-  }
-}
 
 function cyrillicToLatin(text) {
   const cyrillic
@@ -40,7 +34,6 @@ function cyrillicToLatin(text) {
 function getId(category, title, text) {
   const cyrilicId = `${category}${take(10, title)}${take(10, text)}`
 
-  // turn cyrilic letters to latin
   return camelCase(cyrillicToLatin(cyrilicId)).toLowerCase()
 }
 
@@ -63,22 +56,7 @@ function getText(result) {
   return ''
 }
 
-const waitForPredicate = async (predicate, ms, throwOnFailure) => {
-  const condition = async () => {
-    return await predicate()
-  }
-  const waitResult = await waitFor(condition, ms)()
-  if (!waitResult && throwOnFailure) {
-    throw new Error(`Failed wait for predicate | ${predicate.toString()}'`)
-  }
-  return waitResult
-}
-
 async function scrape(_, index) {
-  // const markInitTime = markTime()
-  // const waitResult = await waitForPredicate(waitCondition(_), 12000)
-
-  // const timeToInit = markInitTime()
   const postEntries = await _.page.$$(postEntry)
   const allPostHeaders = await _.page.$$('.post-header')
 
@@ -124,6 +102,7 @@ async function scrape(_, index) {
 
   const nextButton = await _.page.$('.older')
   const nextButtonInnerHtml = nextButton ? await nextButton.innerHTML() : ''
+  await _.snap('before navigation', true)
   if (!nextButtonInnerHtml) return [true, data]
   const navigateEndsWith = `${index + 1}`
   await _.clickAndWaitForNavigation('.older', navigateEndsWith)
