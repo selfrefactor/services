@@ -10,7 +10,6 @@ function markTime() {
 
 const postEntry = '.post-entry'
 
-
 function cyrillicToLatin(text) {
   const cyrillic
 		= 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯабвгдежзийклмнопрстуфхцчшщъьюя'
@@ -105,8 +104,11 @@ async function scrape(_, index) {
   await _.snap('before navigation', true)
   if (!nextButtonInnerHtml) return [true, data]
   const navigateEndsWith = `${index + 1}`
-  log(`${ navigateEndsWith } - navigateEndsWith`,'back')
-  await _.clickAndWaitForNavigation('.older', navigateEndsWith)
+  log(`${navigateEndsWith} - navigateEndsWith`, 'back')
+  await _.clickAndWaitForNavigation('.older', navigateEndsWith, {
+    timeout: 60000,
+    waitUntil: 'domcontentloaded',
+  })
   return [false, data]
 }
 
