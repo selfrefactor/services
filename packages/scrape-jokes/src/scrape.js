@@ -76,7 +76,7 @@ const waitForPredicate = async (predicate, ms, throwOnFailure) => {
   return waitResult
 }
 
-async function scrape(_) {
+async function scrape(_, index) {
   // const markInitTime = markTime()
   // const waitResult = await waitForPredicate(waitCondition(_), 12000)
 
@@ -127,7 +127,8 @@ async function scrape(_) {
   const nextButton = await _.page.$('.older')
   let nextButtonInnerHtml = nextButton ? await nextButton.innerHTML() : ''
   if (!nextButtonInnerHtml) return [true, data]
-  await nextButton.click({ force: true })
+  let navigateEndsWith = `${ index + 1 }`
+  await _.clickAndWaitForNavigation('.older', navigateEndsWith)
   return [false, data]
 }
 

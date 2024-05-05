@@ -46,6 +46,7 @@ const defaultInput = {
 }
 
 async function run(initialUrl, label, checkForUnique) {
+  log({initialUrl, label, checkForUnique},'obj')
   await init(label)
   const {page, browser} = await playwrightInit({
     ...defaultInput,
@@ -58,7 +59,7 @@ async function run(initialUrl, label, checkForUnique) {
     while(!scrapeIsDone){
       counter++
       log(String(counter), 'info')
-      const [done, data] = await scrape(_)
+      const [done, data] = await scrape(_, counter)
       if(done){
         scrapeIsDone = true
         continue
@@ -68,7 +69,7 @@ async function run(initialUrl, label, checkForUnique) {
         scrapeIsDone = true
         continue
       } 
-      await delay(1000)
+      await delay(3000)
     }
   }
   catch (err) {
