@@ -48,6 +48,7 @@ async function saveData({ checkForUnique, data, label }) {
 
 const defaultInput = {
   headless: process.env.HEADLESS !== 'OFF',
+  waitCondition: 'domcontentloaded'
 }
 
 async function run({initialUrl, label, checkForUnique, initialCounter, forceContinue}) {

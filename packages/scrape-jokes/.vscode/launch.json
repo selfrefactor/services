@@ -62,5 +62,21 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Scrape to check parse of text",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "src/run.spec.js",
+        "https://vicovete.bg/category/uncategorized",
+        "test"
+      ],
+      "env": {
+        "HEADLESS": "OFF"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
   ]
 }

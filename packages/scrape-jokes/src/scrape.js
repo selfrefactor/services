@@ -1,5 +1,5 @@
 const { log } = require('helpers-fn')
-const { mapAsync, tail, take, toDecimal } = require('rambdax')
+const { mapAsync, replace, tail, take, toDecimal } = require('rambdax')
 const { camelCase } = require('string-fn')
 
 function markTime() {
@@ -69,23 +69,42 @@ async function scrape(_, index) {
     const categoryEl = await postHeaders.$('h2')
     const category = (await categoryEl.textContent()) ?? ''
 
-    const result = await mapAsync(async (section) => {
-      const textContent = await section.textContent()
-      const innerHtml = await section.innerHTML()
-      const okCondition = innerHtml.startsWith('<strong>')
-      if (!okCondition) {
+    const result = await mapAsync(async (section, i) => {
+      const text = (await section.textContent()).trim()
+      const innerHtml = (await section.innerHTML()).trim()
+      if (innerHtml.startsWith('<strong>')) {
+        const linesElements = await section.$$(':scope > *')
+
+        const lines = await mapAsync(async (line) => {
+          const lineText = await line.textContent()
+          return lineText.trim()
+        }, linesElements)
+        const text = lines.filter(Boolean).join('\n')
         return {
-          okCondition: false,
-          text: textContent.trim(),
+          okCondition: true,
+          text,
         }
       }
-      const linesElements = await section.$$(':scope > *')
+      if (!innerHtml) {
+        return {
+          okCondition: false,
+          text: '',
+        }
+      }
+      if (innerHtml.includes('<br>')) {
+        const replaceLineBreaks = replace(/\<br\>/g, '\n', innerHtml)
 
-      const lines = await mapAsync(async (line) => {
-        const lineText = await line.textContent()
-        return lineText.trim()
-      }, linesElements)
-      const text = lines.filter(Boolean).join('\n')
+        return {
+          okCondition: true,
+          text: replaceLineBreaks,
+        }
+      }
+      if (text.includes('<img ')) {
+        return {
+          okCondition: false,
+          text: '',
+        }
+      }
       return {
         okCondition: true,
         text,
