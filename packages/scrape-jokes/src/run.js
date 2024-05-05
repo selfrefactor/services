@@ -58,6 +58,7 @@ async function run({initialUrl, label, checkForUnique, initialCounter, forceCont
   const onEnd = async () => {
     const content = await readJson(getFileLocation(label))
     await createMarkdown(content, label)
+    console.log('markdown created')
   }
   var browserInstance
   await init(label)
