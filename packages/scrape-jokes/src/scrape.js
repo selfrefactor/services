@@ -1,6 +1,7 @@
 const { writeFile } = require('fs/promises')
 const { playwrightRun } = require('playwright-fn')
-const { delay, mapAsync, tail, take, toDecimal } = require('rambdax')
+const { mapAsync, tail, take, toDecimal, waitFor } = require('rambdax')
+const { camelCase } = require('string-fn')
 
 function markTime() {
   const now = Number(new Date())
@@ -42,7 +43,7 @@ function getId(category, title, text) {
   const cyrilicId = `${category}${take(10, title)}${take(10, text)}`
 
   // turn cyrilic letters to latin
-  return cyrillicToLatin(cyrilicId)
+  return camelCase(cyrillicToLatin(cyrilicId)).toLowerCase()
 }
 
 function getText(result) {
@@ -64,9 +65,22 @@ function getText(result) {
   return ''
 }
 
+const waitForPredicate = async (predicate, ms, throwOnFailure) => {
+  const condition = async () => {
+    const predicateResult = await predicate()
+
+    return predicateResult
+  }
+  const waitResult = await waitFor(condition, ms)()
+  if (!waitResult && throwOnFailure){
+    throw new Error(`Failed wait for predicate | ${ predicate.toString() }'`)
+  }
+  return waitResult
+}
+
 async function getRawData(_) {
   const markInitTime = markTime()
-  await _.waitForPredicate(waitCondition(_), 12000)
+  // const waitResult = await waitForPredicate(waitCondition(_), 12000)
 
   const timeToInit = markInitTime()
   const postEntries = await _.page.$$(postEntry)
@@ -113,7 +127,8 @@ async function getRawData(_) {
   }, postEntries)
 
   const nextButton = await _.page.$('.older')
-  if (!nextButton) return [true, data]
+  let nextButtonInnerHtml = await nextButton.innerHTML()
+  if (!nextButtonInnerHtml) return [true, data, timeToInit]
   await nextButton.click({ force: true })
   return [false, data, timeToInit]
 }
