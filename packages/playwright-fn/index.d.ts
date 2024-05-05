@@ -126,8 +126,9 @@ export interface WrapOutput {
   waitForMany: (playwrightInputs: string[], ms?: number) => Promise<void>
   waitForPredicate: (
     predicate: () => Promise<boolean>,
-    ms?: number
-  ) => Promise<void>
+    ms?: number,
+    throwOnFailure?: boolean
+  ) => Promise<boolean>
   waitForText: (text: string, ms?: number) => Promise<void>
   waitForAndClick: (
     playwrightInput: string,

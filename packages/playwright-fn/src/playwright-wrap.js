@@ -388,14 +388,14 @@ function attach(
     })(range(0, timesToPress + 1))
   }
 
-  const waitForPredicate = async (predicate, ms = DELAY) => {
+  const waitForPredicate = async (predicate, ms = DELAY, throwOnFailure = true) => {
     const condition = async () => {
       const predicateResult = await predicate()
 
       return predicateResult
     }
     const waitResult = await waitForMethod(condition, ms)()
-    if (!waitResult){
+    if (!waitResult && throwOnFailure){
       throw new Error(`Failed wait for predicate | ${ predicate.toString() }'`)
     }
     await delay(TICK)
