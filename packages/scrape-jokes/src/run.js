@@ -60,12 +60,9 @@ async function run(initialUrl, label, checkForUnique) {
       counter++
       log(String(counter), 'info')
       const [done, data] = await scrape(_, counter)
-      if(done){
-        scrapeIsDone = true
-        continue
-      }
+      
       let {stopCondition} = await saveData({data, label, checkForUnique})
-      if(stopCondition){
+      if(done || stopCondition){
         scrapeIsDone = true
         continue
       } 
