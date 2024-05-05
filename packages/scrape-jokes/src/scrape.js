@@ -1,3 +1,4 @@
+const { log } = require('helpers-fn')
 const { mapAsync, tail, take, toDecimal } = require('rambdax')
 const { camelCase } = require('string-fn')
 
@@ -104,6 +105,7 @@ async function scrape(_, index) {
   await _.snap('before navigation', true)
   if (!nextButtonInnerHtml) return [true, data]
   const navigateEndsWith = `${index + 1}`
+  log(`${ navigateEndsWith } - navigateEndsWith`,'back')
   await _.clickAndWaitForNavigation('.older', navigateEndsWith)
   return [false, data]
 }

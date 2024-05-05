@@ -40,6 +40,6 @@ test('happy', async () => {
     }else{
       delay(10000)
     }
-    initialCounter = pageOfError - 1
+    initialCounter = pageOfError
   }
 })
