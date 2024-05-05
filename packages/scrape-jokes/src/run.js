@@ -10,7 +10,7 @@ const { createMarkdown } = require('./create-markdown')
 // const { playwrightInit, wrap } = require('../../playwright-fn/src/playwright-fn.js')
 
 const getFileLocation = label => `${OUTPUT_DIR}/${kebabCase(label)}.json`
-
+const COOL_DOWN = 10000
 async function init(label) {
   const fileLocation = getFileLocation(label)
   if (!existsSync(fileLocation)) {
@@ -50,19 +50,17 @@ const defaultInput = {
   headless: process.env.HEADLESS !== 'OFF',
 }
 
-let INITIAL_COUNTER = process.env.PAGE ? Number(
-  process.env.PAGE
-) : 1
-let FORCE_CONTINUE = process.env.FORCE_CONTINUE === 'ON'
+const INITIAL_COUNTER = process.env.PAGE ? Number(process.env.PAGE) : 1
+const FORCE_CONTINUE = process.env.FORCE_CONTINUE === 'ON'
 
 async function run(initialUrl, label, checkForUnique) {
   log({ checkForUnique, initialUrl, label }, 'obj')
 
-  let onEnd = async () => {
+  const onEnd = async () => {
     const content = await readJson(getFileLocation(label))
     await createMarkdown(content, label)
   }
-  
+
   await init(label)
   const { browser, page } = await playwrightInit({
     ...defaultInput,
@@ -76,14 +74,13 @@ async function run(initialUrl, label, checkForUnique) {
       log(String(counter), 'info')
       const [done, data] = await scrape(_, counter)
       const { stopCondition } = await saveData({ checkForUnique, data, label })
-      if (done || stopCondition && !FORCE_CONTINUE) {
+      if (done || (stopCondition && !FORCE_CONTINUE)) {
         scrapeIsDone = true
         continue
       }
       counter++
-      await delay(1000)
+      await delay(COOL_DOWN)
     }
-   
   }
   catch (err) {
     console.log(err)
