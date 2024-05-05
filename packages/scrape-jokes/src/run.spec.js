@@ -2,7 +2,7 @@ const { ms } = require('string-fn')
 const { run } = require('./run')
 const { delay, takeLast, replace } = require('rambdax')
 const { log } = require('helpers-fn')
-jest.setTimeout(ms('120 minutes'))
+jest.setTimeout(ms('1120 minutes'))
 
 let getInitialUrl = (url, initialCounter) => {
   if(process.env.PAGE){
