@@ -57,6 +57,12 @@ let FORCE_CONTINUE = process.env.FORCE_CONTINUE === 'ON'
 
 async function run(initialUrl, label, checkForUnique) {
   log({ checkForUnique, initialUrl, label }, 'obj')
+
+  let onEnd = async () => {
+    const content = await readJson(getFileLocation(label))
+    await createMarkdown(content, label)
+  }
+  
   await init(label)
   const { browser, page } = await playwrightInit({
     ...defaultInput,
@@ -69,7 +75,6 @@ async function run(initialUrl, label, checkForUnique) {
     while (!scrapeIsDone) {
       log(String(counter), 'info')
       const [done, data] = await scrape(_, counter)
-
       const { stopCondition } = await saveData({ checkForUnique, data, label })
       if (done || stopCondition && !FORCE_CONTINUE) {
         scrapeIsDone = true
@@ -78,14 +83,14 @@ async function run(initialUrl, label, checkForUnique) {
       counter++
       await delay(1000)
     }
-    const content = await readJson(getFileLocation(label))
-    await createMarkdown(content, label)
+   
   }
   catch (err) {
     console.log(err)
   }
   finally {
     await browser.close()
+    await onEnd()
   }
 }
 

@@ -83,7 +83,6 @@ async function scrape(_, index) {
 
       const lines = await mapAsync(async (line) => {
         const lineText = await line.textContent()
-        const lineInnerHtml = await line.textContent()
         return lineText.trim()
       }, linesElements)
       const text = lines.filter(Boolean).join('\n')
