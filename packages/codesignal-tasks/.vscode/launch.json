@@ -46,6 +46,25 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Scrape interview practice",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--verbose",
+        "-i",
+        "--no-cache",
+        "src/run-challenge.spec.js",
+        "https://app.codesignal.com/interview-practice/question/yM4uWYeQTHzYewW9H"
+      ],
+      "env": {
+        "HEADLESS": "ON",
+        "DEBUG": "ON"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Scrape challenge",
       "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
       "args": [
