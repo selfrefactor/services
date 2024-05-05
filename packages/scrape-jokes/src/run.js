@@ -42,7 +42,7 @@ async function saveData({data, label, checkForUnique}) {
 }
 
 const defaultInput = {
-  headless: process.env.HEADLESS === 'ON',
+  headless: process.env.HEADLESS !== 'OFF',
 }
 
 async function run(initialUrl, label, checkForUnique) {
