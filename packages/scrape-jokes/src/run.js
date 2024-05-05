@@ -49,9 +49,12 @@ async function saveData({ checkForUnique, data, label }) {
 const defaultInput = {
   headless: process.env.HEADLESS !== 'OFF',
 }
+
 let INITIAL_COUNTER = process.env.PAGE ? Number(
   process.env.PAGE
 ) : 1
+let FORCE_CONTINUE = process.env.FORCE_CONTINUE === 'ON'
+
 async function run(initialUrl, label, checkForUnique) {
   log({ checkForUnique, initialUrl, label }, 'obj')
   await init(label)
@@ -68,7 +71,7 @@ async function run(initialUrl, label, checkForUnique) {
       const [done, data] = await scrape(_, counter)
 
       const { stopCondition } = await saveData({ checkForUnique, data, label })
-      if (done || stopCondition) {
+      if (done || stopCondition && !FORCE_CONTINUE) {
         scrapeIsDone = true
         continue
       }
