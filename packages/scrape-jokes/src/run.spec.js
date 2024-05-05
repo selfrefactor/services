@@ -27,8 +27,9 @@ test('happy', async () => {
 
   let condition = FORCE_CONTINUE
   let initialCounter = INITIAL_COUNTER
-  let initialUrl = getInitialUrl(url, initialCounter)
+  let latestPageOfError = 0
   while (condition) {
+    let initialUrl = getInitialUrl(url, initialCounter)
     const {successRun, pageOfError} = await run({
       checkForUnique: CHECK_FOR_UNIQUENESS,
       initialUrl,
@@ -38,8 +39,12 @@ test('happy', async () => {
     })
     if (successRun){
       condition = false
+    }else if(latestPageOfError === pageOfError){
+      log('consecutive error', 'error')
+      condition = false
     }else{
       delay(10000)
+      latestPageOfError = pageOfError
     }
     initialCounter = pageOfError
   }
