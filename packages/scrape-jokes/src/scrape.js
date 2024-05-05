@@ -101,7 +101,7 @@ async function scrape(_, index) {
 
   const nextButton = await _.page.$('.older')
   const nextButtonInnerHtml = nextButton ? await nextButton.innerHTML() : ''
-  await _.snap('before navigation', true)
+  // await _.snap('before navigation', true)
   if (!nextButtonInnerHtml) return [true, data]
   const navigateEndsWith = `${index + 1}`
   log(`${navigateEndsWith} - navigateEndsWith`, 'back')
