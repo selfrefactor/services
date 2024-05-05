@@ -6,6 +6,7 @@ const { existsSync } = require('fs')
 const { writeJson, readJson, ensureDir } = require('fs-extra')
 const { log } = require('helpers-fn')
 const { playwrightInit, wrap } = require('playwright-fn')
+const { createMarkdown } = require('./create-markdown')
 // const { playwrightInit, wrap } = require('../../playwright-fn/src/playwright-fn.js')
 
 let getFileLocation = label => `${OUTPUT_DIR}/${kebabCase(label)}.json`
@@ -66,8 +67,10 @@ async function run(initialUrl, label, checkForUnique) {
         scrapeIsDone = true
         continue
       } 
-      await delay(3000)
+      await delay(1000)
     }
+    let content = await readJson(getFileLocation(label))
+    await createMarkdown(content, label);
   }
   catch (err) {
     console.log(err)
