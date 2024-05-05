@@ -44,7 +44,7 @@ async function run(initialUrl, label, checkForUnique) {
   try {
     let scrapeIsDone = false
     let counter = 0
-    while(!false){
+    while(!scrapeIsDone){
       counter++
       log(String(counter), 'big')
       const [done, data, timeToInit] = await scrape(initialUrl)
