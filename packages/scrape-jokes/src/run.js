@@ -50,12 +50,10 @@ const defaultInput = {
   headless: process.env.HEADLESS !== 'OFF',
 }
 
-const INITIAL_COUNTER = process.env.PAGE ? Number(process.env.PAGE) : 1
-const FORCE_CONTINUE = process.env.FORCE_CONTINUE === 'ON'
-
-async function run(initialUrl, label, checkForUnique) {
+async function run({initialUrl, label, checkForUnique, initialCounter, forceContinue}) {
   log({ checkForUnique, initialUrl, label }, 'obj')
-
+  let successRun = false
+  let counter = initialCounter
   const onEnd = async () => {
     const content = await readJson(getFileLocation(label))
     await createMarkdown(content, label)
@@ -69,18 +67,18 @@ async function run(initialUrl, label, checkForUnique) {
   const _ = wrap(page, SCREENS_DIR)
   try {
     let scrapeIsDone = false
-    let counter = INITIAL_COUNTER
     while (!scrapeIsDone) {
       log(String(counter), 'info')
       const [done, data] = await scrape(_, counter)
       const { stopCondition } = await saveData({ checkForUnique, data, label })
-      if (done || (stopCondition && !FORCE_CONTINUE)) {
+      if (done || (stopCondition && !forceContinue)) {
         scrapeIsDone = true
         continue
       }
       counter++
       await delay(COOL_DOWN)
     }
+    successRun = true
   }
   catch (err) {
     console.log(err)
@@ -89,6 +87,8 @@ async function run(initialUrl, label, checkForUnique) {
     await browser.close()
     await onEnd()
   }
+
+  return {successRun, pageOfError: counter}
 }
 
 exports.run = run
