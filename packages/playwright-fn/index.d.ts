@@ -89,7 +89,8 @@ export interface WrapOutput {
   forceClick: (playwrightInput: string) => Promise<void>
   clickAndWaitForNavigation: (
     playwrightInput: string,
-    navigateEndsWith: string
+    navigateEndsWith: string,
+    ms?: number
   ) => Promise<void>
   findWithTextNth: (input: FindWithTextNth) => Promise<HTMLElement>
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>
