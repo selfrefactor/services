@@ -1,5 +1,3 @@
-const { writeFile } = require('fs/promises')
-const { playwrightRun } = require('playwright-fn')
 const { mapAsync, tail, take, toDecimal, waitFor } = require('rambdax')
 const { camelCase } = require('string-fn')
 
@@ -78,11 +76,11 @@ const waitForPredicate = async (predicate, ms, throwOnFailure) => {
   return waitResult
 }
 
-async function getRawData(_) {
-  const markInitTime = markTime()
+async function scrape(_) {
+  // const markInitTime = markTime()
   // const waitResult = await waitForPredicate(waitCondition(_), 12000)
 
-  const timeToInit = markInitTime()
+  // const timeToInit = markInitTime()
   const postEntries = await _.page.$$(postEntry)
   const allPostHeaders = await _.page.$$('.post-header')
 
@@ -127,31 +125,10 @@ async function getRawData(_) {
   }, postEntries)
 
   const nextButton = await _.page.$('.older')
-  let nextButtonInnerHtml = await nextButton.innerHTML()
-  if (!nextButtonInnerHtml) return [true, data, timeToInit]
+  let nextButtonInnerHtml = nextButton ? await nextButton.innerHTML() : ''
+  if (!nextButtonInnerHtml) return [true, data]
   await nextButton.click({ force: true })
-  return [false, data, timeToInit]
-}
-
-function handleError(err) {
-  console.log(err)
-}
-
-async function scrape(url) {
-  const rawData = await playwrightRun({
-    fallback: null,
-    fn: getRawData,
-    handleError,
-    url,
-  })
-
-  if (process.env.DEBUG === 'ON') {
-    await writeFile('rawData.json', JSON.stringify(rawData, null, 2))
-  }
-
-  if (!rawData) throw new Error('!rawData')
-
-  return rawData
+  return [false, data]
 }
 
 exports.scrape = scrape

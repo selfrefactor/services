@@ -1,10 +1,12 @@
 const { delay } = require('rambdax')
-const { OUTPUT_DIR } = require('./constants')
+const { OUTPUT_DIR, SCREENS_DIR } = require('./constants')
 const { scrape } = require('./scrape')
 const { kebabCase } = require('string-fn')
 const { existsSync } = require('fs')
 const { writeJson, readJson, ensureDir } = require('fs-extra')
 const { log } = require('helpers-fn')
+const { playwrightInit, wrap } = require('playwright-fn')
+// const { playwrightInit, wrap } = require('../../playwright-fn/src/playwright-fn.js')
 
 let getFileLocation = label => `${OUTPUT_DIR}/${kebabCase(label)}.json`
 
@@ -39,15 +41,24 @@ async function saveData({data, label, checkForUnique}) {
   return {stopCondition}
 }
 
+const defaultInput = {
+  headless: process.env.HEADLESS === 'ON',
+}
+
 async function run(initialUrl, label, checkForUnique) {
   await init(label)
+  const {page, browser} = await playwrightInit({
+    ...defaultInput,
+    url: initialUrl
+  })
+  const _ = wrap(page, SCREENS_DIR)
   try {
     let scrapeIsDone = false
     let counter = 0
     while(!scrapeIsDone){
       counter++
       log(String(counter), 'info')
-      const [done, data, timeToInit] = await scrape(initialUrl)
+      const [done, data] = await scrape(_)
       if(done){
         scrapeIsDone = true
         continue
@@ -58,11 +69,12 @@ async function run(initialUrl, label, checkForUnique) {
         continue
       } 
       await delay(1000)
-      log('DONE', 'success')
     }
   }
   catch (err) {
     console.log(err)
+  }finally {
+    await browser.close()
   }
 }
 
