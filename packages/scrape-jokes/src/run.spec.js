@@ -4,9 +4,9 @@ const { delay, takeLast, replace } = require('rambdax')
 const { log } = require('helpers-fn')
 jest.setTimeout(ms('120 minutes'))
 
-let getInitialUrl = url => {
+let getInitialUrl = (url, initialCounter) => {
   if(process.env.PAGE){
-    return replace('PAGE', process.env.PAGE, url)
+    return replace('PAGE', initialCounter, url)
   }
   return url
 }
@@ -27,10 +27,11 @@ test('happy', async () => {
 
   let condition = FORCE_CONTINUE
   let initialCounter = INITIAL_COUNTER
+  let initialUrl = getInitialUrl(url, initialCounter)
   while (condition) {
     const {successRun, pageOfError} = await run({
       checkForUnique: CHECK_FOR_UNIQUENESS,
-      initialUrl: getInitialUrl(url),
+      initialUrl,
       label,
       initialCounter,
       forceContinue: FORCE_CONTINUE,
