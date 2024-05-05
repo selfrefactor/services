@@ -76,8 +76,7 @@ function handleError(err){
   console.log(err)
 }
 
-async function scrapeChallenge(challengeID){
-  const url  = `https://app.codesignal.com/challenge/${challengeID}`
+async function scrapeChallenge(url){
   const rawData = await playwrightRun({fn: getRawData, fallback: null, url, handleError})
 
   if(
@@ -88,7 +87,7 @@ async function scrapeChallenge(challengeID){
 
   if(!rawData) throw new Error('!rawData')
   
-  return [rawData, url]
+  return rawData
 }
 
 exports.scrapeChallenge = scrapeChallenge

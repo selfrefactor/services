@@ -3,8 +3,12 @@ const { runChallenge } = require('./run-challenge')
 const { last } = require('rambdax')
 jest.setTimeout(ms('30 minutes'))
 
+let getUrl = (input) => {
+  if(input.startsWith('https')) return input
+  return `https://app.codesignal.com/challenge/${input}`
+}
+
 test('happy', async () => {
-  const challengeIDRaw = last(process.argv)
-  const challengeID = challengeIDRaw.startsWith('http') ? last(challengeIDRaw.split('/')): challengeIDRaw
-  await runChallenge(challengeID)
+  const url = getUrl(last(process.argv))
+  await runChallenge(url)
 })
