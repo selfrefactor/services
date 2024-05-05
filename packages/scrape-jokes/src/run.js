@@ -3,43 +3,47 @@ const { OUTPUT_DIR, SCREENS_DIR } = require('./constants')
 const { scrape } = require('./scrape')
 const { kebabCase } = require('string-fn')
 const { existsSync } = require('fs')
-const { writeJson, readJson, ensureDir } = require('fs-extra')
+const { ensureDir, readJson, writeJson } = require('fs-extra')
 const { log } = require('helpers-fn')
 const { playwrightInit, wrap } = require('playwright-fn')
 const { createMarkdown } = require('./create-markdown')
 // const { playwrightInit, wrap } = require('../../playwright-fn/src/playwright-fn.js')
 
-let getFileLocation = label => `${OUTPUT_DIR}/${kebabCase(label)}.json`
+const getFileLocation = label => `${OUTPUT_DIR}/${kebabCase(label)}.json`
 
 async function init(label) {
   const fileLocation = getFileLocation(label)
-  if(!existsSync(fileLocation)){
+  if (!existsSync(fileLocation)) {
     ensureDir(OUTPUT_DIR)
     await writeJson(fileLocation, [])
   }
 }
 
-function calculateNewData({currentData, data, checkForUnique}){
-  if(checkForUnique){
+function calculateNewData({ checkForUnique, currentData, data }) {
+  if (checkForUnique) {
     const newData = data.filter(x => !currentData.some(y => y.id === x.id))
     return {
       newData: [...currentData, ...newData],
-      stopCondition: newData.length === 0
+      stopCondition: newData.length === 0,
     }
   }
   return {
     newData: [...currentData, ...data],
-    stopCondition: false
+    stopCondition: false,
   }
 }
 
-async function saveData({data, label, checkForUnique}) {
+async function saveData({ checkForUnique, data, label }) {
   const fileLocation = getFileLocation(label)
-  let currentData = await readJson(fileLocation)
-  const {newData, stopCondition} = calculateNewData({currentData, data, checkForUnique})
-  if(!stopCondition) await writeJson(fileLocation, newData)
+  const currentData = await readJson(fileLocation)
+  const { newData, stopCondition } = calculateNewData({
+    checkForUnique,
+    currentData,
+    data,
+  })
+  if (!stopCondition) await writeJson(fileLocation, newData)
 
-  return {stopCondition}
+  return { stopCondition }
 }
 
 const defaultInput = {
@@ -47,34 +51,35 @@ const defaultInput = {
 }
 
 async function run(initialUrl, label, checkForUnique) {
-  log({initialUrl, label, checkForUnique},'obj')
+  log({ checkForUnique, initialUrl, label }, 'obj')
   await init(label)
-  const {page, browser} = await playwrightInit({
+  const { browser, page } = await playwrightInit({
     ...defaultInput,
-    url: initialUrl
+    url: initialUrl,
   })
   const _ = wrap(page, SCREENS_DIR)
   try {
     let scrapeIsDone = false
     let counter = 0
-    while(!scrapeIsDone){
+    while (!scrapeIsDone) {
       counter++
       log(String(counter), 'info')
       const [done, data] = await scrape(_, counter)
-      
-      let {stopCondition} = await saveData({data, label, checkForUnique})
-      if(done || stopCondition){
+
+      const { stopCondition } = await saveData({ checkForUnique, data, label })
+      if (done || stopCondition) {
         scrapeIsDone = true
         continue
-      } 
+      }
       await delay(1000)
     }
-    let content = await readJson(getFileLocation(label))
-    await createMarkdown(content, label);
+    const content = await readJson(getFileLocation(label))
+    await createMarkdown(content, label)
   }
   catch (err) {
     console.log(err)
-  }finally {
+  }
+  finally {
     await browser.close()
   }
 }

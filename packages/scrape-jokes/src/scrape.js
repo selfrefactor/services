@@ -65,13 +65,11 @@ function getText(result) {
 
 const waitForPredicate = async (predicate, ms, throwOnFailure) => {
   const condition = async () => {
-    const predicateResult = await predicate()
-
-    return predicateResult
+    return await predicate()
   }
   const waitResult = await waitFor(condition, ms)()
-  if (!waitResult && throwOnFailure){
-    throw new Error(`Failed wait for predicate | ${ predicate.toString() }'`)
+  if (!waitResult && throwOnFailure) {
+    throw new Error(`Failed wait for predicate | ${predicate.toString()}'`)
   }
   return waitResult
 }
@@ -125,9 +123,9 @@ async function scrape(_, index) {
   }, postEntries)
 
   const nextButton = await _.page.$('.older')
-  let nextButtonInnerHtml = nextButton ? await nextButton.innerHTML() : ''
+  const nextButtonInnerHtml = nextButton ? await nextButton.innerHTML() : ''
   if (!nextButtonInnerHtml) return [true, data]
-  let navigateEndsWith = `${ index + 1 }`
+  const navigateEndsWith = `${index + 1}`
   await _.clickAndWaitForNavigation('.older', navigateEndsWith)
   return [false, data]
 }

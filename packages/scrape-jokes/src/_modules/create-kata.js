@@ -22,7 +22,7 @@ function getRestTestCases(testCases) {
   return piped(
     testCases,
     tail,
-    map((testCase) =>  interpolate(restCasesTemplate, testCase)),
+    map(testCase => interpolate(restCasesTemplate, testCase)),
     join('\n===\n'),
   )
 }
@@ -66,13 +66,13 @@ test('happy', () => {
     firstTestInput: testCases[0].testInput,
     inputs: testInputs.join(', '),
     restTestCases: getRestTestCases(testCases),
-    url
+    url,
   }
   return interpolate(template, templateArguments)
 }
 
 async function createKata(dir, parsedData, url) {
-  const fileContent = getFileContent({...parsedData, url})
+  const fileContent = getFileContent({ ...parsedData, url })
   const filePath = `${dir}/${kebabCase(parsedData.functionName)}.spec.js`
 
   await writeFile(filePath, fileContent)
