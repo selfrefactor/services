@@ -7,3 +7,4 @@ packages/magic-beans/src/symbols-utils/foo.spec.js
 packages/vscode-control/.vscode/settings.json
 packages/vscode-control/settings-stable.json
 packages/scrape-jokes/output/*.json
+packages/scrape-jokes/output/*.md

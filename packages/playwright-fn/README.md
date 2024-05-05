@@ -6,6 +6,10 @@ Package to easier initialization of `Playwright`.
 
 `yarn add playwright-fn`
 
+## TODO
+
+- playwrightRun should allow consumer to decide if it should close the page or reuse previous page
+
 ## Issues
 
 ### Playwright upgrades
