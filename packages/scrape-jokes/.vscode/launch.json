@@ -78,5 +78,22 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Scrape with config",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "src/run.spec.js",
+        "https://vicovete.bg/category/uncategorized",
+        "0"
+      ],
+      "env": {
+        "HEADLESS": "OFF",
+        "WITH_CONFIG": "ON"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
   ]
 }
