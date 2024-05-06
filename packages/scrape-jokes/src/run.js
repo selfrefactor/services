@@ -1,7 +1,6 @@
 const { delay } = require('rambdax')
 const { OUTPUT_DIR, SCREENS_DIR } = require('./constants')
 const { scrape } = require('./scrape')
-const { kebabCase } = require('string-fn')
 const { existsSync } = require('fs')
 const { ensureDir, readJson, writeJson } = require('fs-extra')
 const { log } = require('helpers-fn')
@@ -9,7 +8,7 @@ const { playwrightInit, wrap } = require('playwright-fn')
 const { createMarkdown } = require('./create-markdown')
 // const { playwrightInit, wrap } = require('../../playwright-fn/src/playwright-fn.js')
 
-const getFileLocation = label => `${OUTPUT_DIR}/${kebabCase(label)}.json`
+const getFileLocation = label => `${OUTPUT_DIR}/${label}.json`
 const COOL_DOWN = 10000
 async function init(label) {
   const fileLocation = getFileLocation(label)
