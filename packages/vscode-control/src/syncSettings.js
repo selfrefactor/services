@@ -208,7 +208,7 @@ function getEditor() {
     // 'editor.guides.highlightActiveBracketPair': true,
     'editor.guides.highlightActiveIndentation': false,
     'editor.guides.indentation': false,
-    'editor.hover.delay': 300,
+    'editor.hover.delay': 500,
     'editor.hover.enabled': true,
     'editor.hover.sticky': true,
     'editor.lineNumbers': 'interval',
@@ -400,7 +400,7 @@ function checkSettings(newOptions) {
   if (newOptions['workbench.colorTheme'] === undefined) {
     console.log('workbench.colorTheme is not defined')
 
-    process.exit(1)
+    // process.exit(1)
   }
 }
 

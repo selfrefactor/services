@@ -310,6 +310,10 @@
 
 > HINT: OPEN
 
+## CTRL  R
+
+`rerunSearchEditorSearch`
+
 ## CTRL  SHIFT  6
 
 `workbench.action.customizeLayout`
