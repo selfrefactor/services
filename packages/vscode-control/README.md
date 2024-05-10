@@ -1,5 +1,8 @@
 # Vscode-control
 
+sort keybindings.json
+===
+
 ## Knowledge
 ===
 There are similarly new keybindings for running with coverage, such as Ctrl+; Ctrl+Shift+A to run all tests with coverage, and Ctrl+; Ctrl+Shift+L to run your last set of tests with coverage.

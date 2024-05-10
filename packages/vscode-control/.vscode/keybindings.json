@@ -1,5 +1,15 @@
 [
 	{
+		"key": "ctrl+r",
+		"command": "rerunSearchEditorSearch",
+		"when": "inSearchEditor"
+	},
+	{
+		"key": "ctrl+shift+r",
+		"command": "-rerunSearchEditorSearch",
+		"when": "inSearchEditor"
+	},
+	{
 		"key": "ctrl+shift+9",
 		"command": "workbench.action.toggleMaximizedPanel"
 	},
