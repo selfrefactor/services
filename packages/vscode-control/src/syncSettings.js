@@ -111,8 +111,9 @@ const GOTO_LOCATION = 'goto'
  */
 function testNewSettings() {
   return {
+		'window.autoDetectColorScheme': false,
     'workbench.editor.showTabs': 'multiple',
-		"workbench.editor.tabActionCloseVisibility": false,
+		"workbench.editor.tabActionCloseVisibility": true,
     // 'editor.tabFocusMode': true, // this is not needed as it is accessability feature
     'editor.codeLens': true,
     'editor.codeLensFontSize': 0,

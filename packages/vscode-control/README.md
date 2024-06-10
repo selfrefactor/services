@@ -5,6 +5,9 @@ sort keybindings.json
 
 ## Knowledge
 ===
+https://code.visualstudio.com/updates/v1_90#_automatic-rename-suggestions
+https://code.visualstudio.com/updates/v1_90#_attach-context-to-chat
+===
 There are similarly new keybindings for running with coverage, such as Ctrl+; Ctrl+Shift+A to run all tests with coverage, and Ctrl+; Ctrl+Shift+L to run your last set of tests with coverage.
 
 Coverage information is shown as an overlay on line numbers by default, but you can Toggle Inline Coverage to see complete detailed information for your source files:

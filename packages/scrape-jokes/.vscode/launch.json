@@ -47,6 +47,26 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Update all",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "src/run.spec.js",
+        "https://vicovete.bg/page/PAGE",
+        "all"
+      ],
+      "env": {
+        "FORCE_CONTINUE": "OFF",
+        "HEADLESS": "OFF",
+        "CHECK_FOR_UNIQUENESS": "ON",
+        "PAGE": "1",
+        "DEBUG": "ON"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Scrape",
       "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
       "args": [

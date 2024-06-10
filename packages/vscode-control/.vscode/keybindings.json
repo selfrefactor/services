@@ -5,6 +5,10 @@
 		"when": "inSearchEditor"
 	},
 	{
+		"key": "capslock x",
+		"command": "github.copilot.chat.explain"
+	},
+	{
 		"key": "ctrl+shift+r",
 		"command": "-rerunSearchEditorSearch",
 		"when": "inSearchEditor"
