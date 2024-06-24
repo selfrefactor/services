@@ -9,7 +9,7 @@
 		"jest:file": "node scripts/tasks/run/jest.js"
 	},
 	"main": "./src/extension",
-	"version": "3.47.0",
+	"version": "3.48.0",
 	"dependencies": {
 		"helpers-fn": "1.8.1",
 		"rambdax": "11.1.0",
@@ -32,7 +32,6 @@
 		"eslint-plugin-sonarjs": "1.0.3",
 		"eslint-plugin-unused-imports": "3.1.0",
 		"fs-extra": "11.2.0",
-		"helpers-fn": "1.8.1",
 		"prettier": "3.3.2"
 	},
 	"jest": {
