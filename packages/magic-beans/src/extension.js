@@ -57,11 +57,11 @@ function activate(context) {
   )
   const requestRandomFileCommand = vscode.commands.registerCommand(
     REQUEST_RANDOM_FILE,
-    requestRandomFile,
+    requestRandomFile(context),
   )
   const requestRandomFileWithSubfolderCommand = vscode.commands.registerCommand(
     REQUEST_RANDOM_FILE_WITH_SUBFOLDER,
-    requestRandomFile,
+    requestRandomFile(context),
   )
   const sortLinesCommand = vscode.commands.registerCommand(
     SORT_LINES,
@@ -99,7 +99,7 @@ function activate(context) {
   const randomFilesWithinFolder = vscode.commands.registerCommand(
     'magicBeans.requestRandomFileWithSubfolderRightClick',
     (data) => {
-      requestRandomFileWithSubfolderRightClick(data)
+      requestRandomFileWithSubfolderRightClick(data, context)
     },
   )
 
