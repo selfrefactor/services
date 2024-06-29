@@ -9,7 +9,7 @@
 		"jest:file": "node scripts/tasks/run/jest.js"
 	},
 	"main": "./src/extension",
-	"version": "3.49.0",
+	"version": "3.50.0",
 	"dependencies": {
 		"helpers-fn": "1.8.1",
 		"rambdax": "11.1.0",
@@ -95,9 +95,9 @@
 		},
 		"commands": [
 			{
-        "command": "highlightOnCopy.run",
-        "title": "Copy and highlight selected text"
-      },
+				"command": "highlightOnCopy.run",
+				"title": "Copy and highlight selected text"
+			},
 			{
 				"command": "magicBeans.symbolsList",
 				"title": "Magic Beans - Request all symbols within current project"
@@ -153,11 +153,11 @@
 		],
 		"keybindings": [
 			{
-        "command": "magicBeans.highlightOnCopyRun",
-        "key": "ctrl+c",
-        "mac": "cmd+c",
-        "when": "editorTextFocus && magicBeans.init"
-      },
+				"command": "magicBeans.highlightOnCopyRun",
+				"key": "ctrl+c",
+				"mac": "cmd+c",
+				"when": "editorTextFocus && magicBeans.init"
+			},
 			{
 				"command": "magicBeans.sortLines",
 				"key": "ctrl+shift+-"
