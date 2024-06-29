@@ -18,6 +18,7 @@ const {
 const { slowScroll } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
 const { symbolsList } = require('./symbols-list')
+const { highlightOnCopy } = require('./highlight-on-copy')
 
 function openInVsCode(data, {isInsiders}) {
   const binary = isInsiders ? 'code-insiders' : 'code'
@@ -30,6 +31,8 @@ function openInVsCode(data, {isInsiders}) {
 }
 
 function activate(context) {
+  vscode.commands.executeCommand("setContext", "magicBeans.init", true);
+
   initBar()
   const symbolsListCommand = vscode.commands.registerCommand(
     'magicBeans.symbolsList',
@@ -42,6 +45,10 @@ function activate(context) {
   const copyTrimmedCommand = vscode.commands.registerCommand(
     'magicBeans.copyTrimmed',
     copyTrimmed,
+  )
+  const highlightOnCopyCommand = vscode.commands.registerCommand(
+    'magicBeans.highlightOnCopyRun',
+    highlightOnCopy,
   )
   const fixCommentCommand = vscode.commands.registerCommand(
     'magicBeans.fixComment',
@@ -74,6 +81,7 @@ function activate(context) {
 
   context.subscriptions.push(symbolsListCommand)
   context.subscriptions.push(copyTrimmedCommand)
+  context.subscriptions.push(highlightOnCopyCommand)
   context.subscriptions.push(fixCommentCommand)
   context.subscriptions.push(createSpecCommand)
   context.subscriptions.push(slowScrollCommand)
@@ -108,4 +116,10 @@ function activate(context) {
   context.subscriptions.push(randomFilesWithinFolder)
 }
 
+
+function deactivate() {
+  vscode.commands.executeCommand("setContext", "magicBeans.init", false);
+}
+
 exports.activate = activate
+exports.deactivate = deactivate

@@ -30,7 +30,8 @@ const LINE_HEIGHT = 24
 const THEME = defaultTo('THEME', '', 'default')
 const FILE_ICON_THEME = defaultTo(
   'FILE_ICON_THEME',
-  'emoji-file-icons',
+  // 'emoji-file-icons',
+	'charmed-icons',
   'default',
 )
 

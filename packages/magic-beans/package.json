@@ -55,6 +55,9 @@
 		"Other"
 	],
 	"activationEvents": [
+		"onStartupFinished"
+	],
+	"activationEventsx": [
 		"onCommand:magicBeans.betterCut",
 		"onCommand:magicBeans.copyTrimmed",
 		"onCommand:magicBeans.fixComment",
@@ -91,6 +94,10 @@
 			]
 		},
 		"commands": [
+			{
+        "command": "highlightOnCopy.run",
+        "title": "Copy and highlight selected text"
+      },
 			{
 				"command": "magicBeans.symbolsList",
 				"title": "Magic Beans - Request all symbols within current project"
@@ -145,6 +152,12 @@
 			}
 		],
 		"keybindings": [
+			{
+        "command": "magicBeans.highlightOnCopyRun",
+        "key": "ctrl+c",
+        "mac": "cmd+c",
+        "when": "editorTextFocus && magicBeans.init"
+      },
 			{
 				"command": "magicBeans.sortLines",
 				"key": "ctrl+shift+-"
