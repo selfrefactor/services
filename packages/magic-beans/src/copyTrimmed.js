@@ -1,6 +1,7 @@
 const vscode = require('vscode')
 const { logToUser } = require('./bar')
 const { update, last } = require('rambdax')
+const { applyHighlightDecoration } = require('./highlight-on-copy')
 
 function copy(x){
   vscode.env.clipboard.writeText(x)
@@ -36,11 +37,12 @@ function copyTrimmedFn(){
   const textEditor = vscode.window.activeTextEditor
   const { selection } = textEditor
 
-  return applyCopyTrimmed(
+  applyCopyTrimmed(
     textEditor,
     selection.start.line,
     selection.end.line
   )
+  applyHighlightDecoration(textEditor)
 }
 
 exports.copyTrimmed = () => copyTrimmedFn()

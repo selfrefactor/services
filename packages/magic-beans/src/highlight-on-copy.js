@@ -1,22 +1,13 @@
 const vscode = require('vscode')
 
-async function highlightOnCopy() {
-  // Copy to clipboard
-  await vscode.commands.executeCommand('editor.action.clipboardCopyAction')
-
-  const editor = vscode.window.activeTextEditor
-  if (!editor) {
-    return // No open text editor
-  }
-
-  const timeout = 500
+function applyHighlightDecoration(editor = vscode.window.activeTextEditor) {
+  const timeout = 200
 
   // Apply decoration
   const decorationType = vscode.window.createTextEditorDecorationType({
     backgroundColor: '#f0f0f0',
     color: '#500040',
   })
-
   // Apply decoration
   editor.setDecorations(decorationType, getSelections(editor))
 
@@ -24,6 +15,12 @@ async function highlightOnCopy() {
   setTimeout(() => {
     decorationType.dispose()
   }, timeout)
+}
+
+async function highlightOnCopy() {
+  // Copy to clipboard
+  await vscode.commands.executeCommand('editor.action.clipboardCopyAction')
+  applyHighlightDecoration()
 }
 
 
@@ -61,3 +58,4 @@ function getSelections(editor) {
 }
 
 exports.highlightOnCopy = highlightOnCopy
+exports.applyHighlightDecoration = applyHighlightDecoration
