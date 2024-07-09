@@ -260,6 +260,18 @@
 
 > test
 
+## CAPSLOCK X
+
+`github.copilot.chat.explain`
+
+## CAPSLOCK X
+
+`github.copilot.chat.explain.palette`
+
+## CAPSLOCK X
+
+`github.copilot.terminal.explainTerminalSelectionContextMenu`
+
 ## CAPSLOCK Y
 
 `list.collapseAll`

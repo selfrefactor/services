@@ -5,9 +5,49 @@
 		"when": "inSearchEditor"
 	},
 	{
+    "key": "capslock l",
+    "command": "github.copilot.chat.attachSelection"
+  },
+  {
+    "key": "ctrl+shift+8",
+    "command": "github.copilot.interactiveEditor.review.continueInChat"
+  },
+  {
+    "key": "ctrl+shift+7",
+    "command": "github.copilot.chat.attachFile"
+  },
+  {
+    "key": "ctrl+shift+6",
+    "command": "github.copilot.interactiveEditor.review.apply"
+  },
+  {
+    "key": "capslock 6",
+    "command": "github.copilot.ghpr.applySuggestion"
+  },
+  {
+    "key": "capslock 7",
+    "command": "github.copilot.tests.fixTestFailure"
+  },
+  {
+    "key": "capslock 9",
+    "command": "github.copilot.interactiveEditor.fix"
+  },
+  {
+    "key": "capslock 0",
+    "command": "github.copilot.interactiveEditor.generateTests"
+  },
+	{
 		"key": "capslock x",
 		"command": "github.copilot.chat.explain"
 	},
+	{
+    "key": "capslock x",
+    "command": "github.copilot.chat.explain.palette"
+  },
+  {
+    "key": "capslock x",
+    "command": "github.copilot.terminal.explainTerminalSelectionContextMenu"
+  },
 	{
 		"key": "ctrl+shift+r",
 		"command": "-rerunSearchEditorSearch",

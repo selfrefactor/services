@@ -57,22 +57,6 @@
 	"activationEvents": [
 		"onStartupFinished"
 	],
-	"activationEventsx": [
-		"onCommand:magicBeans.betterCut",
-		"onCommand:magicBeans.copyTrimmed",
-		"onCommand:magicBeans.fixComment",
-		"onCommand:magicBeans.createSpec",
-		"onCommand:magicBeans.fixCamelcaseRefactoring",
-		"onCommand:magicBeans.formatJson",
-		"onCommand:magicBeans.requestRandomFile",
-		"onCommand:magicBeans.requestRandomFileWithSubfolder",
-		"onCommand:magicBeans.slowScrollInit",
-		"onCommand:magicBeans.sortLines",
-		"onCommand:magicBeans.symbolsList",
-		"onCommand:magicBeans.openFolder",
-		"onCommand:magicBeans.openFolderInVSCodeBeta",
-		"onCommand:magicBeans.requestRandomFileWithSubfolderRightClick"
-	],
 	"contributes": {
 		"menus": {
 			"explorer/context": [

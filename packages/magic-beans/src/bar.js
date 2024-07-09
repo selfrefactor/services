@@ -4,7 +4,6 @@ const { REQUEST_RANDOM_FILE, SLOW_SCROLL_START } = require('./constants')
 
 const PRIORITY = 1
 const holder = {}
-const WELCOME_MESSAGE = 'START MAGIC BEANS'
 holder.bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left,
   PRIORITY)
 holder.bar.command = REQUEST_RANDOM_FILE
@@ -23,10 +22,6 @@ const logToUserSecondBar = text => {
 const initBar = () => {
   holder.bar.show()
   holder.secondBar.show()
-  logToUser(WELCOME_MESSAGE)
-  delay(1500).then(() => {
-    if (holder.bar.text === WELCOME_MESSAGE) logToUser('')
-  })
 }
 
 exports.logToUserSecondBar = logToUserSecondBar
