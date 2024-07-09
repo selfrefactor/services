@@ -22,16 +22,27 @@ function changeOpenedFile(filePath) {
 
 const LISTENER = 'LISTENER'
 
+let latestFilePath = ''
+let previousLine = 0
+
 function activateListener(context) {
   const disposable = vscode.window.onDidChangeTextEditorSelection((event) => {
     const activeEditor = vscode.window.activeTextEditor
     if (activeEditor) {
       const document = activeEditor.document
+      let filePath = document.fileName
+      if (filePath === latestFilePath){
+        latestFilePath = filePath
+      }
+      if(document.lineCount <=2) return
+
       const lastLine = document.lineCount - 1
       const activeLine = activeEditor.selection.active.line
 
-      if (activeLine === lastLine) {
+      if (activeLine === lastLine && previousLine+1 === activeLine) {
         requestRandomFile()
+      }else{
+        previousLine = activeLine
       }
     }
   })

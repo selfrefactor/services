@@ -5,20 +5,20 @@ const {
   SLOW_SCROLL_INIT,
   SORT_LINES,
 } = require('./constants')
-const { copyTrimmed } = require('./copyTrimmed')
-const { fixComment } = require('./fixComment')
-const { createSpec } = require('./createSpec')
-const { fixCamelcaseRefactoring } = require('./fixCamelcaseRefactoring')
+const { copyTrimmed } = require('./copy-trimmed')
+const { fixComment } = require('./fix-comment')
+const { createSpec } = require('./create-spec')
 const { formatJson } = require('./format-json')
 const { initBar } = require('./bar')
 const {
   requestRandomFile,
   requestRandomFileWithSubfolderRightClick,
-} = require('./randomFile')
+} = require('./random-file')
 const { slowScroll } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
 const { symbolsList } = require('./symbols-list')
 const { highlightOnCopy } = require('./highlight-on-copy')
+const { fixCamelcaseRefactoring } = require('./fix-camelcase-refactoring')
 
 function openInVsCode(data, {isInsiders}) {
   const binary = isInsiders ? 'code-insiders' : 'code'
