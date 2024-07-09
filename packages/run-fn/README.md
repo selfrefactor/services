@@ -53,3 +53,13 @@ Linting depends on several factors:
 > run lintfolder
 
 It lints all the Javascript and Typescript files in the current directory and its subfolders.
+
+### Diary
+
+it adds a new entry to the diary
+
+use aliases to link cyrillic letter to run command
+
+following envs are expected:
+
+- `DIARY_PATH` - path to the diary file

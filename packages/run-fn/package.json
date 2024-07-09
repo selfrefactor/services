@@ -17,17 +17,17 @@
 	"author": "self_refactor",
 	"license": "MIT",
 	"dependencies": {
-		"@biomejs/biome": "1.4.1",
-		"prettier": "3.1.1",
+		"@biomejs/biome": "1.8.3",
+		"prettier": "3.3.2",
 		"commit-fn": "2.7.0",
 		"dep-fn": "2.2.2",
 		"fs-extra": "11.2.0",
 		"helpers-fn": "1.8.1",
 		"lint-fn": "2.45.0",
-		"rambdax": "10.1.0",
-		"string-fn": "3.1.0"
+		"rambdax": "11.1.1",
+		"string-fn": "3.3.2"
 	},
 	"devDependencies": {
-		"typescript": "5.3.3"
+		"typescript": "5.5.3"
 	}
 }

@@ -14,6 +14,7 @@ const { log } = require('helpers-fn')
 const { read } = require('./services/read/read')
 const { pullAll } = require('./services/pull-all/pull-all')
 const { lintFile } = require('./services/lint/lint')
+const { diary } = require('./services/diary/diary')
 
 async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
@@ -27,6 +28,9 @@ async function runFn(){
 
   if (firstArgument === 'bump'){
     return bump(secondArgument)
+  }
+  if (firstArgument === 'diary'){
+    return diary(...[ secondArgument, thirdArgument, ...rest ])
   }
   if (firstArgument === 'lint:file'){
     return lintFile(secondArgument, false)
