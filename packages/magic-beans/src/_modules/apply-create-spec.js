@@ -1,6 +1,6 @@
 const { readFileSync } = require('fs')
 const { remove, match } = require('rambdax')
-const { specTemplate } = require('./specTemplate')
+const { specTemplate } = require('./spec-template')
 
 function getFirstExportedFunction(fileContent){
   const [matchedTypescript] = match(/export\s+(?:async\s+)?function\s+(\w+)/g, fileContent)

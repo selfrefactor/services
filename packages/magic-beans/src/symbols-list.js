@@ -12,7 +12,7 @@ const {
   flatten,
 } = require('rambdax')
 const { configAnt } = require('./ants/config')
-const { requestRandomFile } = require('./randomFile')
+const { requestRandomFile } = require('./random-file')
 const {  isKebabCase, 
   isDotCase, isSnakeCase, isConstantCase,
   isPascalCase,

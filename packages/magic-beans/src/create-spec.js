@@ -1,8 +1,8 @@
 const vscode = require('vscode')
-const { applyCreateSpec } = require('./_modules/applyCreateSpec')
 const { basename, extname } = require('path')
 const { existsSync, writeFileSync } = require('fs')
 const { replace } = require('rambdax')
+const { applyCreateSpec } = require('./_modules/apply-create-spec')
 
 function createSpec(){
   const filePath = vscode.window.activeTextEditor.document.fileName

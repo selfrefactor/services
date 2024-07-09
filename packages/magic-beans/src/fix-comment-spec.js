@@ -1,4 +1,4 @@
-const { convertComment } = require("./fixComment");
+const { convertComment } = require("./fix-comment");
 
 test("happy", () => {
   let a = convertComment(
