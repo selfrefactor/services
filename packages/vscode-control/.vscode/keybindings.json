@@ -123,13 +123,6 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "alt+.",
-    "priority": true,
-    "hint": "easy to access",
-    "command": "editor.action.inlineSuggest.trigger",
-    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
-  },
-  {
     "key": "capslock p",
     "priority": true,
     "hint": "parameter",
@@ -218,10 +211,6 @@
     "args": {
       "name": "StringTemplate"
     }
-  },
-  {
-    "key": "capslock ;",
-    "command": "github.copilot.openPanelForRange"
   },
   {
     "key": "capslock i",
