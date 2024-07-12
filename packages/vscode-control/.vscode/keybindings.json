@@ -1,11 +1,19 @@
 [
 	{
-		"key": "ctrl+r",
-		"command": "rerunSearchEditorSearch",
-		"when": "inSearchEditor"
+    "key": "ctrl+shift+b",
+    "command": "-workbench.action.tasks.build",
+    "when": "taskCommandsRegistered"
 	},
 	{
-    "key": "capslock l",
+		"key": "ctrl+shift+3",
+		"command": "github.copilot.interactiveEditor.review"
+	},
+	{
+		"key": "capslock 8",
+		"command": "github.copilot.interactiveEditor.generateDocs"
+	},
+	{
+    "key": "capslock 3",
     "command": "github.copilot.chat.attachSelection"
   },
   {
@@ -37,7 +45,7 @@
     "command": "github.copilot.interactiveEditor.generateTests"
   },
 	{
-		"key": "capslock x",
+		"key": "ctrl+shift+`",
 		"command": "github.copilot.chat.explain"
 	},
 	{
@@ -48,6 +56,11 @@
     "key": "capslock x",
     "command": "github.copilot.terminal.explainTerminalSelectionContextMenu"
   },
+	{
+		"key": "ctrl+r",
+		"command": "rerunSearchEditorSearch",
+		"when": "inSearchEditor"
+	},
 	{
 		"key": "ctrl+shift+r",
 		"command": "-rerunSearchEditorSearch",
