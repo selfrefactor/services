@@ -207,18 +207,13 @@
 				},
 				"magicBeans.SLOW_SCROLL": {
 					"type": "number",
-					"default": 20000,
+					"default": 10000,
 					"description": "slow scroll interval in ms"
 				},
 				"magicBeans.LINES_TO_SCROLL": {
 					"type": "number",
 					"default": 30,
 					"description": "slow scroll number of lines"
-				},
-				"magicBeans.RANDOM_FILE_PERIOD": {
-					"type": "number",
-					"default": 60000,
-					"description": "ms for random file to be requested automatically"
 				},
 				"magicBeans.RANDOM_FILE_FORBIDDEN": {
 					"type": "array",
