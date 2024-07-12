@@ -18,6 +18,7 @@ const { slowScroll } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
 const { symbolsList } = require('./symbols-list')
 const { highlightOnCopy } = require('./highlight-on-copy')
+const { setColorTheme } = require('./set-color-theme')
 const { fixCamelcaseRefactoring } = require('./fix-camelcase-refactoring')
 
 function openInVsCode(data, {isInsiders}) {
@@ -34,6 +35,7 @@ function activate(context) {
   vscode.commands.executeCommand("setContext", "magicBeans.init", true);
 
   initBar()
+  setColorTheme(context)
   const symbolsListCommand = vscode.commands.registerCommand(
     'magicBeans.symbolsList',
     symbolsList,

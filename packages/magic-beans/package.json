@@ -181,15 +181,15 @@
 			"type": "object",
 			"title": "MagicBeans",
 			"properties": {
-				"magicBeans.IS_VSCODE_INSIDERS": {
+				"magicBeans.ALLOW_CHANGE_COLOR_THEME": {
 					"type": "boolean",
 					"default": false,
-					"description": "is vscode insiders"
+					"description": "auto set of color theme"
 				},
-				"magicBeans.SYMBOLS_LIST_REPORT_LOCATION": {
+				"magicBeans.COLOR_THEME_LOCATION": {
 					"type": "string",
 					"default": "",
-					"description": "Where to save symbols list report"
+					"description": "location of color theme"
 				},
 				"magicBeans.SYMBOLS_LIST_ALLOWED_EXTENSIONS": {
 					"type": "array",
