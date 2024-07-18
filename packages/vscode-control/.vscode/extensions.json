@@ -1,5 +1,8 @@
 {
   "recommendations": [
+		"yoavbls.pretty-ts-errors",
+		"nikhil-patil.npm-run",
+		"2Guys1Account.quackrack-cursor",
 		"team-sapling.sapling",
 		"littensy.charmed-icons",
     "selfrefactor.code-complexity",

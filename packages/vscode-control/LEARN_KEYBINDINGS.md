@@ -1,11 +1,5 @@
 # Keybindings
 
-## ALT  .
-
-`editor.action.inlineSuggest.trigger`
-
-> HINT: EASY TO ACCESS
-
 ## ALT  F
 
 `references-view.find`
@@ -208,10 +202,6 @@
 
 `git.push`
 
-## CAPSLOCK ;
-
-`github.copilot.openPanelForRange`
-
 ## CAPSLOCK <
 
 `editor.action.inlineSuggest.showPrevious`
@@ -220,11 +210,19 @@
 
 `git.push`
 
+## CAPSLOCK 0
+
+`github.copilot.interactiveEditor.generateTests`
+
 ## CAPSLOCK 1
 
 `workbench.action.editorLayoutSingle`
 
 > HINT: 1 COLUMN
+
+## CAPSLOCK 3
+
+`github.copilot.chat.attachSelection`
 
 ## CAPSLOCK 4
 
@@ -237,6 +235,22 @@
 `editor.action.insertSnippet`
 
 > Snippet: commentAimedForTitle
+
+## CAPSLOCK 6
+
+`github.copilot.ghpr.applySuggestion`
+
+## CAPSLOCK 7
+
+`github.copilot.tests.fixTestFailure`
+
+## CAPSLOCK 8
+
+`github.copilot.interactiveEditor.generateDocs`
+
+## CAPSLOCK 9
+
+`github.copilot.interactiveEditor.fix`
 
 ## CAPSLOCK D
 
@@ -259,10 +273,6 @@
 `magicBeans.createSpec`
 
 > test
-
-## CAPSLOCK X
-
-`github.copilot.chat.explain`
 
 ## CAPSLOCK X
 
@@ -326,9 +336,29 @@
 
 `rerunSearchEditorSearch`
 
+## CTRL  SHIFT  `
+
+`github.copilot.chat.explain`
+
+## CTRL  SHIFT  3
+
+`github.copilot.interactiveEditor.review`
+
+## CTRL  SHIFT  6
+
+`github.copilot.interactiveEditor.review.apply`
+
 ## CTRL  SHIFT  6
 
 `workbench.action.customizeLayout`
+
+## CTRL  SHIFT  7
+
+`github.copilot.chat.attachFile`
+
+## CTRL  SHIFT  8
+
+`github.copilot.interactiveEditor.review.continueInChat`
 
 ## CTRL  SHIFT  9
 
@@ -377,12 +407,6 @@
 * alt+w
 * alt+-
 * alt+=
-* capslock 0
-* capslock 3
-* capslock 6
-* capslock 7
-* capslock 8
-* capslock 9
 * capslock c
 * capslock e
 * capslock q
