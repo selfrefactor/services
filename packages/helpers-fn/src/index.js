@@ -3,8 +3,8 @@ const {
   translateToBulgarian,
   translateToGerman,
 } = require('./exported/translate')
-const { createBenchmark } = require('./exported/create-benchmark')
-const { createComplexBenchmark } = require('./exported/create-complex-benchmark')
+// const { createBenchmark } = require('./exported/create-benchmark')
+// const { createComplexBenchmark } = require('./exported/create-complex-benchmark')
 const { exec, execSafe, spawn } = require('./exported/exec')
 const { log } = require('./log/log')
 const { runTests } = require('./exported/run-tests')
@@ -17,8 +17,8 @@ const { getStagedFiles } = require('./exported/get-staged-files')
 exports.getStagedFiles = getStagedFiles
 exports.scanFolder = scanFolder
 exports.copy = copy
-exports.createBenchmark = createBenchmark
-exports.createComplexBenchmark = createComplexBenchmark
+// exports.createBenchmark = createBenchmark
+// exports.createComplexBenchmark = createComplexBenchmark
 exports.runTests = runTests
 exports.translate = translate
 exports.translateToBulgarian = translateToBulgarian

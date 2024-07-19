@@ -51,22 +51,22 @@ export function defaultTo(
 
 // BENCHMARK
 // ============================================
-export function createBenchmark(input: {
-  [key: string]: Array<{
-    fn: () => void
-    label: string
-  }>
-}): Promise<object>
+// export function createBenchmark(input: {
+//   [key: string]: Array<{
+//     fn: () => void
+//     label: string
+//   }>
+// }): Promise<object>
 
-export function createComplexBenchmark(
-  input: Array<{
-    suites: Array<{
-      fn: () => void
-      label: string
-    }>
-    label: string
-  }>
-): Promise<object>
+// export function createComplexBenchmark(
+//   input: Array<{
+//     suites: Array<{
+//       fn: () => void
+//       label: string
+//     }>
+//     label: string
+//   }>
+// ): Promise<object>
 
 // TRANSLATE
 // ============================================
