@@ -1,19 +1,20 @@
 {
   "recommendations": [
-		"yoavbls.pretty-ts-errors",
-		"nikhil-patil.npm-run",
 		"2Guys1Account.quackrack-cursor",
-		"team-sapling.sapling",
 		"littensy.charmed-icons",
-    "selfrefactor.code-complexity",
-    "selfrefactor.niketa-vscode-extension",
+		"mattpocock.ts-error-translator",
+		"nikhil-patil.npm-run",
+		"oderwat.indent-rainbow",
+		"team-sapling.sapling",
+		"yoavbls.pretty-ts-errors",
     "mightbesimon.emoji-icons",
     "mrmlnc.vscode-scss",
     "ms-vscode.vscode-typescript-next",
     "naumovs.color-highlight",
-		"oderwat.indent-rainbow",
     "selfrefactor.Niketa-theme",
+    "selfrefactor.code-complexity",
     "selfrefactor.magic-beans",
-    "selfrefactor.niketa-dark-theme"
+    "selfrefactor.niketa-dark-theme",
+    "selfrefactor.niketa-vscode-extension"
   ]
 }
