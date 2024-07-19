@@ -2,7 +2,7 @@ const vscode = require('vscode')
 const { getter, removeIndex, setter, shuffle } = require('rambdax')
 const { configAnt } = require('./ants/config')
 const { logToUser } = require('./bar')
-const { REQUEST_RANDOM_FILE } = require('./constants')
+const { REQUEST_RANDOM_FILE, SLOW_SCROLL_KEY } = require('./constants')
 const { scanFolder } = require('helpers-fn')
 const { dirname } = require('node:path')
 
@@ -34,12 +34,18 @@ function activateListener(context) {
       if (filePath === latestFilePath){
         latestFilePath = filePath
       }
-      if(document.lineCount <=2) return
 
       const lastLine = document.lineCount - 1
       const activeLine = activeEditor.selection.active.line
 
+      // only if intentional scroll to bottom
       if (activeLine === lastLine && previousLine+1 === activeLine) {
+        requestRandomFile()
+
+        /**
+         * so that when scroll slow is active, random file is also active
+         */
+      }else if (activeLine === lastLine && getter(SLOW_SCROLL_KEY)){
         requestRandomFile()
       }else{
         previousLine = activeLine

@@ -9,16 +9,15 @@ const { copyTrimmed } = require('./copy-trimmed')
 const { fixComment } = require('./fix-comment')
 const { createSpec } = require('./create-spec')
 const { formatJson } = require('./format-json')
-const { initBar } = require('./bar')
+const { initStatusBars } = require('./bar')
 const {
   requestRandomFile,
   requestRandomFileWithSubfolderRightClick,
 } = require('./random-file')
-const { slowScroll } = require('./slow-scroll')
+const { slowScrollInit } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
 const { symbolsList } = require('./symbols-list')
 const { highlightOnCopy } = require('./highlight-on-copy')
-const { setColorTheme } = require('./set-color-theme')
 const { fixCamelcaseRefactoring } = require('./fix-camelcase-refactoring')
 
 function openInVsCode(data, {isInsiders}) {
@@ -34,8 +33,8 @@ function openInVsCode(data, {isInsiders}) {
 function activate(context) {
   vscode.commands.executeCommand("setContext", "magicBeans.init", true);
 
-  initBar()
-  setColorTheme(context)
+  initStatusBars()
+  // setColorTheme(context)
   const symbolsListCommand = vscode.commands.registerCommand(
     'magicBeans.symbolsList',
     symbolsList,
@@ -60,16 +59,12 @@ function activate(context) {
     'magicBeans.createSpec',
     createSpec,
   )
-  const slowScrollCommand = vscode.commands.registerCommand(
+  const slowScrollInitCommand = vscode.commands.registerCommand(
     SLOW_SCROLL_INIT,
-    slowScroll(context),
+    slowScrollInit(context),
   )
   const requestRandomFileCommand = vscode.commands.registerCommand(
     REQUEST_RANDOM_FILE,
-    requestRandomFile(context),
-  )
-  const requestRandomFileWithSubfolderCommand = vscode.commands.registerCommand(
-    REQUEST_RANDOM_FILE_WITH_SUBFOLDER,
     requestRandomFile(context),
   )
   const sortLinesCommand = vscode.commands.registerCommand(
@@ -86,9 +81,8 @@ function activate(context) {
   context.subscriptions.push(highlightOnCopyCommand)
   context.subscriptions.push(fixCommentCommand)
   context.subscriptions.push(createSpecCommand)
-  context.subscriptions.push(slowScrollCommand)
+  context.subscriptions.push(slowScrollInitCommand)
   context.subscriptions.push(requestRandomFileCommand)
-  context.subscriptions.push(requestRandomFileWithSubfolderCommand)
   context.subscriptions.push(formatJsonCommand)
   context.subscriptions.push(sortLinesCommand)
   context.subscriptions.push(fixCamelcaseRefactoringCommand)

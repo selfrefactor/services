@@ -151,11 +151,11 @@
 				"key": "f7"
 			},
 			{
-				"command": "magicBeans.requestRandomFileWithSubfolder",
+				"command": "magicBeans.symbolsList",
 				"key": "f8"
 			},
 			{
-				"command": "magicBeans.symbolsList",
+				"command": "magicBeans.slowScrollInit",
 				"key": "f9"
 			},
 			{
@@ -205,14 +205,14 @@
 					],
 					"description": "Which file extensions are allowed in symbols list mode"
 				},
-				"magicBeans.SLOW_SCROLL": {
+				"magicBeans.SLOW_SCROLL_MS": {
 					"type": "number",
-					"default": 10000,
+					"default": 5000,
 					"description": "slow scroll interval in ms"
 				},
-				"magicBeans.LINES_TO_SCROLL": {
+				"magicBeans.SLOW_SCROLL_LINES_TO_SCROLL": {
 					"type": "number",
-					"default": 30,
+					"default": 10,
 					"description": "slow scroll number of lines"
 				},
 				"magicBeans.RANDOM_FILE_FORBIDDEN": {

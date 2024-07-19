@@ -1,73 +1,39 @@
 // taken from https://github.com/windwp/scroll_auto
 const vscode = require('vscode')
 const { configAnt } = require('./ants/config')
-const { logToUserSecondBar } = require('./bar')
-const { SLOW_SCROLL_START } = require('./constants')
-const STEP = configAnt('SLOW_SCROLL')
-const LINES_TO_SCROLL = configAnt('LINES_TO_SCROLL')
-
-class ContextKey{
-  constructor(name){
-    this._name = name
-  }
-
-  set(value){
-    if (this._lastValue === value){
-      return
-    }
-    this._lastValue = value
-    vscode.commands.executeCommand(
-      'setContext', this._name, this._lastValue
-    )
-  }
-}
+const { initSlowScrollBars, logToUserAndClose } = require('./bar')
+const { SLOW_SCROLL_START, SLOW_SCROLL_STOP, SLOW_SCROLL_KEY } = require('./constants')
+const { setter } = require('rambdax')
+const STEP_MS = configAnt('SLOW_SCROLL_MS')
+const SLOW_SCROLL_LINES_TO_SCROLL = configAnt('SLOW_SCROLL_LINES_TO_SCROLL')
 
 class ScrollController{
   dispose(){
     this.stopScroll()
-    this._disposable.dispose()
-  }
-
-  constructor(){
-    this.isAutoScroll = new ContextKey('scroll.isStart')
-    const subscriptions = []
-    this._disposable = vscode.Disposable.from(...subscriptions)
   }
 
   startScroll(line){
     this._line = line
-    if (this._isRunning){
-      return
-    }
-    this._isRunning = true
-    this.isAutoScroll.set(this._isRunning)
     this.scrollInterval = setInterval(() => {
       const result = this.scroll(this._line)
-      if (!result){
+      if (result === false){
         this.stopScroll()
       }
     },
-    STEP ? Number(STEP) : 700)
+    STEP_MS ? Number(STEP_MS) : 700)
   }
-
+  // handle if same file as before
   scroll(line){
     const editor = vscode.window.activeTextEditor
     if (!editor){
       return false
     }
     const currentPosition = editor.selection.active
-    let moveToLine = currentPosition.line + line
     const documentLineCount = editor.document.lineCount
-    if (moveToLine > documentLineCount - 1){
-      moveToLine = documentLineCount - 1
-
-      return false
+    if (currentPosition.line === documentLineCount - 1){
+      return 
     }
-    if (moveToLine < 0){
-      moveToLine = 0
-
-      return false
-    }
+    let moveToLine = currentPosition.line + line > documentLineCount - 1 ? documentLineCount - 1 : currentPosition.line + line
     const moveToCharactor =
       editor.document.lineAt(moveToLine).firstNonWhitespaceCharacterIndex
     const newPosition = new vscode.Position(moveToLine, moveToCharactor)
@@ -79,35 +45,34 @@ class ScrollController{
   }
 
   stopScroll(){
-    if (this._isRunning){
-      this._isRunning = false
-      if (this.scrollInterval){
-        this.isAutoScroll.set(false)
-        clearInterval(this.scrollInterval)
-      }
+    if (this.scrollInterval){
+      clearInterval(this.scrollInterval)
+      logToUserAndClose('Slow scroll stopped ⛔⛔⛔⛔⛔')
     }
   }
 }
 
 let initFlag = false
 
-function slowScroll(context){
+function slowScrollInit(context){
   return () => {
     if (initFlag) return
     if (!initFlag){
       initFlag = true
-      logToUserSecondBar('Click to start Slow scroll')
+      initSlowScrollBars()
     }
     const controller = new ScrollController()
 
-    const stopHandler = vscode.commands.registerCommand('magicBeans.slowScrollStop',
+    const stopHandler = vscode.commands.registerCommand(SLOW_SCROLL_STOP,
       () => {
+        setter(SLOW_SCROLL_KEY, false)
         controller.stopScroll()
       })
 
     const downHandler = vscode.commands.registerCommand(SLOW_SCROLL_START,
       () => {
-        controller.startScroll(LINES_TO_SCROLL)
+        setter(SLOW_SCROLL_KEY, true)
+        controller.startScroll(SLOW_SCROLL_LINES_TO_SCROLL)
       })
 
     context.subscriptions.push(downHandler)
@@ -116,4 +81,4 @@ function slowScroll(context){
   }
 }
 
-exports.slowScroll = slowScroll
+exports.slowScrollInit = slowScrollInit
