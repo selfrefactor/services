@@ -1,5 +1,17 @@
 # Run-fn
-
+run-fn@3.37.2 /home/we/repos/services/packages/run-fn
+├─┬ commit-fn@2.7.0
+│ └─┬ helpers-fn@1.6.0
+│   └─┬ benny@3.6.15
+│     └── json2csv@5.0.7 deduped
+├─┬ dep-fn@2.2.2
+│ └─┬ helpers-fn@1.6.0
+│   └─┬ benny@3.6.15
+│     └── json2csv@5.0.7 deduped
+└─┬ helpers-fn@1.8.1
+  └─┬ benny@3.7.1
+    └── json2csv@5.0.7
+    
 Collections of useful CLI functions
 
 ## Install
