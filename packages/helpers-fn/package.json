@@ -7,7 +7,7 @@
 	},
 	"typings": "typings.d.ts",
 	"main": "src/index.js",
-	"version": "1.8.2",
+	"version": "2.0.0",
 	"dependencies": {
 		"cfonts": "3.3.0",
 		"chalk": "4.0.0",

@@ -7,8 +7,6 @@ const { drop } = require('rambdax')
 const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
 const { dvd } = require('./services/dvd/dvd.js')
-const { deploy } = require('./services/de/deploy')
-const { commit } = require('./services/commit/commit')
 const { fastDeploy } = require('./services/d/fastDeploy')
 const { log } = require('helpers-fn')
 const { read } = require('./services/read/read')
@@ -19,9 +17,6 @@ const { diary } = require('./services/diary/diary')
 async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
   const firstArgument = firstArgumentRaw.toLowerCase()
-  if (firstArgument === 'commit'){
-    return commit(secondArgument, thirdArgument, ...rest)
-  }
   if ([ 'pull', 'pull-all' ].includes(firstArgument)){
     return pullAll()
   }
@@ -45,12 +40,9 @@ async function runFn(){
   if (firstArgument === 'dvd'){
     return dvd(secondArgument)
   }
-  if (firstArgument === 'depx'){
-    return depFn.cli('update')
-  }
 
-  if (firstArgument === 'de'){
-    return deploy()
+      if (firstArgument === 'depx'){
+    return depFn.cli('update')
   }
 
   if (firstArgument === 'clone'){
