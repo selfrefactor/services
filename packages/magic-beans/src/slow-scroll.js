@@ -1,7 +1,7 @@
 // taken from https://github.com/windwp/scroll_auto
 const vscode = require('vscode')
 const { configAnt } = require('./ants/config')
-const { initSlowScrollBars, logToUserAndClose } = require('./bar')
+const { initSlowScrollBars } = require('./bar')
 const { SLOW_SCROLL_START, SLOW_SCROLL_STOP, SLOW_SCROLL_KEY } = require('./constants')
 const { setter } = require('rambdax')
 const STEP_MS = configAnt('SLOW_SCROLL_MS')
@@ -47,7 +47,6 @@ class ScrollController{
   stopScroll(){
     if (this.scrollInterval){
       clearInterval(this.scrollInterval)
-      logToUserAndClose('Slow scroll stopped ⛔⛔⛔⛔⛔')
     }
   }
 }

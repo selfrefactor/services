@@ -1,6 +1,6 @@
 {
 	"name": "run-fn",
-	"version": "3.37.2",
+	"version": "3.37.3",
 	"description": "Collections of useful CLI functions",
 	"main": "./cli.js",
 	"bin": {
@@ -20,7 +20,7 @@
 		"@biomejs/biome": "1.8.3",
 		"prettier": "3.3.3",
 		"commit-fn": "2.8.0",
-		"dep-fn": "2.3.0",
+		"dep-fn": "2.3.1",
 		"fs-extra": "11.2.0",
 		"helpers-fn": "1.8.2",
 		"rambdax": "11.1.1",

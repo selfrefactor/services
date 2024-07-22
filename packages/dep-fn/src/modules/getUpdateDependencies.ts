@@ -1,4 +1,3 @@
-import {log} from 'helpers-fn'
 import {StringMap} from '../../typings'
 import {getUpdate} from './helpers/getUpdate'
 import {isDependencyEligible} from './helpers/isDependencyEligible'
@@ -13,7 +12,7 @@ export const getUpdateDependencies = async(
     const eligible = isDependencyEligible(prop)
 
     if (!eligible) {
-      log(`Dependency ${prop} is skipped`, 'warning')
+      console.log(`Dependency ${prop} is skipped`)
       willReturn[prop] = dependency
 
       continue
@@ -25,9 +24,9 @@ export const getUpdateDependencies = async(
     })
 
     if (willPush !== dependency) {
-      log(`Updated '${prop}' dependency to ${willPush}`, 'success')
+      console.log(`Updated '${prop}' dependency to ${willPush}`)
     } else {
-      log(`'${prop}' dependency no need to update`, 'success')
+      console.log(`'${prop}' dependency no need to update`)
     }
 
     willReturn[prop] = willPush

@@ -1,6 +1,5 @@
 import {existsSync, unlinkSync} from 'fs'
 import {writeFileSync} from 'fs-extra'
-import {log} from 'helpers-fn'
 import * as jsonFormat from 'json-format'
 import {join} from 'path'
 import {merge} from 'rambdax'
@@ -27,5 +26,5 @@ export const beforeEnd = (input: Dependencies): void => {
 
   writeFileSync(filePath, jsonFormat(newPackageJson))
 
-  log('end', 'info')
+  console.log('end')
 }
