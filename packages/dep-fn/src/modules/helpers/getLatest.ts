@@ -11,9 +11,9 @@ export const getLatest = async(dependency: string): Promise<string> => {
     const filtered = packageInfo.versions.filter(
       (x: string) => !x.includes('-') && !x.includes('alpha')
     )
-    if (filtered.length === 0) return last(packageInfo.versions)
+    if (filtered.length === 0) return last(packageInfo.versions) as string
 
-    return last(filtered)
+    return last(filtered) as string
   } catch (err) {
     console.log(err, 'dep.fn')
     process.exit(1)
