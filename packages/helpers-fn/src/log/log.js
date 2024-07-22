@@ -7,7 +7,6 @@ const {
   BACK_MODES,
 } = require('./constants')
 const { bigLog } = require('./_modules/big-log')
-const { box } = require('./_modules/box')
 const { colorizedBackground } = require('./_modules/colorized-background')
 const { colorizedText } = require('./_modules/colorized-text')
 const { logObject } = require('./_modules/log-object')
@@ -28,7 +27,6 @@ function logFn(...inputs){
   }
 
   if (mode === 'big') return bigLog(toLog)
-  if (mode === 'box') return box(toLog)
   if (mode === 'obj') return logObject(toLog)
   if (TEXT_MODES.includes(mode)) return colorizedText(mode, toLog)
   if (BACK_MODES.includes(mode)) return colorizedBackground(mode, toLog)

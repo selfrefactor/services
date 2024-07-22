@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`happy 1`] = `
-Object {
-  "avarages": Object {
-    "memoryUsage": 5.7,
-    "processUsage": 11.22,
+{
+  "avarages": {
+    "memoryUsage": 52.3,
+    "processUsage": 1.51,
   },
-  "diff": Object {
+  "diff": {
     "memory": 0,
     "memoryAverage": 0,
-    "process": -9.9,
-    "processAvarage": -9.9,
+    "process": -2.8,
+    "processAvarage": -2.8,
   },
-  "initial": Object {
-    "memoryUsage": 5.7,
-    "processUsage": 21.12,
+  "initial": {
+    "memoryUsage": 52.3,
+    "processUsage": 4.27,
   },
 }
 `;

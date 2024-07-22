@@ -1,6 +1,5 @@
 # Helpers-fn
 
-It holds `ramda` depedency as part of `rambda` benchmark process.
 
 ## Log
 
@@ -15,3 +14,6 @@ It holds `ramda` depedency as part of `rambda` benchmark process.
 ### Text log
 
 ### Background log
+
+===
+boxen, benny are removed

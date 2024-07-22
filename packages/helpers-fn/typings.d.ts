@@ -70,9 +70,9 @@ export function defaultTo(
 
 // TRANSLATE
 // ============================================
-export function translate(text: string): Promise<string>
-export function translateToBulgarian(text: string): Promise<string>
-export function translateToGerman(text: string): Promise<string>
+// export function translate(text: string): Promise<string>
+// export function translateToBulgarian(text: string): Promise<string>
+// export function translateToGerman(text: string): Promise<string>
 
 // EXEC
 // ============================================
@@ -126,7 +126,6 @@ type LogModes =
   | 'bar'
   | 'baz'
   | 'random'
-  | 'box'
   | 'info'
   | 'success'
   | 'warning'

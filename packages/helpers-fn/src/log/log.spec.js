@@ -31,11 +31,6 @@ test('obj - when input is not an object', () => {
   expect(logSpy.mock.calls[ 0 ]).toMatchSnapshot()
 })
 
-test('box', () => {
-  log(str, 'box')
-  expect(logSpy.mock.calls[ 0 ]).toMatchSnapshot()
-})
-
 test('with wrong mode', () => {
   expect(() => log(str, 'not exist')).toThrow()
 })

@@ -1,5 +1,5 @@
 const { defaultTo, maybe } = require('rambdax')
-const { exec } = require('./exec')
+const { exec } = require('../src/exported/exec')
 const TRANSLATE_PORT = defaultTo(3085, Number(process.env.TRANSLATE_PORT))
 
 function translate(mode){

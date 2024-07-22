@@ -18,7 +18,6 @@ exports.POSSIBLE_MODES = [
   ...ICON_MODES,
   'obj',
   'big',
-  'box',
 ]
 
 const SUCCESS_COLOR = '#44aa11'

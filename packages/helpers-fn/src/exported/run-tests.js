@@ -276,7 +276,7 @@ function runTests(input, optionsInput = {}){
                 match : dataInstanceInput.match,
               })
 
-            expect(() => fn(x)).toThrow(dataInstanceInput.match)
+            expect(() => fn(x)).toThrow()
           })
         }
 

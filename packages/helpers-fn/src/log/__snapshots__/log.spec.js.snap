@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`box 1`] = `
-[
-  "┏━━━━━━━━━━━━━┓
-┃             ┃
-┃   FOO bar   ┃
-┃             ┃
-┗━━━━━━━━━━━━━┛",
-]
-`;
-
 exports[`obj - when input is not an object 1`] = `
 [
   "FOO bar",
