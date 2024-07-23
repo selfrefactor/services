@@ -41,7 +41,7 @@ async function runFn(){
     return dvd(secondArgument)
   }
 
-      if (firstArgument === 'depx'){
+  if (firstArgument === 'depx'){
     return depFn.cli('update')
   }
 
