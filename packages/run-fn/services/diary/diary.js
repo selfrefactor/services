@@ -11,7 +11,7 @@ async function diary(...inputArgumentsRaw){
   let content = (await readFile (DIARY_PATH)).toString().trim()
   let newContent = `${ inputArgumentsRaw.join(' ') }${SEPARATOR}${content}`
   await writeFile(DIARY_PATH, newContent)
-  log(content, 'box')
+  log(content, 'back')
   log('sep')
   log('Diary updated', 'info')
 }

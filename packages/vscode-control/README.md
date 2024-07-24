@@ -1,6 +1,9 @@
 # Vscode-control
 
 sort keybindings.json
+
+	"search.searchEditor.defaultNumberOfContextLines": 0
+
 ===
 
 ## Knowledge
