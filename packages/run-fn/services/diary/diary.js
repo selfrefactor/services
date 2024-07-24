@@ -3,14 +3,19 @@ const { log } = require('helpers-fn')
 
 let SEPARATOR = '\n==='
 
-async function diary(pathInput, ...inputArgumentsRaw){
+async function diary({
+  envKey,
+  pathInput,
+  diaryInput
+}){
   if(
     pathExistsSync(pathInput) === false
-  ) return log('DIARY_PATH is not set', 'error')
+  ) return log(`${envKey} updated`, 'error')
+
   let content = (await readFile (pathInput)).toString().trim()
-  let newContent = `${ inputArgumentsRaw.join(' ') }${SEPARATOR}${content}`
+  let newContent = `${ diaryInput.join(' ') }${SEPARATOR}${content}`
   await writeFile(pathInput, newContent)
-  log(inputArgumentsRaw.join(' '), 'back')
+  log(diaryInput.join(' '), 'back')
   log('sep')
   log(`${pathInput} updated`, 'info')
 }

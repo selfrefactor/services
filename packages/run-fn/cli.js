@@ -29,12 +29,14 @@ async function runFn(){
   }
   if (firstArgument === 'diary'){
     return diary({
+      envKey: 'DIARY_PATH',
       pathInput: DIARY_PATH,
       diaryInput: [ secondArgument, thirdArgument, ...rest ]
     })
   }
   if (firstArgument === 'diary:tech'){
     return diary({
+      envKey: 'TECH_DIARY_PATH',
       pathInput: TECH_DIARY_PATH,
       diaryInput: [ secondArgument, thirdArgument, ...rest ]
     })
