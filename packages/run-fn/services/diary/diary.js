@@ -1,7 +1,7 @@
 const { pathExistsSync, readFile, writeFile } = require('fs-extra')
 const { log } = require('helpers-fn')
 
-let SEPARATOR = '\n==='
+let SEPARATOR = '\n===\n'
 
 async function diary({
   envKey,
