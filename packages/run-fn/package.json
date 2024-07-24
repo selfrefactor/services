@@ -19,7 +19,7 @@
 	"dependencies": {
 		"@biomejs/biome": "1.8.3",
 		"prettier": "3.3.3",
-		"dep-fn": "2.3.2",
+		"dep-fn": "2.3.3",
 		"fs-extra": "11.2.0",
 		"helpers-fn": "2.0.0",
 		"rambdax": "11.1.1",

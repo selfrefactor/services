@@ -164,10 +164,10 @@ define-property@^1.0.0:
   dependencies:
     is-descriptor "^1.0.0"
 
-dep-fn@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/dep-fn/-/dep-fn-2.3.2.tgz#bb2a2cf6037230822115a451aa92260fc2201212"
-  integrity sha512-aWyWwgJOg3KS0rR9hu5n0uUSNOKVDWxDk8fyX5Udr4C+zwaYJIyU7soYmsLr6P7k2unCBHmsTfb+CdYbp5C74Q==
+dep-fn@2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/dep-fn/-/dep-fn-2.3.3.tgz#097408a3cf42a3e8505a07f4c17fe24ba9f954dd"
+  integrity sha512-pIg+L6Xhp380VZBPuqccVQL7uLVt0nCcDrIhYbg0iXfSY/uEBZeKin/31lPIkGcNDLngL95jXF21wCCTsYcNJA==
   dependencies:
     fs-extra "11.2.0"
     inquirer "8.0.0"
