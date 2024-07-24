@@ -10,7 +10,7 @@ async function diary({
 }){
   if(
     pathExistsSync(pathInput) === false
-  ) return log(`${envKey} updated`, 'error')
+  ) return log(`${envKey} is missing`, 'error')
 
   let content = (await readFile (pathInput)).toString().trim()
   let newContent = `${ diaryInput.join(' ') }${SEPARATOR}${content}`
