@@ -14,6 +14,9 @@ const { pullAll } = require('./services/pull-all/pull-all')
 const { lintFile } = require('./services/lint/lint')
 const { diary } = require('./services/diary/diary')
 
+const DIARY_PATH = process.env.DIARY_PATH
+const TECH_DIARY_PATH = process.env.TECH_DIARY_PATH
+
 async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
   const firstArgument = firstArgumentRaw.toLowerCase()
@@ -25,7 +28,16 @@ async function runFn(){
     return bump(secondArgument)
   }
   if (firstArgument === 'diary'){
-    return diary(...[ secondArgument, thirdArgument, ...rest ])
+    return diary({
+      pathInput: DIARY_PATH,
+      diaryInput: [ secondArgument, thirdArgument, ...rest ]
+    })
+  }
+  if (firstArgument === 'diary:tech'){
+    return diary({
+      pathInput: TECH_DIARY_PATH,
+      diaryInput: [ secondArgument, thirdArgument, ...rest ]
+    })
   }
   if (firstArgument === 'lint:file'){
     return lintFile(secondArgument, false)
