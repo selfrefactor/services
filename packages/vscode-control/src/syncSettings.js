@@ -2,6 +2,7 @@ const { copySync, readJson, writeJsonSync } = require('fs-extra')
 const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('path')
 const { toDecimal, sortObject } = require('rambdax')
+let IS_MANJARO = process.env.IS_MANJARO === 'ON'
 
 const settings = require('../.vscode/settings-source')
 const {
@@ -21,7 +22,7 @@ const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const FOLDING_IMPORTS = !VSCODE_INSIDERS
 
 // due to github profiles extension
-const WRITE_TO_OUTPUT = VSCODE_INSIDERS
+const WRITE_TO_OUTPUT = VSCODE_INSIDERS || IS_MANJARO
 
 const FONT_SIZE = 18
 const SUGGEST_LINE_HEIGHT = 16
