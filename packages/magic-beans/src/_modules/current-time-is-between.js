@@ -9,3 +9,5 @@ function currentTimeIsBetween(from, to){
 
 	return nowTime >= fromTimeMinutes && nowTime <= toTimeMinutes
 }
+
+exports.currentTimeIsBetween = currentTimeIsBetween
