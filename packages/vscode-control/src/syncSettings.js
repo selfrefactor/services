@@ -1,4 +1,4 @@
-const { copySync, readJson, writeJsonSync } = require('fs-extra')
+const { copySync, writeJsonSync } = require('fs-extra')
 const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('path')
 const { toDecimal, sortObject } = require('rambdax')
@@ -24,7 +24,6 @@ const FONT_SIZE = 18
 const SUGGEST_LINE_HEIGHT = 16
 const SUGGEST_FONT_SIZE = 15
 const LINE_HEIGHT = 24
-const THEME = defaultTo('THEME', '', 'default')
 const FILE_ICON_THEME = defaultTo(
   'FILE_ICON_THEME',
 	'charmed-icons',
@@ -345,39 +344,11 @@ function checkSettings(newOptions) {
   }
 }
 
-async function getColorTheme() {
-  const currentSettings = await readJson(SETTINGS)
-  return currentSettings['workbench.colorTheme'] ?? 'LedZeppelin'
-}
-
-function mergeWithReport(inputs) {
-  const report = []
-  let result = {}
-  inputs.forEach((input) => {
-    Object.keys(input).forEach((key) => {
-      if (result[key] !== undefined) {
-        report.push({ key, value: input[key] })
-      }
-      result[key] = input[key]
-    })
-  })
-
-  return { result, report }
-}
-
 function sortFn(aKey, bKey) {
   return aKey.localeCompare(bKey)
 }
 
 async function syncSettings() {
-  const alternativeBackgrounds = getAlternativeBackground()
-  if (alternativeBackgrounds)
-    return syncFn({
-      ...settings,
-      ...alternativeBackgrounds,
-    })
-  const colorTheme = await getColorTheme()
-
   const { result: newOptions, report } = mergeWithReport([
     settings,
 		getEditor(),
@@ -398,7 +369,6 @@ async function syncSettings() {
       'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
       'editor.wordBasedSuggestions': false,
       'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
-      'workbench.colorTheme': THEME ? THEME : colorTheme,
       'workbench.editor.enablePreview': !VSCODE_INSIDERS,
       'workbench.colorCustomizations': {},
     },
