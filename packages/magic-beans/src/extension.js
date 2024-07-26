@@ -3,6 +3,7 @@ const {
   REQUEST_RANDOM_FILE,
   REQUEST_RANDOM_FILE_WITH_SUBFOLDER,
   SLOW_SCROLL_INIT,
+  SLOW_SCROLL_SHOW_BAR_INITIALLY,
   SORT_LINES,
 } = require('./constants')
 const { copyTrimmed } = require('./copy-trimmed')
@@ -33,9 +34,11 @@ function openInVsCode(data, {isInsiders}) {
 
 function activate(context) {
   vscode.commands.executeCommand("setContext", "magicBeans.init", true);
+  const SLOW_SCROLL_SHOW_BAR_INITIALLY = configAnt(SLOW_SCROLL_SHOW_BAR_INITIALLY)
 
   initStatusBars()
   setColorTheme(context)
+
   const symbolsListCommand = vscode.commands.registerCommand(
     'magicBeans.symbolsList',
     symbolsList,
@@ -111,6 +114,10 @@ function activate(context) {
   context.subscriptions.push(openFolder)
   context.subscriptions.push(openFolderInVSCodeBeta)
   context.subscriptions.push(randomFilesWithinFolder)
+
+  if(SLOW_SCROLL_SHOW_BAR_INITIALLY){
+    vscode.commands.executeCommand(SLOW_SCROLL_INIT)
+  }
 }
 
 

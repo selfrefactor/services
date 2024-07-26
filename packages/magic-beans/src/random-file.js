@@ -43,7 +43,7 @@ function activateListener(context) {
         requestRandomFile()
 
         /**
-         * so that when scroll slow is active, random file is also active
+         * so that when scroll slow is active simple end of file scroll is enough
          */
       }else if (activeLine === lastLine && getter(SLOW_SCROLL_KEY)){
         requestRandomFile()
@@ -62,6 +62,9 @@ async function randomFileInitialize(
   skipDirectories = RANDOM_FILE_SKIP_DIRECTORIES,
 ) {
   try {
+    // so error when delete folder in to-read is fixed
+    setter('files', [])
+
     if (!setter(LISTENER)) {
       setter(LISTENER, true)
       activateListener(context)
@@ -97,7 +100,6 @@ async function randomFileInitialize(
     setter('files', randomized)
   } catch (err) {
     console.log(err)
-    logToUser('error')
   }
 }
 

@@ -181,15 +181,20 @@
 			"type": "object",
 			"title": "MagicBeans",
 			"properties": {
+				"magicBeans.IS_VSCODE_INSIDERS": {
+					"type": "boolean",
+					"default": false,
+					"description": ""
+				},
+				"magicBeans.SLOW_SCROLL_SHOW_BAR_INITIALLY": {
+					"type": "boolean",
+					"default": false,
+					"description": ""
+				},
 				"magicBeans.ALLOW_CHANGE_COLOR_THEME": {
 					"type": "boolean",
 					"default": false,
 					"description": "auto set of color theme"
-				},
-				"magicBeans.COLOR_THEME_LOCATION": {
-					"type": "string",
-					"default": "",
-					"description": "location of color theme"
 				},
 				"magicBeans.SYMBOLS_LIST_ALLOWED_EXTENSIONS": {
 					"type": "array",
