@@ -1,10 +1,9 @@
 exports.REQUEST_RANDOM_FILE = 'magicBeans.requestRandomFile'
-exports.REQUEST_RANDOM_FILE_WITH_SUBFOLDER = 'magicBeans.requestRandomFileWithSubfolder'
 exports.SORT_LINES = 'magicBeans.sortLines'
 exports.SLOW_SCROLL_INIT = 'magicBeans.slowScrollInit'
 exports.SLOW_SCROLL_START = 'magicBeans.slowScrollStart'
 exports.SLOW_SCROLL_STOP = 'magicBeans.slowScrollStop'
-exports.SYMBOLS_LIST = 'magicBeans.symbolsList'
-exports.SLOW_SCROLL_SHOW_BAR_INITIALLY = 'magicBeans.SLOW_SCROLL_SHOW_BAR_INITIALLY'
+// used with configAnt, so no need for prefix
+exports.SLOW_SCROLL_SHOW_BAR_INITIALLY = 'SLOW_SCROLL_SHOW_BAR_INITIALLY'
 exports.SLOW_SCROLL_KEY = 'SLOW_SCROLL_KEY'
-exports.IS_VSCODE_INSIDERS = 'magicBeans.IS_VSCODE_INSIDERS'
+exports.IS_VSCODE_INSIDERS = 'IS_VSCODE_INSIDERS'
