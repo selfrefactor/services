@@ -35,7 +35,7 @@ function openInVsCode(data, {isInsiders}) {
 
 function activate(context) {
   vscode.commands.executeCommand("setContext", "magicBeans.init", true);
-  const SLOW_SCROLL_SHOW_BAR_INITIALLY = configAnt(SLOW_SCROLL_SHOW_BAR_INITIALLY)
+  const SLOW_SCROLL_SHOW_BAR_INITIALLY_VALUE = configAnt(SLOW_SCROLL_SHOW_BAR_INITIALLY)
 
   initStatusBars()
   setColorTheme(context)
@@ -116,7 +116,7 @@ function activate(context) {
   context.subscriptions.push(openFolderInVSCodeBeta)
   context.subscriptions.push(randomFilesWithinFolder)
 
-  if(SLOW_SCROLL_SHOW_BAR_INITIALLY){
+  if(SLOW_SCROLL_SHOW_BAR_INITIALLY_VALUE){
     vscode.commands.executeCommand(SLOW_SCROLL_INIT)
   }
 }
