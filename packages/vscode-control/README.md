@@ -5,6 +5,21 @@ sort keybindings.json
 	"search.searchEditor.defaultNumberOfContextLines": 0
 
 ===
+    // 'editor.tabFocusMode': true, // this is not needed as it is accessability feature
+    // "editor.colorDecorators": false,
+    // 'editor.colorDecoratorsActivatedOn': 'hover',
+    // 'editor.colorDecoratorsActivatedOn': 'click',
+    // 'editor.emptySelectionClipboard': false,
+    // 'editor.selectionHighlight': false,
+		    // 'chat.experimental.quickQuestion.enable': true,
+    // 'editor.hover.height': 1200, // disabled
+    // 'editor.guides.highlightActiveBracketPair': true,
+    // 'debug.javascript.usePreview': true,
+    // 'gitlab.showProjectMergeRequests': false,
+    // 'window.menuBarVisibility': 'toggle',
+      // 'editor.multiDocumentOccurrencesHighlight': true,
+
+===
 
 ## Knowledge
 ===

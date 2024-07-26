@@ -14,10 +14,6 @@ const {
   TSX_SNIPPETS,
 } = require('./constants.js')
 
-const ALTERNATIVE_DARK_BACKGROUND = '#011627'
-const ALTERNATIVE_LIGHT_BACKGROUND = '#eee'
-
-const ALTERNATIVE_BACKGROUNDS = process.env.ALTERNATIVE_BACKGROUNDS === 'ON'
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const FOLDING_IMPORTS = !VSCODE_INSIDERS
 
@@ -31,7 +27,6 @@ const LINE_HEIGHT = 24
 const THEME = defaultTo('THEME', '', 'default')
 const FILE_ICON_THEME = defaultTo(
   'FILE_ICON_THEME',
-  // 'emoji-file-icons',
 	'charmed-icons',
   'default',
 )
@@ -45,53 +40,10 @@ const MODES = {
 
 const MODE_KEY = defaultTo('MODE', 'normal', 'default')
 
-const LIGHT_THEMES = [
-  'CommunicationBreakdown',
-  'FunkyDrummer',
-  'KozmicBlues',
-  'GlassOnion',
-  'HelloSpaceboy',
-  'StrangeBrew',
-  'SweatLeaf',
-  'LedZeppelin',
-  'DancingDays',
-]
-
-const DARK_THEMES = [
-  'AmericanDad',
-  'AquaTeenHungerForce',
-  'Archer',
-  'ClevelandShow',
-  'Dilbert',
-  'HomeMovies',
-  'SouthPark',
-  'TripTank',
-  'UglyAmericans',
-]
-
-function getAlternativeBackground() {
-  if (!ALTERNATIVE_BACKGROUNDS) return false
-  console.log('ALTERNATIVE_BACKGROUNDS')
-  const helper = (themes, background) =>
-    themes.reduce((acc, theme) => {
-      acc[`[${theme}]`] = { 'editor.background': background }
-
-      return acc
-    }, {})
-
-  return {
-    'workbench.colorCustomizations': {
-      ...helper(LIGHT_THEMES, ALTERNATIVE_LIGHT_BACKGROUND),
-      ...helper(DARK_THEMES, ALTERNATIVE_DARK_BACKGROUND),
-    },
-  }
-}
-
 const MODE = MODES[MODE_KEY]
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
-// const SETTINGS_REFERENCE_OUTPUT = resolve(__dirname, '../.vscode/settings.json')
 const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Fira Code'
 const FONT_FACTOR = 1
 
@@ -116,7 +68,6 @@ function testNewSettings() {
 		'window.autoDetectColorScheme': false,
     'workbench.editor.showTabs': 'multiple',
 		"workbench.editor.tabActionCloseVisibility": true,
-    // 'editor.tabFocusMode': true, // this is not needed as it is accessability feature
     'editor.codeLens': true,
     'editor.codeLensFontSize': 0,
     'editor.autoClosingDelete': 'always',
@@ -129,9 +80,6 @@ function testNewSettings() {
     'editor.colorDecorators': true,
     'editor.dragAndDrop': false,
 		"editor.definitionLinkOpensInPeek": false,
-    // "editor.colorDecorators": false,
-    // 'editor.colorDecoratorsActivatedOn': 'hover',
-    // 'editor.colorDecoratorsActivatedOn': 'click',
     'editor.folding': true,
     'editor.foldingHighlight': true,
     'window.menuBarVisibility': 'compact',
@@ -139,7 +87,6 @@ function testNewSettings() {
     'debug.javascript.codelens.npmScripts': 'never',
     'editor.copyWithSyntaxHighlighting': false,
     'editor.detectIndentation': false,
-    // 'editor.emptySelectionClipboard': false,
     'editor.find.autoFindInSelection': 'multiline',
     'editor.insertSpaces': false,
     'editor.lightbulb.enabled': 'off',
@@ -150,7 +97,6 @@ function testNewSettings() {
     'editor.renderLineHighlight': 'gutter',
     'editor.renderWhitespace': 'none',
     'editor.roundedSelection': false,
-    // 'editor.selectionHighlight': false,
     'editor.suggest.localityBonus': true,
     'explorer.compactFolders': false,
     'explorer.sortOrder': 'type',
@@ -169,9 +115,7 @@ function testNewSettings() {
     'workbench.tips.enabled': false,
     'workbench.tree.indent': 16,
     // STABLE
-    // 'chat.experimental.quickQuestion.enable': true,
     'editor.foldingImportsByDefault': FOLDING_IMPORTS,
-    // 'editor.hover.height': 1200, // disabled
     'editor.linkedEditing': true,
     'editor.pasteAs.showPasteSelector': 'never',
     'editor.suggest.snippetsPreventQuickSuggestions': false,
@@ -208,7 +152,6 @@ function getEditor() {
     'editor.guides.bracketPairs': 'active',
     'editor.guides.bracketPairsHorizontal': false,
     'editor.guides.highlightActiveBracketPair': false,
-    // 'editor.guides.highlightActiveBracketPair': true,
     'editor.guides.highlightActiveIndentation': false,
     'editor.guides.indentation': false,
     'editor.hover.delay': 500,
@@ -279,7 +222,6 @@ function getAdditionalSettings() {
   return {
     'breadcrumbs.enabled': false,
     'debug.inlineValues': 'off',
-    // 'debug.javascript.usePreview': true,
     'diffEditor.diffAlgorithm': 'advanced',
     'editor.scrollbar.vertical': 'visible',
     'files.enableTrash': false,
@@ -311,8 +253,6 @@ function getAdditionalSettings() {
       plaintext: true,
       yaml: true,
     },
-    // 'gitlab.showProjectMergeRequests': false,
-    // gopls: { 'ui.semanticTokens': true },
     'javascript.inlayHints.enumMemberValues.enabled': false,
     'javascript.inlayHints.functionLikeReturnTypes.enabled': false,
     'javascript.inlayHints.parameterTypes.enabled': false,
@@ -341,7 +281,6 @@ function getAdditionalSettings() {
     'update.mode': 'none',
     // click to go to recent files
     'window.commandCenter': false,
-    // 'window.menuBarVisibility': 'toggle',
     'window.title': '${dirty}${activeEditorMedium}',
     'window.titleBarStyle': 'custom',
     'zenMode.hideTabs': false,
@@ -396,18 +335,15 @@ function syncFn(newOptions) {
     let output = resolve(__dirname, `../settings-${settingsLocation}.json`)
     writeJsonSync(output, newOptions, { spaces: 2 })
   }
-  // writeJsonSync(SETTINGS_REFERENCE_OUTPUT, newOptions, { spaces: 2 })
 }
 
 function checkSettings(newOptions) {
   if (newOptions['workbench.colorTheme'] === undefined) {
     console.log('workbench.colorTheme is not defined')
 
-    // process.exit(1)
+    process.exit(1)
   }
 }
-
-// let SETTINGS_TO_OMIT = ['gitConfigUser.profiles']
 
 async function getColorTheme() {
   const currentSettings = await readJson(SETTINGS)
@@ -460,7 +396,6 @@ async function syncSettings() {
       'window.customTitleBarVisibility': 'windowed',
       'terminal.integrated.mouseWheelZoom': true,
       'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
-      // 'editor.multiDocumentOccurrencesHighlight': true,
       'editor.wordBasedSuggestions': false,
       'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
       'workbench.colorTheme': THEME ? THEME : colorTheme,

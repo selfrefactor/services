@@ -8,4 +8,3 @@ packages/vscode-control/.vscode/settings.json
 packages/vscode-control/settings-stable.json
 packages/scrape-jokes/output/*.json
 packages/scrape-jokes/output/*.md
-packages/dep-fn/dist

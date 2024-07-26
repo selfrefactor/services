@@ -1,8 +1,5 @@
 {
 	"scripts": {
-		"ALTERNATIVE_BACKGROUNDS:1": "ALTERNATIVE_BACKGROUNDS=ON node ./src/syncSettings",
-		"ALTERNATIVE_BACKGROUNDS:2": "BETA=ON ALTERNATIVE_BACKGROUNDS=ON node ./src/syncSettings",
-		"ALTERNATIVE_BACKGROUNDS": "yarn ALTERNATIVE_BACKGROUNDS:1 && yarn ALTERNATIVE_BACKGROUNDS:2",
 		"keys": "node visualize-keybindings",
 		"dark:1": "THEME=Archer node ./src/syncSettings",
 		"dark:2": "BETA=ON THEME=ClevelandShow node ./src/syncSettings",
