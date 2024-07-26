@@ -325,7 +325,6 @@ function getCalculatedOptions() {
 }
 
 function syncFn(newOptions) {
-  checkSettings(newOptions)
 
   if (WRITE_TO_OUTPUT) {
     writeJsonSync(SETTINGS, newOptions, { spaces: 2 })
@@ -336,18 +335,23 @@ function syncFn(newOptions) {
   }
 }
 
-function checkSettings(newOptions) {
-  if (newOptions['workbench.colorTheme'] === undefined) {
-    console.log('workbench.colorTheme is not defined')
-
-    process.exit(1)
-  }
-}
-
 function sortFn(aKey, bKey) {
   return aKey.localeCompare(bKey)
 }
+function mergeWithReport(inputs) {
+  const report = []
+  let result = {}
+  inputs.forEach((input) => {
+    Object.keys(input).forEach((key) => {
+      if (result[key] !== undefined) {
+        report.push({ key, value: input[key] })
+      }
+      result[key] = input[key]
+    })
+  })
 
+  return { result, report }
+}
 async function syncSettings() {
   const { result: newOptions, report } = mergeWithReport([
     settings,
