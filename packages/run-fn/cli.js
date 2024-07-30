@@ -14,8 +14,20 @@ const { pullAll } = require('./services/pull-all/pull-all')
 const { lintFile } = require('./services/lint/lint')
 const { diary } = require('./services/diary/diary')
 
-const DIARY_PATH = process.env.DIARY_PATH
-const TECH_DIARY_PATH = process.env.TECH_DIARY_PATH
+const DIARY_MAP = {
+  'diary': {
+    'path': process.env.DIARY_PATH,
+    'envKey': 'DIARY_PATH',
+  },
+  'diary:tech': {
+    'path': process.env.TECH_DIARY_PATH,
+    'envKey': 'TECH_DIARY_PATH',
+  },
+  'diary:todo': {
+    'path': process.env.TODO_DIARY_PATH,
+    'envKey': 'TODO_DIARY_PATH',
+  },
+}
 
 async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
@@ -27,20 +39,19 @@ async function runFn(){
   if (firstArgument === 'bump'){
     return bump(secondArgument)
   }
-  if (firstArgument === 'diary'){
+  if (firstArgument.includes('diary')){
+    const diaryConfig = DIARY_MAP[firstArgument]
+    if (!diaryConfig){
+      return log('Such diary config does not exist', 'error')
+    }
+
     return diary({
-      envKey: 'DIARY_PATH',
-      pathInput: DIARY_PATH,
+      envKey: diaryConfig.envKey,
+      pathInput: diaryConfig.path,
       diaryInput: [ secondArgument, thirdArgument, ...rest ]
     })
   }
-  if (firstArgument === 'diary:tech'){
-    return diary({
-      envKey: 'TECH_DIARY_PATH',
-      pathInput: TECH_DIARY_PATH,
-      diaryInput: [ secondArgument, thirdArgument, ...rest ]
-    })
-  }
+  
   if (firstArgument === 'lint:file'){
     return lintFile(secondArgument, false)
   }
