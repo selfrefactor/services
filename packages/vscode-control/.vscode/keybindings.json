@@ -157,6 +157,13 @@
     "when": "editorLangId!=python"
   },
   {
+    "key": "capslock t",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": "describe('${0:}"
+    }
+  },
+  {
     "key": "alt+1",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -440,7 +447,7 @@
   },
   {
     "command": "magicBeans.createSpec",
-    "key": "capslock t",
+    "key": "ctrl+shift+t",
     "comment": "test"
   },
   {
