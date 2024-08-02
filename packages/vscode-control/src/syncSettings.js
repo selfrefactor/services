@@ -64,6 +64,7 @@ const GOTO_LOCATION = 'goto'
  */
 function testNewSettings() {
   return {
+		"search.searchEditor.defaultNumberOfContextLines": 4,
 		'window.autoDetectColorScheme': false,
     'workbench.editor.showTabs': 'multiple',
 		"workbench.editor.tabActionCloseVisibility": true,
