@@ -196,6 +196,11 @@
 					"default": false,
 					"description": "auto set of color theme"
 				},
+				"magicBeans.AUTO_CHANGE_COLOR_THEME": {
+					"type": "boolean",
+					"default": false,
+					"description": "always change color theme"
+				},
 				"magicBeans.SYMBOLS_LIST_ALLOWED_EXTENSIONS": {
 					"type": "array",
 					"uniqueItems": true,
