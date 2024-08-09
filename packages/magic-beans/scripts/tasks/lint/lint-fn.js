@@ -31,9 +31,7 @@ async function biome(filePath) {
   try{
     const label = `${filePath} - biome`
     console.time(label)
-    const command = `node_modules/@biomejs/biome/bin/biome check --apply-unsafe ${filePath}`
-    const formatCommand = `node_modules/@biomejs/biome/bin/biome format --write --indent-style=space --indent-width=2 ${filePath}`
-    await exec(formatCommand)
+    const command = `node_modules/@biomejs/biome/bin/biome check --write --unsafe --javascript-formatter-line-width=85 --organize-imports-enabled=true --jsx-quote-style=single --line-width=85  ${filePath}`
     const { errorMessage } = await exec(command)
     console.timeEnd(label)
     return errorMessage ?? false

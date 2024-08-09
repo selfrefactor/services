@@ -44,3 +44,5 @@ use aliases to link cyrillic letter to run command
 following envs are expected:
 
 - `DIARY_PATH` - path to the diary file
+
+>:; chars are not expected
