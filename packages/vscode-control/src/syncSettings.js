@@ -64,6 +64,7 @@ const GOTO_LOCATION = 'goto'
  */
 function testNewSettings() {
   return {
+		"editor.stackFrameHighlightBackground": "#ff0000",
 		"search.searchEditor.defaultNumberOfContextLines": 4,
 		'window.autoDetectColorScheme': false,
     'workbench.editor.showTabs': 'multiple',
