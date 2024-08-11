@@ -270,9 +270,9 @@
 
 ## CAPSLOCK T
 
-`magicBeans.createSpec`
+`editor.action.insertSnippet`
 
-> test
+> Snippet: describe('${0:}
 
 ## CAPSLOCK X
 
@@ -371,6 +371,12 @@
 ## CTRL  SHIFT  D
 
 `editor.action.copyLinesDownAction`
+
+## CTRL  SHIFT  T
+
+`magicBeans.createSpec`
+
+> test
 
 ## CTRL  UP
 

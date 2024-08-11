@@ -64,6 +64,7 @@ const GOTO_LOCATION = 'goto'
  */
 function testNewSettings() {
   return {
+		"magicBeans.ALLOW_CHANGE_COLOR_THEME": IS_MANJARO,
 		"editor.stackFrameHighlightBackground": "#ff0000",
 		"search.searchEditor.defaultNumberOfContextLines": 4,
 		'window.autoDetectColorScheme': false,

@@ -1,22 +1,17 @@
 {
 	"scripts": {
+		"on": "yarn on:1 && yarn on:2",
+		"small": "yarn small:1 && yarn small:2",
 		"keys": "node visualize-keybindings",
 		"small:1": "MODE=small node ./src/syncSettings",
 		"small:2": "BETA=ON MODE=small node ./src/syncSettings",
 		"on:1": "MODE=normal node ./src/syncSettings",
 		"on:2": "BETA=ON MODE=normal node ./src/syncSettings",
-		"on": "yarn on:1 && yarn on:2",
 		"big:1": "MODE=big node ./src/syncSettings",
 		"big:2": "BETA=ON MODE=big node ./src/syncSettings",
 		"big": "yarn big:1 &&yarn big:2",
 		"bigger:1": "MODE=bigger node ./src/syncSettings",
 		"bigger:2": "BETA=ON MODE=bigger node ./src/syncSettings"
-	},
-	"scriptsOld": {
-		"read:bigger:1": "READ=ON MODE=bigger node ./src/syncSettings",
-		"read:small:1": "MODE=small READ=ON node ./src/syncSettings",
-		"read:1": "READ=ON node ./src/syncSettings",
-		"read:big:1": "MODE=big READ=ON node ./src/syncSettings"
 	},
 	"name": "vscode-control",
 	"version": "0.1.0",
