@@ -19,7 +19,7 @@ function parseChallengeData(challengeData){
   )
   if (testInputs.length === 0) throw new Error('testInputs.length')
 
-  return {testCases: challengeData.testCases, functionName: challengeData.kataTitle, replContent: challengeData.replContent, testInputs}
+  return {testCases: challengeData.testCases, functionName: challengeData.kataTitle, replContent: challengeData.replContent, testInputs, taskDescription: challengeData.taskDescription}
 }
 
 exports.parseChallengeData = parseChallengeData

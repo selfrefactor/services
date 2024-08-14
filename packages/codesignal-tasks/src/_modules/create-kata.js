@@ -27,9 +27,13 @@ function getRestTestCases(testCases) {
   )
 }
 
-function getFileContent({ testCases, testInputs, url }) {
+function getFileContent({ testCases, testInputs, url, taskDescription }) {
   const template = `
-// {{url}}
+/**
+ * {{url}}
+ * 
+ * {{taskDescription}}
+ */
 
 function solution({{inputs}}){
   
@@ -61,6 +65,7 @@ test('happy', () => {
 `.trim()
 
   const templateArguments = {
+    taskDescription,
     declarations: getDeclarations(testInputs),
     firstExpected: testCases[0].expectedOutput,
     firstTestInput: testCases[0].testInput,

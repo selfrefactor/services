@@ -15,23 +15,15 @@ async function prepare(_){
 
 }
 
-function markTime(){
-  let now = Number(new Date())
-
-  return () => toDecimal((Number(new Date() )- now)/1000)
-}
-
-
 async function getRawData(_){
-  // let markInitTime = markTime()
-
   await delay(10000)
   // await _.waitFor(replSelector, 12000)
-  // let timeToInit = markInitTime()
+  const fooEl = await _.page.$('.markdown.-arial')
   const replContentEl = await _.page.$(replSelector)
   const replContent  = await replContentEl.textContent()
   const kataTitleEl = await _.page.$(`.task-title--header`)
   const kataTitle  = await kataTitleEl.textContent()
+  const foo  = await fooEl.textContent()
 
   await prepare(_)
   const testCasesTitlesEls = await _.page.$$(
@@ -63,7 +55,7 @@ async function getRawData(_){
 
     await delay(100)
 
-    return {expectedOutput, testInput, title: testCaseTitle}
+    return {expectedOutput, testInput, title: testCaseTitle, taskDescription: foo}
   }
 
   const testCases = await mapAsync(iterator, testCasesTitlesEls)
@@ -92,18 +84,3 @@ async function scrapeChallenge(url){
 
 exports.scrapeChallenge = scrapeChallenge
 exports.replSelector = replSelector
-
-// let waitPredicate = async() => {
-//   let el = await _.page.$('.monaco-mouse-cursor-text')
-//   if(!el) return false
-
-//   let textContent = await el.textContent()
-//   // get visibility of element
-//   let isVisibleHandle = await el.evaluateHandle((e) => {
-//     const style = window.getComputedStyle(e)
-//     return style && style.visibility === 'visible'
-//   })
-
-//   return textContent.includes('function')
-// }
-// await _.waitForPredicate(waitPredicate, 12000)
