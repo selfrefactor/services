@@ -1,14 +1,29 @@
 
-const { execSafe } = require('helpers-fn')
+const { execSafe, exec: execFn } = require('helpers-fn')
 const { resolve } = require('path')
 
 const cwd = resolve(__dirname, '../../')
 const PRETTIER = 'node_modules/prettier/bin/prettier.cjs'
+const OXLINT = 'node_modules/@oxlint/linux-x64-musl/oxlint'
+const BIOME = 'node_modules/@biomejs/biome/bin/biome'
 
 async function exec(command) {
   try {
     await execSafe({ command, cwd })
     return { success: true }
+  }
+  catch (error) {
+    return {
+      errorMessage: error?.message ?? JSON.stringify(error, null, 2),
+      success: false,
+    }
+  }
+}
+
+async function execWithStandartOutput(command) {
+  try {
+    let logs= await execFn({ command, cwd })
+    return { success: true, logs: logs.join() }
   }
   catch (error) {
     return {
@@ -25,21 +40,32 @@ async function lintFileWithPrettier(filePath) {
   await exec(command)
 }
 
-async function biome(filePath, applyUnsafe) {
-  const label = `${filePath} - biome`
-  console.time(label)
-  const command = `node_modules/@biomejs/biome/bin/biome check ${
-    applyUnsafe ? '--apply-unsafe' : ''
-  } ${filePath}`
-  const { errorMessage } = await exec(command)
-  console.timeEnd(label)
-  return errorMessage ?? false
+async function biomeLint(filePath) {
+  // check include lint and format command
+  const checkCommand = `${BIOME} check --write --unsafe --javascript-formatter-line-width=85 --organize-imports-enabled=true --jsx-quote-style=single --line-width=85 ${filePath}`
+
+  const { errorMessage: checkCommandErrorMessage } = await exec(checkCommand)
+
+  return {
+    checkCommandErrorMessage: checkCommandErrorMessage ?? '',
+  }
 }
 
-async function lintFn(filePath, applyUnsafe) {
+async function oxlint(filePath) {
+  const command = `${OXLINT} --fix-dangerously --fix-suggestions --fix ${filePath}`
+
+  console.log('command', command)
+  const {logs, success,errorMessage} =  await execWithStandartOutput(command)
+  if(!success) return errorMessage
+  return logs
+}
+
+async function lintFn(filePath) {
+  const oxlintOutput = await oxlint(filePath)
   await lintFileWithPrettier(filePath)
-  const biomeOutput = await biome(filePath, applyUnsafe)
-  if (biomeOutput) console.log( '\n', biomeOutput, '\n')
+  const biomeOutput = await biomeLint(filePath)
+  if (oxlintOutput) console.log( '\n oxlint: ', oxlintOutput, '\n')
+  if (biomeOutput) console.log( '\n biomelint: ', biomeOutput, '\n')
 }
 
 exports.lintFile = lintFn

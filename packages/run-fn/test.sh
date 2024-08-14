@@ -1,1 +1,1 @@
-node bin/run.js lint:file /home/sr/repos/code-complexity/src/editordecoration/EditorDecoration.ts
+node bin/run.js lint:file /home/we/repos/frontend-sandbox/src/select-article/SelectArticle.tsx

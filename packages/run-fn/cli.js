@@ -53,10 +53,10 @@ async function runFn(){
   }
   
   if (firstArgument === 'lint:file'){
-    return lintFile(secondArgument, false)
+    return lintFile(secondArgument)
   }
   if (firstArgument === 'lint:file:unsafe'){
-    return lintFile(secondArgument, true)
+    return lintFile(secondArgument)
   }
 
   if (firstArgument === 'dep'){
