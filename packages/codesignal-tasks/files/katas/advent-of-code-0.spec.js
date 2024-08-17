@@ -1,6 +1,0 @@
-test('happy', () => {
-})
-
-function getInput(){
-
-}
