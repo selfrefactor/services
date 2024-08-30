@@ -1,6 +1,6 @@
 {
 	"name": "run-fn",
-	"version": "3.41.0",
+	"version": "3.41.1",
 	"description": "Collections of useful CLI functions",
 	"main": "./cli.js",
 	"bin": {
@@ -21,12 +21,12 @@
 		"dep-fn": "2.3.3",
 		"fs-extra": "11.2.0",
 		"helpers-fn": "2.0.0",
-		"oxlint": "^0.7.1",
+		"oxlint": "0.9.1",
 		"prettier": "3.3.3",
-		"rambdax": "11.1.1",
+		"rambdax": "11.2.0",
 		"string-fn": "3.3.2"
 	},
 	"devDependencies": {
-		"typescript": "5.5.3"
+		"typescript": "5.5.4"
 	}
 }
