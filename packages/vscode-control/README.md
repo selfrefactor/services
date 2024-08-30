@@ -205,17 +205,10 @@ Configure runtime arguments
 "disable-hardware-acceleration": true
 ```
 
-## Free scripts
+## Notes
 
-```
-		"small": "yarn small:all&&run d",
-		"small:all": "yarn small:1&&yarn small:2",
-		"small:1": "ZOOM_SCALE=0.93 SCALE=0.89 node syncSettings",
-		"small:2": "BETA=ON ZOOM_SCALE=0.93 SCALE=0.89 node syncSettings",
-    		"big": "yarn big:1&&yarn big:2",
-		"big:1": "ZOOM_SCALE=1.6 SCALE=1.6 node syncSettings",
-		"big:2": "BETA=ON ZOOM_SCALE=1.6 SCALE=1.6 node syncSettings"
-```
+"nikhil-patil.npm-run",
+
 
 /**
 

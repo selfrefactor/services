@@ -59,6 +59,8 @@ void (async function sync() {
 // goto | peek
 const GOTO_LOCATION = 'goto'
 
+console.log(IS_MANJARO, 'IS_MANJARO')
+
 /**
  * Keep latest changes with comments of change
  */
