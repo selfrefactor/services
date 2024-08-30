@@ -29,6 +29,7 @@ export function seoTitle(text: string, limit?: number): string
 export function shuffle(text: string): string
 export function snakeCase(text: string, extraLatin?: boolean): string
 export function splitSentence(sentence: string): string[]
+export function splitWhen(text: string, predicate: (x: string) => boolean): string[]
 export function stripPunctuation(text: string): string
 export function stripTags(text: string): string
 export function titleCase(text: string, extraLatin?: boolean): string
