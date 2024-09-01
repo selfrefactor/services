@@ -8,8 +8,8 @@
   },
   "typings": "./index.d.ts",
   "main": "./dist/string-fn",
-	"version": "3.4.0",
-	"NOTE": "dont update dependencies",
+  "version": "3.4.1",
+  "NOTE": "dont update dependencies",
   "dependencies": {
     "rambdax": "7.0.1"
   },
