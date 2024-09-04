@@ -4,7 +4,8 @@
     "out": "yarn build:main&&yarn build:web",
     "build:main": "NODE_ENV=build rollup -c rollup.config.js",
     "build:web": "NODE_ENV=build rollup -c rollup.web.config.js",
-    "test": "jest"
+    "test": "jest",
+    "dev": "jest src/pascalCase.spec.js"
   },
   "typings": "./index.d.ts",
   "main": "./dist/string-fn",
