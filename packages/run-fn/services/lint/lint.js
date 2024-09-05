@@ -23,7 +23,7 @@ async function exec(command) {
 async function execWithStandartOutput(command) {
   try {
     let logs= await execFn({ command, cwd })
-    return { success: true, logs: logs.join() }
+    return { success: true, logString: logs.join() }
   }
   catch (error) {
     return {
@@ -46,18 +46,15 @@ async function biomeLint(filePath) {
 
   const { errorMessage: checkCommandErrorMessage } = await exec(checkCommand)
 
-  return {
-    checkCommandErrorMessage: checkCommandErrorMessage ?? '',
-  }
+  return  checkCommandErrorMessage ?? ''
 }
 
 async function oxlint(filePath) {
   const command = `${OXLINT} --fix-dangerously --fix-suggestions --fix ${filePath}`
 
-  console.log('command', command)
-  const {logs, success,errorMessage} =  await execWithStandartOutput(command)
+  const {logString, success,errorMessage} =  await execWithStandartOutput(command)
   if(!success) return errorMessage
-  return logs
+  return logString
 }
 
 async function lintFn(filePath) {

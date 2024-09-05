@@ -1,1 +1,1 @@
-node bin/run.js lint:file /home/we/repos/frontend-sandbox/src/select-article/SelectArticle.tsx
+node bin/run.js lint:file /home/we/repos/frontend-sandbox/src/components/SharedLayout.tsx
