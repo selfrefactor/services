@@ -12,6 +12,7 @@ const { log } = require('helpers-fn')
 const { read } = require('./services/read/read')
 const { pullAll } = require('./services/pull-all/pull-all')
 const { lintFile } = require('./services/lint/lint')
+const { lintFolder } = require('./services/lint-folder/lint-folder')
 const { diary } = require('./services/diary/diary')
 
 const DIARY_MAP = {
@@ -52,11 +53,11 @@ async function runFn(){
     })
   }
   
-  if (firstArgument === 'lint:file'){
+  if (firstArgument.includes('lint:file')){
     return lintFile(secondArgument)
   }
-  if (firstArgument === 'lint:file:unsafe'){
-    return lintFile(secondArgument)
+  if (firstArgument === 'lint:folder'){
+    return lintFolder()
   }
 
   if (firstArgument === 'dep'){
