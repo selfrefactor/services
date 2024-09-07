@@ -1,11 +1,11 @@
-const { glue, replace, interpolate, remove, maybe } = require('rambdax')
+const { glue, replace, interpolate, remove, maybe, replaceAll } = require('rambdax')
 
 const specTemplate = glue(`
   import { {{methodName}} } from './{{fileName}}'
   _NEW_LINE_
   test('happy', () => {
-  ___const result = {{methodName}}()
-  ___console.log(result)
+  __const result = {{methodName}}()
+  __console.log(result)
   })
 `,
 '\n')
@@ -14,8 +14,8 @@ const specTemplateJs = glue(`
   const { {{methodName}} } = require('./{{fileName}}')
   _NEW_LINE_
   test('happy', () => {
-  ___const result = {{methodName}}()
-  ___console.log(result)
+  __const result = {{methodName}}()
+  __console.log(result)
   })
 `,
 '\n')
@@ -24,8 +24,8 @@ const specTemplateAsync = glue(`
   import { {{methodName}} } from './{{fileName}}'
   _NEW_LINE_
   test('happy', async () => {
-  ___const result = await {{methodName}}()
-  ___console.log(result)
+  __const result = await {{methodName}}()
+  __console.log(result)
   })
 `,
 '\n')
@@ -39,8 +39,8 @@ function specTemplateFn({ isAsync, fileName, methodName, isJavascript }){
     fileName : remove([ '.js', '.ts' ], fileName),
     methodName,
   })
-  const withTab = replace(
-    '___', '  ', result
+  const withTab = replaceAll(
+    '__', '  ', result
   )
   const withNewLine = remove('_NEW_LINE_', withTab)
 
