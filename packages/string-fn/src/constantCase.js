@@ -1,21 +1,11 @@
-import { words } from './words'
-import {
-  compose,
-  toUpper,
-  join,
-  map,
-} from 'rambdax'
-import { wordsX } from './wordsX'
-  
-export const constantCase = (str, extraLatin = false) => {
-  const method = extraLatin ?
-    wordsX :
-    words
+import { toUpper } from 'rambdax';
+import { createMethodWithAdditionalSupport } from './utils';
 
-  return compose(
-   join('_'),
-   map(toUpper),
-   method
- )(str)
-}
+export const constantCase = createMethodWithAdditionalSupport(toUpper, '_');
+
+
+
+
+
+
 

@@ -1,17 +1,5 @@
-import { words } from './words'
-import {
-  toLower,
-  join,
-} from 'rambdax'
-import { wordsX } from './wordsX'
+import { toLower } from 'rambdax';
+import { createMethodWithAdditionalSupport } from './utils';
 
-export function kebabCase(str, extraLatin = false){
-  const method = extraLatin ?
-    wordsX :
-    words
+export const kebabCase = createMethodWithAdditionalSupport(toLower, '-');
 
-  return toLower(join(
-    '-',
-    method(str)
-  ))
-}

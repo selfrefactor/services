@@ -5,7 +5,8 @@
     "build:main": "NODE_ENV=build rollup -c rollup.config.js",
     "build:web": "NODE_ENV=build rollup -c rollup.web.config.js",
     "test": "jest",
-    "dev": "jest src/pascalCase.spec.js"
+    "dev": "jest src/camelCase.spec.js",
+    "x": "jest src/checkCase.spec.js"
   },
   "typings": "./index.d.ts",
   "main": "./dist/string-fn",

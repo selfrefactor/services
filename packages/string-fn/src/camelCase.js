@@ -1,27 +1,6 @@
-import {
-  join,
-  map,
-  toUpper,
-  head,
-  toLower,
-  tail,
-} from 'rambdax'
 
-import { words } from './words'
-import { wordsX } from './wordsX'
+import { capitalize, createMethodWithAdditionalSupport } from './utils';
 
-export function camelCase(str, extraLatin = false){
-  const method = extraLatin ?
-    wordsX :
-    words
+export const camelCaseTransform = (x, i) => i === 0 ? x.toLowerCase() : capitalize(x);
 
-  const result = join(
-    '',
-    map(
-      val => `${ toUpper(head(val)) }${ toLower(tail(val)) }`,
-      method(str)
-    )
-  )
-
-  return `${ toLower(head(result)) }${ tail(result) }`
-}
+export const camelCase = createMethodWithAdditionalSupport(camelCaseTransform, '');

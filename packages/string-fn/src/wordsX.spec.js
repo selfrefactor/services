@@ -1,3 +1,4 @@
+import { words } from './words'
 import { wordsX } from './wordsX'
 
 test('with Bulgarian language', () => {
@@ -21,9 +22,10 @@ test('', () => {
   expect(result).toEqual(expectedResult)
 })
 
-test('doesn\'t work with German', () => {
-  const result = wordsX('fooBärBAZ')
+test('it work with German', () => {
+  const resultx = wordsX('fooBärBAZ')
+  const result = words('fooBärBAZ')
   const expectedResult = [ 'foo', 'Bär', 'BAZ' ]
-
-  expect(result).toEqual(expectedResult)
+  console.log({resultx, result})
+  expect(resultx).toEqual(expectedResult)
 })

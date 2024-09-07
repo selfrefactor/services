@@ -1,24 +1,4 @@
-import {
-  join,
-  map,
-  head,
-  toUpper,
-  toLower,
-  tail,
-} from 'rambdax'
-import { words } from './words'
-import { wordsX } from './wordsX'
+import { pascalCaseTransform } from "./pascalCase";
+import { createMethodWithAdditionalSupport } from "./utils";
 
-export function titleCase(str, extraLatin = false){
-  const method = extraLatin ?
-    wordsX :
-    words
-    
-  return join(
-    ' ',
-    map(
-      val => `${ toUpper(head(val)) }${ toLower(tail(val)) }`,
-      method(str)
-    )
-  )
-}
+export const titleCase = createMethodWithAdditionalSupport(pascalCaseTransform, ' ');

@@ -1,21 +1,9 @@
-import {
-  join,
-  map,
-  toLower,
-} from 'rambdax'
-import { words } from './words'
-import { wordsX } from './wordsX'
+import { toLower } from 'rambdax';
+import { createMethodWithAdditionalSupport } from './utils';
 
-export function dotCase(str, extraLatin = false){
-  const method = extraLatin ?
-    wordsX :
-    words
+export const dotCase = createMethodWithAdditionalSupport(toLower, '.');
 
-  return join(
-    '.',
-    map(
-      toLower,
-      method(str)
-    )
-  )
-}
+
+
+
+

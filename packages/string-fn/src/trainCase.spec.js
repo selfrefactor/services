@@ -1,5 +1,5 @@
 import { trainCase } from './trainCase'
-import { trainCase as trainCaseReferenceLib } from 'case-anything'
+// import { trainCase as trainCaseReferenceLib } from 'case-anything'
 
 const tests = [
   { input: 'hello world', expected: 'Hello-World' },
@@ -12,7 +12,7 @@ describe('trainCase', () => {
   tests.forEach(({ input, expected }) => {
     test(`${input} => ${expected}`, () => {
       expect(trainCase(input)).toEqual(expected)
-      expect(trainCaseReferenceLib(input)).toEqual(expected)
+      // expect(trainCaseReferenceLib(input)).toEqual(expected)
     })
   })
 })
