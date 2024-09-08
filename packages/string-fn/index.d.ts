@@ -25,6 +25,7 @@ export function msToText(ms: number): string
 export function pascalCase(text: string, extraLatin?: boolean): string
 export function removeIndent(text: string): string
 export function reverse(text: string): string
+export function createIdFromSentence(text: string): string
 export function seoTitle(text: string): string
 export function shuffle(text: string): string
 export function snakeCase(text: string, extraLatin?: boolean): string
