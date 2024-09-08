@@ -1,6 +1,6 @@
-import { match } from 'rambdax'
-import { WORDS } from './internals/constants'
+import { match } from 'rambdax';
+import { WORDS } from './internals/constants';
 
-export function words(str){
-  return match(WORDS, str)
+export function words(str) {
+	return match(WORDS, str);
 }

@@ -1,15 +1,15 @@
-import { pascalCase } from './pascalCase'
+import { pascalCase } from './pascalCase';
 
-const expectedResult = 'FooBarBaz'
+const expectedResult = 'FooBarBaz';
 
 test('happy', () => {
-  expect(pascalCase('foo BarBAZ')).toEqual(expectedResult)
-})
+	expect(pascalCase('foo BarBAZ')).toEqual(expectedResult);
+});
 
 test('from camel case', () => {
-  expect(pascalCase('fooBarBaz')).toEqual(expectedResult)
-})
+	expect(pascalCase('fooBarBaz')).toEqual(expectedResult);
+});
 
 test('from dot case', () => {
-  expect(pascalCase('foo.bar.baz')).toEqual(expectedResult)
-})
+	expect(pascalCase('foo.bar.baz')).toEqual(expectedResult);
+});

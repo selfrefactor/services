@@ -1,20 +1,15 @@
-import { pascalCase } from './pascalCase'
+import { pascalCase } from './pascalCase';
 
 test('happy', () => {
-  const result = pascalCase('foo bar BAZ')
-  const expected = 'FooBarBaz'
+	const result = pascalCase('foo bar BAZ');
+	const expected = 'FooBarBaz';
 
-  expect(
-    result
-  ).toEqual(expected)
-})
+	expect(result).toEqual(expected);
+});
 
 test('extra latin', () => {
-  const result = pascalCase('foo Stören BAZ', true)
-  const expected = 'FooStörenBaz'
+	const result = pascalCase('foo Stören BAZ', true);
+	const expected = 'FooStörenBaz';
 
-  expect(
-    result
-  ).toEqual(expected)
-})
-
+	expect(result).toEqual(expected);
+});

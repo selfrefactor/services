@@ -1,11 +1,11 @@
-import {shuffle,  head, range } from 'rambdax'
+import { head, range, shuffle } from 'rambdax';
 
-const charCodesString = [ ...range(65, 90), ...range(97, 122) ]
-const charCodes = [ ...charCodesString, ...range(49, 57) ]
+const charCodesString = [...range(65, 90), ...range(97, 122)];
+const charCodes = [...charCodesString, ...range(49, 57)];
 
-export function randomString(length = 8, stringTag = false){
-  const loops = range(0, length)
-  const charSet = stringTag ? charCodesString : charCodes
+export function randomString(length = 8, stringTag = false) {
+	const loops = range(0, length);
+	const charSet = stringTag ? charCodesString : charCodes;
 
-  return loops.map(x => String.fromCharCode(head(shuffle(charSet)))).join('')
+	return loops.map((x) => String.fromCharCode(head(shuffle(charSet)))).join('');
 }

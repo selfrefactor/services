@@ -1,31 +1,24 @@
-import {
-  map,
-  split,
-  join,
-  toLower,
-} from 'rambdax'
-import { distance } from './distance'
+import { join, map, split, toLower } from 'rambdax';
+import { distance } from './distance';
 
-const normalizeGermanChar = char => {
-  const arr = [ 'ä', 'ö', 'ü', 'ß' ]
-  const normalizedArr = [ 'a', 'o', 'u', 'ss' ]
-  const foundIndex = arr.indexOf(char)
+const normalizeGermanChar = (char) => {
+	const arr = ['ä', 'ö', 'ü', 'ß'];
+	const normalizedArr = ['a', 'o', 'u', 'ss'];
+	const foundIndex = arr.indexOf(char);
 
-  if (foundIndex === -1){
-    return char
-  }
+	if (foundIndex === -1) {
+		return char;
+	}
 
-  return normalizedArr[ foundIndex ]
-}
+	return normalizedArr[foundIndex];
+};
 
-const normalizeGermanWord = str => join(
-  '',
-  map(
-    val => normalizeGermanChar(val),
-    split('', toLower(str))
-  )
-)
+const normalizeGermanWord = (str) =>
+	join(
+		'',
+		map((val) => normalizeGermanChar(val), split('', toLower(str))),
+	);
 
-export function distanceGerman(a, b){
-  return distance(normalizeGermanWord(a), normalizeGermanWord(b))
+export function distanceGerman(a, b) {
+	return distance(normalizeGermanWord(a), normalizeGermanWord(b));
 }

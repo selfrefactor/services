@@ -1,14 +1,14 @@
-import { camelCase } from './camelCase'
+import { camelCase } from './camelCase';
 
-const expectedResult = 'fooBarBaz'
+const expectedResult = 'fooBarBaz';
 test('happy', () => {
-  expect(camelCase('foo BarBAZ')).toEqual(expectedResult)
-})
+	expect(camelCase('foo BarBAZ')).toEqual(expectedResult);
+});
 
 test('from camel case', () => {
-  expect(camelCase('fooBarBaz')).toEqual(expectedResult)
-})
+	expect(camelCase('fooBarBaz')).toEqual(expectedResult);
+});
 
 test('from dot case', () => {
-  expect(camelCase('foo.bar.baz')).toEqual(expectedResult)
-})
+	expect(camelCase('foo.bar.baz')).toEqual(expectedResult);
+});

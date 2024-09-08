@@ -1,7 +1,7 @@
-import { sort } from 'rambdax'
+import { sort } from 'rambdax';
 
-export const getMaxLength = lines => {
-  const [ max ] = sort((a, b) => a.length < b.length ? 1 : -1)(lines)
+export const getMaxLength = (lines) => {
+	const [max] = sort((a, b) => (a.length < b.length ? 1 : -1))(lines);
 
-  return max.length
-}
+	return max.length;
+};

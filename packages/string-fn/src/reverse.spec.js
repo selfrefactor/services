@@ -1,11 +1,10 @@
-import { reverse } from './reverse'
+import { reverse } from './reverse';
 
 test('', () => {
-  const str = 'fooBarBaz'
-  const result = reverse(str)
-  const expectedResult = 'zaBraBoof'
+	const str = 'fooBarBaz';
+	const result = reverse(str);
+	const expectedResult = 'zaBraBoof';
 
-  expect(result).toEqual(expectedResult)
-  expect(str).toEqual('fooBarBaz')
-})
-
+	expect(result).toEqual(expectedResult);
+	expect(str).toEqual('fooBarBaz');
+});

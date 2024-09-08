@@ -63,9 +63,15 @@ console.log(IS_MANJARO, 'IS_MANJARO')
 
 /**
  * Keep latest changes with comments of change
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "none",
+	 "debug.toolBarLocation": "docked",
+	   "explorer.compactFolders": false,
+  "explorer.decorations.badges": false,
  */
 function testNewSettings() {
   return {
+
 		"magicBeans.ALLOW_CHANGE_COLOR_THEME": IS_MANJARO,
 		"editor.stackFrameHighlightBackground": "#ff0000",
 		"search.searchEditor.defaultNumberOfContextLines": 4,

@@ -1,15 +1,14 @@
-import { isPunctuation } from './isPunctuation'
+import { isPunctuation } from './isPunctuation';
 
 test('happy', () => {
-  expect(isPunctuation('.')).toBeTruthy()
-})
+	expect(isPunctuation('.')).toBeTruthy();
+});
 
 test('multiple', () => {
-  expect(isPunctuation(',')).toBeTruthy()
-  expect(isPunctuation('`')).toBeTruthy()
-  expect(isPunctuation('?')).toBeTruthy()
-  expect(isPunctuation('!')).toBeTruthy()
-  expect(isPunctuation(';')).toBeTruthy()
-  expect(isPunctuation('1')).toBeFalsy()
-})
-
+	expect(isPunctuation(',')).toBeTruthy();
+	expect(isPunctuation('`')).toBeTruthy();
+	expect(isPunctuation('?')).toBeTruthy();
+	expect(isPunctuation('!')).toBeTruthy();
+	expect(isPunctuation(';')).toBeTruthy();
+	expect(isPunctuation('1')).toBeFalsy();
+});
