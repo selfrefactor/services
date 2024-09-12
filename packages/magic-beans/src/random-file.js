@@ -92,12 +92,15 @@ async function randomFileInitialize(
     })
 
     if (files.length === 0) {
-      logToUser('no files left')
-
+      await delay(2000)
+      randomFileInitialize(
+        getter('projectFolder')
+      )
       return
     }
     const randomized = shuffle(files)
     setter('files', randomized)
+    setter('projectFolder', projectFolder)
   } catch (err) {
     console.log(err)
   }
