@@ -65,6 +65,6 @@
     ".cache"
   ],
   "workbench.editor.dragToOpenWindow": false,
-  "files.autoSave": "off",
+  "files.autoSave": "onFocusChange",
   "zenMode.hideActivityBar": false
 }

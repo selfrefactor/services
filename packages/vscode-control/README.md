@@ -1,5 +1,19 @@
 # Vscode-control
+===
+Improved test generation
+With GitHub Copilot, you can generate tests for your code, either by using the Generate Tests using Copilot action in the editor content menu, or by using the /tests slash command in inline Chat.
+===
+Code generation instructions (Experimental)
+Setting: github.copilot.chat.experimental.codeGeneration.instructions
 
+Copilot can help you generate code, for example as part of a refactoring, generating unit tests, or implementing a feature. And you might have specific libraries you want to use, or a particular coding style you want to follow for the code that Copilot generates.
+
+The experimental setting github.copilot.chat.experimental.codeGeneration.instructions lets you define a set of instructions that are added to every Copilot request that generates code.
+
+The instructions can be defined in the User or Workspace settings but can also be imported from a file.
+
+The following code snippet shows how to define a set of instructions from both settings and an external file:
+===
 sort keybindings.json
 
 	"search.searchEditor.defaultNumberOfContextLines": 0

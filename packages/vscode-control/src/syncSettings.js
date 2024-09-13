@@ -43,6 +43,7 @@ const MODE = MODES[MODE_KEY]
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
+// geist mono
 const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Fira Code'
 const FONT_FACTOR = 1
 
