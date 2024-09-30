@@ -72,7 +72,6 @@ console.log(IS_MANJARO, 'IS_MANJARO')
  */
 function testNewSettings() {
   return {
-
 		"magicBeans.ALLOW_CHANGE_COLOR_THEME": IS_MANJARO,
 		"editor.stackFrameHighlightBackground": "#ff0000",
 		"search.searchEditor.defaultNumberOfContextLines": 4,
