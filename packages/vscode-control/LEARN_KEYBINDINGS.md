@@ -1,22 +1,22 @@
 # Keybindings
 
-## ALT  F
+## ALT F
 
 `references-view.find`
 
-## ALT  I
+## ALT I
 
 `editor.action.goToImplementation`
 
 > HINT: IMPLEMENTATION
 
-## ALT  R
+## ALT R
 
 `workbench.action.debug.restart`
 
 > HINT: RESTART
 
-## ALT  Z
+## ALT Z
 
 `workbench.action.toggleZenMode`
 
@@ -68,7 +68,7 @@
 
 > Used with Gitlab extension to focus on MR view
 
- HINT: MR
+HINT: MR
 
 ## CAPSLOCK N
 
@@ -104,13 +104,13 @@
 
 > Xplain - Used with Github Copilot extension to explain the code
 
-## CTRL  M
+## CTRL M
 
 `editor.action.addSelectionToNextFindMatch`
 
 > match
 
-## CTRL  R
+## CTRL R
 
 `editor.action.referenceSearch.trigger`
 
@@ -120,81 +120,81 @@
 
 `workbench.panel.chat.view.copilot.focus`
 
-## ALT  5
+## ALT 5
 
 `editor.action.insertSnippet`
 
 > Snippet: Function
 
-## ALT  6
+## ALT 6
 
 `editor.action.insertSnippet`
 
 > Snippet: ArrowFunction
 
-## ALT  7
+## ALT 7
 
 `editor.action.insertSnippet`
 
 > Snippet: TestCase
 
-## ALT  8
+## ALT 8
 
 `editor.action.insertSnippet`
 
 > Snippet: Expect
 
-## ALT  9
+## ALT 9
 
 `editor.action.insertSnippet`
 
 > Snippet: StringTemplate
 
-## ALT  A
+## ALT A
 
 `editor.action.showHover`
 
 > this needs to be convenient
 
-## ALT  C
+## ALT C
 
 `magicBeans.copyTrimmed`
 
-## ALT  D
+## ALT D
 
 `editor.action.insertSnippet`
 
 > Snippet: debugger
 
-## ALT  E
+## ALT E
 
 `workbench.view.explorer`
 
-## ALT  G
+## ALT G
 
 `workbench.action.pinEditor`
 
-## ALT  G
+## ALT G
 
 `workbench.action.unpinEditor`
 
-## ALT  O
+## ALT O
 
 `workbench.action.toggleActivityBarVisibility`
 
 > open side panel
 
-## ALT  S
+## ALT S
 
 `workbench.action.toggleSplitEditorInGroup`
 
 > HINT: SPLIT
 
-## ALT  SHIFT  9
+## ALT SHIFT 9
 
 `git-config-user-profiles.pickUserProfile`
 
-## ALT  T
+## ALT T
 
 `terminal.focus`
 
@@ -290,95 +290,95 @@
 
 `workbench.action.gotoSymbol`
 
-## CTRL  3
+## CTRL 3
 
 `workbench.action.interactiveSession.clear`
 
-## CTRL  9
+## CTRL 9
 
 `PYTHON ONLY - python.execInTerminal`
 
-## CTRL  CAPSLOCK
+## CTRL CAPSLOCK
 
 `editor.action.selectHighlights`
 
-## CTRL  D
+## CTRL D
 
 `editor.action.goToDeclaration`
 
-## CTRL  D
+## CTRL D
 
 `typescript.goToSourceDefinition`
 
-## CTRL  DOWN
+## CTRL DOWN
 
 `editor.action.moveLinesDownAction`
 
-## CTRL  G
+## CTRL G
 
 `editor.action.goToTypeDefinition`
 
-## CTRL  H
+## CTRL H
 
 `editor.action.revealDefinition`
 
-## CTRL  K CTRL  H
+## CTRL K CTRL H
 
 `workbench.action.output.toggleOutput`
 
-## CTRL  O
+## CTRL O
 
 `workbench.action.files.openFolder`
 
 > HINT: OPEN
 
-## CTRL  R
+## CTRL R
 
 `rerunSearchEditorSearch`
 
-## CTRL  SHIFT  `
+## CTRL SHIFT `
 
 `github.copilot.chat.explain`
 
-## CTRL  SHIFT  3
+## CTRL SHIFT 3
 
 `github.copilot.interactiveEditor.review`
 
-## CTRL  SHIFT  6
+## CTRL SHIFT 6
 
 `github.copilot.interactiveEditor.review.apply`
 
-## CTRL  SHIFT  6
+## CTRL SHIFT 6
 
 `workbench.action.customizeLayout`
 
-## CTRL  SHIFT  7
+## CTRL SHIFT 7
 
 `github.copilot.chat.attachFile`
 
-## CTRL  SHIFT  8
+## CTRL SHIFT 8
 
 `github.copilot.interactiveEditor.review.continueInChat`
 
-## CTRL  SHIFT  9
+## CTRL SHIFT 9
 
 `workbench.action.toggleMaximizedPanel`
 
-## CTRL  SHIFT  B
+## CTRL SHIFT B
 
 `workbench.action.tasks.runTask`
 
-## CTRL  SHIFT  D
+## CTRL SHIFT D
 
 `editor.action.copyLinesDownAction`
 
-## CTRL  SHIFT  T
+## CTRL SHIFT T
 
 `magicBeans.createSpec`
 
 > test
 
-## CTRL  UP
+## CTRL UP
 
 `editor.action.moveLinesUpAction`
 
@@ -388,34 +388,34 @@
 
 ## Convenient keys
 
-* ctrl+0
-* ctrl+1
-* ctrl+4
-* ctrl+5
-* ctrl+6
-* ctrl+7
-* ctrl+8
-* ctrl+a
-* ctrl+c
-* ctrl+e
-* ctrl+s
-* ctrl+t
-* ctrl+v
-* ctrl+x
-* ctrl+z
-* ctrl+-
-* ctrl+=
-* alt+0
-* alt+3
-* alt+4
-* alt+q
-* alt+v
-* alt+w
-* alt+-
-* alt+=
-* capslock c
-* capslock e
-* capslock q
-* capslock s
-* capslock v
-* capslock w
+- ctrl+0
+- ctrl+1
+- ctrl+4
+- ctrl+5
+- ctrl+6
+- ctrl+7
+- ctrl+8
+- ctrl+a
+- ctrl+c
+- ctrl+e
+- ctrl+s
+- ctrl+t
+- ctrl+v
+- ctrl+x
+- ctrl+z
+- ctrl+-
+- ctrl+=
+- alt+0
+- alt+3
+- alt+4
+- alt+q
+- alt+v
+- alt+w
+- alt+-
+- alt+=
+- capslock c
+- capslock e
+- capslock q
+- capslock s
+- capslock v
+- capslock w

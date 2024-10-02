@@ -1,4 +1,34 @@
 ===
+===
+f4 - open copilot chat
+
+to try:
+
+github.copilot.tests.fixTestFailure.applyAndRerun
+{
+  "key": "ctrl+0",
+  "command": "github.copilot.newNotebook"
+}
+{
+  "key": "ctrl+4",
+  "command": "github.copilot.chat.selectKnowledgeBase"
+}
+{
+  "key": "ctrl+5",
+  "command": "github.copilot.interactiveEditor.generate"
+}
+
+unused:
+{
+  "key": "ctrl+shift+6",
+  "command": "github.copilot.interactiveEditor.review.apply"
+}
+{
+  "key": "ctrl+/",
+  "command": "github.copilot.acceptCursorPanelSolution",
+  "when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
+}
+===
 
 Free keybindings
 

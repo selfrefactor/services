@@ -1,40 +1,50 @@
 [
 	{
-    "key": "ctrl+shift+b",
-    "command": "-workbench.action.tasks.build",
-    "when": "taskCommandsRegistered"
+		"priority": true,
+		"key": "ctrl+shift+0",
+		"command": "github.copilot.newNotebook"
 	},
 	{
+		"priority": true,
+		"key": "ctrl+shift+1",
+		"command": "github.copilot.chat.selectKnowledgeBase"
+	},
+	{
+		"priority": true,
+		"key": "ctrl+shift+2",
+		"command": "github.copilot.interactiveEditor.generate"
+	},
+	{
+		"priority": true,
 		"key": "ctrl+shift+3",
 		"command": "github.copilot.interactiveEditor.review"
 	},
 	{
-		"key": "capslock 8",
+		"key": "ctrl+shift+4",
+		"command": "github.copilot.tests.fixTestFailure"
+	},
+	{
+		"priority": true,
+		"key": "ctrl+2",
 		"command": "github.copilot.interactiveEditor.generateDocs"
 	},
 	{
-    "key": "capslock 3",
+		"priority": true,
+    "key": "ctrl+3",
     "command": "github.copilot.chat.attachSelection"
   },
   {
-    "key": "ctrl+shift+8",
+		"priority": true,
+    "key": "ctrl+4",
     "command": "github.copilot.interactiveEditor.review.continueInChat"
   },
   {
-    "key": "ctrl+shift+7",
+    "key": "ctrl+5",
     "command": "github.copilot.chat.attachFile"
   },
   {
-    "key": "ctrl+shift+6",
-    "command": "github.copilot.interactiveEditor.review.apply"
-  },
-  {
-    "key": "capslock 6",
+    "key": "ctrl+6",
     "command": "github.copilot.ghpr.applySuggestion"
-  },
-  {
-    "key": "capslock 7",
-    "command": "github.copilot.tests.fixTestFailure"
   },
   {
     "key": "capslock 9",
@@ -867,5 +877,15 @@
     "key": "ctrl+shift+b",
     "command": "-workbench.action.tasks.build",
     "when": "taskCommandsRegistered"
-  }
+  },
+	{
+    "key": "ctrl+shift+b",
+    "command": "-workbench.action.tasks.build",
+    "when": "taskCommandsRegistered"
+	},
+	{
+		"key": "ctrl+/",
+		"command": "-github.copilot.acceptCursorPanelSolution",
+		"when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
+	}
 ]
