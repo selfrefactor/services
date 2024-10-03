@@ -887,5 +887,9 @@
 		"key": "ctrl+/",
 		"command": "-github.copilot.acceptCursorPanelSolution",
 		"when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
+	},
+	{
+		"key": "ctrl+3",
+		"command": "-workbench.action.focusThirdEditorGroup"
 	}
 ]
