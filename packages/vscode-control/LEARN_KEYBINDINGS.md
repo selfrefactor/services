@@ -16,31 +16,65 @@
 
 > HINT: RESTART
 
-## ALT  Z
-
-`workbench.action.toggleZenMode`
-
-## CAPSLOCK ,
+## ALT  SHIFT  ,
 
 `magicBeans.fixCamelcaseRefactoring`
 
-## CAPSLOCK 2
+## ALT  SHIFT  2
 
 `workbench.action.editorLayoutTwoColumns`
 
 > HINT: 2 COLUMNS
 
-## CAPSLOCK A
+## ALT  SHIFT  A
 
 `workbench.files.action.showActiveFileInExplorer`
 
 > HINT: ACTIVE FILE
 
-## CAPSLOCK F
+## ALT  SHIFT  F
 
 `references-view.findReferences`
 
 > HINT: FIND
+
+## ALT  SHIFT  K
+
+`workbench.action.selectTheme`
+
+## ALT  SHIFT  M
+
+`issuesAndMrs.focus`
+
+> Used with Gitlab extension to focus on MR view
+
+ HINT: MR
+
+## ALT  SHIFT  N
+
+`workbench.view.extensions`
+
+## ALT  SHIFT  P
+
+`editor.action.peekImplementation`
+
+> Peek Implementation
+
+## ALT  SHIFT  R
+
+`editor.action.goToReferences`
+
+> HINT: REFERENCES
+
+## ALT  SHIFT  X
+
+`github.copilot.interactiveEditor.explain`
+
+> Xplain - Used with Github Copilot extension to explain the code
+
+## ALT  Z
+
+`workbench.action.toggleZenMode`
 
 ## CAPSLOCK H
 
@@ -58,22 +92,6 @@
 
 `editor.unfoldAll`
 
-## CAPSLOCK K
-
-`workbench.action.selectTheme`
-
-## CAPSLOCK M
-
-`issuesAndMrs.focus`
-
-> Used with Gitlab extension to focus on MR view
-
- HINT: MR
-
-## CAPSLOCK N
-
-`workbench.view.extensions`
-
 ## CAPSLOCK O
 
 `workbench.action.output.toggleOutput`
@@ -85,24 +103,6 @@
 `editor.action.triggerParameterHints`
 
 > HINT: PARAMETER
-
-## CAPSLOCK P
-
-`editor.action.peekImplementation`
-
-> Peek Implementation
-
-## CAPSLOCK R
-
-`editor.action.goToReferences`
-
-> HINT: REFERENCES
-
-## CAPSLOCK X
-
-`github.copilot.interactiveEditor.explain`
-
-> Xplain - Used with Github Copilot extension to explain the code
 
 ## CTRL  2
 
@@ -147,6 +147,14 @@
 ## F4
 
 `workbench.panel.chat.view.copilot.focus`
+
+## ALT  -
+
+`git.push`
+
+## ALT  =
+
+`git.push`
 
 ## ALT  5
 
@@ -206,6 +214,10 @@
 
 `workbench.action.unpinEditor`
 
+## ALT  G
+
+`workbench.view.scm`
+
 ## ALT  O
 
 `workbench.action.toggleActivityBarVisibility`
@@ -218,35 +230,39 @@
 
 > HINT: SPLIT
 
+## ALT  SHIFT  1
+
+`workbench.action.editorLayoutSingle`
+
+> HINT: 1 COLUMN
+
 ## ALT  SHIFT  9
 
 `git-config-user-profiles.pickUserProfile`
+
+## ALT  SHIFT  D
+
+`workbench.view.debug`
+
+> HINT: DEBUG
+
+## ALT  SHIFT  L
+
+`magicBeans.sortLines`
+
+> lines
 
 ## ALT  T
 
 `terminal.focus`
 
-## CAPSLOCK -
-
-`git.push`
-
 ## CAPSLOCK <
 
 `editor.action.inlineSuggest.showPrevious`
 
-## CAPSLOCK =
-
-`git.push`
-
 ## CAPSLOCK 0
 
 `github.copilot.interactiveEditor.generateTests`
-
-## CAPSLOCK 1
-
-`workbench.action.editorLayoutSingle`
-
-> HINT: 1 COLUMN
 
 ## CAPSLOCK 4
 
@@ -264,35 +280,11 @@
 
 `github.copilot.interactiveEditor.fix`
 
-## CAPSLOCK D
-
-`workbench.view.debug`
-
-> HINT: DEBUG
-
-## CAPSLOCK G
-
-`workbench.view.scm`
-
-## CAPSLOCK L
-
-`magicBeans.sortLines`
-
-> lines
-
 ## CAPSLOCK T
 
 `editor.action.insertSnippet`
 
 > Snippet: describe('${0:}
-
-## CAPSLOCK X
-
-`github.copilot.chat.explain.palette`
-
-## CAPSLOCK X
-
-`github.copilot.terminal.explainTerminalSelectionContextMenu`
 
 ## CAPSLOCK Y
 
@@ -313,6 +305,14 @@
 ## CTRL  6
 
 `github.copilot.ghpr.applySuggestion`
+
+## CTRL  8
+
+`github.copilot.chat.explain.palette`
+
+## CTRL  9
+
+`github.copilot.terminal.explainTerminalSelectionContextMenu`
 
 ## CTRL  9
 
@@ -399,7 +399,6 @@
 * ctrl+0
 * ctrl+1
 * ctrl+7
-* ctrl+8
 * ctrl+a
 * ctrl+c
 * ctrl+e
@@ -416,15 +415,22 @@
 * alt+q
 * alt+v
 * alt+w
-* alt+-
-* alt+=
+* capslock 1
+* capslock 2
 * capslock 3
 * capslock 6
 * capslock 7
 * capslock 8
+* capslock a
 * capslock c
+* capslock d
 * capslock e
+* capslock g
 * capslock q
+* capslock r
 * capslock s
 * capslock v
 * capslock w
+* capslock x
+* capslock -
+* capslock =

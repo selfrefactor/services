@@ -23,8 +23,8 @@ const WRITE_TO_OUTPUT = VSCODE_INSIDERS || IS_MANJARO;
 const FONT_SIZE = 18;
 const SUGGEST_LINE_HEIGHT = 16;
 const SUGGEST_FONT_SIZE = 15;
-const LINE_HEIGHT = 24;
-const FILE_ICON_THEME = VSCODE_INSIDERS ? 'charmed-icons' : 'emoji-file-icons';
+const FILE_ICON_THEME =  'charmed-icons'
+// const FILE_ICON_THEME = VSCODE_INSIDERS ? 'charmed-icons' : 'emoji-file-icons';
 
 const MODES = {
 	big: 0.94,
@@ -40,7 +40,8 @@ const MODE = MODES[MODE_KEY];
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json');
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json');
 //  Fira Code
-const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Geist Mono';
+const FONT = 'Geist Mono';
+// const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Geist Mono';
 const FONT_FACTOR = 1;
 
 void (async function sync() {
@@ -299,7 +300,6 @@ function syncFiles(source, destination) {
 function getCalculatedOptions() {
 	const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE, 2);
 	const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR);
-	const lineHeight = toDecimal(LINE_HEIGHT * SCALE_FACTOR, 2);
 	const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR, 2));
 	const suggestLineHeight = Math.round(
 		toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR),

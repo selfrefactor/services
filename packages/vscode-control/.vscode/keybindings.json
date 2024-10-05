@@ -1,11 +1,6 @@
 [
 	{
 		"priority": true,
-		"key": "ctrl+shift+0",
-		"command": "github.copilot.newNotebook"
-	},
-	{
-		"priority": true,
 		"key": "ctrl+shift+1",
 		"command": "github.copilot.chat.selectKnowledgeBase"
 	},
@@ -59,11 +54,11 @@
 		"command": "github.copilot.chat.explain"
 	},
 	{
-    "key": "capslock x",
+    "key": "ctrl+8",
     "command": "github.copilot.chat.explain.palette"
   },
   {
-    "key": "capslock x",
+    "key": "ctrl+9",
     "command": "github.copilot.terminal.explainTerminalSelectionContextMenu"
   },
 	{
@@ -127,15 +122,15 @@
     "command": "workbench.action.tasks.runTask"
   },
   {
-    "key": "capslock =",
+    "key": "alt+=",
     "command": "git.push"
   },
   {
-    "key": "capslock -",
+    "key": "alt+-",
     "command": "git.push"
   },
 	{
-		"key": "capslock g",
+		"key": "alt+g",
 		"command": "workbench.view.scm"
 	},
   {
@@ -294,18 +289,18 @@
     "when": "textInputFocus && !editorReadonly"
   },
   {
-    "key": "capslock d",
+    "key": "alt+shift+d",
     "hint": "debug",
     "command": "workbench.view.debug"
   },
   {
-    "key": "capslock 2",
+    "key": "alt+shift+2",
     "command": "workbench.action.editorLayoutTwoColumns",
     "hint": "2 Columns",
     "priority": true
   },
   {
-    "key": "capslock 1",
+    "key": "alt+shift+1",
     "command": "workbench.action.editorLayoutSingle",
     "hint": "1 Column"
   },
@@ -327,14 +322,14 @@
     "when": "editorHasReferenceProvider"
   },
   {
-    "key": "capslock f",
+    "key": "alt+shift+f",
     "priority": true,
     "hint": "FIND",
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider"
   },
   {
-    "key": "ctrl+capslock",
+    "key": "ctrl+e",
     "command": "editor.action.selectHighlights",
     "when": "editorFocus"
   },
@@ -352,12 +347,12 @@
     "command": "typescript.goToSourceDefinition"
   },
   {
-    "key": "capslock k",
+    "key": "alt+shift+k",
     "priority": true,
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "capslock a",
+    "key": "alt+shift+a",
     "hint": "Active file",
     "priority": true,
     "command": "workbench.files.action.showActiveFileInExplorer"
@@ -368,12 +363,12 @@
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "capslock n",
+    "key": "alt+shift+n",
     "priority": true,
     "command": "workbench.view.extensions"
   },
   {
-    "key": "capslock m",
+    "key": "alt+shift+m",
     "command": "issuesAndMrs.focus",
     "hint": "MR",
     "priority": true,
@@ -390,7 +385,7 @@
     "command": "workbench.action.files.openFolder"
   },
   {
-    "key": "capslock x",
+    "key": "alt+shift+x",
     "command": "github.copilot.interactiveEditor.explain",
     "priority": true,
     "comment": "Xplain - Used with Github Copilot extension to explain the code"
@@ -439,7 +434,7 @@
     "when": "inDebugMode"
   },
   {
-    "key": "capslock r",
+    "key": "alt+shift+r",
     "command": "editor.action.goToReferences",
     "priority": true,
     "hint": "REFERENCES",
@@ -448,7 +443,7 @@
   {
     "command": "magicBeans.sortLines",
     "comment": "lines",
-    "key": "capslock l"
+    "key": "alt+shift+l"
   },
   {
     "command": "magicBeans.requestRandomFile",
@@ -463,7 +458,7 @@
   {
     "command": "magicBeans.fixCamelcaseRefactoring",
     "priority": true,
-    "key": "capslock ,"
+    "key": "alt+shift+,"
   },
   {
     "command": "magicBeans.copyTrimmed",
@@ -516,7 +511,7 @@
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "capslock p",
+    "key": "alt+shift+p",
     "priority": true,
     "comment": "Peek Implementation",
     "command": "editor.action.peekImplementation",
@@ -891,5 +886,9 @@
 	{
 		"key": "ctrl+3",
 		"command": "-workbench.action.focusThirdEditorGroup"
+	},
+	{
+		"key": "ctrl+3",
+		"command": "-workbench.action.interactiveSession.clear"
 	}
 ]
