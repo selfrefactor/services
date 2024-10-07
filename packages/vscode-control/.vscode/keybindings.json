@@ -129,10 +129,6 @@
     "key": "alt+-",
     "command": "git.push"
   },
-	{
-		"key": "alt+g",
-		"command": "workbench.view.scm"
-	},
   {
     "key": "capslock h",
     "priority": true,
@@ -684,10 +680,6 @@
   {
     "key": "alt+z",
     "command": "-editor.action.toggleWordWrap"
-  },
-  {
-    "key": "ctrl+shift+g",
-    "command": "-workbench.view.scm"
   },
   {
     "key": "alt+7",
