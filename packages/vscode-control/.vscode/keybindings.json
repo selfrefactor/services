@@ -235,7 +235,7 @@
     }
   },
   {
-    "key": "capslock i",
+    "key": "ctrl+i",
     "priority": true,
     "hint": "Implementation",
     "command": "references-view.findImplementations"
@@ -246,14 +246,14 @@
     "when": "inlineSuggestionVisible && !editorReadonly"
   },
   {
-    "key": "capslock 4",
+    "key": "ctrl+9",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "commentMultiline"
     }
   },
   {
-    "key": "capslock 5",
+    "key": "ctrl+=",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "commentAimedForTitle"

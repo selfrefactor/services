@@ -82,12 +82,6 @@
 
 > HINT: ALL - FOLD ALL
 
-## CAPSLOCK I
-
-`references-view.findImplementations`
-
-> HINT: IMPLEMENTATION
-
 ## CAPSLOCK J
 
 `editor.unfoldAll`
@@ -114,7 +108,29 @@
 
 ## CTRL  4
 
-`github.copilot.interactiveEditor.review.continueInChat`
+`github.copilot.chat.attachFile`
+
+## CTRL  5
+
+`github.copilot.ghpr.applySuggestion`
+
+## CTRL  6
+
+`github.copilot.interactiveEditor.fix`
+
+## CTRL  7
+
+`github.copilot.chat.explain`
+
+## CTRL  8
+
+`github.copilot.interactiveEditor.generateTests`
+
+## CTRL  I
+
+`references-view.findImplementations`
+
+> HINT: IMPLEMENTATION
 
 ## CTRL  M
 
@@ -252,26 +268,6 @@
 
 `editor.action.inlineSuggest.showPrevious`
 
-## CAPSLOCK 0
-
-`github.copilot.interactiveEditor.generateTests`
-
-## CAPSLOCK 4
-
-`editor.action.insertSnippet`
-
-> Snippet: commentMultiline
-
-## CAPSLOCK 5
-
-`editor.action.insertSnippet`
-
-> Snippet: commentAimedForTitle
-
-## CAPSLOCK 9
-
-`github.copilot.interactiveEditor.fix`
-
 ## CAPSLOCK T
 
 `editor.action.insertSnippet`
@@ -286,17 +282,15 @@
 
 `workbench.action.gotoSymbol`
 
+## CTRL  =
+
+`editor.action.insertSnippet`
+
+> Snippet: commentAimedForTitle
+
 ## CTRL  3
 
 `workbench.action.interactiveSession.clear`
-
-## CTRL  5
-
-`github.copilot.chat.attachFile`
-
-## CTRL  6
-
-`github.copilot.ghpr.applySuggestion`
 
 ## CTRL  8
 
@@ -305,6 +299,12 @@
 ## CTRL  9
 
 `github.copilot.terminal.explainTerminalSelectionContextMenu`
+
+## CTRL  9
+
+`editor.action.insertSnippet`
+
+> Snippet: commentMultiline
 
 ## CTRL  9
 
@@ -348,10 +348,6 @@
 
 `rerunSearchEditorSearch`
 
-## CTRL  SHIFT  `
-
-`github.copilot.chat.explain`
-
 ## CTRL  SHIFT  4
 
 `github.copilot.tests.fixTestFailure`
@@ -390,7 +386,6 @@
 
 * ctrl+0
 * ctrl+1
-* ctrl+7
 * ctrl+a
 * ctrl+c
 * ctrl+s
@@ -399,19 +394,22 @@
 * ctrl+x
 * ctrl+z
 * ctrl+-
-* ctrl+=
 * alt+0
 * alt+3
 * alt+4
 * alt+q
 * alt+v
 * alt+w
+* capslock 0
 * capslock 1
 * capslock 2
 * capslock 3
+* capslock 4
+* capslock 5
 * capslock 6
 * capslock 7
 * capslock 8
+* capslock 9
 * capslock a
 * capslock c
 * capslock d
