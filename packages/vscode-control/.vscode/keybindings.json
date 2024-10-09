@@ -30,28 +30,29 @@
   },
   {
 		"priority": true,
+
     "key": "ctrl+4",
-    "command": "github.copilot.interactiveEditor.review.continueInChat"
-  },
-  {
-    "key": "ctrl+5",
     "command": "github.copilot.chat.attachFile"
   },
   {
-    "key": "ctrl+6",
+		"priority": true,
+    "key": "ctrl+5",
     "command": "github.copilot.ghpr.applySuggestion"
   },
   {
-    "key": "capslock 9",
+		"priority": true,
+    "key": "ctrl+6",
     "command": "github.copilot.interactiveEditor.fix"
   },
-  {
-    "key": "capslock 0",
-    "command": "github.copilot.interactiveEditor.generateTests"
-  },
 	{
-		"key": "ctrl+shift+`",
+		"priority": true,
+		"key": "ctrl+7",
 		"command": "github.copilot.chat.explain"
+	},
+	{
+		"priority": true,
+		"key": "ctrl+8",
+		"command": "github.copilot.interactiveEditor.generateTests"
 	},
 	{
     "key": "ctrl+8",

@@ -128,10 +128,6 @@
 
 > Peek References
 
-## CTRL  SHIFT  0
-
-`github.copilot.newNotebook`
-
 ## CTRL  SHIFT  1
 
 `github.copilot.chat.selectKnowledgeBase`
@@ -213,10 +209,6 @@
 ## ALT  G
 
 `workbench.action.unpinEditor`
-
-## ALT  G
-
-`workbench.view.scm`
 
 ## ALT  O
 
@@ -318,10 +310,6 @@
 
 `PYTHON ONLY - python.execInTerminal`
 
-## CTRL  CAPSLOCK
-
-`editor.action.selectHighlights`
-
 ## CTRL  D
 
 `editor.action.goToDeclaration`
@@ -333,6 +321,10 @@
 ## CTRL  DOWN
 
 `editor.action.moveLinesDownAction`
+
+## CTRL  E
+
+`editor.action.selectHighlights`
 
 ## CTRL  G
 
@@ -401,7 +393,6 @@
 * ctrl+7
 * ctrl+a
 * ctrl+c
-* ctrl+e
 * ctrl+s
 * ctrl+t
 * ctrl+v
