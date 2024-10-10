@@ -1,5 +1,11 @@
 # Keybindings
 
+## ALT  A
+
+`editor.action.showHover`
+
+> this needs to be convenient
+
 ## ALT  F
 
 `references-view.find`
@@ -20,39 +26,27 @@
 
 `magicBeans.fixCamelcaseRefactoring`
 
+## ALT  SHIFT  1
+
+`github.copilot.chat.selectKnowledgeBase`
+
 ## ALT  SHIFT  2
 
-`workbench.action.editorLayoutTwoColumns`
+`github.copilot.interactiveEditor.generate`
 
-> HINT: 2 COLUMNS
+## ALT  SHIFT  3
 
-## ALT  SHIFT  A
-
-`workbench.files.action.showActiveFileInExplorer`
-
-> HINT: ACTIVE FILE
-
-## ALT  SHIFT  F
-
-`references-view.findReferences`
-
-> HINT: FIND
-
-## ALT  SHIFT  K
-
-`workbench.action.selectTheme`
-
-## ALT  SHIFT  M
-
-`issuesAndMrs.focus`
-
-> Used with Gitlab extension to focus on MR view
-
- HINT: MR
+`github.copilot.interactiveEditor.review`
 
 ## ALT  SHIFT  N
 
 `workbench.view.extensions`
+
+## ALT  SHIFT  O
+
+`workbench.action.output.toggleOutput`
+
+> HINT: OUTPUT
 
 ## ALT  SHIFT  P
 
@@ -66,65 +60,31 @@
 
 > HINT: REFERENCES
 
-## ALT  SHIFT  X
-
-`github.copilot.interactiveEditor.explain`
-
-> Xplain - Used with Github Copilot extension to explain the code
-
-## ALT  Z
-
-`workbench.action.toggleZenMode`
-
-## CAPSLOCK H
-
-`editor.foldAll`
-
-> HINT: ALL - FOLD ALL
-
-## CAPSLOCK J
-
-`editor.unfoldAll`
-
-## CAPSLOCK O
-
-`workbench.action.output.toggleOutput`
-
-> HINT: OUTPUT
-
-## CAPSLOCK P
-
-`editor.action.triggerParameterHints`
-
-> HINT: PARAMETER
-
-## CTRL  2
-
-`github.copilot.interactiveEditor.generateDocs`
-
 ## CTRL  3
-
-`github.copilot.chat.attachSelection`
-
-## CTRL  4
 
 `github.copilot.chat.attachFile`
 
+## CTRL  4
+
+`github.copilot.chat.attachSelection`
+
 ## CTRL  5
-
-`github.copilot.ghpr.applySuggestion`
-
-## CTRL  6
-
-`github.copilot.interactiveEditor.fix`
-
-## CTRL  7
 
 `github.copilot.chat.explain`
 
 ## CTRL  8
 
 `github.copilot.interactiveEditor.generateTests`
+
+## CTRL  E
+
+`references-view.findReferences`
+
+> HINT: FIND
+
+## CTRL  H
+
+`editor.action.revealDefinition`
 
 ## CTRL  I
 
@@ -144,17 +104,47 @@
 
 > Peek References
 
-## CTRL  SHIFT  1
-
-`github.copilot.chat.selectKnowledgeBase`
-
 ## CTRL  SHIFT  2
 
-`github.copilot.interactiveEditor.generate`
+`workbench.action.editorLayoutTwoColumns`
 
-## CTRL  SHIFT  3
+> HINT: 2 COLUMNS
 
-`github.copilot.interactiveEditor.review`
+## CTRL  SHIFT  6
+
+`github.copilot.interactiveEditor.fix`
+
+## CTRL  SHIFT  7
+
+`github.copilot.ghpr.applySuggestion`
+
+## CTRL  SHIFT  9
+
+`github.copilot.interactiveEditor.generateDocs`
+
+## CTRL  SHIFT  A
+
+`workbench.files.action.showActiveFileInExplorer`
+
+> HINT: ACTIVE FILE
+
+## CTRL  SHIFT  E
+
+`editor.action.selectHighlights`
+
+## CTRL  SHIFT  K
+
+`workbench.action.selectTheme`
+
+## CTRL  SHIFT  X
+
+`github.copilot.interactiveEditor.explain`
+
+> Xplain - Used with Github Copilot extension to explain the code
+
+## CTRL  SHIFT  Z
+
+`workbench.action.toggleZenMode`
 
 ## F4
 
@@ -168,6 +158,12 @@
 
 `git.push`
 
+## ALT  0
+
+`editor.action.insertSnippet`
+
+> Snippet: ArrowFunction
+
 ## ALT  5
 
 `editor.action.insertSnippet`
@@ -178,7 +174,7 @@
 
 `editor.action.insertSnippet`
 
-> Snippet: ArrowFunction
+> Snippet: describe('${0:}
 
 ## ALT  7
 
@@ -197,12 +193,6 @@
 `editor.action.insertSnippet`
 
 > Snippet: StringTemplate
-
-## ALT  A
-
-`editor.action.showHover`
-
-> this needs to be convenient
 
 ## ALT  C
 
@@ -238,11 +228,9 @@
 
 > HINT: SPLIT
 
-## ALT  SHIFT  1
+## ALT  SHIFT  4
 
-`workbench.action.editorLayoutSingle`
-
-> HINT: 1 COLUMN
+`github.copilot.tests.fixTestFailure`
 
 ## ALT  SHIFT  9
 
@@ -264,20 +252,6 @@
 
 `terminal.focus`
 
-## CAPSLOCK <
-
-`editor.action.inlineSuggest.showPrevious`
-
-## CAPSLOCK T
-
-`editor.action.insertSnippet`
-
-> Snippet: describe('${0:}
-
-## CAPSLOCK Y
-
-`list.collapseAll`
-
 ## CAPSLOCK Z
 
 `workbench.action.gotoSymbol`
@@ -291,14 +265,6 @@
 ## CTRL  3
 
 `workbench.action.interactiveSession.clear`
-
-## CTRL  8
-
-`github.copilot.chat.explain.palette`
-
-## CTRL  9
-
-`github.copilot.terminal.explainTerminalSelectionContextMenu`
 
 ## CTRL  9
 
@@ -322,17 +288,9 @@
 
 `editor.action.moveLinesDownAction`
 
-## CTRL  E
-
-`editor.action.selectHighlights`
-
 ## CTRL  G
 
 `editor.action.goToTypeDefinition`
-
-## CTRL  H
-
-`editor.action.revealDefinition`
 
 ## CTRL  K CTRL  H
 
@@ -344,17 +302,19 @@
 
 > HINT: OPEN
 
-## CTRL  R
+## CTRL  SHIFT  1
 
-`rerunSearchEditorSearch`
+`workbench.action.editorLayoutSingle`
 
-## CTRL  SHIFT  4
-
-`github.copilot.tests.fixTestFailure`
+> HINT: 1 COLUMN
 
 ## CTRL  SHIFT  6
 
 `workbench.action.customizeLayout`
+
+## CTRL  SHIFT  8
+
+`github.copilot.chat.explain.palette`
 
 ## CTRL  SHIFT  9
 
@@ -368,11 +328,19 @@
 
 `editor.action.copyLinesDownAction`
 
+## CTRL  SHIFT  R
+
+`rerunSearchEditorSearch`
+
 ## CTRL  SHIFT  T
 
 `magicBeans.createSpec`
 
 > test
+
+## CTRL  SHIFT  U
+
+`github.copilot.terminal.explainTerminalSelectionContextMenu`
 
 ## CTRL  UP
 
@@ -386,6 +354,8 @@
 
 * ctrl+0
 * ctrl+1
+* ctrl+6
+* ctrl+7
 * ctrl+a
 * ctrl+c
 * ctrl+s
@@ -394,12 +364,12 @@
 * ctrl+x
 * ctrl+z
 * ctrl+-
-* alt+0
 * alt+3
 * alt+4
 * alt+q
 * alt+v
 * alt+w
+* alt+z
 * capslock 0
 * capslock 1
 * capslock 2
@@ -418,6 +388,7 @@
 * capslock q
 * capslock r
 * capslock s
+* capslock t
 * capslock v
 * capslock w
 * capslock x

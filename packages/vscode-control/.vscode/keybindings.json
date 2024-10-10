@@ -853,5 +853,18 @@
 	{
 		"key": "ctrl+3",
 		"command": "-workbench.action.interactiveSession.clear"
+	},
+	{
+		"key": "ctrl+3",
+		"command": "-workbench.action.focusThirdEditorGroup"
+	},
+	{
+		"key": "ctrl+3",
+		"command": "-workbench.action.interactiveSession.clear"
+	},
+	{
+		"key": "ctrl+e",
+		"command": "-editor.action.toggleScreenReaderAccessibilityMode",
+		"when": "accessibilityHelpIsShown"
 	}
 ]
