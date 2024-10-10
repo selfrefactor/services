@@ -1,52 +1,51 @@
 [
 	{
 		"priority": true,
-		"key": "ctrl+shift+1",
+		"key": "alt+shift+1",
 		"command": "github.copilot.chat.selectKnowledgeBase"
 	},
 	{
 		"priority": true,
-		"key": "ctrl+shift+2",
+		"key": "alt+shift+2",
 		"command": "github.copilot.interactiveEditor.generate"
 	},
 	{
 		"priority": true,
-		"key": "ctrl+shift+3",
+		"key": "alt+shift+3",
 		"command": "github.copilot.interactiveEditor.review"
 	},
 	{
-		"key": "ctrl+shift+4",
+		"key": "alt+shift+4",
 		"command": "github.copilot.tests.fixTestFailure"
 	},
 	{
 		"priority": true,
-		"key": "ctrl+2",
+		"key": "ctrl+shift+9",
 		"command": "github.copilot.interactiveEditor.generateDocs"
 	},
 	{
 		"priority": true,
-    "key": "ctrl+3",
+    "key": "ctrl+4",
     "command": "github.copilot.chat.attachSelection"
   },
   {
 		"priority": true,
-
-    "key": "ctrl+4",
+    "key": "ctrl+3",
     "command": "github.copilot.chat.attachFile"
   },
   {
 		"priority": true,
-    "key": "ctrl+5",
+    "key": "ctrl+shift+7",
     "command": "github.copilot.ghpr.applySuggestion"
   },
   {
 		"priority": true,
-    "key": "ctrl+6",
+    "key": "ctrl+shift+6",
     "command": "github.copilot.interactiveEditor.fix"
   },
 	{
 		"priority": true,
-		"key": "ctrl+7",
+		"key": "ctrl+5",
 		"command": "github.copilot.chat.explain"
 	},
 	{
@@ -55,15 +54,15 @@
 		"command": "github.copilot.interactiveEditor.generateTests"
 	},
 	{
-    "key": "ctrl+8",
+    "key": "ctrl+shift+8",
     "command": "github.copilot.chat.explain.palette"
   },
   {
-    "key": "ctrl+9",
+    "key": "ctrl+shift+u",
     "command": "github.copilot.terminal.explainTerminalSelectionContextMenu"
   },
 	{
-		"key": "ctrl+r",
+		"key": "ctrl+shift+r",
 		"command": "rerunSearchEditorSearch",
 		"when": "inSearchEditor"
 	},
@@ -131,20 +130,7 @@
     "command": "git.push"
   },
   {
-    "key": "capslock h",
-    "priority": true,
-    "hint": "All - fold all",
-    "command": "editor.foldAll",
-    "when": "editorTextFocus && foldingEnabled"
-  },
-  {
-    "key": "capslock p",
-    "priority": true,
-    "hint": "parameter",
-    "command": "editor.action.triggerParameterHints",
-    "when": "editorHasSignatureHelpProvider && editorTextFocus"
-  },
-  {
+		"priority": true,
     "key": "ctrl+h",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
@@ -159,7 +145,7 @@
     "when": "editorLangId!=python"
   },
   {
-    "key": "capslock t",
+    "key": "alt+6",
     "command": "editor.action.insertSnippet",
     "args": {
       "snippet": "describe('${0:}"
@@ -221,7 +207,7 @@
     }
   },
   {
-    "key": "alt+6",
+    "key": "alt+0",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "ArrowFunction"
@@ -239,11 +225,6 @@
     "priority": true,
     "hint": "Implementation",
     "command": "references-view.findImplementations"
-  },
-  {
-    "key": "capslock <",
-    "command": "editor.action.inlineSuggest.showPrevious",
-    "when": "inlineSuggestionVisible && !editorReadonly"
   },
   {
     "key": "ctrl+9",
@@ -275,6 +256,7 @@
   },
   {
     "key": "alt+a",
+		"priority": true,
     "comment": "this needs to be convenient",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
@@ -291,26 +273,15 @@
     "command": "workbench.view.debug"
   },
   {
-    "key": "alt+shift+2",
+    "key": "ctrl+shift+2",
     "command": "workbench.action.editorLayoutTwoColumns",
     "hint": "2 Columns",
     "priority": true
   },
   {
-    "key": "alt+shift+1",
+    "key": "ctrl+shift+1",
     "command": "workbench.action.editorLayoutSingle",
     "hint": "1 Column"
-  },
-  {
-    "key": "capslock y",
-    "command": "list.collapseAll",
-    "when": "listFocus && !inputFocus"
-  },
-  {
-    "key": "capslock j",
-    "priority": true,
-    "command": "editor.unfoldAll",
-    "when": "editorTextFocus && foldingEnabled"
   },
   {
     "key": "alt+f",
@@ -319,14 +290,15 @@
     "when": "editorHasReferenceProvider"
   },
   {
-    "key": "alt+shift+f",
+    "key": "ctrl+e",
     "priority": true,
     "hint": "FIND",
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider"
   },
   {
-    "key": "ctrl+e",
+		"priority": true,
+    "key": "ctrl+shift+e",
     "command": "editor.action.selectHighlights",
     "when": "editorFocus"
   },
@@ -344,12 +316,12 @@
     "command": "typescript.goToSourceDefinition"
   },
   {
-    "key": "alt+shift+k",
+    "key": "ctrl+shift+k",
     "priority": true,
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "alt+shift+a",
+    "key": "ctrl+shift+a",
     "hint": "Active file",
     "priority": true,
     "command": "workbench.files.action.showActiveFileInExplorer"
@@ -365,13 +337,6 @@
     "command": "workbench.view.extensions"
   },
   {
-    "key": "alt+shift+m",
-    "command": "issuesAndMrs.focus",
-    "hint": "MR",
-    "priority": true,
-    "comment": "Used with Gitlab extension to focus on MR view"
-  },
-  {
     "key": "ctrl+2",
     "alreadyLearned": true,
     "command": "workbench.action.openRecent"
@@ -382,11 +347,16 @@
     "command": "workbench.action.files.openFolder"
   },
   {
-    "key": "alt+shift+x",
+    "key": "ctrl+shift+x",
     "command": "github.copilot.interactiveEditor.explain",
     "priority": true,
     "comment": "Xplain - Used with Github Copilot extension to explain the code"
   },
+	{
+		"key": "ctrl+shift+x",
+		"command": "-workbench.view.extensions",
+		"when": "viewContainer.workbench.view.extensions.enabled"
+	},
   {
     "key": "ctrl+k shift+enter",
     "command": "-workbench.action.pinEditor",
@@ -398,12 +368,12 @@
     "when": "editorLangId==python"
   },
   {
-    "key": "alt+z",
+    "key": "ctrl+shift+z",
     "priority": true,
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "capslock o",
+    "key": "alt+shift+o",
     "priority": true,
     "command": "workbench.action.output.toggleOutput",
     "hint": "OUTPUT",
