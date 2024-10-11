@@ -1,4 +1,8 @@
 use knowlege base
+github.copilot.chat.experimental.testGeneration.instructions
+github.copilot.chat.experimental.setupTests.enabled
+
+use `/` to use context in chat
 
 can save session to json
 can load session from json

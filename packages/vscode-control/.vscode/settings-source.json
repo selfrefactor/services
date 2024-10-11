@@ -1,7 +1,7 @@
 {
-	"github.copilot.chat.experimental.codeGeneration.instructions": [
+	"github.copilot.chat.experimental.testGeneration.instructions": [
 		{
-			"file": ".copilot-instructions.md"
+			"text": "Test suite is Jest or Vitest|Happy path is the first test and its name is happy|Error test cases are last in suite|minimum two top level describe blocks can exists and no nested describe blocks"
 		}
 	],
 	"github.copilot.chat.experimental.generateTests.codeLens": true,
@@ -31,6 +31,7 @@
     ".js",
     ".md",
     "package.json",
+		".ipynb",
     ".rs",
     ".vtl",
     ".ts",
