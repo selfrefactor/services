@@ -36,23 +36,17 @@ let ALLOWED_DARK_THEMES = [
 ]
 
 function getExpectedColorThemes(){
-	let lightThemeEvaluated = currentTimeIsBetween('7:30', '18:00')
-	let darkThemeEvaluated = currentTimeIsBetween('18:00', '20:00') || currentTimeIsBetween('0:00', '2:30')
-
-	if (lightThemeEvaluated) {
-		return ALLOWED_LIGHT_THEMES
-	}
-	if (darkThemeEvaluated) {
-		return ALLOWED_DARK_THEMES
-	}
-	return null
+	return currentTimeIsBetween('7:30', '18:00') ? ALLOWED_LIGHT_THEMES : ALLOWED_DARK_THEMES
 }
 
 async function setColorTheme(context){
   if (
 		init || 
     !ALLOW_CHANGE_COLOR_THEME 
-  ) return
+  ){
+
+		return
+	}
 
   init = true
 	let expectedColorThemes = getExpectedColorThemes()
