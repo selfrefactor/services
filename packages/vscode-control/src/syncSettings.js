@@ -374,9 +374,6 @@ async function syncSettings() {
 			'editor.wordBasedSuggestions': false,
 			'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
 			'workbench.editor.enablePreview': !VSCODE_INSIDERS,
-			'workbench.colorCustomizations': {
-				"notebook.outputContainerBackgroundColor": "#fafafa"
-			},
 		},
 	]);
 	const sorted = sortObject(sortFn, newOptions);
