@@ -110,15 +110,11 @@
 
 > HINT: 2 COLUMNS
 
-## CTRL  SHIFT  6
-
-`github.copilot.interactiveEditor.fix`
-
 ## CTRL  SHIFT  7
 
 `github.copilot.ghpr.applySuggestion`
 
-## CTRL  SHIFT  9
+## CTRL  SHIFT  8
 
 `github.copilot.interactiveEditor.generateDocs`
 
@@ -138,9 +134,9 @@
 
 ## CTRL  SHIFT  X
 
-`github.copilot.interactiveEditor.explain`
+`github.copilot.interactiveEditor.fix`
 
-> Xplain - Used with Github Copilot extension to explain the code
+> Xplain
 
 ## CTRL  SHIFT  Z
 
@@ -228,10 +224,6 @@
 
 > HINT: SPLIT
 
-## ALT  SHIFT  4
-
-`github.copilot.tests.fixTestFailure`
-
 ## ALT  SHIFT  9
 
 `git-config-user-profiles.pickUserProfile`
@@ -308,13 +300,13 @@
 
 > HINT: 1 COLUMN
 
+## CTRL  SHIFT  5
+
+`github.copilot.chat.explain.palette`
+
 ## CTRL  SHIFT  6
 
 `workbench.action.customizeLayout`
-
-## CTRL  SHIFT  8
-
-`github.copilot.chat.explain.palette`
 
 ## CTRL  SHIFT  9
 

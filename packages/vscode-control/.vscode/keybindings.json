@@ -428,7 +428,7 @@
     "command": "workbench.action.gotoSymbol"
   },
   {
-    "key": "alt+o",
+    "key": "ctrl+shift+o",
     "comment": "open side panel",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
