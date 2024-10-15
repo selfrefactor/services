@@ -295,7 +295,7 @@
   },
   {
 		"priority": true,
-    "key": "ctrl+shift+e",
+    "key": "ctrl+`",
     "command": "editor.action.selectHighlights",
     "when": "editorFocus"
   },
