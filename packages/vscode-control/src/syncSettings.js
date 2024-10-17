@@ -23,7 +23,7 @@ const WRITE_TO_OUTPUT = VSCODE_INSIDERS || IS_MANJARO;
 const FONT_SIZE = 18;
 const SUGGEST_LINE_HEIGHT = 16;
 const SUGGEST_FONT_SIZE = 15;
-const FILE_ICON_THEME =  'charmed-icons'
+const FILE_ICON_THEME = 'charmed-icons';
 // const FILE_ICON_THEME = VSCODE_INSIDERS ? 'charmed-icons' : 'emoji-file-icons';
 
 const MODES = {
@@ -69,6 +69,14 @@ console.log(IS_MANJARO, 'IS_MANJARO');
  */
 function testNewSettings() {
 	return {
+		/**
+		 * Semantic search results (Preview)
+
+Setting: github.copilot.chat.search.semanticTextResults
+
+You can perform an exact search across your files with the Search view. It also now uses Copilot to give search results that are semantically relevant.
+		 */
+		'github.copilot.chat.search.semanticTextResults': true,
 		'magicBeans.ALLOW_CHANGE_COLOR_THEME': IS_MANJARO,
 		'editor.stackFrameHighlightBackground': '#ff0000',
 		'search.searchEditor.defaultNumberOfContextLines': 4,

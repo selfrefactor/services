@@ -60,6 +60,10 @@
 
 > HINT: REFERENCES
 
+## CTRL  `
+
+`editor.action.selectHighlights`
+
 ## CTRL  3
 
 `github.copilot.chat.attachFile`
@@ -123,10 +127,6 @@
 `workbench.files.action.showActiveFileInExplorer`
 
 > HINT: ACTIVE FILE
-
-## CTRL  SHIFT  E
-
-`editor.action.selectHighlights`
 
 ## CTRL  SHIFT  K
 
@@ -212,12 +212,6 @@
 
 `workbench.action.unpinEditor`
 
-## ALT  O
-
-`workbench.action.toggleActivityBarVisibility`
-
-> open side panel
-
 ## ALT  S
 
 `workbench.action.toggleSplitEditorInGroup`
@@ -253,10 +247,6 @@
 `editor.action.insertSnippet`
 
 > Snippet: commentAimedForTitle
-
-## CTRL  3
-
-`workbench.action.interactiveSession.clear`
 
 ## CTRL  9
 
@@ -319,6 +309,12 @@
 ## CTRL  SHIFT  D
 
 `editor.action.copyLinesDownAction`
+
+## CTRL  SHIFT  O
+
+`workbench.action.toggleActivityBarVisibility`
+
+> open side panel
 
 ## CTRL  SHIFT  R
 

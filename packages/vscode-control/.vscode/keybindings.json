@@ -604,10 +604,6 @@
     "when": "terminalFocus"
   },
   {
-  "key": "ctrl+3",
-  "command": "workbench.action.interactiveSession.clear"
-  },
-  {
     "key": "ctrl+r",
     "command": "editor.action.referenceSearch.trigger",
     "priority": true,
@@ -843,15 +839,7 @@
 	},
 	{
 		"key": "ctrl+3",
-		"command": "-workbench.action.interactiveSession.clear"
-	},
-	{
-		"key": "ctrl+3",
 		"command": "-workbench.action.focusThirdEditorGroup"
-	},
-	{
-		"key": "ctrl+3",
-		"command": "-workbench.action.interactiveSession.clear"
 	},
 	{
 		"key": "ctrl+e",
