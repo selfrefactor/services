@@ -8,12 +8,12 @@ test('with Bulgarian language', () => {
 	expect(result).toEqual(expectedResult);
 });
 
-test.skip('in Bulgarian language dash is part of the word', () => {
-	const result = wordsX('Имаме по-ясни надежди, но ясни страхове.');
-	const expectedResult = ['Имаме', 'по-ясни', 'надежди', 'но', 'ясни', 'страхове'];
+// test.skip('in Bulgarian language dash is part of the word', () => {
+// 	const result = wordsX('Имаме по-ясни надежди, но ясни страхове.');
+// 	const expectedResult = ['Имаме', 'по-ясни', 'надежди', 'но', 'ясни', 'страхове'];
 
-	expect(result).toEqual(expectedResult);
-});
+// 	expect(result).toEqual(expectedResult);
+// });
 
 test('', () => {
 	const result = wordsX('fooBarBAZ');

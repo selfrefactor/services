@@ -1,4 +1,4 @@
-import { compose, join, map, mapIndexed } from 'rambdax';
+import { compose, join, mapIndexed } from 'rambdax';
 import { words } from './words';
 import { wordsX } from './wordsX';
 

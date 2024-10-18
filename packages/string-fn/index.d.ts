@@ -34,6 +34,7 @@ export function splitWhen(text: string, predicate: (x: string) => boolean): stri
 export function stripPunctuation(text: string): string
 export function stripTags(text: string): string
 export function titleCase(text: string, extraLatin?: boolean): string
+export function flatCase(text: string, extraLatin?: boolean): string
 export function trim(text: string): string
 export function words(text: string): string[]
 export function wordsX(text: string): string[]
