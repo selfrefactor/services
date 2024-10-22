@@ -14,7 +14,7 @@
 	],
 	"github.copilot.chat.experimental.testGeneration.instructions": [
 		{
-			"text": "Test suite is Jest or Vitest|Happy path is the first test and its name is happy|Error test cases are last in suite|minimum two top level describe blocks can exists and no nested describe blocks"
+			"text": "Test suite is Jest or Vitest|Happy path is the first test and its name is happy|Error test cases are last in suite|minimum two top level describe blocks can exists and no nested describe blocks|always prefer `.spec.` instead of `.test` as file name suffix"
 		}
 	],
 	"github.copilot.chat.experimental.generateTests.codeLens": true,
