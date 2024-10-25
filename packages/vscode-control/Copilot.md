@@ -1,3 +1,8 @@
+Free bindings
+snippet not that needed
+alt+4
+alt+5
+
 File suggestions in chat
 
 In chat input fields, you can now type # to get file name suggestions and quickly attach them to your prompt as context. This works in chat locations that support file attachments, such as the Chat view, Quick Chat, Inline Chat, and Notebook Chat.

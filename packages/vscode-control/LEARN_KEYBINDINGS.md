@@ -242,6 +242,10 @@
 
 `workbench.action.gotoSymbol`
 
+## CTLR  6
+
+`inlineChat.start`
+
 ## CTRL  =
 
 `editor.action.insertSnippet`
