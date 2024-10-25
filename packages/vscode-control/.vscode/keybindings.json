@@ -46,7 +46,7 @@
 		"command": "github.copilot.chat.explain"
 	},
 	{
-		"key": "ctlr+6",
+		"key": "ctrl+6",
 		"command": "inlineChat.start",
 		"when": "editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly"
 	},
