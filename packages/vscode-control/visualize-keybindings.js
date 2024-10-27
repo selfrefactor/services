@@ -8,6 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const destination = `${ __dirname }/LEARN_KEYBINDINGS.md`
+const destinationOld = `${ __dirname }/LEARN_KEYBINDINGS_OLD.md`
 const template = `
 ## {{key}}
 
@@ -135,7 +136,7 @@ ${ outputContent }
 ${ CONVENIENT_KEYS.map(x => `* ${ x }`).join('\n') }
 `.trim()
 
-  // await outputFile(destination, finalContent)
+  await outputFile(destinationOld, finalContent)
 	
 	let markdownTableContent = markdownTable([
 		[ 'Key', 'Command' ],
