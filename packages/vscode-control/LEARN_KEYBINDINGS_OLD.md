@@ -22,11 +22,11 @@
 
 `github.copilot.interactiveEditor.generateDocs`
 
-## CTRL  4
+## CTRL  <
 
 `github.copilot.chat.attachSelection`
 
-## CTRL  3
+## ALT  <
 
 `github.copilot.chat.attachFile`
 
@@ -60,7 +60,7 @@
 
 `github.copilot.terminal.explainTerminalSelectionContextMenu`
 
-## CTRL  SHIFT  9
+## CTRL  4
 
 `workbench.action.toggleMaximizedPanel`
 
@@ -69,6 +69,10 @@
 `workbench.action.customizeLayout`
 
 ## F4
+
+`workbench.panel.chat.view.copilot.focus`
+
+## CTRL  SHIFT  <
 
 `workbench.panel.chat.view.copilot.focus`
 
@@ -168,55 +172,55 @@
 
 `git.push`
 
-## ALT  6
+## alt  6
 
 `editor.action.insertSnippet`
 
 > Snippet: describe('${0:}
 
-## CLTRL  SHIFT  5
+## cltrl  shift  5
 
 `editor.action.insertSnippet`
 
 > Snippet: Function
 
-## CTRL  SHIFT  3
+## ctrl  shift  3
 
 `editor.action.insertSnippet`
 
 > Snippet: TestCase
 
-## CTRL  SHIFT  4
+## ctrl  shift  4
 
 `editor.action.insertSnippet`
 
 > Snippet: Expect
 
-## ALT  D
+## alt  d
 
 `editor.action.insertSnippet`
 
 > Snippet: debugger
 
-## CTRL  SHIFT  0
+## ctrl  shift  0
 
 `editor.action.insertSnippet`
 
 > Snippet: ArrowFunction
 
-## ALT  9
+## alt  9
 
 `editor.action.insertSnippet`
 
 > Snippet: StringTemplate
 
-## CTRL  8
+## ctrl  8
 
 `editor.action.insertSnippet`
 
 > Snippet: commentMultiline
 
-## CTRL  9
+## ctrl  9
 
 `editor.action.insertSnippet`
 
@@ -226,7 +230,7 @@
 
 `terminal.focus`
 
-## ALT  S
+## CTRL  SHIFT  S
 
 `workbench.action.toggleSplitEditorInGroup`
 
@@ -268,7 +272,7 @@
 
 > lines
 
-## CTRL  SHIFT  [
+## CTRL  SHIFT  T
 
 `magicBeans.createSpec`
 
@@ -282,7 +286,7 @@
 
 `workbench.action.gotoSymbol`
 
-## CTRL  SHIFT  \
+## CTRL  SHIFT  ;
 
 `workbench.action.toggleActivityBarVisibility`
 
@@ -294,26 +298,17 @@
 
 ## Convenient keys
 
-* ctrl+0
-* ctrl+c
-* ctrl+f
+* ctrl+3
 * ctrl+q
-* ctrl+t
-* ctrl+v
-* ctrl+<
-* alt+0
 * alt+3
 * alt+4
 * alt+5
 * alt+q
+* alt+s
 * alt+v
 * alt+`
-* alt+<
 * ctrl+shift+a
 * ctrl+shift+c
 * ctrl+shift+f
-* ctrl+shift+s
-* ctrl+shift+t
 * ctrl+shift+v
 * ctrl+shift+w
-* ctrl+shift+<

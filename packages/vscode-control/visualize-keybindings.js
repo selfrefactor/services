@@ -1,4 +1,4 @@
-import { interpolate, maybe } from 'rambdax'
+import { interpolate, maybe, splitEvery } from 'rambdax'
 import { markdownTable } from 'markdown-table'
 import pkg from 'fs-extra';
 import { fileURLToPath } from 'url';
@@ -107,12 +107,12 @@ void (async function main(){
 				})
 
         return interpolate(snippetTemplate, {
-          key     : key.toUpperCase(),
+          key     : key,
           command,
           snippet : snippetInfo,
         })
       }
-			lines.push({ key: key.toUpperCase(), command })
+			lines.push({ key, command })
 
       if (comment || hint){
         let commentInput = maybe(
@@ -146,10 +146,21 @@ ${ CONVENIENT_KEYS.map(x => `* ${ x }`).join('\n') }
 `.trim()
 
   await outputFile(destinationOld, finalContent)
-	
+	let splitted = splitEvery(
+		Math.ceil(lines.length / 2),
+		lines
+	)
+	let fourColumns = splitted[0].map(({ key, command }, i) => {
+		return {
+			key,
+			command,
+			keySecond: splitted[1][i]?.key ?? '',
+			commandSecond: splitted[1][i]?.command ?? ''
+		}
+	})
 	let markdownTableContent = markdownTable([
-		[ 'Key', 'Command' ],
-		...lines.map(({ key, command }) => [ key, command ]),
+		[ 'Key', 'Command', 'Key', 'Command' ],
+		...fourColumns.map(({ key, command, keySecond, commandSecond }) => [ key, command, keySecond, commandSecond ]),
 	])
   await outputFile(destination, markdownTableContent)
 })()
