@@ -1,5 +1,11 @@
-const { interpolate, maybe } = require('rambdax')
-const { readJson, outputFile } = require('fs-extra')
+import { interpolate, maybe } from 'rambdax'
+import { markdownTable } from 'markdown-table'
+import pkg from 'fs-extra';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const { readJson, outputFile } = pkg;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const destination = `${ __dirname }/LEARN_KEYBINDINGS.md`
 const template = `
@@ -51,8 +57,8 @@ const CONVENIENT_BUTTONS = [
   '-',
   '=',
 ]
-
-let CONVENIENT_KEYS = [ 'ctrl', 'alt', 'capslock' ].flatMap(x =>
+// add ctrl+shift
+let CONVENIENT_KEYS = [ 'ctrl', 'alt' ].flatMap(x =>
   CONVENIENT_BUTTONS.map(y => x === 'capslock' ? `${x} ${y}` : `${ x }+${ y }`))
 
 const removeFromConvenientKeys = key => {
@@ -60,6 +66,7 @@ const removeFromConvenientKeys = key => {
 }
 
 void (async function main(){
+	let lines = []
   const fileContent = await readJson(`${ __dirname }/.vscode/keybindings.json`)
 
   const filtered = fileContent.filter(({ command }) =>
@@ -84,12 +91,19 @@ void (async function main(){
       if (args){
         const snippetInfo = args.snippet ?? args.name
 
+				lines.push({
+					key: key.toUpperCase(),
+					command: snippetInfo
+				})
+
         return interpolate(snippetTemplate, {
           key     : key.toUpperCase(),
           command,
           snippet : snippetInfo,
         })
       }
+			lines.push({ key: key.toUpperCase(), command })
+
       if (comment || hint){
         let commentInput = maybe(
           hint,
@@ -103,7 +117,8 @@ void (async function main(){
         })
       }
 
-      return interpolate(template, {
+
+			return interpolate(template, {
         key : key.toUpperCase(),
         command,
       })
@@ -120,5 +135,11 @@ ${ outputContent }
 ${ CONVENIENT_KEYS.map(x => `* ${ x }`).join('\n') }
 `.trim()
 
-  await outputFile(destination, finalContent)
+  // await outputFile(destination, finalContent)
+	
+	let markdownTableContent = markdownTable([
+		[ 'Key', 'Command' ],
+		...lines.map(({ key, command }) => [ key, command ]),
+	])
+  await outputFile(destination, markdownTableContent)
 })()

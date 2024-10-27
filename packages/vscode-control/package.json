@@ -19,8 +19,9 @@
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"helpers-fn": "1.6.0",
 		"fs-extra": "10.0.0",
+		"helpers-fn": "1.6.0",
+		"markdown-table": "^3.0.4",
 		"rambdax": "8.0.1"
 	},
 	"commitLabels": [
@@ -29,7 +30,5 @@
 		"snippet",
 		"setting"
 	],
-	"devDependencies": {
-		
-	}
+	"devDependencies": {}
 }

@@ -408,7 +408,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "capslock z",
+    "key": "alt+z",
     "command": "workbench.action.gotoSymbol"
   },
   {
