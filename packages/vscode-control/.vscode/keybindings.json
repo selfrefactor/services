@@ -340,8 +340,9 @@
   {
     "key": "ctrl+shift+9",
     "command": "python.execInTerminal",
-    "when": "editorLangId==python"
-  },
+    "when": "editorLangId==python",
+		"alreadyLearned": true
+	},
   {
     "key": "ctrl+shift+z",
     "priority": true,
@@ -393,8 +394,8 @@
     "alreadyLearned": true
   },
   {
-    "command": "magicBeans.createSpec",
-    "key": "ctrl+shift+t",
+		"command": "magicBeans.createSpec",
+    "key": "ctrl+shift+[",
     "comment": "test"
   },
   {
@@ -412,11 +413,12 @@
     "command": "workbench.action.gotoSymbol"
   },
   {
-    "key": "ctrl+shift+o",
+    "key": "ctrl+shift+\\",
     "comment": "open side panel",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
   {
+		"alreadyLearned": true,
     "mac": "cmd+shift+d",
     "win": "ctrl+shift+d",
     "linux": "ctrl+shift+d",
@@ -441,6 +443,7 @@
   {
     "mac": "ctrl+cmd+up",
     "linux": "ctrl+up",
+		"alreadyLearned": true,
     "key": "ctrl+up",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus"
