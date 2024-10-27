@@ -107,7 +107,7 @@ void (async function main(){
 				})
 
         return interpolate(snippetTemplate, {
-          key     : key,
+          key     : key.toUpperCase(),
           command,
           snippet : snippetInfo,
         })
