@@ -61,18 +61,17 @@ let CONVENIENT_KEYS = [ 'ctrl', 'alt','ctrl+shift' ].flatMap(x =>
 const PERMANENT_KEYS = [
 	'ctrl+1',
 	'ctrl+z',
+	'ctrl+a',
 	'ctrl+s',
 	'ctrl+y',
 	'ctrl+x',
 	'alt+w',
 ]	
 	
-CONVENIENT_KEYS = CONVENIENT_KEYS.concat(PERMANENT_KEYS)
-
 const removeFromConvenientKeys = key => {
   CONVENIENT_KEYS = CONVENIENT_KEYS.filter(x => x !== key)
 }
-
+PERMANENT_KEYS.forEach(removeFromConvenientKeys)
 void (async function main(){
 	let lines = []
   const fileContent = await readJson(`${ __dirname }/.vscode/keybindings.json`)
