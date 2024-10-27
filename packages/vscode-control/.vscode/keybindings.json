@@ -387,7 +387,7 @@
   },
   {
     "command": "magicBeans.createSpec",
-    "key": "ctrl+shift+[",
+    "key": "ctrl+shift+t",
     "comment": "test"
   },
   {
