@@ -2,41 +2,41 @@
 
 ## CTRL  R
 
-`editor.action.referenceSearch.trigger`
+`referenceSearch.trigger`
 
 > Peek References
 
 ## CTRL  SHIFT  Y
 
-`github.copilot.chat.selectKnowledgeBase`
+`chat.selectKnowledgeBase`
 
 ## CTRL  SHIFT  G
 
-`github.copilot.interactiveEditor.generate`
+`interactiveEditor.generate`
 
 ## CTRL  SHIFT  I
 
-`github.copilot.interactiveEditor.review`
+`interactiveEditor.review`
 
 ## CTRL  SHIFT  8
 
-`github.copilot.interactiveEditor.generateDocs`
+`generateDocs`
 
 ## CTRL  <
 
-`github.copilot.chat.attachSelection`
+`chat.attachSelection`
 
 ## ALT  <
 
-`github.copilot.chat.attachFile`
+`chat.attachFile`
 
 ## CTRL  SHIFT  7
 
-`github.copilot.ghpr.applySuggestion`
+`ghpr.applySuggestion`
 
 ## CTRL  SHIFT  X
 
-`github.copilot.interactiveEditor.fix`
+`interactiveEditor.fix`
 
 > Xplain
 
@@ -50,39 +50,39 @@
 
 ## CTRL  8
 
-`github.copilot.interactiveEditor.generateTests`
+`generateTests`
 
 ## CTRL  SHIFT  5
 
-`github.copilot.chat.explain.palette`
+`explain.palette`
 
 ## CTRL  SHIFT  U
 
-`github.copilot.terminal.explainTerminalSelectionContextMenu`
+`explainTerminalSelectionContextMenu`
 
 ## CTRL  4
 
-`workbench.action.toggleMaximizedPanel`
+`action.toggleMaximizedPanel`
 
 ## CTRL  SHIFT  7
 
-`workbench.action.customizeLayout`
+`action.customizeLayout`
 
 ## F4
 
-`workbench.panel.chat.view.copilot.focus`
+`copilot.focus`
 
 ## CTRL  SHIFT  <
 
-`workbench.panel.chat.view.copilot.focus`
+`copilot.focus`
 
 ## CTRL  H
 
-`editor.action.revealDefinition`
+`action.revealDefinition`
 
 ## CTRL  I
 
-`references-view.findImplementations`
+`findImplementations`
 
 > HINT: IMPLEMENTATION
 
@@ -94,7 +94,7 @@
 
 ## CTRL  SHIFT  2
 
-`workbench.action.editorLayoutTwoColumns`
+`action.editorLayoutTwoColumns`
 
 > HINT: 2 COLUMNS
 
@@ -104,17 +104,17 @@
 
 ## CTRL  E
 
-`references-view.findReferences`
+`findReferences`
 
 > HINT: FIND
 
 ## CTRL  `
 
-`editor.action.selectHighlights`
+`action.selectHighlights`
 
 ## CTRL  D
 
-`typescript.goToSourceDefinition`
+`goToSourceDefinition`
 
 ## CTRL  SHIFT  K
 
@@ -122,21 +122,21 @@
 
 ## CTRL  SHIFT  `
 
-`workbench.files.action.showActiveFileInExplorer`
+`showActiveFileInExplorer`
 
 > HINT: ACTIVE FILE
 
 ## CTRL  SHIFT  Z
 
-`workbench.action.toggleZenMode`
+`action.toggleZenMode`
 
 ## CTRL  SHIFT  ,
 
-`workbench.action.output.toggleOutput`
+`output.toggleOutput`
 
 ## CTRL  SHIFT  R
 
-`workbench.action.debug.restart`
+`debug.restart`
 
 > HINT: RESTART
 
@@ -148,23 +148,23 @@
 
 ## CTRL  SHIFT  .
 
-`magicBeans.fixCamelcaseRefactoring`
+`fixCamelcaseRefactoring`
 
 ## CTRL  M
 
-`editor.action.addSelectionToNextFindMatch`
+`addSelectionToNextFindMatch`
 
 > match
 
 ## ALT  I
 
-`editor.action.goToImplementation`
+`action.goToImplementation`
 
 > HINT: IMPLEMENTATION
 
 ## CTRL  SHIFT  E
 
-`editor.action.peekImplementation`
+`action.peekImplementation`
 
 > Peek Implementation
 
@@ -172,59 +172,59 @@
 
 `git.push`
 
-## alt  6
+## ALT  6
 
 `editor.action.insertSnippet`
 
 > Snippet: describe('${0:}
 
-## cltrl  shift  5
+## CLTRL  SHIFT  5
 
 `editor.action.insertSnippet`
 
 > Snippet: Function
 
-## ctrl  shift  3
+## CTRL  SHIFT  3
 
 `editor.action.insertSnippet`
 
 > Snippet: TestCase
 
-## ctrl  shift  4
+## CTRL  SHIFT  4
 
 `editor.action.insertSnippet`
 
 > Snippet: Expect
 
-## alt  d
+## ALT  D
 
 `editor.action.insertSnippet`
 
 > Snippet: debugger
 
-## ctrl  shift  0
+## CTRL  SHIFT  0
 
 `editor.action.insertSnippet`
 
 > Snippet: ArrowFunction
 
-## alt  9
+## ALT  9
 
 `editor.action.insertSnippet`
 
 > Snippet: StringTemplate
 
-## ctrl  8
+## CTRL  8
 
 `editor.action.insertSnippet`
 
 > Snippet: commentMultiline
 
-## ctrl  9
+## CTRL  9
 
 `editor.action.insertSnippet`
 
-> Snippet: commentAimedForTitle
+> Snippet: comment as title
 
 ## ALT  T
 
@@ -232,7 +232,7 @@
 
 ## CTRL  SHIFT  S
 
-`workbench.action.toggleSplitEditorInGroup`
+`toggleSplitEditorInGroup`
 
 > HINT: SPLIT
 
@@ -244,13 +244,13 @@
 
 ## CTRL  SHIFT  1
 
-`workbench.action.editorLayoutSingle`
+`action.editorLayoutSingle`
 
 > HINT: 1 COLUMN
 
 ## CTRL  G
 
-`editor.action.goToTypeDefinition`
+`action.goToTypeDefinition`
 
 ## CTRL  D
 
@@ -258,7 +258,7 @@
 
 ## CTRL  O
 
-`workbench.action.files.openFolder`
+`files.openFolder`
 
 > HINT: OPEN
 
@@ -288,7 +288,7 @@
 
 ## CTRL  SHIFT  ;
 
-`workbench.action.toggleActivityBarVisibility`
+`toggleActivityBarVisibility`
 
 > open side panel
 

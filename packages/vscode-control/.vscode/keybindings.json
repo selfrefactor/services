@@ -228,7 +228,7 @@
     "key": "ctrl+9",
     "command": "editor.action.insertSnippet",
     "args": {
-      "name": "commentAimedForTitle"
+      "name": "comment as title"
     }
   },
   {

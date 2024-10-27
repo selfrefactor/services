@@ -1,32 +1,32 @@
-| Key            | Command                                                     | Key             | Command                                      |
-| -------------- | ----------------------------------------------------------- | --------------- | -------------------------------------------- |
-| ctrl  r        | editor.action.referenceSearch.trigger                       | ctrl  shift  r  | workbench.action.debug.restart               |
-| ctrl  shift  y | github.copilot.chat.selectKnowledgeBase                     | alt  r          | editor.action.goToReferences                 |
-| ctrl  shift  g | github.copilot.interactiveEditor.generate                   | ctrl  shift  .  | magicBeans.fixCamelcaseRefactoring           |
-| ctrl  shift  i | github.copilot.interactiveEditor.review                     | ctrl  m         | editor.action.addSelectionToNextFindMatch    |
-| ctrl  shift  8 | github.copilot.interactiveEditor.generateDocs               | alt  i          | editor.action.goToImplementation             |
-| ctrl  <        | github.copilot.chat.attachSelection                         | ctrl  shift  e  | editor.action.peekImplementation             |
-| alt  <         | github.copilot.chat.attachFile                              | alt  =          | git.push                                     |
-| ctrl  shift  7 | github.copilot.ghpr.applySuggestion                         | ALT  6          | Snippet - describe('${0:}                    |
-| ctrl  shift  x | github.copilot.interactiveEditor.fix                        | CLTRL  SHIFT  5 | Snippet - Function                           |
-| ctrl  5        | github.copilot.chat.explain                                 | CTRL  SHIFT  3  | Snippet - TestCase                           |
-| ctrl  6        | inlineChat.start                                            | CTRL  SHIFT  4  | Snippet - Expect                             |
-| ctrl  8        | github.copilot.interactiveEditor.generateTests              | ALT  D          | Snippet - debugger                           |
-| ctrl  shift  5 | github.copilot.chat.explain.palette                         | CTRL  SHIFT  0  | Snippet - ArrowFunction                      |
-| ctrl  shift  u | github.copilot.terminal.explainTerminalSelectionContextMenu | ALT  9          | Snippet - StringTemplate                     |
-| ctrl  4        | workbench.action.toggleMaximizedPanel                       | CTRL  8         | Snippet - commentMultiline                   |
-| ctrl  shift  7 | workbench.action.customizeLayout                            | CTRL  9         | Snippet - commentAimedForTitle               |
-| f4             | workbench.panel.chat.view.copilot.focus                     | alt  t          | terminal.focus                               |
-| ctrl  shift  < | workbench.panel.chat.view.copilot.focus                     | ctrl  shift  s  | workbench.action.toggleSplitEditorInGroup    |
-| ctrl  h        | editor.action.revealDefinition                              | ctrl  shift  b  | workbench.view.debug                         |
-| ctrl  i        | references-view.findImplementations                         | ctrl  shift  1  | workbench.action.editorLayoutSingle          |
-| alt  a         | editor.action.showHover                                     | ctrl  g         | editor.action.goToTypeDefinition             |
-| ctrl  shift  2 | workbench.action.editorLayoutTwoColumns                     | ctrl  d         | editor.action.goToDeclaration                |
-| alt  f         | references-view.find                                        | ctrl  o         | workbench.action.files.openFolder            |
-| ctrl  e        | references-view.findReferences                              | alt  e          | workbench.view.explorer                      |
-| ctrl  `        | editor.action.selectHighlights                              | ctrl  shift  l  | magicBeans.sortLines                         |
-| ctrl  d        | typescript.goToSourceDefinition                             | ctrl  shift  t  | magicBeans.createSpec                        |
-| ctrl  shift  k | workbench.action.selectTheme                                | alt  c          | magicBeans.copyTrimmed                       |
-| ctrl  shift  ` | workbench.files.action.showActiveFileInExplorer             | alt  z          | workbench.action.gotoSymbol                  |
-| ctrl  shift  z | workbench.action.toggleZenMode                              | ctrl  shift  ;  | workbench.action.toggleActivityBarVisibility |
-| ctrl  shift  , | workbench.action.output.toggleOutput                        | ctrl  shift  '  | extension.markdown-pdf.pdf                   |
+| Key          | Command                             | Key           | Command                       |
+| ------------ | ----------------------------------- | ------------- | ----------------------------- |
+| CTRL+R       | referenceSearch.trigger             | CTRL+SHIFT+R  | debug.restart                 |
+| CTRL+SHIFT+Y | chat.selectKnowledgeBase            | ALT+R         | editor.action.goToReferences  |
+| CTRL+SHIFT+G | interactiveEditor.generate          | CTRL+SHIFT+.  | fixCamelcaseRefactoring       |
+| CTRL+SHIFT+I | interactiveEditor.review            | CTRL+M        | addSelectionToNextFindMatch   |
+| CTRL+SHIFT+8 | generateDocs                        | ALT+I         | action.goToImplementation     |
+| CTRL+<       | chat.attachSelection                | CTRL+SHIFT+E  | action.peekImplementation     |
+| ALT+<        | chat.attachFile                     | ALT+=         | git.push                      |
+| CTRL+SHIFT+7 | ghpr.applySuggestion                | ALT+6         | Snippet - describe('${0:}     |
+| CTRL+SHIFT+X | interactiveEditor.fix               | CLTRL+SHIFT+5 | Snippet - Function            |
+| CTRL+5       | github.copilot.chat.explain         | CTRL+SHIFT+3  | Snippet - TestCase            |
+| CTRL+6       | inlineChat.start                    | CTRL+SHIFT+4  | Snippet - Expect              |
+| CTRL+8       | generateTests                       | ALT+D         | Snippet - debugger            |
+| CTRL+SHIFT+5 | explain.palette                     | CTRL+SHIFT+0  | Snippet - ArrowFunction       |
+| CTRL+SHIFT+U | explainTerminalSelectionContextMenu | ALT+9         | Snippet - StringTemplate      |
+| CTRL+4       | action.toggleMaximizedPanel         | CTRL+8        | Snippet - commentMultiline    |
+| CTRL+SHIFT+7 | action.customizeLayout              | CTRL+9        | Snippet - comment as title    |
+| F4           | copilot.focus                       | ALT+T         | terminal.focus                |
+| CTRL+SHIFT+< | copilot.focus                       | CTRL+SHIFT+S  | toggleSplitEditorInGroup      |
+| CTRL+H       | action.revealDefinition             | CTRL+SHIFT+B  | workbench.view.debug          |
+| CTRL+I       | findImplementations                 | CTRL+SHIFT+1  | action.editorLayoutSingle     |
+| ALT+A        | editor.action.showHover             | CTRL+G        | action.goToTypeDefinition     |
+| CTRL+SHIFT+2 | action.editorLayoutTwoColumns       | CTRL+D        | editor.action.goToDeclaration |
+| ALT+F        | references-view.find                | CTRL+O        | files.openFolder              |
+| CTRL+E       | findReferences                      | ALT+E         | workbench.view.explorer       |
+| CTRL+`       | action.selectHighlights             | CTRL+SHIFT+L  | magicBeans.sortLines          |
+| CTRL+D       | goToSourceDefinition                | CTRL+SHIFT+T  | magicBeans.createSpec         |
+| CTRL+SHIFT+K | workbench.action.selectTheme        | ALT+C         | magicBeans.copyTrimmed        |
+| CTRL+SHIFT+` | showActiveFileInExplorer            | ALT+Z         | workbench.action.gotoSymbol   |
+| CTRL+SHIFT+Z | action.toggleZenMode                | CTRL+SHIFT+;  | toggleActivityBarVisibility   |
+| CTRL+SHIFT+, | output.toggleOutput                 | CTRL+SHIFT+'  | extension.markdown-pdf.pdf    |

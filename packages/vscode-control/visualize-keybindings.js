@@ -1,4 +1,4 @@
-import { interpolate, maybe, splitEvery } from 'rambdax'
+import { identity, ifElse, interpolate, join, last, maybe, piped, split, splitEvery, takeLast } from 'rambdax'
 import { markdownTable } from 'markdown-table'
 import pkg from 'fs-extra';
 import { fileURLToPath } from 'url';
@@ -87,22 +87,38 @@ void (async function main(){
     if(a.priority && !b.priority) return -1
     if(b.priority && !a.priority) return 1
 		return 0
-    // return a.key.localeCompare(b.key)
   })
+	let fixLongCommand = command => {
+		if(command.length < 30) return command
 
+		let result = piped(
+			command,
+			split('.'),
+			takeLast(2),
+			join('.'),
+		)
+
+		let fallback = piped(
+			command,
+			split('.'),
+			last
+		)
+
+		return result.length < 30 ? result : fallback
+	}
   const outputContent = sorted
     .map(({ key: keyInput, command: commandInput, hint, args, comment, when }) => {
       const key = keyInput.split('+').join('  ')
       const command =
-        when === 'editorLangId==python' ?
+			fixLongCommand(when === 'editorLangId==python' ?
           `PYTHON ONLY - ${ commandInput }` :
-          commandInput
+          commandInput)
 
       if (args){
         const snippetInfo = args.snippet ?? args.name
 
 				lines.push({
-					key: key.toUpperCase(),
+					key: keyInput.toUpperCase(),
 					command: `Snippet - ${ snippetInfo }`
 				})
 
@@ -112,7 +128,7 @@ void (async function main(){
           snippet : snippetInfo,
         })
       }
-			lines.push({ key, command })
+			lines.push({ key: keyInput.toUpperCase(), command })
 
       if (comment || hint){
         let commentInput = maybe(
