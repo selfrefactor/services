@@ -12,7 +12,7 @@
 	},
 	{
 		"priority": true,
-		"key": "ctrl+shift+u",
+		"key": "ctrl+shift+g",
 		"command": "github.copilot.interactiveEditor.generate"
 	},
 	{
@@ -84,15 +84,16 @@
 		"command": "workbench.action.customizeLayout"
 	},
   {
+		"alreadyLearned": true,
     "key": "ctrl+shift+5",
     "command": "git-config-user-profiles.pickUserProfile"
   },
   {
-    "key": "alt+g",
+    "key": "alt+g",		"alreadyLearned": true,
     "command": "workbench.action.pinEditor"
   },
   {
-    "key": "alt+g",
+    "key": "alt+g",		"alreadyLearned": true,
     "command": "workbench.action.unpinEditor",
     "when": "activeEditorIsPinned"
   },
@@ -106,10 +107,10 @@
 
   {
     "key": "ctrl+shift+[",
+		"alreadyLearned": true,
     "command": "workbench.action.tasks.runTask"
   },
   {
-		"priority": true,
     "key": "alt+=",
     "command": "git.push"
   },
@@ -129,7 +130,6 @@
     "when": "editorLangId!=python"
   },
   {
-		"priority": true,
     "key": "alt+6",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -164,7 +164,6 @@
     "when": "editorLangId==python"
   },
   {
-		"priority": true,
     "key": "cltrl+shift+5",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -172,7 +171,6 @@
     }
   },
   {
-		"priority": true,
     "key": "ctrl+shift+3",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -180,7 +178,6 @@
     }
   },
   {
-		"priority": true,
     "key": "ctrl+shift+4",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -195,7 +192,6 @@
     }
   },
   {
-		"priority": true,
     "key": "ctrl+shift+0",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -230,11 +226,6 @@
     }
   },
   {
-    "key": "ctrl+k ctrl+h",
-    "command": "workbench.action.output.toggleOutput",
-    "when": "workbench.panel.output.active"
-  },
-  {
     "key": "alt+t",
     "command": "terminal.focus"
   },
@@ -257,7 +248,7 @@
     "when": "textInputFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+g",
+    "key": "ctrl+shift+b",
     "hint": "debug",
     "command": "workbench.view.debug"
   },
@@ -322,11 +313,6 @@
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "ctrl+shift+]",
-    "priority": true,
-    "command": "workbench.view.extensions"
-  },
-  {
     "key": "ctrl+2",
     "alreadyLearned": true,
     "command": "workbench.action.openRecent"
@@ -352,7 +338,6 @@
     "key": "ctrl+shift+,",
     "priority": true,
     "command": "workbench.action.output.toggleOutput",
-    "hint": "OUTPUT",
     "when": "workbench.panel.output.active"
   },
   {
@@ -374,6 +359,7 @@
   {
     "key": "f5",
     "command": "workbench.action.debug.continue",
+		"alreadyLearned": true,
     "when": "inDebugMode"
   },
   {
@@ -437,7 +423,7 @@
     "mac": "ctrl+cmd+down",
     "linux": "ctrl+down",
     "key": "ctrl+down",
-    "command": "editor.action.moveLinesDownAction",
+    "command": "editor.action.moveLinesDownAction",		"alreadyLearned": true,
     "when": "editorTextFocus"
   },
   {
@@ -896,5 +882,15 @@
 		"key": "meta+i",
 		"command": "-inlineChat.startWithCurrentLine",
 		"when": "editorFocus && github.copilot.chat.editor.enableLineTrigger && inlineChatHasProvider && !editorReadonly && !inlineChatVisible"
+	},
+	{
+		"key": "ctrl+shift+v",
+		"command": "-markdown.showPreview",
+		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
+	},
+	{
+		"key": "ctrl+shift+v",
+		"command": "-notebook.cell.pasteAbove",
+		"when": "notebookEditorFocused && !inputFocus"
 	}
 ]

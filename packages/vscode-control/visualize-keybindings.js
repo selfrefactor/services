@@ -38,14 +38,11 @@ const CONVENIENT_BUTTONS = [
   '3',
   '4',
   '5',
-  '6',
-  '7',
-  '8',
-  '9',
   'a',
   'c',
   'd',
   'e',
+  'f',
   'g',
   'q',
   'r',
@@ -54,13 +51,23 @@ const CONVENIENT_BUTTONS = [
   'v',
   'w',
   'x',
+  '`',
+  '<',
   'z',
-  '-',
-  '=',
 ]
-// add ctrl+shift
-let CONVENIENT_KEYS = [ 'ctrl', 'alt' ].flatMap(x =>
+let CONVENIENT_KEYS = [ 'ctrl', 'alt','ctrl+shift' ].flatMap(x =>
   CONVENIENT_BUTTONS.map(y => x === 'capslock' ? `${x} ${y}` : `${ x }+${ y }`))
+
+const PERMANENT_KEYS = [
+	'ctrl+1',
+	'ctrl+z',
+	'ctrl+s',
+	'ctrl+y',
+	'ctrl+x',
+	'alt+w',
+]	
+	
+CONVENIENT_KEYS = CONVENIENT_KEYS.concat(PERMANENT_KEYS)
 
 const removeFromConvenientKeys = key => {
   CONVENIENT_KEYS = CONVENIENT_KEYS.filter(x => x !== key)
@@ -78,7 +85,8 @@ void (async function main(){
   const sorted = filtered.sort((a, b) => {
     if(a.priority && !b.priority) return -1
     if(b.priority && !a.priority) return 1
-    return a.key.localeCompare(b.key)
+		return 0
+    // return a.key.localeCompare(b.key)
   })
 
   const outputContent = sorted
@@ -94,7 +102,7 @@ void (async function main(){
 
 				lines.push({
 					key: key.toUpperCase(),
-					command: snippetInfo
+					command: `Snippet - ${ snippetInfo }`
 				})
 
         return interpolate(snippetTemplate, {
