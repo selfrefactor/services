@@ -1,5 +1,13 @@
 # Vscode-control
 
+
+		"2Guys1Account.quackrack-cursor",
+		"mattpocock.ts-error-translator",
+		"team-sapling.sapling",
+    "mightbesimon.emoji-icons",
+		"yoavbls.pretty-ts-errors",
+    "mrmlnc.vscode-scss",
+
 ===
 ctrl+e is it used somewhere
 ===

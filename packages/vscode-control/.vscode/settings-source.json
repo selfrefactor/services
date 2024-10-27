@@ -1,4 +1,5 @@
 {
+	"markdown-pdf.displayHeaderFooter": false,
 	"github.copilot.chat.followUps": "always",
 	"github.copilot.chat.experimental.inlineChatHint.enabled": true,
 	"github.copilot.chat.experimental.codeFeedback.enabled": true,

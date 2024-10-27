@@ -459,6 +459,10 @@
     "command": "editor.action.peekImplementation",
     "when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
+	{
+		"key": "ctrl+shift+'",
+		"command": "extension.markdown-pdf.pdf"
+	},
   {
     "key": "ctrl+g",
     "command": "-workbench.action.gotoLine"
