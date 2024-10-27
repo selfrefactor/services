@@ -32,7 +32,6 @@ const snippetTemplate = `
 `.trim()
 
 const CONVENIENT_BUTTONS = [
-  '0',
   '1',
   '2',
   '3',
@@ -47,7 +46,6 @@ const CONVENIENT_BUTTONS = [
   'q',
   'r',
   's',
-  't',
   'v',
   'w',
   'x',
@@ -62,6 +60,9 @@ const PERMANENT_KEYS = [
 	'ctrl+1',
 	'ctrl+z',
 	'ctrl+a',
+	'ctrl+c',
+	'ctrl+v',
+	'ctrl+f',
 	'ctrl+s',
 	'ctrl+y',
 	'ctrl+x',
@@ -72,6 +73,7 @@ const removeFromConvenientKeys = key => {
   CONVENIENT_KEYS = CONVENIENT_KEYS.filter(x => x !== key)
 }
 PERMANENT_KEYS.forEach(removeFromConvenientKeys)
+
 void (async function main(){
 	let lines = []
   const fileContent = await readJson(`${ __dirname }/.vscode/keybindings.json`)
