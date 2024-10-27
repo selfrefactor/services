@@ -1,17 +1,23 @@
 [
 	{
+    "key": "ctrl+r",
+    "command": "editor.action.referenceSearch.trigger",
+    "priority": true,
+    "comment": "Peek References"
+  },
+	{
 		"priority": true,
-		"key": "alt+shift+1",
+		"key": "ctrl+shift+y",
 		"command": "github.copilot.chat.selectKnowledgeBase"
 	},
 	{
 		"priority": true,
-		"key": "alt+shift+2",
+		"key": "ctrl+shift+u",
 		"command": "github.copilot.interactiveEditor.generate"
 	},
 	{
 		"priority": true,
-		"key": "alt+shift+3",
+		"key": "ctrl+shift+i",
 		"command": "github.copilot.interactiveEditor.review"
 	},
 	{
@@ -46,6 +52,7 @@
 		"command": "github.copilot.chat.explain"
 	},
 	{
+		"priority": true,
 		"key": "ctrl+6",
 		"command": "inlineChat.start",
 		"when": "editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly"
@@ -56,33 +63,28 @@
 		"command": "github.copilot.interactiveEditor.generateTests"
 	},
 	{
+		"priority": true,
     "key": "ctrl+shift+5",
     "command": "github.copilot.chat.explain.palette"
   },
   {
+		"priority": true,
     "key": "ctrl+shift+u",
     "command": "github.copilot.terminal.explainTerminalSelectionContextMenu"
   },
+
 	{
-		"key": "ctrl+shift+r",
-		"command": "rerunSearchEditorSearch",
-		"when": "inSearchEditor"
-	},
-	{
-		"key": "ctrl+shift+r",
-		"command": "-rerunSearchEditorSearch",
-		"when": "inSearchEditor"
-	},
-	{
+		"priority": true,
 		"key": "ctrl+shift+9",
 		"command": "workbench.action.toggleMaximizedPanel"
 	},
 	{
-		"key": "ctrl+shift+6",
+		"priority": true,
+		"key": "ctrl+shift+7",
 		"command": "workbench.action.customizeLayout"
 	},
   {
-    "key": "alt+shift+9",
+    "key": "ctrl+shift+5",
     "command": "git-config-user-profiles.pickUserProfile"
   },
   {
@@ -94,41 +96,21 @@
     "command": "workbench.action.unpinEditor",
     "when": "activeEditorIsPinned"
   },
-  {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.unpinEditor",
-    "when": "activeEditorIsPinned"
-  },
+
   {
     "key": "f4",
     "priority": true,
     "command": "workbench.panel.chat.view.copilot.focus"
   },
+ 
+
   {
-    "key": "f4",
-    "command": "-references-view.next",
-    "when": "reference-list.hasResult && references-view.canNavigate"
-  },
-  {
-    "key": "f4",
-    "command": "-search.action.focusNextSearchResult",
-    "when": "hasSearchResult || inSearchEditor"
-  },
-  {
-    "key": "f4",
-    "command": "-goToNextReference",
-    "when": "inReferenceSearchEditor || referenceSearchVisible"
-  },
-  {
-    "key": "ctrl+shift+b",
+    "key": "ctrl+shift+[",
     "command": "workbench.action.tasks.runTask"
   },
   {
+		"priority": true,
     "key": "alt+=",
-    "command": "git.push"
-  },
-  {
-    "key": "alt+-",
     "command": "git.push"
   },
   {
@@ -147,6 +129,7 @@
     "when": "editorLangId!=python"
   },
   {
+		"priority": true,
     "key": "alt+6",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -181,21 +164,24 @@
     "when": "editorLangId==python"
   },
   {
-    "key": "alt+5",
+		"priority": true,
+    "key": "cltrl+shift+5",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "Function"
     }
   },
   {
-    "key": "alt+7",
+		"priority": true,
+    "key": "ctrl+shift+3",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "TestCase"
     }
   },
   {
-    "key": "alt+8",
+		"priority": true,
+    "key": "ctrl+shift+4",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "Expect"
@@ -209,7 +195,8 @@
     }
   },
   {
-    "key": "alt+0",
+		"priority": true,
+    "key": "ctrl+shift+0",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "ArrowFunction"
@@ -229,14 +216,14 @@
     "command": "references-view.findImplementations"
   },
   {
-    "key": "ctrl+9",
+    "key": "ctrl+8",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "commentMultiline"
     }
   },
   {
-    "key": "ctrl+=",
+    "key": "ctrl+9",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "commentAimedForTitle"
@@ -270,7 +257,7 @@
     "when": "textInputFocus && !editorReadonly"
   },
   {
-    "key": "alt+shift+d",
+    "key": "ctrl+shift+g",
     "hint": "debug",
     "command": "workbench.view.debug"
   },
@@ -314,6 +301,7 @@
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
+		"priority": true,
     "key": "ctrl+d",
     "command": "typescript.goToSourceDefinition"
   },
@@ -323,18 +311,18 @@
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "ctrl+shift+a",
+    "key": "ctrl+shift+`",
     "hint": "Active file",
     "priority": true,
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
-    "key": "ctrl+q",
+    "key": "ctrl+shift+q",
     "alreadyLearned": true,
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "alt+shift+n",
+    "key": "ctrl+shift+]",
     "priority": true,
     "command": "workbench.view.extensions"
   },
@@ -348,18 +336,9 @@
     "hint": "OPEN",
     "command": "workbench.action.files.openFolder"
   },
-	{
-		"key": "ctrl+shift+x",
-		"command": "-workbench.view.extensions",
-		"when": "viewContainer.workbench.view.extensions.enabled"
-	},
+
   {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.pinEditor",
-    "when": "!activeEditorIsPinned"
-  },
-  {
-    "key": "ctrl+9",
+    "key": "ctrl+shift+9",
     "command": "python.execInTerminal",
     "when": "editorLangId==python"
   },
@@ -369,7 +348,7 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "alt+shift+o",
+    "key": "ctrl+shift+,",
     "priority": true,
     "command": "workbench.action.output.toggleOutput",
     "hint": "OUTPUT",
@@ -385,7 +364,7 @@
     "alreadyLearned": true
   },
   {
-    "key": "alt+r",
+    "key": "ctrl+shift+r",
     "command": "workbench.action.debug.restart",
     "priority": true,
     "hint": "RESTART",
@@ -397,7 +376,7 @@
     "when": "inDebugMode"
   },
   {
-    "key": "alt+shift+r",
+    "key": "alt+r",
     "command": "editor.action.goToReferences",
     "priority": true,
     "hint": "REFERENCES",
@@ -406,7 +385,7 @@
   {
     "command": "magicBeans.sortLines",
     "comment": "lines",
-    "key": "alt+shift+l"
+    "key": "ctrl+shift+l"
   },
   {
     "command": "magicBeans.requestRandomFile",
@@ -421,7 +400,7 @@
   {
     "command": "magicBeans.fixCamelcaseRefactoring",
     "priority": true,
-    "key": "alt+shift+,"
+    "key": "ctrl+shift+."
   },
   {
     "command": "magicBeans.copyTrimmed",
@@ -474,7 +453,7 @@
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "alt+shift+p",
+    "key": "ctrl+shift+e",
     "priority": true,
     "comment": "Peek Implementation",
     "command": "editor.action.peekImplementation",
@@ -608,12 +587,7 @@
     "command": "-workbench.action.terminal.toggleFindCaseSensitiveTerminalFocus",
     "when": "terminalFocus"
   },
-  {
-    "key": "ctrl+r",
-    "command": "editor.action.referenceSearch.trigger",
-    "priority": true,
-    "comment": "Peek References"
-  },
+
   {
     "key": "ctrl+r",
     "command": "-workbench.action.openRecent"
@@ -876,6 +850,41 @@
 		"command": "-github.copilot.generate",
 		"when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
 	},
+	{
+		"key": "ctrl+shift+x",
+		"command": "-workbench.view.extensions",
+		"when": "viewContainer.workbench.view.extensions.enabled"
+	},
+  {
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
+  },
+	{
+		"key": "ctrl+shift+r",
+		"command": "-rerunSearchEditorSearch",
+		"when": "inSearchEditor"
+	},
+	{
+    "key": "f4",
+    "command": "-goToNextReference",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+	{
+    "key": "f4",
+    "command": "-references-view.next",
+    "when": "reference-list.hasResult && references-view.canNavigate"
+  },
+  {
+    "key": "f4",
+    "command": "-search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+	{
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned"
+  },
 	{
 		"key": "meta+i",
 		"command": "-inlineChat.startWithCurrentLine",

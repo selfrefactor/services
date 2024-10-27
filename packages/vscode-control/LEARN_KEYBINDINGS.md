@@ -242,15 +242,15 @@
 
 `workbench.action.gotoSymbol`
 
-## CTLR  6
-
-`inlineChat.start`
-
 ## CTRL  =
 
 `editor.action.insertSnippet`
 
 > Snippet: commentAimedForTitle
+
+## CTRL  6
+
+`inlineChat.start`
 
 ## CTRL  9
 
@@ -346,7 +346,6 @@
 
 * ctrl+0
 * ctrl+1
-* ctrl+6
 * ctrl+7
 * ctrl+a
 * ctrl+c
