@@ -128,7 +128,7 @@ void (async function main(){
           snippet : snippetInfo,
         })
       }
-			lines.push({ key: keyInput.toUpperCase(), command })
+			lines.push({ key: keyInput.toUpperCase(), command: comment ?? command })
 
       if (comment || hint){
         let commentInput = maybe(

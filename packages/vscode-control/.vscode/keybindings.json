@@ -406,7 +406,7 @@
   },
   {
     "key": "ctrl+shift+;",
-    "comment": "open side panel",
+    "comment": "needed after running vscode control",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
   {
