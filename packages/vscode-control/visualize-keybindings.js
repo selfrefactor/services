@@ -50,7 +50,6 @@ const CONVENIENT_BUTTONS = [
   'w',
   'x',
   '`',
-  '<',
   'z',
 ]
 let CONVENIENT_KEYS = [ 'ctrl', 'alt','ctrl+shift' ].flatMap(x =>

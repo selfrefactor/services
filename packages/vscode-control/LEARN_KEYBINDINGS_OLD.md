@@ -22,11 +22,11 @@
 
 `generateDocs`
 
-## CTRL  <
+## CTRL  4
 
 `chat.attachSelection`
 
-## ALT  <
+## CTRL  3
 
 `chat.attachFile`
 
@@ -69,10 +69,6 @@
 `action.customizeLayout`
 
 ## F4
-
-`copilot.focus`
-
-## CTRL  SHIFT  <
 
 `copilot.focus`
 
@@ -290,7 +286,7 @@
 
 `toggleActivityBarVisibility`
 
-> open side panel
+> needed after running vscode control
 
 ## CTRL  SHIFT  '
 
@@ -298,8 +294,6 @@
 
 ## Convenient keys
 
-* ctrl+3
-* ctrl+q
 * alt+3
 * alt+4
 * alt+5
@@ -310,5 +304,6 @@
 * ctrl+shift+a
 * ctrl+shift+c
 * ctrl+shift+f
+* ctrl+shift+q
 * ctrl+shift+v
 * ctrl+shift+w
