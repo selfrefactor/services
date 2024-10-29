@@ -315,7 +315,7 @@
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
-    "key": "ctrl+shift+q",
+    "key": "ctrl+q",
     "alreadyLearned": true,
     "command": "workbench.action.closeOtherEditors"
   },
