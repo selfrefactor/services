@@ -43,7 +43,6 @@
   {
     "priority": true,
     "key": "ctrl+shift+x",
-    "comment": "Xplain",
     "command": "github.copilot.interactiveEditor.fix"
   },
   {
@@ -237,7 +236,6 @@
   {
     "key": "alt+a",
     "priority": true,
-    "comment": "this needs to be convenient",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
   },
@@ -370,7 +368,6 @@
   },
   {
     "command": "magicBeans.sortLines",
-    "comment": "lines",
     "key": "ctrl+shift+l"
   },
   {
@@ -380,8 +377,7 @@
   },
   {
     "command": "magicBeans.createSpec",
-    "key": "ctrl+shift+t",
-    "comment": "test"
+    "key": "ctrl+shift+t"
   },
   {
     "command": "magicBeans.fixCamelcaseRefactoring",
@@ -399,7 +395,7 @@
   },
   {
     "key": "ctrl+shift+;",
-    "comment": "needed after running vscode control",
+    "comment": "after running vscode control",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
   {
@@ -414,7 +410,6 @@
   {
     "key": "ctrl+m",
     "priority": true,
-    "comment": "match",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
   },
