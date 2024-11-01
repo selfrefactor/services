@@ -17,16 +17,16 @@
 	"author": "self_refactor",
 	"license": "MIT",
 	"dependencies": {
-		"@biomejs/biome": "1.8.3",
+		"@biomejs/biome": "1.9.4",
 		"dep-fn": "2.3.3",
 		"fs-extra": "11.2.0",
 		"helpers-fn": "2.0.0",
-		"oxlint": "0.9.1",
+		"oxlint": "0.10.3",
 		"prettier": "3.3.3",
 		"rambdax": "11.2.0",
-		"string-fn": "3.3.2"
+		"string-fn": "3.6.2"
 	},
 	"devDependencies": {
-		"typescript": "5.5.4"
+		"typescript": "5.6.3"
 	}
 }
