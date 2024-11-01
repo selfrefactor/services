@@ -274,6 +274,11 @@
     "command": "references-view.findReferences",
     "when": "editorHasReferenceProvider"
   },
+	{
+    "key": "ctrl+shift+j",
+    "command": "workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
+  },
   {
     "priority": true,
     "key": "ctrl+`",

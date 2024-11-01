@@ -38,13 +38,11 @@
 
 `interactiveEditor.fix`
 
-> Xplain
-
 ## CTRL  5
 
 `github.copilot.chat.explain`
 
-## CTRL  6
+## CTRL  7
 
 `inlineChat.start`
 
@@ -60,7 +58,7 @@
 
 `explainTerminalSelectionContextMenu`
 
-## CTRL  4
+## CTRL  6
 
 `action.toggleMaximizedPanel`
 
@@ -85,8 +83,6 @@
 ## ALT  A
 
 `editor.action.showHover`
-
-> this needs to be convenient
 
 ## CTRL  SHIFT  2
 
@@ -149,8 +145,6 @@
 ## CTRL  M
 
 `addSelectionToNextFindMatch`
-
-> match
 
 ## ALT  I
 
@@ -266,13 +260,9 @@
 
 `magicBeans.sortLines`
 
-> lines
-
 ## CTRL  SHIFT  T
 
 `magicBeans.createSpec`
-
-> test
 
 ## ALT  C
 
@@ -286,7 +276,7 @@
 
 `toggleActivityBarVisibility`
 
-> needed after running vscode control
+> after running vscode control
 
 ## CTRL  SHIFT  '
 
