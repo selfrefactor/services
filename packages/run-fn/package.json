@@ -18,6 +18,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"@biomejs/biome": "1.9.4",
+		"dayjs": "^1.11.13",
 		"dep-fn": "2.3.3",
 		"fs-extra": "11.2.0",
 		"helpers-fn": "2.0.0",
