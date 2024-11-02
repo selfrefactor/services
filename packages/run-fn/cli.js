@@ -13,22 +13,8 @@ const { read } = require('./services/read/read');
 const { pullAll } = require('./services/pull-all/pull-all');
 const { lintFile } = require('./services/lint/lint');
 const { lintFolder } = require('./services/lint-folder/lint-folder');
-const { diary } = require('./services/diary/diary');
+const { diary, DIARY_MAP } = require('./services/diary/diary');
 
-const DIARY_MAP = {
-	diary: {
-		path: process.env.DIARY_PATH,
-		envKey: 'DIARY_PATH',
-	},
-	'diary:tech': {
-		path: process.env.TECH_DIARY_PATH,
-		envKey: 'TECH_DIARY_PATH',
-	},
-	'diary:todo': {
-		path: process.env.TODO_DIARY_PATH,
-		envKey: 'TODO_DIARY_PATH',
-	},
-};
 
 async function runFn() {
 	const [firstArgumentRaw, secondArgument, thirdArgument, ...rest] = drop(2)(
@@ -49,6 +35,8 @@ async function runFn() {
 		}
 
 		return diary({
+			outCommand: diaryConfig.outCommand,
+			mode: firstArgument,
 			envKey: diaryConfig.envKey,
 			pathInput: diaryConfig.path,
 			diaryInput: [secondArgument, thirdArgument, ...rest],
