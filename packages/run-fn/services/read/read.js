@@ -22,6 +22,7 @@ async function read(repo, folder) {
 		await execCommand('rm -rf .git', `${process.cwd()}/${folderName}`);
 		await commit('feat: add new repo');
 	} else {
+		await execCommand('rm -rf .git', `${process.cwd()}/${folderName}`);
 		console.log(`process cwd ${process.cwd()}`);
 	}
 }
