@@ -36,7 +36,7 @@ let ALLOWED_DARK_THEMES = [
 ]
 
 function getExpectedColorThemes(){
-	return currentTimeIsBetween('7:30', '17:00') ? ALLOWED_LIGHT_THEMES : ALLOWED_DARK_THEMES
+	return currentTimeIsBetween('6:00', '16:30') ? ALLOWED_LIGHT_THEMES : ALLOWED_DARK_THEMES
 }
 
 async function setColorTheme(context){
