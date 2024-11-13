@@ -1,4 +1,15 @@
 {
+	"editor.occurrencesHighlightDelay": 1000,
+	"workbench.panel.showLabels": true,
+	"github.copilot.chat.reviewSelection.instructions": [
+    {
+      "text": "Prevent multiple empty lines in the code."
+    },
+    {
+      "text": "Improve titles of test cases if possible."
+    }
+  ],
+	"github.copilot.chat.edits.enabled": true,
 	"markdown-pdf.displayHeaderFooter": false,
 	"github.copilot.chat.followUps": "always",
 	"github.copilot.chat.experimental.inlineChatHint.enabled": true,

@@ -214,7 +214,7 @@
 
 `editor.action.insertSnippet`
 
-> Snippet: comment as title
+> Snippet: commentAimedForTitle
 
 ## ALT  T
 
@@ -237,6 +237,10 @@
 `action.editorLayoutSingle`
 
 > HINT: 1 COLUMN
+
+## CTRL  SHIFT  J
+
+`workbench.view.extensions`
 
 ## CTRL  G
 
