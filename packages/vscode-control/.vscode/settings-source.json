@@ -1,6 +1,4 @@
 {
-	"editor.occurrencesHighlightDelay": 1000,
-	"workbench.panel.showLabels": true,
 	"github.copilot.chat.reviewSelection.instructions": [
     {
       "text": "Prevent multiple empty lines in the code."
@@ -10,9 +8,8 @@
     }
   ],
 	"github.copilot.chat.edits.enabled": true,
-	"markdown-pdf.displayHeaderFooter": false,
 	"github.copilot.chat.followUps": "always",
-	"github.copilot.chat.experimental.inlineChatHint.enabled": true,
+	"github.copilot.chat.experimental.inlineChatHint.enabled": false,
 	"github.copilot.chat.experimental.codeFeedback.enabled": true,
 	"github.copilot.chat.experimental.codeFeedback.instructions": [
 		{
@@ -30,11 +27,14 @@
 		}
 	],
 	"github.copilot.chat.experimental.generateTests.codeLens": true,
-	"github.copilot.chat.experimental.inlineChatCompletionTrigger.enabled": true,
+	"github.copilot.chat.experimental.inlineChatCompletionTrigger.enabled": false,
 	"github.copilot.chat.experimental.startDebugging.enabled": true,
 	"github.copilot.chat.experimental.temporalContext.enabled": true,
 	"github.copilot.chat.scopeSelection": true,
 	"github.copilot.chat.welcomeMessage": "never",
+	"editor.occurrencesHighlightDelay": 1000,
+	"workbench.panel.showLabels": true,
+	"markdown-pdf.displayHeaderFooter": false,
   "editor.suggest.selectionMode": "whenTriggerCharacter",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "smart",
