@@ -186,6 +186,18 @@
 					"default": false,
 					"description": ""
 				},
+				"magicBeans.THEME_CHANGE_DAYTIME": {
+					"type": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"6:50",
+						"16:20"
+					]
+				},
 				"magicBeans.SLOW_SCROLL_SHOW_BAR_INITIALLY": {
 					"type": "boolean",
 					"default": false,

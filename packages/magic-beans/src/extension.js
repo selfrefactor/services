@@ -37,8 +37,9 @@ function activate(context) {
   const SLOW_SCROLL_SHOW_BAR_INITIALLY_VALUE = configAnt(SLOW_SCROLL_SHOW_BAR_INITIALLY)
 
   initStatusBars()
-  setColorTheme(context)
-
+  let setColorThemeFn = setColorTheme(context)
+	setColorThemeFn()
+	
   const symbolsListCommand = vscode.commands.registerCommand(
     'magicBeans.symbolsList',
     symbolsList,
@@ -53,7 +54,7 @@ function activate(context) {
   )
   const highlightOnCopyCommand = vscode.commands.registerCommand(
     'magicBeans.highlightOnCopyRun',
-    highlightOnCopy,
+    highlightOnCopy(setColorThemeFn),
   )
   const fixCommentCommand = vscode.commands.registerCommand(
     'magicBeans.fixComment',

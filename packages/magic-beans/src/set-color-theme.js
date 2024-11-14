@@ -1,70 +1,72 @@
-const { shuffle } = require("rambdax")
-const { configAnt } = require("./ants/config")
-const vscode = require('vscode')
-const { currentTimeIsBetween } = require("./_modules/current-time-is-between")
-const { IS_VSCODE_INSIDERS } = require("./constants")
+const { shuffle } = require('rambdax');
+const { configAnt } = require('./ants/config');
+const vscode = require('vscode');
+const { currentTimeIsBetween } = require('./_modules/current-time-is-between');
+const { IS_VSCODE_INSIDERS, THEME_CHANGE_DAYTIME } = require('./constants');
 
-const ALLOW_CHANGE_COLOR_THEME = configAnt('ALLOW_CHANGE_COLOR_THEME')
+const ALLOW_CHANGE_COLOR_THEME = configAnt('ALLOW_CHANGE_COLOR_THEME');
 
-const BASE_STABLE = `/.config/Code/User`
-const BASE_BETA = `/.config/Code - Insiders/User`
+const BASE_STABLE = '/.config/Code/User';
+const BASE_BETA = '/.config/Code - Insiders/User';
 
-let init = false
+let init = false;
 
-let ALLOWED_LIGHT_THEMES = [
-  'CommunicationBreakdown',
-  'DancingDays',
-  'FunkyDrummer',
-  'GlassOnion',
-  'HelloSpaceboy',
-  'KozmicBlues',
-  'LedZeppelin',
-  'StrangeBrew',
-  'SweatLeaf'
-]
+const ALLOWED_LIGHT_THEMES = [
+	'CommunicationBreakdown',
+	'DancingDays',
+	'FunkyDrummer',
+	'GlassOnion',
+	'HelloSpaceboy',
+	'KozmicBlues',
+	'LedZeppelin',
+	'StrangeBrew',
+	'SweatLeaf',
+];
 
-let ALLOWED_DARK_THEMES = [
-  'AmericanDad',
-  'AquaTeenHungerForce',
-  'Archer',
-  'ClevelandShow',
-  'Dilbert',
-  'HomeMovies',
-  'SouthPark',
-  'TripTank',
-  'UglyAmericans'
-]
+const ALLOWED_DARK_THEMES = [
+	'AmericanDad',
+	'AquaTeenHungerForce',
+	'Archer',
+	'ClevelandShow',
+	'Dilbert',
+	'HomeMovies',
+	'SouthPark',
+	'TripTank',
+	'UglyAmericans',
+];
+const [startDaytime, endDaytime] = configAnt(THEME_CHANGE_DAYTIME);
 
-function getExpectedColorThemes(){
-	return currentTimeIsBetween('6:00', '16:30') ? ALLOWED_LIGHT_THEMES : ALLOWED_DARK_THEMES
+function getExpectedColorThemes() {
+	return currentTimeIsBetween(startDaytime, endDaytime)
+		? ALLOWED_LIGHT_THEMES
+		: ALLOWED_DARK_THEMES;
 }
 
-async function setColorTheme(context){
-  if (
-		init || 
-    !ALLOW_CHANGE_COLOR_THEME 
-  ){
+function setColorTheme(context) {
+	return async () => {
+		if (!ALLOW_CHANGE_COLOR_THEME) {
+			return;
+		}
 
-		return
-	}
+		init = true;
+		const expectedColorThemes = getExpectedColorThemes();
+		if (!expectedColorThemes) return;
 
-  init = true
-	let expectedColorThemes = getExpectedColorThemes()
-	if (!expectedColorThemes) return
-	
-	let SETTINGS_LOCATION = configAnt(IS_VSCODE_INSIDERS) ? BASE_BETA : BASE_STABLE
-	let filePath = `${ process.env.HOME }${SETTINGS_LOCATION}/settings.json`
-	const fileUri = vscode.Uri.file(filePath)
-	const uint8Array = await vscode.workspace.fs.readFile(fileUri);
-	const fileContent = Buffer.from(uint8Array).toString('utf-8');
-	let parsed = JSON.parse(fileContent)
-	let currentColorTheme = parsed['workbench.colorTheme']
-	if (expectedColorThemes.includes(currentColorTheme)) return
+		const SETTINGS_LOCATION = configAnt(IS_VSCODE_INSIDERS)
+			? BASE_BETA
+			: BASE_STABLE;
+		const filePath = `${process.env.HOME}${SETTINGS_LOCATION}/settings.json`;
+		const fileUri = vscode.Uri.file(filePath);
+		const uint8Array = await vscode.workspace.fs.readFile(fileUri);
+		const fileContent = Buffer.from(uint8Array).toString('utf-8');
+		const parsed = JSON.parse(fileContent);
+		const currentColorTheme = parsed['workbench.colorTheme'];
+		if (expectedColorThemes.includes(currentColorTheme)) return;
 
-	parsed['workbench.colorTheme'] = shuffle(expectedColorThemes)[0]
-	const newContent = JSON.stringify(parsed, null, 2)
-	await vscode.workspace.fs.writeFile(fileUri, Buffer.from(newContent))
-
+		parsed['workbench.colorTheme'] = shuffle(expectedColorThemes)[0];
+		const newContent = JSON.stringify(parsed, null, 2);
+		await vscode.workspace.fs.writeFile(fileUri, Buffer.from(newContent));
+	};
 }
 
-exports.setColorTheme = setColorTheme
+exports.setColorTheme = setColorTheme;
