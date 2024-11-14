@@ -67,6 +67,10 @@
 		"command": "github.copilot.chat.explain.palette"
 	},
 	{
+		"key": "ctrl+shift+a",
+		"command": "workbench.action.splitEditorRight"
+	},
+	{
 		"priority": true,
 		"key": "ctrl+shift+u",
 		"command": "github.copilot.terminal.explainTerminalSelectionContextMenu"
@@ -79,7 +83,7 @@
 	},
 	{
 		"priority": true,
-		"key": "ctrl+shift+7",
+		"key": "ctrl+shift+8",
 		"command": "workbench.action.customizeLayout"
 	},
 	{
@@ -892,6 +896,10 @@
 		"key": "ctrl+shift+v",
 		"command": "-notebook.cell.pasteAbove",
 		"when": "notebookEditorFocused && !inputFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+\\",
+		"command": "-workbench.action.splitEditorRight"
 	},
 	{
 		"key": "ctrl+shift+s",

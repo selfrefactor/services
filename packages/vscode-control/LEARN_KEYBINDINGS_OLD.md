@@ -62,7 +62,7 @@
 
 `action.toggleMaximizedPanel`
 
-## CTRL  SHIFT  7
+## CTRL  SHIFT  8
 
 `action.customizeLayout`
 
@@ -157,6 +157,10 @@
 `action.peekImplementation`
 
 > Peek Implementation
+
+## CTRL  SHIFT  A
+
+`action.splitEditorRight`
 
 ## ALT  =
 
@@ -295,7 +299,6 @@
 * alt+s
 * alt+v
 * alt+`
-* ctrl+shift+a
 * ctrl+shift+c
 * ctrl+shift+f
 * ctrl+shift+q

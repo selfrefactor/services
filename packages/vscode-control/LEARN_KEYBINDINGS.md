@@ -1,10 +1,10 @@
 | Key          | Command                             | Key           | Command                        |
 | ------------ | ----------------------------------- | ------------- | ------------------------------ |
-| CTRL+R       | Peek References                     | ALT+R         | editor.action.goToReferences   |
-| CTRL+SHIFT+Y | chat.selectKnowledgeBase            | CTRL+SHIFT+.  | fixCamelcaseRefactoring        |
-| CTRL+SHIFT+G | interactiveEditor.generate          | CTRL+M        | addSelectionToNextFindMatch    |
-| CTRL+SHIFT+I | interactiveEditor.review            | ALT+I         | action.goToImplementation      |
-| CTRL+SHIFT+8 | generateDocs                        | CTRL+SHIFT+E  | Peek Implementation            |
+| CTRL+R       | Peek References                     | CTRL+SHIFT+.  | fixCamelcaseRefactoring        |
+| CTRL+SHIFT+Y | chat.selectKnowledgeBase            | CTRL+M        | addSelectionToNextFindMatch    |
+| CTRL+SHIFT+G | interactiveEditor.generate          | ALT+I         | action.goToImplementation      |
+| CTRL+SHIFT+I | interactiveEditor.review            | CTRL+SHIFT+E  | Peek Implementation            |
+| CTRL+SHIFT+8 | generateDocs                        | CTRL+SHIFT+A  | action.splitEditorRight        |
 | CTRL+4       | chat.attachSelection                | ALT+=         | git.push                       |
 | CTRL+3       | chat.attachFile                     | ALT+6         | Snippet - describe('${0:}      |
 | CTRL+SHIFT+7 | ghpr.applySuggestion                | CLTRL+SHIFT+5 | Snippet - Function             |
@@ -15,7 +15,7 @@
 | CTRL+SHIFT+5 | explain.palette                     | ALT+9         | Snippet - StringTemplate       |
 | CTRL+SHIFT+U | explainTerminalSelectionContextMenu | CTRL+8        | Snippet - commentMultiline     |
 | CTRL+6       | action.toggleMaximizedPanel         | CTRL+9        | Snippet - commentAimedForTitle |
-| CTRL+SHIFT+7 | action.customizeLayout              | ALT+T         | terminal.focus                 |
+| CTRL+SHIFT+8 | action.customizeLayout              | ALT+T         | terminal.focus                 |
 | F4           | copilot.focus                       | CTRL+SHIFT+S  | toggleSplitEditorInGroup       |
 | CTRL+H       | action.revealDefinition             | CTRL+SHIFT+B  | workbench.view.debug           |
 | CTRL+I       | findImplementations                 | CTRL+SHIFT+1  | action.editorLayoutSingle      |
@@ -30,3 +30,4 @@
 | CTRL+SHIFT+Z | action.toggleZenMode                | ALT+Z         | workbench.action.gotoSymbol    |
 | CTRL+SHIFT+, | output.toggleOutput                 | CTRL+SHIFT+;  | after running vscode control   |
 | CTRL+SHIFT+R | debug.restart                       | CTRL+SHIFT+'  | extension.markdown-pdf.pdf     |
+| ALT+R        | editor.action.goToReferences        |               |                                |
