@@ -27,13 +27,13 @@
 	},
 	{
 		"priority": true,
-		"key": "ctrl+4",
-		"command": "github.copilot.chat.attachSelection"
+		"key": "ctrl+3",
+		"command": "github.copilot.chat.attachFile"
 	},
 	{
 		"priority": true,
-		"key": "ctrl+3",
-		"command": "github.copilot.chat.attachFile"
+		"key": "ctrl+4",
+		"command": "github.copilot.chat.attachSelection"
 	},
 	{
 		"priority": true,
@@ -203,6 +203,7 @@
 	{
 		"key": "alt+9",
 		"command": "editor.action.insertSnippet",
+		"alreadyLearned": true,
 		"args": {
 			"name": "StringTemplate"
 		}
@@ -349,6 +350,7 @@
 	},
 	{
 		"key": "alt+e",
+		"alreadyLearned": true,
 		"command": "workbench.view.explorer"
 	},
 	{
@@ -391,7 +393,7 @@
 	},
 	{
 		"command": "magicBeans.fixCamelcaseRefactoring",
-		"priority": true,
+		"alreadyLearned": true,
 		"key": "ctrl+shift+."
 	},
 	{
