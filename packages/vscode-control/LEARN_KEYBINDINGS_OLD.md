@@ -6,35 +6,19 @@
 
 > Peek References
 
-## CTRL  SHIFT  Y
+## CTRL  3
 
-`chat.selectKnowledgeBase`
-
-## CTRL  SHIFT  G
-
-`interactiveEditor.generate`
-
-## CTRL  SHIFT  I
-
-`interactiveEditor.review`
-
-## CTRL  SHIFT  8
-
-`generateDocs`
+`chat.attachFile`
 
 ## CTRL  4
 
 `chat.attachSelection`
 
-## CTRL  3
-
-`chat.attachFile`
-
-## CTRL  SHIFT  7
+## ALT  SHIFT  7
 
 `ghpr.applySuggestion`
 
-## CTRL  SHIFT  X
+## ALT  SHIFT  X
 
 `interactiveEditor.fix`
 
@@ -50,13 +34,9 @@
 
 `generateTests`
 
-## CTRL  SHIFT  5
+## CTRL  SHIFT  Y
 
 `explain.palette`
-
-## CTRL  SHIFT  U
-
-`explainTerminalSelectionContextMenu`
 
 ## CTRL  6
 
@@ -138,10 +118,6 @@
 
 > HINT: REFERENCES
 
-## CTRL  SHIFT  .
-
-`fixCamelcaseRefactoring`
-
 ## CTRL  M
 
 `addSelectionToNextFindMatch`
@@ -158,9 +134,29 @@
 
 > Peek Implementation
 
+## ALT  SHIFT  Y
+
+`chat.selectKnowledgeBase`
+
+## ALT  SHIFT  G
+
+`interactiveEditor.generate`
+
+## ALT  SHIFT  I
+
+`interactiveEditor.review`
+
+## ALT  SHIFT  8
+
+`generateDocs`
+
 ## CTRL  SHIFT  A
 
 `action.splitEditorRight`
+
+## CTRL  SHIFT  U
+
+`explainTerminalSelectionContextMenu`
 
 ## ALT  =
 
@@ -201,12 +197,6 @@
 `editor.action.insertSnippet`
 
 > Snippet: ArrowFunction
-
-## ALT  9
-
-`editor.action.insertSnippet`
-
-> Snippet: StringTemplate
 
 ## CTRL  8
 
@@ -260,10 +250,6 @@
 
 > HINT: OPEN
 
-## ALT  E
-
-`workbench.view.explorer`
-
 ## CTRL  SHIFT  L
 
 `magicBeans.sortLines`
@@ -301,6 +287,8 @@
 * alt+`
 * ctrl+shift+c
 * ctrl+shift+f
+* ctrl+shift+g
 * ctrl+shift+q
 * ctrl+shift+v
 * ctrl+shift+w
+* ctrl+shift+x

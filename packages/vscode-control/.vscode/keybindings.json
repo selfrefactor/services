@@ -6,23 +6,19 @@
 		"comment": "Peek References"
 	},
 	{
-		"priority": true,
-		"key": "ctrl+shift+y",
+		"key": "alt+shift+y",
 		"command": "github.copilot.chat.selectKnowledgeBase"
 	},
 	{
-		"priority": true,
-		"key": "ctrl+shift+g",
+		"key": "alt+shift+g",
 		"command": "github.copilot.interactiveEditor.generate"
 	},
 	{
-		"priority": true,
-		"key": "ctrl+shift+i",
+		"key": "alt+shift+i",
 		"command": "github.copilot.interactiveEditor.review"
 	},
 	{
-		"priority": true,
-		"key": "ctrl+shift+8",
+		"key": "alt+shift+8",
 		"command": "github.copilot.interactiveEditor.generateDocs"
 	},
 	{
@@ -37,12 +33,12 @@
 	},
 	{
 		"priority": true,
-		"key": "ctrl+shift+7",
+		"key": "alt+shift+7",
 		"command": "github.copilot.ghpr.applySuggestion"
 	},
 	{
 		"priority": true,
-		"key": "ctrl+shift+x",
+		"key": "alt+shift+x",
 		"command": "github.copilot.interactiveEditor.fix"
 	},
 	{
@@ -63,7 +59,7 @@
 	},
 	{
 		"priority": true,
-		"key": "ctrl+shift+5",
+		"key": "ctrl+shift+y",
 		"command": "github.copilot.chat.explain.palette"
 	},
 	{
@@ -71,7 +67,6 @@
 		"command": "workbench.action.splitEditorRight"
 	},
 	{
-		"priority": true,
 		"key": "ctrl+shift+u",
 		"command": "github.copilot.terminal.explainTerminalSelectionContextMenu"
 	},
@@ -911,5 +906,10 @@
 		"key": "ctrl+shift+s",
 		"command": "-workbench.action.files.saveLocalFile",
 		"when": "remoteFileDialogVisible"
+	},
+	{
+		"key": "ctrl+shift+a",
+		"command": "-notification.acceptPrimaryAction",
+		"when": "notificationFocus || notificationToastsVisible"
 	}
 ]
