@@ -157,7 +157,7 @@ function getCurrentDirectory() {
 
 async function requestRandomFileWithSubfolderRightClick(data, context) {
   const directory = data.fsPath
-  await randomFileInitialize(directory, context, [])
+  await randomFileInitialize(directory, context, ['node_modules'])
   setter(REQUEST_RANDOM_FILE, true)
   requestRandomFile()
 }
