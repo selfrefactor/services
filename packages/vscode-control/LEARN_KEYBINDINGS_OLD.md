@@ -14,14 +14,6 @@
 
 `chat.attachSelection`
 
-## ALT  SHIFT  7
-
-`ghpr.applySuggestion`
-
-## ALT  SHIFT  X
-
-`interactiveEditor.fix`
-
 ## CTRL  5
 
 `github.copilot.chat.explain`
@@ -49,10 +41,6 @@
 ## F4
 
 `copilot.focus`
-
-## CTRL  H
-
-`action.revealDefinition`
 
 ## CTRL  I
 
@@ -134,29 +122,9 @@
 
 > Peek Implementation
 
-## ALT  SHIFT  Y
-
-`chat.selectKnowledgeBase`
-
-## ALT  SHIFT  G
-
-`interactiveEditor.generate`
-
-## ALT  SHIFT  I
-
-`interactiveEditor.review`
-
-## ALT  SHIFT  8
-
-`generateDocs`
-
 ## CTRL  SHIFT  A
 
 `action.splitEditorRight`
-
-## CTRL  SHIFT  U
-
-`explainTerminalSelectionContextMenu`
 
 ## ALT  =
 
@@ -168,7 +136,7 @@
 
 > Snippet: describe('${0:}
 
-## CLTRL  SHIFT  5
+## CTRL  SHIFT  5
 
 `editor.action.insertSnippet`
 
@@ -210,10 +178,6 @@
 
 > Snippet: commentAimedForTitle
 
-## ALT  T
-
-`terminal.focus`
-
 ## CTRL  SHIFT  S
 
 `toggleSplitEditorInGroup`
@@ -230,7 +194,7 @@
 
 `action.editorLayoutSingle`
 
-> HINT: 1 COLUMN
+> editorLayoutSingle | +2 for 2 columns
 
 ## CTRL  SHIFT  J
 
@@ -244,12 +208,6 @@
 
 `editor.action.goToDeclaration`
 
-## CTRL  O
-
-`files.openFolder`
-
-> HINT: OPEN
-
 ## CTRL  SHIFT  L
 
 `magicBeans.sortLines`
@@ -258,13 +216,41 @@
 
 `magicBeans.createSpec`
 
-## ALT  C
-
-`magicBeans.copyTrimmed`
-
 ## ALT  Z
 
 `workbench.action.gotoSymbol`
+
+## ALT  SHIFT  U
+
+`explainTerminalSelectionContextMenu`
+
+## ALT  SHIFT  H
+
+`action.revealDefinition`
+
+## ALT  SHIFT  7
+
+`ghpr.applySuggestion`
+
+## ALT  SHIFT  X
+
+`interactiveEditor.fix`
+
+## ALT  SHIFT  Y
+
+`chat.selectKnowledgeBase`
+
+## ALT  SHIFT  G
+
+`interactiveEditor.generate`
+
+## ALT  SHIFT  I
+
+`interactiveEditor.review`
+
+## ALT  SHIFT  8
+
+`generateDocs`
 
 ## CTRL  SHIFT  ;
 

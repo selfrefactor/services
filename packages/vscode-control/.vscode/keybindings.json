@@ -6,22 +6,6 @@
 		"comment": "Peek References"
 	},
 	{
-		"key": "alt+shift+y",
-		"command": "github.copilot.chat.selectKnowledgeBase"
-	},
-	{
-		"key": "alt+shift+g",
-		"command": "github.copilot.interactiveEditor.generate"
-	},
-	{
-		"key": "alt+shift+i",
-		"command": "github.copilot.interactiveEditor.review"
-	},
-	{
-		"key": "alt+shift+8",
-		"command": "github.copilot.interactiveEditor.generateDocs"
-	},
-	{
 		"priority": true,
 		"key": "ctrl+3",
 		"command": "github.copilot.chat.attachFile"
@@ -31,16 +15,7 @@
 		"key": "ctrl+4",
 		"command": "github.copilot.chat.attachSelection"
 	},
-	{
-		"priority": true,
-		"key": "alt+shift+7",
-		"command": "github.copilot.ghpr.applySuggestion"
-	},
-	{
-		"priority": true,
-		"key": "alt+shift+x",
-		"command": "github.copilot.interactiveEditor.fix"
-	},
+	
 	{
 		"priority": true,
 		"key": "ctrl+5",
@@ -65,10 +40,6 @@
 	{
 		"key": "ctrl+shift+a",
 		"command": "workbench.action.splitEditorRight"
-	},
-	{
-		"key": "ctrl+shift+u",
-		"command": "github.copilot.terminal.explainTerminalSelectionContextMenu"
 	},
 	{
 		"priority": true,
@@ -110,12 +81,6 @@
 	{
 		"key": "alt+=",
 		"command": "git.push"
-	},
-	{
-		"priority": true,
-		"key": "ctrl+h",
-		"command": "editor.action.revealDefinition",
-		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
 	},
 	{
 		"key": "alt+1",
@@ -161,7 +126,7 @@
 		"when": "editorLangId==python"
 	},
 	{
-		"key": "cltrl+shift+5",
+		"key": "ctrl+shift+5",
 		"command": "editor.action.insertSnippet",
 		"args": {
 			"name": "Function"
@@ -226,6 +191,7 @@
 	},
 	{
 		"key": "alt+t",
+		"alreadyLearned": true,
 		"command": "terminal.focus"
 	},
 	{
@@ -260,7 +226,7 @@
 	{
 		"key": "ctrl+shift+1",
 		"command": "workbench.action.editorLayoutSingle",
-		"hint": "1 Column"
+		"comment": "editorLayoutSingle | +2 for 2 columns"
 	},
 	{
 		"key": "alt+f",
@@ -323,7 +289,7 @@
 	},
 	{
 		"key": "ctrl+o",
-		"hint": "OPEN",
+		"alreadyLearned": true,
 		"command": "workbench.action.files.openFolder"
 	},
 	{
@@ -394,11 +360,45 @@
 	{
 		"command": "magicBeans.copyTrimmed",
 		"key": "alt+c",
+		"alreadyLearned": true,
 		"when": "editorTextFocus"
 	},
 	{
 		"key": "alt+z",
 		"command": "workbench.action.gotoSymbol"
+	},
+	{
+		"key": "alt+shift+u",
+		"command": "github.copilot.terminal.explainTerminalSelectionContextMenu"
+	},
+	{
+		"key": "alt+shift+h",
+		"command": "editor.action.revealDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "alt+shift+7",
+		"command": "github.copilot.ghpr.applySuggestion"
+	},
+	{
+		"key": "alt+shift+x",
+		"command": "github.copilot.interactiveEditor.fix"
+	},
+	{
+		"key": "alt+shift+y",
+		"command": "github.copilot.chat.selectKnowledgeBase"
+	},
+	{
+		"key": "alt+shift+g",
+		"command": "github.copilot.interactiveEditor.generate"
+	},
+	{
+		"key": "alt+shift+i",
+		"command": "github.copilot.interactiveEditor.review"
+	},
+	{
+		"key": "alt+shift+8",
+		"command": "github.copilot.interactiveEditor.generateDocs"
 	},
 	{
 		"key": "ctrl+shift+;",
@@ -911,5 +911,10 @@
 		"key": "ctrl+shift+a",
 		"command": "-notification.acceptPrimaryAction",
 		"when": "notificationFocus || notificationToastsVisible"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "-editor.action.accessibleViewGoToSymbol",
+		"when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
 	}
 ]

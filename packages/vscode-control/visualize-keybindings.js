@@ -1,11 +1,9 @@
-import { identity, ifElse, interpolate, join, last, maybe, piped, split, splitEvery, takeLast } from 'rambdax'
-import { markdownTable } from 'markdown-table'
-import pkg from 'fs-extra';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-const { readJson, outputFile } = pkg;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const { interpolate, join, last, maybe, piped, split, splitEvery, takeLast } = require('rambdax');
+const { readJson, outputFile } = require('fs-extra');
+const getMarkdownTable = async () => {
+  const { markdownTable } = await import('markdown-table');
+  return markdownTable;
+};
 
 const destination = `${ __dirname }/LEARN_KEYBINDINGS.md`
 const destinationOld = `${ __dirname }/LEARN_KEYBINDINGS_OLD.md`
@@ -173,6 +171,7 @@ ${ CONVENIENT_KEYS.map(x => `* ${ x }`).join('\n') }
 			commandSecond: splitted[1][i]?.command ?? ''
 		}
 	})
+	const markdownTable = await getMarkdownTable();
 	let markdownTableContent = markdownTable([
 		[ 'Key', 'Command', 'Key', 'Command' ],
 		...fourColumns.map(({ key, command, keySecond, commandSecond }) => [ key, command, keySecond, commandSecond ]),
