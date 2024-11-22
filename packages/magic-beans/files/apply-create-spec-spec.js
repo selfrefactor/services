@@ -1,4 +1,4 @@
-const { applyCreateSpec } = require("./apply-create-spec")
+const { applyCreateSpec } = require("../src/_modules/apply-create-spec")
 
 test('happy', () => {
   const filePath = `${ process.env.HOME }/repos/rambda/source/add.js`
