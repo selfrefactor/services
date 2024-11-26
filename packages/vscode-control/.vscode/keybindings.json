@@ -268,7 +268,7 @@
 	},
 	{
 		"key": "ctrl+shift+k",
-		"priority": true,
+		"alreadyLearned": true,
 		"command": "workbench.action.selectTheme"
 	},
 	{

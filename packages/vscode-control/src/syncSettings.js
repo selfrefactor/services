@@ -15,7 +15,7 @@ const {
 } = require('./constants.js');
 
 const VSCODE_INSIDERS = process.env.BETA === 'ON';
-const FOLDING_IMPORTS = !VSCODE_INSIDERS;
+const FOLDING_IMPORTS = VSCODE_INSIDERS;
 
 // due to github profiles extension
 const WRITE_TO_OUTPUT = VSCODE_INSIDERS;
