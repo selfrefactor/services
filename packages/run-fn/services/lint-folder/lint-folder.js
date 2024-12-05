@@ -3,7 +3,7 @@ const { CWD } = require('../../constants');
 const { lintFile } = require('../lint/lint');
 const { log, scanFolder } = require('helpers-fn');
 
-const allowedFileEndings = ['.ts', '.js'];
+const allowedFileEndings = ['.ts', '.js', '.tsx', '.jsx', '.py', '.css'];
 const MAX_LIMIT = 700;
 
 const excludeFn = (x) =>

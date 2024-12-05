@@ -18,16 +18,16 @@
 	"license": "MIT",
 	"dependencies": {
 		"@biomejs/biome": "1.9.4",
-		"dayjs": "^1.11.13",
+		"dayjs": "1.11.13",
 		"dep-fn": "2.3.3",
 		"fs-extra": "11.2.0",
 		"helpers-fn": "2.0.0",
-		"oxlint": "0.10.3",
-		"prettier": "3.3.3",
+		"oxlint": "0.14.0",
+		"prettier": "3.4.2",
 		"rambdax": "11.2.0",
 		"string-fn": "3.6.2"
 	},
 	"devDependencies": {
-		"typescript": "5.6.3"
+		"typescript": "5.7.2"
 	}
 }
