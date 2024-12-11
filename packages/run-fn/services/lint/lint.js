@@ -53,7 +53,10 @@ async function oxlint(filePath) {
 	if (!success) return errorMessage;
 	return logString;
 }
-
+const escapeTerminalPath = (path) => {
+  return path
+    .replace(/([()[\]])/g, '\\$1'); // Escapes (, ), [, and ]
+};
 async function lintFn(filePath) {
 	const oxlintOutput = await oxlint(filePath);
 	await lintFileWithPrettier(filePath);
