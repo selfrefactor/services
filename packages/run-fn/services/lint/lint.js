@@ -58,11 +58,13 @@ const escapeTerminalPath = (path) => {
     .replace(/([()[\]])/g, '\\$1'); // Escapes (, ), [, and ]
 };
 async function lintFn(filePath) {
-	const oxlintOutput = await oxlint(filePath);
-	await lintFileWithPrettier(filePath);
-	const biomeOutput = await biomeLint(filePath);
+	let escapedPath = escapeTerminalPath(filePath);
+	const oxlintOutput = await oxlint(escapedPath);
+	await lintFileWithPrettier(escapedPath);
+	const biomeOutput = await biomeLint(escapedPath);
 	if (oxlintOutput) console.log('\n oxlint: ', oxlintOutput, '\n');
 	if (biomeOutput) console.log('\n biomelint: ', biomeOutput, '\n');
 }
 
+exports.escapeTerminalPath = escapeTerminalPath;
 exports.lintFile = lintFn;
