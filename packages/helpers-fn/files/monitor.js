@@ -1,7 +1,7 @@
 const { delay, toDecimal, piped, split, last, head, map, trim } = require('rambdax')
 const { ms } = require('string-fn')
-const { exec } = require('./exec')
-const { parseMonitorData } = require('./utils/parse-monitor-data')
+const { exec } = require('../src/exported/exec')
+const { parseMonitorData } = require('../src/exported/utils/parse-monitor-data')
 var osu = require('node-os-utils')
  
 async function getProcessUsage(){

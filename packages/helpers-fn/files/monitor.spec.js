@@ -2,7 +2,7 @@ import { writeJson } from 'fs-extra'
 import { delay } from 'rambdax'
 import { ms } from 'string-fn'
 import { getMemoryUsage, getProcessUsage, monitor } from './monitor'
-import { parseMonitorData } from './utils/parse-monitor-data'
+import { parseMonitorData } from '../src/exported/utils/parse-monitor-data'
 
 jest.setTimeout(ms('30 minutes'))
 
