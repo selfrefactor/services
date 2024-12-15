@@ -1,5 +1,7 @@
 {
   "recommendations": [
+		"bradlc.vscode-tailwindcss",
+		"ellreka.tailwindcss-highlight",
 		"yzane.markdown-pdf",
 		"littensy.charmed-icons",
 		"oderwat.indent-rainbow",
