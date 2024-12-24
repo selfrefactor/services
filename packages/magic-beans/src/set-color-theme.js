@@ -11,6 +11,11 @@ const BASE_BETA = '/.config/Code - Insiders/User';
 
 let init = false;
 
+const PREFERED_LIGHT_THEMES = [
+	'FunkyDrummer',
+	'SweatLeaf',
+];
+
 const ALLOWED_LIGHT_THEMES = [
 	'CommunicationBreakdown',
 	'DancingDays',
@@ -34,12 +39,27 @@ const ALLOWED_DARK_THEMES = [
 	'TripTank',
 	'UglyAmericans',
 ];
+
 const [startDaytime, endDaytime] = configAnt(THEME_CHANGE_DAYTIME);
 
 function getExpectedColorThemes() {
 	return currentTimeIsBetween(startDaytime, endDaytime)
 		? ALLOWED_LIGHT_THEMES
 		: ALLOWED_DARK_THEMES;
+}
+
+function getExpectedColorThemesAsString() {
+	return currentTimeIsBetween(startDaytime, endDaytime)
+		? 'light'
+		: 'dark';
+}
+
+function getRandomTheme (expectedColorThemes) {
+	let colorThemeString = getExpectedColorThemesAsString();
+	if(colorThemeString === 'dark' || Math.random() > 0.5) {
+		return shuffle(expectedColorThemes)[0];
+	}
+	return shuffle(PREFERED_LIGHT_THEMES)[0];
 }
 
 function setColorTheme(context) {
@@ -63,7 +83,7 @@ function setColorTheme(context) {
 		const currentColorTheme = parsed['workbench.colorTheme'];
 		if (expectedColorThemes.includes(currentColorTheme)) return;
 
-		parsed['workbench.colorTheme'] = shuffle(expectedColorThemes)[0];
+		parsed['workbench.colorTheme'] = getRandomTheme(expectedColorThemes);
 		const newContent = JSON.stringify(parsed, null, 2);
 		await vscode.workspace.fs.writeFile(fileUri, Buffer.from(newContent));
 	};
