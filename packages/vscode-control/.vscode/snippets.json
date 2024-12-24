@@ -1,0 +1,109 @@
+{
+  "Function": {
+    "prefix": "fnsnippet",
+    "body": [
+      "function $0 (){",
+      "\t",
+      "}"
+    ],
+    "description": "fn"
+  },
+  "TestCase": {
+    "prefix": "test",
+    "body": [
+      "test('$1', () => {",
+      "\t$2",
+      "})"
+    ],
+    "description": "test"
+  },
+  "ArrowFunction": {
+    "prefix": "arrow",
+    "body": [
+      "( ${1:} ) => ${2:} "
+    ]
+  },
+  "Require": {
+    "prefix": "req",
+    "body": [
+      "const { ${1:method} } = require('${0}')"
+    ],
+    "description": "require"
+  },
+  "RequireX": {
+    "prefix": "reqx",
+    "body": [
+      "const { ${1:method} } = require('./${1:method}')"
+    ],
+    "description": "requireX"
+  },
+  "commentMultiline": {
+    "prefix": "com",
+    "body": [
+      "/**",
+      " * $0",
+      " */"
+    ],
+    "description": "comment multiline"
+  },
+  "commentAimedForTitle": {
+    "prefix": "commentTitle",
+    "body": [
+      "// ---------------------------------------------------------------------",
+      "// $0",
+      "// ---------------------------------------------------------------------"
+    ],
+    "description": "comment multiline"
+  },
+  "commentx": {
+    "prefix": "comx",
+    "body": [
+      "// $0",
+      "// ============================================"
+    ],
+    "description": "comment with underline"
+  },
+  "StringTemplate": {
+    "prefix": "str",
+    "body": [
+      "`${ ${0} }`"
+    ],
+    "description": "str"
+  },
+  "ExpectSnapshot": {
+    "prefix": "snap",
+    "body": [
+      "expect(",
+      "\t$0",
+      ").toMatchSnapshot()"
+    ]
+  },
+  "ExpectInlineSnapshot": {
+    "prefix": "inline",
+    "body": [
+      "expect(",
+      "\t $0 ",
+      ").toMatchInlineSnapshot()"
+    ]
+  },
+  "Expect": {
+    "prefix": "exp",
+    "body": [
+      "expect(",
+      "\t $0 ",
+      ").toEqual($1)"
+    ],
+    "description": "ext"
+  },
+  "LogDebug": {
+    "prefix": "log",
+    "body": [
+      "console.log({type: typeof ${1:toLog}})",
+      "console.log({array: Array.isArray(${1:toLog}) ? ${1:toLog}.length : 'not array'})",
+      "console.log( {keys: ${1:toLog} ? Object.keys(${1:toLog}) : 'not object'})",
+      "console.log(${1:toLog})",
+      "\n$0"
+    ],
+    "description": "log and describe"
+  }
+}

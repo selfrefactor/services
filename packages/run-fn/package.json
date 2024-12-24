@@ -1,0 +1,33 @@
+{
+	"name": "run-fn",
+	"version": "3.44.2",
+	"description": "Collections of useful CLI functions",
+	"main": "./cli.js",
+	"bin": {
+		"run": "bin/run.js"
+	},
+	"repository": "https://github.com/selfrefactor/services/tree/master/packages/run-fn",
+	"keywords": [
+		"cli",
+		"helpers",
+		"services",
+		"lint",
+		"git"
+	],
+	"author": "self_refactor",
+	"license": "MIT",
+	"dependencies": {
+		"@biomejs/biome": "1.9.4",
+		"dayjs": "1.11.13",
+		"dep-fn": "2.3.3",
+		"fs-extra": "11.2.0",
+		"helpers-fn": "2.0.0",
+		"oxlint": "0.14.0",
+		"prettier": "3.4.2",
+		"rambdax": "11.2.0",
+		"string-fn": "3.6.2"
+	},
+	"devDependencies": {
+		"typescript": "5.7.2"
+	}
+}

@@ -1,0 +1,316 @@
+{
+	"name": "magic-beans",
+	"scripts": {
+		"dev": "jest -u src/fixComment.spec.js",
+		"test": "jest src/_modules",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"lint:file": "node scripts/tasks/lint/lint.js",
+		"lint:all": "node scripts/tasks/lint/lint-all.js",
+		"jest:file": "node scripts/tasks/run/jest.js"
+	},
+	"main": "./src/extension",
+	"version": "4.17.0",
+	"dependencies": {
+		"helpers-fn": "2.0.0",
+		"rambdax": "11.2.0",
+		"string-fn": "3.6.2"
+	},
+	"depFn": [
+		"eslint",
+		"eslint-plugin-unused-imports"
+	],
+	"devDependencies": {
+		"@types/jest": "29.5.14",
+		"jest": "29.7.0",
+		"vscode": "1.1.37",
+		"@biomejs/biome": "1.9.4",
+		"@stylistic/eslint-plugin": "2.10.1",
+		"eslint": "8.57.0",
+		"eslint-plugin-jest": "28.9.0",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-perfectionist": "3.9.1",
+		"eslint-plugin-sonarjs": "2.0.4",
+		"eslint-plugin-unused-imports": "3.1.0",
+		"fs-extra": "11.2.0",
+		"prettier": "3.3.3"
+	},
+	"jest": {
+		"moduleFileExtensions": [
+			"js"
+		],
+		"testRegex": ".+spec.js$"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/selfrefactor/services/tree/master/packages/magic-beans"
+	},
+	"icon": "files/magic-beans.png",
+	"displayName": "Magic Beans",
+	"description": "Magic-like helpers",
+	"publisher": "selfrefactor",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "magicBeans.openFolder",
+					"group": "navigation"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "magicBeans.openFolderInVSCodeBeta",
+					"group": "navigation"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
+					"group": "navigation"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "highlightOnCopy.run",
+				"title": "Copy and highlight selected text"
+			},
+			{
+				"command": "magicBeans.symbolsList",
+				"title": "Magic Beans - Request all symbols within current project"
+			},
+			{
+				"command": "magicBeans.requestRandomFile",
+				"title": "Magic Beans - request random file"
+			},
+			{
+				"command": "magicBeans.requestRandomFileWithSubfolder",
+				"title": "Magic Beans - request random file within subfolder"
+			},
+			{
+				"command": "magicBeans.createSpec",
+				"title": "Create spec"
+			},
+			{
+				"command": "magicBeans.fixCamelcaseRefactoring",
+				"title": "Fix camelcase refactoring"
+			},
+			{
+				"command": "magicBeans.formatJson",
+				"title": "Format JSON"
+			},
+			{
+				"command": "magicBeans.sortLines",
+				"title": "Sort lines"
+			},
+			{
+				"command": "magicBeans.slowScrollInit",
+				"title": "slowScroll init"
+			},
+			{
+				"command": "magicBeans.slowScrollStart",
+				"title": "slowScroll start"
+			},
+			{
+				"command": "magicBeans.slowScrollStop",
+				"title": "slowScroll stop"
+			},
+			{
+				"command": "magicBeans.openFolder",
+				"title": "Open folder in new VS Code"
+			},
+			{
+				"command": "magicBeans.openFolderInVSCodeBeta",
+				"title": "Open folder in new VS Code(beta)"
+			},
+			{
+				"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
+				"title": "Open a folder in Random Files Mode"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "magicBeans.highlightOnCopyRun",
+				"key": "ctrl+c",
+				"mac": "cmd+c",
+				"when": "editorTextFocus && magicBeans.init"
+			},
+			{
+				"command": "magicBeans.sortLines",
+				"key": "ctrl+shift+-"
+			},
+			{
+				"command": "magicBeans.requestRandomFile",
+				"key": "f7"
+			},
+			{
+				"command": "magicBeans.symbolsList",
+				"key": "f8"
+			},
+			{
+				"command": "magicBeans.slowScrollInit",
+				"key": "f9"
+			},
+			{
+				"command": "magicBeans.createSpec",
+				"key": "ctrl+shift+0"
+			},
+			{
+				"command": "magicBeans.fixCamelcaseRefactoring",
+				"key": "ctrl+shift+]"
+			},
+			{
+				"command": "magicBeans.copyTrimmed",
+				"key": "alt+c",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "magicBeans.fixComment",
+				"key": "capslock c",
+				"when": "editorTextFocus"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "MagicBeans",
+			"properties": {
+				"magicBeans.IS_VSCODE_INSIDERS": {
+					"type": "boolean",
+					"default": false,
+					"description": ""
+				},
+				"magicBeans.THEME_CHANGE_DAYTIME": {
+					"type": "array",
+					"description": "",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"6:50",
+						"16:20"
+					]
+				},
+				"magicBeans.SLOW_SCROLL_SHOW_BAR_INITIALLY": {
+					"type": "boolean",
+					"default": false,
+					"description": ""
+				},
+				"magicBeans.ALLOW_CHANGE_COLOR_THEME": {
+					"type": "boolean",
+					"default": false,
+					"description": "auto set of color theme"
+				},
+				"magicBeans.AUTO_CHANGE_COLOR_THEME": {
+					"type": "boolean",
+					"default": false,
+					"description": "always change color theme"
+				},
+				"magicBeans.SYMBOLS_LIST_ALLOWED_EXTENSIONS": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						".js",
+						".jsx",
+						".tsx",
+						".ts"
+					],
+					"description": "Which file extensions are allowed in symbols list mode"
+				},
+				"magicBeans.SLOW_SCROLL_MS": {
+					"type": "number",
+					"default": 10000,
+					"description": "slow scroll interval in ms"
+				},
+				"magicBeans.SLOW_SCROLL_LINES_TO_SCROLL": {
+					"type": "number",
+					"default": 14,
+					"description": "slow scroll number of lines"
+				},
+				"magicBeans.RANDOM_FILE_FORBIDDEN": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						".test.ts",
+						".test.tsx",
+						".spec.ts",
+						".spec.tsx",
+						".test.js",
+						".test.jsx",
+						".spec.js",
+						"__init__.py",
+						".spec.jsx"
+					],
+					"description": "Which file extensions are forbidden in random file mode"
+				},
+				"magicBeans.RANDOM_FILE_ALLOWED": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						".html",
+						".js",
+						".jsx",
+						".tsx",
+						".css",
+						".scss",
+						".py",
+						".feature",
+						".ts"
+					],
+					"description": "Which file partials are allowed in random file mode"
+				},
+				"magicBeans.RANDOM_FILE_SKIP_DIRECTORIES": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"uniqueItems": true,
+					"default": [
+						"node_modules",
+						"coverage",
+						"vendor",
+						"bin",
+						"dist",
+						"build",
+						"lib",
+						"__pycache__",
+						".vscode",
+						".idea",
+						".git",
+						".cache"
+					],
+					"description": "Which directories are excluded in random file mode"
+				},
+				"magicBeans.RANDOM_FILE_ALLOWED_DIRECTORY": {
+					"type": "string",
+					"default": "",
+					"description": "Which directory is allowed in random file mode"
+				}
+			}
+		}
+	},
+	"niketaScripts": {
+		"fileCommands": {
+			"**/*.js": "yarn lint:file"
+		},
+		"testCommands": {
+			"**/*.js": "yarn jest:file"
+		}
+	}
+}

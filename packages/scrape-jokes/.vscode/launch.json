@@ -1,0 +1,119 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test File",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--verbose",
+        "-i",
+        "-u",
+        "--no-cache",
+        "${fileBasenameNoExtension}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Nodejs File",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Scrape all",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "src/run.spec.js",
+        "https://vicovete.bg/page/PAGE",
+        "all"
+      ],
+      "env": {
+        "FORCE_CONTINUE": "ON",
+        "HEADLESS": "OFF",
+        "CHECK_FOR_UNIQUENESS": "ON",
+        "PAGE": "127",
+        "DEBUG": "ON"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Update all",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "src/run.spec.js",
+        "https://vicovete.bg/page/PAGE",
+        "all"
+      ],
+      "env": {
+        "FORCE_CONTINUE": "OFF",
+        "HEADLESS": "OFF",
+        "CHECK_FOR_UNIQUENESS": "ON",
+        "PAGE": "1",
+        "DEBUG": "ON"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Scrape",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "src/run.spec.js",
+        "https://vicovete.bg/category/%d0%ba%d0%b8%d1%84%d0%bb%d0%b8",
+        "kifli"
+      ],
+      "env": {
+        "HEADLESS": "OFF",
+        "CHECK_FOR_UNIQUENESS": "OFF",
+        "DEBUG": "ON"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Scrape to check parse of text",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "src/run.spec.js",
+        "https://vicovete.bg/category/uncategorized",
+        "test"
+      ],
+      "env": {
+        "HEADLESS": "OFF"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Scrape with config",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "src/run.spec.js",
+        "https://vicovete.bg/category/uncategorized",
+        "0"
+      ],
+      "env": {
+        "HEADLESS": "OFF",
+        "WITH_CONFIG": "ON"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+  ]
+}

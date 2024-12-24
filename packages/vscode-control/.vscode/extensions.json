@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+		"bradlc.vscode-tailwindcss",
+		"ellreka.tailwindcss-highlight",
+		"yzane.markdown-pdf",
+		"littensy.charmed-icons",
+		"oderwat.indent-rainbow",
+    "ms-vscode.vscode-typescript-next",
+    "naumovs.color-highlight",
+    "selfrefactor.Niketa-theme",
+    "selfrefactor.code-complexity",
+    "selfrefactor.magic-beans",
+    "selfrefactor.niketa-dark-theme",
+    "selfrefactor.niketa-vscode-extension"
+  ]
+}

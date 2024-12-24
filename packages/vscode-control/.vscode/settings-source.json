@@ -1,0 +1,107 @@
+{
+	"github.copilot.chat.reviewSelection.instructions": [
+    {
+      "text": "Prevent multiple empty lines in the code."
+    },
+    {
+      "text": "Improve titles of test cases if possible."
+    }
+  ],
+	"github.copilot.chat.edits.enabled": true,
+	"github.copilot.chat.followUps": "always",
+	"github.copilot.chat.experimental.inlineChatHint.enabled": false,
+	"github.copilot.chat.experimental.codeFeedback.enabled": true,
+	"github.copilot.chat.experimental.codeFeedback.instructions": [
+		{
+			"text": "try to add comment to complext code pieces | when possible, include comment how data changes on specific code line that contains important logic or hard to understand logic"
+		}
+	],
+	"github.copilot.chat.experimental.codeGeneration.instructions": [
+		{
+			"text": "avoid introducing new interfaces when refactoring is requested in Typescript code | when refactoring is requested in Typescript code, make sure that refactored code is valid TS" 
+		}
+	],
+	"github.copilot.chat.experimental.testGeneration.instructions": [
+		{
+			"text": "Test suite is Jest or Vitest|Happy path is the first test and its name is happy|Error test cases are last in suite|minimum two top level describe blocks can exists and no nested describe blocks|always prefer `.spec.` instead of `.test` as file name suffix"
+		}
+	],
+	"github.copilot.chat.experimental.generateTests.codeLens": true,
+	"github.copilot.chat.experimental.inlineChatCompletionTrigger.enabled": false,
+	"github.copilot.chat.experimental.startDebugging.enabled": true,
+	"github.copilot.chat.experimental.temporalContext.enabled": true,
+	"github.copilot.chat.scopeSelection": true,
+	"github.copilot.chat.welcomeMessage": "never",
+	"editor.occurrencesHighlightDelay": 1000,
+	"workbench.panel.showLabels": true,
+	"markdown-pdf.displayHeaderFooter": false,
+  "editor.suggest.selectionMode": "whenTriggerCharacter",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.inlayHints.enabled": "off",
+  "editor.inlayHints.padding": true,
+  "editor.parameterHints.enabled": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "explorer.autoReveal": true,
+  "references.preferredLocation": "view",
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.focusRecentEditorAfterClose": false,
+  "workbench.editor.revealIfOpen": false,
+
+  "breadcrumbs.symbolSortOrder": "type",
+  "magicBeans.RANDOM_FILE_ALLOWED": [
+    ".feature",
+    ".js",
+    ".md",
+    "package.json",
+		".ipynb",
+    ".rs",
+    ".vtl",
+    ".ts",
+    ".tsx"
+  ],
+  "magicBeans.RANDOM_FILE_FORBIDDEN": [
+    "__tests__",
+    ".gitconfig",
+    ".gitignore",
+    ".pylintrc",
+    ".spec.js",
+    ".spec.ts",
+    "index.tsx",
+    "index.ts",
+    "index.js",
+    "config.js",
+    "config.ts",
+    ".spec.tsx",
+    ".test.js",
+    ".test.ts",
+    ".test.tsx",
+    ".story.tsx",
+    ".stories.tsx",
+    "Makefile",
+    "package-lock.json",
+    "pre-commit"
+  ],
+  "magicBeans.RANDOM_FILE_SKIP_DIRECTORIES": [
+    "__tests__",
+    "test",
+    "tests",
+    "styles",
+    "node_modules",
+    "stories",
+    "coverage",
+    "vendor",
+    "bin",
+    "dist",
+    "build",
+    ".vscode",
+    ".idea",
+    ".git",
+    ".cache"
+  ],
+  "workbench.editor.dragToOpenWindow": false,
+  "files.autoSave": "onFocusChange",
+  "zenMode.hideActivityBar": false
+}

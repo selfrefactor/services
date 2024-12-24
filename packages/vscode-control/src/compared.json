@@ -1,0 +1,16 @@
+{
+  "editor.suggestOnTriggerCharacters": true,
+  "explorer.autoReveal": true,
+  "workbench.editor.revealIfOpen": false,
+  "editor.codeLens": true,
+  "editor.formatOnPaste": false,
+  "editor.guides.bracketPairs": false,
+  "editor.suggest.showIcons": true,
+  "files.autoSave": "off",
+  "javascript.preferences.importModuleSpecifierEnding": "auto",
+  "terminal.integrated.copyOnSelection": false,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "workbench.editor.labelFormat": "default",
+  "zenMode.centerLayout": true,
+  "zenMode.hideLineNumbers": true
+}

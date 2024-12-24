@@ -1,0 +1,35 @@
+{
+	"scripts": {
+		"on": "yarn on:1 && yarn on:2 && yarn keys",
+		"onx": "yarn on:1 && yarn on:2 && yarn keys",
+		"small": "yarn small:1 && yarn small:2",
+		"keys": "node visualize-keybindings",
+		"small:1": "MODE=small node ./src/syncSettings",
+		"small:2": "BETA=ON MODE=small node ./src/syncSettings",
+		"on:1": "MODE=normal node ./src/syncSettings",
+		"on:2": "BETA=ON MODE=normal node ./src/syncSettings",
+		"big:1": "MODE=big node ./src/syncSettings",
+		"big:2": "BETA=ON MODE=big node ./src/syncSettings",
+		"big": "yarn big:1 &&yarn big:2",
+		"bigger:1": "MODE=bigger node ./src/syncSettings",
+		"bigger:2": "BETA=ON MODE=bigger node ./src/syncSettings"
+	},
+	"name": "vscode-control",
+	"version": "0.1.0",
+	"repository": "git@github.com:selfrefactor/services.git",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"fs-extra": "10.0.0",
+		"helpers-fn": "1.6.0",
+		"markdown-table": "^3.0.4",
+		"rambdax": "8.0.1"
+	},
+	"commitLabels": [
+		"keybinding",
+		"extension",
+		"snippet",
+		"setting"
+	],
+	"devDependencies": {}
+}

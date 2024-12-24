@@ -1,0 +1,30 @@
+{
+	"name": "dep-fn",
+	"scripts": {
+		"out": "tsc -p .",
+		"in": "tsc -p . --watch",
+		"debug": "yarn out&&node dist/debug.js"
+	},
+	"main": "dist/src/index.js",
+	"typings": "index.d.ts",
+	"version": "2.3.3",
+	"depFn": [
+		"inquirer"
+	],
+	"dependencies": {
+		"fs-extra": "11.2.0",
+		"inquirer": "8.0.0",
+		"json-format": "1.0.1",
+		"package-storage": "1.0.0",
+		"rambdax": "11.1.1"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "11.0.4",
+		"@types/node": "20.14.11",
+		"typescript": "5.5.3"
+	},
+	"license": "MIT",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"description": "Easier update of Node.js dependencies",
+	"private": false
+}

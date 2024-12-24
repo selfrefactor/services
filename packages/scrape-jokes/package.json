@@ -1,0 +1,53 @@
+{
+	"name": "codesignal-tasks",
+	"scripts": {
+		"config": "WITH_CONFIG=ON jest src/run.spec.js",
+		"update": "FORCE_CONTINUE=OFF CHECK_FOR_UNIQUENESS=ON PAGE=1 jest src/run.spec.js https://vicovete.bg/page/PAGE all",
+		"all": "FORCE_CONTINUE=ON CHECK_FOR_UNIQUENESS=ON PAGE=1268 jest src/run.spec.js https://vicovete.bg/page/PAGE all",
+		"allx": "HEADLESS=OFF yarn all",
+		"configx": "HEADLESS=OFF WITH_CONFIG=ON jest src/run.spec.js",
+		"updatex": "HEADLESS=OFF yarn update",
+		"kifli": "CHECK_FOR_UNIQUENESS=OFF jest src/run.spec.js https://vicovete.bg/category/%d0%ba%d0%b8%d1%84%d0%bb%d0%b8 kifli",
+		"lint:file": "node scripts/tasks/lint/lint.js",
+		"lint:all": "node scripts/tasks/lint/lint-all.js",
+		"jest:file": "node scripts/tasks/run/jest.js"
+	},
+	"typings": "./index.d.ts",
+	"main": "./src/code-signal.js",
+	"version": "0.1.0",
+	"dependencies": {
+		"fs-extra": "11.2.0",
+		"playwright": "1.41.1",
+		"playwright-fn": "0.2.1",
+		"rambdax": "10.1.0",
+		"string-fn": "3.3.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.5.3",
+		"@stylistic/eslint-plugin": "1.5.4",
+		"@types/node": "20.11.13",
+		"eslint": "8.56.0",
+		"eslint-plugin-jest": "27.6.3",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-perfectionist": "2.5.0",
+		"eslint-plugin-sonarjs": "0.23.0",
+		"eslint-plugin-unused-imports": "3.0.0",
+		"fs-extra": "11.2.0",
+		"helpers-fn": "1.8.1",
+		"jest": "29.7.0",
+		"prettier": "3.2.4"
+	},
+	"repository": "https://github.com/selfrefactor/codesignal-tasks",
+	"license": "MIT",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"private": false,
+	"description": "CodeSignal tasks",
+	"niketaScripts": {
+		"fileCommands": {
+			"**/*.js": "yarn lint:file"
+		},
+		"testCommands": {
+			"**/*.js": "yarn jest:file"
+		}
+	}
+}

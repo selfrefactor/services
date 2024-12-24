@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+[
+  "/home/w/repos/services/packages/helpers-fn/src/index.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/copy.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/copy.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/create-benchmark.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/create-complex-benchmark.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/default-to.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/default-to.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/exec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/get-staged-files.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/get-staged-files.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/run-tests.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/run-tests.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/scan-folder.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/scan-folder.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/log/constants.js",
+  "/home/w/repos/services/packages/helpers-fn/src/log/log.js",
+  "/home/w/repos/services/packages/helpers-fn/src/log/log.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/tests/benchmark-utils.js",
+  "/home/w/repos/services/packages/helpers-fn/src/tests/create-benchmark.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/utils/parse-monitor-data.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/utils/parse-monitor-data.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/log/_modules/big-log.js",
+  "/home/w/repos/services/packages/helpers-fn/src/log/_modules/box.js",
+  "/home/w/repos/services/packages/helpers-fn/src/log/_modules/colorized-background.js",
+  "/home/w/repos/services/packages/helpers-fn/src/log/_modules/colorized-text.js",
+  "/home/w/repos/services/packages/helpers-fn/src/log/_modules/log-object.js",
+  "/home/w/repos/services/packages/helpers-fn/src/log/_modules/log-with-icon.js",
+  "/home/w/repos/services/packages/helpers-fn/src/log/_modules/separator.js",
+  "/home/w/repos/services/packages/helpers-fn/src/tests/benchmarks/allPass.js",
+]
+`;
+
+exports[`with exclude 1`] = `
+[
+  "/home/w/repos/services/packages/helpers-fn/src/index.js",
+  "/home/w/repos/services/packages/helpers-fn/src/tests/benchmark-utils.js",
+  "/home/w/repos/services/packages/helpers-fn/src/tests/create-benchmark.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/copy.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/copy.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/create-benchmark.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/create-complex-benchmark.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/default-to.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/default-to.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/exec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/get-staged-files.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/get-staged-files.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/run-tests.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/run-tests.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/scan-folder.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/scan-folder.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/tests/benchmarks/allPass.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/utils/parse-monitor-data.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/utils/parse-monitor-data.spec.js",
+]
+`;
+
+exports[`with filter 1`] = `
+[
+  "/home/w/repos/services/packages/helpers-fn/src/log/log.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/copy.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/default-to.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/get-staged-files.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/run-tests.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/scan-folder.spec.js",
+  "/home/w/repos/services/packages/helpers-fn/src/exported/utils/parse-monitor-data.spec.js",
+]
+`;
