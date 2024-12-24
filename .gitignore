@@ -1,0 +1,11 @@
+node_modules
+coverage
+*.log
+.env
+packages/build-all-stars-of/screenshots/error.sort.used.by.png
+packages/magic-beans/src/symbols-utils/foo.spec.js
+packages/vscode-control/.vscode/settings.json
+packages/vscode-control/settings-stable.json
+packages/scrape-jokes/output/*.json
+packages/scrape-jokes/output/*.md
+packages/vscode-control/LEARN_KEYBINDINGS.pdf
