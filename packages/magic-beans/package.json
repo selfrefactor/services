@@ -1,12 +1,9 @@
 {
 	"name": "magic-beans",
 	"scripts": {
-		"dev": "jest -u src/fixComment.spec.js",
+		"dev": "jest -u src/_modules/format-json.spec.js",
 		"test": "jest src/_modules",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"lint:file": "node scripts/tasks/lint/lint.js",
-		"lint:all": "node scripts/tasks/lint/lint-all.js",
-		"jest:file": "node scripts/tasks/run/jest.js"
+		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"main": "./src/extension",
 	"version": "4.17.0",

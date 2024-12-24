@@ -1,4 +1,5 @@
-import { formatJson } from './format-json.js'
+let { formatJson } = require('./format-json.js')
+
 const packageJson = `
 {
 	"jest": {
