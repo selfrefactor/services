@@ -10,7 +10,7 @@
 	},
 	"typings": "./index.d.ts",
 	"main": "./dist/string-fn",
-	"version": "3.6.2",
+	"version": "3.6.3",
 	"NOTE": "dont update dependencies",
 	"dependencies": {
 		"rambdax": "11.3.0"
