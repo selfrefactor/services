@@ -1,4 +1,7 @@
 {
+	"editor.pasteAs.preferences": [
+    "chat.attach.text"
+],
 	"typescript.experimental.expandableHover": true,
 	"github.copilot.chat.reviewSelection.instructions": [
     {
