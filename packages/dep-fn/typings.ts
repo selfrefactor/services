@@ -3,6 +3,7 @@ export type Identity<T> = (x: T) => T
 export interface GetInfo {
   dependency: string,
   tag: string,
+	isParallel: boolean,	
 }
 
 export interface StringMap<T> {

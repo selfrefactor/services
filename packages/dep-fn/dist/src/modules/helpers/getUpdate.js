@@ -16,7 +16,7 @@ const getUpdate = async (input) => {
         dependency: input.dependency,
         latestTag: latestVersion,
     });
-    const answer = await (0, confirm_1.confirm)(question);
+    const answer = await (0, confirm_1.confirm)(question, input.isParallel);
     const willReturn = answer ? latestVersion : currentVersion;
     return willReturn;
 };

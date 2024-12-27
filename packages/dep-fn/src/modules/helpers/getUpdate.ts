@@ -17,7 +17,7 @@ export const getUpdate = async(input: GetInfo): Promise<string> => {
     dependency: input.dependency,
     latestTag: latestVersion,
   })
-  const answer = await confirm(question)
+  const answer = await confirm(question, input.isParallel)
 
   const willReturn = answer ? latestVersion : currentVersion
 
