@@ -4,7 +4,7 @@ exports.getUpdateDependencies = void 0;
 const rambdax_1 = require("rambdax");
 const getUpdate_1 = require("./helpers/getUpdate");
 const isDependencyEligible_1 = require("./helpers/isDependencyEligible");
-const getUpdateDependencies = async (dependencies, isParallel) => {
+const getUpdateDependencies = async (dependencies, isParallel, parrallelLimit) => {
     const willReturn = {};
     let iterable = async (prop) => {
         const dependency = dependencies[prop];
@@ -28,7 +28,7 @@ const getUpdateDependencies = async (dependencies, isParallel) => {
         willReturn[prop] = willPush;
     };
     if (isParallel) {
-        await (0, rambdax_1.mapParallelAsyncWithLimit)(iterable, 6, Object.keys(dependencies));
+        await (0, rambdax_1.mapParallelAsyncWithLimit)(iterable, parrallelLimit, Object.keys(dependencies));
     }
     else {
         await (0, rambdax_1.mapAsync)(iterable, Object.keys(dependencies));
