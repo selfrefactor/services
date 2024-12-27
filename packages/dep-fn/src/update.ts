@@ -4,15 +4,17 @@ import {getDependencies} from './modules/helpers/getDependencies'
 
 export async function update(input: any): Promise<void> {
 	let isParallel = input.parallel ?? false
+	let parrallelLimit = input.parrallelLimit ?? 6
   const {devDependencies, dependencies, peerDependencies, packageJson} =
     getDependencies()
 
-  const updatedDependencies = await getUpdateDependencies(dependencies, isParallel)
-  const updatedDevDependencies = await getUpdateDependencies(devDependencies, isParallel)
+  const updatedDependencies = await getUpdateDependencies(dependencies, isParallel, parrallelLimit)
+  const updatedDevDependencies = await getUpdateDependencies(devDependencies, isParallel, parrallelLimit)
 
   const updatedPeerDependencies = await getUpdateDependencies(
     peerDependencies,
-		isParallel
+		isParallel,
+		parrallelLimit
   )
 
   beforeEnd({
@@ -21,8 +23,4 @@ export async function update(input: any): Promise<void> {
     packageJson: packageJson,
     peerDependencies: updatedPeerDependencies,
   })
-}
-
-export async function updateParallel(): Promise<void> {
-	await update({parallel: true})
 }

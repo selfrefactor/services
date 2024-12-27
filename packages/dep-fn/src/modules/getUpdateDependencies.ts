@@ -5,7 +5,8 @@ import {isDependencyEligible} from './helpers/isDependencyEligible'
 
 export const getUpdateDependencies = async(
   dependencies: object,
-	isParallel: boolean
+	isParallel: boolean,
+	parrallelLimit: number
 ): Promise<StringMap<string>> => {
   const willReturn = {}
 
@@ -36,7 +37,7 @@ export const getUpdateDependencies = async(
 	}
 
 	if(isParallel){
-		await mapParallelAsyncWithLimit(iterable, 6 ,Object.keys(dependencies))
+		await mapParallelAsyncWithLimit(iterable, parrallelLimit ,Object.keys(dependencies))
 	}else{
 		await mapAsync(iterable, Object.keys(dependencies))
 	}
