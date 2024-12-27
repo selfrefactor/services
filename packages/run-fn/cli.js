@@ -51,7 +51,8 @@ async function runFn() {
 	}
 
 	if (firstArgument === 'dep:parallel') {
-		return depFn.update({ parallel: true });
+		let parrallelLimit = secondArgument ? Number(secondArgument) : 8;
+		return depFn.update({ parallel: true, parrallelLimit });
 	}
 	if (firstArgument === 'dep') {
 		return depFn.cli();
