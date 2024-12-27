@@ -2,6 +2,7 @@
 	"editor.pasteAs.preferences": [
     "chat.attach.text"
 ],
+"chat.editing.alwaysSaveWithGeneratedChanges": true,
 	"typescript.experimental.expandableHover": true,
 	"github.copilot.chat.reviewSelection.instructions": [
     {

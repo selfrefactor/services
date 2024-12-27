@@ -1,5 +1,15 @@
 [
 	{
+		"key": "alt+3",
+		"command": "workbench.panel.chatEditing",
+		"when": "workbench.panel.chat.view.edits.active"
+	},
+	{
+		"key": "ctrl+shift+alt+i",
+		"command": "-workbench.panel.chatEditing",
+		"when": "workbench.panel.chat.view.edits.active"
+	},
+	{
 		"key": "ctrl+r",
 		"command": "editor.action.referenceSearch.trigger",
 		"priority": true,
