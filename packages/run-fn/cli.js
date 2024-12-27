@@ -50,16 +50,19 @@ async function runFn() {
 		return lintFolder();
 	}
 
+	if (firstArgument === 'dep:parallel') {
+		return depFn.update({ parallel: true });
+	}
 	if (firstArgument === 'dep') {
 		return depFn.cli();
+	}
+	if (firstArgument === 'depx') {
+		return depFn.cli('update');
 	}
 	if (firstArgument === 'dvd') {
 		return dvd(secondArgument);
 	}
 
-	if (firstArgument === 'depx') {
-		return depFn.cli('update');
-	}
 
 	if (firstArgument === 'clone') {
 		return clone(secondArgument);
