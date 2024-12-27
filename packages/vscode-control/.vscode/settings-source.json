@@ -1,4 +1,5 @@
 {
+	"typescript.experimental.expandableHover": true,
 	"github.copilot.chat.reviewSelection.instructions": [
     {
       "text": "Prevent multiple empty lines in the code."
