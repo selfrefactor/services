@@ -8,6 +8,7 @@ VSCode extension for magic-like features
 
 > Press `alt+c` to copy multiple or single lines trimmed from both ends
 
+
 ## Open random file mode
 
 ```
