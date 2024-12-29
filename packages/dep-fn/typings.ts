@@ -4,6 +4,7 @@ export interface GetInfo {
   dependency: string,
   tag: string,
 	isParallel: boolean,	
+	atLeast30DaysOld: boolean,
 }
 
 export interface StringMap<T> {

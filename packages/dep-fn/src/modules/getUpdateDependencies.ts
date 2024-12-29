@@ -6,7 +6,8 @@ import {isDependencyEligible} from './helpers/isDependencyEligible'
 export const getUpdateDependencies = async(
   dependencies: object,
 	isParallel: boolean,
-	parrallelLimit: number
+	parrallelLimit: number,
+	atLeast30DaysOld: boolean
 ): Promise<StringMap<string>> => {
   const willReturn = {}
 
@@ -20,11 +21,11 @@ export const getUpdateDependencies = async(
 
       return
     }
-
     const willPush: string = await getUpdate({
       dependency: prop,
       tag: dependency,
 			isParallel,
+			atLeast30DaysOld
     })
 
     if (willPush !== dependency) {

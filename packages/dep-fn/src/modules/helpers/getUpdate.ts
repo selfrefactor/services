@@ -1,13 +1,15 @@
 import {GetInfo} from '../../../typings'
 import {confirm} from './confirm'
 import {getLatest} from './getLatest'
+import { getLatestWithDelay } from './getLatestWithDelay'
 import {getUpdateQuestion} from './getUpdateQuestion'
 import {normalizeTag} from './normalizeTag'
 
 export const getUpdate = async(input: GetInfo): Promise<string> => {
   const currentVersion = normalizeTag(input.tag)
-  const latestVersion: string = await getLatest(input.dependency)
-
+	let method = input.atLeast30DaysOld ? getLatest : getLatestWithDelay
+  const latestVersion = await method(input.dependency)
+	if (latestVersion === false) return currentVersion
   if (currentVersion === latestVersion) {
     return currentVersion
   }
