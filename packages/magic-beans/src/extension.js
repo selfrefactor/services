@@ -20,7 +20,7 @@ const { highlightOnCopy } = require('./highlight-on-copy')
 const { fixCamelcaseRefactoring } = require('./fix-camelcase-refactoring')
 const { setColorTheme } = require('./set-color-theme')
 const { configAnt } = require('./ants/config')
-const { symbolsList } = require('./symbols/symbols-list')
+const { symbolsList, symbolsListForCurrentFile } = require('./symbols/symbols-list')
 
 function openInVsCode(data, {isInsiders}) {
   const binary = isInsiders ? 'code-insiders' : 'code'
@@ -43,6 +43,10 @@ function activate(context) {
   const symbolsListCommand = vscode.commands.registerCommand(
     'magicBeans.symbolsList',
     symbolsList,
+  )
+  const symbolsListForCurrentFileCommand = vscode.commands.registerCommand(
+    'magicBeans.symbolsListForCurrentFile',
+    symbolsListForCurrentFile,
   )
   const formatJsonCommand = vscode.commands.registerCommand(
     'magicBeans.formatJson',
@@ -82,6 +86,7 @@ function activate(context) {
   )
 
   context.subscriptions.push(symbolsListCommand)
+  context.subscriptions.push(symbolsListForCurrentFileCommand)
   context.subscriptions.push(copyTrimmedCommand)
   context.subscriptions.push(highlightOnCopyCommand)
   context.subscriptions.push(fixCommentCommand)
