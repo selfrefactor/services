@@ -16,11 +16,11 @@ const {
 } = require('./random-file')
 const { slowScrollInit } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
-const { symbolsList } = require('./symbols-list')
 const { highlightOnCopy } = require('./highlight-on-copy')
 const { fixCamelcaseRefactoring } = require('./fix-camelcase-refactoring')
 const { setColorTheme } = require('./set-color-theme')
 const { configAnt } = require('./ants/config')
+const { symbolsList } = require('./symbols-list/symbols-list')
 
 function openInVsCode(data, {isInsiders}) {
   const binary = isInsiders ? 'code-insiders' : 'code'
