@@ -1,5 +1,5 @@
 const vscode = require('vscode')
-const { getter, removeIndex, setter, shuffle } = require('rambdax')
+const { getter, removeIndex, setter, shuffle, sort, last, equals, head, takeLast } = require('rambdax')
 const { configAnt } = require('./ants/config')
 const { logToUser } = require('./bar')
 const { REQUEST_RANDOM_FILE, SLOW_SCROLL_KEY } = require('./constants')
@@ -56,10 +56,41 @@ function activateListener(context) {
   context.subscriptions.push(disposable)
 }
 
+function sortFunction(a, b) {
+	let aDirectories = a.split('/')
+	let bDirectories = b.split('/')
+	
+	let directoryDepthA = a.split('/').length
+	let directoryDepthB = b.split('/').length
+	if (directoryDepthA < directoryDepthB) return -1
+	if (directoryDepthA > directoryDepthB) return 1
+	let fileNameA = last(aDirectories)
+	let fileNameB = last(bDirectories)
+	if(equals(aDirectories, bDirectories)){
+		return fileNameA > fileNameB ? -1 : 1
+	}
+	let folderA = head(takeLast(2, aDirectories))
+	let folderB = head(takeLast(2, bDirectories))
+	if(!folderA && !folderB){
+		return fileNameA > fileNameB ? -1 : 1
+	} 
+	if(!folderA) return 1
+	if(!folderB) return -1
+
+	return folderA > folderB ? 1 : -1
+}
+
+function getAllFiles(files, sequential) {
+	if(!sequential) return shuffle(files)
+
+	return sort(sortFunction, files)
+}
+
 async function randomFileInitialize(
   projectFolder,
   context,
   skipDirectories = RANDOM_FILE_SKIP_DIRECTORIES,
+	sequential = false
 ) {
   try {
     // so error when delete folder in to-read is fixed
@@ -92,15 +123,10 @@ async function randomFileInitialize(
     })
 
     if (files.length === 0) {
-      await delay(2000)
-      randomFileInitialize(
-        getter('projectFolder')
-      )
       return
     }
-    const randomized = shuffle(files)
+		let allFiles = getAllFiles(files, sequential)
     setter('files', randomized)
-    setter('projectFolder', projectFolder)
   } catch (err) {
     console.log(err)
   }
@@ -155,13 +181,17 @@ function getCurrentDirectory() {
 }
 
 
-async function requestRandomFileWithSubfolderRightClick(data, context) {
+function requestRandomFileWithSubfolderRightClick(sequential) {
+	return async (data, context) => {
   const directory = data.fsPath
-  await randomFileInitialize(directory, context, ['node_modules'])
+  await randomFileInitialize(directory, context, ['node_modules'], sequential)
   setter(REQUEST_RANDOM_FILE, true)
   requestRandomFile()
+	}
 }
+
 
 exports.requestRandomFile = requestRandomFileFn
 exports.requestRandomFileWithSubfolderRightClick =
-requestRandomFileWithSubfolderRightClick
+requestRandomFileWithSubfolderRightClick( false)
+exports.requestRandomFileWithSubfolderRightClickSequential = requestRandomFileWithSubfolderRightClick( true)

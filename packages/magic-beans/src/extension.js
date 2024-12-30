@@ -13,6 +13,7 @@ const { initStatusBars } = require('./bar')
 const {
   requestRandomFile,
   requestRandomFileWithSubfolderRightClick,
+  requestRandomFileWithSubfolderRightClickSequential,
 } = require('./random-file')
 const { slowScrollInit } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
@@ -116,10 +117,18 @@ function activate(context) {
       requestRandomFileWithSubfolderRightClick(data, context)
     },
   )
+  const randomFilesWithinFolderSequential = vscode.commands.registerCommand(
+    'magicBeans.requestRandomFileWithSubfolderRightClickSequential',
+    (data) => {
+      requestRandomFileWithSubfolderRightClickSequential(data, context)
+    },
+  )
 
   context.subscriptions.push(openFolder)
   context.subscriptions.push(openFolderInVSCodeBeta)
   context.subscriptions.push(randomFilesWithinFolder)
+	context.subscriptions.push(randomFilesWithinFolderSequential)
+	
 
   if(SLOW_SCROLL_SHOW_BAR_INITIALLY_VALUE){
     vscode.commands.executeCommand(SLOW_SCROLL_INIT)

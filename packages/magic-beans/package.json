@@ -71,6 +71,11 @@
 					"when": "explorerResourceIsFolder",
 					"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
 					"group": "navigation"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "magicBeans.requestRandomFileWithSubfolderRightClickSequential",
+					"group": "navigation"
 				}
 			]
 		},
@@ -130,6 +135,10 @@
 			{
 				"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
 				"title": "Open a folder in Random Files Mode"
+			},
+			{
+				"command": "magicBeans.requestRandomFileWithSubfolderRightClickSequential",
+				"title": "Open a folder in Random Files Mode (sequential)"
 			}
 		],
 		"keybindings": [
