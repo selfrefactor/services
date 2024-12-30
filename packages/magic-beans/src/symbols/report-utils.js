@@ -21,7 +21,8 @@ function getFileReport(symbols, prev = {}, level = 0){
       skippedByRegex.push({ kind, name })
       return
     }
-    prev[ level ].push(name)
+		let nameValue = kind === 11 ? `${ name } - FUNCTION` : name
+    prev[ level ].push(nameValue)
     if (children.length === 0 || level + 1 === MAX_LEVEL) return
     prev = getFileReport(children, prev, level + 1)
   })
