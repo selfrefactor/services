@@ -17,14 +17,14 @@
 | CTRL+E       | findReferences                | CTRL+SHIFT+L | magicBeans.sortLines                  |
 | CTRL+`       | action.selectHighlights       | CTRL+SHIFT+T | magicBeans.createSpec                 |
 | CTRL+D       | goToSourceDefinition          | ALT+Z        | workbench.action.gotoSymbol           |
-| CTRL+SHIFT+K | workbench.action.selectTheme  | ALT+SHIFT+U  | explainTerminalSelectionContextMenu   |
-| CTRL+SHIFT+` | showActiveFileInExplorer      | ALT+SHIFT+H  | action.revealDefinition               |
-| CTRL+SHIFT+Z | action.toggleZenMode          | ALT+SHIFT+7  | ghpr.applySuggestion                  |
-| CTRL+SHIFT+, | output.toggleOutput           | ALT+SHIFT+X  | interactiveEditor.fix                 |
-| CTRL+SHIFT+R | debug.restart                 | ALT+SHIFT+Y  | chat.selectKnowledgeBase              |
-| ALT+R        | editor.action.goToReferences  | ALT+SHIFT+G  | interactiveEditor.generate            |
-| CTRL+M       | addSelectionToNextFindMatch   | ALT+SHIFT+I  | interactiveEditor.review              |
-| ALT+I        | action.goToImplementation     | ALT+SHIFT+8  | generateDocs                          |
-| CTRL+SHIFT+E | Peek Implementation           | CTRL+SHIFT+; | after running vscode control          |
+| CTRL+SHIFT+` | showActiveFileInExplorer      | ALT+SHIFT+U  | explainTerminalSelectionContextMenu   |
+| CTRL+SHIFT+Z | action.toggleZenMode          | ALT+SHIFT+H  | action.revealDefinition               |
+| CTRL+SHIFT+, | output.toggleOutput           | ALT+SHIFT+7  | ghpr.applySuggestion                  |
+| CTRL+SHIFT+R | debug.restart                 | ALT+SHIFT+X  | interactiveEditor.fix                 |
+| ALT+R        | editor.action.goToReferences  | ALT+SHIFT+Y  | chat.selectKnowledgeBase              |
+| CTRL+M       | addSelectionToNextFindMatch   | ALT+SHIFT+G  | interactiveEditor.generate            |
+| ALT+I        | action.goToImplementation     | ALT+SHIFT+I  | interactiveEditor.review              |
+| CTRL+SHIFT+E | Peek Implementation           | ALT+SHIFT+8  | generateDocs                          |
+| ALT+3        | workbench.panel.chatEditing   | CTRL+SHIFT+; | after running vscode control          |
 | CTRL+SHIFT+A | action.splitEditorRight       | CTRL+SHIFT+' | extension.markdown-pdf.pdf            |
 | ALT+=        | git.push                      |              |                                       |

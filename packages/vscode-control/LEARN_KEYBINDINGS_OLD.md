@@ -76,10 +76,6 @@
 
 `goToSourceDefinition`
 
-## CTRL  SHIFT  K
-
-`workbench.action.selectTheme`
-
 ## CTRL  SHIFT  `
 
 `showActiveFileInExplorer`
@@ -121,6 +117,10 @@
 `action.peekImplementation`
 
 > Peek Implementation
+
+## ALT  3
+
+`workbench.panel.chatEditing`
 
 ## CTRL  SHIFT  A
 
@@ -264,7 +264,6 @@
 
 ## Convenient keys
 
-* alt+3
 * alt+4
 * alt+5
 * alt+q

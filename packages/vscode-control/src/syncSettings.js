@@ -18,7 +18,7 @@ const VSCODE_INSIDERS = process.env.BETA === 'ON';
 const FOLDING_IMPORTS = VSCODE_INSIDERS;
 
 // due to github profiles extension
-const WRITE_TO_OUTPUT = VSCODE_INSIDERS;
+const WRITE_TO_OUTPUT = true;
 // const WRITE_TO_OUTPUT = VSCODE_INSIDERS || IS_MANJARO;
 
 const FONT_SIZE = 18;
@@ -58,7 +58,7 @@ void (async function sync() {
 // goto | peek
 const GOTO_LOCATION = 'goto';
 
-console.log(IS_MANJARO, 'IS_MANJARO');
+// console.log(IS_MANJARO, 'IS_MANJARO');
 
 /**
  * Keep latest changes with comments of change
@@ -70,6 +70,12 @@ console.log(IS_MANJARO, 'IS_MANJARO');
  */
 function testNewSettings() {
 	return {
+		'editor.quickSuggestions': {
+			comments: 'off',
+			other: 'off',
+			// because of tailwind this needs to be on
+			strings: 'off',
+		},
 		/**
 		 * Semantic search results (Preview)
 
@@ -175,11 +181,6 @@ function getEditor() {
 		'editor.minimap.enabled': false,
 		'editor.mouseWheelZoom': true,
 		'editor.multiCursorModifier': 'ctrlCmd',
-		'editor.quickSuggestions': {
-			comments: 'off',
-			other: 'off',
-			strings: 'off',
-		},
 		'editor.scrollbar.verticalScrollbarSize': 15,
 		'editor.scrollBeyondLastLine': false,
 		'editor.semanticHighlighting.enabled': true,
