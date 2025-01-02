@@ -1,6 +1,10 @@
 [
 	{
-		"key": "alt+3",
+		"key": "alt+5",
+		"command": "magicBeans.fixComment"
+	},
+	{
+		"key": "ctrl+3",
 		"command": "workbench.panel.chatEditing",
 		"when": "workbench.panel.chat.view.edits.active"
 	},
@@ -17,7 +21,7 @@
 	},
 	{
 		"priority": true,
-		"key": "ctrl+3",
+		"key": "alt+3",
 		"command": "github.copilot.chat.attachFile"
 	},
 	{

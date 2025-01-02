@@ -383,7 +383,8 @@ async function syncSettings() {
 			'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
 			'editor.wordBasedSuggestions': false,
 			'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
-			'workbench.editor.enablePreview': !VSCODE_INSIDERS,
+			'workbench.editor.enablePreview': false,
+			// 'workbench.editor.enablePreview': !VSCODE_INSIDERS,
 		},
 	]);
 	const sorted = sortObject(sortFn, newOptions);

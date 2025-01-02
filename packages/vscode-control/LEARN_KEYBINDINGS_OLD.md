@@ -6,7 +6,7 @@
 
 > Peek References
 
-## CTRL  3
+## ALT  3
 
 `chat.attachFile`
 
@@ -118,7 +118,11 @@
 
 > Peek Implementation
 
-## ALT  3
+## ALT  5
+
+`magicBeans.fixComment`
+
+## CTRL  3
 
 `workbench.panel.chatEditing`
 
@@ -265,7 +269,6 @@
 ## Convenient keys
 
 * alt+4
-* alt+5
 * alt+q
 * alt+s
 * alt+v
