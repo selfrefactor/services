@@ -70,6 +70,10 @@ const GOTO_LOCATION = 'goto';
  */
 function testNewSettings() {
 	return {
+		"search.quickAccess.preserveInput": true,
+		"search.quickOpen.includeSymbols": true,
+		"search.searchEditor.focusResultsOnSearch": true,
+		"search.searchEditor.reusePriorSearchConfiguration": true,
 		'editor.quickSuggestions': {
 			comments: 'off',
 			other: 'off',
