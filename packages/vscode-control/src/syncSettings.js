@@ -60,6 +60,52 @@ const GOTO_LOCATION = 'goto';
 
 // console.log(IS_MANJARO, 'IS_MANJARO');
 
+function copilotSettings (){
+	return {
+				/**
+		 * Semantic search results (Preview)
+
+Setting: github.copilot.chat.search.semanticTextResults
+
+You can perform an exact search across your files with the Search view. It also now uses Copilot to give search results that are semantically relevant.
+		 */
+'github.copilot.chat.reviewSelection.instructions': [
+	{
+		text: 'Prevent multiple empty lines in the code.',
+	},
+	{
+		text: 'Improve titles of test cases if possible.',
+	},
+],
+'github.copilot.chat.edits.enabled': true,
+'github.copilot.chat.followUps': 'always',
+'github.copilot.chat.experimental.inlineChatHint.enabled': false,
+'github.copilot.chat.experimental.codeFeedback.enabled': true,
+'github.copilot.chat.experimental.codeFeedback.instructions': [
+	{
+		text: 'try to add comment to complext code pieces | when possible, include comment how data changes on specific code line that contains important logic or hard to understand logic',
+	},
+],
+'github.copilot.chat.experimental.codeGeneration.instructions': [
+	{
+		text: 'avoid introducing new interfaces when refactoring is requested in Typescript code | when refactoring is requested in Typescript code, make sure that refactored code is valid TS',
+	},
+],
+'github.copilot.chat.experimental.testGeneration.instructions': [
+	{
+		text: 'Test suite is Jest or Vitest|Happy path is the first test and its name is happy|Error test cases are last in suite|minimum two top level describe blocks can exists and no nested describe blocks|always prefer `.spec.` instead of `.test` as file name suffix',
+	},
+],
+'github.copilot.chat.experimental.generateTests.codeLens': true,
+'github.copilot.chat.experimental.inlineChatCompletionTrigger.enabled': false,
+'github.copilot.chat.experimental.startDebugging.enabled': true,
+'github.copilot.chat.experimental.temporalContext.enabled': false,
+'github.copilot.chat.scopeSelection': true,
+'github.copilot.chat.welcomeMessage': 'never',
+'github.copilot.chat.search.semanticTextResults': true,
+	}
+}
+
 /**
  * Keep latest changes with comments of change
   "workbench.tree.indent": 12,
@@ -70,24 +116,16 @@ const GOTO_LOCATION = 'goto';
  */
 function testNewSettings() {
 	return {
-		"search.quickAccess.preserveInput": true,
-		"search.quickOpen.includeSymbols": true,
-		"search.searchEditor.focusResultsOnSearch": true,
-		"search.searchEditor.reusePriorSearchConfiguration": true,
+		'search.quickAccess.preserveInput': true,
+		'search.quickOpen.includeSymbols': true,
+		'search.searchEditor.focusResultsOnSearch': true,
+		'search.searchEditor.reusePriorSearchConfiguration': true,
 		'editor.quickSuggestions': {
 			comments: 'off',
 			other: 'off',
 			// because of tailwind this needs to be on
 			strings: 'off',
 		},
-		/**
-		 * Semantic search results (Preview)
-
-Setting: github.copilot.chat.search.semanticTextResults
-
-You can perform an exact search across your files with the Search view. It also now uses Copilot to give search results that are semantically relevant.
-		 */
-		'github.copilot.chat.search.semanticTextResults': true,
 		'magicBeans.ALLOW_CHANGE_COLOR_THEME': IS_MANJARO,
 		'editor.stackFrameHighlightBackground': '#ff0000',
 		'search.searchEditor.defaultNumberOfContextLines': 4,
@@ -178,7 +216,7 @@ function getEditor() {
 		'editor.guides.highlightActiveBracketPair': false,
 		'editor.guides.highlightActiveIndentation': false,
 		'editor.guides.indentation': false,
-		'editor.hover.delay': 500,
+		'editor.hover.delay': 700,
 		'editor.hover.enabled': true,
 		'editor.hover.sticky': true,
 		'editor.lineNumbers': 'interval',
