@@ -1,5 +1,7 @@
 {
   "recommendations": [
+		"GitHub.copilot-workspace",
+		"GitHub.remotehub",
 		"bradlc.vscode-tailwindcss",
 		"ellreka.tailwindcss-highlight",
 		"yzane.markdown-pdf",
