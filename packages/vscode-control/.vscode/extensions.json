@@ -2,6 +2,7 @@
   "recommendations": [
 		"GitHub.copilot-workspace",
 		"GitHub.remotehub",
+		"cweijan.vscode-postgresql-client2",
 		"bradlc.vscode-tailwindcss",
 		"ellreka.tailwindcss-highlight",
 		"yzane.markdown-pdf",
