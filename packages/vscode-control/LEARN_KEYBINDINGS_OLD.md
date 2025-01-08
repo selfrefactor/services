@@ -14,7 +14,7 @@
 
 `chat.attachSelection`
 
-## CTRL  5
+## CTRL  3
 
 `github.copilot.chat.explain`
 
@@ -122,7 +122,7 @@
 
 `magicBeans.fixComment`
 
-## CTRL  3
+## CTRL  5
 
 `workbench.panel.chatEditing`
 

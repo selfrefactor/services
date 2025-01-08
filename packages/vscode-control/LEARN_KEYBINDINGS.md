@@ -3,7 +3,7 @@
 | CTRL+R       | Peek References               | ALT+=        | git.push                              |
 | ALT+3        | chat.attachFile               | ALT+6        | Snippet - describe('${0:}             |
 | CTRL+4       | chat.attachSelection          | CTRL+SHIFT+5 | Snippet - Function                    |
-| CTRL+5       | github.copilot.chat.explain   | CTRL+SHIFT+3 | Snippet - TestCase                    |
+| CTRL+3       | github.copilot.chat.explain   | CTRL+SHIFT+3 | Snippet - TestCase                    |
 | CTRL+7       | inlineChat.start              | CTRL+SHIFT+4 | Snippet - Expect                      |
 | CTRL+8       | generateTests                 | ALT+D        | Snippet - debugger                    |
 | CTRL+SHIFT+Y | explain.palette               | CTRL+SHIFT+0 | Snippet - ArrowFunction               |
@@ -26,5 +26,5 @@
 | ALT+I        | action.goToImplementation     | ALT+SHIFT+G  | interactiveEditor.generate            |
 | CTRL+SHIFT+E | Peek Implementation           | ALT+SHIFT+I  | interactiveEditor.review              |
 | ALT+5        | magicBeans.fixComment         | ALT+SHIFT+8  | generateDocs                          |
-| CTRL+3       | workbench.panel.chatEditing   | CTRL+SHIFT+; | after running vscode control          |
+| CTRL+5       | workbench.panel.chatEditing   | CTRL+SHIFT+; | after running vscode control          |
 | CTRL+SHIFT+A | action.splitEditorRight       | CTRL+SHIFT+' | extension.markdown-pdf.pdf            |

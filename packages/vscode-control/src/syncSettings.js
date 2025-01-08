@@ -12,6 +12,7 @@ const {
 	SETTINGS,
 	TS_SNIPPETS,
 	TSX_SNIPPETS,
+	editorExists,
 } = require('./constants.js');
 
 const VSCODE_INSIDERS = process.env.BETA === 'ON';
@@ -46,6 +47,7 @@ const FONT = 'Geist Mono';
 const FONT_FACTOR = 1;
 
 void (async function sync() {
+	if(!editorExists) return console.log('editor not found');
 	await execSafe({
 		command: 'node visualize-keybindings.js',
 		cwd: resolve(__dirname, '..'),
