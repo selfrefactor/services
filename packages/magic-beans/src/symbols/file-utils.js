@@ -1,4 +1,3 @@
-// file-utils.js
 const vscode = require('vscode')
 const { any } = require('rambdax')
 const { configAnt } = require('../ants/config')

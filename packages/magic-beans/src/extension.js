@@ -21,7 +21,7 @@ const { highlightOnCopy } = require('./highlight-on-copy')
 const { fixCamelcaseRefactoring } = require('./fix-camelcase-refactoring')
 const { setColorTheme } = require('./set-color-theme')
 const { configAnt } = require('./ants/config')
-const { symbolsList, symbolsListForCurrentFile } = require('./symbols/symbols-list')
+const { symbolsList, symbolsListForCurrentFile } = require('./symbols/symbols')
 
 function openInVsCode(data, {isInsiders}) {
   const binary = isInsiders ? 'code-insiders' : 'code'
