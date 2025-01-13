@@ -229,7 +229,10 @@
 						".js",
 						".jsx",
 						".tsx",
-						".ts"
+						".ts",
+						".rs",
+						".rake",
+						".py"
 					],
 					"description": "Which file extensions are allowed in symbols list mode"
 				},
@@ -269,15 +272,23 @@
 						"type": "string"
 					},
 					"default": [
+						".css",
+						".feature",
 						".html",
+						".ipynb",
 						".js",
 						".jsx",
-						".tsx",
-						".css",
-						".scss",
+						".md",
 						".py",
-						".feature",
-						".ts"
+						".rake",
+						".rb",
+						".rs",
+						".scss",
+						".ts",
+						".tsx",
+						".tsx",
+						".vtl",
+						"package.json"
 					],
 					"description": "Which file partials are allowed in random file mode"
 				},
