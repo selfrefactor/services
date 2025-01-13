@@ -1,23 +1,33 @@
+const { writeFile } = require("fs-extra")
+const { getReportableFiles } = require("./file-utils")
+const { generateReportObject } = require("./report-utils")
+const vscode = require('vscode')
 
-async function symbolsList(){
-	const files = await getReportableFiles()
-	const reportObject = await generateReportObject(files)
-	const report = JSON.stringify(reportObject, null, 2)
-	const reportPath = `${ vscode.workspace.workspaceFolders[ 0 ].uri.path }/symbols-report.json`
-	await writeFile(reportPath, report)
-	vscode.window.showInformationMessage(`Symbols report saved to ${ reportPath }`)
+function generateFinalResult (reportObject){
+	let willReturn = ''
+	Object.keys(reportObject).forEach(key => {
+		willReturn += `## LEVEL ${ key }\n\n`
+
+		const current = reportObject[ key ]
+		current.forEach(x => {
+			willReturn += `  ${ x }\n`
+		})
+	})
+	
+	return willReturn
 }
 
-async function symbolsListSingleFile(){
-	const activeFile = vscode.window.activeTextEditor.document.fileName
-	const reportObject = await generateReportObject([ activeFile ])
-	const report = JSON.stringify(reportObject, null, 2)
-	const reportPath = `${ vscode.workspace.workspaceFolders[ 0 ].uri.path }/symbols-report-single-file.json`
-	await writeFile(reportPath, report)
-	vscode.window.showInformationMessage(`Symbols report for ${ activeFile } saved to ${ reportPath }`)
+async function symbolsList(){
+	let folderName = vscode.workspace.workspaceFolders[ 0 ].uri.path.split('/').pop()
+	const files = await getReportableFiles()
+	const reportObject = await generateReportObject(files)
+	const reportPath = `${ __dirname }/symbols-report-${folderName}.md`
+	let reportText = generateFinalResult(reportObject)
+	await writeFile(reportPath, reportText)
+	const reportUri = vscode.Uri.file(reportPath)
+	vscode.commands.executeCommand('vscode.open', reportUri)
 }
 
 module.exports = {
 	symbolsList,
-	symbolsListSingleFile
 }
