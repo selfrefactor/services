@@ -31,6 +31,8 @@
     ".rs",
     ".vtl",
     ".ts",
+    ".py",
+    ".rb",
     ".tsx"
   ],
   "magicBeans.RANDOM_FILE_FORBIDDEN": [

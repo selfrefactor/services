@@ -1,3 +1,5 @@
+const { pathExistsSync } = require("fs-extra/lib/path-exists")
+
 const BASE_STABLE = `${process.env.HOME}/.config/Code/User`
 const BASE_BETA = `${process.env.HOME}/.config/Code - Insiders/User`
 const BASE = process.env.BETA === 'ON' ? BASE_BETA :BASE_STABLE
@@ -10,5 +12,5 @@ exports.TS_SNIPPETS = `${BASE}/snippets/typescript.json`
 exports.TSX_SNIPPETS = `${BASE}/snippets/typescriptreact.json`
 
 exports.KEYBINDING = KEYBINDING
-let editorExists = existsSync(KEYBINDING)
+let editorExists = pathExistsSync(KEYBINDING)
 exports.editorExists = editorExists
