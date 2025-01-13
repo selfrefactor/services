@@ -71,6 +71,7 @@ const GOTO_LOCATION = 'goto';
  */
 function testNewSettings() {
 	return {
+		'terminal.integrated.gpuAcceleration': 'on',
 		'search.quickAccess.preserveInput': true,
 		'search.quickOpen.includeSymbols': true,
 		'search.searchEditor.focusResultsOnSearch': true,
@@ -284,7 +285,6 @@ function getAdditionalSettings() {
 		'task.autoDetect': 'off',
 		'task.quickOpen.detail': true,
 		'telemetry.telemetryLevel': 'off',
-		'terminal.integrated.gpuAcceleration': 'off',
 		'typescript.inlayHints.enumMemberValues.enabled': false,
 		'typescript.inlayHints.functionLikeReturnTypes.enabled': false,
 		'typescript.inlayHints.parameterTypes.enabled': false,
