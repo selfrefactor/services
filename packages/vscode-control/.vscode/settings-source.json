@@ -22,19 +22,6 @@
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.revealIfOpen": false,
   "breadcrumbs.symbolSortOrder": "type",
-  "magicBeans.RANDOM_FILE_ALLOWED": [
-    ".feature",
-    ".js",
-    ".md",
-    "package.json",
-    ".ipynb",
-    ".rs",
-    ".vtl",
-    ".ts",
-    ".py",
-    ".rb",
-    ".tsx"
-  ],
   "magicBeans.RANDOM_FILE_FORBIDDEN": [
     "__tests__",
     ".gitconfig",
