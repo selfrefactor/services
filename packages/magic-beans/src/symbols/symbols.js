@@ -5,11 +5,15 @@ const vscode = require('vscode')
 
 function generateFinalResult (reportObject){
 	let willReturn = ''
+	let variablesSet = new Set()
+
 	Object.keys(reportObject).forEach(key => {
 		willReturn += `## LEVEL ${ key }\n\n`
 
 		const current = reportObject[ key ]
 		current.forEach(x => {
+			if (variablesSet.has(x)) return
+			variablesSet.add(x)
 			willReturn += `  ${ x }\n`
 		})
 	})
