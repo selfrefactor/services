@@ -1,5 +1,5 @@
 const vscode = require('vscode')
-const { any } = require('rambdax')
+const { any, remove } = require('rambdax')
 const { configAnt } = require('../ants/config')
 
 const FORBIDDEN_PATTERN = [ '.spec.', '.test.' ]
@@ -14,9 +14,10 @@ const fileIsReportable = file => {
   )
 }
 
-async function getReportableFiles(folder = 'src'){
-  const dir = vscode.workspace.workspaceFolders[ 0 ].uri.path + '/' + folder
-  const pattern = new vscode.RelativePattern(dir, '**/*')
+async function getReportableFiles(parentFolderPath){
+	// let projectFolder = vscode.workspace.workspaceFolders[ 0 ].uri.path
+	// let relativeFolder = remove(`${ projectFolder }/`, parentFolderPath)
+  const pattern = new vscode.RelativePattern(parentFolderPath, '**/*')
   const files = await vscode.workspace.findFiles(
     pattern,
     '**/node_modules/**',

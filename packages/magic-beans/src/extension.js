@@ -43,7 +43,9 @@ function activate(context) {
 	
   const symbolsListCommand = vscode.commands.registerCommand(
     'magicBeans.symbolsList',
-    symbolsList,
+		(data) => {
+			symbolsList(data.path)
+    }
   )
   const formatJsonCommand = vscode.commands.registerCommand(
     'magicBeans.formatJson',
@@ -99,12 +101,6 @@ function activate(context) {
       openInVsCode(data, {isInsiders: false})
     },
   )
-  const openFolderInVSCodeBeta = vscode.commands.registerCommand(
-    'magicBeans.openFolderInVSCodeBeta',
-    (data) => {
-      openInVsCode(data, {isInsiders: true})
-    },
-  )
 
   const randomFilesWithinFolder = vscode.commands.registerCommand(
     'magicBeans.requestRandomFileWithSubfolderRightClick',
@@ -120,7 +116,6 @@ function activate(context) {
   )
 
   context.subscriptions.push(openFolder)
-  context.subscriptions.push(openFolderInVSCodeBeta)
   context.subscriptions.push(randomFilesWithinFolder)
 	context.subscriptions.push(randomFilesWithinFolderSequential)
 	

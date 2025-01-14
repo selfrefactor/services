@@ -60,12 +60,12 @@
 			"explorer/context": [
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "magicBeans.openFolder",
+					"command": "magicBeans.symbolsList",
 					"group": "navigation"
 				},
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "magicBeans.openFolderInVSCodeBeta",
+					"command": "magicBeans.requestRandomFileWithSubfolderRightClickSequential",
 					"group": "navigation"
 				},
 				{
@@ -75,7 +75,7 @@
 				},
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "magicBeans.requestRandomFileWithSubfolderRightClickSequential",
+					"command": "magicBeans.openFolder",
 					"group": "navigation"
 				}
 			]
@@ -87,7 +87,7 @@
 			},
 			{
 				"command": "magicBeans.symbolsList",
-				"title": "Magic Beans - Request all symbols within current project"
+				"title": " Request all symbols within current folder"
 			},
 			{
 				"command": "magicBeans.requestRandomFile",
@@ -130,10 +130,6 @@
 				"title": "Open folder in new VS Code"
 			},
 			{
-				"command": "magicBeans.openFolderInVSCodeBeta",
-				"title": "Open folder in new VS Code(beta)"
-			},
-			{
 				"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
 				"title": "Open a folder in Random Files Mode"
 			},
@@ -158,7 +154,7 @@
 				"key": "f7"
 			},
 			{
-				"command": "magicBeans.symbolsList",
+				"command": "magicBeans.requestRandomFile",
 				"key": "f8"
 			},
 			{
@@ -232,8 +228,6 @@
 						".tsx",
 						".ts",
 						".rs",
-						".erb",
-						".rake",
 						".py"
 					],
 					"description": "Which file extensions are allowed in symbols list mode"
