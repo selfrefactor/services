@@ -232,6 +232,7 @@
 						".tsx",
 						".ts",
 						".rs",
+						".erb",
 						".rake",
 						".py"
 					],
@@ -282,6 +283,7 @@
 						".md",
 						".py",
 						".rake",
+						".erb",
 						".rb",
 						".rs",
 						".scss",
@@ -306,7 +308,6 @@
 						"bin",
 						"dist",
 						"build",
-						"lib",
 						"__pycache__",
 						".vscode",
 						".idea",
