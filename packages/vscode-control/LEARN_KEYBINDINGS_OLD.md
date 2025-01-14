@@ -10,7 +10,7 @@
 
 `chat.attachFile`
 
-## CTRL  4
+## CTRL  5
 
 `chat.attachSelection`
 
@@ -122,7 +122,7 @@
 
 `magicBeans.fixComment`
 
-## CTRL  5
+## CTRL  4
 
 `workbench.panel.chatEditing`
 

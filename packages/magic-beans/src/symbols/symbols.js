@@ -21,21 +21,10 @@ function generateFinalResult (reportObject){
 	return willReturn
 }
 
-function getSortedReportObject(reportObject){
-	let willReturn = {}
-	Object.keys(reportObject).forEach(key => {
-		willReturn[ key ] = reportObject[ key ].sort((a, b) => {
-			return a > b ? 1 : -1
-		})
-	})
-	return willReturn
-}
-
-async function symbolsList(parentFolderPath){
+async function symbolsList(){
 	let folderName = vscode.workspace.workspaceFolders[ 0 ].uri.path.split('/').pop()
-	const files = await getReportableFiles(parentFolderPath)
+	const files = await getReportableFiles()
 	const reportObject = await generateReportObject(files)
-	let sortedReportObject = getSortedReportObject(reportObject)
 	const reportPath = `${ __dirname }/symbols-report-${folderName}.md`
 	let reportText = generateFinalResult(reportObject)
 	await writeFile(reportPath, reportText)
