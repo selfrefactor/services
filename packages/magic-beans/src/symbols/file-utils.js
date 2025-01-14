@@ -15,8 +15,6 @@ const fileIsReportable = file => {
 }
 
 async function getReportableFiles(parentFolderPath){
-	// let projectFolder = vscode.workspace.workspaceFolders[ 0 ].uri.path
-	// let relativeFolder = remove(`${ projectFolder }/`, parentFolderPath)
   const pattern = new vscode.RelativePattern(parentFolderPath, '**/*')
   const files = await vscode.workspace.findFiles(
     pattern,

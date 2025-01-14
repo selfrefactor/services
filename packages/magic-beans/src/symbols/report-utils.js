@@ -1,5 +1,6 @@
 const vscode = require('vscode')
 const { mapAsync } = require('rambdax')
+const { logToUser } = require('../bar')
 
 const skippedKinds = [ 1, 13 ]
 const skippedByRegex = []
@@ -32,9 +33,12 @@ function getFileReport(symbols, prev = {}, level = 0){
 
 async function generateReportObject(files){
   let reportObject = {}
-  await mapAsync(async file => {
+  await mapAsync(async (file, i) => {
     const symbols = await vscode.commands.executeCommand('vscode.executeDocumentSymbolProvider', file)
     if (!symbols) return false
+		if(i%5 === 0){
+			logToUser(`Processing file ${ i }/${ files.length }`)
+		}
     reportObject = getFileReport(symbols, reportObject)
   }, files)
 
