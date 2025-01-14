@@ -4,7 +4,7 @@
 		"command": "magicBeans.fixComment"
 	},
 	{
-		"key": "ctrl+5",
+		"key": "ctrl+4",
 		"command": "workbench.panel.chatEditing",
 		"when": "workbench.panel.chat.view.edits.active"
 	},
@@ -26,7 +26,7 @@
 	},
 	{
 		"priority": true,
-		"key": "ctrl+4",
+		"key": "ctrl+5",
 		"command": "github.copilot.chat.attachSelection"
 	},
 	
