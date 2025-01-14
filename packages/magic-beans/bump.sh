@@ -1,1 +1,1 @@
-run d && vsce publish minor && run d
+b build && run d && vsce publish minor && run d

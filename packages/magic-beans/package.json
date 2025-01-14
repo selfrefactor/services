@@ -1,13 +1,13 @@
 {
 	"name": "magic-beans",
 	"scripts": {
-		"x": "node esbuild.js",
+		"build": "node esbuild.js --production",
 		"dev": "jest -u src/_modules/format-json.spec.js",
 		"test": "jest src/_modules",
 		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"main": "./dist/extension",
-	"version": "4.27.0",
+	"version": "4.28.0",
 	"dependencies": {
 		"helpers-fn": "2.0.0",
 		"rambdax": "11.2.0",
