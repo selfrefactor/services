@@ -9,3 +9,4 @@ packages/vscode-control/settings-stable.json
 packages/scrape-jokes/output/*.json
 packages/scrape-jokes/output/*.md
 packages/vscode-control/LEARN_KEYBINDINGS.pdf
+packages/magic-beans/src/symbols/*.md
