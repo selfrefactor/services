@@ -154,6 +154,14 @@
 		}
 	},
 	{
+		"key": "ctrl+shift+x",
+		"command": "workbench.action.openGlobalKeybindings"
+	},
+	{
+		"key": "alt+s",
+		"command": "github.copilot.chat.fix"
+	},
+	{
 		"key": "ctrl+shift+4",
 		"command": "editor.action.insertSnippet",
 		"args": {
@@ -925,6 +933,10 @@
 		"key": "ctrl+shift+a",
 		"command": "-notification.acceptPrimaryAction",
 		"when": "notificationFocus || notificationToastsVisible"
+	},
+	{
+		"key": "ctrl+k ctrl+s",
+		"command": "-workbench.action.openGlobalKeybindings"
 	},
 	{
 		"key": "ctrl+shift+o",

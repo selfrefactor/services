@@ -152,6 +152,14 @@
 
 > Snippet: TestCase
 
+## CTRL  SHIFT  X
+
+`action.openGlobalKeybindings`
+
+## ALT  S
+
+`github.copilot.chat.fix`
+
 ## CTRL  SHIFT  4
 
 `editor.action.insertSnippet`
@@ -270,7 +278,6 @@
 
 * alt+4
 * alt+q
-* alt+s
 * alt+v
 * alt+`
 * ctrl+shift+c
@@ -279,4 +286,3 @@
 * ctrl+shift+q
 * ctrl+shift+v
 * ctrl+shift+w
-* ctrl+shift+x
