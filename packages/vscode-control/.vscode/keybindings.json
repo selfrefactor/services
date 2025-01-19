@@ -1,5 +1,9 @@
 [
 	{
+		"key": "alt+q",
+		"command": "workbench.action.closePanel"
+	},
+	{
 		"key": "alt+5",
 		"command": "magicBeans.fixComment"
 	},
