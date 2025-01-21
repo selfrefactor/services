@@ -1,8 +1,6 @@
 const { glue, replace, interpolate, remove, maybe, replaceAll } = require('rambdax')
 
 const specTemplate = glue(`
-import { test, expect } from 'vitest'
-
 import { {{methodName}} } from './{{fileName}}'
 _NEW_LINE_
 test('happy', () => {
@@ -13,8 +11,6 @@ __console.log(result)
 '\n')
 
 const specTemplateJs = glue(`
-import { test, expect } from 'vitest'
-
 const { {{methodName}} } = require('./{{fileName}}')
 _NEW_LINE_
 test('happy', () => {
@@ -25,8 +21,6 @@ __console.log(result)
 '\n')
 
 const specTemplateAsync = glue(`
-import { test, expect } from 'vitest'
-
 import { {{methodName}} } from './{{fileName}}'
 _NEW_LINE_
 test('happy', async () => {
