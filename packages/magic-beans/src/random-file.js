@@ -32,33 +32,17 @@ function changeOpenedFile(filePath) {
 
 const LISTENER = 'LISTENER';
 
-let latestFilePath = '';
-let previousLine = 0;
-
 function activateListener(context) {
-	const disposable = vscode.window.onDidChangeTextEditorSelection((event) => {
+	const disposable = vscode.window.onDidChangeTextEditorSelection(() => {
 		const activeEditor = vscode.window.activeTextEditor;
 		if (activeEditor) {
-			const document = activeEditor.document;
-			const filePath = document.fileName;
-			if (filePath === latestFilePath) {
-				latestFilePath = filePath;
-			}
-
-			const lastLine = document.lineCount - 1;
+			const lastLine = activeEditor.document.lineCount - 1;
 			const activeLine = activeEditor.selection.active.line;
-
-			// only if intentional scroll to bottom
-			if (activeLine === lastLine && previousLine + 1 === activeLine) {
+			/**
+			 * so that when scroll slow is active simple end of file scroll is enough
+			 */
+			if (activeLine === lastLine && getter(SLOW_SCROLL_KEY)) {
 				requestRandomFile();
-
-				/**
-				 * so that when scroll slow is active simple end of file scroll is enough
-				 */
-			} else if (activeLine === lastLine && getter(SLOW_SCROLL_KEY)) {
-				requestRandomFile();
-			} else {
-				previousLine = activeLine;
 			}
 		}
 	});
