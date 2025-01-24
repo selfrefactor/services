@@ -1,4 +1,10 @@
 # playwright-fn
+sudo pacman -Syu
+sudo pacman -S icu woff2 harfbuzz libwebp enchant hyphen libffi
+sudo pacman -S icu harfbuzz libwebp enchant hyphen libffi
+yay -S woff2
+
+still warning but it will work
 
 Package to easier initialization of `Playwright`.
 

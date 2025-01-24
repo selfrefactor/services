@@ -1,7 +1,7 @@
 const { headless: headlessModule } = require('./_modules/headless')
 const { init } = require('./_modules/init')
 const { type, pass } = require('rambdax')
-const { PlaywrightBlocker } = require('@cliqz/adblocker-playwright')
+const { PlaywrightBlocker } = require('@ghostery/adblocker-playwright')
 const fetch  = require('cross-fetch')
 
 const LONG_TIMEOUT = 60000
