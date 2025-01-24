@@ -25,7 +25,8 @@
 | CTRL+M       | addSelectionToNextFindMatch   | ALT+SHIFT+X  | interactiveEditor.fix                 |
 | ALT+I        | action.goToImplementation     | ALT+SHIFT+Y  | chat.selectKnowledgeBase              |
 | CTRL+SHIFT+E | Peek Implementation           | ALT+SHIFT+G  | interactiveEditor.generate            |
-| ALT+5        | magicBeans.fixComment         | ALT+SHIFT+I  | interactiveEditor.review              |
-| CTRL+4       | workbench.panel.chatEditing   | ALT+SHIFT+8  | generateDocs                          |
-| CTRL+SHIFT+A | action.splitEditorRight       | CTRL+SHIFT+; | after running vscode control          |
-| ALT+=        | git.push                      | CTRL+SHIFT+' | extension.markdown-pdf.pdf            |
+| ALT+Q        | workbench.action.closePanel   | ALT+SHIFT+I  | interactiveEditor.review              |
+| ALT+5        | magicBeans.fixComment         | ALT+SHIFT+8  | generateDocs                          |
+| CTRL+4       | workbench.panel.chatEditing   | CTRL+SHIFT+; | after running vscode control          |
+| CTRL+SHIFT+A | action.splitEditorRight       | CTRL+SHIFT+' | extension.markdown-pdf.pdf            |
+| ALT+=        | git.push                      |              |                                       |

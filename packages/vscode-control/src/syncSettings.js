@@ -18,33 +18,27 @@ const {
 const VSCODE_INSIDERS = process.env.BETA === 'ON';
 const FOLDING_IMPORTS = VSCODE_INSIDERS;
 
-// due to github profiles extension
 const WRITE_TO_OUTPUT = true;
-// const WRITE_TO_OUTPUT = VSCODE_INSIDERS || IS_MANJARO;
 
 const FONT_SIZE = 18;
 const SUGGEST_LINE_HEIGHT = 16;
 const SUGGEST_FONT_SIZE = 15;
 const FILE_ICON_THEME = 'charmed-icons';
-// const FILE_ICON_THEME = VSCODE_INSIDERS ? 'charmed-icons' : 'emoji-file-icons';
 
 const MODES = {
 	big: 0.94,
 	bigger: 1.1,
-	normal: 0.77,
-	small: 0.65,
+	normal: 1,
+	small: 0.8,
 };
 
 const MODE_KEY = defaultTo('MODE', 'normal', 'default');
-
 const MODE = MODES[MODE_KEY];
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json');
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json');
-//  Fira Code
+//  Fira Code 'JetBrains Mono'
 const FONT = 'Geist Mono';
-// const FONT = VSCODE_INSIDERS ? 'JetBrains Mono' : 'Geist Mono';
-const FONT_FACTOR = 1;
 
 void (async function sync() {
 	if(!editorExists) return console.log('editor not found');
@@ -63,6 +57,7 @@ const GOTO_LOCATION = 'goto';
 
 /**
  * Keep latest changes with comments of change
+ 
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "none",
 	 "debug.toolBarLocation": "docked",
@@ -119,10 +114,10 @@ function testNewSettings() {
 		'explorer.compactFolders': false,
 		'explorer.sortOrder': 'type',
 		'npm.scriptHover': false,
-		'outline.collapseItems': 'alwaysExpand', // alwaysCollapse | alwaysExpand | siblings | none
+		// 'outline.collapseItems': 'alwaysExpand', // alwaysCollapse | alwaysExpand | siblings | none
 		'search.collapseResults': 'alwaysExpand', // alwaysExpand | alwaysCollapse
 		'search.seedOnFocus': true,
-		'search.seedWithNearestWord': true,
+		// 'search.seedWithNearestWord': true,
 		'search.showLineNumbers': true,
 		'search.useGlobalIgnoreFiles': true,
 		'search.useParentIgnoreFiles': true,
@@ -305,14 +300,13 @@ function syncFiles(source, destination) {
 }
 
 function getCalculatedOptions() {
-	const SCALE_FACTOR = toDecimal(FONT_FACTOR * MODE, 2);
-	const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR);
-	const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR, 2));
+	const fontSize = toDecimal(FONT_SIZE * MODE);
+	const windowZoom = toDecimal(MODE * 1.5);
+	const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * MODE, 2));
 	const suggestLineHeight = Math.round(
-		toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR),
+		toDecimal(SUGGEST_LINE_HEIGHT * MODE),
 	);
-	const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR * 0.65)));
-
+	const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (MODE * 0.65)));
 	const fontSettings = {
 		'debug.console.fontFamily': FONT,
 		'editor.fontFamily': FONT,
@@ -324,11 +318,10 @@ function getCalculatedOptions() {
 		...fontSettings,
 		'editor.fontSize': fontSize,
 		'editor.lineHeight': 0,
-		// 'editor.lineHeight': lineHeight,
 		'editor.suggestFontSize': suggestFontSize,
 		'editor.suggestLineHeight': suggestLineHeight,
 		'terminal.integrated.fontSize': terminalFontSize,
-		'window.zoomLevel': 2,
+		'window.zoomLevel': windowZoom,
 	};
 }
 

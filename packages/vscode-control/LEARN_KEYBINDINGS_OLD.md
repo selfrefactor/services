@@ -118,6 +118,10 @@
 
 > Peek Implementation
 
+## ALT  Q
+
+`workbench.action.closePanel`
+
 ## ALT  5
 
 `magicBeans.fixComment`
@@ -277,7 +281,6 @@
 ## Convenient keys
 
 * alt+4
-* alt+q
 * alt+v
 * alt+`
 * ctrl+shift+c
