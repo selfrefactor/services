@@ -20,16 +20,15 @@ const FOLDING_IMPORTS = VSCODE_INSIDERS;
 
 const WRITE_TO_OUTPUT = true;
 
-const FONT_SIZE = 18;
-const SUGGEST_LINE_HEIGHT = 16;
-const SUGGEST_FONT_SIZE = 15;
+const FONT_SIZE = 16;
+const SUGGEST_LINE_HEIGHT = 15;
+const SUGGEST_FONT_SIZE = 14;
 const FILE_ICON_THEME = 'charmed-icons';
 
 const MODES = {
-	big: 0.94,
-	bigger: 1.1,
+	big: 1.2,
 	normal: 1,
-	small: 0.8,
+	small: 0.9,
 };
 
 const MODE_KEY = defaultTo('MODE', 'normal', 'default');
