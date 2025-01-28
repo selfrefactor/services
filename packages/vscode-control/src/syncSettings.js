@@ -40,7 +40,7 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json');
 const FONT = 'Geist Mono';
 
 void (async function sync() {
-	if(!editorExists) return console.log('editor not found');
+	if (!editorExists) return console.log('editor not found');
 	await execSafe({
 		command: 'node visualize-keybindings.js',
 		cwd: resolve(__dirname, '..'),
@@ -53,7 +53,6 @@ void (async function sync() {
 // goto | peek
 const GOTO_LOCATION = 'goto';
 
-
 /**
  * Keep latest changes with comments of change
  
@@ -65,11 +64,27 @@ const GOTO_LOCATION = 'goto';
  */
 function testNewSettings() {
 	return {
-		'terminal.integrated.gpuAcceleration': 'on',
-		'search.quickAccess.preserveInput': true,
-		'search.quickOpen.includeSymbols': true,
+		'search.searchEditor.doubleClickBehaviour': 'goToLocation',
+		'search.smartCase': true,
+		'search.sortOrder': 'fileNames',
+
+		'search.useReplacePreview': false,
+		'search.collapseResults': 'alwaysExpand', // alwaysExpand | alwaysCollapse
+		'search.searchEditor.defaultNumberOfContextLines': 4,
+		'search.seedOnFocus': true,
+		'search.seedWithNearestWord': false,
+		'search.showLineNumbers': true,
+		'search.followSymlinks': true,
+		'search.quickOpen.includeHistory': true,
+
+		'search.useGlobalIgnoreFiles': true,
+		'search.useParentIgnoreFiles': true,
+		'search.decorations.badges': false,
+		'search.quickAccess.preserveInput': false,
+		'search.quickOpen.includeSymbols': false,
 		'search.searchEditor.focusResultsOnSearch': true,
 		'search.searchEditor.reusePriorSearchConfiguration': true,
+		'terminal.integrated.gpuAcceleration': 'on',
 		'editor.quickSuggestions': {
 			comments: 'off',
 			other: 'off',
@@ -78,7 +93,6 @@ function testNewSettings() {
 		},
 		'magicBeans.ALLOW_CHANGE_COLOR_THEME': IS_MANJARO,
 		'editor.stackFrameHighlightBackground': '#ff0000',
-		'search.searchEditor.defaultNumberOfContextLines': 4,
 		'window.autoDetectColorScheme': false,
 		'workbench.editor.showTabs': 'multiple',
 		'workbench.editor.tabActionCloseVisibility': true,
@@ -114,12 +128,6 @@ function testNewSettings() {
 		'explorer.sortOrder': 'type',
 		'npm.scriptHover': false,
 		// 'outline.collapseItems': 'alwaysExpand', // alwaysCollapse | alwaysExpand | siblings | none
-		'search.collapseResults': 'alwaysExpand', // alwaysExpand | alwaysCollapse
-		'search.seedOnFocus': true,
-		// 'search.seedWithNearestWord': true,
-		'search.showLineNumbers': true,
-		'search.useGlobalIgnoreFiles': true,
-		'search.useParentIgnoreFiles': true,
 		'security.workspace.trust.enabled': false,
 		'workbench.editor.empty.hint': 'hidden',
 		'workbench.layoutControl.type': 'menu',
@@ -273,8 +281,6 @@ function getAdditionalSettings() {
 		'npm.fetchOnlinePackageInfo': false,
 		'npm.packageManager': 'yarn',
 		'scm.defaultViewMode': 'tree',
-		'search.smartCase': true,
-		'search.useReplacePreview': false,
 		// test tasks
 		'task.autoDetect': 'off',
 		'task.quickOpen.detail': true,
@@ -302,9 +308,7 @@ function getCalculatedOptions() {
 	const fontSize = toDecimal(FONT_SIZE * MODE);
 	const windowZoom = toDecimal(MODE * 1.5);
 	const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * MODE, 2));
-	const suggestLineHeight = Math.round(
-		toDecimal(SUGGEST_LINE_HEIGHT * MODE),
-	);
+	const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * MODE));
 	const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (MODE * 0.65)));
 	const fontSettings = {
 		'debug.console.fontFamily': FONT,
@@ -390,48 +394,48 @@ function syncSnippets() {
 	syncFiles(SNIPPETS_SOURCE, TSX_SNIPPETS);
 }
 
-function copilotSettings (){
+function copilotSettings() {
 	return {
-				/**
+		/**
 		 * Semantic search results (Preview)
 
 Setting: github.copilot.chat.search.semanticTextResults
 
 You can perform an exact search across your files with the Search view. It also now uses Copilot to give search results that are semantically relevant.
 		 */
-'github.copilot.chat.reviewSelection.instructions': [
-	{
-		text: 'Prevent multiple empty lines in the code.',
-	},
-	{
-		text: 'Improve titles of test cases if possible.',
-	},
-],
-'github.copilot.chat.edits.enabled': true,
-'github.copilot.chat.followUps': 'always',
-'github.copilot.chat.experimental.inlineChatHint.enabled': false,
-'github.copilot.chat.experimental.codeFeedback.enabled': true,
-'github.copilot.chat.experimental.codeFeedback.instructions': [
-	{
-		text: 'try to add comment to complext code pieces | when possible, include comment how data changes on specific code line that contains important logic or hard to understand logic',
-	},
-],
-'github.copilot.chat.experimental.codeGeneration.instructions': [
-	{
-		text: 'avoid introducing new interfaces when refactoring is requested in Typescript code | when refactoring is requested in Typescript code, make sure that refactored code is valid TS',
-	},
-],
-'github.copilot.chat.experimental.testGeneration.instructions': [
-	{
-		text: 'Test suite is Jest or Vitest|Happy path is the first test and its name is happy|Error test cases are last in suite|minimum two top level describe blocks can exists and no nested describe blocks|always prefer `.spec.` instead of `.test` as file name suffix',
-	},
-],
-'github.copilot.chat.experimental.generateTests.codeLens': true,
-'github.copilot.chat.experimental.inlineChatCompletionTrigger.enabled': false,
-'github.copilot.chat.experimental.startDebugging.enabled': true,
-'github.copilot.chat.experimental.temporalContext.enabled': false,
-'github.copilot.chat.scopeSelection': true,
-'github.copilot.chat.welcomeMessage': 'never',
-'github.copilot.chat.search.semanticTextResults': true,
-	}
+		'github.copilot.chat.reviewSelection.instructions': [
+			{
+				text: 'Prevent multiple empty lines in the code.',
+			},
+			{
+				text: 'Improve titles of test cases if possible.',
+			},
+		],
+		'github.copilot.chat.edits.enabled': true,
+		'github.copilot.chat.followUps': 'always',
+		'github.copilot.chat.experimental.inlineChatHint.enabled': false,
+		'github.copilot.chat.experimental.codeFeedback.enabled': true,
+		'github.copilot.chat.experimental.codeFeedback.instructions': [
+			{
+				text: 'try to add comment to complext code pieces | when possible, include comment how data changes on specific code line that contains important logic or hard to understand logic',
+			},
+		],
+		'github.copilot.chat.experimental.codeGeneration.instructions': [
+			{
+				text: 'avoid introducing new interfaces when refactoring is requested in Typescript code | when refactoring is requested in Typescript code, make sure that refactored code is valid TS',
+			},
+		],
+		'github.copilot.chat.experimental.testGeneration.instructions': [
+			{
+				text: 'Test suite is Jest or Vitest|Happy path is the first test and its name is happy|Error test cases are last in suite|minimum two top level describe blocks can exists and no nested describe blocks|always prefer `.spec.` instead of `.test` as file name suffix',
+			},
+		],
+		'github.copilot.chat.experimental.generateTests.codeLens': true,
+		'github.copilot.chat.experimental.inlineChatCompletionTrigger.enabled': false,
+		'github.copilot.chat.experimental.startDebugging.enabled': true,
+		'github.copilot.chat.experimental.temporalContext.enabled': false,
+		'github.copilot.chat.scopeSelection': true,
+		'github.copilot.chat.welcomeMessage': 'never',
+		'github.copilot.chat.search.semanticTextResults': true,
+	};
 }
