@@ -1,6 +1,5 @@
 {
 	
-  "breadcrumbs.symbolSortOrder": "type",
   "chat.editing.alwaysSaveWithGeneratedChanges": true,
   "files.autoSave": "onFocusChange",
   "markdown-pdf.displayHeaderFooter": false,

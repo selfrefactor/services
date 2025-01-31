@@ -107,7 +107,7 @@ function getEditor() {
 		'editor.semanticHighlighting.enabled': true,
 		'editor.semanticTokenColorCustomizations': { enabled: true },
 		'editor.smoothScrolling': true,
-		'editor.stackFrameHighlightBackground': '#ff0000',
+		// 'editor.stackFrameHighlightBackground': '#ff0000', seems not in schema but it was working with Jupiter (maybe)
 		'editor.stickyScroll.defaultModel': 'indentationModel',
 		'editor.stickyScroll.enabled': true,
 		'editor.suggest.localityBonus': false,
@@ -158,7 +158,6 @@ function getSearch() {
 function getWorkbench() {
 	return {
 		'workbench.activityBar.location': 'top',
-		'workbench.activityBar.visible': true,
 		'workbench.editor.decorations.colors': false,
 		'workbench.editor.dragToOpenWindow': false,
 		'workbench.editor.empty.hint': 'hidden',
@@ -171,7 +170,6 @@ function getWorkbench() {
 		'workbench.editor.showTabs': 'multiple',
 		'workbench.editor.tabActionCloseVisibility': true,
 		'workbench.editor.tabSizing': 'fit',
-		'workbench.editor.untitled.hint': 'hidden',
 		'workbench.editor.untitled.labelFormat': 'name',
 		'workbench.editor.wrapTabs': true,
 		'workbench.iconTheme': FILE_ICON_THEME,
@@ -222,6 +220,9 @@ function getGit() {
 function getStableSettings() {
 	return {
 		'breadcrumbs.enabled': true,
+		'breadcrumbs.filePath': 'last',
+		'breadcrumbs.icons': true,
+		'breadcrumbs.symbolSortOrder': 'position',
 		'chat.editor.wordWrap': 'on', // to fix not working word wrap
 		'debug.inlineValues': 'off',
 		'debug.javascript.codelens.npmScripts': 'never',
@@ -303,7 +304,6 @@ function getStableSettings() {
 		'window.commandCenter': false, // click to go to recent files
 		'window.title': '${dirty}${activeEditorMedium}',
 		'window.titleBarStyle': 'custom',
-		'zenMode.hideTabs': false,
 		'zenMode.restore': false,
 	};
 }
