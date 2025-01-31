@@ -2,7 +2,7 @@ const { copySync, writeJsonSync } = require('fs-extra');
 const { defaultTo, execSafe } = require('helpers-fn');
 const { resolve } = require('node:path');
 const { toDecimal, sortObject } = require('rambdax');
-const IS_MANJARO = process.env.IS_MANJARO === 'ON';
+// const IS_MANJARO = process.env.IS_MANJARO === 'ON';
 
 const settings = require('../.vscode/settings-source');
 const {
@@ -36,8 +36,7 @@ const MODE = MODES[MODE_KEY];
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json');
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json');
-//  Fira Code 'JetBrains Mono'
-const FONT = 'Geist Mono';
+const FONT = 'Geist Mono'; //  Fira Code 'JetBrains Mono'
 
 void (async function sync() {
 	if (!editorExists) return console.log('editor not found');
@@ -50,170 +49,156 @@ void (async function sync() {
 	await syncSettings();
 })();
 
-// goto | peek
-const GOTO_LOCATION = 'goto';
+const GOTO_LOCATION = 'goto'; // goto | peek
 
-/**
- * Keep latest changes with comments of change
- 
-  "workbench.tree.indent": 12,
-  "workbench.tree.renderIndentGuides": "none",
-	 "debug.toolBarLocation": "docked",
-	   "explorer.compactFolders": false,
-  "explorer.decorations.badges": false,
- */
-function testNewSettings() {
+function getEditor() {
 	return {
-		'search.searchEditor.doubleClickBehaviour': 'goToLocation',
-		'search.smartCase': true,
-		'search.sortOrder': 'fileNames',
-
-		'search.useReplacePreview': false,
-		'search.collapseResults': 'alwaysExpand', // alwaysExpand | alwaysCollapse
-		'search.searchEditor.defaultNumberOfContextLines': 4,
-		'search.seedOnFocus': true,
-		'search.seedWithNearestWord': false,
-		'search.showLineNumbers': true,
-		'search.followSymlinks': true,
-		'search.quickOpen.includeHistory': true,
-
-		'search.useGlobalIgnoreFiles': true,
-		'search.useParentIgnoreFiles': true,
-		'search.decorations.badges': false,
-		'search.quickAccess.preserveInput': false,
-		'search.quickOpen.includeSymbols': false,
-		'search.searchEditor.focusResultsOnSearch': true,
-		'search.searchEditor.reusePriorSearchConfiguration': true,
-		'terminal.integrated.gpuAcceleration': 'on',
+		'editor.acceptSuggestionOnCommitCharacter': false,
+		'editor.acceptSuggestionOnEnter': 'smart',
+		'editor.autoClosingDelete': 'always',
+		'editor.bracketPairColorization.enabled': false,
+		'editor.codeLens': true,
+		'editor.codeLensFontSize': 0,
+		'editor.colorDecorators': true,
+		'editor.colorDecoratorsLimit': 10,
+		'editor.copyWithSyntaxHighlighting': false,
+		'editor.cursorBlinking': 'smooth',
+		'editor.cursorSmoothCaretAnimation': 'on',
+		'editor.cursorStyle': 'line-thin', // line-thin | line | block | underline | underline-thin
+		'editor.definitionLinkOpensInPeek': false,
+		'editor.detectIndentation': false,
+		'editor.dragAndDrop': false,
+		'editor.folding': true,
+		'editor.foldingHighlight': true,
+		'editor.foldingImportsByDefault': FOLDING_IMPORTS,
+		'editor.gotoLocation.multipleDeclarations': GOTO_LOCATION, // by default all were `peek`
+		'editor.gotoLocation.multipleDefinitions': GOTO_LOCATION,
+		'editor.gotoLocation.multipleImplementations': GOTO_LOCATION,
+		'editor.gotoLocation.multipleReferences': GOTO_LOCATION,
+		'editor.gotoLocation.multipleTypeDefinitions': GOTO_LOCATION,
+		'editor.guides.bracketPairs': 'active',
+		'editor.guides.bracketPairsHorizontal': false,
+		'editor.guides.highlightActiveBracketPair': true,
+		'editor.guides.highlightActiveIndentation': true,
+		'editor.guides.indentation': true,
+		'editor.hover.delay': 1000,
+		'editor.hover.enabled': true,
+		'editor.hover.sticky': true,
+		'editor.inlayHints.enabled': 'off',
+		'editor.inlayHints.padding': false,
+		'editor.insertSpaces': false,
+		'editor.lightbulb.enabled': 'on',
+		'editor.lineNumbers': 'interval',
+		'editor.linkedEditing': true,
+		'editor.links': false,
+		'editor.matchBrackets': 'always',
+		'editor.minimap.enabled': false,
+		'editor.mouseWheelZoom': true,
+		'editor.multiCursorModifier': 'ctrlCmd',
+		'editor.occurrencesHighlight': 'on',
+		'editor.occurrencesHighlightDelay': 1000,
+		'editor.parameterHints.enabled': false,
+		'editor.pasteAs.showPasteSelector': 'never',
+		'editor.renderLineHighlight': 'gutter',
+		'editor.renderWhitespace': 'none',
+		'editor.roundedSelection': false,
+		'editor.scrollBeyondLastLine': false,
+		'editor.scrollbar.verticalScrollbarSize': 15,
+		'editor.semanticHighlighting.enabled': true,
+		'editor.semanticTokenColorCustomizations': { enabled: true },
+		'editor.smoothScrolling': true,
+		'editor.stackFrameHighlightBackground': '#ff0000',
+		'editor.stickyScroll.defaultModel': 'indentationModel',
+		'editor.stickyScroll.enabled': true,
+		'editor.suggest.localityBonus': false,
+		'editor.suggest.selectionMode': 'whenTriggerCharacter',
+		'editor.suggest.showStatusBar': false,
+		'editor.suggest.showWords': false,
+		'editor.suggest.snippetsPreventQuickSuggestions': false,
+		'editor.suggestOnTriggerCharacters': false,
+		'editor.tabSize': 2,
+		'editor.wordBasedSuggestions': false,
+		'editor.wordWrap': 'on',
+		// 'editor.find.autoFindInSelection': 'multiline',
 		'editor.quickSuggestions': {
 			comments: 'off',
 			other: 'off',
 			// because of tailwind this needs to be on
 			strings: 'off',
 		},
-		'magicBeans.ALLOW_CHANGE_COLOR_THEME': IS_MANJARO,
-		'editor.stackFrameHighlightBackground': '#ff0000',
-		'window.autoDetectColorScheme': false,
-		'workbench.editor.showTabs': 'multiple',
-		'workbench.editor.tabActionCloseVisibility': true,
-		'editor.codeLens': true,
-		'editor.codeLensFontSize': 0,
-		'editor.autoClosingDelete': 'always',
-		'workbench.activityBar.location': 'top',
-		'workbench.layoutControl.enabled': false,
-		'window.doubleClickIconToClose': true,
-		'workbench.editor.decorations.colors': false,
-		'editor.colorDecoratorsLimit': 10,
-		'editor.colorDecorators': true,
-		'editor.dragAndDrop': false,
-		'editor.definitionLinkOpensInPeek': false,
-		'editor.folding': true,
-		'editor.foldingHighlight': true,
-		'window.menuBarVisibility': 'compact',
-		// EXPERIMENTAL
-		'debug.javascript.codelens.npmScripts': 'never',
-		'editor.copyWithSyntaxHighlighting': false,
-		'editor.detectIndentation': false,
-		'editor.find.autoFindInSelection': 'multiline',
-		'editor.insertSpaces': false,
-		'editor.lightbulb.enabled': 'off',
-		'editor.links': false,
-		'editor.matchBrackets': 'always',
-		'editor.occurrencesHighlight': 'on',
-		'editor.renderLineHighlight': 'gutter',
-		'editor.renderWhitespace': 'none',
-		'editor.roundedSelection': false,
-		'editor.suggest.localityBonus': true,
-		'explorer.compactFolders': false,
-		'explorer.sortOrder': 'type',
-		'npm.scriptHover': false,
-		// 'outline.collapseItems': 'alwaysExpand', // alwaysCollapse | alwaysExpand | siblings | none
-		'security.workspace.trust.enabled': false,
-		'workbench.editor.empty.hint': 'hidden',
-		'workbench.layoutControl.type': 'menu',
-		'workbench.panel.opensMaximized': 'never',
-		'workbench.tips.enabled': false,
-		'workbench.tree.indent': 16,
-		// STABLE
-		'editor.foldingImportsByDefault': FOLDING_IMPORTS,
-		'editor.linkedEditing': true,
-		'editor.pasteAs.showPasteSelector': 'never',
-		'editor.suggest.snippetsPreventQuickSuggestions': false,
-		'window.density.editorTabHeight': 'compact',
-		'workbench.editor.tabSizing': 'fit',
-		'workbench.editor.wrapTabs': true,
-		// to fix not working word wrap
-		'chat.editor.wordWrap': 'on',
-		'editor.defaultFormatter': 'esbenp.prettier-vscode',
-		'javascript.preferences.importModuleSpecifier': 'relative',
-		'javascript.suggest.autoImports': true,
-		// to test prefered local imports
-		'javascript.suggest.includeAutomaticOptionalChainCompletions': true,
-		'task.problemMatchers.neverPrompt': { shell: true },
-		'typescript.preferences.importModuleSpecifier': 'relative',
-		'typescript.suggest.autoImports': true,
-		'typescript.suggest.includeAutomaticOptionalChainCompletions': true,
-		'typescript.tsserver.experimental.enableProjectDiagnostics': true, // to test
+		// "editor.pasteAs.preferences": [
+		// 	"chat.attach.text"
+		// ],
 	};
 }
 
-function getEditor() {
+function getSearch() {
 	return {
-		// by default all were `peek`
-		'editor.gotoLocation.multipleDeclarations': GOTO_LOCATION,
-		'editor.gotoLocation.multipleDefinitions': GOTO_LOCATION,
-		'editor.gotoLocation.multipleImplementations': GOTO_LOCATION,
-		'editor.gotoLocation.multipleReferences': GOTO_LOCATION,
-		'editor.gotoLocation.multipleTypeDefinitions': GOTO_LOCATION,
-		'editor.suggest.showStatusBar': false,
-		// MARKER
-		'editor.cursorSmoothCaretAnimation': 'on',
-		'editor.cursorStyle': 'line-thin', // line-thin | line | block | underline | underline-thin
-		'editor.guides.bracketPairs': 'active',
-		'editor.guides.bracketPairsHorizontal': false,
-		'editor.guides.highlightActiveBracketPair': false,
-		'editor.guides.highlightActiveIndentation': false,
-		'editor.guides.indentation': false,
-		'editor.hover.delay': 700,
-		'editor.hover.enabled': true,
-		'editor.hover.sticky': true,
-		'editor.lineNumbers': 'interval',
-		'editor.minimap.enabled': false,
-		'editor.mouseWheelZoom': true,
-		'editor.multiCursorModifier': 'ctrlCmd',
-		'editor.scrollbar.verticalScrollbarSize': 15,
-		'editor.scrollBeyondLastLine': false,
-		'editor.semanticHighlighting.enabled': true,
-		'editor.semanticTokenColorCustomizations': { enabled: true },
-		'editor.smoothScrolling': true,
-		'editor.stickyScroll.defaultModel': 'indentationModel',
-		'editor.stickyScroll.enabled': true,
-		'editor.suggest.showWords': false,
-		'editor.tabSize': 2,
-		'editor.wordWrap': 'on',
+		'search.collapseResults': 'alwaysExpand', // alwaysExpand | alwaysCollapse
+		'search.decorations.badges': false,
+		'search.followSymlinks': true,
+		'search.quickAccess.preserveInput': false,
+		'search.quickOpen.includeHistory': true,
+		'search.quickOpen.includeSymbols': false,
+		'search.searchEditor.defaultNumberOfContextLines': 4,
+		'search.searchEditor.doubleClickBehaviour': 'goToLocation',
+		'search.searchEditor.focusResultsOnSearch': true,
+		'search.searchEditor.reusePriorSearchConfiguration': true,
+		'search.seedOnFocus': true,
+		'search.seedWithNearestWord': false,
+		'search.showLineNumbers': true,
+		'search.smartCase': true,
+		'search.sortOrder': 'fileNames',
+		'search.useGlobalIgnoreFiles': true,
+		'search.useParentIgnoreFiles': true,
+		'search.useReplacePreview': false,
 	};
 }
 
 function getWorkbench() {
 	return {
+		'workbench.activityBar.location': 'top',
 		'workbench.activityBar.visible': true,
+		'workbench.editor.decorations.colors': false,
+		'workbench.editor.dragToOpenWindow': false,
+		'workbench.editor.empty.hint': 'hidden',
+		'workbench.editor.enablePreview': VSCODE_INSIDERS,
+		'workbench.editor.enablePreviewFromQuickOpen': true,
+		'workbench.editor.focusRecentEditorAfterClose': false,
+		'workbench.editor.pinnedTabSizing': 'normal', // shrink | normal
+		'workbench.editor.pinnedTabsOnSeparateRow': true,
+		'workbench.editor.revealIfOpen': false,
+		'workbench.editor.showTabs': 'multiple',
+		'workbench.editor.tabActionCloseVisibility': true,
+		'workbench.editor.tabSizing': 'fit',
+		'workbench.editor.untitled.hint': 'hidden',
+		'workbench.editor.untitled.labelFormat': 'name',
+		'workbench.editor.wrapTabs': true,
+		'workbench.iconTheme': FILE_ICON_THEME,
+		'workbench.layoutControl.enabled': false,
+		'workbench.layoutControl.type': 'menu',
+		'workbench.list.smoothScrolling': true,
+		'workbench.panel.opensMaximized': 'never',
+		'workbench.panel.showLabels': true,
+		'workbench.sideBar.location': 'right',
+		'workbench.startupEditor': 'none',
+		'workbench.tips.enabled': false,
+		'workbench.tree.enableStickyScroll': true,
+		'workbench.tree.indent': 16,
+		'workbench.tree.renderIndentGuides': 'none',
+		'workbench.tree.stickyScrollMaxItemCount': 8,
 		'workbench.editor.languageDetectionHints': {
 			notebookEditors: false,
 			untitledEditors: false,
 		},
-		'workbench.editor.pinnedTabSizing': 'normal', // shrink | normal
-		'workbench.editor.pinnedTabsOnSeparateRow': true,
-		'workbench.editor.untitled.hint': 'hidden',
-		'workbench.editor.untitled.labelFormat': 'name',
-		'workbench.iconTheme': FILE_ICON_THEME,
-		'workbench.list.smoothScrolling': true,
-		'workbench.sideBar.location': 'right',
-		'workbench.startupEditor': 'none',
 	};
 }
 
 function getExplorer() {
 	return {
+		// 'explorer.sortOrder': 'type',
+		'explorer.autoReveal': true,
+		'explorer.compactFolders': false,
 		'explorer.confirmDelete': false,
 		'explorer.confirmDragAndDrop': false,
 		'explorer.incrementalNaming': 'smart',
@@ -233,13 +218,38 @@ function getGit() {
 	};
 }
 
-function getAdditionalSettings() {
+// 'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
+function getStableSettings() {
 	return {
-		'breadcrumbs.enabled': false,
+		'breadcrumbs.enabled': true,
+		'chat.editor.wordWrap': 'on', // to fix not working word wrap
 		'debug.inlineValues': 'off',
+		'debug.javascript.codelens.npmScripts': 'never',
+		'debug.toolBarLocation': 'docked',
 		'diffEditor.diffAlgorithm': 'advanced',
 		'editor.scrollbar.vertical': 'visible',
 		'files.enableTrash': false,
+		'javascript.preferences.importModuleSpecifier': 'relative',
+		'javascript.suggest.autoImports': true,
+		'javascript.suggest.includeAutomaticOptionalChainCompletions': true, // to test prefered local imports
+		'magicBeans.ALLOW_CHANGE_COLOR_THEME': true,
+		'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
+		'npm.scriptHover': false,
+		'security.workspace.trust.enabled': false, // 'outline.collapseItems': 'alwaysExpand', // alwaysCollapse | alwaysExpand | siblings | none
+		'task.problemMatchers.neverPrompt': { shell: true },
+		'terminal.integrated.copyOnSelection': true,
+		'terminal.integrated.gpuAcceleration': 'on',
+		'terminal.integrated.mouseWheelZoom': true,
+		'typescript.preferences.importModuleSpecifier': 'relative',
+		'typescript.suggest.autoImports': true,
+		'typescript.suggest.includeAutomaticOptionalChainCompletions': true,
+		'typescript.tsserver.experimental.enableProjectDiagnostics': true, // to test
+		'window.autoDetectColorScheme': false,
+		'window.customTitleBarVisibility': 'windowed',
+		'window.density.editorTabHeight': 'compact',
+		'window.doubleClickIconToClose': true,
+		'window.menuBarVisibility': 'compact',
+		'window.zoomPerWindow': true,
 		'files.exclude': {
 			'.cache': true,
 			'**/.awcache': true,
@@ -281,7 +291,6 @@ function getAdditionalSettings() {
 		'npm.fetchOnlinePackageInfo': false,
 		'npm.packageManager': 'yarn',
 		'scm.defaultViewMode': 'tree',
-		// test tasks
 		'task.autoDetect': 'off',
 		'task.quickOpen.detail': true,
 		'telemetry.telemetryLevel': 'off',
@@ -291,8 +300,7 @@ function getAdditionalSettings() {
 		'typescript.inlayHints.variableTypes.enabled': false,
 		'typescript.updateImportsOnFileMove.enabled': 'always',
 		'update.mode': 'none',
-		// click to go to recent files
-		'window.commandCenter': false,
+		'window.commandCenter': false, // click to go to recent files
 		'window.title': '${dirty}${activeEditorMedium}',
 		'window.titleBarStyle': 'custom',
 		'zenMode.hideTabs': false,
@@ -362,23 +370,11 @@ async function syncSettings() {
 		getExplorer(),
 		getGit(),
 		getWorkbench(),
+		getSearch(),
 		getAdditionalSettings(),
-		testNewSettings(),
 		getCalculatedOptions(),
-		{
-			'workbench.tree.renderIndentGuides': 'none',
-			'terminal.integrated.copyOnSelection': true,
-			'workbench.tree.enableStickyScroll': true,
-			'workbench.tree.stickyScrollMaxItemCount': 8,
-			'window.zoomPerWindow': true,
-			'window.customTitleBarVisibility': 'windowed',
-			'terminal.integrated.mouseWheelZoom': true,
-			'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
-			'editor.wordBasedSuggestions': false,
-			'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
-			// 'workbench.editor.enablePreview': false,
-			'workbench.editor.enablePreview': VSCODE_INSIDERS,
-		},
+		getStableSettings(),
+		getCopilotSettings(),
 	]);
 	const sorted = sortObject(sortFn, newOptions);
 
@@ -394,7 +390,7 @@ function syncSnippets() {
 	syncFiles(SNIPPETS_SOURCE, TSX_SNIPPETS);
 }
 
-function copilotSettings() {
+function getCopilotSettings() {
 	return {
 		/**
 		 * Semantic search results (Preview)

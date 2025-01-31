@@ -1,27 +1,12 @@
 {
-  "editor.pasteAs.preferences": [
-    "chat.attach.text"
-  ],
-  "chat.editing.alwaysSaveWithGeneratedChanges": true,
-  "typescript.experimental.expandableHover": true,
-  "editor.occurrencesHighlightDelay": 1000,
-  "workbench.panel.showLabels": true,
-  "markdown-pdf.displayHeaderFooter": false,
-  "editor.suggest.selectionMode": "whenTriggerCharacter",
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.acceptSuggestionOnEnter": "smart",
-  "editor.bracketPairColorization.enabled": false,
-  "editor.cursorBlinking": "smooth",
-  "editor.inlayHints.enabled": "off",
-  "editor.inlayHints.padding": true,
-  "editor.parameterHints.enabled": false,
-  "editor.suggestOnTriggerCharacters": false,
-  "explorer.autoReveal": true,
-  "references.preferredLocation": "view",
-  "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.editor.focusRecentEditorAfterClose": false,
-  "workbench.editor.revealIfOpen": false,
+	
   "breadcrumbs.symbolSortOrder": "type",
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "files.autoSave": "onFocusChange",
+  "markdown-pdf.displayHeaderFooter": false,
+  "references.preferredLocation": "view",
+  "typescript.experimental.expandableHover": true,
+  "zenMode.hideActivityBar": false,
   "magicBeans.RANDOM_FILE_FORBIDDEN": [
     "__tests__",
     ".gitconfig",
@@ -60,8 +45,5 @@
     ".idea",
     ".git",
     ".cache"
-  ],
-  "workbench.editor.dragToOpenWindow": false,
-  "files.autoSave": "onFocusChange",
-  "zenMode.hideActivityBar": false
+  ]
 }
