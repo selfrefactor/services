@@ -371,7 +371,6 @@ async function syncSettings() {
 		getGit(),
 		getWorkbench(),
 		getSearch(),
-		getAdditionalSettings(),
 		getCalculatedOptions(),
 		getStableSettings(),
 		getCopilotSettings(),
