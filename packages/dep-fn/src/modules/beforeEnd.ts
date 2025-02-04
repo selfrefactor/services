@@ -5,8 +5,9 @@ import {Dependencies} from '../../typings'
 import { sortObject } from 'rambdax'
 
 let sortFn = (aProp, bProp) => {
-	if(aProp[0] === bProp[0]) return 0
-	return aProp[0].localeCompare(bProp[0])
+	if(aProp === bProp) return 0
+
+	return aProp.localeCompare(bProp)
 }
 
 export const beforeEnd = (input: Dependencies): void => {

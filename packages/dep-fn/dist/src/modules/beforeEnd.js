@@ -6,9 +6,9 @@ const fs_extra_1 = require("fs-extra");
 const path_1 = require("path");
 const rambdax_1 = require("rambdax");
 let sortFn = (aProp, bProp) => {
-    if (aProp[0] === bProp[0])
+    if (aProp === bProp)
         return 0;
-    return aProp[0].localeCompare(bProp[0]);
+    return bProp.localeCompare(aProp);
 };
 const beforeEnd = (input) => {
     const filePath = (0, path_1.join)(process.cwd(), 'package.json');
