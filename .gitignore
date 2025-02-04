@@ -11,3 +11,4 @@ packages/scrape-jokes/output/*.md
 packages/vscode-control/LEARN_KEYBINDINGS.pdf
 packages/magic-beans/src/symbols/*.md
 packages/magic-beans/dist
+packages/dep-fn/rambdax.json
