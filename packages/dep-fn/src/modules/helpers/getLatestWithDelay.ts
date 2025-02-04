@@ -1,12 +1,12 @@
 import {execCommand} from './execCommand'
-import {last} from 'rambdax'
+import {head} from 'rambdax'
 
 export const isAtLeast30DaysOld = (dateString: string,key: string, dependency: string): boolean => {
   const date = new Date(dateString);
   const now = new Date();
   const diffTime = Math.abs(now.getTime() - date.getTime());
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-	console.log(diffDays, 'diffDays', dependency, key)
+	// console.log(diffDays, 'diffDays', dependency, key, diffDays >= 30)
   return diffDays >= 30;
 }
 
@@ -32,9 +32,10 @@ export const getLatestWithDelay = async(dependency: string, currentVersion: stri
     const filtered = versionsToCheck.filter(
 			({version, time}) => isAtLeast30DaysOld(time, version, dependency)
     ).map(x => x.version)
-    if (filtered.length === 0) return false
+		console.log(filtered, 'filtered')
+    if (filtered.length === 0) return ''
 
-    return last(filtered)
+    return head(filtered)
   } catch (err) {
     console.log(err, 'dep.fn')
     process.exit(1)

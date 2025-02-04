@@ -8,7 +8,7 @@ const isAtLeast30DaysOld = (dateString, key, dependency) => {
     const now = new Date();
     const diffTime = Math.abs(now.getTime() - date.getTime());
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    console.log(diffDays, 'diffDays', dependency, key);
+    // console.log(diffDays, 'diffDays', dependency, key, diffDays >= 30)
     return diffDays >= 30;
 };
 exports.isAtLeast30DaysOld = isAtLeast30DaysOld;
@@ -29,10 +29,11 @@ const getLatestWithDelay = async (dependency, currentVersion) => {
             return '';
         }
         let versionsToCheck = versions.slice(0, indexOfCurrent).map((version) => ({ version, time: packageInfo.time[version] }));
-        const filtered = versionsToCheck.filter(({ version, time }) => (0, exports.isAtLeast30DaysOld)(time, version, dependency)).map(([key]) => key);
+        const filtered = versionsToCheck.filter(({ version, time }) => (0, exports.isAtLeast30DaysOld)(time, version, dependency)).map(x => x.version);
+        console.log(filtered, 'filtered');
         if (filtered.length === 0)
-            return false;
-        return (0, rambdax_1.last)(filtered);
+            return '';
+        return (0, rambdax_1.head)(filtered);
     }
     catch (err) {
         console.log(err, 'dep.fn');
