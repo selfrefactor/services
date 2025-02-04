@@ -8,7 +8,7 @@
   },
   "main": "dist/src/index.js",
   "typings": "index.d.ts",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "depFn": [
     "inquirer"
   ],
