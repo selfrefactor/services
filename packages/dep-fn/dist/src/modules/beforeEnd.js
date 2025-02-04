@@ -8,7 +8,7 @@ const rambdax_1 = require("rambdax");
 let sortFn = (aProp, bProp) => {
     if (aProp === bProp)
         return 0;
-    return bProp.localeCompare(aProp);
+    return aProp.localeCompare(bProp);
 };
 const beforeEnd = (input) => {
     const filePath = (0, path_1.join)(process.cwd(), 'package.json');

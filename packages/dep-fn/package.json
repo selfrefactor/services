@@ -8,24 +8,24 @@
   },
   "main": "dist/src/index.js",
   "typings": "index.d.ts",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "depFn": [
     "inquirer"
   ],
   "dependencies": {
-    "rambdax": "11.3.1",
-    "package-storage": "1.0.0",
-    "json-format": "1.0.1",
+    "fs-extra": "11.3.0",
     "inquirer": "8.0.0",
-    "fs-extra": "11.3.0"
+    "json-format": "1.0.1",
+    "package-storage": "1.0.0",
+    "rambdax": "11.3.1"
   },
   "devDependencies": {
-    "typescript": "5.8.0-dev.20250204",
-    "@types/node": "22.13.1",
-    "@types/minimatch": "5.1.2",
-    "@types/glob": "8.1.0",
+    "@types/events": "3.0.3",
     "@types/fs-extra": "11.0.4",
-    "@types/events": "3.0.3"
+    "@types/glob": "8.1.0",
+    "@types/minimatch": "5.1.2",
+    "@types/node": "22.13.1",
+    "typescript": "5.8.0-dev.20250204"
   },
   "license": "MIT",
   "author": "Dejan Toteff <deyan8284@gmail.com>",
