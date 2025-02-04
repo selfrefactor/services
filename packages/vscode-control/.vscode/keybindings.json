@@ -298,7 +298,7 @@
 		"command": "workbench.action.selectTheme"
 	},
 	{
-		"key": "ctrl+shift+`",
+		"key": "alt+4",
 		"hint": "Active file",
 		"priority": true,
 		"command": "workbench.files.action.showActiveFileInExplorer"
