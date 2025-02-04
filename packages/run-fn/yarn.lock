@@ -209,16 +209,16 @@ define-property@^1.0.0:
   dependencies:
     is-descriptor "^1.0.0"
 
-dep-fn@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/dep-fn/-/dep-fn-3.2.0.tgz#32f3adeae3640d734c55a0525459989e004c5ed5"
-  integrity sha512-qd5YzgItHBNZ3OInYGrbcZ7dAJBUAzzjRyrJJVO6srLKNsYuQnhgQtFbP+GMWR1NhC3VR6XF/2LdW3ekQlXmGw==
+dep-fn@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/dep-fn/-/dep-fn-3.3.0.tgz#1fd2678c6c44db270dc94c9d59b46e1644d861c0"
+  integrity sha512-EO34zFGrmxDk3UWrL6VHBAg+YP2+ZXgAcBOjfInYnvZxz/THDNDME+BOuEAPoHfxP6AWZ1dtL8VmrFd8zhDM5A==
   dependencies:
-    fs-extra "11.2.0"
+    fs-extra "11.3.0"
     inquirer "8.0.0"
     json-format "1.0.1"
     package-storage "1.0.0"
-    rambdax "11.1.1"
+    rambdax "11.3.1"
 
 emoji-regex@^8.0.0:
   version "8.0.0"
