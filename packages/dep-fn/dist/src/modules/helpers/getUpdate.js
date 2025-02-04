@@ -8,9 +8,9 @@ const getUpdateQuestion_1 = require("./getUpdateQuestion");
 const normalizeTag_1 = require("./normalizeTag");
 const getUpdate = async (input) => {
     const currentVersion = (0, normalizeTag_1.normalizeTag)(input.tag);
-    let method = input.atLeast30DaysOld ? getLatest_1.getLatest : getLatestWithDelay_1.getLatestWithDelay;
-    const latestVersion = await method(input.dependency);
-    if (latestVersion === false)
+    const method = input.atLeast30DaysOld ? getLatestWithDelay_1.getLatestWithDelay : getLatest_1.getLatest;
+    const latestVersion = (await method(input.dependency, currentVersion));
+    if (!latestVersion)
         return currentVersion;
     if (currentVersion === latestVersion) {
         return currentVersion;

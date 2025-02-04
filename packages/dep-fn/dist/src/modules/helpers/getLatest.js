@@ -2,16 +2,23 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getLatest = void 0;
 const execCommand_1 = require("./execCommand");
-const rambdax_1 = require("rambdax");
-const getLatest = async (dependency) => {
+const getLatest = async (dependency, currentVersion) => {
     const command = `npm info --json ${dependency}`;
     const packageInfoRaw = await (0, execCommand_1.execCommand)(command);
     try {
         const packageInfo = JSON.parse(packageInfoRaw);
-        const filtered = packageInfo.versions.filter((x) => !x.includes('-') && !x.includes('alpha'));
-        if (filtered.length === 0)
-            return (0, rambdax_1.last)(packageInfo.versions);
-        return (0, rambdax_1.last)(filtered);
+        let versions = packageInfo.versions;
+        versions.reverse();
+        let indexOfCurrent = versions.indexOf(currentVersion);
+        if (indexOfCurrent === -1) {
+            console.log(`Dependency ${dependency} ${currentVersion} is not found in npm registry!!`);
+            return '';
+        }
+        if (indexOfCurrent === 0) {
+            console.log(`Dependency ${dependency} ${currentVersion} is already the latest version`);
+            return '';
+        }
+        return versions[0];
     }
     catch (err) {
         console.log(err, 'dep.fn');

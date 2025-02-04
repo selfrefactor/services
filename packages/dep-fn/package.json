@@ -1,6 +1,7 @@
 {
 	"name": "dep-fn",
 	"scripts": {
+		"x": "npm info --json rambdax > rambdax.json",
 		"out": "tsc -p .",
 		"in": "tsc -p . --watch",
 		"debug": "yarn out&&node dist/src/debug.js"
@@ -24,6 +25,7 @@
 		"@types/glob": "^8.1.0",
 		"@types/minimatch": "^5.1.2",
 		"@types/node": "20.14.11",
+		"tailwindcss": "4.0.0-beta.9",
 		"typescript": "5.5.3"
 	},
 	"license": "MIT",
