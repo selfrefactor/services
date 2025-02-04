@@ -50,10 +50,15 @@ async function runFn() {
 		return lintFolder();
 	}
 
-	if (firstArgument === 'dep:parallel') {
+	if (firstArgument === 'dep:next') {
 		let parrallelLimit = secondArgument ? Number(secondArgument) : 8;
-		return depFn.update({ parallel: true, parrallelLimit });
+		return depFn.update({ parallel: true, parrallelLimit, atLeast30DaysOld: true });
 	}
+	if (firstArgument === 'dep:stable') {
+		let parrallelLimit = secondArgument ? Number(secondArgument) : 8;
+		return depFn.update({ parallel: true, parrallelLimit, atLeast30DaysOld: false });
+	}
+	// default mode where user is asked to confirm each update
 	if (firstArgument === 'dep') {
 		return depFn.cli();
 	}
