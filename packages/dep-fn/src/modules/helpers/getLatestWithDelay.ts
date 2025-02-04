@@ -32,7 +32,6 @@ export const getLatestWithDelay = async(dependency: string, currentVersion: stri
     const filtered = versionsToCheck.filter(
 			({version, time}) => isAtLeast30DaysOld(time, version, dependency)
     ).map(x => x.version)
-		console.log(filtered, 'filtered')
     if (filtered.length === 0) return ''
 
     return head(filtered)
