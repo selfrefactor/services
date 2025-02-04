@@ -1,33 +1,33 @@
 {
-	"name": "run-fn",
-	"version": "3.48.0",
-	"description": "Collections of useful CLI functions",
-	"main": "./cli.js",
-	"bin": {
-		"run": "bin/run.js"
-	},
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/run-fn",
-	"keywords": [
-		"cli",
-		"helpers",
-		"services",
-		"lint",
-		"git"
-	],
-	"author": "self_refactor",
-	"license": "MIT",
-	"dependencies": {
-		"helpers-fn": "2.0.0",
-		"dep-fn": "3.3.0",
-		"fs-extra": "11.3.0",
-		"prettier": "3.4.2",
-		"@biomejs/biome": "1.9.4",
-		"string-fn": "3.6.3",
-		"rambdax": "11.3.1",
-		"oxlint": "0.15.9",
-		"dayjs": "1.11.13"
-	},
-	"devDependencies": {
-		"typescript": "5.7.3"
-	}
+  "name": "run-fn",
+  "version": "3.48.0",
+  "description": "Collections of useful CLI functions",
+  "main": "./cli.js",
+  "bin": {
+    "run": "bin/run.js"
+  },
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/run-fn",
+  "keywords": [
+    "cli",
+    "helpers",
+    "services",
+    "lint",
+    "git"
+  ],
+  "author": "self_refactor",
+  "license": "MIT",
+  "dependencies": {
+    "@biomejs/biome": "1.9.5-nightly.ff02a0b",
+    "dayjs": "2.0.0-alpha.4",
+    "dep-fn": "3.3.2",
+    "fs-extra": "11.3.0",
+    "helpers-fn": "2.0.0",
+    "oxlint": "0.15.9",
+    "prettier": "4.0.0-alpha.10",
+    "rambdax": "11.3.1",
+    "string-fn": "3.6.3"
+  },
+  "devDependencies": {
+    "typescript": "5.8.0-dev.20250204"
+  }
 }
