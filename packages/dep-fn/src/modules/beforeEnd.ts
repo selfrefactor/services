@@ -1,23 +1,28 @@
 import {unlinkSync} from 'fs'
-import {writeFileSync} from 'fs-extra'
-import * as jsonFormat from 'json-format'
+import {writeJsonSync} from 'fs-extra'
 import {join} from 'path'
-import {merge} from 'rambdax'
 import {Dependencies} from '../../typings'
+import { sortObject } from 'rambdax'
+
+let sortFn = (aProp, bProp) => {
+	if(aProp[0] === bProp[0]) return 0
+	return aProp[0].localeCompare(bProp[0])
+}
 
 export const beforeEnd = (input: Dependencies): void => {
   const filePath = join(process.cwd(), 'package.json')
 
   unlinkSync(filePath)
+	let dependencies = sortObject(sortFn, input.dependencies)
+	let devDependencies = sortObject(sortFn, input.devDependencies)
 
-  const newProps = {
-    dependencies: input.dependencies,
-    devDependencies: input.devDependencies,
-  }
+  const newPackageJson = {
+		...input.packageJson,
+		dependencies,
+		devDependencies,
+	}
 
-  const newPackageJson = merge(input.packageJson, newProps)
-
-  writeFileSync(filePath, jsonFormat(newPackageJson))
+  writeJsonSync(filePath, newPackageJson, {spaces: 2})
 
   console.log('end')
 }
