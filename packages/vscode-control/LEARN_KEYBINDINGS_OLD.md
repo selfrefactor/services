@@ -76,7 +76,7 @@
 
 `goToSourceDefinition`
 
-## CTRL  SHIFT  `
+## ALT  4
 
 `showActiveFileInExplorer`
 
@@ -280,7 +280,6 @@
 
 ## Convenient keys
 
-* alt+4
 * alt+v
 * alt+`
 * ctrl+shift+c
@@ -289,3 +288,4 @@
 * ctrl+shift+q
 * ctrl+shift+v
 * ctrl+shift+w
+* ctrl+shift+`

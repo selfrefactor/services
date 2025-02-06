@@ -14,9 +14,9 @@
     "lint",
     "git"
   ],
-	"scripts": {
-		"dep": "run dep:next"
-	},
+  "scripts": {
+    "dep": "run dep:next"
+  },
   "author": "self_refactor",
   "license": "MIT",
   "dependencies": {
@@ -25,12 +25,12 @@
     "dep-fn": "3.3.2",
     "fs-extra": "11.3.0",
     "helpers-fn": "2.0.0",
-    "oxlint": "0.15.9",
+    "oxlint": "0.15.10",
     "prettier": "4.0.0-alpha.10",
     "rambdax": "11.3.1",
     "string-fn": "3.6.3"
   },
   "devDependencies": {
-    "typescript": "5.8.0-dev.20250204"
+    "typescript": "5.8.0-dev.20250206"
   }
 }

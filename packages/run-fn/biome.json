@@ -2,7 +2,7 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-			"arrowParentheses": "asNeeded",
+      "arrowParentheses": "asNeeded",
       "bracketSameLine": false,
       "bracketSpacing": true,
       "quoteProperties": "asNeeded",
@@ -10,16 +10,16 @@
       "trailingCommas": "all"
     }
   },
-	"organizeImports": {
+  "organizeImports": {
     "enabled": false
   },
-	"formatter": {
+  "formatter": {
     "enabled": true,
     "lineWidth": 80,
     "indentWidth": 2,
     "indentStyle": "space"
   },
-	"linter": {
+  "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
@@ -28,12 +28,17 @@
       },
       "style": {
         "noNonNullAssertion": "off",
-        "noParameterAssign": "on",
-        "useBlockStatements": { "level": "error", "fix": "safe" },
+        "noParameterAssign": "warn",
+        "useBlockStatements": {
+          "level": "error",
+          "fix": "safe"
+        },
         "useConsistentArrayType": {
           "level": "error",
           "fix": "safe",
-          "options": { "syntax": "shorthand" }
+          "options": {
+            "syntax": "shorthand"
+          }
         },
         "useTemplate": "off"
       },
@@ -44,4 +49,5 @@
         "noShadowRestrictedNames": "off"
       }
     }
+  }
 }

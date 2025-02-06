@@ -17,7 +17,7 @@
 | CTRL+E       | findReferences                | CTRL+G       | action.goToTypeDefinition             |
 | CTRL+`       | action.selectHighlights       | CTRL+D       | editor.action.goToDeclaration         |
 | CTRL+D       | goToSourceDefinition          | CTRL+SHIFT+L | magicBeans.sortLines                  |
-| CTRL+SHIFT+` | showActiveFileInExplorer      | CTRL+SHIFT+T | magicBeans.createSpec                 |
+| ALT+4        | showActiveFileInExplorer      | CTRL+SHIFT+T | magicBeans.createSpec                 |
 | CTRL+SHIFT+Z | action.toggleZenMode          | ALT+Z        | workbench.action.gotoSymbol           |
 | CTRL+SHIFT+, | output.toggleOutput           | ALT+SHIFT+U  | explainTerminalSelectionContextMenu   |
 | CTRL+SHIFT+R | debug.restart                 | ALT+SHIFT+H  | action.revealDefinition               |
