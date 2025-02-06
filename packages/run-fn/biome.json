@@ -15,6 +15,7 @@
   },
   "formatter": {
     "enabled": true,
+		"attributePosition": "multiline",
     "lineWidth": 80,
     "indentWidth": 2,
     "indentStyle": "space"
