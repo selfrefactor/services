@@ -11,7 +11,7 @@
     }
   },
   "organizeImports": {
-    "enabled": false
+    "enabled": true
   },
   "formatter": {
     "enabled": true,
@@ -24,21 +24,22 @@
     "rules": {
       "recommended": true,
       "complexity": {
-        "noForEach": "off"
+        "noForEach": "off",
+        "noUselessTypeConstraint": "warn",
+        "useOptionalChain": "warn",
+        "noBannedTypes": "warn"
       },
       "style": {
+        "noImplicitBoolean": "warn",
+				"useCollapsedElseIf": "warn",
+				"useConst": "warn",
         "noNonNullAssertion": "off",
-        "noParameterAssign": "warn",
-        "useBlockStatements": {
-          "level": "error",
-          "fix": "safe"
-        },
+        "noParameterAssign": "off",
+        "useBlockStatements": { "level": "error", "fix": "safe" },
         "useConsistentArrayType": {
           "level": "error",
           "fix": "safe",
-          "options": {
-            "syntax": "shorthand"
-          }
+          "options": { "syntax": "shorthand" }
         },
         "useTemplate": "off"
       },
