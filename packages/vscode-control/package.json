@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"on": "yarn on:1 && yarn on:2 && yarn keys",
+		"on": "yarn on:1 && yarn on:2 && yarn keys && run d",
 		"onx": "yarn on:1 && yarn on:2 && yarn keys",
 		"small": "yarn small:1 && yarn small:2 && yarn keys",
 		"keys": "node visualize-keybindings",
