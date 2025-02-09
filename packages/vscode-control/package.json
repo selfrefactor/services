@@ -1,13 +1,13 @@
 {
 	"scripts": {
-		"on": "yarn on:1 && yarn on:2 && yarn keys && run d",
-		"onx": "yarn on:1 && yarn on:2 && yarn keys",
+		"out": "yarn out:1 && yarn out:2 && yarn keys && run d",
+		"x": "yarn out:1 && yarn out:2 && yarn keys",
 		"small": "yarn small:1 && yarn small:2 && yarn keys",
 		"keys": "node visualize-keybindings",
 		"small:1": "MODE=small node ./src/syncSettings",
 		"small:2": "BETA=ON MODE=small node ./src/syncSettings",
-		"on:1": "MODE=normal node ./src/syncSettings",
-		"on:2": "BETA=ON MODE=normal node ./src/syncSettings",
+		"out:1": "MODE=normal node ./src/syncSettings",
+		"out:2": "BETA=ON MODE=normal node ./src/syncSettings",
 		"big:1": "MODE=big node ./src/syncSettings",
 		"big:2": "BETA=ON MODE=big node ./src/syncSettings",
 		"big": "yarn big:1 &&yarn big:2",
