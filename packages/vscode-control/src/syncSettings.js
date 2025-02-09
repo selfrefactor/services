@@ -14,6 +14,7 @@ const {
   TSX_SNIPPETS,
   editorExists,
 } = require('./constants.js')
+const { getChangeThemeTimes } = require('./get-change-theme-times.js')
 
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const FOLDING_IMPORTS = VSCODE_INSIDERS
@@ -219,7 +220,7 @@ function getGit() {
 }
 
 // 'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
-function getStableSettings() {
+function getStableSettings(THEME_CHANGE_DAYTIME) {
   return {
     'breadcrumbs.enabled': true,
     'breadcrumbs.filePath': 'last',
@@ -237,7 +238,7 @@ function getStableSettings() {
     'javascript.suggest.includeAutomaticOptionalChainCompletions': true, // to test prefered local imports
     'magicBeans.ALLOW_CHANGE_COLOR_THEME': true,
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
-    'magicBeans.THEME_CHANGE_DAYTIME': ['07:00', '17:20'],
+    'magicBeans.THEME_CHANGE_DAYTIME': THEME_CHANGE_DAYTIME,
     'npm.scriptHover': false,
     'security.workspace.trust.enabled': false, // 'outline.collapseItems': 'alwaysExpand', // alwaysCollapse | alwaysExpand | siblings | none
     'task.problemMatchers.neverPrompt': { shell: true },
@@ -367,6 +368,7 @@ function mergeWithReport(inputs) {
   return { result, report }
 }
 async function syncSettings() {
+	let changeTimeOfTheme = await getChangeThemeTimes();
   const { result: newOptions, report } = mergeWithReport([
     settings,
     getEditor(),
@@ -375,7 +377,7 @@ async function syncSettings() {
     getWorkbench(),
     getSearch(),
     getCalculatedOptions(),
-    getStableSettings(),
+    getStableSettings(changeTimeOfTheme),
     getCopilotSettings(),
   ])
   const sorted = sortObject(sortFn, newOptions)
