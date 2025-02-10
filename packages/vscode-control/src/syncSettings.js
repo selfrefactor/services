@@ -39,7 +39,7 @@ const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 const FONT = 'Geist Mono' //  Fira Code 'JetBrains Mono'
 
 void (async function sync() {
-  if (!editorExists) {
+  if (!editorExists && WRITE_TO_OUTPUT) {
     return console.log('editor not found')
   }
   await execSafe({
@@ -92,7 +92,7 @@ function getEditor() {
     'editor.lightbulb.enabled': 'on',
     'editor.lineNumbers': 'interval',
     'editor.linkedEditing': true,
-    'editor.links': false,
+    'editor.links': true,
     'editor.matchBrackets': 'always',
     'editor.minimap.enabled': false,
     'editor.mouseWheelZoom': true,
@@ -343,8 +343,7 @@ function syncFn(newOptions) {
   if (WRITE_TO_OUTPUT) {
     writeJsonSync(SETTINGS, newOptions, { spaces: 2 })
   } else {
-    const settingsLocation = VSCODE_INSIDERS ? 'insiders' : 'stable'
-    const output = resolve(__dirname, `../settings-${settingsLocation}.json`)
+    const output = resolve(__dirname, `../settings.json`)
     writeJsonSync(output, newOptions, { spaces: 2 })
   }
 }
