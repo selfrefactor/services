@@ -2,7 +2,7 @@
 	"name": "magic-beans",
 	"scripts": {
 		"build": "node esbuild.js --production",
-		"build:dev": "node esbuild.js --production",
+		"build:dev": "node esbuild.js",
 		"dev": "jest -u src/_modules/format-json.spec.js",
 		"test": "jest src/_modules",
 		"postinstall": "node ./node_modules/vscode/bin/install"
@@ -59,17 +59,17 @@
 			"explorer/context": [
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "magicBeans.symbolsList",
-					"group": "navigation"
-				},
-				{
-					"when": "explorerResourceIsFolder",
 					"command": "magicBeans.requestRandomFileWithSubfolderRightClickSequential",
 					"group": "navigation"
 				},
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
+					"group": "navigation"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "magicBeans.symbolsList",
 					"group": "navigation"
 				},
 				{

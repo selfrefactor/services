@@ -56,7 +56,7 @@ function getExpectedColorThemesAsString() {
 
 function getRandomTheme (expectedColorThemes) {
 	let colorThemeString = getExpectedColorThemesAsString();
-	if(colorThemeString === 'dark' || Math.random() > 0.5) {
+	if(colorThemeString === 'dark') {
 		return shuffle(expectedColorThemes)[0];
 	}
 	return shuffle(PREFERED_LIGHT_THEMES)[0];

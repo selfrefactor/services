@@ -38,15 +38,6 @@
 			"preLaunchTask": "build"
     },
     {
-      "name": "Old Extension",
-      "type": "extensionHost",
-      "request": "launch",
-      "runtimeExecutable": "${execPath}",
-      "args": [
-        "--extensionDevelopmentPath=${workspaceFolder}"
-      ]
-    },
-    {
       "type": "node",
       "request": "launch",
       "name": "Current Test File",
