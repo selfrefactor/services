@@ -2,7 +2,6 @@ const { copySync, writeJsonSync } = require('fs-extra')
 const { defaultTo, execSafe } = require('helpers-fn')
 const { resolve } = require('node:path')
 const { toDecimal, sortObject } = require('rambdax')
-// const IS_MANJARO = process.env.IS_MANJARO === 'ON';
 
 const settings = require('../.vscode/settings-source')
 const {
@@ -19,7 +18,7 @@ const { getChangeThemeTimes } = require('./get-change-theme-times.js')
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
 const FOLDING_IMPORTS = VSCODE_INSIDERS
 
-const WRITE_TO_OUTPUT = true
+const WRITE_TO_OUTPUT = process.env.WRITE_TO_OUTPUT !== 'OFF'
 
 const FONT_SIZE = 16
 const SUGGEST_LINE_HEIGHT = 15
