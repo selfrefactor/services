@@ -59,12 +59,12 @@
 			"explorer/context": [
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "magicBeans.requestRandomFileWithSubfolderRightClickSequential",
+					"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
 					"group": "navigation"
 				},
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "magicBeans.requestRandomFileWithSubfolderRightClick",
+					"command": "magicBeans.requestRandomFileWithSubfolderRightClickSequential",
 					"group": "navigation"
 				},
 				{
@@ -85,16 +85,12 @@
 				"title": "Copy and highlight selected text"
 			},
 			{
-				"command": "magicBeans.symbolsList",
-				"title": " Request all symbols within current folder"
-			},
-			{
 				"command": "magicBeans.requestRandomFile",
 				"title": "Magic Beans - request random file"
 			},
 			{
-				"command": "magicBeans.requestRandomFileWithSubfolder",
-				"title": "Magic Beans - request random file within subfolder"
+				"command": "magicBeans.symbolsList",
+				"title": " Request all symbols within current folder"
 			},
 			{
 				"command": "magicBeans.createSpec",
