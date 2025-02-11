@@ -1,17 +1,27 @@
 const vscode = require('vscode')
 const { delay } = require('rambdax')
-const { REQUEST_RANDOM_FILE, SLOW_SCROLL_START, SLOW_SCROLL_STOP } = require('./constants')
+const {
+  REQUEST_RANDOM_FILE,
+  SLOW_SCROLL_START,
+  SLOW_SCROLL_STOP,
+} = require('./constants')
 
 const PRIORITY = 1
 const holder = {}
-holder.bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left,
-  PRIORITY)
+holder.bar = vscode.window.createStatusBarItem(
+  vscode.StatusBarAlignment.Left,
+  PRIORITY,
+)
 holder.bar.command = REQUEST_RANDOM_FILE
-holder.secondBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left,
-  PRIORITY + 2)
+holder.secondBar = vscode.window.createStatusBarItem(
+  vscode.StatusBarAlignment.Left,
+  PRIORITY + 2,
+)
 holder.secondBar.command = SLOW_SCROLL_START
-holder.thirdBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left,
-  PRIORITY + 1)
+holder.thirdBar = vscode.window.createStatusBarItem(
+  vscode.StatusBarAlignment.Left,
+  PRIORITY + 1,
+)
 holder.thirdBar.command = SLOW_SCROLL_STOP
 
 const logToUser = text => {

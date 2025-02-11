@@ -1,4 +1,4 @@
-let { formatJson } = require('./format-json.js')
+const { formatJson } = require('./format-json.js')
 
 const packageJson = `
 {

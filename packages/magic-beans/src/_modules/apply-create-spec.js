@@ -1,16 +1,19 @@
-const { readFileSync } = require('fs')
+const { readFileSync } = require('node:fs')
 const { remove, match } = require('rambdax')
 const { specTemplate } = require('./spec-template')
 
-function getFirstExportedFunction(fileContent){
-  const [matchedTypescript] = match(/export\s+(?:async\s+)?function\s+(\w+)/g, fileContent)
+function getFirstExportedFunction(fileContent) {
+  const [matchedTypescript] = match(
+    /export\s+(?:async\s+)?function\s+(\w+)/g,
+    fileContent,
+  )
   const [matchedJavascript] = match(/exports\.(\w+)\s*=/g, fileContent)
 
-  if(!matchedTypescript && !matchedJavascript) return {success: false}
+  if (!matchedTypescript && !matchedJavascript) {
+    return { success: false }
+  }
 
-  if(
-    matchedJavascript
-  ){
+  if (matchedJavascript) {
     return {
       success: true,
       firstExportedFunction: remove(['exports.', '='], matchedJavascript).trim(),
@@ -22,21 +25,27 @@ function getFirstExportedFunction(fileContent){
 
   return {
     success: true,
-    firstExportedFunction: remove(['export', 'function', 'async'], matchedTypescript).trim(),
+    firstExportedFunction: remove(
+      ['export', 'function', 'async'],
+      matchedTypescript,
+    ).trim(),
     isAsync,
     isJavascript: false,
   }
 }
 
-function applyCreateSpec(filePath, fileName){
+function applyCreateSpec(filePath, fileName) {
   const content = readFileSync(filePath).toString()
-  let {success, firstExportedFunction, isJavascript, isAsync} = getFirstExportedFunction(content)
-  if(!success) return
+  const { success, firstExportedFunction, isJavascript, isAsync } =
+    getFirstExportedFunction(content)
+  if (!success) {
+    return
+  }
 
   return specTemplate({
     isAsync,
     isJavascript,
-    methodName : firstExportedFunction,
+    methodName: firstExportedFunction,
     fileName,
   })
 }

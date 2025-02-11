@@ -23,7 +23,7 @@ const { setColorTheme } = require('./set-color-theme')
 const { configAnt } = require('./ants/config')
 const { symbolsList } = require('./symbols/symbols')
 
-function openInVsCode(data, {isInsiders}) {
+function openInVsCode(data, { isInsiders }) {
   const binary = isInsiders ? 'code-insiders' : 'code'
   const terminal = vscode.window.createTerminal({ name: 'New vscode' })
   terminal.hide()
@@ -34,18 +34,20 @@ function openInVsCode(data, {isInsiders}) {
 }
 
 function activate(context) {
-  vscode.commands.executeCommand("setContext", "magicBeans.init", true);
-  const SLOW_SCROLL_SHOW_BAR_INITIALLY_VALUE = configAnt(SLOW_SCROLL_SHOW_BAR_INITIALLY)
+  vscode.commands.executeCommand('setContext', 'magicBeans.init', true)
+  const SLOW_SCROLL_SHOW_BAR_INITIALLY_VALUE = configAnt(
+    SLOW_SCROLL_SHOW_BAR_INITIALLY,
+  )
 
   initStatusBars()
-  let setColorThemeFn = setColorTheme(context)
-	setColorThemeFn()
-	
+  const setColorThemeFn = setColorTheme(context)
+  setColorThemeFn()
+
   const symbolsListCommand = vscode.commands.registerCommand(
     'magicBeans.symbolsList',
-		(data) => {
-			symbolsList(data.path)
-    }
+    data => {
+      symbolsList(data.path)
+    },
   )
   const formatJsonCommand = vscode.commands.registerCommand(
     'magicBeans.formatJson',
@@ -75,10 +77,7 @@ function activate(context) {
     REQUEST_RANDOM_FILE,
     requestRandomFile(context),
   )
-  const sortLinesCommand = vscode.commands.registerCommand(
-    SORT_LINES,
-    sortLines,
-  )
+  const sortLinesCommand = vscode.commands.registerCommand(SORT_LINES, sortLines)
   const fixCamelcaseRefactoringCommand = vscode.commands.registerCommand(
     'magicBeans.fixCamelcaseRefactoring',
     fixCamelcaseRefactoring,
@@ -97,37 +96,35 @@ function activate(context) {
 
   const openFolder = vscode.commands.registerCommand(
     'magicBeans.openFolder',
-    (data) => {
-      openInVsCode(data, {isInsiders: false})
+    data => {
+      openInVsCode(data, { isInsiders: false })
     },
   )
 
   const randomFilesWithinFolder = vscode.commands.registerCommand(
     'magicBeans.requestRandomFileWithSubfolderRightClick',
-    (data) => {
+    data => {
       requestRandomFileWithSubfolderRightClick(data, context)
     },
   )
   const randomFilesWithinFolderSequential = vscode.commands.registerCommand(
     'magicBeans.requestRandomFileWithSubfolderRightClickSequential',
-    (data) => {
+    data => {
       requestRandomFileWithSubfolderRightClickSequential(data, context)
     },
   )
 
   context.subscriptions.push(openFolder)
   context.subscriptions.push(randomFilesWithinFolder)
-	context.subscriptions.push(randomFilesWithinFolderSequential)
-	
+  context.subscriptions.push(randomFilesWithinFolderSequential)
 
-  if(SLOW_SCROLL_SHOW_BAR_INITIALLY_VALUE){
+  if (SLOW_SCROLL_SHOW_BAR_INITIALLY_VALUE) {
     vscode.commands.executeCommand(SLOW_SCROLL_INIT)
   }
 }
 
-
 function deactivate() {
-  vscode.commands.executeCommand("setContext", "magicBeans.init", false);
+  vscode.commands.executeCommand('setContext', 'magicBeans.init', false)
 }
 
 exports.activate = activate
