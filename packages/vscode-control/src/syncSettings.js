@@ -37,6 +37,7 @@ const MODE = MODES[MODE_KEY]
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 const FONT = 'Geist Mono' //  Fira Code 'JetBrains Mono'
+const TERMINAL_FONT = 'Intone Mono' //  Fira Code 'JetBrains Mono'
 
 void (async function sync() {
   if (!editorExists && WRITE_TO_OUTPUT) {
@@ -325,7 +326,7 @@ function getCalculatedOptions() {
     'debug.console.fontFamily': FONT,
     'editor.fontFamily': FONT,
     'editor.fontLigatures': true,
-    'terminal.integrated.fontFamily': FONT,
+    'terminal.integrated.fontFamily': TERMINAL_FONT,
   }
 
   return {
