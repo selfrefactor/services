@@ -1,4 +1,13 @@
 {
+  "Tap": {
+    "prefix": "tap",
+    "body": [
+      "tap(x => {",
+      "\tconsole.log('x', x)$0",
+      "})"
+    ],
+    "description": "tap"
+  },
   "Function": {
     "prefix": "fnsnippet",
     "body": [
