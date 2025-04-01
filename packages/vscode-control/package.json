@@ -1,8 +1,8 @@
 {
 	"scripts": {
 		"mac": "WRITE_TO_OUTPUT=OFF yarn out:1",
-		"out": "yarn out:1 && yarn out:2 && yarn keys && run d",
-		"x": "yarn out:1 && yarn out:2 && yarn keys",
+		"out": "yarn dev && run d",
+		"dev": "yarn out:1 && yarn out:2 && yarn keys",
 		"small": "yarn small:1 && yarn small:2 && yarn keys",
 		"keys": "node visualize-keybindings",
 		"small:1": "MODE=small node ./src/syncSettings",

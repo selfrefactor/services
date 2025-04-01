@@ -20,8 +20,8 @@ const FOLDING_IMPORTS = VSCODE_INSIDERS
 
 const WRITE_TO_OUTPUT = process.env.WRITE_TO_OUTPUT !== 'OFF'
 
-const FONT_SIZE = 16
-const SUGGEST_LINE_HEIGHT = 15
+const FONT_SIZE = 14
+const SUGGEST_LINE_HEIGHT = 14
 const SUGGEST_FONT_SIZE = 14
 const FILE_ICON_THEME = 'charmed-icons'
 
@@ -52,9 +52,10 @@ void (async function sync() {
 })()
 
 const GOTO_LOCATION = 'goto' // goto | peek
-
-function getEditor() {
-  return {
+	function getEditor() {
+		return {
+		"editor.inlineSuggest.suppressSuggestions": true,
+		"editor.inlineSuggest.syntaxHighlightingEnabled": true,
     'editor.acceptSuggestionOnCommitCharacter': false,
     'editor.acceptSuggestionOnEnter': 'smart',
     'editor.autoClosingDelete': 'always',
@@ -317,7 +318,8 @@ function syncFiles(source, destination) {
 
 function getCalculatedOptions() {
   const fontSize = toDecimal(FONT_SIZE * MODE)
-  const windowZoom = toDecimal(MODE * 1.5)
+  const windowZoom = toDecimal(MODE * 1.2)
+  // const windowZoom = toDecimal(MODE * 1.5)
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * MODE, 2))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * MODE))
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (MODE * 0.65)))
@@ -396,46 +398,24 @@ function syncSnippets() {
 
 function getCopilotSettings() {
   return {
+	  "github.copilot.renameSuggestions.triggerAutomatically": false,
     'github.copilot.chat.temporalContext.enabled': false,
     'github.copilot.advanced': {
       autoComplete: true,
       codeLens: true,
-      diagnostics: true,
-      format: true,
-      generateTests: true,
-      hover: true,
+      diagnostics: false,
+      format: false,
+      generateTests: false,
+      hover: false,
       semanticTokens: true,
       signatureHelp: true,
       smartSelection: true,
     },
-    // 'github.copilot.chat.reviewSelection.instructions': [
-    // 	{
-    // 		text: 'Prevent multiple empty lines in the code.',
-    // 	},
-    // 	{
-    // 		text: 'Improve titles of test cases if possible.',
-    // 	},
-    // ],
-    'github.copilot.chat.edits.enabled': true,
-    // 'github.copilot.chat.followUps': 'always',
+    'github.copilot.chat.edits.enabled': false,
+    'github.copilot.chat.followUps': 'always',
     'github.copilot.chat.inlineChatHint.enabled': false,
-    // 'github.copilot.chat.experimental.codeFeedback.enabled': true,
-    // 'github.copilot.chat.experimental.codeFeedback.instructions': [
-    // 	{
-    // 		text: 'try to add comment to complext code pieces | when possible, include comment how data changes on specific code line that contains important logic or hard to understand logic',
-    // 	},
-    // ],
-    // 'github.copilot.chat.experimental.codeGeneration.instructions': [
-    // 	{
-    // 		text: 'avoid introducing new interfaces when refactoring is requested in Typescript code | when refactoring is requested in Typescript code, make sure that refactored code is valid TS',
-    // 	},
-    // ],
-    // 'github.copilot.chat.experimental.testGeneration.instructions': [
-    // 	{
-    // 		text: 'Test suite is Jest or Vitest|Happy path is the first test and its name is happy|Error test cases are last in suite|minimum two top level describe blocks can exists and no nested describe blocks|always prefer `.spec.` instead of `.test` as file name suffix',
-    // 	},
-    // ],
-    'github.copilot.chat.generateTests.codeLens': true,
+    'github.copilot.chat.experimental.codeFeedback.enabled': false,
+    'github.copilot.chat.generateTests.codeLens': false,
     'github.copilot.chat.inlineChatCompletionTrigger.enabled': false,
     'github.copilot.chat.startDebugging.enabled': false,
     'github.copilot.chat.scopeSelection': false,
