@@ -321,7 +321,7 @@ function getCalculatedOptions() {
   const windowZoom = toDecimal(MODE * 1.15)
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * MODE, 2))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * MODE))
-  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * 0.9))
+  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * 0.85))
   const fontSettings = {
     'debug.console.fontFamily': FONT,
     'editor.fontFamily': FONT,
