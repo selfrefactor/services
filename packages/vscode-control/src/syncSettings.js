@@ -319,10 +319,9 @@ function syncFiles(source, destination) {
 function getCalculatedOptions() {
   const fontSize = toDecimal(FONT_SIZE * MODE)
   // const windowZoom = toDecimal(MODE * 1.2)
-  const windowZoom = toDecimal(MODE * 1.5)
+  const windowZoom = toDecimal(MODE * 1.25)
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * MODE, 2))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * MODE))
-  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (MODE * 0.65)))
   const fontSettings = {
     'debug.console.fontFamily': FONT,
     'editor.fontFamily': FONT,
@@ -336,7 +335,7 @@ function getCalculatedOptions() {
     'editor.lineHeight': 0,
     'editor.suggestFontSize': suggestFontSize,
     'editor.suggestLineHeight': suggestLineHeight,
-    'terminal.integrated.fontSize': terminalFontSize,
+    'terminal.integrated.fontSize': fontSize,
     'window.zoomLevel': windowZoom,
   }
 }
