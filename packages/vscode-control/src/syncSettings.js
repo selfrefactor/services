@@ -20,7 +20,7 @@ const FOLDING_IMPORTS = VSCODE_INSIDERS
 
 const WRITE_TO_OUTPUT = process.env.WRITE_TO_OUTPUT !== 'OFF'
 
-const FONT_SIZE = 14
+const FONT_SIZE = 12
 const SUGGEST_LINE_HEIGHT = 14
 const SUGGEST_FONT_SIZE = 14
 const FILE_ICON_THEME = 'charmed-icons'
