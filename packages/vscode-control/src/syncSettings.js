@@ -54,6 +54,9 @@ void (async function sync() {
 const GOTO_LOCATION = 'goto' // goto | peek
 	function getEditor() {
 		return {
+			"editor.codeActionWidget.includeNearbyQuickFixes": false,
+			"editor.codeActionWidget.showHeaders": false,
+			"editor.snippets.codeActions.enabled": false,
 		"editor.inlineSuggest.suppressSuggestions": true,
 		"editor.inlineSuggest.syntaxHighlightingEnabled": true,
     'editor.acceptSuggestionOnCommitCharacter': false,
@@ -122,18 +125,54 @@ const GOTO_LOCATION = 'goto' // goto | peek
     'editor.tabSize': 2,
     'editor.wordBasedSuggestions': false,
     'editor.wordWrap': 'on',
-    // 'editor.find.autoFindInSelection': 'multiline',
+    'editor.find.autoFindInSelection': 'multiline',
     'editor.quickSuggestions': {
       comments: 'off',
       other: 'off',
       // because of tailwind this needs to be on
       strings: 'off',
     },
-    // "editor.pasteAs.preferences": [
-    // 	"chat.attach.text"
-    // ],
   }
 }
+
+
+function getWorkbench() {
+  return {
+  "workbench.editor.tabActionCloseVisibility": false,
+    'workbench.activityBar.location': 'top',
+    'workbench.editor.decorations.colors': false,
+    'workbench.editor.dragToOpenWindow': false,
+    'workbench.editor.empty.hint': 'hidden',
+    'workbench.editor.enablePreview': VSCODE_INSIDERS,
+    'workbench.editor.enablePreviewFromQuickOpen': true,
+    'workbench.editor.focusRecentEditorAfterClose': false,
+    'workbench.editor.pinnedTabSizing': 'normal', // shrink | normal
+    'workbench.editor.pinnedTabsOnSeparateRow': true,
+    'workbench.editor.revealIfOpen': false,
+    'workbench.editor.showTabs': 'multiple',
+    'workbench.editor.tabSizing': 'fit',
+    'workbench.editor.untitled.labelFormat': 'name',
+    'workbench.editor.wrapTabs': true,
+    'workbench.iconTheme': FILE_ICON_THEME,
+    'workbench.layoutControl.enabled': false,
+    'workbench.layoutControl.type': 'menu',
+    'workbench.list.smoothScrolling': true,
+    'workbench.panel.opensMaximized': 'never',
+    'workbench.panel.showLabels': true,
+    'workbench.sideBar.location': 'right',
+    'workbench.startupEditor': 'none',
+    'workbench.tips.enabled': false,
+    'workbench.tree.enableStickyScroll': true,
+    'workbench.tree.indent': 16,
+    'workbench.tree.renderIndentGuides': 'none',
+    'workbench.tree.stickyScrollMaxItemCount': 8,
+    'workbench.editor.languageDetectionHints': {
+      notebookEditors: false,
+      untitledEditors: false,
+    },
+  }
+}
+
 
 function getSearch() {
   return {
@@ -155,43 +194,6 @@ function getSearch() {
     'search.useGlobalIgnoreFiles': true,
     'search.useParentIgnoreFiles': true,
     'search.useReplacePreview': false,
-  }
-}
-
-function getWorkbench() {
-  return {
-    'workbench.activityBar.location': 'top',
-    'workbench.editor.decorations.colors': false,
-    'workbench.editor.dragToOpenWindow': false,
-    'workbench.editor.empty.hint': 'hidden',
-    'workbench.editor.enablePreview': VSCODE_INSIDERS,
-    'workbench.editor.enablePreviewFromQuickOpen': true,
-    'workbench.editor.focusRecentEditorAfterClose': false,
-    'workbench.editor.pinnedTabSizing': 'normal', // shrink | normal
-    'workbench.editor.pinnedTabsOnSeparateRow': true,
-    'workbench.editor.revealIfOpen': false,
-    'workbench.editor.showTabs': 'multiple',
-    'workbench.editor.tabActionCloseVisibility': true,
-    'workbench.editor.tabSizing': 'fit',
-    'workbench.editor.untitled.labelFormat': 'name',
-    'workbench.editor.wrapTabs': true,
-    'workbench.iconTheme': FILE_ICON_THEME,
-    'workbench.layoutControl.enabled': false,
-    'workbench.layoutControl.type': 'menu',
-    'workbench.list.smoothScrolling': true,
-    'workbench.panel.opensMaximized': 'never',
-    'workbench.panel.showLabels': true,
-    'workbench.sideBar.location': 'right',
-    'workbench.startupEditor': 'none',
-    'workbench.tips.enabled': false,
-    'workbench.tree.enableStickyScroll': true,
-    'workbench.tree.indent': 16,
-    'workbench.tree.renderIndentGuides': 'none',
-    'workbench.tree.stickyScrollMaxItemCount': 8,
-    'workbench.editor.languageDetectionHints': {
-      notebookEditors: false,
-      untitledEditors: false,
-    },
   }
 }
 
@@ -381,7 +383,7 @@ async function syncSettings() {
     getSearch(),
     getCalculatedOptions(),
     getStableSettings(changeTimeOfTheme),
-    getCopilotSettings(),
+    // getCopilotSettings(),
   ])
   const sorted = sortObject(sortFn, newOptions)
 
