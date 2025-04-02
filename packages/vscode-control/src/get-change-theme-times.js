@@ -1,18 +1,22 @@
 const { default: axios } = require("axios");
 const { piped, head } = require("rambdax");
 
-function getTime (timeInput){
+let OFFSET = -2
+
+function getTime (timeInput, offset = 0) {
 	return piped(
 		timeInput,
 		x => x.split(' '),
 		head,
 		x => {
 			let [hours, minutes] = x.split(':').map(Number);
+			minutes = String(minutes).length === 1 ? `0${minutes}` : minutes;
 			if(timeInput.includes('PM')){
 				hours += 12;
 			}
+			hours += offset;
 
-				return hours > 10 ? `${hours}:${minutes}` : `0${hours}:${minutes}`;
+			return hours > 10 ? `${hours}:${minutes}` : `0${hours}:${minutes}`;
 		}
 	)
 }
@@ -24,7 +28,7 @@ async function getChangeThemeTimes() {
 	
 	return [
 		getTime(sunrise),
-		getTime(sunset)
+		getTime(sunset, OFFSET)
 	]
 }
 

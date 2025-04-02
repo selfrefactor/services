@@ -238,10 +238,11 @@ function getStableSettings(THEME_CHANGE_DAYTIME) {
     'javascript.suggest.includeAutomaticOptionalChainCompletions': true, // to test prefered local imports
     'magicBeans.ALLOW_CHANGE_COLOR_THEME': true,
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
-    'magicBeans.THEME_CHANGE_DAYTIME': [
-			"07:40",
-			"17:47"
-		],
+    'magicBeans.THEME_CHANGE_DAYTIME': THEME_CHANGE_DAYTIME,
+    // 'magicBeans.THEME_CHANGE_DAYTIME': [
+		// 	"07:40",
+		// 	"17:47"
+		// ],
     'npm.scriptHover': false,
     'security.workspace.trust.enabled': false, // 'outline.collapseItems': 'alwaysExpand', // alwaysCollapse | alwaysExpand | siblings | none
     'task.problemMatchers.neverPrompt': { shell: true },
