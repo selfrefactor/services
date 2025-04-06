@@ -54,8 +54,7 @@ void (async function sync() {
 const GOTO_LOCATION = 'goto' // goto | peek
 	function getEditor() {
 		return {
-			"editor.codeActionWidget.includeNearbyQuickFixes": false,
-			"editor.codeActionWidget.showHeaders": false,
+			"editor.inlineSuggest.syntaxHighlightingEnabled": true,
 			"editor.snippets.codeActions.enabled": false,
 		"editor.inlineSuggest.suppressSuggestions": true,
 		"editor.inlineSuggest.syntaxHighlightingEnabled": true,
@@ -138,7 +137,6 @@ const GOTO_LOCATION = 'goto' // goto | peek
 
 function getWorkbench() {
   return {
-  "workbench.editor.tabActionCloseVisibility": false,
     'workbench.activityBar.location': 'top',
     'workbench.editor.decorations.colors': false,
     'workbench.editor.dragToOpenWindow': false,
@@ -224,6 +222,10 @@ function getGit() {
 // 'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
 function getStableSettings(THEME_CHANGE_DAYTIME) {
   return {
+		
+		"window.controlsStyle": "custom", // native
+		"github.copilot.chat.agent.thinkingTool": true,
+		"chat.agent.enabled": true,
     'breadcrumbs.enabled': true,
     'breadcrumbs.filePath': 'last',
     'breadcrumbs.icons': true,
@@ -241,10 +243,7 @@ function getStableSettings(THEME_CHANGE_DAYTIME) {
     'magicBeans.ALLOW_CHANGE_COLOR_THEME': true,
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
     'magicBeans.THEME_CHANGE_DAYTIME': THEME_CHANGE_DAYTIME,
-    // 'magicBeans.THEME_CHANGE_DAYTIME': [
-		// 	"07:40",
-		// 	"17:47"
-		// ],
+
     'npm.scriptHover': false,
     'security.workspace.trust.enabled': false, // 'outline.collapseItems': 'alwaysExpand', // alwaysCollapse | alwaysExpand | siblings | none
     'task.problemMatchers.neverPrompt': { shell: true },
