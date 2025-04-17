@@ -5,6 +5,7 @@ export function count(text: string, subtext: string): number
 export function distance(x: string, y: string): number
 export function distanceGerman(x: string, y: string): number
 export function dotCase(text: string, extraLatin?: boolean): string
+export function glue(input: string, glueString?: string): string;
 export function trainCase(text: string): string
 export function glob(text: string, globRule: string): boolean
 export function indent(text: string, indentCount: number): string
