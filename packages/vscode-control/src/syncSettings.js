@@ -52,12 +52,11 @@ void (async function sync() {
 })()
 
 const GOTO_LOCATION = 'goto' // goto | peek
-	function getEditor() {
-		return {
-			"editor.inlineSuggest.syntaxHighlightingEnabled": true,
-			"editor.snippets.codeActions.enabled": false,
-		"editor.inlineSuggest.suppressSuggestions": true,
-		"editor.inlineSuggest.syntaxHighlightingEnabled": true,
+function getEditor() {
+  return {
+    'editor.snippets.codeActions.enabled': false,
+    'editor.inlineSuggest.suppressSuggestions': true,
+    'editor.inlineSuggest.syntaxHighlightingEnabled': true,
     'editor.acceptSuggestionOnCommitCharacter': false,
     'editor.acceptSuggestionOnEnter': 'smart',
     'editor.autoClosingDelete': 'always',
@@ -134,7 +133,6 @@ const GOTO_LOCATION = 'goto' // goto | peek
   }
 }
 
-
 function getWorkbench() {
   return {
     'workbench.activityBar.location': 'top',
@@ -170,7 +168,6 @@ function getWorkbench() {
     },
   }
 }
-
 
 function getSearch() {
   return {
@@ -222,10 +219,9 @@ function getGit() {
 // 'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
 function getStableSettings(THEME_CHANGE_DAYTIME) {
   return {
-		
-		"window.controlsStyle": "custom", // native
-		"github.copilot.chat.agent.thinkingTool": true,
-		"chat.agent.enabled": true,
+    'window.controlsStyle': 'custom', // native
+    'github.copilot.chat.agent.thinkingTool': true,
+    'chat.agent.enabled': true,
     'breadcrumbs.enabled': true,
     'breadcrumbs.filePath': 'last',
     'breadcrumbs.icons': true,
@@ -349,7 +345,7 @@ function syncFn(newOptions) {
   if (WRITE_TO_OUTPUT) {
     writeJsonSync(SETTINGS, newOptions, { spaces: 2 })
   } else {
-    const output = resolve(__dirname, `../settings.json`)
+    const output = resolve(__dirname, '../settings.json')
     writeJsonSync(output, newOptions, { spaces: 2 })
   }
 }
@@ -372,7 +368,7 @@ function mergeWithReport(inputs) {
   return { result, report }
 }
 async function syncSettings() {
-	let changeTimeOfTheme = await getChangeThemeTimes();
+  const changeTimeOfTheme = await getChangeThemeTimes()
   const { result: newOptions, report } = mergeWithReport([
     settings,
     getEditor(),
@@ -402,7 +398,7 @@ function syncSnippets() {
 
 function getCopilotSettings() {
   return {
-	  "github.copilot.renameSuggestions.triggerAutomatically": false,
+    'github.copilot.renameSuggestions.triggerAutomatically': false,
     'github.copilot.chat.temporalContext.enabled': false,
     'github.copilot.advanced': {
       autoComplete: true,
