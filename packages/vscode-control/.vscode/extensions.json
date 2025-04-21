@@ -1,5 +1,6 @@
 {
   "recommendations": [
+		"DBCode.dbcode",
 		"mxsdev.typescript-explorer",
 		"GitHub.remotehub",
 		"cweijan.vscode-postgresql-client2",
