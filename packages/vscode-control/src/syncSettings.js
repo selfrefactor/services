@@ -20,7 +20,7 @@ const FOLDING_IMPORTS = VSCODE_INSIDERS
 
 const WRITE_TO_OUTPUT = process.env.WRITE_TO_OUTPUT !== 'OFF'
 
-const FONT_SIZE = 12
+const FONT_SIZE = 15
 const SUGGEST_LINE_HEIGHT = 14
 const SUGGEST_FONT_SIZE = 14
 const FILE_ICON_THEME = 'charmed-icons'
@@ -97,7 +97,7 @@ function getEditor() {
     'editor.links': true,
     'editor.matchBrackets': 'always',
     'editor.minimap.enabled': false,
-    'editor.mouseWheelZoom': true,
+    'editor.mouseWheelZoom': false,
     'editor.multiCursorModifier': 'ctrlCmd',
     'editor.occurrencesHighlight': 'on',
     'editor.occurrencesHighlightDelay': 1000,
@@ -255,7 +255,6 @@ function getStableSettings(THEME_CHANGE_DAYTIME) {
     'window.density.editorTabHeight': 'compact',
     'window.doubleClickIconToClose': true,
     'window.menuBarVisibility': 'compact',
-    'window.zoomPerWindow': true,
     'files.exclude': {
       '.cache': true,
       '**/.awcache': true,
@@ -319,7 +318,8 @@ function syncFiles(source, destination) {
 
 function getCalculatedOptions() {
   const fontSize = toDecimal(FONT_SIZE * MODE)
-  const windowZoom = toDecimal(MODE * 1.15)
+  const windowZoom  = 1
+  // const windowZoom = toDecimal(MODE * 1.15)
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * MODE, 2))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * MODE))
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * 0.85))
