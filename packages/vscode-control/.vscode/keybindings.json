@@ -946,5 +946,13 @@
 		"key": "ctrl+shift+o",
 		"command": "-editor.action.accessibleViewGoToSymbol",
 		"when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
+	},
+	{
+		"key": "alt+b",
+		"command": "workbench.action.toggleAuxiliaryBar"
+	},
+	{
+		"key": "ctrl+alt+b",
+		"command": "-workbench.action.toggleAuxiliaryBar"
 	}
 ]
