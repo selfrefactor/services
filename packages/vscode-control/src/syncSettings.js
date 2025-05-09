@@ -25,11 +25,7 @@ const SUGGEST_LINE_HEIGHT = 14
 const SUGGEST_FONT_SIZE = 14
 const FILE_ICON_THEME = 'charmed-icons'
 
-const MODES = {
-  big: 1.2,
-  normal: 1,
-  small: 0.9,
-}
+const MODES = { big: 1.2, normal: 1, small: 0.9 }
 
 const MODE_KEY = defaultTo('MODE', 'normal', 'default')
 const MODE = MODES[MODE_KEY]
@@ -277,12 +273,6 @@ function getStableSettings(THEME_CHANGE_DAYTIME) {
     'files.hotExit': 'off',
     'git.autofetch': true,
     'git.openRepositoryInParentFolders': 'always',
-    'github.copilot.enable': {
-      '*': true,
-      markdown: true,
-      plaintext: true,
-      yaml: true,
-    },
     'javascript.inlayHints.enumMemberValues.enabled': false,
     'javascript.inlayHints.functionLikeReturnTypes.enabled': false,
     'javascript.inlayHints.parameterTypes.enabled': false,
@@ -318,7 +308,7 @@ function syncFiles(source, destination) {
 
 function getCalculatedOptions() {
   const fontSize = toDecimal(FONT_SIZE * MODE)
-  const windowZoom  = 1
+  const windowZoom = 1
   // const windowZoom = toDecimal(MODE * 1.15)
   const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * MODE, 2))
   const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * MODE))
@@ -378,7 +368,7 @@ async function syncSettings() {
     getSearch(),
     getCalculatedOptions(),
     getStableSettings(changeTimeOfTheme),
-    // getCopilotSettings(),
+    getCopilotSettings(),
   ])
   const sorted = sortObject(sortFn, newOptions)
 
@@ -398,6 +388,18 @@ function syncSnippets() {
 
 function getCopilotSettings() {
   return {
+    'github.copilot.nextEditSuggestions.enabled': true,
+    'github.copilot.nextEditSuggestions.fixes': true,
+    'github.copilot.chat.editor.temporalContext.enabled': true,
+    'github.copilot.chat.edits.temporalContext.enabled': true,
+    'github.copilot.chat.newWorkspaceCreation.enabled': false,
+    'github.copilot.chat.setupTests.enabled': false,
+    'github.copilot.enable': {
+      '*': true,
+      markdown: true,
+      plaintext: true,
+      yaml: true,
+    },
     'github.copilot.renameSuggestions.triggerAutomatically': false,
     'github.copilot.chat.temporalContext.enabled': false,
     'github.copilot.advanced': {
