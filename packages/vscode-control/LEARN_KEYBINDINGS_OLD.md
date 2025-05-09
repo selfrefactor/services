@@ -278,6 +278,10 @@
 
 `extension.markdown-pdf.pdf`
 
+## ALT  B
+
+`action.toggleAuxiliaryBar`
+
 ## Convenient keys
 
 * alt+v

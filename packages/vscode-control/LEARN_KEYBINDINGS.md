@@ -29,4 +29,4 @@
 | ALT+5        | magicBeans.fixComment         | ALT+SHIFT+8  | generateDocs                          |
 | CTRL+3       | workbench.panel.chatEditing   | CTRL+SHIFT+; | after running vscode control          |
 | CTRL+SHIFT+A | action.splitEditorRight       | CTRL+SHIFT+' | extension.markdown-pdf.pdf            |
-| ALT+=        | git.push                      |              |                                       |
+| ALT+=        | git.push                      | ALT+B        | action.toggleAuxiliaryBar             |

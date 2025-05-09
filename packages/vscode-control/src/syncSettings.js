@@ -215,6 +215,7 @@ function getGit() {
 // 'debug.terminal.clearBeforeReusing': true, // to test because of ubuntu issue
 function getStableSettings(THEME_CHANGE_DAYTIME) {
   return {
+		'niketa.PERSIST_LINT_TERMINAL': true,
     'window.controlsStyle': 'custom', // native
     'github.copilot.chat.agent.thinkingTool': true,
     'chat.agent.enabled': true,
