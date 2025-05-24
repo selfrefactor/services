@@ -23,7 +23,7 @@ const WRITE_TO_OUTPUT = process.env.WRITE_TO_OUTPUT !== 'OFF'
 const FONT_SIZE = 15
 const SUGGEST_LINE_HEIGHT = 14
 const SUGGEST_FONT_SIZE = 14
-const FILE_ICON_THEME = 'charmed-icons'
+const FILE_ICON_THEME = 'bearded-icons'
 
 const MODES = { big: 1.2, normal: 1, small: 0.9 }
 
