@@ -16,6 +16,7 @@ const {
 const { getChangeThemeTimes } = require('./get-change-theme-times.js')
 
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
+let IS_CURSOR = process.env.CURSOR === 'ON'
 const FOLDING_IMPORTS = VSCODE_INSIDERS
 
 const WRITE_TO_OUTPUT = process.env.WRITE_TO_OUTPUT !== 'OFF'
@@ -107,7 +108,6 @@ function getEditor() {
     'editor.semanticHighlighting.enabled': true,
     'editor.semanticTokenColorCustomizations': { enabled: true },
     'editor.smoothScrolling': true,
-    // 'editor.stackFrameHighlightBackground': '#ff0000', seems not in schema but it was working with Jupiter (maybe)
     'editor.stickyScroll.defaultModel': 'indentationModel',
     'editor.stickyScroll.enabled': true,
     'editor.suggest.localityBonus': false,
@@ -235,6 +235,7 @@ function getStableSettings(THEME_CHANGE_DAYTIME) {
     'javascript.suggest.includeAutomaticOptionalChainCompletions': true, // to test prefered local imports
     'magicBeans.ALLOW_CHANGE_COLOR_THEME': true,
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
+    'magicBeans.IS_CURSOR': IS_CURSOR,
     'magicBeans.THEME_CHANGE_DAYTIME': THEME_CHANGE_DAYTIME,
 
     'npm.scriptHover': false,
