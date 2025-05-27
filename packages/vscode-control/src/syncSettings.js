@@ -95,7 +95,7 @@ function getEditor() {
     'editor.minimap.enabled': false,
     'editor.mouseWheelZoom': false,
     'editor.multiCursorModifier': 'ctrlCmd',
-    'editor.occurrencesHighlight': 'on',
+    'editor.occurrencesHighlight': 'multiline',
     'editor.occurrencesHighlightDelay': 1000,
     'editor.parameterHints.enabled': false,
     'editor.pasteAs.showPasteSelector': 'never',
@@ -274,7 +274,6 @@ function getStableSettings(THEME_CHANGE_DAYTIME) {
     'files.hotExit': 'off',
     'git.autofetch': true,
     'git.openRepositoryInParentFolders': 'always',
-    'javascript.inlayHints.enumMemberValues.enabled': false,
     'javascript.inlayHints.functionLikeReturnTypes.enabled': false,
     'javascript.inlayHints.parameterTypes.enabled': false,
     'javascript.inlayHints.propertyDeclarationTypes.enabled': false,
@@ -290,7 +289,6 @@ function getStableSettings(THEME_CHANGE_DAYTIME) {
     'task.autoDetect': 'off',
     'task.quickOpen.detail': true,
     'telemetry.telemetryLevel': 'off',
-    'typescript.inlayHints.enumMemberValues.enabled': false,
     'typescript.inlayHints.functionLikeReturnTypes.enabled': false,
     'typescript.inlayHints.parameterTypes.enabled': false,
     'typescript.inlayHints.variableTypes.enabled': false,
@@ -389,6 +387,7 @@ function syncSnippets() {
 
 function getCopilotSettings() {
   return {
+		"cursor.composer.cmdPFilePicker2": true,
     'github.copilot.nextEditSuggestions.enabled': true,
     'github.copilot.nextEditSuggestions.fixes': true,
     'github.copilot.chat.editor.temporalContext.enabled': true,
@@ -402,7 +401,6 @@ function getCopilotSettings() {
       yaml: true,
     },
     'github.copilot.renameSuggestions.triggerAutomatically': false,
-    'github.copilot.chat.temporalContext.enabled': false,
     'github.copilot.advanced': {
       autoComplete: true,
       codeLens: true,
@@ -414,15 +412,10 @@ function getCopilotSettings() {
       signatureHelp: true,
       smartSelection: true,
     },
-    'github.copilot.chat.edits.enabled': false,
     'github.copilot.chat.followUps': 'always',
-    'github.copilot.chat.inlineChatHint.enabled': false,
-    'github.copilot.chat.experimental.codeFeedback.enabled': false,
     'github.copilot.chat.generateTests.codeLens': false,
-    'github.copilot.chat.inlineChatCompletionTrigger.enabled': false,
     'github.copilot.chat.startDebugging.enabled': false,
     'github.copilot.chat.scopeSelection': false,
-    'github.copilot.chat.welcomeMessage': 'never',
     'github.copilot.chat.search.semanticTextResults': false,
   }
 }

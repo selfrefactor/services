@@ -1,10 +1,27 @@
 [
 	{
+		"priority": true,
+		"key": "alt+3",
+		"command": "composer.fixerrormessage",
+		"when": "@composer.isCursorOnLint"
+	},
+	{
+		"priority": true,
+		"key": "ctrl+5",
+		"command": "composer.startComposerPrompt"
+	},
+	{
+		"priority": true,
+		"key": "ctrl+4",
+		"command": "composer.newAgentChat"
+	},
+	{
 		"key": "alt+q",
 		"command": "workbench.action.closePanel"
 	},
 	{
-		"key": "alt+5",
+		"priority": true,
+		"key": "ctrl+alt+5",
 		"command": "magicBeans.fixComment"
 	},
 	{
@@ -25,35 +42,13 @@
 	},
 	{
 		"priority": true,
-		"key": "alt+3",
-		"command": "github.copilot.chat.attachFile"
-	},
-	{
-		"priority": true,
 		"key": "ctrl+5",
 		"command": "github.copilot.chat.attachSelection"
 	},
-	
 	{
 		"priority": true,
 		"key": "ctrl+4",
 		"command": "github.copilot.chat.explain"
-	},
-	{
-		"priority": true,
-		"key": "ctrl+7",
-		"command": "inlineChat.start",
-		"when": "editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly"
-	},
-	{
-		"priority": true,
-		"key": "ctrl+8",
-		"command": "github.copilot.interactiveEditor.generateTests"
-	},
-	{
-		"priority": true,
-		"key": "ctrl+shift+y",
-		"command": "github.copilot.chat.explain.palette"
 	},
 	{
 		"key": "ctrl+shift+a",
@@ -904,11 +899,6 @@
 		"key": "ctrl+k shift+enter",
 		"command": "-workbench.action.unpinEditor",
 		"when": "activeEditorIsPinned"
-	},
-	{
-		"key": "meta+i",
-		"command": "-inlineChat.startWithCurrentLine",
-		"when": "editorFocus && github.copilot.chat.editor.enableLineTrigger && inlineChatHasProvider && !editorReadonly && !inlineChatVisible"
 	},
 	{
 		"key": "ctrl+shift+v",

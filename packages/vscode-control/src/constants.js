@@ -1,8 +1,11 @@
 const { pathExistsSync } = require("fs-extra/lib/path-exists")
 
 const BASE_STABLE = `${process.env.HOME}/.config/Code/User`
+const CURSOR = `${process.env.HOME}/.config/Cursor/User`
 const BASE_BETA = `${process.env.HOME}/.config/Code - Insiders/User`
-const BASE = process.env.BETA === 'ON' ? BASE_BETA :BASE_STABLE
+const BASE = process.env.BETA === 'ON' ? BASE_BETA :
+	process.env.CURSOR === 'ON' ? CURSOR :
+BASE_STABLE
 
 let KEYBINDING = `${BASE}/keybindings.json`
 let SETTINGS = `${BASE}/settings.json`
