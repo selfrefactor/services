@@ -157,10 +157,6 @@
 		"command": "workbench.action.openGlobalKeybindings"
 	},
 	{
-		"key": "alt+s",
-		"command": "github.copilot.chat.fix"
-	},
-	{
 		"key": "ctrl+shift+4",
 		"command": "editor.action.insertSnippet",
 		"args": {
@@ -216,8 +212,7 @@
 		"command": "terminal.focus"
 	},
 	{
-		"prev.key": "alt+s",
-		"key": "ctrl+shift+s",
+		"key": "alt+s",
 		"hint": "SPLIT",
 		"command": "workbench.action.toggleSplitEditorInGroup"
 	},
@@ -389,37 +384,9 @@
 		"command": "workbench.action.gotoSymbol"
 	},
 	{
-		"key": "alt+shift+u",
-		"command": "github.copilot.terminal.explainTerminalSelectionContextMenu"
-	},
-	{
 		"key": "alt+shift+h",
 		"command": "editor.action.revealDefinition",
 		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-	},
-	{
-		"key": "alt+shift+7",
-		"command": "github.copilot.ghpr.applySuggestion"
-	},
-	{
-		"key": "alt+shift+x",
-		"command": "github.copilot.interactiveEditor.fix"
-	},
-	{
-		"key": "alt+shift+y",
-		"command": "github.copilot.chat.selectKnowledgeBase"
-	},
-	{
-		"key": "alt+shift+g",
-		"command": "github.copilot.interactiveEditor.generate"
-	},
-	{
-		"key": "alt+shift+i",
-		"command": "github.copilot.interactiveEditor.review"
-	},
-	{
-		"key": "alt+shift+8",
-		"command": "github.copilot.interactiveEditor.generateDocs"
 	},
 	{
 		"key": "ctrl+shift+;",
