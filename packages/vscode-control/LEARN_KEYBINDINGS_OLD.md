@@ -156,10 +156,6 @@
 
 `action.openGlobalKeybindings`
 
-## ALT  S
-
-`github.copilot.chat.fix`
-
 ## CTRL  SHIFT  4
 
 `editor.action.insertSnippet`
@@ -190,7 +186,7 @@
 
 > Snippet: commentAimedForTitle
 
-## CTRL  SHIFT  S
+## ALT  S
 
 `toggleSplitEditorInGroup`
 
@@ -232,37 +228,9 @@
 
 `workbench.action.gotoSymbol`
 
-## ALT  SHIFT  U
-
-`explainTerminalSelectionContextMenu`
-
 ## ALT  SHIFT  H
 
 `action.revealDefinition`
-
-## ALT  SHIFT  7
-
-`ghpr.applySuggestion`
-
-## ALT  SHIFT  X
-
-`interactiveEditor.fix`
-
-## ALT  SHIFT  Y
-
-`chat.selectKnowledgeBase`
-
-## ALT  SHIFT  G
-
-`interactiveEditor.generate`
-
-## ALT  SHIFT  I
-
-`interactiveEditor.review`
-
-## ALT  SHIFT  8
-
-`generateDocs`
 
 ## CTRL  SHIFT  ;
 
@@ -287,6 +255,7 @@
 * ctrl+shift+f
 * ctrl+shift+g
 * ctrl+shift+q
+* ctrl+shift+s
 * ctrl+shift+v
 * ctrl+shift+w
 * ctrl+shift+`

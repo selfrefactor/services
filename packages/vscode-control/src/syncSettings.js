@@ -131,6 +131,7 @@ function getEditor() {
 
 function getWorkbench() {
   return {
+	"workbench.secondarySideBar.defaultVisibility": "visible",
     'workbench.activityBar.location': 'top',
     'workbench.editor.decorations.colors': false,
     'workbench.editor.dragToOpenWindow': false,
