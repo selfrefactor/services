@@ -9,8 +9,6 @@ const ALLOW_CHANGE_COLOR_THEME = configAnt('ALLOW_CHANGE_COLOR_THEME')
 const BASE_STABLE = '/.config/Code/User'
 const BASE_BETA = '/.config/Code - Insiders/User'
 
-let init = false
-
 const PREFERED_LIGHT_THEMES = ['FunkyDrummer', 'SweatLeaf']
 
 const ALLOWED_LIGHT_THEMES = [
