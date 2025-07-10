@@ -1,18 +1,6 @@
 # Keybindings
 
-## ALT  3
-
-`composer.fixerrormessage`
-
-## CTRL  5
-
-`composer.startComposerPrompt`
-
-## CTRL  4
-
-`composer.newAgentChat`
-
-## CTRL  ALT  5
+## ALT  5
 
 `magicBeans.fixComment`
 
@@ -22,14 +10,6 @@
 
 > Peek References
 
-## CTRL  5
-
-`chat.attachSelection`
-
-## CTRL  4
-
-`github.copilot.chat.explain`
-
 ## CTRL  6
 
 `action.toggleMaximizedPanel`
@@ -37,10 +17,6 @@
 ## CTRL  SHIFT  8
 
 `action.customizeLayout`
-
-## F4
-
-`copilot.focus`
 
 ## CTRL  I
 
@@ -121,10 +97,6 @@
 ## ALT  Q
 
 `workbench.action.closePanel`
-
-## CTRL  3
-
-`workbench.panel.chatEditing`
 
 ## CTRL  SHIFT  A
 
@@ -248,7 +220,10 @@
 
 ## Convenient keys
 
-* alt+5
+* ctrl+3
+* ctrl+4
+* ctrl+5
+* alt+3
 * alt+v
 * alt+`
 * ctrl+shift+c

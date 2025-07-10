@@ -1,18 +1,54 @@
 [
 	{
+		"priority": true,
+		"key": "alt+3",
+		"command": "composer.fixerrormessage",
+		"when": "@composer.isCursorOnLint"
+	},
+	{
+		"priority": true,
+		"key": "ctrl+5",
+		"command": "composer.startComposerPrompt"
+	},
+	{
+		"priority": true,
+		"key": "ctrl+4",
+		"command": "composer.newAgentChat"
+	},
+	{
 		"key": "alt+q",
 		"command": "workbench.action.closePanel"
 	},
 	{
 		"priority": true,
-		"key": "alt+5",
+		"key": "ctrl+alt+5",
 		"command": "magicBeans.fixComment"
+	},
+	{
+		"key": "ctrl+3",
+		"command": "workbench.panel.chatEditing",
+		"when": "workbench.panel.chat.view.edits.active"
+	},
+	{
+		"key": "ctrl+shift+alt+i",
+		"command": "-workbench.panel.chatEditing",
+		"when": "workbench.panel.chat.view.edits.active"
 	},
 	{
 		"key": "ctrl+r",
 		"command": "editor.action.referenceSearch.trigger",
 		"priority": true,
 		"comment": "Peek References"
+	},
+	{
+		"priority": true,
+		"key": "ctrl+5",
+		"command": "github.copilot.chat.attachSelection"
+	},
+	{
+		"priority": true,
+		"key": "ctrl+4",
+		"command": "github.copilot.chat.explain"
 	},
 	{
 		"key": "ctrl+shift+a",
@@ -44,6 +80,11 @@
 		"alreadyLearned": true,
 		"command": "workbench.action.unpinEditor",
 		"when": "activeEditorIsPinned"
+	},
+	{
+		"key": "f4",
+		"priority": true,
+		"command": "workbench.panel.chat.view.copilot.focus"
 	},
 	{
 		"key": "ctrl+shift+[",
@@ -464,6 +505,11 @@
 		"command": "-workbench.action.toggleZenMode"
 	},
 	{
+		"key": "alt+\\",
+		"command": "-editor.action.inlineSuggest.trigger",
+		"when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+	},
+	{
 		"key": "shift+f12",
 		"command": "-editor.action.goToReferences",
 		"when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
@@ -744,6 +790,11 @@
 		"when": "taskCommandsRegistered"
 	},
 	{
+		"key": "ctrl+/",
+		"command": "-github.copilot.acceptCursorPanelSolution",
+		"when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
+	},
+	{
 		"key": "ctrl+3",
 		"command": "-workbench.action.focusThirdEditorGroup"
 	},
@@ -765,6 +816,21 @@
 		"key": "ctrl+shift+5",
 		"command": "-workbench.action.terminal.splitActiveTab",
 		"when": "terminalProcessSupported && terminalTabsFocus"
+	},
+	{
+		"key": "alt+]",
+		"command": "-github.copilot.nextPanelSolution",
+		"when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
+	},
+	{
+		"key": "alt+[",
+		"command": "-github.copilot.previousPanelSolution",
+		"when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "-github.copilot.generate",
+		"when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
 	},
 	{
 		"key": "ctrl+shift+x",
