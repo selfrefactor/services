@@ -42,6 +42,10 @@
 
 > Peek Implementation
 
+## CTRL  R
+
+`referenceSearch.trigger`
+
 ## ALT  Q
 
 `workbench.action.closePanel`
@@ -122,7 +126,6 @@
 * ctrl+4
 * ctrl+5
 * ctrl+e
-* ctrl+r
 * alt+d
 * alt+f
 * alt+r
