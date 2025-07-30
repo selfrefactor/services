@@ -33,7 +33,7 @@ const MODE = MODES[MODE_KEY]
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
-const FONT = 'Space Mono' //  Fira Code 'JetBrains Mono' Space Mono Geist
+const FONT = 'Maple Mono' //  Fira Code 'JetBrains Mono' Space Mono Geist | space mono
 
 void (async function sync() {
   if (!editorExists && WRITE_TO_OUTPUT) {
