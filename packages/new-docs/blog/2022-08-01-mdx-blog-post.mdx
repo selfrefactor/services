@@ -1,0 +1,21 @@
+---
+slug: mdx-blog-post
+title: MDX Blog Post
+authors: [slorber]
+tags: [docusaurus]
+---
+
+```jsx live
+function Repl() {
+	const result = R.pipe(
+		[1, 2, 3, 4],
+		R.filter(x => x > 2),
+		R.map(x => x * 2),
+	)
+
+	return <div>
+	<div>{JSON.stringify(result)}</div>
+	<div>Type of result: {typeof result}</div>
+	</div>
+}
+```
