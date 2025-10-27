@@ -362,6 +362,7 @@ function mergeWithReport(inputs) {
 }
 async function syncSettings() {
   const changeTimeOfTheme = await getChangeThemeTimes()
+	console.log(changeTimeOfTheme, `times`)
   const { result: newOptions, report } = mergeWithReport([
     settings,
     getEditor(),
