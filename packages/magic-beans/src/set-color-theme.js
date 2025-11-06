@@ -8,8 +8,7 @@ const ALLOW_CHANGE_COLOR_THEME = configAnt('ALLOW_CHANGE_COLOR_THEME')
 
 const BASE_STABLE = '/.config/Code/User'
 const BASE_BETA = '/.config/Code - Insiders/User'
-
-const PREFERED_LIGHT_THEMES = ['FunkyDrummer', 'SweatLeaf']
+const BASE_CURSOR = '~/.config/Cursor/User'
 
 const ALLOWED_LIGHT_THEMES = [
   'CommunicationBreakdown',
@@ -43,16 +42,8 @@ function getExpectedColorThemes() {
     : ALLOWED_DARK_THEMES
 }
 
-function getExpectedColorThemesAsString() {
-  return currentTimeIsBetween(startDaytime, endDaytime) ? 'light' : 'dark'
-}
-
 function getRandomTheme(expectedColorThemes) {
-  const colorThemeString = getExpectedColorThemesAsString()
-  if (colorThemeString === 'dark') {
-    return shuffle(expectedColorThemes)[0]
-  }
-  return shuffle(PREFERED_LIGHT_THEMES)[0]
+	return shuffle(expectedColorThemes)[0]
 }
 
 function setColorTheme(context) {
@@ -67,7 +58,8 @@ function setColorTheme(context) {
       return
     }
 
-    const SETTINGS_LOCATION = configAnt(IS_VSCODE_INSIDERS) ? BASE_BETA : BASE_STABLE
+    const SETTINGS_LOCATION = configAnt(IS_CURSOR) ?
+		 BASE_CURSOR : configAnt(IS_VSCODE_INSIDERS) ? BASE_BETA : BASE_STABLE
     const filePath = `${process.env.HOME}${SETTINGS_LOCATION}/settings.json`
     const fileUri = vscode.Uri.file(filePath)
     const uint8Array = await vscode.workspace.fs.readFile(fileUri)

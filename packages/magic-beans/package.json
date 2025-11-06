@@ -184,6 +184,11 @@
 					"default": false,
 					"description": ""
 				},
+				"magicBeans.IS_CURSOR": {
+					"type": "boolean",
+					"default": false,
+					"description": ""
+				},
 				"magicBeans.THEME_CHANGE_DAYTIME": {
 					"type": "array",
 					"description": "",
