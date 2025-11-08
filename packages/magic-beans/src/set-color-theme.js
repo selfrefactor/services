@@ -2,7 +2,7 @@ const { shuffle } = require('rambdax')
 const { configAnt } = require('./ants/config')
 const vscode = require('vscode')
 const { currentTimeIsBetween } = require('./_modules/current-time-is-between')
-const { IS_VSCODE_INSIDERS, THEME_CHANGE_DAYTIME } = require('./constants')
+const { IS_VSCODE_INSIDERS, IS_CURSOR, THEME_CHANGE_DAYTIME } = require('./constants')
 
 const ALLOW_CHANGE_COLOR_THEME = configAnt('ALLOW_CHANGE_COLOR_THEME')
 
