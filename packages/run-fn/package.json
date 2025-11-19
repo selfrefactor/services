@@ -20,17 +20,17 @@
   "author": "self_refactor",
   "license": "MIT",
   "dependencies": {
-    "@biomejs/biome": "1.9.5-nightly.ff02a0b",
+    "@biomejs/biome": "2.3.6",
     "dayjs": "2.0.0-alpha.4",
     "dep-fn": "3.3.2",
-    "fs-extra": "11.3.0",
+    "fs-extra": "11.3.2",
     "helpers-fn": "2.0.0",
-    "oxlint": "0.15.10",
-    "prettier": "4.0.0-alpha.10",
+    "oxlint": "1.29.0",
+    "prettier": "4.0.0-alpha.13",
     "rambdax": "11.3.1",
     "string-fn": "3.6.3"
   },
   "devDependencies": {
-    "typescript": "5.8.0-dev.20250206"
+    "typescript": "6.0.0-dev.20251119"
   }
 }

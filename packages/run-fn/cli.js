@@ -62,9 +62,6 @@ async function runFn() {
 	if (firstArgument === 'dep') {
 		return depFn.cli();
 	}
-	if (firstArgument === 'depx') {
-		return depFn.cli('update');
-	}
 	if (firstArgument === 'dvd') {
 		return dvd(secondArgument);
 	}
