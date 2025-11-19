@@ -34,6 +34,8 @@ const ALLOWED_DARK_THEMES = [
   'UglyAmericans',
 ]
 
+const ALL_THEMES = [...ALLOWED_DARK_THEMES, ...ALLOWED_LIGHT_THEMES]
+
 const [startDaytime, endDaytime] = configAnt(THEME_CHANGE_DAYTIME)
 
 function getExpectedColorThemes() {
@@ -66,6 +68,9 @@ function setColorTheme(context) {
     const fileContent = Buffer.from(uint8Array).toString('utf-8')
     const parsed = JSON.parse(fileContent)
     const currentColorTheme = parsed['workbench.colorTheme']
+
+		if (!ALL_THEMES.includes(currentColorTheme)) return
+
     if (expectedColorThemes.includes(currentColorTheme)) {
       return
     }
