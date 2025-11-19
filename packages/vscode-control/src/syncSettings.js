@@ -246,7 +246,7 @@ function getStableSettings(THEME_CHANGE_DAYTIME) {
     'task.problemMatchers.neverPrompt': { shell: true },
     'terminal.integrated.copyOnSelection': true,
     'terminal.integrated.gpuAcceleration': 'on',
-    'terminal.integrated.mouseWheelZoom': true,
+    'terminal.integrated.mouseWheelZoom': false,
     'typescript.preferences.importModuleSpecifier': 'relative',
     'typescript.suggest.autoImports': true,
     'typescript.suggest.includeAutomaticOptionalChainCompletions': true,
