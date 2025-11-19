@@ -8,7 +8,7 @@
 		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"main": "./dist/extension",
-	"version": "4.41.0",
+	"version": "4.42.0",
 	"dependencies": {
 		"helpers-fn": "2.0.0",
 		"rambdax": "11.2.0",
