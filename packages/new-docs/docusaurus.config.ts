@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
 	scripts: [
-		"https://unpkg.com/rambda@10.3.2/dist/rambda.umd.js"
+		"https://unpkg.com/rambda@10.3.3/dist/rambda.umd.js"
 	],
 	 themes: ['@docusaurus/theme-live-codeblock'],
   title: 'My Site',

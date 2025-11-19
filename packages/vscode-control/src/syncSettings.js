@@ -176,7 +176,7 @@ function getSearch() {
     'search.quickOpen.includeSymbols': false,
     'search.searchEditor.defaultNumberOfContextLines': 5,
     'search.searchEditor.doubleClickBehaviour': 'goToLocation',
-    'search.searchEditor.focusResultsOnSearch': true,
+    'search.searchEditor.focusResultsOnSearch': false,
     'search.searchEditor.reusePriorSearchConfiguration': true,
     'search.seedOnFocus': true,
     'search.seedWithNearestWord': false,
