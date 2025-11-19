@@ -1,7 +1,11 @@
 "use strict";
+// import {update} from './update'
 Object.defineProperty(exports, "__esModule", { value: true });
-const update_1 = require("./update");
-(0, update_1.update)({
-    isParallel: true,
-    atLeast30DaysOld: false
+const getLatest_1 = require("./modules/helpers/getLatest");
+// update({
+// 	isParallel: true,
+// 	atLeast30DaysOld: false
+// })
+(0, getLatest_1.getLatest)('vitest', '3.2.4').then(result => {
+    console.log('Latest version:', result);
 });
