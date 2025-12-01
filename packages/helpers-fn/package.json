@@ -1,56 +1,50 @@
 {
-	"name": "helpers-fn",
-	"scripts": {
-		"dev": "vitest src/log/log.spec.js -u",
-		"test": "vitest"
-	},
-	"typings": "typings.d.ts",
-	"main": "src/index.js",
-	"version": "2.0.0",
-	"depFn": [
-		"chalk",
-		"gradient-string"
-	],
-	"dependencies": {
-		"boxen": "^8.0.1",
-		"cfonts": "3.3.0",
-		"chalk": "4.0.0",
-		"env-fn": "2.2.0",
-		"fdir": "6.4.2",
-		"fs-extra": "11.2.0",
-		"gradient-string": "2.0.2",
-		"log-symbols": "7.0.0",
-		"node-os-utils": "1.3.7",
-		"q-i": "2.0.1",
-		"rambdax": "11.2.0",
-		"string-fn": "3.6.2"
-	},
-	"devDependencies": {
-		"@types/jest": "29.5.14",
-		"@types/node": "22.10.2",
-		"lodash": "4.17.21",
-		"rambda": "9.4.0",
-		"ramda": "0.30.1",
-		"vitest": "^4.0.14"
-	},
-	"jest": {
-		"setupFiles": [
-			"jest-localstorage-mock"
-		]
-	},
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/helpers-fn",
-	"license": "MIT",
-	"author": "Dejan Toteff <deyan8284@gmail.com>",
-	"commitMessage": {
-		"feature": [
-			"improve",
-			"method",
-			"log"
-		],
-		"fix": [
-			"method",
-			"silly"
-		],
-		"workInProgress": ""
-	}
+  "name": "helpers-fn",
+  "scripts": {
+    "dev": "vitest src/log/log.spec.js -u",
+    "test": "vitest"
+  },
+  "typings": "typings.d.ts",
+  "main": "src/index.js",
+  "version": "2.0.0",
+  "dependencies": {
+    "boxen": "8.0.1",
+    "cfonts": "3.3.1",
+    "chalk": "5.6.2",
+    "env-fn": "2.2.0",
+    "fdir": "6.5.0",
+    "fs-extra": "11.3.2",
+    "gradient-string": "3.0.0",
+    "log-symbols": "7.0.1",
+    "node-os-utils": "2.0.1",
+    "q-i": "2.0.1",
+    "rambdax": "11.3.1",
+    "string-fn": "3.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "lodash": "4.17.21",
+    "ramda": "0.32.0",
+    "vitest": "4.0.14"
+  },
+  "jest": {
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
+  },
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/helpers-fn",
+  "license": "MIT",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "commitMessage": {
+    "feature": [
+      "improve",
+      "method",
+      "log"
+    ],
+    "fix": [
+      "method",
+      "silly"
+    ],
+    "workInProgress": ""
+  }
 }

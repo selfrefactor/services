@@ -1,4 +1,3 @@
-const R = require('rambda')
 const {
   SEPARATORS,
   POSSIBLE_MODES,

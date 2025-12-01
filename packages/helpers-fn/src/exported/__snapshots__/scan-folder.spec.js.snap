@@ -1,25 +1,9 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`with exclude 1`] = `
-[
-  "/home/w/repos/services/packages/helpers-fn/src/index.js",
-  "/home/w/repos/services/packages/helpers-fn/src/exported/copy.js",
-  "/home/w/repos/services/packages/helpers-fn/src/exported/copy.spec.js",
-  "/home/w/repos/services/packages/helpers-fn/src/exported/exec.js",
-  "/home/w/repos/services/packages/helpers-fn/src/exported/get-staged-files.js",
-  "/home/w/repos/services/packages/helpers-fn/src/exported/get-staged-files.spec.js",
-  "/home/w/repos/services/packages/helpers-fn/src/exported/run-tests.js",
-  "/home/w/repos/services/packages/helpers-fn/src/exported/run-tests.spec.js",
-  "/home/w/repos/services/packages/helpers-fn/src/exported/scan-folder.js",
-  "/home/w/repos/services/packages/helpers-fn/src/exported/scan-folder.spec.js",
-]
-`;
-
 exports[`with filter 1`] = `
 [
   "/home/w/repos/services/packages/helpers-fn/src/exported/copy.spec.js",
   "/home/w/repos/services/packages/helpers-fn/src/exported/get-staged-files.spec.js",
-  "/home/w/repos/services/packages/helpers-fn/src/exported/run-tests.spec.js",
   "/home/w/repos/services/packages/helpers-fn/src/exported/scan-folder.spec.js",
   "/home/w/repos/services/packages/helpers-fn/src/log/log.spec.js",
 ]

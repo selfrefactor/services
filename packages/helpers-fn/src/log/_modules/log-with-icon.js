@@ -8,10 +8,10 @@ const {
 } = require('../constants')
 
 const icons = {
-  info    : chalk.blue('   ℹ'),
-  success : chalk.green('   ✔'),
-  warning : chalk.yellow('   ⚠'),
-  error   : chalk.red('   ✖'),
+  info    : chalk.default.blue('   ℹ'),
+  success : chalk.default.green('   ✔'),
+  warning : chalk.default.yellow('   ⚠'),
+  error   : chalk.default.red('   ✖'),
 }
 
 function getTextColor(mode){
@@ -24,7 +24,7 @@ function getTextColor(mode){
 }
 
 function logWithIcon(mode, toLog){
-  const chalkRule = chalk.hex(`#${ getTextColor(mode) }`)
+  const chalkRule = chalk.default.hex(`#${ getTextColor(mode) }`)
   console.log(icons[ mode ], chalkRule(String(toLog)))
 }
 
