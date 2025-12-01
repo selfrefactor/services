@@ -13,67 +13,6 @@ interface ScanFolderInput {
 
 export function scanFolder(input: ScanFolderInput): Promise<Array<string>>
 
-// Monitor
-// ============================================
-export class Monitor {
-  start: () => Promise<void>
-  stop: () => Promise<object>
-}
-type monitorType = {
-  start: () => Promise<void>
-  stop: () => Promise<object>
-}
-export const monitor: monitorType
-
-// Utils
-// ============================================
-type DefaultToMode = 'default' | 'onoff' | 'number'
-
-export function defaultTo(
-  processEnvKey: string,
-  defaultValue: string
-): string
-export function defaultTo(
-  processEnvKey: string,
-  defaultValue: string,
-  mode: 'default'
-): string
-export function defaultTo(
-  processEnvKey: string,
-  defaultValue: boolean,
-  mode: 'onoff'
-): boolean
-export function defaultTo(
-  processEnvKey: string,
-  defaultValue: number,
-  mode: 'number'
-): number
-
-// BENCHMARK
-// ============================================
-// export function createBenchmark(input: {
-//   [key: string]: Array<{
-//     fn: () => void
-//     label: string
-//   }>
-// }): Promise<object>
-
-// export function createComplexBenchmark(
-//   input: Array<{
-//     suites: Array<{
-//       fn: () => void
-//       label: string
-//     }>
-//     label: string
-//   }>
-// ): Promise<object>
-
-// TRANSLATE
-// ============================================
-// export function translate(text: string): Promise<string>
-// export function translateToBulgarian(text: string): Promise<string>
-// export function translateToGerman(text: string): Promise<string>
-
 // EXEC
 // ============================================
 type OnLog = (x: string) => void
@@ -123,6 +62,7 @@ type LogModes =
   | 'back.random'
   | 'big'
   | 'foo'
+  | 'box'
   | 'bar'
   | 'baz'
   | 'random'

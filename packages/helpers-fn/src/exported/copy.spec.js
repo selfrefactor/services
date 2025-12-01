@@ -1,10 +1,11 @@
+import { test} from 'vitest'
 const { copy } = require("./copy");
 
 let multiLine = `
-ok1(tests, suiteLabel)([ {
+ok1(tests, suiteLabel)([{
   label : String,
   fn    : Function,
-} ], String)
+}], String)
 
 const benches = tests.forEach(({ label, fn }) => bench.add(label, fn))
 const folder = maybe(
