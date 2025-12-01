@@ -1,4 +1,4 @@
-const R = require('rambdax')
+const R = require('rambda')
 const {
   SEPARATORS,
   POSSIBLE_MODES,
@@ -12,6 +12,13 @@ const { colorizedText } = require('./_modules/colorized-text')
 const { logObject } = require('./_modules/log-object')
 const { logWithIcon } = require('./_modules/log-with-icon')
 const { separator } = require('./_modules/separator')
+const boxen = require('boxen')
+
+const boxenOptions = {
+	borderColor: 'magenta',
+	borderStyle: 'doubleSingle',
+	padding: 0.5
+}
 
 function logFn(...inputs){
   const [ toLog, mode, additional ] = inputs
@@ -22,12 +29,20 @@ function logFn(...inputs){
 
   if (SEPARATORS.includes(toLog)) return separator(toLog)
 
-  if (R.excludes(mode, POSSIBLE_MODES)){
+  if (!POSSIBLE_MODES.includes(mode)){
     throw new Error('mode is not declared')
   }
 
   if (mode === 'big') return bigLog(toLog)
   if (mode === 'obj') return logObject(toLog)
+  if (mode === 'box') {
+		console.log(boxen.default(toLog, boxenOptions))
+		return
+	}
+  if (mode === 'box.padding') {
+		console.log(boxen.default(toLog, {...boxenOptions, padding: 0.9}))
+		return
+	}
   if (TEXT_MODES.includes(mode)) return colorizedText(mode, toLog)
   if (BACK_MODES.includes(mode)) return colorizedBackground(mode, toLog)
   if (ICON_MODES.includes(mode)) return logWithIcon(mode, toLog)

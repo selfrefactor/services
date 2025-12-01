@@ -18,6 +18,8 @@ exports.POSSIBLE_MODES = [
   ...ICON_MODES,
   'obj',
   'big',
+	'box',
+	'box.padding'
 ]
 
 const SUCCESS_COLOR = '#44aa11'

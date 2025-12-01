@@ -63,6 +63,7 @@ type LogModes =
   | 'big'
   | 'foo'
   | 'box'
+  | 'box.padding'
   | 'bar'
   | 'baz'
   | 'random'
