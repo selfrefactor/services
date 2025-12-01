@@ -10,9 +10,6 @@
       "trailingCommas": "all"
     }
   },
-  "organizeImports": {
-    "enabled": true
-  },
   "formatter": {
     "enabled": true,
 		"attributePosition": "multiline",

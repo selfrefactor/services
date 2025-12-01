@@ -39,7 +39,7 @@ async function lintFileWithPrettier(filePath) {
 
 async function biomeLint(filePath) {
   // check include lint and format command
-  const checkCommand = `${BIOME} check --write --unsafe --javascript-formatter-line-width=85 --organize-imports-enabled=true --jsx-quote-style=single --line-width=85 ${filePath}`
+  const checkCommand = `${BIOME} check --write --unsafe --javascript-formatter-line-width=85 --jsx-quote-style=single --line-width=85 ${filePath}`
 
   const { errorMessage: checkCommandErrorMessage } = await exec(checkCommand)
 
