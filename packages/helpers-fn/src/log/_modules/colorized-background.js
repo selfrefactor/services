@@ -33,7 +33,7 @@ function getChalkOptions(mode){
 
 function colorizedBackground(mode, toLog){
   const { front, back } = getChalkOptions(mode)
-  const chalkRule = chalk.hex(`#${ front }`).bgHex(`#${ back }`)
+  const chalkRule = chalk.default.hex(`#${ front }`).bgHex(`#${ back }`)
 
   console.log(chalkRule(`  ${ String(toLog) }  `))
 }

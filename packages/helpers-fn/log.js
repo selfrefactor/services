@@ -5,4 +5,4 @@ const chalk = require('chalk')
 
 console.log(chalk.default)
 console.log(boxen.default('unicorn', {padding: 0.5}));
-log(`1,2,3,` ,'box')
+log(`1,2,3,` ,'back.random')
