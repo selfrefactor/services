@@ -359,10 +359,10 @@ hasown@^2.0.0:
   dependencies:
     function-bind "^1.1.2"
 
-helpers-fn@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/helpers-fn/-/helpers-fn-2.1.0.tgz#6e9679894d098a3c42349092f2b98a13bc347585"
-  integrity sha512-bU6AWT0fxvl+idbIbOvlpkIkQ2Hn6H20bao2A12zPdca87NDSID8mX05oCd27+xC2NeRIu8fLefUOCOMvxx2iQ==
+helpers-fn@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/helpers-fn/-/helpers-fn-2.1.1.tgz#65cf1d2ba5f134ff975a2949238e1a5f81ee4a27"
+  integrity sha512-BWKP+xKHyWpzrahTuzv8jjezQTUTMmWS5jxp4M3L6yReENrJUFcNCqRQGc/x/wfYMM4GKfcIQXsppPKSyjNTUg==
   dependencies:
     boxen "8.0.1"
     cfonts "3.3.1"

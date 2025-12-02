@@ -24,7 +24,7 @@
     "dayjs": "2.0.0-alpha.4",
     "dep-fn": "3.3.2",
     "fs-extra": "11.3.2",
-    "helpers-fn": "2.1.0",
+    "helpers-fn": "2.1.1",
     "oxlint": "1.31.0",
     "prettier": "4.0.0-alpha.13",
     "rambdax": "11.3.1",
