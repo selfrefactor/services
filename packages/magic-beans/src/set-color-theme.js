@@ -1,14 +1,18 @@
 const { shuffle } = require('rambdax')
 const { configAnt } = require('./ants/config')
 const vscode = require('vscode')
+const os = require('node:os')
+const path = require('node:path')
 const { currentTimeIsBetween } = require('./_modules/current-time-is-between')
 const { IS_VSCODE_INSIDERS, IS_CURSOR, THEME_CHANGE_DAYTIME } = require('./constants')
 
 const ALLOW_CHANGE_COLOR_THEME = configAnt('ALLOW_CHANGE_COLOR_THEME')
 
-const BASE_STABLE = '/.config/Code/User'
-const BASE_BETA = '/.config/Code - Insiders/User'
-const BASE_CURSOR = '~/.config/Cursor/User'
+// NOTE: don't use "~" here; VS Code/Cursor won't expand it in file URIs.
+// Resolve via os.homedir() and path.join below.
+const BASE_STABLE = '.config/Code/User'
+const BASE_BETA = '.config/Code - Insiders/User'
+const BASE_CURSOR = '.config/Cursor/User'
 
 const ALLOWED_LIGHT_THEMES = [
   'CommunicationBreakdown',
@@ -48,6 +52,17 @@ function getRandomTheme(expectedColorThemes) {
 	return shuffle(expectedColorThemes)[0]
 }
 
+function getSettingsFilePath() {
+  const homeDir = os.homedir()
+  const base = configAnt(IS_CURSOR)
+    ? BASE_CURSOR
+    : configAnt(IS_VSCODE_INSIDERS)
+      ? BASE_BETA
+      : BASE_STABLE
+
+  return path.join(homeDir, base, 'settings.json')
+}
+
 function setColorTheme(context) {
   return async () => {
     if (!ALLOW_CHANGE_COLOR_THEME) {
@@ -60,9 +75,7 @@ function setColorTheme(context) {
       return
     }
 
-    const SETTINGS_LOCATION = configAnt(IS_CURSOR) ?
-		 BASE_CURSOR : configAnt(IS_VSCODE_INSIDERS) ? BASE_BETA : BASE_STABLE
-    const filePath = `${process.env.HOME}${SETTINGS_LOCATION}/settings.json`
+    const filePath = getSettingsFilePath()
     const fileUri = vscode.Uri.file(filePath)
     const uint8Array = await vscode.workspace.fs.readFile(fileUri)
     const fileContent = Buffer.from(uint8Array).toString('utf-8')
