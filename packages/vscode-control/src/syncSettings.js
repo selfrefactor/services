@@ -139,7 +139,7 @@ function getWorkbench() {
     'workbench.editor.enablePreview': VSCODE_INSIDERS,
     'workbench.editor.enablePreviewFromQuickOpen': true,
     'workbench.editor.focusRecentEditorAfterClose': false,
-    'workbench.editor.pinnedTabSizing': 'normal', // shrink | normal
+    'workbench.editor.pinnedTabSizing': 'shrink', // shrink | normal
     'workbench.editor.pinnedTabsOnSeparateRow': true,
     'workbench.editor.revealIfOpen': false,
     'workbench.editor.showTabs': 'multiple',
