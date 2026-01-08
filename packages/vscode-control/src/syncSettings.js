@@ -237,6 +237,7 @@ function getStableSettings(THEME_CHANGE_DAYTIME) {
     'javascript.suggest.autoImports': true,
     'javascript.suggest.includeAutomaticOptionalChainCompletions': true, // to test prefered local imports
     'magicBeans.ALLOW_CHANGE_COLOR_THEME': true,
+		"magicBeans.AUTO_CHANGE_COLOR_THEME": true,
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
     'magicBeans.IS_CURSOR': IS_CURSOR,
     'magicBeans.THEME_CHANGE_DAYTIME': THEME_CHANGE_DAYTIME,
