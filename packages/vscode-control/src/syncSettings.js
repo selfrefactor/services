@@ -16,7 +16,7 @@ const {
 const { getChangeThemeTimes } = require('./get-change-theme-times.js')
 
 const VSCODE_INSIDERS = process.env.BETA === 'ON'
-let IS_CURSOR = process.env.CURSOR === 'ON'
+const IS_CURSOR = process.env.CURSOR === 'ON'
 const FOLDING_IMPORTS = VSCODE_INSIDERS
 
 const WRITE_TO_OUTPUT = process.env.WRITE_TO_OUTPUT !== 'OFF'
@@ -131,7 +131,7 @@ function getEditor() {
 
 function getWorkbench() {
   return {
-	"workbench.secondarySideBar.defaultVisibility": "hidden",
+    'workbench.secondarySideBar.defaultVisibility': 'hidden',
     'workbench.activityBar.location': 'top',
     'workbench.editor.decorations.colors': false,
     'workbench.editor.dragToOpenWindow': false,
@@ -183,7 +183,7 @@ function getSearch() {
     'search.showLineNumbers': true,
     'search.smartCase': true,
     'search.searchOnType': true,
-	"search.searchOnTypeDebouncePeriod": 500,
+    'search.searchOnTypeDebouncePeriod': 500,
     'search.sortOrder': 'fileNames',
     'search.useGlobalIgnoreFiles': true,
     'search.useParentIgnoreFiles': true,
@@ -217,8 +217,11 @@ function getGit() {
 
 function getStableSettings(THEME_CHANGE_DAYTIME) {
   return {
-		"workbench.colorTheme": "FunkyDrummer",
-		'niketa.PERSIST_LINT_TERMINAL': true,
+    'typescript.experimental.useTsgo': true,
+    'emmet.showExpandedAbbreviation': 'never',
+    'emmet.showAbbreviationSuggestions': false,
+    'workbench.colorTheme': 'FunkyDrummer',
+    'niketa.PERSIST_LINT_TERMINAL': true,
     'window.controlsStyle': 'custom', // native
     'github.copilot.chat.agent.thinkingTool': true,
     'chat.agent.enabled': true,
@@ -237,7 +240,7 @@ function getStableSettings(THEME_CHANGE_DAYTIME) {
     'javascript.suggest.autoImports': true,
     'javascript.suggest.includeAutomaticOptionalChainCompletions': true, // to test prefered local imports
     'magicBeans.ALLOW_CHANGE_COLOR_THEME': true,
-		"magicBeans.AUTO_CHANGE_COLOR_THEME": true,
+    'magicBeans.AUTO_CHANGE_COLOR_THEME': true,
     'magicBeans.IS_VSCODE_INSIDERS': VSCODE_INSIDERS,
     'magicBeans.IS_CURSOR': IS_CURSOR,
     'magicBeans.THEME_CHANGE_DAYTIME': THEME_CHANGE_DAYTIME,
@@ -363,7 +366,7 @@ function mergeWithReport(inputs) {
 }
 async function syncSettings() {
   const changeTimeOfTheme = await getChangeThemeTimes()
-	console.log(changeTimeOfTheme, `times`)
+  console.log(changeTimeOfTheme, `times`)
   const { result: newOptions, report } = mergeWithReport([
     settings,
     getEditor(),
@@ -393,7 +396,7 @@ function syncSnippets() {
 
 function getCopilotSettings() {
   return {
-		"cursor.composer.cmdPFilePicker2": true,
+    'cursor.composer.cmdPFilePicker2': true,
     'github.copilot.nextEditSuggestions.enabled': true,
     'github.copilot.nextEditSuggestions.fixes': true,
     'github.copilot.chat.editor.temporalContext.enabled': true,
