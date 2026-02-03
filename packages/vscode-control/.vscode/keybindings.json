@@ -70,6 +70,14 @@
 		}
 	},
 	{
+		"key": "alt+9",
+		"command": "editor.action.insertSnippet",
+		"alreadyLearned": true,
+		"args": {
+			"name": "StringTemplate"
+		}
+	},
+	{
 		"key": "alt+5",
 		"command": "editor.action.insertSnippet",
 		"args": {
