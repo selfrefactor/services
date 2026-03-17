@@ -217,6 +217,14 @@ function getGit() {
 
 function getStableSettings(THEME_CHANGE_DAYTIME) {
   return {
+    'workbench.colorCustomizations1': {
+      'editor.background': '#000',
+      'editor.foreground': '#aaa',
+    },
+    'workbench.colorCustomizations2': {
+      'editor.background': '#000',
+      'editor.foreground': '#aaa',
+    },
     'typescript.experimental.useTsgo': true,
     'emmet.showExpandedAbbreviation': 'never',
     'emmet.showAbbreviationSuggestions': false,
