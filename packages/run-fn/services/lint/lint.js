@@ -73,3 +73,4 @@ async function lintFn(filePath) {
 
 exports.escapeTerminalPath = escapeTerminalPath
 exports.lintFile = lintFn
+exports.exec = exec

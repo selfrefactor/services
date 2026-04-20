@@ -25,7 +25,7 @@ async function getChangeThemeTimes() {
 	const {data} = await axios.get('https://api.sunrisesunset.io/json?lat=42.151815440944674&lng=24.75282924322365');
 	const sunrise = data.results.sunrise;
 	const sunset = data.results.sunset;
-	
+	console.log({sunset, sunrise})
 	return [
 		getTime(sunrise),
 		getTime(sunset, OFFSET)

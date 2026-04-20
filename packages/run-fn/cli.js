@@ -12,9 +12,9 @@ const { log } = require('helpers-fn');
 const { read } = require('./services/read/read');
 const { pullAll } = require('./services/pull-all/pull-all');
 const { lintFile } = require('./services/lint/lint');
+const { formatFile } = require('./services/fmt/fmt');
 const { lintFolder } = require('./services/lint-folder/lint-folder');
 const { diary, DIARY_MAP } = require('./services/diary/diary');
-
 
 async function runFn() {
 	const [firstArgumentRaw, secondArgument, thirdArgument, ...rest] = drop(2)(
@@ -43,6 +43,9 @@ async function runFn() {
 		});
 	}
 
+	if (['fmt:file', 'fmt'].includes(firstArgument)) {
+		return formatFile(secondArgument);
+	}
 	if (firstArgument.includes('lint:file')) {
 		return lintFile(secondArgument);
 	}
