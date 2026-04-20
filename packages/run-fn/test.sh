@@ -1,4 +1,4 @@
-node bin/run.js lint:file /home/w/repos/server-sandbox/scripts/choose-correct-translation/gutenberg-select-correct-translation-app.ts
+node bin/run.js fmt /home/w/repos/server-sandbox/scripts/paths.ts
 # node bin/run.js diary a b c
 # RUN_FN_CWD=/home/we/repos/services/packages/string-fn/src node bin/run.js lint:folder 
 # node bin/run.js dep:next 9
