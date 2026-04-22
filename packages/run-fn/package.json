@@ -1,6 +1,6 @@
 {
   "name": "run-fn",
-  "version": "3.51.1",
+  "version": "3.52.0",
   "description": "Collections of useful CLI functions",
   "main": "./cli.js",
   "bin": {
@@ -21,18 +21,18 @@
   "author": "self_refactor",
   "license": "MIT",
   "dependencies": {
-    "@biomejs/biome": "2.3.8",
+    "@biomejs/biome": "2.4.12",
     "dayjs": "2.0.0-alpha.4",
     "dep-fn": "3.3.2",
-    "fs-extra": "11.3.2",
+    "fs-extra": "11.3.4",
     "helpers-fn": "2.1.1",
-    "oxfmt": "^0.45.0",
-    "oxlint": "1.31.0",
+    "oxfmt": "0.46.0",
+    "oxlint": "1.61.0",
     "prettier": "4.0.0-alpha.13",
     "rambdax": "11.3.1",
     "string-fn": "3.6.3"
   },
   "devDependencies": {
-    "typescript": "6.0.0-dev.20251201"
+    "typescript": "6.0.3"
   }
 }
