@@ -361,8 +361,8 @@ function sortFn(aKey, bKey) {
 function mergeWithReport(inputs) {
   const report = []
   const result = {}
-  inputs.forEach(input => {
-    Object.keys(input).forEach(key => {
+  inputs.forEach((input) => {
+    Object.keys(input).forEach((key) => {
       if (result[key] !== undefined) {
         report.push({ key, value: input[key] })
       }
@@ -404,35 +404,79 @@ function syncSnippets() {
 
 function getCopilotSettings() {
   return {
-    'cursor.composer.cmdPFilePicker2': true,
-    'github.copilot.nextEditSuggestions.enabled': true,
-    'github.copilot.nextEditSuggestions.fixes': true,
-    'github.copilot.chat.editor.temporalContext.enabled': true,
-    'github.copilot.chat.edits.temporalContext.enabled': true,
-    'github.copilot.chat.newWorkspaceCreation.enabled': false,
-    'github.copilot.chat.setupTests.enabled': false,
-    'github.copilot.enable': {
-      '*': true,
-      markdown: true,
-      plaintext: true,
-      yaml: true,
+    'workbench.colorCustomizationsx': {
+        '[AmericanDad]': {
+          'editor.background': '#000',
+          'editor.foreground': '#aaa',
+        },
+        '[AquaTeenHungerForce]': {
+          'editor.background': '#000',
+          'editor.foreground': '#aaa',
+        },
+        '[Archer]': {
+          'editor.background': '#000',
+          'editor.foreground': '#aaa',
+        },
+        '[ClevelandShow]': {
+          'editor.background': '#000',
+          'editor.foreground': '#aaa',
+        },
+        '[Dilbert]': {
+          'editor.background': '#000',
+          'editor.foreground': '#aaa',
+        },
+        '[HomeMovies]': {
+          'editor.background': '#000',
+          'editor.foreground': '#aaa',
+        },
+        '[SouthPark]': {
+          'editor.background': '#000',
+          'editor.foreground': '#aaa',
+        },
+        '[TripTank]': {
+          'editor.background': '#000',
+          'editor.foreground': '#aaa',
+        },
+        '[UglyAmericans]': {
+          'editor.background': '#000',
+          'editor.foreground': '#aaa',
+        },
+        '[CommunicationBreakdown]': {
+          'editor.background': '#eee',
+          'editor.foreground': '#333',
+        },
+        '[DancingDays]': {
+          'editor.background': '#eee',
+          'editor.foreground': '#333',
+        },
+        '[FunkyDrummer]': {
+          'editor.background': '#eee',
+          'editor.foreground': '#333',
+        },
+        '[GlassOnion]': {
+          'editor.background': '#eee',
+          'editor.foreground': '#333',
+        },
+        '[HelloSpaceboy]': {
+          'editor.background': '#eee',
+          'editor.foreground': '#333',
+        },
+        '[KozmicBlues]': {
+          'editor.background': '#eee',
+          'editor.foreground': '#333',
+        },
+        '[LedZeppelin]': {
+          'editor.background': '#eee',
+          'editor.foreground': '#333',
+        },
+        '[StrangeBrew]': {
+          'editor.background': '#eee',
+          'editor.foreground': '#333',
+        },
+        '[SweatLeaf]': {
+          'editor.background': '#eee',
+          'editor.foreground': '#333',
+        },
     },
-    'github.copilot.renameSuggestions.triggerAutomatically': false,
-    'github.copilot.advanced': {
-      autoComplete: true,
-      codeLens: true,
-      diagnostics: false,
-      format: false,
-      generateTests: false,
-      hover: false,
-      semanticTokens: true,
-      signatureHelp: true,
-      smartSelection: true,
-    },
-    'github.copilot.chat.followUps': 'always',
-    'github.copilot.chat.generateTests.codeLens': false,
-    'github.copilot.chat.startDebugging.enabled': false,
-    'github.copilot.chat.scopeSelection': false,
-    'github.copilot.chat.search.semanticTextResults': false,
   }
 }
