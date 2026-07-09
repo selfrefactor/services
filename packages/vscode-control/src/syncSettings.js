@@ -404,79 +404,104 @@ function syncSnippets() {
 
 function getCopilotSettings() {
   return {
+    'github.copilot.chat.tools.viewImage.enabled': false,
+    'github.copilot.chat.copilotDebugCommand.enabled': false,
+    'dbcode.ai.inlineCompletion': false,
+    'chat.extensionUnification.enabled': false,
+    'github.copilot.renameSuggestions.triggerAutomatically': false,
+    'github.copilot.nextEditSuggestions.fixes': false,
+    'github.copilot.nextEditSuggestions.enabled': false,
+    'github.copilot.nextEditSuggestions.allowWhitespaceOnlyChanges': false,
+    'github.copilot.editor.enableCodeActions': false,
+    'github.copilot.chat.useProjectTemplates': false,
+    'github.copilot.chat.organizationInstructions.enabled': false,
+    'github.copilot.chat.organizationCustomAgents.enabled': false,
+    'github.copilot.chat.reviewAgent.enabled': false,
+    'github.copilot.chat.reviewSelection.enabled': false,
+    'github.copilot.chat.cloudAgent.enabled': false,
+    'github.copilot.chat.customInstructionsInSystemMessage': false,
+    'github.copilot.chat.claudeAgent.enabled': false,
+    'github.copilot.chat.backgroundAgent.enabled': false,
+    'github.copilot.chat.anthropic.useMessagesApi': false,
+    'github.copilot.chat.agent.currentEditorContext.enabled': false,
+    'github.copilot.chat.updated53CodexPrompt.enabled': false,
+    'github.copilot.chat.setupTests.enabled': false,
+    'github.copilot.chat.summarizeAgentConversationHistory.enabled': false,
+    'github.copilot.chat.newWorkspaceCreation.enabled': false,
+    'chat.disableAIFeatures': true,
     'workbench.colorCustomizationsx': {
-        '[AmericanDad]': {
-          'editor.background': '#000',
-          'editor.foreground': '#aaa',
-        },
-        '[AquaTeenHungerForce]': {
-          'editor.background': '#000',
-          'editor.foreground': '#aaa',
-        },
-        '[Archer]': {
-          'editor.background': '#000',
-          'editor.foreground': '#aaa',
-        },
-        '[ClevelandShow]': {
-          'editor.background': '#000',
-          'editor.foreground': '#aaa',
-        },
-        '[Dilbert]': {
-          'editor.background': '#000',
-          'editor.foreground': '#aaa',
-        },
-        '[HomeMovies]': {
-          'editor.background': '#000',
-          'editor.foreground': '#aaa',
-        },
-        '[SouthPark]': {
-          'editor.background': '#000',
-          'editor.foreground': '#aaa',
-        },
-        '[TripTank]': {
-          'editor.background': '#000',
-          'editor.foreground': '#aaa',
-        },
-        '[UglyAmericans]': {
-          'editor.background': '#000',
-          'editor.foreground': '#aaa',
-        },
-        '[CommunicationBreakdown]': {
-          'editor.background': '#eee',
-          'editor.foreground': '#333',
-        },
-        '[DancingDays]': {
-          'editor.background': '#eee',
-          'editor.foreground': '#333',
-        },
-        '[FunkyDrummer]': {
-          'editor.background': '#eee',
-          'editor.foreground': '#333',
-        },
-        '[GlassOnion]': {
-          'editor.background': '#eee',
-          'editor.foreground': '#333',
-        },
-        '[HelloSpaceboy]': {
-          'editor.background': '#eee',
-          'editor.foreground': '#333',
-        },
-        '[KozmicBlues]': {
-          'editor.background': '#eee',
-          'editor.foreground': '#333',
-        },
-        '[LedZeppelin]': {
-          'editor.background': '#eee',
-          'editor.foreground': '#333',
-        },
-        '[StrangeBrew]': {
-          'editor.background': '#eee',
-          'editor.foreground': '#333',
-        },
-        '[SweatLeaf]': {
-          'editor.background': '#eee',
-          'editor.foreground': '#333',
-        },
+      '[AmericanDad]': {
+        'editor.background': '#000',
+        'editor.foreground': '#aaa',
+      },
+      '[AquaTeenHungerForce]': {
+        'editor.background': '#000',
+        'editor.foreground': '#aaa',
+      },
+      '[Archer]': {
+        'editor.background': '#000',
+        'editor.foreground': '#aaa',
+      },
+      '[ClevelandShow]': {
+        'editor.background': '#000',
+        'editor.foreground': '#aaa',
+      },
+      '[Dilbert]': {
+        'editor.background': '#000',
+        'editor.foreground': '#aaa',
+      },
+      '[HomeMovies]': {
+        'editor.background': '#000',
+        'editor.foreground': '#aaa',
+      },
+      '[SouthPark]': {
+        'editor.background': '#000',
+        'editor.foreground': '#aaa',
+      },
+      '[TripTank]': {
+        'editor.background': '#000',
+        'editor.foreground': '#aaa',
+      },
+      '[UglyAmericans]': {
+        'editor.background': '#000',
+        'editor.foreground': '#aaa',
+      },
+      '[CommunicationBreakdown]': {
+        'editor.background': '#eee',
+        'editor.foreground': '#333',
+      },
+      '[DancingDays]': {
+        'editor.background': '#eee',
+        'editor.foreground': '#333',
+      },
+      '[FunkyDrummer]': {
+        'editor.background': '#eee',
+        'editor.foreground': '#333',
+      },
+      '[GlassOnion]': {
+        'editor.background': '#eee',
+        'editor.foreground': '#333',
+      },
+      '[HelloSpaceboy]': {
+        'editor.background': '#eee',
+        'editor.foreground': '#333',
+      },
+      '[KozmicBlues]': {
+        'editor.background': '#eee',
+        'editor.foreground': '#333',
+      },
+      '[LedZeppelin]': {
+        'editor.background': '#eee',
+        'editor.foreground': '#333',
+      },
+      '[StrangeBrew]': {
+        'editor.background': '#eee',
+        'editor.foreground': '#333',
+      },
+      '[SweatLeaf]': {
+        'editor.background': '#eee',
+        'editor.foreground': '#333',
+      },
     },
   }
 }
