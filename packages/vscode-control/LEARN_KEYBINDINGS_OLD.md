@@ -112,6 +112,10 @@
 
 > after running vscode control
 
+## ALT  Z
+
+`action.toggleZenMode`
+
 ## CTRL  SHIFT  '
 
 `extension.markdown-pdf.pdf`
@@ -131,7 +135,6 @@
 * alt+r
 * alt+v
 * alt+`
-* alt+z
 * ctrl+shift+3
 * ctrl+shift+4
 * ctrl+shift+5

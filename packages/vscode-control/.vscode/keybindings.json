@@ -267,6 +267,16 @@
 		"command": "editor.action.peekImplementation",
 		"when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
 	},
+		{
+		"key": "alt+z",
+		"command": "workbench.action.toggleZenMode",
+		"when": "!isAuxiliaryWindowFocusedContext"
+	},
+	{
+		"key": "alt+z",
+		"command": "-workbench.action.terminal.sizeToContentWidth",
+		"when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen || terminalFocus && terminalIsOpen && terminalProcessSupported"
+	},
 	{
 		"key": "ctrl+shift+'",
 		"command": "extension.markdown-pdf.pdf"
@@ -730,5 +740,5 @@
 		"key": "ctrl+r",
 		"command": "-workbench.action.terminal.chat.rerunRequest",
 		"when": "chatIsEnabled && terminalChatFocus && terminalHasBeenCreated && !terminalChatActiveRequest || chatIsEnabled && terminalChatFocus && terminalProcessSupported && !terminalChatActiveRequest"
-	}	
+	}
 ]
