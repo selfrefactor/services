@@ -6,8 +6,6 @@ const {
   SORT_LINES,
 } = require('./constants')
 const { copyTrimmed } = require('./copy-trimmed')
-const { fixComment } = require('./fix-comment')
-const { createSpec } = require('./create-spec')
 const { formatJson } = require('./format-json')
 const { initStatusBars } = require('./bar')
 const {
@@ -18,7 +16,6 @@ const {
 const { slowScrollInit } = require('./slow-scroll')
 const { sortLines } = require('./sort-lines')
 const { highlightOnCopy } = require('./highlight-on-copy')
-const { fixCamelcaseRefactoring } = require('./fix-camelcase-refactoring')
 const { setColorTheme } = require('./set-color-theme')
 const { configAnt } = require('./ants/config')
 const { symbolsList } = require('./symbols/symbols')
@@ -61,14 +58,6 @@ function activate(context) {
     'magicBeans.highlightOnCopyRun',
     highlightOnCopy(setColorThemeFn),
   )
-  const fixCommentCommand = vscode.commands.registerCommand(
-    'magicBeans.fixComment',
-    fixComment(vscode),
-  )
-  const createSpecCommand = vscode.commands.registerCommand(
-    'magicBeans.createSpec',
-    createSpec,
-  )
   const slowScrollInitCommand = vscode.commands.registerCommand(
     SLOW_SCROLL_INIT,
     slowScrollInit(context),
@@ -78,21 +67,14 @@ function activate(context) {
     requestRandomFile(context),
   )
   const sortLinesCommand = vscode.commands.registerCommand(SORT_LINES, sortLines)
-  const fixCamelcaseRefactoringCommand = vscode.commands.registerCommand(
-    'magicBeans.fixCamelcaseRefactoring',
-    fixCamelcaseRefactoring,
-  )
 
-  context.subscriptions.push(symbolsListCommand)
   context.subscriptions.push(copyTrimmedCommand)
-  context.subscriptions.push(highlightOnCopyCommand)
-  context.subscriptions.push(fixCommentCommand)
-  context.subscriptions.push(createSpecCommand)
-  context.subscriptions.push(slowScrollInitCommand)
-  context.subscriptions.push(requestRandomFileCommand)
   context.subscriptions.push(formatJsonCommand)
+  context.subscriptions.push(highlightOnCopyCommand)
+  context.subscriptions.push(requestRandomFileCommand)
+  context.subscriptions.push(slowScrollInitCommand)
   context.subscriptions.push(sortLinesCommand)
-  context.subscriptions.push(fixCamelcaseRefactoringCommand)
+  context.subscriptions.push(symbolsListCommand)
 
   const openFolder = vscode.commands.registerCommand(
     'magicBeans.openFolder',
