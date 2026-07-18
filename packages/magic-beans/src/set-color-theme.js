@@ -66,8 +66,7 @@ function getSettingsFilePath() {
   return path.join(homeDir, base, 'settings.json')
 }
 
-function setColorTheme(context) {
-  return async () => {
+async function setColorTheme() {
     if (!ALLOW_CHANGE_COLOR_THEME) {
       return
     }
@@ -94,7 +93,6 @@ function setColorTheme(context) {
     parsed['workbench.colorTheme'] = getRandomTheme(expectedColorThemes)
     const newContent = JSON.stringify(parsed, null, 2)
     await vscode.workspace.fs.writeFile(fileUri, Buffer.from(newContent))
-  }
 }
 
 exports.setColorTheme = setColorTheme

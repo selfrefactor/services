@@ -37,14 +37,12 @@ function activate(context) {
   )
 
   initStatusBars()
-  const setColorThemeFn = setColorTheme(context)
-  setColorThemeFn()
 
   // Check/change theme when the VS Code window regains focus
   context.subscriptions.push(
     vscode.window.onDidChangeWindowState(windowState => {
       if (windowState.focused) {
-        setColorThemeFn()
+        setColorTheme()
       }
     }),
   )
@@ -65,7 +63,7 @@ function activate(context) {
   )
   const highlightOnCopyCommand = vscode.commands.registerCommand(
     'magicBeans.highlightOnCopyRun',
-    highlightOnCopy(setColorThemeFn),
+    highlightOnCopy,
   )
   const slowScrollInitCommand = vscode.commands.registerCommand(
     SLOW_SCROLL_INIT,

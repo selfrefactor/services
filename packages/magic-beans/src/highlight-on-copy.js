@@ -17,13 +17,10 @@ function applyHighlightDecoration(editor = vscode.window.activeTextEditor) {
   }, timeout)
 }
 
-function highlightOnCopy(setColorThemeFn) {
-  return async () => {
+async function highlightOnCopy() {
     // Copy to clipboard
     await vscode.commands.executeCommand('editor.action.clipboardCopyAction')
     applyHighlightDecoration()
-    setColorThemeFn()
-  }
 }
 
 function getSelections(editor) {
