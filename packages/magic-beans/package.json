@@ -48,7 +48,7 @@
 		"type": "git",
 		"url": "https://github.com/selfrefactor/services/tree/master/packages/magic-beans"
 	},
-	"icon": "files/magic-beans.png",
+	"icon": "magic-beans.png",
 	"displayName": "Magic Beans",
 	"description": "Magic-like helpers",
 	"publisher": "selfrefactor",
