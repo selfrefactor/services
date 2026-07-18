@@ -5,7 +5,7 @@ const testDir = resolve(__dirname, '../../src')
 
 test('happy', async () => {
 	let result = await scanFolder({ folder : testDir })
-	// console.log(result)
+	console.log(result)
 })
 
 test('with filter', async () => {
@@ -24,5 +24,5 @@ test('with exclude', async () => {
     folder : testDir,
     excludeFn,
   })
-	// console.log(result)
+	console.log(result)
 })

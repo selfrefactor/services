@@ -13,38 +13,22 @@
     "chalk": "5.6.2",
     "env-fn": "2.2.0",
     "fdir": "6.5.0",
-    "fs-extra": "11.3.2",
+    "fs-extra": "11.3.6",
     "gradient-string": "3.0.0",
     "log-symbols": "7.0.1",
-    "node-os-utils": "2.0.1",
+    "node-os-utils": "2.0.3",
     "q-i": "2.0.1",
     "rambdax": "11.3.1",
     "string-fn": "3.6.3"
   },
   "devDependencies": {
-    "@types/node": "24.10.1",
-    "lodash": "4.17.21",
+    "@types/node": "26.1.1",
+    "lodash": "4.18.1",
     "ramda": "0.32.0",
-    "vitest": "4.0.14"
-  },
-  "jest": {
-    "setupFiles": [
-      "jest-localstorage-mock"
-    ]
+    "vite": "^8.1.5",
+    "vitest": "5.0.0-beta.6"
   },
   "repository": "https://github.com/selfrefactor/services/tree/master/packages/helpers-fn",
   "license": "MIT",
-  "author": "Dejan Toteff <deyan8284@gmail.com>",
-  "commitMessage": {
-    "feature": [
-      "improve",
-      "method",
-      "log"
-    ],
-    "fix": [
-      "method",
-      "silly"
-    ],
-    "workInProgress": ""
-  }
+  "author": "Dejan Toteff <deyan8284@gmail.com>"
 }
