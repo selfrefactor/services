@@ -5,6 +5,9 @@
 		"build:dev": "node esbuild.js",
 		"dev": "jest -u src/_modules/format-json.spec.js",
 		"test": "jest src/_modules",
+		"test:integration": "node src/test/run-test.js",
+		"test:e2e": "jest --config jest.config.e2e.js",
+		"test:e2e:headed": "HEADLESS=false jest --config jest.config.e2e.js",
 		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"main": "./dist/extension",
@@ -19,6 +22,8 @@
 		"@stylistic/eslint-plugin": "2.10.1",
 		"@types/fs-extra": "^11.0.4",
 		"@types/jest": "29.5.14",
+		"@types/vscode": "^1.125.0",
+		"@vscode/test-electron": "^3.0.0",
 		"esbuild": "^0.24.2",
 		"eslint": "8.57.0",
 		"eslint-plugin-jest": "28.9.0",
@@ -27,7 +32,10 @@
 		"eslint-plugin-sonarjs": "2.0.4",
 		"eslint-plugin-unused-imports": "3.1.0",
 		"fs-extra": "11.2.0",
+		"glob": "^13.0.6",
 		"jest": "29.7.0",
+		"mocha": "^11.7.6",
+		"playwright": "^1.61.1",
 		"prettier": "3.3.3",
 		"vscode": "1.1.37"
 	},
@@ -179,16 +187,6 @@
 			"type": "object",
 			"title": "MagicBeans",
 			"properties": {
-				"magicBeans.IS_VSCODE_INSIDERS": {
-					"type": "boolean",
-					"default": false,
-					"description": ""
-				},
-				"magicBeans.IS_CURSOR": {
-					"type": "boolean",
-					"default": false,
-					"description": ""
-				},
 				"magicBeans.THEME_CHANGE_DAYTIME": {
 					"type": "array",
 					"description": "",

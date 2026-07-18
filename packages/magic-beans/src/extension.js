@@ -40,6 +40,15 @@ function activate(context) {
   const setColorThemeFn = setColorTheme(context)
   setColorThemeFn()
 
+  // Check/change theme when the VS Code window regains focus
+  context.subscriptions.push(
+    vscode.window.onDidChangeWindowState(windowState => {
+      if (windowState.focused) {
+        setColorThemeFn()
+      }
+    }),
+  )
+
   const symbolsListCommand = vscode.commands.registerCommand(
     'magicBeans.symbolsList',
     data => {

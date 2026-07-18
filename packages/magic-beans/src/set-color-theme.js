@@ -4,15 +4,17 @@ const vscode = require('vscode')
 const os = require('node:os')
 const path = require('node:path')
 const { currentTimeIsBetween } = require('./_modules/current-time-is-between')
-const { IS_VSCODE_INSIDERS, IS_CURSOR, THEME_CHANGE_DAYTIME } = require('./constants')
+const { THEME_CHANGE_DAYTIME } = require('./constants')
 
 const ALLOW_CHANGE_COLOR_THEME = configAnt('ALLOW_CHANGE_COLOR_THEME')
 
 // NOTE: don't use "~" here; VS Code/Cursor won't expand it in file URIs.
 // Resolve via os.homedir() and path.join below.
-const BASE_STABLE = '.config/Code/User'
-const BASE_BETA = '.config/Code - Insiders/User'
-const BASE_CURSOR = '.config/Cursor/User'
+const IS_MAC = os.platform() === 'darwin'
+
+const BASE_STABLE = IS_MAC ? 'Library/Application Support/Code/User' : '.config/Code/User'
+const BASE_BETA = IS_MAC ? 'Library/Application Support/Code - Insiders/User' : '.config/Code - Insiders/User'
+const BASE_CURSOR = IS_MAC ? 'Library/Application Support/Cursor/User' : '.config/Cursor/User'
 
 const ALLOWED_LIGHT_THEMES = [
   'CommunicationBreakdown',
@@ -54,9 +56,10 @@ function getRandomTheme(expectedColorThemes) {
 
 function getSettingsFilePath() {
   const homeDir = os.homedir()
-  const base = configAnt(IS_CURSOR)
+  const appName = vscode.env.appName
+  const base = appName.includes('Cursor')
     ? BASE_CURSOR
-    : configAnt(IS_VSCODE_INSIDERS)
+    : appName.includes('Insiders')
       ? BASE_BETA
       : BASE_STABLE
 

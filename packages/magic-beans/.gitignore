@@ -63,3 +63,12 @@ typings/
 
 # next.js build output
 .next
+
+# VS Code test user data
+.vscode-test-user-data
+.vscode-test
+
+# Playwright E2E
+playwright-report
+test-results
+screenshots
