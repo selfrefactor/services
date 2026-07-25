@@ -5,11 +5,15 @@ const glob = require('glob')
 function run(testsRoot, cb) {
   console.log('[test-runner] testsRoot:', testsRoot)
 
+  // testsRoot is the file path to index.js, not the directory
+  const suiteDir = path.dirname(testsRoot)
+  console.log('[test-runner] suiteDir:', suiteDir)
+
   const mocha = new Mocha({ ui: 'tdd', color: true, timeout: 30000 })
 
   let files
   try {
-    files = glob.sync('**.test.js', { cwd: testsRoot })
+    files = glob.sync('**.test.js', { cwd: suiteDir })
     console.log('[test-runner] files found:', files)
   } catch (error) {
     console.error('[test-runner] glob error:', error)
@@ -22,7 +26,7 @@ function run(testsRoot, cb) {
   }
 
   files.forEach(f => {
-    const fullPath = path.join(testsRoot, f)
+    const fullPath = path.join(suiteDir, f)
     console.log('[test-runner] adding file:', fullPath)
     try {
       mocha.addFile(fullPath)

@@ -18,7 +18,8 @@ const { sortLines } = require('./sort-lines')
 const { highlightOnCopy } = require('./highlight-on-copy')
 const { setColorTheme } = require('./set-color-theme')
 const { configAnt } = require('./ants/config')
-const { symbolsList } = require('./symbols/symbols')
+const { symbolsList } = require('./symbols/symbols');
+const { copyLineRange } = require('./copy-line-range');
 
 function openInVsCode(data, { isInsiders }) {
   const binary = isInsiders ? 'code-insiders' : 'code'
@@ -61,6 +62,10 @@ function activate(context) {
     'magicBeans.copyTrimmed',
     copyTrimmed,
   )
+  const copyLineRangeCommand = vscode.commands.registerCommand(
+    'magicBeans.copyLineRange',
+    copyLineRange,
+  )
   const highlightOnCopyCommand = vscode.commands.registerCommand(
     'magicBeans.highlightOnCopyRun',
     highlightOnCopy,
@@ -76,6 +81,7 @@ function activate(context) {
   const sortLinesCommand = vscode.commands.registerCommand(SORT_LINES, sortLines)
 
   context.subscriptions.push(copyTrimmedCommand)
+  context.subscriptions.push(copyLineRangeCommand)
   context.subscriptions.push(formatJsonCommand)
   context.subscriptions.push(highlightOnCopyCommand)
   context.subscriptions.push(requestRandomFileCommand)

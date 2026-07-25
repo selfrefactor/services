@@ -19,6 +19,7 @@ suite('Extension activation', () => {
       'magicBeans.requestRandomFile',
       'magicBeans.symbolsList',
       'magicBeans.copyTrimmed',
+      'magicBeans.copyLineRange',
       'magicBeans.slowScrollInit',
       'magicBeans.openFolder',
       'magicBeans.requestRandomFileWithSubfolderRightClick',

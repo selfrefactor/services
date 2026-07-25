@@ -177,6 +177,11 @@
 				"when": "editorTextFocus"
 			},
 			{
+				"command": "magicBeans.copyLineRange",
+				"key": "ctrl+shift+c",
+				"when": "editorTextFocus"
+			},
+			{
 				"command": "magicBeans.fixComment",
 				"key": "capslock c",
 				"when": "editorTextFocus"
