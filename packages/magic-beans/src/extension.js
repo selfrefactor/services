@@ -38,7 +38,7 @@ function activate(context) {
   )
 
   initStatusBars()
-
+	setColorTheme()
   // Check/change theme when the VS Code window regains focus
   context.subscriptions.push(
     vscode.window.onDidChangeWindowState(windowState => {
