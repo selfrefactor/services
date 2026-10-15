@@ -1,10 +1,10 @@
 const { execCommand } = require('../../modules/execCommand')
-const { maybe, head, last } = require('rambdax')
+const { head } = require('rambdax')
 
 function parse(initialInput) {
   if (initialInput.length === 2 && !head(initialInput)) {
     return {
-      inputArguments: ['chore@small'],
+      inputArguments: ['Small change'],
       commitArguments: '',
     }
   }
@@ -15,18 +15,8 @@ function parse(initialInput) {
     ? initialInput.filter(x => x !== '-n' && x !== 'skip')
     : initialInput
 
-  const inputArguments = maybe(
-    head(input).endsWith(':') || head(input).includes('@'),
-    input,
-    input.length === 1
-      ? [`feat@${head(input)}`]
-      : input.length === 2
-        ? [`feat@${head(input)}`, last(input)]
-        : ['feat:', ...input],
-  )
-
   return {
-    inputArguments,
+    inputArguments: input,
     commitArguments,
   }
 }

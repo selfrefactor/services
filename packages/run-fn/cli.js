@@ -10,7 +10,6 @@ const { dvd } = require('./services/dvd/dvd.js');
 const { fastDeploy } = require('./services/d/fastDeploy');
 const { log } = require('helpers-fn');
 const { read } = require('./services/read/read');
-const { pullAll } = require('./services/pull-all/pull-all');
 const { lintFile } = require('./services/lint/lint');
 const { formatFile } = require('./services/fmt/fmt');
 const { lintFolder } = require('./services/lint-folder/lint-folder');
@@ -21,9 +20,6 @@ async function runFn() {
 		process.argv,
 	);
 	const firstArgument = firstArgumentRaw.toLowerCase();
-	if (['pull', 'pull-all'].includes(firstArgument)) {
-		return pullAll();
-	}
 
 	if (firstArgument === 'bump') {
 		return bump(secondArgument);
