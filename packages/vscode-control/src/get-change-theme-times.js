@@ -1,7 +1,7 @@
 const { default: axios } = require("axios");
 const { piped, head } = require("rambdax");
 
-let OFFSET = -1
+let OFFSET = 0
 
 function getTime (timeInput, offset = 0) {
 	return piped(
